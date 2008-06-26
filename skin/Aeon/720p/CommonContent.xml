@@ -1,0 +1,527 @@
+<includes>
+
+<include name="Viewtype_List">
+	<control type="list" id="50">
+		<viewtype label="List">list</viewtype>
+		<posx>-37</posx>
+		<posy>194</posy>
+		<width>1280</width>
+		<height>333</height>
+		<pagecontrol>-</pagecontrol>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<include>common-fade</include>
+		<visible>[Window.IsActive(24) + [Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers) | Skin.HasSetting(gametrailers)] + !Skin.HasSetting(listmovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtv)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(listclips)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(listapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(listgames)] | [Window.IsActive(2) + !Skin.HasSetting(listpictures)] | [Window.IsActive(20) + !Skin.HasSetting(listscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(listarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(listadult)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(listmovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtvlib)]</visible>
+
+		<itemlayout height="36">
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>690</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>890</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label2</info>
+				<visible>!Container.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<posx>890</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Year</info>
+				<visible>Container.Content(movies)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="36">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>40</height>
+				<texture>listhighlightstub.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.HasFocus(50)</visible>
+				<animation effect="fade" start="0" end="100">VisibleChange</animation>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>670</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>890</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<info>ListItem.Label2</info>
+				<visible>!Container.Content(movies) + !Container.Content(tvshows)</visible>
+			</control>
+			<control type="label">
+				<posx>890</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<info>ListItem.Year</info>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<posx>890</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<label>$INFO[ListItem.episode] episodes</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+ 		</focusedlayout>
+
+	</control>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+		<visible>Control.IsVisible(50)</visible>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="356,0" end="0,0" acceleration="-1" time="150" />
+			<effect type="fade" start="0" end="100" time="150" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="356,0" acceleration="-1" time="150" />
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+		<control type="image">
+			<posx>965</posx>
+			<posy>154</posy>
+			<width>242</width>
+			<height>350</height>
+			<info>ListItem.Thumb</info>
+			<texture>defaulticonposter.png</texture>
+		</control>
+		<control type="image">
+			<posx>926</posx>
+			<posy>118</posy>
+			<width>320</width>
+			<height>424</height>
+			<texture>Videos_BigFrame.png</texture>
+		</control>
+	</control>
+</include>
+
+<include name="Viewtype_Icon">
+	<control type="panel" id="52">
+		<viewtype label="Icon">icon</viewtype>
+		<posx>59</posx>
+		<posy>65</posy>
+		<width>1138</width>
+		<height>456</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>53</onleft>
+		<onright>53</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<orientation>horizontal</orientation>
+		<align>center</align>
+		<include>common-fade</include>
+		<visible>!Window.IsVisible(129)</visible>
+		<visible>[Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(iconadult)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(iconclips)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(iconapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(icongames)] | [Window.IsActive(2) + !Skin.HasSetting(iconpictures)] | [Window.IsActive(20) + !Skin.HasSetting(iconscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(iconarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(iconadult)]</visible>
+		<itemlayout height="156" width="187">
+		      <control type="image">
+			       <posx>43</posx>
+			       <posy>171</posy>
+			       <width>112</width>
+			       <height>95</height>
+			       <info>ListItem.Thumb</info>
+			       <texture>defaulticonpicture.png</texture>
+			       <aspectratio aligny="bottom">scale</aspectratio>
+		      </control>
+		      <control type="image">
+			       <posx>18</posx>
+			       <posy>150</posy>
+			       <width>162</width>
+			       <height>136</height>
+			       <texture>iconframe.png</texture>       
+		      </control>
+		</itemlayout>
+		<focusedlayout height="206" width="258">
+		      <control type="image">
+			       <posx>32</posx>
+			       <posy>161</posy>
+			       <width>133</width>
+			       <height>114</height>
+			       <info>ListItem.Thumb</info>
+			       <texture>defaulticonpicture.png</texture>
+			       <aspectratio aligny="bottom">scale</aspectratio>
+   			       <animation effect="zoom" start="43,171,112,95" end="32,161,133,114" time="100">Focus</animation>
+		      </control>
+		      <control type="image">
+			       <posx>18</posx>
+			       <posy>150</posy>
+			       <width>162</width>
+			       <height>136</height>
+			       <texture>iconframe.png</texture>
+   			       <animation effect="zoom" end="2,138,194,164" time="100">Focus</animation>
+   		      </control>
+ 		</focusedlayout>
+	</control>
+
+			<control type="label">
+				<include>mediafocuslabel</include>
+				<visible>Control.IsVisible(52) + !Window.IsActive(2004)</visible>
+			</control>
+
+			<include>contextselected</include>
+</include>
+
+<include name="Viewtype_Quad">
+	<control type="panel" id="54">
+		<viewtype label="Quad">icon</viewtype>
+		<posx>36</posx>
+		<posy>60</posy>
+		<width>1191</width>
+		<height>474</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>52</onleft>
+		<onright>52</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<orientation>horizontal</orientation>
+		<include>common-fade</include>
+		<visible>!Container.Content(episodes)</visible>
+		<visible>!Window.IsVisible(129)</visible>
+		<visible>[Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(quadgames)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(quadarcade)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(quadapps)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(quadclips)]</visible>
+		<itemlayout height="184" width="240">
+		      <control type="image">
+			       <posx>48</posx>
+			       <posy>158</posy>
+			       <width>156</width>
+			       <height>88</height>
+			       <info>ListItem.Thumb</info>
+			       <texture>defaulticonepisode.png</texture>
+			       <aspectratio aligny="bottom">scale</aspectratio>
+		      </control>
+		      <control type="image">
+			       <posx>21</posx>
+			       <posy>133</posy>
+			       <width>210</width>
+			       <height>139</height>
+			       <texture>episodeframe.png</texture>       
+		      </control>
+			<control type="label">
+				<posx>27</posx>
+				<posy>269</posy>
+				<width>185</width>
+				<height>20</height>
+				<font>menubutton</font>
+				<align>left</align>
+				<include>bulktext</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="184" width="240">
+		      <control type="image">
+			       <posx>34</posx>
+			       <posy>136</posy>
+			       <width>185</width>
+			       <height>105</height>
+			       <info>ListItem.Thumb</info>
+			       <texture>defaulticonepisode.png</texture>
+			       <aspectratio aligny="bottom">scale</aspectratio>
+			       <animation effect="zoom" start="48,158,156,88" end="34,136,185,105" time="100">Focus</animation>
+		      </control>
+		      <control type="image">
+			       <posx>0</posx>
+			       <posy>106</posy>
+			       <width>252</width>
+			       <height>166</height>
+			       <texture>episodeframe.png</texture>
+			       <animation effect="zoom" start="21,133,210,139" end="0,106,252,166" time="100">Focus</animation>       
+		      </control>
+			<control type="label">
+				<posx>27</posx>
+				<posy>269</posy>
+				<width>185</width>
+				<height>20</height>
+				<font>menubutton</font>
+				<align>left</align>
+				<include>bulktext</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+</include>
+
+<include name="Viewtype_Poster">
+	<control type="wraplist" id="56">
+	    <viewtype label="Poster">wrap</viewtype>
+	    <posx>-107</posx>
+	    <posy>117</posy>
+	    <width>1458</width>
+	    <height>439</height>
+	    <onleft>56</onleft>
+	    <onright>56</onright>
+	    <onup>2</onup>
+	    <ondown>2</ondown>
+	    <focusposition>6</focusposition>
+	    <orientation>horizontal</orientation>
+        <visible>!Window.IsVisible(129)</visible>
+		<visible>[Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(postermovieslib] | [Window.IsActive(24) + [Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers) | Skin.HasSetting(gametrailers)] + !Skin.HasSetting(postermovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(postertv)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(posterapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(postergames)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(postertvlib)] | [Window.IsActive(20) + !Skin.HasSetting(posterscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(posterarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(posteradult)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(posterclips)]</visible>
+		<visible>!Container.Content(episodes)</visible>
+	     <include>common-fade</include>
+	     <itemlayout height="783" width="160">
+		      <control type="image">
+			      <posx>84</posx>
+			      <posy>132</posy>
+			      <width>124</width>
+			      <height>182</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonposter.png</texture>
+			      <colordiffuse>baFFFFFF</colordiffuse>
+			      <aspectratio aligny="bottom">stretch</aspectratio>
+				   <visible>!Control.IsVisible(84)</visible>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+		      <control type="label">
+			      <posx>146</posx>
+			      <posy>132</posy>
+			      <width>124</width>
+			      <height>182</height>
+			      <font>nothumb</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+				  <wrapmultiline>true</wrapmultiline>
+			  	  <aligny>center</aligny>
+				  <align>center</align>
+				  <visible>!Control.IsVisible(84)</visible>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+		      <control type="image">
+			      <posx>64</posx>
+			      <posy>113</posy>
+			      <width>165</width>
+			      <height>220</height>
+			      <colordiffuse>baFFFFFF</colordiffuse>
+			      <texture>Videos_BigFrame.png</texture>
+				   <visible>!Control.IsVisible(84)</visible>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>				  
+		      </control>
+		      <control type="image">
+			      <posx>84</posx>
+			      <posy>344</posy>
+			      <width>124</width>
+			      <height>181</height>
+			      <info>ListItem.Thumb</info>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonposter.png</texture>
+				   <visible>!Control.IsVisible(84)</visible>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+		      <control type="image">
+			      <posx>64</posx>
+			      <posy>324</posy>
+			      <width>165</width>
+			      <height>220</height>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">Videos_BigFrame.png</texture>
+				   <visible>!Control.IsVisible(84)</visible>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="783" width="160">
+		      <control type="image">
+			      <posx>36</posx>
+			      <posy>34</posy>
+			      <width>226</width>
+			      <height>335</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonposter.png</texture>
+			      <aspectratio aligny="bottom">stretch</aspectratio>
+			      <animation effect="zoom" start="84,133,124,181" end="36,34,226,335" reversible="false" time="250">Focus</animation>
+		      </control>
+		      <control type="label">
+			      <posx>149</posx>
+			      <posy>34</posy>
+			      <width>226</width>
+			      <height>335</height>
+			      <font>nothumblarge</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+				<wrapmultiline>true</wrapmultiline>
+				<aligny>center</aligny>
+				<align>center</align>
+			      <animation effect="zoom" start="146,133,124,181" reversible="false" end="149,34,226,335" time="250">Focus</animation>
+		      </control>
+
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture>Videos_BigFrame.png</texture>       
+			      <animation effect="zoom" start="64,113,165,220" end="0,0,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="238,0" delay="600" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="600" time="400" />
+					<effect type="fade" start="100" end="0" delay="1000" time="350" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>358</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="198,0" delay="700" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="700" time="400" />
+					<effect type="fade" start="100" end="0" delay="1100" time="350" />
+				</animation>
+			</control>
+		      <control type="image">
+			      <posx>36</posx>
+			      <posy>422</posy>
+			      <width>227</width>
+			      <height>336</height>
+			      <info>ListItem.Thumb</info>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonposter.png</texture>
+			      <animation effect="zoom" start="84,344,124,181" end="36,423,227,336" reversible="false" time="250">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>386</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">Videos_BigFrame.png</texture>
+			      <animation effect="zoom" start="64,324,165,220" end="0,386,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+	     </focusedlayout>
+   	   </control>
+
+	<include>movieinfopanel</include>
+	   
+	<control type="label">
+		<include>mediafocusvideo</include>
+		<visible>Control.IsVisible(56) + !Window.IsActive(25) + !Window.IsActive(2004)</visible>
+	</control>
+
+	<include>contextselected</include>
+
+</include>
+
+<include name="Wide">
+	<control type="panel" id="55">
+		<viewtype label="Wide">icon</viewtype>
+		<posx>36</posx>
+		<posy>204</posy>
+		<width>1191</width>
+		<height>474</height>
+		<pagecontrol>90</pagecontrol>
+		<onleft>52</onleft>
+		<onright>52</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<orientation>horizontal</orientation>
+		<include>common-fade</include>
+		<visible>!Window.IsVisible(129)</visible>
+		<visible>[Window.IsActive(24) + Skin.HasSetting(videomovies) + !Skin.HasSetting(widemovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(widetv)]</visible>
+		<itemlayout height="163" width="587">
+        	<control type="image">
+		       <posx>82</posx>
+		       <posy>38</posy>
+		       <width>468</width>
+		       <height>83</height>
+		       <info>ListItem.Thumb</info>
+		       <texture>defaulticonwide.png</texture>
+		       <aspectratio aligny="center">stretch</aspectratio>
+		</control>
+	        <control type="image">
+		       <posx>48</posx>
+		       <posy>8</posy>
+		       <width>533</width>
+		       <height>145</height>
+		       <texture>wideframe.png</texture>
+   	        </control>
+	</itemlayout>
+	<focusedlayout height="188" width="587">
+		<control type="image">
+		       <posx>57</posx>
+		       <posy>34</posy>
+		       <width>514</width>
+		       <height>93</height>
+		       <info>ListItem.Thumb</info>
+		       <texture>defaulticonwide.png</texture>
+		       <aspectratio aligny="center">stretch</aspectratio>
+		       <animation effect="zoom" start="46,30,263,66" end="57,34,514,93" time="150">Focus</animation>
+		</control>
+	        <control type="image">
+		       <posx>21</posx>
+		       <posy>0</posy>
+		       <width>585</width>
+		       <height>160</height>
+		       <texture>wideframe.png</texture>
+		       <animation effect="zoom" start="48,8,533,145" end="21,0,585,160" time="150">Focus</animation>
+   	        </control>
+	 </focusedlayout>
+	</control>
+	<control type="label">
+		<include>mediafocuslabel</include>
+		<visible>Control.IsVisible(55) + !Window.IsActive(2004)</visible>
+	</control>
+</include>
+</includes>

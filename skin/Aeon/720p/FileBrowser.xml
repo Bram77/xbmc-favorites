@@ -1,0 +1,203 @@
+<window type="dialog" id="126">
+	<defaultcontrol>450</defaultcontrol>
+	<zorder>4</zorder>
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="0">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="image">
+		<description>Panel</description>
+		<texture>osdtab.png</texture>
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>576</height>
+		<width>720</width>
+		<colordiffuse>f8FFFFFF</colordiffuse>
+		<animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+	</control>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>720</posy>
+		<height>525</height>
+		<width>720</width>
+		<animation effect="slide" start="0,0" end="0,-370" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,-370" end="0,0" time="150">WindowClose</animation>
+		<include>osdfont</include>
+
+	<control type="image">
+		<description>Panel</description>
+		<texture>osdtab.png</texture>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+	</control>
+
+	<control type="list" id="450">
+		<posx>35</posx>
+		<posy>18</posy>
+		<width>650</width>
+		<height>178</height>
+		<onleft>413</onleft>
+		<onright>413</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<pagecontrol>90</pagecontrol>
+		<visible>Window.Previous(128) | [!Window.IsActive(PlayerControls) + !Window.IsActive(128)]</visible>
+		<itemlayout height="25">
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>25</height>
+				<font>osdsmall</font>
+				<textcolor>FF8f8f8f</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="25">
+			<control type="label">
+				<posx>0</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>25</height>
+				<font>osdsmall</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<scroll>true</scroll>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<control type="panel" id="451">
+		<posx>35</posx>
+		<posy>18</posy>
+		<width>650</width>
+		<height>178</height>
+		<onleft>413</onleft>
+		<onright>413</onright>
+		<onup>451</onup>
+		<ondown>451</ondown>
+		<pagecontrol>90</pagecontrol>
+		<include>common-fade</include>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+		<itemlayout height="183" width="56">
+			<control type="image">
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>50</width>
+				<height>70</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</itemlayout>
+		<focusedlayout height="183" width="56">
+			<control type="image">
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>50</width>
+				<height>70</height>
+				<info>ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>3</posx>
+				<posy>25</posy>
+				<width>55</width>
+				<height>80</height>
+				<texture>Folder-Focus.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>125</posy>
+				<width>150</width>
+				<height>16</height>
+				<font>osdsmall</font>
+				<align>center</align>
+				<textcolor>FFFFFFFF</textcolor>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+	<control type="label" id="412">
+		<description>Path Label</description>
+		<posx>380</posx>
+		<posy>473</posy>
+		<width>510</width>
+		<align>left</align>
+		<font>menubutton</font>
+		<haspath>false</haspath>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+	</control>
+
+	<control type="button" id="415">
+		<description>Create folder button</description>
+		<posx>400</posx>
+		<posy>190</posy>
+		<width>100</width>
+		<height>25</height>
+		<label>119</label>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<align>right</align>
+		<font>osdsmall</font>
+		<onleft>414</onleft>
+		<onright>413</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+	</control>
+
+	<control type="button" id="413">
+		<description>OK button</description>
+		<posx>500</posx>
+		<posy>190</posy>
+		<width>100</width>
+		<height>25</height>
+		<label>186</label>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>osdsmall</font>
+		<align>right</align>
+		<onleft>415</onleft>
+		<onright>414</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+	</control>
+
+	<control type="button" id="414">
+		<description>Cancel button</description>
+		<posx>600</posx>
+		<posy>190</posy>
+		<width>100</width>
+		<height>25</height>
+		<label>222</label>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF000000</disabledcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>osdsmall</font>
+		<align>right</align>
+		<onleft>413</onleft>
+		<onright>450</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+	</control>
+
+	</control>
+	</controls>
+</window>
