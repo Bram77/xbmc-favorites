@@ -1,0 +1,155 @@
+<window id="2006">
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+	<control type="visualisation" id="2">
+		<description>visualisation</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</control>
+
+	<control type="group">
+		<posx>-250</posx>
+		<posy>450</posy>
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,0" end="250,0" acceleration="-1" time="200" />
+			<effect type="fade" start="0" end="100" time="200" />
+			<effect type="slide" start="0,0" end="0,320" acceleration="1" delay="5000" time="200" />
+			<effect type="fade" start="100" end="0" time="200" delay="5000" />
+		</animation>
+
+		<control type="image">
+			<posx>66</posx>
+			<posy>44</posy>
+			<height>191</height>
+			<width>199</width>
+			<info>MusicPlayer.Cover</info>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="image">
+			<posx>34</posx>
+			<posy>34</posy>
+			<height>215</height>
+			<width>241</width>
+			<texture>case.png</texture>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+	</control>
+	
+	<control type="group">
+		<posx>-250</posx>
+		<posy>430</posy>
+		<animation type="WindowOpen" condition="!Skin.HasSetting(musicinfovanish)">
+			<effect type="slide" start="0,0" end="250,0" acceleration="-1" delay="5200" time="200" />
+			<effect type="fade" start="0" end="100" delay="5200" time="200" />
+			<effect type="slide" start="0,0" end="0,320" acceleration="1" delay="10200" time="200" />
+			<effect type="fade" start="100" end="0" time="200" delay="10200" />
+		</animation>
+		<animation type="WindowOpen" condition="Skin.HasSetting(musicinfovanish)">
+			<effect type="slide" start="0,0" end="250,0" acceleration="-1" delay="5200" time="200" />
+			<effect type="fade" start="0" end="100" delay="5200" time="200" />
+		</animation>
+
+		<control type="label">
+			<posx>50</posx>
+			<posy>100</posy>
+			<label>Title:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>50</posx>
+			<posy>125</posy>
+			<label>Artist:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>50</posx>
+			<posy>150</posy>
+			<label>Album:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>50</posx>
+			<posy>175</posy>
+			<label>Year:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>50</posx>
+			<posy>200</posy>
+			<label>Track:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>50</posx>
+			<posy>225</posy>
+			<label>Time:</label>
+			<font>musicvis</font>
+			<textcolor>FF707070</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>100</posy>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<font>musicvis</font>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>125</posy>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<font>musicvis</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>150</posy>
+			<label>$INFO[MusicPlayer.Album]</label>
+			<font>musicvis</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>175</posy>
+			<label>$INFO[MusicPlayer.Year]</label>
+			<font>musicvis</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>200</posy>
+			<label>$INFO[MusicPlayer.TrackNumber]</label>
+			<font>musicvis</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>130</posx>
+			<posy>225</posy>
+			<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+			<font>musicvis</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+	
+	</control>
+	</controls>
+</window>

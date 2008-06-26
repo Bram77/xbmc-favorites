@@ -1,0 +1,204 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">3112</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<origin x="0" y="0">true</origin>
+	</coordinates>
+	<controls>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>720</posy>
+		<height>525</height>
+		<width>720</width>
+		<animation effect="slide" start="0,0" end="0,-370" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,-370" end="0,0" time="150">WindowClose</animation>
+		<include>osdfont</include>
+
+	<control type="image">
+		<description>Panel</description>
+		<texture>osdtab.png</texture>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>17</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Xbox Nickname: $INFO[System.XboxNickName]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>42</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Xbox Version: $INFO[system.xboxversion]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>67</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>$INFO[system.uptime]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>92</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>$INFO[system.internetstate]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>117</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>DVD Drive: $INFO[System.DVDLabel]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>142</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Free RAM: $INFO[System.FreeMemory]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>167</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>XBMC Build Date: $INFO[System.BuildDate]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>40</posx>
+		<posy>192</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>$INFO[System.screenresolution]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>17</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Network $INFO[Network.IPAddress]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>42</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Network $INFO[System.FanSpeed]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>67</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>LAN $INFO[Network.LinkState]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>92</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>$INFO[system.videoencoderinfo]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>117</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>$INFO[system.hddinfomodel]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>142</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Drive $INFO[system.freespace(e)]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>167</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Drive $INFO[system.freespace(f)]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	<control type="label">
+		<posx>400</posx>
+		<posy>192</posy>
+		<height>25</height>
+		<aligny>center</aligny>
+		<label>Drive $INFO[system.freespace(g)]</label>
+		<font>osdsmall</font>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	</control>
+
+	</control>
+
+	</controls>
+</window>
