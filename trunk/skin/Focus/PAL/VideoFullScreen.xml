@@ -1,0 +1,358 @@
+<window id="2005">
+	<defaultcontrol>-</defaultcontrol>
+ 
+	<controls>
+
+<!---------- BUFFERING --------------------------------------------------------------------------------------->
+
+	<control type="label" id="24">
+		<description>buffering label</description>
+		<posx>0</posx>
+		<posy>520</posy>
+		<label>15107</label>
+		<width>720</width>
+		<align>center</align>
+		<font>h2</font>
+	</control>
+		
+<!---------- CODEC INFO -------------------------------------------------------------------------------------->
+
+	<control type="image" id="0">
+		<description>media info background image</description>
+		<posx>-10</posx>
+		<posy>0</posy>
+		<width>740</width>
+		<height>140</height>
+		<texture flipy="true">osd-background.png</texture>
+	</control>
+	
+	<control type="label" id="10">
+		<description>row 1 label</description>
+		<posx>20</posx>
+		<posy>10</posy>
+		<label>-</label>
+		<align>left</align>
+		<font>description</font>
+	</control>
+	<control type="label" id="11">
+		<description>row 2 label</description>
+		<posx>20</posx>
+		<posy>35</posy>
+		<label>-</label>
+		<align>left</align>
+		<font>description</font>
+	</control>
+	<control type="label" id="12">
+		<description>row 3 label</description>
+		<posx>20</posx>
+		<posy>60</posy>
+		<label>-</label>
+		<align>left</align>
+		<font>description</font>
+	</control>
+		
+		
+<!---------- SYSTEM TIME ------------------------------------------------------------------------------------>
+
+	<control type="fadelabel" id="200">
+		<posx>660</posx>
+		<posy>9</posy>
+		<width>315</width>
+		<label>$INFO[System.Time]</label>
+		<scrollout>false</scrollout>
+		<pauseatend>5000</pauseatend>
+		<textcolor>ffffffff</textcolor>
+		<align>right</align>
+		<font>date</font>
+		<include>textcolorlightgrey</include>
+		<include>home-menubar</include>
+		<visible>Player.ShowInfo</visible>
+	</control>
+			
+			
+<!---------- CONTENT INFO --------------------------------------------------------------------------------------->
+
+	<control type="group" id="1">
+		<posx>-10</posx>
+		<posy>410</posy>
+		<visible>Player.ShowInfo</visible>
+		<animation effect="fade" time="500">VisibleChange</animation>
+		
+		<control type="image" id="1">
+			<description>media info background image</description>
+			<posx>-20</posx>
+			<posy>0</posy>
+			<width>760</width>
+			<height>170</height>
+			<texture>osd-background.png</texture>
+			<visible>!videoplayer.content(livetv)</visible>
+		</control>
+		
+	<!---------- MOVIES --------------------------------------------------------------------------------------->
+		
+		<control type="group" id="1">
+			<visible>videoplayer.content(movies)</visible>
+			
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>30</posx>
+				<posy>15</posy>
+				<width>92</width>
+				<height>130</height>
+				<info>videoplayer.cover</info>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>videoplayer.content(movies)</visible>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Movie Title</description>
+				<width>420</width>
+				<posx>125</posx>
+				<posy>10</posy>
+				<info>VideoPlayer.Title</info>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Movie Genre</description>
+				<width>520</width>
+				<posx>125</posx>
+				<posy>45</posy>
+				<info>VideoPlayer.Genre</info>
+				<align>left</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Movie Director</description>
+				<width>520</width>
+				<posx>125</posx>
+				<posy>75</posy>
+				<info>VideoPlayer.Director</info>
+				<align>left</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>130</posx>
+				<posy>140</posy>
+				<width>565</width>
+				<height>5</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+		
+		</control>
+			
+			
+	<!---------- EPISODES ------------------------------------------------------------------------------------>		
+			
+		<control type="group" id="1">
+			<visible>videoplayer.content(episodes)</visible>
+			
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>40</posx>
+				<posy>20</posy>
+				<width>120</width>
+				<height>120</height>
+				<info>videoplayer.cover</info>
+				<aspectratio align="center">stretch</aspectratio>
+				<visible>videoplayer.content(episodes)</visible>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Video Title</description>
+				<width>500</width>
+				<posx>175</posx>
+				<posy>10</posy>
+				<info>VideoPlayer.Title</info>
+				<textcolor>label-text</textcolor>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>TV Show Title</description>
+				<width>500</width>
+				<posx>175</posx>
+				<posy>45</posy>
+				<info>VideoPlayer.tvshowtitle</info>
+				<textcolor>sublabel-text</textcolor>
+				<align>left</align>
+				<font>h2</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Season / Episode</description>
+				<width>500</width>
+				<posx>175</posx>
+				<posy>75</posy>
+				<textcolor>sublabel-text</textcolor>
+				<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+				<align>left</align>
+				<font>h4</font>
+			</control>
+			
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>175</posx>
+				<posy>135</posy>
+				<width>520</width>
+				<height>5</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			
+		</control>
+			
+			
+	<!---------- MUSIC VIDEOS -------------------------------------------------------------------------------->			
+			
+		<control type="group" id="1">
+			<visible>videoplayer.content(musicvideos)</visible>
+			
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>25</posx>
+				<posy>18</posy>
+				<width>120</width>
+				<height>120</height>
+				<info>videoplayer.cover</info>
+				<aspectratio align="center">stretch</aspectratio>
+				<visible>videoplayer.content(musicvideos)</visible>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Artist Label</description>
+				<width>540</width>
+				<posx>160</posx>
+				<posy>10</posy>
+				<info>VideoPlayer.Artist</info>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Musicvideo Label</description>
+				<width>540</width>
+				<posx>160</posx>
+				<posy>45</posy>
+				<info>VideoPlayer.Title</info>
+				<align>left</align>
+				<font>h2</font>
+			</control>
+			
+			<control type="fadelabel" id="1">
+				<description>Studio Label</description>
+				<width>540</width>
+				<posx>160</posx>
+				<posy>75</posy>
+				<info>VideoPlayer.Studio</info>
+				<align>left</align>
+				<font>h2</font>
+			</control>
+			
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>175</posx>
+				<posy>135</posy>
+				<width>520</width>
+				<height>5</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+
+		</control>
+		
+	<!---------- OTHER -------------------------------------------------------------------------------->	
+			
+		<control type="group" id="1">
+			<visible>![videoplayer.content(musicvideos) | videoplayer.content(episodes) | videoplayer.content(movies) | videoplayer.content(livetv)]</visible>
+			
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>25</posx>
+				<posy>45</posy>
+				<width>110</width>
+				<height>110</height>
+				<info>videoplayer.cover</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+
+			<control type="label" id="1">
+				<description>Musicvideo Label</description>
+				<width>500</width>
+				<posx>160</posx>
+				<posy>45</posy>
+				<info>VideoPlayer.Title</info>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="fadelabel" id="1">
+				<description>Album Label</description>
+				<width>380</width>
+				<posx>160</posx>
+				<posy>75</posy>
+				<info>ListItem.Title</info>
+				<align>left</align>
+				<font>h2</font>
+			</control>
+		</control>
+			
+			
+<!---------- TIME --------------------------------------------------------------------------------------->
+			
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<width>200</width>
+				<posx>160</posx>
+				<posy>100</posy>
+				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+				<visible>player.chaptercount</visible>
+				<align>left</align>
+				<font>h4</font>
+			</control>
+
+			<control type="label" id="1">
+				<description>time label</description>
+				<width>200</width>
+				<posx>695</posx>
+				<posy>100</posy>
+				<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
+				<align>right</align>
+				<font>h4</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>time label</description>
+				<width>300</width>
+				<posx>695</posx>
+				<posy>70</posy>
+				<label>$LOCALIZE[31068]</label>
+				<align>right</align>
+				<font>h4</font>
+			</control>
+
+			
+			
+		</control>
+	</controls>
+</window>

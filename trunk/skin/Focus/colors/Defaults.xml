@@ -1,0 +1,17 @@
+<colors>
+	<color name="button-text">FFFFFFFF</color>
+	<color name="button-alttext">FF073861</color>
+	<color name="label-text">FFFFFFFF</color>
+	<color name="sublabel-text">ff95bfff</color>
+	<color name="sublabelalt-text">ff98a9c3</color>
+	<color name="sublabelalt2-text">ff073063</color>
+	<color name="rss-headline-text">60ffffff</color>
+	<color name="rss-title-text">ff0066cc</color>
+	<color name="listselectedtext">FFa8ec12</color>
+	<color name="listselectedcolor">ff0066cc</color>
+	<color name="disabled-text">60d0d0d0</color>
+	<color name="osd-nf">77FFFFFF</color>
+	<color name="recording-nf">77EE0000</color>
+	<color name="recording">FFEE0000</color>
+	<color name="shutdown-text">FFFFFFFF</color>
+</colors>

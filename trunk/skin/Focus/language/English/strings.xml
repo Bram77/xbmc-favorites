@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+
+	<!-- Viewtype strings -->
+	<string id="546">Coverslide</string>
+	<string id="547">Picture Slide</string>
+	<string id="548">Tiles</string>
+
+	<!-- Start home strings -->
+	<string id="31002">Programs</string>
+	<string id="31005">Weather</string>
+	<string id="31006">Accessories</string>
+	<string id="31008">Settings</string>
+	<!-- End home strings -->
+
+	<!-- Start video strings -->
+	<string id="31001">Movies</string>
+	<string id="31010">TV Shows</string>
+	<string id="31011">Apple Movie Trailers</string>
+	<string id="31012">Video Playlist</string>
+	<string id="32024">season</string>
+	<string id="32025">episode</string>
+	<string id="31004">episodes</string>
+	<string id="32026">First aired:</string>
+	
+	<!-- End video strings -->
+
+
+	<!-- Start music strings -->
+	<string id="31003">Show LastFM Status Information in Now Playing Screen</string>
+	<string id="31013">Show Thumbnails In Listviews</string>
+	<string id="31014">Focus Skin Settings</string>
+	<string id="31015">Home Screen</string>
+	<string id="31016">Fanart</string>
+	<string id="31017">Add Profile</string>
+	<string id="31078">[COLOR=sublabel-text]Playing [/COLOR]$INFO[MusicPlayer.Title] [COLOR=sublabel-text]by [/COLOR]$INFO[MusicPlayer.Artist] [COLOR=sublabel-text]from the album [/COLOR]$INFO[MusicPlayer.Album]</string>
+	<string id="31068">Finish Time: $INFO[Player.FinishTime]</string>
+	
+	<string id="32000">by</string>
+	<string id="32001"></string>
+	<string id="32002">Smart Playlist Editor</string>
+	<string id="32003"></string>
+	<string id="32004">Files</string>
+	<string id="31009">Tracks in playlist:</string>
+	<!-- End music strings -->
+
+	<!-- Start custom strings -->
+	
+	
+	
+	<string id="31018">Custom</string>
+
+	<string id="31020"></string>
+	<string id="31021">Profile Settings</string>
+	<string id="31022">Power Menu</string>
+	<string id="31023">System Information</string>
+	<string id="31033">Appearance settings</string>
+	<string id="31069">Video settings</string>
+	<string id="31007">Programs settings</string>
+	<string id="31900">Music settings</string>
+	<string id="31901">Pictures settings</string>
+	<string id="31902">Network settings</string>
+	<string id="31903">Weather settings</string>
+	<string id="31904">System settings</string>
+	<string id="31905">Update XBMC</string>
+	<string id="31906"></string>
+	<string id="31907"></string>
+	<string id="31908"></string>
+	<string id="31909"></string>
+	<string id="31910">Exit</string>
+	<string id="31911"></string>
+	<string id="31912"></string>
+	<string id="31913"></string>
+	<string id="31914">Plugins</string>
+	<string id="31915">Fanart</string>
+	<string id="31916"></string>
+	<string id="31917"></string>
+	<string id="31918"></string>
+	<string id="31919"></string>
+	<string id="31920"></string>
+	<string id="31921"></string>
+	<string id="31922"></string>
+	<string id="31923"></string>
+	<string id="31924"></string>
+	<string id="31925">episode</string>
+	<string id="31926">season</string>
+	<string id="31927">Show Profile Name On Screen</string>
+	<string id="31928"></string>
+	<string id="31929"></string>
+	<string id="31930">Description Unavailable</string>
+	<string id="31931">Trailer Available</string>
+	<string id="31932">not rated</string>
+
+
+	<!-- End system strings -->
+
+	<!-- Begin skin settings strings -->
+	<string id="31024">Use Scrollbar</string>
+	<string id="31025">Use Media Overlays</string>
+	<string id="31026">Use Watched State Overlays</string>
+	<string id="31027">Use Now Playing Screens</string>
+	<string id="31028">Change Font Color</string>
+	<string id="31029">Now Playing Style Visuals</string>
+	<string id="31030">Choose Custom Background</string>
+	<string id="31031">Reset Custom Background</string>
+	<string id="31032">Blend Visuals With Background</string>
+	<string id="31070">General</string>
+	<string id="31071">Background</string>
+	<string id="31072">Home Window</string>
+	<string id="31073">Show RSS Feed</string>
+	<string id="31074"></string>
+	<string id="31075">Use Startup Playlist</string>
+	<string id="31076">Choose Playlist</string>
+	<string id="31077">Show Date and Time</string>
+	
+	<string id="31079">Music Videos in Home Menu</string>
+	<!-- End skin settings strings -->
+
+	<!-- Start progress strings -->
+	<string id="31034">Settings</string>
+	<string id="31035">Video</string>
+	<string id="31036">Audio</string>
+	<string id="31037">Bookmarks</string>
+	<string id="31038">Lyrics</string>
+	<string id="31039">Presets</string>
+	<string id="31040">Visuals</string>
+	<string id="31041">Playlist</string>
+	<string id="31042">Stop</string>
+	<string id="31043">Pause</string>
+	<string id="31044">Play</string>
+	<string id="31045">Paused</string>
+	<string id="31046">Playing</string>
+	<string id="31047">DVD Menu</string>
+	<string id="31048">Record</string>
+	<string id="31049">Recording</string>
+	<string id="31050">|-Skip</string>
+	<string id="31051">Skip-|</string>
+	<string id="31052">Rewind</string>
+	<string id="31053">Rewind-2x</string>
+	<string id="31054">Rewind-4x</string>
+	<string id="31055">Rewind-8x</string>
+	<string id="31056">Rewind-16x</string>
+	<string id="31057">Rewind-32x</string>
+	<string id="31058">Forward</string>
+	<string id="31059">Forward-2x</string>
+	<string id="31060">Forward-4x</string>
+	<string id="31061">Forward-8x</string>
+	<string id="31062">Forward-16x</string>
+	<string id="31063">Forward-32x</string>
+	<!-- End progress strings -->
+
+	<!-- Begin weather strings -->
+	<string id="31064">High</string>
+	<string id="31065">Low</string>
+	<!-- End weather strings -->
+
+	<!-- Begin Misc. strings -->
+	<string id="31066">Muted</string>
+	<!-- End Misc. strings -->
+</strings>

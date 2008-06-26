@@ -1,0 +1,42 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+<!--- STARTUP PLAYLIST ---------------------------------->		
+
+		<control type="button" id="10">
+			<description>trigger without playlist</description>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="3000" end="100">Focus</animation>
+			<visible>!Skin.Hassetting(startup-playlist)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>trigger with playlist</description>
+			<onfocus>XBMC.PlayMedia($INFO[Skin.String(playlist)])</onfocus>
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="3000" end="100">Focus</animation>
+			<visible>Skin.Hassetting(startup-playlist)</visible>
+		</control>
+	
+		
+		<control type="multiimage">
+			<description>startup animation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<imagepath>startup</imagepath>
+			<timeperimage>50</timeperimage>
+			<fadetime>0</fadetime>
+			<aspectratio>keep</aspectratio>
+			<loop>no</loop>
+		</control>
+
+		
+	</controls>
+</window>
