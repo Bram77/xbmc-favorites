@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="0">YouTube</string>
+    <string id="1">Xbox Media Center</string>
+    
+
+    <!-- Categries -->
+    <!-- YouTube -->
+    <string id="10002">Top Rated</string>
+    <string id="10003">Top Favorites</string>
+    <string id="10004">Most Viewed</string>
+    <string id="10005">Most Discussed</string>
+    <string id="10006">Most Linked</string>
+    <string id="10007">Most Responded</string>
+    <string id="10008">Recently Featured</string>
+    <string id="10009">Search</string>
+    <string id="10010">User</string>
+
+
+    <!-- Google -->
+    
+    <string id="2030">Downloading video...</string>
+    <string id="2031">Sreaming video...</string>
+
+	
+    <string id="30000">Feed period </string>
+    <string id="30001">Restricted contents</string>
+    <string id="30002">Maximum result</string>
+    <string id="30003">User ID</string>
+    <string id="30004">User feeds </string>
+    <string id="30005">Save video</string>  
+    <string id="30006">Download path</string>    
+    <string id="30007">Feed categories</string> 
+    <string id="30008">Start index</string>
+    <string id="30009">Order by</string>
+    <string id="30010">Player type</string>
+    <string id="30011">Search channel</string>	
+    <string id="30012">Search sites</string>		
+
+    <string id="40001">today</string>
+    <string id="40002">this week</string>
+    <string id="40003">this month</string>
+    <string id="40004">all time</string>
+
+    <string id="40005">default</string>
+    <string id="40006">relevance</string>
+    <string id="40007">rating</string>
+    <string id="40008">updated</string>
+    <string id="40009">view count</string>
+
+    <string id="40010">all</string>
+    <string id="40011">autos and vehicles</string>
+    <string id="40012">comedy</string>
+    <string id="40013">education</string>
+    <string id="40014">entertainment</string>
+    <string id="40015">film and animation</string>
+    <string id="40016">gadgets and games</string>
+    <string id="40017">howto and style</string>
+    <string id="40018">music</string>
+    <string id="40019">news and politics</string>
+    <string id="40020">nonprofit and activism</string>
+    <string id="40021">people and plogs</string>
+    <string id="40022">pets and animals</string>
+    <string id="40023">science and technology</string>
+    <string id="40024">sports</string>
+    <string id="40025">travel and events</string>
+
+    <string id="40026">favorites</string>
+    <string id="40027">uploads</string>
+
+    <string id="40028">DVDPlayer</string>
+    <string id="40029">MPlayer</string>
+
+    <string id="40030">YouTube</string>	
+    <string id="40031">Google</string>
+    <string id="40032">Yahoo</string>
+    <string id="40033">MySpace</string>
+    <string id="40034">GoFish</string>
+    <string id="40034">LiveLeak</string>						
+
+    <string id="50000">See More of the </string>
+    <string id="50001"> Videos</string>	
+    <string id="50002">Advanced Search</string>	
+
+	
+</strings>

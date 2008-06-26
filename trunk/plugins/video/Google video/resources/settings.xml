@@ -1,0 +1,20 @@
+<settings>
+   <setting id="Search Options:" type="text" label="20000" default=""/>
+   <setting id="Search Duration : Short" type="bool" label="30000" default="false"/>
+   <setting id="Search Duration : Medium" type="bool" label="30001" default="false"/>
+   <setting id="Search Duration : Long" type="bool" label="30002" default="false"/>
+   <setting id="SEARCH SITE:" type="text" label="24000" default=""/>
+   <setting id="site : GOOGLE" type="bool" label="30004" default="false"/>
+   <setting id="site : YOUTUBE" type="bool" label="30005" default="false"/>
+   <setting id="site : GUBA" type="bool" label="30006" default="false"/>
+   <setting id="site : YOUKU" type="bool" label="30007" default="false"/>
+   <setting id="site : TUDOU" type="bool" label="30008" default="false"/>
+   <setting id="site : VEOH" type="bool" label="30009" default="false"/>
+   <setting id="site : MYSPACE" type="bool" label="300010" default="false"/>
+   <setting id="site : DAILYMOTION" type="bool" label="300011" default="false"/>
+   <setting id="site : TRILULILU" type="bool" label="300012" default="false"/>
+   <setting id="Set download directory" type="text" label="25000" default=""/>
+   <setting id="Download Video" type="text" label="30003" default="F:/MOVIES"/>
+
+   
+</settings>
