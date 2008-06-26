@@ -1,0 +1,88 @@
+<window id="139">
+	<defaultcontrol>5</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>410</posx>
+		<posy>360</posy>
+	</coordinates>
+	<include>dialog-ani</include>
+	
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>339</width>
+			<height>238</height>
+			<texture>dialog-panel2.png</texture>
+		</control>
+		
+		<control type="list" id="5">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>330</width>
+			<height>180</height>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<scrolltime>200</scrolltime>
+			
+			<itemlayout height="60">
+				<control type="label">
+					<posx>8</posx>
+					<posy>8</posy>
+					<width>260</width>
+					<font>h2</font>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>8</posx>
+					<posy>26</posy>
+					<width>260</width>
+					<font>h4</font>
+					<aligny>left</aligny>
+					<textcolor>label-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>58</height>
+					<texture>tile-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>8</posx>
+					<posy>8</posy>
+					<width>260</width>
+					<font>h2</font>
+					<aligny>center</aligny>
+					<textcolor>sublabel-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>8</posx>
+					<posy>26</posy>
+					<width>260</width>
+					<font>h4</font>
+					<aligny>left</aligny>
+					<textcolor>label-text</textcolor>
+					<selectedcolor>listselectedtext</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

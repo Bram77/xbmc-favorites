@@ -1,0 +1,45 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>550</posx>
+		<posy>9</posy>
+	</coordinates>
+	
+	<controls>
+
+		<control type="group">
+			<include>fadeinout</include>
+			
+			<control type="progress">
+				<description>progress control</description>
+				<posx>30</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>24</height>
+				<info>Player.Volume</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>progress-middle.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>!Window.IsActive(113)</visible>
+			</control>
+
+			<control type="label" id="0">
+				<description>Volume Label</description>
+				<posx>34</posx>
+				<posy>-2</posy>
+				<font>h4</font>
+				<align>left</align>
+				<info>Player.Volume</info>
+				<width>270</width>
+				<height>20</height>
+				<textcolor>label-text</textcolor>
+				<visible>!Window.IsActive(113)</visible>
+			</control>
+			
+		</control>
+	</controls>
+</window>

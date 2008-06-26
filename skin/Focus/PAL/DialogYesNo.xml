@@ -1,0 +1,123 @@
+<window id="100">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<include>dialog-ani</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>180</posx>
+		<posy>100</posy>
+	</coordinates>
+	
+	<controls>
+		
+	<control type="group">
+			
+		<control type="image">
+			<posx>-30</posx>
+			<posy>-20</posy>
+			<width>400</width>
+			<height>240</height>
+			<texture>dialog-panel2.png</texture>
+		</control>
+			
+		<control type="label" id="1">
+			<description>dialog Heading</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>325</width>	
+			<label>-</label>
+			<align>center</align>
+			<font>h1</font>
+			<textcolor>button-text</textcolor>
+		</control>
+		
+		<control type="image" id="1">
+			<description>seperator</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>320</width>
+			<height>3</height>
+			<texture>dialog-seperator.png</texture>
+		</control>
+			
+		<control type="label" id="2">
+			<description>dialog line 1</description>
+			<posx>10</posx>
+			<width>320</width>	
+			<align>center</align>
+			<posy>50</posy>
+			<label>-</label>
+			<font>h2D</font>
+			<textcolor>button-text</textcolor>
+			<scroll>yes</scroll>
+		</control>
+		
+		<control type="label" id="3">
+			<description>dialog line 2</description>
+			<posx>0</posx>
+			<width>320</width>	
+			<align>center</align>
+			<posy>80</posy>
+			<label>-</label>
+			<font>h4D</font>
+			<textcolor>button-text</textcolor>
+			<scroll>yes</scroll>
+		</control>
+		
+		<control type="label" id="4">
+			<description>dialog line 3</description>
+			<posx>0</posx>
+			<width>320</width>	
+			<align>center</align>
+			<posy>110</posy>
+			<label>-</label>
+			<font>h4D</font>
+			<textcolor>button-text</textcolor>
+			<scroll>yes</scroll>
+		</control>
+		
+		<control type="button" id="11">
+			<description>Yes button</description>
+			<posx>70</posx>
+			<posy>150</posy>
+			<width>90</width>
+			<height>33</height>
+			<label>107</label>
+			<font>buttonD</font>
+			<focusedcolor>button-alttext</focusedcolor>
+			<textoffsety>1</textoffsety>
+			<aligny>-</aligny>
+			<align>center</align>
+			<texturenofocus>button2.png</texturenofocus>
+			<texturefocus>button2-focus.png</texturefocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+		</control>
+		
+		<control type="button" id="10">
+			<description>No button</description>
+			<posx>165</posx>
+			<posy>150</posy>
+			<width>90</width>
+			<height>33</height>
+			<label>106</label>
+			<font>buttonD</font>
+			<focusedcolor>button-alttext</focusedcolor>
+			<align>center</align>
+			<textoffsety>1</textoffsety>
+			<aligny>-</aligny>
+			<texturenofocus>button2.png</texturenofocus>
+			<texturefocus>button2-focus.png</texturefocus>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+		</control>
+		
+		
+	</control>	
+
+	</controls>
+</window>

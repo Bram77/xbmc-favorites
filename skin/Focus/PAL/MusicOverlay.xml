@@ -1,0 +1,8 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="500" condition="!Window.IsActive(Home)">WindowClose</animation>
+	<controls>
+		
+	</controls>
+</window>

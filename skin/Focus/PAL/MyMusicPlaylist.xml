@@ -1,0 +1,183 @@
+<window id="500">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		<include>background</include>
+		<include>#files</include>
+		<include>allscreens</include>
+		<include>Fake-Overlay</include>
+		
+		<control type="label">
+			<description>description label</description>
+			<include>home-menubar</include>
+			<posx>0</posx>
+			<posy>4</posy>
+			<width>752</width>
+			<align>center</align>
+			<label>10517</label>
+			<font>page</font>
+		</control>
+	
+	<include>LibraryPlaylistMenu</include>
+	
+	<control type="group">		
+		<include>viewsmenu</include>
+		<include>viewsmenucontext</include>
+		<include>PageControl</include>
+		<include>pageslide</include>
+		<include>PlaylistView</include>
+
+		<control type="image">
+			<posx>30</posx>
+			<posy>70</posy>
+			<width>150</width>
+			<height>150</height>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio</visible>
+			<include>fadereplace</include>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>220</posy>
+			<width>150</width>
+			<height>150</height>
+			<info>MusicPlayer.Cover</info>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio</visible>
+			<include>fadereplace</include>
+		</control>
+
+		<control type="image">
+			<posx>30</posx>
+			<posy>70</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture>CDCase.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!Player.HasAudio</visible>
+			<include>fadereplace</include>
+		</control>
+		
+		<control type="image">
+			<posx>30</posx>
+			<posy>220</posy>
+			<width>150</width>
+			<height>150</height>
+			<texture flipy="true" diffuse="fade2.png">CDCase.png</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>!Player.HasAudio</visible>
+			<include>fadereplace</include>
+		</control>
+		
+		<control type="image">
+			<posx>656</posx>
+			<posy>65</posy>
+			<width>48</width>
+			<height>48</height>
+			<texture>lastfm.png</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>LastFM.RadioPlaying</visible>
+			<include>fadereplace</include>
+		</control>
+	
+		<control type="label">
+			<description>title</description>
+			<posx>160</posx>
+			<posy>70</posy>
+			<align>left</align>
+			<font>h1</font>
+			<info>MusicPlayer.Title</info>
+			<textcolor>label-text</textcolor>
+			<visible>Player.HasAudio</visible>
+		</control>
+	
+		<control type="label">
+			<description>title</description>
+			<posx>160</posx>
+			<posy>105</posy>
+			<align>left</align>
+			<font>h2</font>
+			<info>MusicPlayer.Artist</info>
+			<textcolor>sublabel-text</textcolor>
+			<visible>Player.HasAudio</visible>
+		</control>
+	
+		<control type="label">
+			<description>title</description>
+			<posx>160</posx>
+			<posy>135</posy>
+			<align>left</align>
+			<font>h2</font>
+			<info>MusicPlayer.Album</info>
+			<textcolor>sublabel-text</textcolor>
+			<visible>Player.HasAudio</visible>
+		</control>
+	
+		<control type="progress">
+			<description>progress control</description>
+			<posx>160</posx>
+			<posy>205</posy>
+			<width>530</width>
+			<height>8</height>
+			<info>Player.Progress</info>
+			<texturebg>progressbar-background.png</texturebg>
+			<lefttexture>progress-left.png</lefttexture>
+			<midtexture>progress-middle.png</midtexture>
+			<righttexture>progress-right.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="label">
+			<description>Time Label</description>
+			<posx>160</posx>
+			<posy>172</posy>
+			<align>left</align>
+			<font>h4</font>
+			<info>Player.Time</info>
+			<visible>Player.HasAudio</visible>
+			<textcolor>label-text</textcolor>
+		</control>
+		<control type="label">
+			<description>Time Label</description>
+			<posx>691</posx>
+			<posy>172</posy>
+			<align>right</align>
+			<font>h4</font>
+			<info>Player.Duration</info>
+			<visible>Player.HasAudio</visible>
+			<textcolor>label-text</textcolor>
+		</control>
+
+	</control>
+	
+	<control type="image">
+		<posx>30</posx>
+		<posy>544</posy>
+		<width>24</width>
+		<height>24</height>
+		<texture>lastfm.png</texture>
+		<aspectratio align="left">keep</aspectratio>
+		<include>fadeinout</include>
+		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable)</visible>
+	</control>
+	
+	<control type="label" id="200">
+		<posx>0</posx>
+		<posy>542</posy>
+		<width>720</width>
+		<label>status: $INFO[AudioScrobbler.ConnectState] | submit in: $INFO[AudioScrobbler.SubmitState] | cached songs: $INFO[AudioScrobbler.FilesCached]</label>
+		<textcolor>label-text</textcolor>
+		<align>center</align>
+		<font>h4</font>
+		<include>fadeinout</include>						
+		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable)</visible>
+	</control>
+
+	
+	
+	</controls>
+</window>

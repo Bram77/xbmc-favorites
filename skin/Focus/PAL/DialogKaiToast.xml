@@ -1,0 +1,52 @@
+﻿<window id="107">
+	<animation effect="slide" time="400" start="300,0">WindowOpen</animation>
+	<animation effect="slide" time="400" end="300,0">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>475</posx>
+		<posy>460</posy>
+	</coordinates>
+	
+	<controls>
+		<control type="image">
+			<description>Popup Kai Toast Dialog Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>240</width>
+			<height>100</height>
+			<texture>dialog-panel2.png</texture>
+		</control>
+		<control type="label" id="401">
+			<description>Caption Label</description>
+			<posx>20</posx>
+			<posy>12</posy>
+			<width>200</width>
+			<font>h2</font>
+			<align>center</align>
+			<label>-</label>
+			<scroll>true</scroll>
+			<textcolor>label-text</textcolor>
+		</control>
+		
+		<control type="image" id="1">
+			<description>seperator</description>
+			<posx>20</posx>
+			<posy>45</posy>
+			<width>190</width>
+			<height>3</height>
+			<texture>dialog-seperator.png</texture>
+		</control>
+		
+		<control type="label" id="402">
+			<description>Description Button</description>
+			<posx>20</posx>
+			<posy>55</posy>
+			<width>200</width>
+			<label>-</label>
+			<font>h4D</font>
+			<align>center</align>
+			<scroll>true</scroll>
+			<textcolor>sublabel-text</textcolor>
+		</control>
+	</controls>
+</window>
