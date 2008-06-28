@@ -1,13 +1,33 @@
-#summary One-sentence summary of this page.
+#labels Phase-Requirements,Phase-Deploy
+#Installation instructions for the XBMC-Favorites Installer
 
 = Introduction =
 
-Add your content here.
+This plugin enables you to download a personal selection of XBMX plugins,skins and scripts without the need to upload it to your XBMC installation with FTP.
+
+The "scripts" directory contains a file "autoexec.py" which is used to autostart the veohproxy script on XBMC startup. ! SO ONLY DOWNLOAD IT IF YOU USE THE VEOHPROXY SCRIPT !.
+
+I've only tested the script on the XBOX. I have no idea if it will work on the Windows/OSX/Linux version of XBMC.
+
+I will try to keep the SVN as up to date as possible.  
 
 
-= Details =
+= XBOX Installation Instructions =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * Download the "XBMC-Favorites Installer" plugin from this site ("Downloads" section) and upack the archive (you can use winrar -> http://www.rarlab.com)
+  * Make sure FTP is enabled in XBMC. You can find this option in "_settings/Network/Servers"  
+  * Find out what the IP address of your XBOX is. You can do this by selecting "settings" on your home screen in the Project Mayhem III skin. On the right side of the home screen you'll fin "Ip Address: xx.xx.xx.xx". Where "xx.xx.xx.xx" is your XBOX ip address.
+  * Open Windows Explorer (My Computer) or use your favorite FTP client. I'll only elaborate on Windows Explorer here.
+  * Enter "_ftp://YOUR_XBOX_IP_HERE" in the address bar and press "Enter"
+  * You will be prompted a login dialog. The default username and password are *xbox
+  * Copy the extracted "XBMC-Favorites Installer" from the archive to "E/XBMC/plugins/programs/"
+  * On your XBOX go to "Programs" and select "Add Location"
+  * Select "Browse" en go to "Program-plugins"
+  * Now the "XBMC-Favorites Installer" plugin will be listed. Simply select it and then add it.
+  * The plugin will now show in the "Programs" root and can be used.
+
+
+
+= TODO =
+
+  * Add an option to update all plugins with one click
