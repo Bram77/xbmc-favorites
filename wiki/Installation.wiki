@@ -1,5 +1,7 @@
 #labels Phase-Requirements,Phase-Deploy
-#Installation instructions for the XBMC-Favorites Installer
+_Installation instructions for the XBMC-Favorites Installer_
+
+
 
 = Introduction =
 
@@ -10,6 +12,8 @@ The "scripts" directory contains a file "autoexec.py" which is used to autostart
 I've only tested the script on the XBOX. I have no idea if it will work on the Windows/OSX/Linux version of XBMC.
 
 I will try to keep the SVN as up to date as possible.  
+
+
 
 
 = XBOX Installation Instructions =
