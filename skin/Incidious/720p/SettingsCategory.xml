@@ -1,0 +1,145 @@
+<window id="12">
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+
+	<include>WindowDefaults</include>
+
+	<control type="group">
+		<posx>39</posx>
+		<posy>59</posy>
+		<include>SettingsBack</include>
+	</control>
+
+
+	<control type="image">
+		<description>Settings Title Image</description>
+		<posx>60</posx>
+		<posy>79</posy>
+		<width>50</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>HomeSettingsThumb.png</texture>
+		<colordiffuse>DialogButton</colordiffuse>
+	</control>
+	<control type="label">
+		<description>Settings Window Title</description>
+		<posx>110</posx>
+		<posy>65</posy>
+		<width>1180</width>
+		<align>left</align>
+		<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+		<scroll>true</scroll>
+		<align>left</align>
+		<font>WindowTitleTextFont</font>
+		<textcolor>WindowTitleText</textcolor>
+	</control>
+
+	<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<include>DefaultFadeAnimation</include>
+		
+			<control type="grouplist" id="3">
+				<description>Button Area</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>150</width>
+				<height>550</height>
+				<itemgap>11</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+			</control>
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>175</posx>
+				<posy>75</posy>
+				<width>1000</width>
+				<height>550</height>
+				<itemgap>11</itemgap>
+				<pagecontrol>-</pagecontrol>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+			</control>
+	</control>
+	
+  <control type="button" id="10">
+		<description>Default Category Button</description>
+		<width>150</width>
+		<height>30</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>-</label>
+		<font>WindowTextFont</font>
+		<textcolor>WindowText</textcolor>
+		<focusedcolor>DialogFocusText</focusedcolor>
+		<disabledcolor>DialogDisabledText</disabledcolor>
+		<texturefocus>DefaultButtonFo.png</texturefocus>
+		<texturenofocus>DefaultButton.png</texturenofocus>
+		<colordiffuse>DialogButton</colordiffuse>
+	</control>
+	<control type="button" id="7">
+		<description>Default Button</description>
+		<width>150</width>
+		<height>30</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<label>-</label>
+		<font>WindowTextFont</font>
+		<textcolor>WindowText</textcolor>
+		<focusedcolor>DialogFocusText</focusedcolor>
+		<disabledcolor>DialogDisabledText</disabledcolor>
+		<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+		<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+		<colordiffuse>DialogButton</colordiffuse>
+		<textoffsetx>5</textoffsetx>
+	</control>
+	<control type="radiobutton" id="8">
+		<description>Default RadioButton</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>-</width>
+		<height>30</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>5</textoffsetx>
+		<font>WindowTextFont</font>
+		<textcolor>WindowText</textcolor>
+		<focusedcolor>WindowFocusText</focusedcolor>
+		<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+		<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+		<colordiffuse>WindowFocusText</colordiffuse>
+		<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+		<textureradionofocus>Radiobutton.png</textureradionofocus>
+		<pulseonselect>false</pulseonselect>
+  </control>
+  <control type="spincontrolex" id="9">
+		<description>Default SpinControlex</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>-</width>
+		<height>25</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<colordiffuse>WindowFocusText</colordiffuse>
+		<textureup>Arrow.png</textureup>
+		<texturedown>ArrowDown.png</texturedown>
+		<textureupfocus>ArrowFo.png</textureupfocus>
+		<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+		<font>WindowTextFont</font>
+		<textcolor>WindowText</textcolor>
+		<disabledcolor>WindowDisabled</disabledcolor>
+		<focusedcolor>WindowFocusText</focusedcolor>
+		<reverse>yes</reverse>
+		<pulseonselect>false</pulseonselect>
+		</control>
+</controls>
+</window>

@@ -1,0 +1,114 @@
+<window id="2004">
+	<defaultcontrol>-</defaultcontrol>
+	<controls>
+
+		<control type="videowindow" id="1">
+			<description>Video Preview Window</description>
+			<posx>695</posx>
+			<posy>55</posy>
+			<width>490</width>
+			<height>490</height>
+			<visible>Window.IsVisible(0)</visible>
+			<include>DefaultFadeAnimation</include>
+		</control>
+
+		<control type="group" id="1">
+			<posx>0</posx>
+			<posy>550</posy>
+			<include>MediaOverlay</include>
+			<include>DefaultFadeAnimation</include>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>50</posx>
+				<posy>5</posy>
+				<width>75</width>
+				<height>90</height>
+				<info>videoplayer.cover</info>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label" id="1">
+				<description>Media Title</description>
+				<posx>140</posx>
+				<posy>10</posy>
+				<width>690</width>
+				<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE] [COLOR DialogText]$INFO[VideoPlayer.Year, (,)][/COLOR]</label>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogFocusText</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="1">
+				<description>TV Season/Episode</description>
+				<posx>140</posx>
+				<posy>30</posy>
+				<width>690</width>
+				<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+				<visible>videoplayer.content(episodes) + !player.chaptercount</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Movie Rating</description>
+				<posx>140</posx>
+				<posy>30</posy>
+				<width>690</width>
+				<label>$INFO[VideoPlayer.MPAA]</label>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+				<visible>videoplayer.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<posx>140</posx>
+				<posy>30</posy>
+				<width>690</width>
+				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+				<visible>!videoplayer.content(episodes) + player.chaptercount</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Plot</description>
+				<posx>140</posx>
+				<posy>50</posy>
+				<width>690</width>
+				<height>20</height>
+				<align>left</align>
+				<info>VideoPlayer.Plot</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>135</posx>
+				<posy>70</posy>
+				<width>590</width>
+				<height>25</height>
+				<info>Player.Progress</info>
+				<texturebg>ProgressBack.png</texturebg>
+				<lefttexture>ProgressLeft.png</lefttexture>
+				<midtexture>ProgressMid.png</midtexture>
+				<righttexture>ProgressRight.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="label" id="1">
+				<description>time label</description>
+				<posx>830</posx>
+				<posy>70</posy>
+				<label>$INFO[VideoPlayer.Time]$INFO[Player.Duration, | ]</label>
+				<align>right</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogFocusText</textcolor>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		
+	</controls>
+</window>

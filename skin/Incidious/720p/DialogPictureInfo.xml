@@ -1,0 +1,93 @@
+<window id="139">
+<defaultcontrol>5</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="1">
+			<description>Heading</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>580</width>
+			<height>30</height>
+			<label>$LOCALIZE[13406]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="list" id="5">
+			<posx>10</posx>
+			<posy>35</posy>
+			<width>580</width>
+			<height>280</height>
+			<onleft>60</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="25">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogText</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>0</posy>
+					<width>385</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogText</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogFocusText</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>0</posy>
+					<width>385</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogFocusText</textcolor>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</control>
+		
+</controls>
+</window>

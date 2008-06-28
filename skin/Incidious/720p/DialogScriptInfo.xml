@@ -1,0 +1,40 @@
+<window id="2004">
+<defaultcontrol>5</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label">
+			<description>Heading</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>580</width>
+			<height>30</height>
+			<label>$LOCALIZE[262]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>10</posx>
+			<posy>35</posy>
+			<width>580</width>
+			<height>275</height>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<spinposx>600</spinposx>
+			<spinposy>445</spinposy>
+			<autoscroll delay="6000" time="2000" repeat="10000"></autoscroll>
+		</control>
+	</control>
+</controls>
+</window>

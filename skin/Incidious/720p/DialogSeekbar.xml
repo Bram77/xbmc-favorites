@@ -1,0 +1,241 @@
+<window id="115">
+<defaultcontrol>1</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<visible>Player.Seeking | Player.DisplayAfterSeek | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
+<controls>
+	
+	<control type="group">
+		<posx>915</posx>
+		<posy>25</posy>
+		<include>DialogSeekbarBack</include>
+	</control>
+	
+	<control type="group">
+		<posx>915</posx>
+		<posy>25</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="1">
+			<description>Elapsed Time Label</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<font>DialogTextFont</font>
+			<label>$INFO[Player.Time] | $INFO[Player.Duration]</label>
+			<textcolor>DialogFocusText</textcolor>
+			<width>350</width>
+			<height>25</height>
+			<align>center</align>
+			<visible>!Player.Seeking</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Seek Time Label</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<font>DialogTextFont</font>
+			<textcolor>DialogFocusText</textcolor>
+			<label>$INFO[Player.SeekTime] | $INFO[Player.Duration]</label>
+			<width>350</width>
+			<height>25</height>
+			<align>center</align>
+			<visible>Player.Seeking</visible>
+		</control>
+		<control type="progress" id="1">
+			<description>Progress Bar</description>
+			<posx>40</posx>
+			<posy>30</posy>
+			<width>275</width>
+			<height>25</height>
+			<info>Player.Progress</info>
+			<texturebg>ProgressBack.png</texturebg>
+			<lefttexture>ProgressLeft.png</lefttexture>
+			<midtexture>ProgressMid.png</midtexture>
+			<righttexture>ProgressRight.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+		</control>
+		<control type="label" id="1">
+			<description>Paused Label</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<font>DialogTextFont</font>
+			<textcolor>DialogFocusText</textcolor>
+			<label>$LOCALIZE[31014]</label>
+			<width>350</width>
+			<height>25</height>
+			<align>center</align>
+			<visible>Player.Paused</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Rewind Label</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<font>DialogTextFont</font>
+			<textcolor>DialogFocusText</textcolor>
+			<label>Rewinding</label>
+			<width>350</width>
+			<height>25</height>
+			<align>center</align>
+			<visible>Player.Rewinding</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Forwarding Label</description>
+			<posx>0</posx>
+			<posy>50</posy>
+			<font>DialogTextFont</font>
+			<textcolor>DialogFocusText</textcolor>
+			<label>Forwarding</label>
+			<width>350</width>
+			<height>25</height>
+			<align>center</align>
+			<visible>Player.Forwarding</visible>
+		</control>
+		
+		<control type="group" id="1">
+			<description>Seek Status</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<control type="image" id="1">
+				<description>Background image</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>60</height>
+				<visible>Player.Forwarding | Player.Rewinding</visible>
+				<texture>DialogBack.png</texture>
+				<colordiffuse>DialogBack</colordiffuse>
+				<bordertexture>DialogFrame.png</bordertexture>
+				<bordersize>1</bordersize>
+			</control>
+			<control type="label" id="1">
+				<description>2x Forward Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>2X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Forwarding2x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>4x Forward Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>4X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Forwarding4x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>8x Forward Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>8X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Forwarding8x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>16x Forward Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>16X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Forwarding16x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>32x Forward Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>32X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Forwarding32x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>2x Rewinding Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>2X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Rewinding2x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>4x Rewinding Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>4X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Rewinding4x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>8x Rewinding Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>8X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Rewinding8x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>16x Rewinding Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>16X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Rewinding16x</visible>
+			</control>
+			<control type="label" id="1">
+				<description>32x Rewinding Label</description>
+				<posx>-59</posx>
+				<posy>0</posy>
+				<font>SeekStatusFont</font>
+				<textcolor>DialogTitleText</textcolor>
+				<label>32X</label>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Player.Rewinding32x</visible>
+			</control>
+		</control>
+	</control>
+	
+</controls>
+</window>

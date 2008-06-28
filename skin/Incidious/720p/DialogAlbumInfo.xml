@@ -1,0 +1,377 @@
+<window id="2001">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>BackgroundOverlay</include>
+	
+	<control type="group">
+		<posx>39</posx>
+		<posy>59</posy>
+		<include>DialogMediaInfoBack</include>
+	</control>
+
+	<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="image" id="3">
+			<description>Album Cover image</description>
+			<posx>5</posx>
+			<posy>82</posy>
+			<width>340</width>
+			<height>340</height>
+			<aspectratio aligny="top">keep</aspectratio>
+			<texture>-</texture>
+		</control>
+		<control type="image">
+			<description>Album Star Rating</description>
+			<posx>65</posx>
+			<posy>432</posy>
+			<width>-</width>
+			<height>30</height>
+			<aligny>top</aligny>
+			<info>ListItem.StarRating</info>
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.StarRating</info>
+		</control>
+		<control type="label" id="20">
+			<description>Album value</description>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<width>1040</width>
+			<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+			<scroll>true</scroll>
+			<align>left</align>
+			<font>WindowTitleTextFont</font>
+			<textcolor>WindowTitleText</textcolor>
+		</control>
+		<control type="label">
+			<description>year value</description>
+			<posx>1180</posx>
+			<posy>-5</posy>
+			<width>150</width>
+			<label>[UPPERCASE]$INFO[ListItem.Year][UPPERCASE]</label>
+			<scroll>false</scroll>
+			<align>right</align>
+			<font>WindowTitleTextFont</font>
+			<textcolor>WindowText</textcolor>
+		</control>
+
+		<control type="group">
+			<posx>440</posx>
+			<posy>50</posy>
+			<include>DefaultFadeAnimation</include>
+			<control type="label" id="1">
+				<description>Artist</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>200</width>
+				<label>$LOCALIZE[557]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Rating</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>200</width>
+				<label>$LOCALIZE[563]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Genre</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>200</width>
+				<label>$LOCALIZE[515]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Tones</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>200</width>
+				<label>$LOCALIZE[175]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Styles</description>
+				<posx>0</posx>
+				<posy>125</posy>
+				<width>200</width>
+				<label>$LOCALIZE[176]</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="1">
+				<description>Review</description>
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>200</width>
+				<label>$LOCALIZE[182]:</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Tracks</description>
+				<posx>0</posx>
+				<posy>150</posy>
+				<width>200</width>
+				<label>$LOCALIZE[183]:</label>
+				<scroll>true</scroll>
+				<align>right</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<visible>Control.IsVisible(4)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posx>450</posx>
+			<posy>50</posy>
+			<include>DefaultFadeAnimation</include>
+			<control type="label" id="21">
+				<description>Artist value</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>620</width>
+				<label>-</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="23">
+				<description>Rating value</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>620</width>
+				<label>-</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="24">
+				<description>Genre value</description>
+				<posx>0</posx>
+				<posy>75</posy>
+				<width>620</width>
+				<label>-</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="25">
+				<description>Tones value</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>620</width>
+				<label>-</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="26">
+				<description>Styles value</description>
+				<posx>0</posx>
+				<posy>125</posy>
+				<width>620</width>
+				<label>-</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+		</control>
+
+		<control type="textbox" id="4">
+			<description>Textbox when scrollbar is visible</description>
+			<posx>450</posx>
+			<posy>200</posy>
+			<width>730</width>
+			<height>385</height>
+			<spinposx>500</spinposx>
+			<spinposy>-30</spinposy>
+			<spinwidth>20</spinwidth>
+			<spinheight>11</spinheight>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<textureup>-</textureup>
+			<texturedown flipy="true">-</texturedown>
+			<textureupfocus>-</textureupfocus>
+			<texturedownfocus flipy="true">-</texturedownfocus>
+			<autoscroll delay="6000" time="2000" repeat="10000"></autoscroll>
+			<visible>!Control.IsVisible(50)</visible>
+		</control>
+
+		<control type="list" id="50">
+			<description>Track List</description>
+			<posx>450</posx>
+			<posy>200</posy>
+			<width>730</width>
+			<height>385</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<orientation>vertical</orientation>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout width="730" height="30">
+				<control type="label">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>600</width>
+					<height>22</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<scroll>no</scroll>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>705</posx>
+					<posy>3</posy>
+					<width>200</width>
+					<height>22</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<scroll>no</scroll>
+					<label>$INFO[ListItem.Duration]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="730" height="30">
+				<control type="label">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>600</width>
+					<height>22</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>705</posx>
+					<posy>3</posy>
+					<width>200</width>
+					<height>22</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Duration]</label>
+				</control>
+				
+				<control type="label">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>600</width>
+					<height>22</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="label">
+					<posx>705</posx>
+					<posy>3</posy>
+					<width>465</width>
+					<height>22</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Duration]</label>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="grouplist" id="9000">
+			<posx>1080</posx>
+			<posy>75</posy>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<itemgap>5</itemgap>
+			<orientation>vertical</orientation>
+			<control type="button" id ="5">
+				<description>Tracks/Review</description>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[182]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id ="6">
+				<description>Refresh</description>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[184]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id ="10">
+				<description>GetThumb</description>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13405]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+		</control>
+	</control>        
+</controls>
+</window>

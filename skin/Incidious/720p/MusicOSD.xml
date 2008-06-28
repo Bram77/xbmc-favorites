@@ -1,0 +1,255 @@
+﻿<window id="120">
+<defaultcontrol>403</defaultcontrol>
+	<controls>
+
+		<control type="group">
+			<posx>835</posx>
+			<posy>595</posy>
+			<include>OSDBack</include>
+		</control>
+
+		<control type="group">
+			<posx>835</posx>
+			<posy>595</posy>
+			<include>DefaultFadeAnimation</include>
+			<control type="button" id="400">
+				<description>Prev Track button</description>
+				<posx>15</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDPrevTrackFO.png</texturefocus>
+				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+				<onleft>600</onleft>
+				<onright>401</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+			</control>
+			<control type="button" id="401">
+				<description>Rewind button</description>
+				<posx>65</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDRewindFO.png</texturefocus>
+				<texturenofocus>OSDRewindNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				<onleft>400</onleft>
+				<onright>402</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+			</control>
+			<control type="button" id="402">
+				<description>Stop button</description>
+				<posx>115</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDStopFO.png</texturefocus>
+				<texturenofocus>OSDStopNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Stop)</onclick>
+				<onleft>401</onleft>
+				<onright>403</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+			</control>
+			<control type="togglebutton" id="403">
+				<description>Play/Pause button</description>
+				<posx>165</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<visible>true</visible>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
+				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<texturefocus>OSDPauseFO.png</texturefocus>
+				<texturenofocus>OSDPauseNF.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<onup>602</onup>
+				<ondown>602</ondown>
+				<onleft>402</onleft>
+				<onright>404</onright>
+			</control>
+			<control type="button" id="404">
+				<description>Fast Forward button</description>
+				<posx>215</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDForwardFO.png</texturefocus>
+				<texturenofocus>OSDForwardNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<onleft>403</onleft>
+				<onright>405</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+			</control>
+			<control type="button" id="405">
+				<description>Skip Fwd</description>
+				<posx>265</posx>
+				<posy>30</posy>
+				<width>40</width>
+				<height>40</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDNextTrackFO.png</texturefocus>
+				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+				<onleft>404</onleft>
+				<onright>600</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+			</control>
+
+			<control type="button" id="600">
+				<description>Repeat button</description>
+				<posx>320</posx>
+				<posy>20</posy>
+				<height>25</height>
+				<width>100</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>5</textoffsetx>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogFocusText</colordiffuse>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<pulseonselect>false</pulseonselect>
+				<label>$LOCALIZE[486]: $INFO[Playlist.Repeat]</label>
+				<onclick>XBMC.PlayerControl(Repeat)</onclick>
+				<selected>Playlist.IsRandom</selected>
+				<onleft>405</onleft>
+				<onright>400</onright>
+				<ondown>601</ondown>
+				<onup>601</onup>
+			</control>
+			<control type="radiobutton" id="601">
+				<description>Random button</description>
+				<posx>320</posx>
+				<posy>55</posy>
+				<height>25</height>
+				<width>100</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>5</textoffsetx>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogFocusText</colordiffuse>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<pulseonselect>false</pulseonselect>
+				<label>$LOCALIZE[590]</label>
+				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<selected>Playlist.IsRandom</selected>
+				<onleft>405</onleft>
+				<onright>400</onright>
+				<ondown>600</ondown>
+				<onup>600</onup>
+			</control>
+			
+			<control type="button" id="602">
+				<description>playlist Button</description>
+				<posx>20</posx>
+				<posy>75</posy>
+				<width>22</width>
+				<height>20</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDPlaylistFO.png</texturefocus>
+				<texturenofocus>OSDPlaylistNF.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(500)</onclick>
+				<onleft>605</onleft>
+				<onright>603</onright>
+				<onup>403</onup>
+				<ondown>403</ondown>
+			</control>
+			<control type="button" id="603">
+				<description>Vis Options Menu</description>
+				<posx>50</posx>
+				<posy>75</posy>
+				<width>22</width>
+				<height>20</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDAudioFO.png</texturefocus>
+				<texturenofocus>OSDAudioNF.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(121)</onclick>
+				<onleft>602</onleft>
+				<onright>604</onright>
+				<onup>403</onup>
+				<ondown>403</ondown>
+			</control>
+			<control type="button" id="604">
+				<description>Vis Select Menu</description>
+				<posx>80</posx>
+				<posy>75</posy>
+				<width>22</width>
+				<height>20</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDVideoFO.png</texturefocus>
+				<texturenofocus>OSDVideoNF.png</texturenofocus>
+				<onleft>603</onleft>
+				<onright>605</onright>
+				<onup>403</onup>
+				<ondown>403</ondown>
+				<onclick>XBMC.ActivateWindow(122)</onclick>
+			</control>
+			<control type="image">
+				<description>Fake Record Image</description>
+				<posx>110</posx>
+				<posy>75</posy>
+				<width>22</width>
+				<height>22</height>
+				<font>-</font>
+				<label>-</label>
+				<texture>OSDRecordFO.png</texture>
+				<colordiffuse>WindowDisabledImage</colordiffuse>
+				<onleft>604</onleft>
+				<onright>600</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+				<visible>yes</visible>
+				<visible>!Player.CanRecord</visible>
+			</control>
+			<control type="button" id="605">
+				<description>Record button</description>
+				<posx>140</posx>
+				<posy>75</posy>
+				<width>22</width>
+				<height>22</height>
+				<font>-</font>
+				<label>-</label>
+				<texturefocus>OSDRecordFO.png</texturefocus>
+				<texturenofocus>OSDRecordNF.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Record)</onclick>
+				<onleft>604</onleft>
+				<onright>602</onright>
+				<onup>602</onup>
+				<ondown>602</ondown>
+				<visible>Player.CanRecord</visible>
+			</control>
+		</control>
+	</controls>
+</window>

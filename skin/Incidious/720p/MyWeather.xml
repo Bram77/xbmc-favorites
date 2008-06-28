@@ -1,0 +1,503 @@
+<window id="2600">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+<controls>
+  
+<include>WindowDefaults</include>
+
+	<control type="image">
+		<description>Weather Title Image</description>
+		<posx>10</posx>
+		<posy>9</posy>
+		<width>50</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>HomeWeatherThumb.png</texture>
+		<colordiffuse>DialogButton</colordiffuse>
+		<include>DefaultFadeAnimation</include>
+	</control>
+	<control type="label">
+		<description>Weather Window Title</description>
+		<posx>60</posx>
+		<posy>9</posy>
+		<width>400</width>
+		<height>40</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
+		<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
+		<font>WindowTitleTextFont</font>
+		<textcolor>WindowTitleText</textcolor>
+		<shadowcolor>WindowTextShadow</shadowcolor>
+		<include>DefaultFadeAnimation</include>
+	</control>
+
+	<control type="button" id="9000">
+		<description>Fake Button</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1</width>
+		<height>1</height>
+		<font>-</font>
+		<label>-</label>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<onclick>-</onclick>
+		<onup>-</onup>
+		<ondown>3002</ondown>
+		<onleft>-</onleft>
+		<onright>-</onright>
+		<include>DefaultFadeAnimation</include>
+	</control>
+	<control type="image">
+		<description>Media Option Menu Image Down</description>
+		<posx>10</posx>
+		<posy>665</posy>
+		<width>40</width>
+		<height>40</height>
+		<texture>MediaOptionImageDown.png</texture>
+		<colordiffuse>WindowImage</colordiffuse>
+		<visible>!ControlGroup(3001).HasFocus</visible>
+		<include>DefaultFadeAnimation</include>
+	</control>
+	<control type="image">
+		<description>Media Option Menu Image Down Focus</description>
+		<posx>10</posx>
+		<posy>665</posy>
+		<width>40</width>
+		<height>40</height>
+		<texture>MediaOptionImageDown.png</texture>
+		<colordiffuse>WindowFocusImage</colordiffuse>
+		<visible>ControlGroup(3001).HasFocus</visible>
+		<include>DefaultFadeAnimation</include>
+	</control>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>-90</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="group">
+			<posx>100</posx>
+			<posy>300</posy>
+			<include>WeatherInfoBack</include>
+			<control type="label">
+				<description>day 0 label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>198</width>
+				<label>$LOCALIZE[31021]</label>
+				<align>center</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="32">
+				<description>day 0 Hi label</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>198</width>
+				<label>-</label>
+				<align>center</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="33">
+				<description>day 0 low label</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>198</width>
+				<label>-</label>
+				<align>center</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="34">
+				<description>day 0 general weather label</description>
+				<posx>0</posx>
+				<posy>233</posy>
+				<width>198</width>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<align>center</align>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="image" id="35">
+				<description>day 0 icon</description>
+				<posx>35</posx>
+				<posy>90</posy>
+				<height>128</height>
+				<width>128</width>
+				<align>center</align>
+				<texture>-</texture>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>400</posx>
+			<posy>300</posy>
+			<include>WeatherInfoBack</include>
+			<control type="label" id="41">
+				<description>day 1 label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="42">
+				<description>day 1 Hi label</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="43">
+				<description>day 1 low label</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="44">
+				<description>day 1 general weather label</description>
+				<posx>0</posx>
+				<posy>233</posy>
+				<width>198</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="image" id="45">
+				<description>day 1 icon</description>
+				<posx>35</posx>
+				<posy>90</posy>
+				<height>128</height>
+				<width>128</width>
+				<align>center</align>
+				<texture>-</texture>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>700</posx>
+			<posy>300</posy>
+			<include>WeatherInfoBack</include>
+			<control type="label" id="51">
+				<description>day 2 label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="52">
+				<description>day 2 Hi label</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="53">
+				<description>day 2 low label</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="54">
+				<description>day 2 general weather label</description>
+				<posx>0</posx>
+				<posy>233</posy>
+				<width>198</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="image" id="55">
+				<description>day 2 icon</description>
+				<posx>35</posx>
+				<posy>90</posy>
+				<height>128</height>
+				<width>128</width>
+				<align>center</align>
+				<texture>-</texture>
+			</control>
+		</control>
+
+		<control type="group">
+			<posx>1000</posx>
+			<posy>300</posy>
+			<include>WeatherInfoBack</include>
+			<control type="label" id="61">
+				<description>day 3 label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="62">
+				<description>day 3 Hi label</description>
+				<posx>0</posx>
+				<posy>25</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="63">
+				<description>day 3 low label</description>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>198</width>
+				<align>center</align>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="64">
+				<description>day 3 general weather label</description>
+				<posx>0</posx>
+				<posy>233</posy>
+				<width>198</width>
+				<align>center</align>
+				<wrapmultiline>true</wrapmultiline>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="image" id="65">
+				<description>day 3 icon</description>
+				<posx>35</posx>
+				<posy>90</posy>
+				<height>128</height>
+				<width>128</width>
+				<align>center</align>
+				<texture>-</texture>
+			</control>
+		</control>
+	</control>
+
+	<control type="group" id="3001">
+		<posx>190</posx>
+		<posy>760</posy>
+		<animation effect="slide" time="150" end="0,-80" condition="!Control.HasFocus(9000)">Conditional</animation>
+		<include>MediaOptionMenu</include>
+
+		<control type="group" id="3002">
+			<posx>10</posx>
+			<posy>5</posy>
+			<control type="button" id="2">
+				<description>Refresh button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>110</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<label>-</label>
+				<onleft>4</onleft>
+				<onright>3</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="image">
+				<description>Location image</description>
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>210</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>DefaultButton.png</texture>
+				<colordiffuse>DialogButton</colordiffuse>
+				<visible>!Control.HasFocus(3)</visible>
+			</control>
+			<control type="image">
+				<description>Location image</description>
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>210</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>DefaultButtonFo.png</texture>
+				<colordiffuse>DialogButton</colordiffuse>
+				<visible>Control.HasFocus(3)</visible>
+			</control>
+			<control type="spincontrol" id="3">
+				<description>Location Select</description>
+				<posx>125</posx>
+				<posy>8</posy>
+				<width>16</width>
+				<height>16</height>
+				<visible>true</visible>
+				<colordiffuse>DialogButton</colordiffuse>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<textureup>Arrow.png</textureup>
+				<texturedown>ArrowDown.png</texturedown>
+				<textureupfocus>ArrowFo.png</textureupfocus>
+				<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+				<reverse>yes</reverse>
+				<font>-</font>
+				<textcolor>-</textcolor>
+				<disabledcolor>-</disabledcolor>
+				<align>left</align>
+				<aligny>-</aligny>
+				<textoffsetx>-</textoffsetx>
+				<textoffsety>-</textoffsety>
+				<pulseonselect>no</pulseonselect>
+				<onleft>2</onleft>
+				<onright>2000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="label">
+				<description>Location Label</description>
+				<posx>170</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>Weather.Location</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<visible>!Control.HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>Location Label</description>
+				<posx>170</posx>
+				<posy>0</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>Weather.Location</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogFocusText</textcolor>
+				<visible>Control.HasFocus(3)</visible>
+			</control>
+			<control type="button" id="2000">
+				<description>Radar button</description>
+				<posx>340</posx>
+				<posy>0</posy>
+				<width>110</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Radar</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onleft>3</onleft>
+				<onright>4</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onclick>XBMC.RunScript($INFO[Skin.String(WeatherRadarPath)])</onclick>
+				<visible>Skin.HasSetting(WeatherRadar)</visible>
+			</control>
+			<control type="button" id="4">
+				<description>Settings button</description>
+				<posx>340</posx>
+				<posy>0</posy>
+				<width>110</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[5]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onleft>2000</onleft>
+				<onright>2</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+				<visible>!Skin.HasSetting(WeatherRadar)</visible>
+			</control>
+			<control type="button" id="4">
+				<description>Settings button</description>
+				<posx>460</posx>
+				<posy>0</posy>
+				<width>110</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[5]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onleft>2000</onleft>
+				<onright>2</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+				<visible>Skin.HasSetting(WeatherRadar)</visible>
+			</control>
+			<control type="label">
+				<description>Last Refresh label</description>
+				<posx>652</posx>
+				<posy>5</posy>
+				<align>left</align>
+				<label>$LOCALIZE[31020] $LOCALIZE[184] -</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+			</control>	
+			<control type="label" id="11">
+				<description>Update Time Label</description>
+				<posx>755</posx>
+				<posy>5</posy>
+				<label>-</label>
+				<align>left</align>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+			</control>
+		</control>
+	</control>
+</controls>
+</window>

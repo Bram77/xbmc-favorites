@@ -1,0 +1,817 @@
+<includes>
+
+	<include name="Flow_Albums">
+		<control type="image">
+			<posx>0</posx>
+			<posy>450</posy>
+			<width>1280</width>
+			<height>300</height>
+			<visible>Control.IsVisible(58)</visible>
+			<texture>DialogBack.png</texture>
+			<colordiffuse>DialogBack</colordiffuse>
+		</control>
+		<control type="group" id="7001">
+			<posx>-40</posx>
+			<posy>185</posy>
+			<visible>Control.IsVisible(58) + Container.OnNext</visible>
+			<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>-20</posx>
+				<visible>Container.OnNext</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-5).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-5).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>280</posx>
+				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>1100</posx>
+				<visible>!Container.OnNext</visible>
+				<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="1420" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1000</posx>
+				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Container.OnNext</visible>
+				<animation effect="slide" end="-110,0" time="250" reversible="false">Hidden</animation>
+				<control type="group">
+					<posx>700</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="1020" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>350</height>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>350</posy>
+						<width>360</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="DiffuseMirror.png" />
+						<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+				</control>
+				<control type="group">
+					<posx>490</posx>
+					<visible>Container.OnNext</visible>
+					<animation effect="rotatey" center="470" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>350</height>
+						<info>Container(58).ListItem(-1).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>350</posy>
+						<width>360</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="DiffuseMirror.png" />
+						<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+						<info>Container(58).ListItem(-1).Icon</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7002">
+			<posx>-40</posx>
+			<posy>185</posy>
+			<visible>Control.IsVisible(58) + Container.OnPrevious</visible>
+			<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+			<control type="group">
+				<posx>1000</posx>
+				<visible>Container.OnPrevious</visible>
+				<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(5).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(5).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>-120</posx>
+				<visible>!Container.OnPrevious</visible>
+				<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+				<animation effect="rotatey" center="-140" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>-20</posx>
+				<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Container.OnPrevious</visible>
+				<animation effect="slide" end="110,0" time="250" reversible="false">Hidden</animation>
+				<control type="group">
+					<posx>280</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="260" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+					<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>350</height>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>350</posy>
+						<width>360</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="DiffuseMirror.png" />
+						<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+						<info>Container(58).ListItem(0).Icon</info>
+					</control>
+				</control>
+				<control type="group">
+					<posx>490</posx>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="rotatey" center="810" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>350</height>
+						<info>Container(58).ListItem(1).Icon</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>350</posy>
+						<width>360</width>
+						<height>350</height>
+						<texture flipy="true" diffuse="DiffuseMirror.png" />
+						<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+						<info>Container(58).ListItem(1).Icon</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="7000">
+			<posx>-40</posx>
+			<posy>185</posy>
+			<visible>Control.IsVisible(58) + !Control.IsVisible(7001)  + !Control.IsVisible(7002)</visible>
+			<control type="group">
+				<posx>-20</posx>
+				<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>80</posx>
+				<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-2).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>280</posx>
+				<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(-1).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1000</posx>
+				<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(4).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>900</posx>
+				<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(3).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>800</posx>
+				<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(2).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>700</posx>
+				<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(1).Icon</info>
+				</control>
+			</control>
+			<control type="group">
+				<posx>490</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(0).Icon</info>
+					<visible>Control.HasFocus(58)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(0).Icon</info>
+					<visible>Control.HasFocus(58)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>490</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>350</height>
+					<info>Container(58).ListItem(0).Icon</info>
+					<visible>!Control.HasFocus(58)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>360</width>
+					<height>350</height>
+					<texture flipy="true" diffuse="DiffuseMirror.png" />
+					<bordertexture border="0" flipy="true" >Black.png</bordertexture>
+					<info>Container(58).ListItem(0).Icon</info>
+					<visible>!Control.HasFocus(58)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="wraplist" id="58">
+			<posx>20</posx>
+			<posy>785</posy>
+			<width>7</width>
+			<height>1</height>
+			<onleft>58</onleft>
+			<onright>58</onright>
+			<onup>60</onup>
+			<ondown>9000</ondown>
+			<viewtype label="$LOCALIZE[31017]">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<focusedposition>3</focusedposition>
+			<visible>Container.Content(Albums) | Window.IsVisible(Musicfiles)</visible>
+			<itemlayout height="1" width="1">
+			</itemlayout>
+			<focusedlayout height="1" width="1">
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="Wall_Albums">
+
+		<control type="group" id="7000">
+			<include>DefaultFadeAnimation</include>
+			<visible>Control.IsVisible(59)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(-7).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse.png" />
+			</control>
+			<control type="image">
+				<posx>256</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(-6).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse.png" />
+			</control>
+			<control type="image">
+				<posx>512</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(-5).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse.png" />
+			</control>
+			<control type="image">
+				<posx>768</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(-4).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse.png" />
+			</control>
+			<control type="image">
+				<posx>1024</posx>
+				<posy>0</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(-3).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse.png" />
+			</control>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>480</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(3).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse2.png" />
+			</control>
+			<control type="image">
+				<posx>256</posx>
+				<posy>480</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(4).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse2.png" />
+			</control>
+			<control type="image">
+				<posx>512</posx>
+				<posy>480</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(5).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse2.png" />
+			</control>
+			<control type="image">
+				<posx>768</posx>
+				<posy>480</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(6).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse2.png" />
+			</control>
+			<control type="image">
+				<posx>1024</posx>
+				<posy>480</posy>
+				<width>256</width>
+				<height>240</height>
+				<info>Container(59).ListItem(7).Icon</info>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="false" diffuse="WallDiffuse2.png" />
+			</control>
+		</control>
+		<control type="wraplist" id="59">
+			<posx>0</posx>
+			<posy>240</posy>
+			<width>1280</width>
+			<height>246</height>
+			<onleft>59</onleft>
+			<onright>59</onright>
+			<onup>59</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<viewtype label="$LOCALIZE[31018]">icon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>DefaultFadeAnimation</include>
+			<visible>Container.Content(Albums) | Window.IsVisible(Musicfiles)</visible>
+			<itemlayout width="256" height="246">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>256</width>
+					<height>246</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+					<texture flipy="false" diffuse="IconOverlay.png" />
+				</control>
+			</itemlayout>
+			<focusedlayout width="256" height="246">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>256</width>
+					<height>246</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" end="140" center="128,123" delay="100" time="300">Focus</animation>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+</includes>

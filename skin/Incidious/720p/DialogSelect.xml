@@ -1,0 +1,113 @@
+<window id="2000">
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+	
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="411">
+			<description>Heading</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>580</width>
+			<height>30</height>
+			<label>$LOCALIZE[1023]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="list" id="3">
+			<posx>10</posx>
+			<posy>35</posy>
+			<width>445</width>
+			<height>275</height>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="25">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>445</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<scroll>no</scroll>
+					<textcolor>DialogText</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>445</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogText</textcolor>
+					<visible>!Control.HasFocus(3)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>445</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<scroll>yes</scroll>
+					<textcolor>DialogFocusText</textcolor>
+					<visible>Control.HasFocus(3)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="label" id="2">
+			<description>Number of Files</description>
+			<posx>580</posx>
+			<posy>285</posy>
+			<width>100</width>
+			<height>25</height>
+			<label>-</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+
+		<control type="button" id="5">
+			<description>Manual</description>
+			<posx>480</posx>
+			<posy>35</posy>
+			<width>100</width>
+			<height>25</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[368]</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<onleft>3</onleft>
+			<onright>3</onright>
+		</control>
+	</control>
+</controls>
+</window>

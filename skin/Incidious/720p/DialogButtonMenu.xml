@@ -1,0 +1,159 @@
+<window type="buttonmenu" id="111">
+<defaultcontrol always="true">3110</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+</coordinates>
+	
+<controls>
+
+<include>BackgroundOverlay</include>
+	
+	<control type="group">
+		<posx>356</posx>
+		<posy>269</posy>
+		<include>DialogButtonMenuBack</include>
+	</control>
+	
+	<control type="group">
+		<posx>-35</posx>
+		<posy>5</posy>
+		<include>DefaultFadeAnimation</include>
+			<control type="label">
+				<description>Logged In User</description>
+				<posx>390</posx>
+				<posy>274</posy>
+				<width>565</width>
+				<height>30</height>
+				<align>center</align>
+				<scroll>false</scroll>
+				<label>$LOCALIZE[20125] $INFO[system.profilename]</label>
+				<font>DialogTitleTextFont</font>
+				<textcolor>DialogFocusText</textcolor>
+				<visible>!Window.IsActive(50) + !System.LoggedOn</visible>
+			</control>
+			<control type="list" id="3110">
+				<posx>400</posx>
+				<posy>310</posy>
+				<width>565</width>
+				<height>150</height>
+				<onleft>3110</onleft>
+				<onright>3110</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<orientation>horizontal</orientation>
+				<visible>!Window.IsActive(50)</visible>
+				<itemlayout height="70" width="70">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>WindowImage</colordiffuse>
+				</control>
+			</itemlayout>
+			<focusedlayout height="70" width="70">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>64</width>
+					<height>64</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Enter Master Mode</description>
+					<label>$LOCALIZE[20045]</label>
+					<onclick>xbmc.mastermode</onclick>
+					<thumb>ButtonMenuLogOff.png</thumb>
+					<visible>System.LoggedOn + System.HasLocks + !System.IsMaster</visible>
+				</item>
+				<item id="1">
+					<description>Leave Master Mode</description>
+					<label>$LOCALIZE[20046]</label>
+					<onclick>xbmc.mastermode</onclick>
+					<thumb>ButtonMenuLogOff.png</thumb>
+					<visible>System.LoggedOn + System.HasLocks + System.IsMaster</visible>
+				</item>
+				<item id="1">
+					<description>Fake Button</description>
+					<visible>System.LoggedOn + !System.HasLocks + !System.IsMaster</visible>
+				</item>
+				<item id="2">
+					<description>System Info</description>
+					<label>$LOCALIZE[130]</label>
+					<onclick>XBMC.ActivateWindow(7)</onclick>
+					<onclick>Dialog.Close(111)</onclick>
+					<thumb>ButtonMenuInfo.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+				<item id="3">
+					<description>Log Off</description>
+					<label>$LOCALIZE[20126]</label>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>system.logoff</onclick>
+					<thumb>ButtonMenuProfiles.png</thumb>
+					<visible>System.LoggedOn + System.HasLoginScreen</visible>
+				</item>
+				<item id="4">
+					<description>Shutdown</description>
+					<label>$LOCALIZE[13005]</label>
+					<onclick>XBMC.Shutdown()</onclick>
+					<thumb>ButtonMenuPower.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+				<item id="5">
+					<description>Shutdown Timer</description>
+					<label>$LOCALIZE[20144]</label>
+					<onclick>XBMC.ActivateWindow(50)</onclick>
+					<thumb>ButtonMenuTimer.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+				<item id="6">
+					<description>Favorites</description>
+					<label>$LOCALIZE[1036]</label>
+					<onclick>XBMC.ActivateWindow(Favourites)</onclick>
+					<onclick>XBMC.Reset()</onclick>
+					<thumb>HomeFavorites.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+				<item id="7">
+					<description>Reboot</description>
+					<label>$LOCALIZE[13313]</label>
+					<onclick>XBMC.Reset()</onclick>
+					<thumb>ButtonMenuRestartX.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+				<item id="8">
+					<description>Restart</description>
+					<label>$LOCALIZE[13313] XBMC</label>
+					<onclick>XBMC.RestartApp()</onclick>
+					<thumb>ButtonMenuRestart.png</thumb>
+					<visible>System.LoggedOn</visible>
+				</item>
+			</content>
+			</control>
+		
+			<control type="label">
+				<posx>390</posx>
+				<posy>370</posy>
+				<width>565</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<info>Container(3110).ListItem.Label</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<visible>!Window.IsActive(50)</visible>
+			</control>
+
+	</control>
+</controls>
+</window>

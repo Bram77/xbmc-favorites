@@ -1,0 +1,158 @@
+<window id="10140">
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="20">
+			<description>Dialog Heading</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>570</width>
+			<label></label>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="grouplist" id="2">
+			<description>control area</description>
+			<posx>10</posx>
+			<posy>35</posy>
+			<width>570</width>
+			<height>300</height>
+			<itemgap>5</itemgap>
+			<pagecontrol>-</pagecontrol>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+		</control>
+		<control type="button" id="3">
+			<description>Default Button</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>25</height>
+			<width>570</width>
+			<label>-</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>-</colordiffuse>
+			<textoffsetx>5</textoffsetx>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>5</textoffsetx>
+			<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+			<textureradionofocus>Radiobutton.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="5">
+			<description>Default SpinControlex</description>
+			<posx>530</posx>
+			<posy>180</posy>
+			<width>580</width>
+			<height>25</height>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>Arrow.png</textureup>
+			<texturedown>ArrowDown.png</texturedown>
+			<textureupfocus>ArrowFo.png</textureupfocus>
+			<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<textoffsetx>5</textoffsetx>
+			<aligny>center</aligny>
+			<reverse>yes</reverse>
+		</control>
+		<control type="image" id="6">
+			<description>separator image</description>
+			<width>570</width>
+			<height>1</height>
+			<texture>SeperatorBar.png</texture>
+		</control>
+		<control type="group" id="9000">
+			<control type="button" id="10">
+				<description>ok</description>
+				<posx>480</posx>
+				<posy>285</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[186]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<onleft>11</onleft>
+				<onright>12</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<control type="button" id="11">
+				<description>cancel</description>
+				<posx>370</posx>
+				<posy>285</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[222]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<onleft>12</onleft>
+				<onright>10</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+			<control type="button" id="12">
+				<description>default</description>
+				<posx>260</posx>
+				<posy>285</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[409]</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<onleft>10</onleft>
+				<onright>11</onright>
+				<onup>2</onup>
+				<ondown>2</ondown>
+			</control>
+		</control>
+	</control>
+	</controls>
+</window>

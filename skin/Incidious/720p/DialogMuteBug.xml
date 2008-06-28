@@ -1,0 +1,25 @@
+<window id="113">
+<defaultcontrol>901</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<coordinates>
+	<system>1</system>
+	<posx>1070</posx>
+	<posy>30</posy>
+</coordinates>
+	
+<controls>
+
+	<control type="image">
+		<posx>155</posx>
+		<posy>15</posy>
+		<width>55</width>
+		<height>55</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>VolumeMute.png</texture>
+		<colordiffuse>WindowFocusImage</colordiffuse>
+		<include>DefaultFadeAnimation</include>
+	</control>
+
+</controls>
+</window>

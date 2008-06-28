@@ -1,0 +1,63 @@
+﻿<window id="110">
+<defaultcontrol>0</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogSmallBack</include>
+
+	<control type="group">
+		<posx>449</posx>
+		<posy>256</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="1">
+			<description>Heading</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$LOCALIZE[12325]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="label" id="2">
+			<description>Line 1</description>
+			<posx>10</posx>
+			<posy>35</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$LOCALIZE[12330]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>Line 2</description>
+			<posx>10</posx>
+			<posy>60</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$LOCALIZE[12331]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+		<control type="label" id="4">
+			<description>Line 3</description>
+			<posx>10</posx>
+			<posy>85</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$LOCALIZE[12323]</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+	</control>
+</controls>
+</window>
