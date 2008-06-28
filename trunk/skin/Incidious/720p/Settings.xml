@@ -1,0 +1,412 @@
+<window id="4">
+<defaultcontrol>9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+  
+<include>WindowDefaults</include>
+
+	<control type="group">
+		<posx>39</posx>
+		<posy>59</posy>
+		<include>SettingsBack</include>
+	</control>
+	
+	<control type="image">
+		<description>Settings Title Image</description>
+		<posx>60</posx>
+		<posy>79</posy>
+		<width>50</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>HomeSettingsThumb.png</texture>
+		<colordiffuse>DialogButton</colordiffuse>
+	</control>
+	<control type="label">
+		<description>Settings Window Title</description>
+		<posx>110</posx>
+		<posy>65</posy>
+		<width>1180</width>
+		<align>left</align>
+		<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+		<scroll>true</scroll>
+		<align>left</align>
+		<font>WindowTitleTextFont</font>
+		<textcolor>WindowTitleText</textcolor>
+	</control>
+
+	<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<include>DefaultFadeAnimation</include>
+
+		<control type="grouplist" id="9000">
+			<posx>0</posx>
+			<posy>75</posy>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>9001</onleft>
+			<itemgap>11</itemgap>
+			<control type="button" id="2">
+				<description>Videos</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[3]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(MyVideosSettings)</onclick>
+			</control>
+			<control type="button" id="3">
+				<description>Music</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[2]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(MyMusicSettings)</onclick>
+			</control>
+			<control type="button" id="4">
+				<description>Pictures</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[1]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+			</control>
+			<control type="button" id="5">
+				<description>Programs</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[0]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(MyProgramsSettings)</onclick>
+			</control>
+			<control type="button" id="6">
+				<description>Weather</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[8]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+			</control>
+			<control type="button" id="7">
+				<description>Network</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[705]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(NetworkSettings)</onclick>
+			</control>
+			<control type="button" id="8">
+				<description>System</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13000]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(SystemSettings)</onclick>
+			</control>
+			<control type="button" id="9">
+				<description>Appearance</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[480]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(AppearanceSettings)</onclick>
+			</control>
+			<control type="button" id="10">
+				<description>Profiles</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13200]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>xbmc.ActivateWindow(34)</onclick>
+			</control>
+			<control type="button" id="11">
+				<description>System Info</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[130]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(7)</onclick>
+			</control>
+			<control type="image" id="12">
+				<description>separator image</description>
+				<width>1180</width>
+				<height>1</height>
+				<texture>SeperatorBar.png</texture>
+			</control>
+			<control type="button" id="13">
+				<description>Skin Settings</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[20077]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>ActivateWindow(51)</onclick>
+			</control>
+			<control type="button" id="15">
+				<description>Reload Skin</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31504]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>xbmc.ReloadSkin()</onclick>
+			</control>
+		</control>
+
+<!-- Button Descriptions -->
+		<control type="grouplist">
+			<posx>200</posx>
+			<posy>75</posy>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<itemgap>11</itemgap>
+			<control type="label" id="2">
+				<description>Videos</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31510]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="3">
+				<description>Music</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31511]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="4">
+				<description>Pictures</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31512]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="5">
+				<description>Programs</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31513]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="6">
+				<description>Weather</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31514]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="7">
+				<description>Network</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31515]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="8">
+				<description>System</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31516]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="9">
+				<description>Appearance</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31517]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="10">
+				<description>Profiles</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31518]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="label" id="11">
+				<description>System Info</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31519]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			<control type="image" id="12">
+				<description>spacer image</description>
+				<width>1</width>
+				<height>1</height>
+				<texture>-</texture>
+			</control>
+			<control type="label" id="13">
+				<description>Skin Settings</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<label>$LOCALIZE[31520]</label>
+				<font>WindowTextFont</font>
+				<scroll>yes</scroll>
+				<textcolor>WindowText</textcolor>
+			</control>
+			
+		</control>
+	</control>
+</controls>
+</window>

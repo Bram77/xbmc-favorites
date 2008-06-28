@@ -1,0 +1,454 @@
+<window id="2700">
+<defaultcontrol>9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>WindowDefaults</include>
+	<control type="group">
+		<posx>39</posx>
+		<posy>59</posy>
+		<include>DialogMediaInfoBack</include>
+	</control>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label">
+			<description>Window Title</description>
+			<posx>60</posx>
+			<posy>79</posy>
+			<width>600</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<scroll>false</scroll>
+			<label>[UPPERCASE]$LOCALIZE[10509][/UPPERCASE]</label>
+			<font>WindowTitleTextFont</font>
+			<textcolor>WindowTitleText</textcolor>
+			<shadowcolor>WindowTextShadow</shadowcolor>
+		</control>
+		<control type="grouplist" id="9000">
+			<description>Button Area</description>
+			<posx>50</posx>
+			<posy>140</posy>
+			<width>150</width>
+			<height>550</height>
+			<itemgap>11</itemgap>
+			<onleft>3031</onleft>
+			<onright>3031</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="3012">
+				<description>Mode Button</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3013">
+				<description>Join (Friends)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3016">
+				<description>Speex (Friends)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3014">
+				<description>Invite (Friends)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3015">
+				<description>Remove (Friends)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3033">
+				<description>Play (Arenas)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3035">
+				<description>Host (Arenas)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3034">
+				<description>Add (Arenas)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="3036">
+				<description>Keyboard (chat)</description>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+		</control>
+
+		<control type="label" id="3052">
+			<description>Arena Name</description>
+			<posx>225</posx>
+			<posy>145</posy>
+			<width>340</width>
+			<label>-</label>
+			<scroll>true</scroll>
+			<align>left</align>
+			<font>WindowTextFont</font>
+			<textcolor>WindowTitleText</textcolor>
+		</control>
+		<control type="listcontrolex" id="3031">
+			<description>Arena List</description>
+			<posx>220</posx>
+			<posy>180</posy>
+			<width>1000</width>
+			<height>500</height>
+			<spinwidth>15</spinwidth>
+			<spinheight>16</spinheight>
+			<spinposx>925</spinposx>
+			<spinposy>450</spinposy>
+			<spincolor>WindowText</spincolor>
+			<spinfont>WindowTextFont</spinfont>
+			<textureup>Arrow.png</textureup>
+			<texturedown>ArrowDown.png</texturedown>
+			<textureupfocus>ArrowFo.png</textureupfocus>
+			<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureheight>30</textureheight>
+			<image>defaultFolderBig.png</image>
+			<font>WindowTextFont</font>
+			<selectedcolor>WindowFocusText</selectedcolor>
+			<textcolor>WindowText</textcolor>
+			<textoffsetx>5</textoffsetx>
+			<textoffsety>2</textoffsety>
+			<suffix>|</suffix>
+			<align>left</align>
+			<aligny>top</aligny>
+			<onleft>9000</onleft>
+			<onright>3031</onright>
+			<onup>3031</onup>
+			<ondown>3031</ondown>
+		</control>
+		<control type="console" id="3074">
+			<description>Console control</description>
+			<posx>220</posx>
+			<posy>180</posy>
+			<width>600</width>
+			<height>430</height>
+			<font>WindowTextFont</font>
+			<textcolor>WindowFocusText</textcolor>
+			<!-- normal  (pen0) -->
+			<textcolor2>WindowFocusText</textcolor2>
+			<!-- action  (pen1) -->
+			<titlecolor>WindowFocusText</titlecolor>
+			<!-- system  (pen2) -->
+			<selectedcolor>WindowFocusText</selectedcolor>
+			<!-- private (pen3) -->
+			<onleft>3074</onleft>
+			<onright>3074</onright>
+			<onup>3074</onup>
+			<ondown>3074</ondown>
+		</control>
+		<control type="edit" id="3075">
+			<description>Edit control</description>
+			<posx>220</posx>
+			<posy>605</posy>
+			<width>600</width>
+			<label>-</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+		</control>
+		<control type="image" id="3076">
+			<description>Edit Box</description>
+			<posx>215</posx>
+			<posy>605</posy>
+			<width>905</width>
+			<height>30</height>
+			<texture>DefaultButtonLarge.png</texture>
+		</control>
+
+		<!-- Player -->
+		<control type="group">
+			<posx>80</posx>
+			<posy>350</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconBack.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image" id="3064">
+				<description>My avatar icon</description>
+				<posx>13</posx>
+				<posy>7</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>left</align>
+				<align>top</align>
+				<aspectratio>keep</aspectratio>
+				<texture>buddyitem-default-avatar.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconOverlay.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="button" id="3051">
+				<description>Username</description>
+				<posx>-35</posx>
+				<posy>70</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="3073">
+				<description>Player Count</description>
+				<posx>-35</posx>
+				<posy>200</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+
+		<!-- Arena -->
+		<control type="group">
+			<posx>80</posx>
+			<posy>230</posy>
+			<animation effect="zoom" end="100" center="644,371" time="300">WindowOpen</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>220</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconBack.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image" id="3063">
+				<description>Arena icon</description>
+				<posx>13</posx>
+				<posy>227</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>left</align>
+				<align>top</align>
+				<aspectratio>keep</aspectratio>
+				<texture>arena.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+			</control>
+			<control type="label" id="3070">
+				<description>Buddy Name</description>
+				<posx>-35</posx>
+				<posy>290</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>220</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconOverlay.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+		
+		<!-- Friends -->
+		<control type="group">
+			<posx>80</posx>
+			<posy>340</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>220</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconBack.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image" id="3060">
+				<description>Buddy (offline) icon</description>
+				<posx>13</posx>
+				<posy>227</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>left</align>
+				<align>top</align>
+				<aspectratio>keep</aspectratio>
+				<texture>buddy-offline.png</texture>
+			</control>
+			<control type="image" id="3061">
+				<description>Buddy (online) icon</description>
+				<posx>13</posx>
+				<posy>227</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>left</align>
+				<align>top</align>
+				<aspectratio>keep</aspectratio>
+				<texture>buddy-online.png</texture>
+			</control>
+			<control type="image" id="3062">
+				<description>Opponent icon</description>
+				<posx>93</posx>
+				<posy>457</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>left</align>
+				<align>top</align>
+				<aspectratio>keep</aspectratio>
+				<texture>opponent.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>220</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>ProfileIconOverlay.png</texture>
+				<colordiffuse>WindowImage</colordiffuse>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="label" id="3071">
+				<description>Buddy Status</description>
+				<posx>-35</posx>
+				<posy>290</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>-</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="3072">
+				<description>Buddy Invitation Status</description>
+				<posx>-35</posx>
+				<posy>340</posy>
+				<width>150</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<angle>90</angle>
+				<label>-</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		
+	</control>
+	
+</controls>
+</window>

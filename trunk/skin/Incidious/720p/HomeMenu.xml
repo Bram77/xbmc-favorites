@@ -1,0 +1,2066 @@
+<includes>
+  <include name="HomeMenu">
+		<control type="list" id="9001">
+			<description>Home Menu Buttons</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>720</height>
+			<visible>Skin.HasSetting(WelcomeScreen) + Window.IsVisible(0)</visible>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9007</onleft>
+			<onright>9007</onright>
+			<orientation>vertical</orientation>
+			<scrolltime>0</scrolltime>
+			<itemgap>60</itemgap>
+			<itemlayout height="60" width="400">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1</width>
+					<height>1</height>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<selectedcolor>-</selectedcolor>
+					<align>-</align>
+					<aligny>-</aligny>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60" width="400">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1</width>
+					<height>1</height>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<selectedcolor>-</selectedcolor>
+					<align>-</align>
+					<aligny>-</aligny>
+				</control>
+			</focusedlayout>		
+				<content>
+					<item id="1">
+						<description>Videos</description>
+						<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeVideos.png</icon>
+						<thumb>HomeVideosThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectVideos)</onclick>
+						<onclick>Skin.Reset(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectMovies)</onclick>
+						<onclick>ReplaceWindow(MyVideoFiles)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaVideos)</visible>
+					</item>
+					<item id="2">
+						<description>Movies Files</description>
+						<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeMovies.png</icon>
+						<thumb>HomeMoviesThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectMovies)</onclick>
+						<onclick>Skin.Reset(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectVideos)</onclick>
+						<onclick>ReplaceWindow(MyVideoFiles,Movies)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaMovies) + !Skin.HasSetting(MoviesLibrary)</visible>
+					</item>		
+					<item id="2">
+						<description>Movies Library</description>
+						<label>[UPPERCASE]$LOCALIZE[342][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeMovies.png</icon>
+						<thumb>HomeMoviesThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectMovies)</onclick>
+						<onclick>Skin.Reset(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectVideos)</onclick>
+						<onclick>ReplaceWindow(MyVideoLibrary,MovieTitles)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaMovies) + Skin.HasSetting(MoviesLibrary)</visible>
+					</item>
+					<item id="3">
+						<description>TV Shows Files</description>
+						<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeTV.png</icon>
+						<thumb>HomeTVThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectMovies)</onclick>
+						<onclick>Skin.Reset(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectVideos)</onclick>
+						<onclick>ReplaceWindow(24,TV Shows)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaTV) + !Skin.HasSetting(TVLibrary)</visible>
+					</item>
+					<item id="3">
+						<description>TV Shows Library</description>
+						<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeTV.png</icon>
+						<thumb>HomeTVThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectMovies)</onclick>
+						<onclick>Skin.Reset(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectVideos)</onclick>
+						<onclick>ReplaceWindow(MyVideoLibrary,tvshowtitles)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaTV) + Skin.HasSetting(TVLibrary)</visible>
+					</item>
+					<item id="4">
+						<description>Clips</description>
+						<label>[UPPERCASE]$LOCALIZE[31003][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeClips.png</icon>
+						<thumb>HomeClipsThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectClips)</onclick>
+						<onclick>Skin.Reset(SelectTV)</onclick>
+						<onclick>Skin.Reset(SelectMovies)</onclick>
+						<onclick>Skin.Reset(SelectVideos)</onclick>
+						<onclick>ReplaceWindow(24,Clips)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaClips)</visible>
+					</item>
+					<item id="5">
+						<description>Games</description>
+						<label>[UPPERCASE]$LOCALIZE[15016][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeGames.png</icon>
+						<thumb>HomeGamesThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectGames)</onclick>
+						<onclick>Skin.Reset(SelectEmulators)</onclick>
+						<onclick>Skin.Reset(SelectPrograms)</onclick>
+						<onclick>ReplaceWindow(1,Games)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaGames)</visible>
+					</item>
+					<item id="6">
+						<description>Emulators</description>
+						<label>[UPPERCASE]$LOCALIZE[31001][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeEmulators.png</icon>
+						<thumb>HomeEmulatorsThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectEmulators)</onclick>
+						<onclick>Skin.Reset(SelectPrograms)</onclick>
+						<onclick>Skin.Reset(SelectGames)</onclick>
+						<onclick>ReplaceWindow(1,Emulators)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaEmulators)</visible>
+					</item>
+					<item id="7">
+						<description>Programs</description>
+						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomePrograms.png</icon>
+						<thumb>HomeProgramsThumb.png</thumb>
+						<onclick>Skin.SetBool(SelectPrograms)</onclick>
+						<onclick>Skin.Reset(SelectGames)</onclick>
+						<onclick>Skin.Reset(SelectEmulators)</onclick>
+						<onclick>ReplaceWindow(1,Programs)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaPrograms)</visible>
+					</item>
+					<item id="8">
+						<description>Files</description>
+						<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeFiles.png</icon>
+						<thumb>HomeFilesThumb.png</thumb>
+						<onclick>ReplaceWindow(MyFiles)</onclick>
+						<visible>!Skin.HasSetting(MediaFiles)</visible>
+					</item>
+					<item id="9">
+						<description>Settings</description>
+						<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeSettings.png</icon>
+						<thumb>HomeSettingsThumb.png</thumb>
+						<onclick>ActivateWindow(4)</onclick>
+						<onclick>SetFocus(9000)</onclick>
+						<visible>yes</visible>
+					</item>
+					<item id="10">
+						<description>Scripts</description>
+						<label>[UPPERCASE]$LOCALIZE[10020][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeScripts.png</icon>
+						<thumb>HomeScriptsThumb.png</thumb>
+						<onclick>ReplaceWindow(Scripts)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaScripts)</visible>
+					</item>
+					<item id="11">
+						<description>Weather</description>
+						<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeWeather.png</icon>
+						<thumb>HomeWeatherThumb.png</thumb>
+						<onclick>ReplaceWindow(MyWeather)</onclick>
+						<onclick>SetFocus(9000)</onclick>
+						<visible>!Skin.HasSetting(MediaWeather)</visible>
+					</item>
+					<item id="12">
+						<description>Pictures</description>
+						<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomePictures.png</icon>
+						<thumb>HomePicturesThumb.png</thumb>
+						<onclick>ReplaceWindow(MyPictures)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaPictures)</visible>
+					</item>
+					<item id="13">
+						<description>Music Files</description>
+						<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeMusic.png</icon>
+						<thumb>HomeMusicThumb.png</thumb>
+						<onclick>ReplaceWindow(MyMusic)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaMusic) + !Skin.HasSetting(MusicLibrary)</visible>
+					</item>
+					<item id="13">
+						<description>Music Library</description>
+						<label>[UPPERCASE]$LOCALIZE[2][/UPPERCASE]</label>
+						<label2>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label2>
+						<icon>HomeMusic.png</icon>
+						<thumb>HomeMusicThumb.png</thumb>
+						<onclick>ReplaceWindow(502,Albums)</onclick>
+						<onclick>SetFocus(50)</onclick>
+						<visible>!Skin.HasSetting(MediaMusic) + Skin.HasSetting(MusicLibrary)</visible>
+					</item>
+				</content>			
+		</control>
+
+		<control type="group" id="9002">
+			<posx>50</posx>
+			<posy>-15</posy>
+			<visible>Control.IsVisible(9001) + Container(9001).OnPrevious + !Skin.HasSetting(HomeMenuAnimation)</visible>
+			<animation effect="fade" start="100" end="0" time="300" reversible="false">Hidden</animation>
+			<control type="group">
+				<visible>Container(9001).OnPrevious</visible>
+				<animation effect="slide" end="10,160" time="300" reversible="false">Hidden</animation>
+				<control type="label">
+					<posx>0</posx>
+					<posy>-120</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-2).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>50</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>40</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>50</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>200</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(0).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(0).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+
+			<control type="group">
+				<visible>Container(9001).OnPrevious</visible>
+				<animation effect="slide" end="-20,160" time="300" reversible="false">Hidden</animation>
+				<control type="label">
+					<posx>90</posx>
+					<posy>360</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>20</posx>
+					<posy>360</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>520</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>520</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>680</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(3).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>690</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(3).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="9003">
+			<posx>50</posx>
+			<posy>-15</posy>
+			<visible>Control.IsVisible(9001) + Container(9001).OnNext + !Skin.HasSetting(HomeMenuAnimation)</visible>
+			<animation effect="fade" start="100" end="0" time="300" reversible="false">Hidden</animation>
+			<control type="group">
+				<visible>Container(9001).OnNext</visible>
+				<animation effect="slide" end="-10,-160" time="300" reversible="false">Hidden</animation>
+				<control type="label">
+					<posx>30</posx>
+					<posy>40</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeMenuFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-3).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>50</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-3).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>200</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeMenuFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-2).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>200</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-2).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>360</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeMenuFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>20</posx>
+					<posy>360</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Container(9001).OnNext</visible>
+				<animation effect="slide" end="20,-160" time="300" reversible="false">Hidden</animation>
+				<control type="label">
+					<posx>60</posx>
+					<posy>520</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(0).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>520</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(0).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>680</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>690</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>840</posy>
+					<width>500</width>
+					<height>40</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>900</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+		</control>
+		
+		<control type="group" id="9000">
+			<posx>50</posx>
+			<posy>-15</posy>
+			<visible>Control.IsVisible(9001) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+			<animation effect="fade" delay="0" end="100" time="200" reversible="false">WindowOpen</animation>
+			<animation effect="fade" delay="0" end="0" time="200" reversible="false">WindowClose</animation>
+			<control type="group">
+				<control type="label">
+					<posx>30</posx>
+					<posy>40</posy>
+					<width>500</width>
+					<height>24</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-2).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>40</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-2).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>200</posy>
+					<width>500</width>
+					<height>24</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Label </info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>190</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(-1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>90</posx>
+					<posy>360</posy>
+					<width>500</width>
+					<height>24</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeMenuText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<info>Container(9001).ListItem(0).Label</info>
+					<visible>!Control.IsVisible(9004)</visible> 
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>10</posx>
+					<posy>330</posy>
+					<width>70</width>
+					<height>70</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(0).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>!Control.IsVisible(9004)</visible>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>520</posy>
+					<width>500</width>
+					<height>24</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>0</posx>
+					<posy>510</posy>
+					<width>50</width>
+					<height>50</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(1).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>680</posy>
+					<width>500</width>
+					<height>24</height>
+					<font>HomeMenuFont2</font>
+					<textcolor>HomeMenuText</textcolor>
+					<selectedcolor>HomeFocusText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Label</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-10</posx>
+					<posy>680</posy>
+					<width>30</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem(2).Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+		</control>
+
+		<control type="group" id="9004">
+			<posx>80</posx>
+			<posy>-15</posy>
+			<visible>Control.HasFocus(9001) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+			<animation effect="zoom" start="50" center="90,360" end="100" time="50" reversible="false">Visible</animation>
+			<animation effect="fade" delay="0" end="100" time="200" reversible="false">WindowOpen</animation>
+			<animation effect="slide" tween="circle" delay="400" end="-600" time="600" reversible="false">WindowClose</animation>
+			<control type="group">
+				<control type="label">
+					<posx>90</posx>
+					<posy>360</posy>
+					<width>500</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>HomeMenuFont</font>
+					<textcolor>HomeMenuFocusText</textcolor>
+					<selectedcolor>HomeMenuText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<info>Container(9001).ListItem(0).Label</info>
+				</control>
+				<control type="label">
+					<posx>92</posx>
+					<posy>325</posy>
+					<width>500</width>
+					<height>40</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>HomeMenuFont3</font>
+					<textcolor>HomeMenuFocusText</textcolor>
+					<selectedcolor>HomeMenuText</selectedcolor>
+					<shadowcolor>HomeMenuShadow</shadowcolor>
+					<info>Container(9001).ListItem(0).Label2</info>
+				</control>
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>-40</posx>
+					<posy>310</posy>
+					<width>120</width>
+					<height>120</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<info>Container(9001).ListItem.Thumb</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>stretch</aspectratio>
+					<animation effect="fade" delay="0" end="100" time="200" reversible="false">WindowOpen</animation>
+					<animation effect="fade" delay="0" end="0" time="200" reversible="false">WindowClose</animation>
+				</control>
+			</control>
+		</control>
+
+		<control type="group" id="9006">
+			<visible>[Container(9001).HasFocus(1) | Container(9001).HasFocus(4) | Container(9001).HasFocus(7) | Container(9001).HasFocus(10)] + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			<control type="group">
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<info>Container(9001).ListItem.ActualIcon</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(programs) | Window.Next(videofiles)| Window.Next(videolibrary) | Window.Next(scripts)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9006">
+			<visible>[Container(9001).HasFocus(2) | Container(9001).HasFocus(5) | Container(9001).HasFocus(8) | Container(9001).HasFocus(11) | Container(9001).HasFocus(13)] + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500,200" time="400" reversible="false">Visible</animation>
+			<control type="group">
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<info>Container(9001).ListItem.ActualIcon</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(programs) | Window.Next(videofiles)| Window.Next(videolibrary) | Window.Next(filemanager) | Window.Next(weather) | Window.Next(musicfiles) | Window.Next(musiclibrary)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9006">
+			<visible>[Container(9001).HasFocus(3) | Container(9001).HasFocus(6) | Container(9001).HasFocus(9) | Container(9001).HasFocus(12)] + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500,-200" time="400" reversible="false">Visible</animation>
+			<control type="group">
+				<control type="image">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<info>Container(9001).ListItem.ActualIcon</info>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(programs) | Window.Next(videofiles)| Window.Next(videolibrary) | Window.Next(settings) | Window.Next(pictures)]</visible>
+				</control>
+			</control>
+		</control>
+
+<!-- Selection Images
+		< -- Movies
+		<control type="group" id="9010">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>0</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9011">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9012">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9013">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>60</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9014">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9015">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>200</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9016">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9017">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>70</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9018">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9019">
+			<visible>Container(9001).HasFocus(2) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiMovies</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- TV Shows
+		<control type="group" id="9010">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>0</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9011">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9012">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9013">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>60</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9014">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9015">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>200</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9016">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9017">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>70</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9018">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9019">
+			<visible>Container(9001).HasFocus(3) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiTV</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(24) | Window.Next(25)]</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- Pictures
+		<control type="group" id="9010">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>0</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9011">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9012">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9013">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>60</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9014">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9015">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>200</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9016">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9017">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>70</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9018">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9019">
+			<visible>Container(9001).HasFocus(12) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>HomeMultiPictures</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>!Window.Next(2)</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- Music
+		<control type="group" id="9010">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="300" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="990,200" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>0</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9011">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="2000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9012">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="4000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9013">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="6000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="20" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>60</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9014">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="8000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9015">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="10000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>200</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9016">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="12000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-20" center="990,400" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>80</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9017">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="14000" start="500,-200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="0" center="990,500" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>70</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9018">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="16000" start="500" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="30" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>690</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="9019">
+			<visible>Container(9001).HasFocus(13) + !Skin.HasSetting(HomeIcons) + !Player.HasMedia + Control.IsVisible(9004)</visible>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">Visible</animation>
+			<animation effect="slide" tween="circle" delay="18000" start="500,200" time="400" reversible="false">WindowOpen</animation>
+			<control type="group">
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowOpen</animation>
+				<animation effect="rotate" end="-10" center="920,300" time="0">WindowClose</animation>
+				<control type="multiimage">
+					<description>Selected Image</description>
+					<posx>790</posx>
+					<posy>100</posy>
+					<width>300</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<imagepath>Q:\UserData\Thumbnails\Music\0</imagepath>
+					<colordiffuse>WindowFocusImage</colordiffuse>
+					<timeperimage>1000000000</timeperimage>
+					<fadetime>100</fadetime>
+					<pauseatend>0</pauseatend>
+					<randomize>true</randomize>
+					<loop>no</loop>
+					<aspectratio>keep</aspectratio>
+					<visible>![Window.Next(501) | Window.Next(502)]</visible>
+				</control>
+			</control>
+		</control>
+		
+		-->
+
+		<control type="grouplist" id="9007">
+			<description>Home Menu Buttons</description>
+			<posx>1140</posx>
+			<posy>655</posy>
+			<width>200</width>
+			<height>40</height>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9001</onleft>
+			<onright>9001</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<itemgap>5</itemgap>
+			<visible>Skin.HasSetting(WelcomeScreen)</visible>
+			<include>DefaultFadeAnimation</include>
+				<control type="button" id="10">
+					<description>DVD-Rom Launch Button</description>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>HomeDVD.png</texturefocus>
+					<texturenofocus>HomeDVD.png</texturenofocus>
+					<colordiffuse>DialogButton</colordiffuse>
+					<label>-</label>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<focusedcolor>-</focusedcolor>
+					<disabledcolor>-</disabledcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>-</textoffsety>
+					<pulseonselect>no</pulseonselect>
+					<onclick>XBMC.PlayDVD()</onclick>
+					<onfocus>-</onfocus>
+					<visible>System.HasMediaDVD + !Skin.HasSetting(MediaDVD)</visible>
+					<animation effect="zoom" end="130" center="20,20" time="100">Focus</animation>
+				</control>		
+				<control type="label" id="12">
+					<description>Spacer</description>
+					<width>40</width>
+					<height>40</height>
+					<label>-</label>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>!System.HasMediaDVD</visible>
+				</control>
+				<control type="button" id="14">
+						<description>Favorites Button</description>
+						<width>40</width>
+						<height>40</height>
+						<texturefocus>HomeFavorites.png</texturefocus>
+						<texturenofocus>HomeFavorites.png</texturenofocus>
+						<colordiffuse>DialogButton</colordiffuse>
+						<label>-</label>
+						<font>-</font>
+						<textcolor>-</textcolor>
+						<focusedcolor>-</focusedcolor>
+						<disabledcolor>-</disabledcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>-</textoffsetx>
+						<textoffsety>-</textoffsety>
+						<pulseonselect>no</pulseonselect>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<onfocus>-</onfocus>
+						<visible>!Skin.HasSetting(MediaFavorites)</visible>
+						<animation effect="zoom" end="130" center="20,20" time="100">Focus</animation>
+					</control>
+				<control type="button" id="16">
+					<description>Shutdown Button</description>
+					<width>40</width>
+					<height>40</height>
+					<texturefocus>HomeShutdown.png</texturefocus>
+					<texturenofocus>HomeShutdown.png</texturenofocus>
+					<colordiffuse>DialogButton</colordiffuse>
+					<label>-</label>
+					<font>-</font>
+					<textcolor>-</textcolor>
+					<focusedcolor>-</focusedcolor>
+					<disabledcolor>-</disabledcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>-</textoffsety>
+					<pulseonselect>no</pulseonselect>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<onfocus>-</onfocus>
+					<visible>!Skin.HasSetting(MediaShutdown)</visible>
+					<animation effect="zoom" end="130" center="20,20" time="100">Focus</animation>
+				</control>
+		</control>
+
+		<!-- Welcome Screen -->
+		<control type="group">
+			<visible>!Skin.HasSetting(WelcomeScreen) + Window.IsVisible(0)</visible>
+			<include>BackgroundOverlay</include>
+			<include>DialogSmallBack</include>
+			<control type="group">
+				<posx>449</posx>
+				<posy>256</posy>
+				<include>DefaultFadeAnimation</include>
+				<control type="label">
+					<description>Heading</description>
+					<posx>10</posx>
+					<posy>5</posy>
+					<width>370</width>
+					<height>25</height>
+					<label>$LOCALIZE[31004]</label>
+					<align>left</align>
+					<scroll>yes</scroll>
+					<font>DialogTitleTextFont</font>
+					<textcolor>DialogTitleText</textcolor>
+				</control>
+				<control type="label">
+					<description>Welcome Message</description>
+					<posx>10</posx>
+					<posy>35</posy>
+					<width>370</width>
+					<label>$LOCALIZE[31005][CR]$LOCALIZE[31006][CR]$LOCALIZE[31007][CR][CR]$LOCALIZE[31008]</label>
+					<align>left</align>
+					<scroll>yes</scroll>
+					<font>DialogTextFont</font>
+					<textcolor>DialogText</textcolor>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+				<control type="button" id="9001">
+					<description>OK Button</description>
+					<posx>145</posx>
+					<posy>150</posy>
+					<width>100</width>
+					<height>25</height>
+					<texturefocus>DefaultButtonFo.png</texturefocus>
+					<texturenofocus>DefaultButton.png</texturenofocus>
+					<colordiffuse>DialogButton</colordiffuse>
+					<label>[UPPERCASE]$LOCALIZE[12321][/UPPERCASE]</label>
+					<font>DialogTextFont</font>
+					<textcolor>DialogText</textcolor>
+					<focusedcolor>DialogFocusText</focusedcolor>
+					<disabledcolor>DialogDisabledText</disabledcolor>
+					<onclick>Skin.SetBool(WelcomeScreen)</onclick>
+					<onclick>XBMC.ReplaceWindow(Home)</onclick>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textoffsetx>-</textoffsetx>
+					<textoffsety>-</textoffsety>
+					<pulseonselect>no</pulseonselect>
+					<onfocus>-</onfocus>
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>-</onleft>
+					<onright>-</onright>
+				</control>
+			</control>
+		</control>
+		
+  </include>
+</includes>

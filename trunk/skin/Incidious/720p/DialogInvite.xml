@@ -1,0 +1,114 @@
+﻿<window id="102">
+<defaultcontrol>30</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogSmallBack</include>
+
+	<control type="group">
+		<posx>449</posx>
+		<posy>256</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="1">
+			<description>Dialog Title</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>380</width>
+			<height>25</height>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[UPPERCASE]$LOCALIZE[15054][/UPPERCASE]</label>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="label" id="1">
+			<description>Dialog Title</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>380</width>
+			<height>25</height>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[UPPERCASE]$LOCALIZE[15055][/UPPERCASE]</label>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="spincontrol" id="30">
+			<description>Games Spin Control</description>
+			<font>DialogText</font>
+			<posx>215</posx>
+			<posy>260</posy>
+			<align>left</align>
+			<onleft>30</onleft>
+			<onright>30</onright>
+			<onup>10</onup>
+			<ondown>20</ondown>
+		</control>
+		<control type="button" id="20">
+			<description>Message Field</description>
+			<posx>190</posx>
+			<posy>100</posy>
+			<width>350</width>
+			<label>$LOCALIZE[15060]</label>
+			<font>DialogText</font>
+			<texturefocus>DefaultButtonLarge.png</texturefocus>
+			<texturenofocus>DefaultButtonLargeFo.png</texturenofocus>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>30</onup>
+			<ondown>10</ondown>
+		</control>
+		<control type="label" id="4">
+			<description>Enter Message</description>
+			<posx>190</posx>
+			<posy>100</posy>
+			<label>15056</label>
+			<font>DialogFocusText</font>
+		</control>
+		<control type="button" id="10">
+			<description>Send Button</description>
+			<posx>170</posx>
+			<posy>155</posy>
+			<width>100</width>
+			<height>25</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[15057][/UPPERCASE]</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<onfocus>-</onfocus>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>11</onleft>
+			<onright>11</onright>
+		</control>
+		<control type="button" id="11">
+			<description>Cancel Button</description>
+			<posx>280</posx>
+			<posy>155</posy>
+			<width>100</width>
+			<height>25</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>10</onleft>
+			<onright>10</onright>
+		</control>
+	</control>
+	</controls>
+</window>

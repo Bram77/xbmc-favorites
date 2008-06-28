@@ -1,0 +1,42 @@
+<window id="107">
+<allowoverlay>no</allowoverlay>
+<coordinates>
+	<system>1</system>
+	<posx>1040</posx>
+	<posy>60</posy>
+</coordinates>
+<controls>
+
+<include>DialogKaiToastBack</include>
+
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="401">
+			<description>Line 1</description>
+			<posx>5</posx>
+			<posy>5</posy>
+			<width>205</width>
+			<height>25</height>
+			<label>-</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="label" id="402">
+			<description>Line 2</description>
+			<posx>5</posx>
+			<posy>30</posy>
+			<width>205</width>
+			<height>25</height>
+			<label>-</label>
+			<align>left</align>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+	</control>
+</controls>
+</window>

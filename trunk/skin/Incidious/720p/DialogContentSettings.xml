@@ -1,0 +1,246 @@
+<window id="132">
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="1000">
+			<description>Directory Contains</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>400</width>
+			<label>[UPPERCASE]$LOCALIZE[20333] - $INFO[ListItem.Label][/UPPERCASE]</label>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="image">
+			<description>Scraper Image</description>
+			<posx>10</posx>
+			<posy>30</posy>
+			<width>150</width>
+			<height>150</height>
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.Icon</info>
+		</control>
+		<control type="spincontrolex" id="3">
+			<description>Directory Content</description>
+			<posx>570</posx>
+			<posy>5</posy>
+			<width>16</width>
+			<height>15</height>
+			<visible>true</visible>
+			<colordiffuse>WindowFocusText</colordiffuse>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureup>Arrow.png</textureup>
+			<texturedown>ArrowDown.png</texturedown>
+			<textureupfocus>ArrowFo.png</textureupfocus>
+			<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+			<reverse>yes</reverse>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<textoffsetx>5</textoffsetx>
+			<textoffsety>-12</textoffsety>
+			<pulseonselect>no</pulseonselect>
+			<onup>5</onup>
+			<ondown>6</ondown>
+			<onleft>3</onleft>
+			<onright>3</onright>
+		</control>
+		<control type="list" id="4">
+			<description>Directory List</description>
+			<posx>165</posx>
+			<posy>30</posy>
+			<width>420</width>
+			<height>178</height>
+			<onup>4</onup>
+			<ondown>4</ondown>
+			<onleft>5</onleft>
+			<onright>100</onright>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="25">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>25</width>
+					<height>25</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>430</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>no</scroll>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<textcolor>DialogText</textcolor>
+					<selectedcolor>DialogText</selectedcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>25</width>
+					<height>25</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>430</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<textcolor>DialogText</textcolor>
+					<selectedcolor>DialogText</selectedcolor>
+					<scroll>yes</scroll>
+					<visible>!Control.HasFocus(4)</visible>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>0</posy>
+					<width>430</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<textcolor>DialogFocusText</textcolor>
+					<selectedcolor>DialogFocusText</selectedcolor>
+					<scroll>yes</scroll>
+					<visible>Control.HasFocus(4)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>160</posx>
+			<posy>215</posy>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<width>430</width>
+			<onup>4</onup>
+			<ondown>6</ondown>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>25</height>
+				<width>420</width>
+				<label>-</label>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Radiobutton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>5</textoffsetx>
+			<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+			<textureradionofocus>Radiobutton.png</textureradionofocus>
+		</control>
+
+		<control type="group" id="100">
+			<control type="button" id="6">
+				<description>Settings</description>
+				<posx>480</posx>
+				<posy>30</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[5]</label>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>3</onup>
+				<ondown>28</ondown>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="28">
+				<description>Select</description>
+				<posx>480</posx>
+				<posy>60</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[424]</label>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>6</onup>
+				<ondown>29</ondown>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel</description>
+				<posx>480</posx>
+				<posy>90</posy>
+				<width>100</width>
+				<height>25</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[222]</label>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>28</onup>
+				<ondown>5</ondown>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<focusedcolor>DialogFocusText</focusedcolor>
+				<disabledcolor>DialogDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+			</control>
+		</control>
+	</control>
+</controls>
+</window>

@@ -1,0 +1,61 @@
+<window id="104">
+<defaultcontrol>1</defaultcontrol>
+<allowoverlay>no</allowoverlay>	
+	
+<coordinates>
+	<system>1</system>
+	<posx>1040</posx>
+	<posy>60</posy>
+</coordinates>
+<controls>
+
+<include>DialogVolumeBarBack</include>
+	
+	<control type="group">
+		<control type="progress" id="2">
+			<posx>22</posx>
+			<posy>35</posy>
+			<width>128</width>
+			<height>20</height>
+			<info>Player.Volume</info>
+			<lefttexture>-</lefttexture>
+			<texturebg>VolumeProgressBack.png</texturebg>
+			<midtexture>VolumeProgressMid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<colordiffuse>DialogButton</colordiffuse>
+		</control>
+		<control type="image">
+			<description>VolumeBar Background Image</description>
+			<posx>22</posx>
+			<posy>35</posy>
+			<width>128</width>
+			<height>20</height>
+			<texture>VolumeBack.png</texture>
+			<colordiffuse>DialogButton</colordiffuse>
+		</control>
+		<control type="slider">
+			<posx>22</posx>
+			<posy>35</posy>
+			<width>128</width>
+			<height>20</height>
+			<info>Player.Volume</info>
+			<texturesliderbar>VolumeSlider.png</texturesliderbar>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibFocus>-</textureslidernibFocus>
+			<colordiffuse>DialogBack</colordiffuse>
+		</control>
+		<control type="label" id="0">
+			<description>Volume Label</description>
+			<posx>84</posx>
+			<posy>15</posy>
+			<width>70</width>
+			<height>16</height>
+			<font>DialogTextFont</font>
+			<textcolor>DialogFocusText</textcolor>
+			<align>right</align>
+			<info>Player.Volume</info>
+		</control>
+	</control>
+</controls>
+</window>

@@ -1,0 +1,93 @@
+<window type="dialog" id="50">
+<defaultcontrol always="true">1000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<previouswindow>111</previouswindow>
+	
+<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+</coordinates>
+	
+<controls>
+	
+	<control type="label">
+		<description>Dialog Title</description>
+		<posx>364</posx>
+		<posy>279</posy>
+		<width>250</width>
+		<align>left</align>
+		<scroll>false</scroll>
+		<label>[UPPERCASE]$LOCALIZE[20144][/UPPERCASE]</label>
+		<font>DialogTitleTextFont</font>
+		<textcolor>DialogTitleText</textcolor>
+		<animation effect="fade" time="400" end="100">WindowOpen</animation>
+		<animation effect="fade" time="0" end="0">WindowClose</animation>
+	</control>
+	
+  <control type="list" id="1000">
+		<posx>365</posx>
+		<posy>305</posy>
+		<width>520</width>
+		<height>150</height>
+		<onleft>-</onleft>
+		<onright>-</onright>
+		<onup>1000</onup>
+		<ondown>1000</ondown>
+		<animation effect="fade" time="400" end="100">WindowOpen</animation>
+		<animation effect="fade" time="100" end="0">WindowClose</animation>
+			<itemlayout height="25">
+				<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<info>ListItem.Label</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25">
+				<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>235</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<align>left</align>
+				<info>ListItem.Label</info>
+				<font>DialogTextFont</font>
+				<textcolor>DialogFocusText</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+				<description>Shutdown in 30 minutes</description>
+				<label>$LOCALIZE[20147]</label>
+				<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+				<visible>true</visible>
+				</item>
+				<item id="2">
+				<description>Shutdown in 60 minutes</description>
+				<label>$LOCALIZE[20148]</label>
+				<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+				<visible>true</visible>
+				</item>
+				<item id="3">
+				<description>Shutdown in 120 minutes</description>
+				<label>$LOCALIZE[20149]</label>
+				<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+				<visible>true</visible>
+				</item>
+				<item id="4">
+				<description>Cancel Shutdown Timer</description>
+				<label>$LOCALIZE[20151]</label>
+				<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+				<visible>System.HasAlarm(shutdowntimer)</visible>
+				</item>
+			</content>
+  </control>
+</controls>
+</window>    

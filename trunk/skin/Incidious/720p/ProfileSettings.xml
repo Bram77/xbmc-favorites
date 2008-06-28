@@ -1,0 +1,222 @@
+<window id="130">
+<defaultcontrol>1</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+	
+<include>WindowDefaults</include>
+<include>BackgroundOverlay</include>
+<include>DialogLargeBack</include>
+
+	<control type="group">
+		<posx>344</posx>
+		<posy>200</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="image" id="2">
+			<description>profile image</description>
+			<posx>460</posx>
+			<posy>10</posy>
+			<width>120</width>
+			<height>120</height>
+			<align>center</align>
+			<aspectratio>keep</aspectratio>
+			<texture>unknown-user.png</texture>
+		</control>
+		<control type="label" id="0">
+			<description>profile name label</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>120</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[20093]:</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+		<control type="label" id="1000">
+			<description>profile name value</description>
+			<posx>150</posx>
+			<posy>5</posy>
+			<width>120</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+		<control type="label" id="0">
+			<description>profile directory label</description>
+			<posx>10</posx>
+			<posy>30</posy>
+			<width>120</width>
+			<align>left</align>
+			<height>25</height>
+			<label>$LOCALIZE[20070]:</label>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>
+		<control type="label" id="1001">
+			<description>profile directory value</description>
+			<posx>150</posx>
+			<posy>30</posy>
+			<width>120</width>
+			<align>left</align>
+			<height>25</height>
+			<scroll>yes</scroll>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+		</control>		
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>371</posx>
+			<posy>115</posy>
+			<subtype>page</subtype>
+			<font>font12</font>
+			<onleft>5</onleft>
+			<onright>28</onright>
+			<ondown>5</ondown>
+			<onup>28</onup>
+			<showonepage>false</showonepage>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>10</posx>
+			<posy>70</posy>
+			<width>420</width>
+			<height>250</height>
+			<itemgap>11</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>28</onup>
+			<ondown>28</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<width>375</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+			<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<textoffsetx>5</textoffsetx>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>-</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogFocusText</colordiffuse>
+			<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+			<textureradionofocus>Radiobutton.png</textureradionofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>-</width>
+			<height>25</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<colordiffuse>WindowFocusText</colordiffuse>
+			<textureup>Arrow.png</textureup>
+			<texturedown>ArrowDown.png</texturedown>
+			<textureupfocus>ArrowFo.png</textureupfocus>
+			<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<disabledcolor>WindowDisabled</disabledcolor>
+			<focusedcolor>WindowFocusText</focusedcolor>
+			<reverse>yes</reverse>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<posx>1530</posx>
+			<posy>150</posy>
+			<height>29</height>
+			<width>300</width>
+			<texturefocus>input-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>20</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>12</textoffsetx>
+		</control>
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>5</height>
+			<texture>SeparatorBar.png</texture>
+		</control>
+		<control type="button" id="28">
+			<description>OK button</description>
+			<posx>370</posx>
+			<posy>285</posy>
+			<width>100</width>
+			<height>25</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<onleft>29</onleft>
+			<onright>29</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="button" id="29">
+			<description>Cancel button</description>
+			<posx>480</posx>
+			<posy>285</posy>
+			<width>100</width>
+			<height>25</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
+			<font>DialogTextFont</font>
+			<textcolor>DialogText</textcolor>
+			<focusedcolor>DialogFocusText</focusedcolor>
+			<disabledcolor>DialogDisabledText</disabledcolor>
+			<texturefocus>DefaultButtonFo.png</texturefocus>
+			<texturenofocus>DefaultButton.png</texturenofocus>
+			<colordiffuse>DialogButton</colordiffuse>
+			<onleft>28</onleft>
+			<onright>28</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+	</control>
+	
+</controls>
+</window>

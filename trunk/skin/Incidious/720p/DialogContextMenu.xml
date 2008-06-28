@@ -1,0 +1,68 @@
+﻿<window id="106">
+<defaultcontrol>1000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+</coordinates>
+<include>DefaultFadeAnimation</include>
+	
+	<controls>
+
+		<control type="group">
+		<control type="image" id="997">
+			<description>Top Background</description>
+			<posx>0</posx>
+			<posy>-10</posy>
+			<width>200</width>
+			<height>10</height>
+			<texture border="2,2,2,1">ContextTop.png</texture>
+			<colordiffuse>DialogFrame</colordiffuse>
+		</control>
+		<control type="image" id="999">
+			<description>Middle Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>200</width>
+			<height>-</height>
+			<texture border="2,1,2,1">ContextMiddle.png</texture>
+			<colordiffuse>DialogFrame</colordiffuse>
+		</control>
+		<control type="image" id="998">
+			<description>Bottom Background</description>
+			<posx>0</posx>
+			<posy>-</posy>
+			<width>200</width>
+			<height>10</height>
+			<texture border="2,1,2,2">ContextBottom.png</texture>
+			<colordiffuse>DialogFrame</colordiffuse>
+		</control>
+	</control>
+		
+	<control type="button" id="1000">
+		<description>buttons</description>
+		<posx>-</posx>
+		<posy>-</posy>
+		<width>198</width>
+		<height>25</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<label>-</label>
+		<font>DialogTextFont</font>
+		<textcolor>DialogText</textcolor>
+		<focusedcolor>DialogFocusText</focusedcolor>
+		<disabledcolor>DialogDisabledText</disabledcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>10</textoffsetx>
+		<textoffsety>-</textoffsety>
+		<pulseonselect>no</pulseonselect>
+		<onfocus>-</onfocus>
+		<onup>1000</onup>
+		<ondown>1000</ondown>
+		<onleft>-</onleft>
+		<onright>-</onright>
+	</control>
+</controls>
+</window>

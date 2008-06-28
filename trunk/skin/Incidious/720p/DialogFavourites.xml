@@ -1,0 +1,83 @@
+<window type="dialog" id="134">
+<defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+
+<include>BackgroundOverlay</include>
+<include>DialogSmallBack</include>
+	
+	<control type="group">
+		<posx>449</posx>
+		<posy>256</posy>
+		<include>DefaultFadeAnimation</include>
+		<control type="label">
+			<description>Dialog Title</description>
+			<posx>10</posx>
+			<posy>5</posy>
+			<width>380</width>
+			<height>25</height>
+			<align>left</align>
+			<scroll>false</scroll>
+			<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
+			<font>DialogTitleTextFont</font>
+			<textcolor>DialogTitleText</textcolor>
+		</control>
+		<control type="list" id="450">
+			<posx>10</posx>
+			<posy>30</posy>
+			<width>380</width>
+			<height>155</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemlayout height="25">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>20</width>
+					<height>20</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<textcolor>DialogText</textcolor>
+					<selectedcolor>DialogFocusText</selectedcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="25">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>20</width>
+					<height>20</height>
+					<info>ListItem.Icon</info>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>25</posx>
+					<posy>0</posy>
+					<width>360</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<font>DialogTextFont</font>
+					<textcolor>DialogFocusText</textcolor>
+					<selectedcolor>DialogFocusText</selectedcolor>
+				</control>
+			</focusedlayout>
+		</control>
+	</control>
+</controls>
+	
+</window>

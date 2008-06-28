@@ -1,0 +1,824 @@
+<window id="51">
+<defaultcontrol>9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+
+<include>WindowDefaults</include>
+
+	<control type="group">
+		<posx>39</posx>
+		<posy>59</posy>
+		<include>SettingsBack</include>
+	</control>
+
+	<control type="image">
+		<description>Skin Settings Title Image</description>
+		<posx>60</posx>
+		<posy>79</posy>
+		<width>50</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>HomeSettingsThumb.png</texture>
+		<colordiffuse>DialogButton</colordiffuse>
+	</control>
+	<control type="label">
+		<description>Skin Settings Window Title</description>
+		<posx>110</posx>
+		<posy>65</posy>
+		<width>1180</width>
+		<align>left</align>
+		<label>[UPPERCASE]$LOCALIZE[20077][/UPPERCASE]</label>
+		<scroll>true</scroll>
+		<align>left</align>
+		<font>WindowTitleTextFont</font>
+		<textcolor>WindowTitleText</textcolor>
+	</control>
+
+	<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		
+		<control type="grouplist" id="9000">
+			<posx>0</posx>
+			<posy>75</posy>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onleft>9002</onleft>
+			<onright>9001</onright>
+			<itemgap>11</itemgap>
+			<control type="button" id="202">
+				<description>Videos</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Home</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>-</onclick>
+			</control>
+			<control type="button" id="203">
+				<description>Music</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Backgrounds</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>-</onclick>
+			</control>
+			<control type="button" id="204">
+				<description>Pictures</description>
+				<width>175</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Extras</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturefocus>DefaultButtonFo.png</texturefocus>
+				<texturenofocus>DefaultButton.png</texturenofocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>-</onclick>
+			</control>
+		</control>
+		<control type="grouplist" id="9001">
+			<posx>200</posx>
+			<posy>75</posy>
+			<itemgap>11</itemgap>
+			<orientation>vertical</orientation>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>9002</onright>
+			<visible>ControlGroup(9000).HasFocus(202)</visible>
+			<control type="radiobutton" id="1">
+				<description>Music Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaMusic)</selected>
+				<onclick>Skin.ToggleSetting(MediaMusic)</onclick>
+				<label>$LOCALIZE[2] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="2">
+				<description>Videos Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaVideos)</selected>
+				<onclick>Skin.ToggleSetting(MediaVideos)</onclick>
+				<label>$LOCALIZE[3] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="3">
+				<description>Movies Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaMovies)</selected>
+				<onclick>Skin.ToggleSetting(MediaMovies)</onclick>
+				<label>$LOCALIZE[342] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="4">
+				<description>TV Shows Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaTV)</selected>
+				<onclick>Skin.ToggleSetting(MediaTV)</onclick>
+				<label>$LOCALIZE[20343] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="5">
+				<description>Clips Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaClips)</selected>
+				<onclick>Skin.ToggleSetting(MediaClips)</onclick>
+				<label>$LOCALIZE[31003] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="6">
+				<description>Games Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaGames)</selected>
+				<onclick>Skin.ToggleSetting(MediaGames)</onclick>
+				<label>$LOCALIZE[15016] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="7">
+				<description>Emulators Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaEmulators)</selected>
+				<onclick>Skin.ToggleSetting(MediaEmulators)</onclick>
+				<label>$LOCALIZE[31001] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Programs Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaPrograms)</selected>
+				<onclick>Skin.ToggleSetting(MediaPrograms)</onclick>
+				<label>$LOCALIZE[0] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="9">
+				<description>Files Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaFiles)</selected>
+				<onclick>Skin.ToggleSetting(MediaFiles)</onclick>
+				<label>$LOCALIZE[744] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="10">
+				<description>Scripts Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaScripts)</selected>
+				<onclick>Skin.ToggleSetting(MediaScripts)</onclick>
+				<label>$LOCALIZE[10020] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="11">
+				<description>Weather Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaWeather)</selected>
+				<onclick>Skin.ToggleSetting(MediaWeather)</onclick>
+				<label>$LOCALIZE[400] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="12">
+				<description>Pictures Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaPictures)</selected>
+				<onclick>Skin.ToggleSetting(MediaPictures)</onclick>
+				<label>$LOCALIZE[1] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+		</control>
+
+		<control type="grouplist" id="9002">
+			<posx>630</posx>
+			<posy>75</posy>
+			<itemgap>11</itemgap>
+			<orientation>vertical</orientation>
+			<onup>9002</onup>
+			<ondown>9002</ondown>
+			<onleft>9001</onleft>
+			<onright>9000</onright>
+			<visible>ControlGroup(9000).HasFocus(202)</visible>
+			<control type="radiobutton" id="21">
+				<description>DVD-Rom Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaDVD)</selected>
+				<onclick>Skin.ToggleSetting(MediaDVD)</onclick>
+				<label>$LOCALIZE[446] $LOCALIZE[518] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="22">
+				<description>Favorites Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaFavorites)</selected>
+				<onclick>Skin.ToggleSetting(MediaFavorites)</onclick>
+				<label>$LOCALIZE[1036] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="23">
+				<description>Shutdown Visible On Home Menu</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(MediaShutdown)</selected>
+				<onclick>Skin.ToggleSetting(MediaShutdown)</onclick>
+				<label>$LOCALIZE[13005] $LOCALIZE[31506]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="label" id="24">
+				<description>Spacer</description>
+				<width>400</width>
+				<height>70</height>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="radiobutton" id="25">
+				<description>Home Selection Icons</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(HomeIcons)</selected>
+				<onclick>Skin.ToggleSetting(HomeIcons)</onclick>
+				<label>$LOCALIZE[31507]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="26">
+				<description>Home Menu Animation</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>!Skin.HasSetting(HomeMenuAnimation)</selected>
+				<onclick>Skin.ToggleSetting(HomeMenuAnimation)</onclick>
+				<label>$LOCALIZE[31503]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="label" id="27">
+				<description>Spacer</description>
+				<width>400</width>
+				<height>70</height>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="radiobutton" id="28">
+				<description>Music Link to Library</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(MusicLibrary)</selected>
+				<onclick>Skin.ToggleSetting(MusicLibrary)</onclick>
+				<label>$LOCALIZE[2] $LOCALIZE[31501]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+				<visible>!Skin.HasSetting(MediaMusic)</visible>
+			</control>
+			<control type="radiobutton" id="29">
+				<description>Movies Link to Library Titles</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(MoviesLibrary)</selected>
+				<onclick>Skin.ToggleSetting(MoviesLibrary)</onclick>
+				<label>$LOCALIZE[342] $LOCALIZE[31502]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+				<visible>!Skin.HasSetting(MediaMovies)</visible>
+			</control>
+			<control type="radiobutton" id="30">
+				<description>TV Shows Links to Library Titles</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(TVLibrary)</selected>
+				<onclick>Skin.ToggleSetting(TVLibrary)</onclick>
+				<label>$LOCALIZE[20343] $LOCALIZE[31502]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+				<visible>!Skin.HasSetting(MediaTV)</visible>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="9001">
+			<posx>200</posx>
+			<posy>75</posy>
+			<itemgap>11</itemgap>
+			<orientation>vertical</orientation>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<visible>ControlGroup(9000).HasFocus(203)</visible>
+			<control type="radiobutton" id="32">
+				<description>Custom Login Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.String(CustomBackPathLogin)</selected>
+				<onclick>Skin.SetImage(CustomBackPathLogin,.*,Q:\skin\Insidious\backgrounds\)</onclick>
+				<label>$LOCALIZE[31538]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="33">
+				<description>Reset Custom Login Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<label>$LOCALIZE[31539]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>no</pulseonselect>
+				<onfocus>-</onfocus>
+				<onclick>Skin.Reset(CustomBackPathLogin)</onclick>
+				<onclick>SetFocus(17)</onclick>
+				<visible>Skin.String(CustomBackPathLogin)</visible>
+			</control>
+			
+			<control type="radiobutton" id="34">
+				<description>Custom Day Time Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.String(CustomBackPathDay)</selected>
+				<onclick>Skin.SetImage(CustomBackPathDay,.*,Q:\skin\Insidious\backgrounds\)</onclick>
+				<label>$LOCALIZE[31534]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="35">
+				<description>Reset Custom Day Time Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<label>$LOCALIZE[31536]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>no</pulseonselect>
+				<onfocus>-</onfocus>
+				<onclick>Skin.Reset(CustomBackPathDay)</onclick>
+				<onclick>SetFocus(17)</onclick>
+				<visible>Skin.String(CustomBackPathDay)</visible>
+			</control>
+			
+			<control type="radiobutton" id="36">
+				<description>Custom Night Time Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.String(CustomBackPathNight)</selected>
+				<onclick>Skin.SetImage(CustomBackPathNight,.*,q:\skin\Insidious\backgrounds\)</onclick>
+				<label>$LOCALIZE[31535]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="37">
+				<description>Reset Custom Background</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<label>$LOCALIZE[31537]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>no</pulseonselect>
+				<onfocus>-</onfocus>
+				<onclick>Skin.Reset(CustomBackPathNight)</onclick>
+				<onclick>SetFocus(17)</onclick>
+				<visible>Skin.String(CustomBackPathNight)</visible>
+			</control>
+			
+			<control type="radiobutton" id="38">
+				<description>Enable Background Animation</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(BackAnimation)</selected>
+				<onclick>Skin.ToggleSetting(BackAnimation)</onclick>
+				<label>$LOCALIZE[31530]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+		</control>
+		
+		<control type="grouplist" id="9001">
+			<posx>200</posx>
+			<posy>75</posy>
+			<itemgap>11</itemgap>
+			<orientation>vertical</orientation>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<visible>ControlGroup(9000).HasFocus(204)</visible>
+			<control type="radiobutton" id="42">
+				<description>Enable Icon Overlays</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(OverlayIcons)</selected>
+				<onclick>Skin.ToggleSetting(OverlayIcons)</onclick>
+				<label>$LOCALIZE[31508]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="43">
+				<description>Enable Scroll Bars</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(ScrollBars)</selected>
+				<onclick>Skin.ToggleSetting(ScrollBars)</onclick>
+				<label>$LOCALIZE[31531]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="44">
+				<description>Enable Radar</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+				<textureradionofocus>Radiobutton.png</textureradionofocus>
+				<selected>Skin.HasSetting(WeatherRadar)</selected>
+				<onclick>Skin.ToggleSetting(WeatherRadar)</onclick>
+				<label>$LOCALIZE[31532]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="button" id="45">
+				<description>Location WeatherScript</description>
+				<width>400</width>
+				<height>30</height>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<label>$LOCALIZE[31533]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<pulseonselect>no</pulseonselect>
+				<onfocus>-</onfocus>
+				<onclick>Skin.SetFile(WeatherRadarPath,.py,Q:\scripts\)</onclick>
+				<visible>Skin.HasSetting(WeatherRadar)</visible>
+			</control>
+			<control type="label" id="46">
+				<description>Spacer</description>
+				<width>400</width>
+				<height>30</height>
+				<label>-</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="47">
+				<description>Reset Settings</description>
+				<width>400</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>4</textoffsetx>
+				<textoffsety>5</textoffsety>
+				<label>$LOCALIZE[31505]</label>
+				<font>WindowTextFont</font>
+				<textcolor>WindowText</textcolor>
+				<focusedcolor>WindowFocusText</focusedcolor>
+				<disabledcolor>WindowDisabledText</disabledcolor>
+				<texturenofocus>DefaultButtonLarge.png</texturenofocus>
+				<texturefocus>DefaultButtonLargeFo.png</texturefocus>
+				<colordiffuse>DialogButton</colordiffuse>
+				<onclick>Skin.ResetSettings</onclick>
+			</control>
+		</control>
+		
+	</control>
+</controls>
+</window>

@@ -1,0 +1,38 @@
+<colors>
+  <color name="RssTitleText">FFFFFFFF</color>
+  <color name="RssHeadText">FF636363</color>
+  <color name="RssText">FFFFFFFF</color>
+
+	<color name="Pointer">FF636363</color>
+	<color name="PointerFocus">FFFFFFFF</color>
+	<color name="PointerClick">FFFFFFFF</color>
+	<color name="PointerDrag">FFFFFFFF</color>
+
+	<color name="WindowInfoText">FFFFFFFF</color>
+	<color name="WindowTitleText">FFFFFFFF</color>
+  <color name="WindowText">FF636363</color>
+	<color name="WindowTextShadow">FF000000</color>
+  <color name="WindowFocusText">FFFFFFFF</color>
+	<color name="WindowDisabledText">FF414040</color>
+	<color name="WindowSelectedText">FFECD139</color>
+
+	<color name="WindowImage">FF636363</color>
+	<color name="WindowFocusImage">FFFFFFFF</color>
+	<color name="WindowDisabledImage">FF414040</color>
+
+	<color name="DialogBack">FF000000</color>
+	<color name="DialogFrame">FFFFFFFF</color>
+	<color name="DialogButton">FFFFFFFF</color>
+	<color name="DialogTitleText">FFFFFFFF</color>
+	<color name="DialogText">FF636363</color>
+	<color name="DialogFocusText">FFFFFFFF</color>
+	<color name="DialogDisabledText">FF414040</color>
+	<color name="DialogSelectedText">FFECD139</color>
+	<color name="DialogProgressBar">FFFFFFFF</color>
+	
+	<color name="BackgroundOverlay">FF000000</color>
+
+	<color name="HomeMenuText">FF636363</color>
+	<color name="HomeMenuFocusText">FFFFFFFF</color>
+	<color name="HomeMenuShadow">FF000000</color>
+</colors>

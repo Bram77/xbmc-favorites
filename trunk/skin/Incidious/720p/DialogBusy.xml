@@ -1,0 +1,21 @@
+<window id="136">
+<allowoverlay>no</allowoverlay>
+		
+<controls>
+
+	<control type="multiimage">
+		<description>Busy Animation</description>
+		<posx>590</posx>
+		<posy>310</posy>
+		<align>left</align>
+		<aligny>top</aligny>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>busy</imagepath>
+		<timeperimage>50</timeperimage>
+		<fadetime>0</fadetime>
+		<include>DefaultFadeAnimation</include>
+	</control>
+	
+</controls>
+</window>

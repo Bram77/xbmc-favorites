@@ -1,0 +1,311 @@
+<window id="3">
+<defaultcontrol always="true">20</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+  
+<include>WindowDefaults</include>
+
+	<control type="image">
+		<description>Files Title Image</description>
+		<posx>10</posx>
+		<posy>9</posy>
+		<width>50</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texture>HomeFilesThumb.png</texture>
+		<colordiffuse>DialogButton</colordiffuse>
+		<include>DefaultFadeAnimation</include>
+	</control>
+	<control type="label">
+		<description>Files Window Title</description>
+		<posx>60</posx>
+		<posy>9</posy>
+		<width>600</width>
+		<height>40</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<scroll>false</scroll>
+		<label>[UPPERCASE]$LOCALIZE[744][/UPPERCASE]</label>
+		<font>WindowTitleTextFont</font>
+		<textcolor>WindowTitleText</textcolor>
+		<shadowcolor>WindowTextShadow</shadowcolor>
+		<include>DefaultFadeAnimation</include>
+  </control>
+
+	<control type="group">
+		<posx>40</posx>
+		<posy>70</posy>
+		<include>FileManagerLeftBack</include>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="101">
+			<description>Left Filelist Title</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<align>left</align>
+			<label>$LOCALIZE[1211]</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<visible>!Control.HasFocus(20)</visible>
+		</control>
+		<control type="label" id="101">
+			<description>Left Filelist Title</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<align>left</align>
+			<label>$LOCALIZE[1211]</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowFocusText</textcolor>
+			<visible>Control.HasFocus(20)</visible>
+		</control>
+		<control type="list" id="20">
+			<description>Left File List</description>
+			<posx>10</posx>
+			<posy>50</posy>
+			<width>582</width>
+			<height>480</height>
+			<onleft>21</onleft>
+			<onright>21</onright>
+			<onup>20</onup>
+			<ondown>20</ondown>
+			<itemlayout height="30">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(20)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label" id="12">
+			<description>Number of Files In Filelist</description>
+			<posx>10</posx>
+			<posy>547</posy>
+			<height>30</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+		</control>
+	</control>
+
+	<control type="group">
+		<posx>660</posx>
+		<posy>70</posy>
+		<include>FileManagerRightBack</include>
+		<include>DefaultFadeAnimation</include>
+		<control type="label" id="102">
+			<description>Right Playlist Title</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<align>left</align>
+			<label>$LOCALIZE[559]</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+			<visible>!Control.HasFocus(21)</visible>
+		</control>
+		<control type="label" id="102">
+			<description>Right Playlist Title</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<align>left</align>
+			<label>$LOCALIZE[559]</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowFocusText</textcolor>
+			<visible>Control.HasFocus(21)</visible>
+		</control>
+		<control type="list" id="21">
+			<description>Right Playlist</description>
+			<posx>10</posx>
+			<posy>50</posy>
+			<width>582</width>
+			<height>480</height>
+			<onleft>20</onleft>
+			<onright>20</onright>
+			<onup>21</onup>
+			<ondown>21</ondown>
+			<itemlayout height="30">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="30">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>!Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<posy>4</posy>
+					<width>290</width>
+					<height>22</height>
+					<font>WindowTextFont</font>
+					<textcolor>WindowFocusText</textcolor>
+					<selectedcolor>WindowSelectedText</selectedcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+					<visible>Control.HasFocus(21)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label" id="13">
+			<description>Number of Files In Filelist</description>
+			<posx>10</posx>
+			<posy>547</posy>
+			<height>30</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>WindowTextFont</font>
+			<textcolor>WindowText</textcolor>
+		</control>
+	</control>
+	
+</controls>
+</window>

@@ -1,0 +1,73 @@
+<window id="133">
+<defaultcontrol>402</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>445</posx>
+			<posy>10</posy>
+			<include>DialogMediaScanBack</include>
+			<visible>!VideoPlayer.IsFullscreen</visible>
+		</control>
+		
+		<control type="group">
+			<posx>445</posx>
+			<posy>10</posy>
+			<include>DefaultFadeAnimation</include>
+			<visible>!VideoPlayer.IsFullscreen</visible>
+			<control type="label" id="401">
+				<description>Heading</description>
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>380</width>
+				<height>25</height>
+				<label>-</label>
+				<align>left</align>
+				<scroll>yes</scroll>
+				<font>DialogTitleTextFont</font>
+				<textcolor>DialogTitleText</textcolor>
+			</control>
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>5</posx>
+				<posy>35</posy>
+				<width>380</width>
+				<height>25</height>
+				<label>-</label>
+				<align>left</align>
+				<scroll>yes</scroll>
+				<font>DialogTextFont</font>
+				<textcolor>DialogText</textcolor>
+				<haspath>yes</haspath>
+			</control>
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>5</posx>
+				<posy>50</posy>
+				<width>380</width>
+				<height>25</height>
+				<texturebg>ProgressBack.png</texturebg>
+				<lefttexture>ProgressLeft.png</lefttexture>
+				<midtexture>ProgressMid.png</midtexture>
+				<righttexture>ProgressRight.png</righttexture>
+				<colordiffuse>DialogProgressBar</colordiffuse>
+				<visible>true</visible>
+			</control>
+			<control type="progress" id="404">
+				<description>progress control</description>
+				<posx>5</posx>
+				<posy>65</posy>
+				<width>380</width>
+				<height>25</height>
+				<texturebg>ProgressBack.png</texturebg>
+				<lefttexture>ProgressLeft.png</lefttexture>
+				<midtexture>ProgressMid.png</midtexture>
+				<righttexture>ProgressRight.png</righttexture>
+				<colordiffuse>DialogProgressBar</colordiffuse>
+				<visible>true</visible>
+			</control>
+		</control>
+		
+	</controls>
+</window>
