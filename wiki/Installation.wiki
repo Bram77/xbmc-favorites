@@ -21,7 +21,7 @@ I will try to keep the SVN as up to date as possible.
   * Make sure FTP is enabled in XBMC. You can find this option in "settings/Network/Servers"  
   * Find out what the IP address of your XBOX is. You can do this by selecting "settings" on your home screen in the Project Mayhem III skin. On the right side of the home screen you'll fin "Ip Address: xx.xx.xx.xx". Where "xx.xx.xx.xx" is your XBOX ip address.
   * Open Windows Explorer (My Computer) or use your favorite FTP client. I'll only elaborate on Windows Explorer here.
-  * Enter "_ftp://YOUR_XBOX_IP_HERE" in the address bar and press "Enter"
+  * Enter "ftp://_YOUR_XBOX_IP_HERE_" in the address bar and press "Enter"
   * You will be prompted a login dialog. The default username and password are *xbox*
   * Copy the extracted "XBMC-Favorites Installer" from the archive to "E/XBMC/plugins/programs/"
   * On your XBOX go to "Programs" and select "Add Location"
