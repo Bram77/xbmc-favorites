@@ -36,10 +36,9 @@
 				<imagepath>Home_Programs</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(1)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(1) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -49,10 +48,9 @@
 				<imagepath>Home_Videos</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(2)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(2) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -62,10 +60,9 @@
 				<imagepath>Home_Music</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(3)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(3) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -75,10 +72,9 @@
 				<imagepath>Home_Pictures</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(4)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(4) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -88,10 +84,9 @@
 				<imagepath>Home_Settings</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(5)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(5) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -101,10 +96,9 @@
 				<imagepath>Home_Weather</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(6)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(6) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -114,10 +108,9 @@
 				<imagepath>Home_Shutdown</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(7)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(7) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 			<control type="multiimage">
 				<posx>0</posx>
@@ -127,10 +120,9 @@
 				<imagepath>Home_Scripts</imagepath>
 				<timeperimage>5000</timeperimage>
 				<fadetime>2000</fadetime>
-				<visible>Container(2).HasFocus(8)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo + !Skin.HasSetting(Back_Video)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="200" condition="Player.HasAudio + !Skin.HasSetting(Back_Vis)">Conditional</animation>
+				<randomize>true</randomize>
+				<visible>Container(2).HasFocus(8) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+				<include>backgroundfade</include>
 			</control>
 		</control>
 		<control type="image">
@@ -458,7 +450,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>true</visible>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -546,6 +538,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -618,6 +611,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
 				</control>
 				<control type="button" id="105">
 					<description>Button5</description>
@@ -675,6 +669,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
 				</control>
 				<control type="button" id="103">
 					<description>Button3</description>
@@ -762,6 +757,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(No_Settings_In_Home)</visible>
 				</control>
 				<control type="button" id="103">
 					<description>Button3</description>
@@ -1062,6 +1058,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>false</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -1072,6 +1069,8 @@
 				<texture>PV2LogoBig.png</texture>
 			</control>
 			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>!Skin.HasSetting(No_Weather_In_Home)</visible>
 				<control type="image">
 					<posx>220r</posx>
 					<posy>520</posy>
@@ -1083,13 +1082,13 @@
 				</control>
 				<control type="label">
 					<posx>225r</posx>
-					<posy>640</posy>
+					<posy>635</posy>
 					<width>300</width>
 					<height>15</height>
 					<label>$INFO[Weather.Location]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font10</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -1101,7 +1100,7 @@
 					<label>$LOCALIZE[143] $INFO[Weather.Temperature]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font10</font>
+					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>

@@ -41,6 +41,7 @@
   <string id="31033">PAUSED</string>
   <string id="31034">FAST FOWARD</string>
   <string id="31035">REWIND</string>
+  <string id="31036">VOLUME MUTED</string>
 
   <!-- Skin Settings labels -->
   <string id="31100">Use Grey Overlay on Background</string>
@@ -48,4 +49,6 @@
   <string id="31102">Show Background Visualisation</string>
   <string id="31103">Show Specific HOME backgrounds</string>
   <string id="31104">Remove Page Controls from Media Lists</string>
+  <string id="31105">Remove Settings options from Home Sub Menus</string>
+  <string id="31106">Show Weather on Home Screen</string>
 </strings>
