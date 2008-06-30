@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">Play mode (wmv trailers will not download)</string>
+    <string id="30001">Stream</string>
+    <string id="30002">Download</string>
+    <string id="30003">Download &amp; Save</string>
+    <string id="30010">- Download path for saving videos</string>
+    <string id="30020">Include adult content</string>
+    <string id="30030">Videos per page</string>
+    <string id="30040">Total pages</string>
+</strings>
