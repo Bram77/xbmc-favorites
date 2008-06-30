@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">Spelläge (wmv trailers laddas inte ned)</string>
+    <string id="30001">Strömma</string>
+    <string id="30002">Ladda ner</string>
+    <string id="30003">Ladda ner &amp; Spara</string>
+    <string id="30010">- Sökväg för sparade videofiler</string>
+    <string id="30020">Inkludera vuxet innehåll</string>
+    <string id="30030">Videos per sida</string>
+    <string id="30040">Totalt antal sidor</string>
+</strings>
