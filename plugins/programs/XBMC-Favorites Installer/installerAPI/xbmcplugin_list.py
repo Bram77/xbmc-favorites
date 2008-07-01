@@ -84,9 +84,13 @@ class Main:
             ok = False
             # enumerate through the list of categories and add the item to the media list
             for item in items[ "assets" ]:
-                if ( items[ "url" ].split( "/" )[ -2 ] in ( "plugins", ) or items[ "url" ].split( "/" )[ -1 ] in ( "scripts", "skin" ) ):
+                if ( items[ "url" ].split( "/" )[ -2 ] == "plugins" ) or ( items[ "url" ].split( "/" )[ -1 ] == "scripts" ):
                     heading = "download_url"
                     thumbnail = self._get_thumbnail( "%s%s/%sdefault.tbn" % ( self.BASE_URL, items[ "url" ], item, ) )
+                    isFolder = False
+                elif ( items[ "url" ].split( "/" )[ -1 ] == "skin" ):
+                    heading = "download_url"
+                    thumbnail = "defaultprogram.png"
                     isFolder = False
                 else:
                     heading = "category"
