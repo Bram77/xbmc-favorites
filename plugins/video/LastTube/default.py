@@ -1,7 +1,7 @@
-#much code was taken from voinage's tv shack
+#much code was taken from voinage's tv shack (and his helpful tips in the forums)
 #thanks to nuka1195 & others for help in the forums & irc
 #thanks to thor918 for the MyPlayer class.
-#thanks to tim borman for opening up the api to me (tv.timboarmans.com)
+#thanks to Tim Bormans for opening up the api to me (tv.timbormans.com)
 
 import xbmc,xbmcgui,xbmcplugin,access
 import re,urllib,urllib2
@@ -79,7 +79,7 @@ def search(title):
     keyb = xbmc.Keyboard('', title)
     keyb.doModal()
     if (keyb.isConfirmed()):
-        term = keyb.getText()#this is the term that you searched for
+        term = keyb.getText()
         startPlayback(term)
 
 def get_params():
