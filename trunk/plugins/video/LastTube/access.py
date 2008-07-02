@@ -20,7 +20,7 @@ def getFlv(url):
         p=re.compile('"t": "(.+?)"')
         match=p.findall(link)
         for blah in match:
-            linkage="http://www.youtube.com/get_video?video_id="+code+"&t="+blah
+            linkage="http://www.youtube.com/get_video?video_id="+code+"&t="+blah+"&fmt=18"
             return linkage
         
 def getUrl(xml):
