@@ -1,0 +1,1126 @@
+<includes>
+
+<include name="wallglass">
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>576</height>
+		<width>720</width>
+		<visible>Control.IsVisible(58) | Control.IsVisible(57) | Control.IsVisible(51)</visible>
+		<include>common-fade</include>
+		<texture>white.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>576</height>
+		<width>720</width>
+		<visible>Control.IsVisible(58) | Control.IsVisible(57) | Control.IsVisible(51)</visible>
+		<include>common-fade</include>
+		<texture>wallfilter.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>576</height>
+		<width>720</width>
+		<visible>Window.IsVisible(2) + Control.IsVisible(59) | Control.IsVisible(51) | Control.IsVisible(58)</visible>
+		<include>common-fade</include>
+		<texture>photowallpaper.png</texture>
+	</control>
+</include>
+
+<include name="wallposterformat">
+	<width>102</width>
+	<height>209</height>
+</include>
+
+<include name="wallposterlabel">
+	<include>wallposterformat</include>
+	<colordiffuse>8eFFFFFF</colordiffuse>
+	<wrapmultiline>true</wrapmultiline>
+	<font>font13c</font>
+	<aligny>center</aligny>
+	<include>openclose</include>
+</include>
+
+<include name="wallphotoinfo">
+	<control type="group">
+	<posx>63</posx>
+	<posy>5</posy>
+	<include>common-fade-quick</include>
+	<control type="label">
+		<posx>110</posx>
+		<posy>25</posy>
+		<width>240</width>
+		<font>font13c</font>
+		<textcolor>d0000000</textcolor>
+		<info>listitem.label</info>
+	</control>
+
+	<control type="label">
+		<posx>110</posx>
+		<posy>52</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>DATE</label>
+	</control>
+
+	<control type="label">
+		<posx>110</posx>
+		<posy>66</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.date]</label>
+	</control>
+
+	<control type="label">
+		<posx>110</posx>
+		<posy>66</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.date)</visible>
+	</control>
+
+	<control type="label">
+		<posx>110</posx>
+		<posy>89</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>SIZE</label>
+	</control>
+
+	<control type="label">
+		<posx>110</posx>
+		<posy>103</posy>
+		<width>195</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.size]</label>
+	</control>
+	</control>
+</include>
+
+#-------------------------------------------------------------------------------------------
+#PHOTODESK
+#-------------------------------------------------------------------------------------------
+
+<include name="wallphotoimage1">
+        <width>185</width>
+        <height>243</height>
+	<texture>defaulticonpicture.png</texture>
+	<visible>Control.IsVisible(59)</visible>
+	<colordiffuse>ffffe9e9</colordiffuse>
+        <aspectratio aligny="center">scale</aspectratio>
+</include>
+
+<include name="wallphotoframe1">
+        <width>220</width>
+        <height>310</height>
+	<texture>wallphoto1.png</texture>
+	<colordiffuse>ffffe9e9</colordiffuse>
+	<visible>Control.IsVisible(59)</visible>		
+</include>
+
+<include name="wallphotoimage2">
+	<width>260</width>
+	<height>264</height>
+	<texture>defaulticonpicture.png</texture>
+	<visible>Control.IsVisible(59)</visible>
+	<colordiffuse>ffffe9e9</colordiffuse>
+        <aspectratio aligny="center">scale</aspectratio>
+</include>
+
+<include name="wallphotoframe2">
+	<width>283</width>
+	<height>297</height>
+	<texture>wallphoto2.png</texture>
+	<colordiffuse>ffffe9e9</colordiffuse>
+	<visible>Control.IsVisible(59)</visible>		
+</include>
+
+<include name="wallphotoimage3">
+        <width>185</width>
+        <height>243</height>
+	<texture>defaulticonpicture.png</texture>
+	<visible>Control.IsVisible(59)</visible>
+	<colordiffuse>ffffcece</colordiffuse>
+        <aspectratio aligny="center">scale</aspectratio>
+</include>
+
+<include name="wallphotoframe3">
+        <width>220</width>
+        <height>310</height>
+	<texture>wallphoto1.png</texture>
+	<colordiffuse>ffffcece</colordiffuse>
+	<visible>Control.IsVisible(59)</visible>		
+</include>
+
+<include name="wallphotoimage4">
+	<width>260</width>
+	<height>264</height>
+	<texture>defaulticonpicture.png</texture>
+	<visible>Control.IsVisible(59)</visible>
+	<colordiffuse>ffffadad</colordiffuse>
+        <aspectratio aligny="center">scale</aspectratio>
+</include>
+
+<include name="wallphotoframe4">
+	<width>283</width>
+	<height>297</height>
+	<texture>wallphoto2.png</texture>
+	<colordiffuse>ffffadad</colordiffuse>
+	<visible>Control.IsVisible(59)</visible>		
+</include>
+
+<include name="PhotoDesk">
+
+	      <control type="image">
+		      <posx>190</posx>
+		      <posy>450</posy>
+		      <width>276</width>
+		      <height>445</height>
+		      <texture>banknotes.png</texture>
+		      <include>common-fade</include>
+		      <visible>Skin.HasSetting(photoguff) + Control.IsVisible(59)</visible>
+	      </control>
+
+	<control type="image">
+		<posx>610</posx>
+		<posy>348</posy>
+		<include>wallphotoimage2</include>
+		<info>Container(59).ListItem(4).Thumb</info>
+		<animation effect="rotate" end="4" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>600</posx>
+		<posy>335</posy>
+		<include>wallphotoframe4</include>
+		<animation effect="rotate" end="4" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>-70</posx>
+		<posy>26</posy>
+		<include>wallphotoimage1</include>
+		<info>Container(59).ListItem(-4).Thumb</info>
+		<animation effect="rotate" end="-9" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>-85</posx>
+		<posy>10</posy>
+		<include>wallphotoframe1</include>
+		<animation effect="rotate" end="-9" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>508</posx>
+		<posy>418</posy>
+		<include>wallphotoimage2</include>
+		<info>Container(59).ListItem(3).Thumb</info>
+		<animation effect="rotate" end="-4" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>498</posx>
+		<posy>405</posy>
+		<include>wallphotoframe2</include>
+		<animation effect="rotate" end="-4" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>455</posx>
+		<posy>36</posy>
+		<include>wallphotoimage1</include>
+		<info>Container(59).ListItem(2).Thumb</info>
+		<animation effect="rotate" end="-1" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>440</posx>
+		<posy>20</posy>
+		<include>wallphotoframe1</include>
+		<animation effect="rotate" end="-1" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>580</posx>
+		<posy>-442</posy>
+		<include>wallphotoimage2</include>
+		<info>Container(59).ListItem(5).Thumb</info>
+		<animation effect="rotate" end="-26" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>570</posx>
+		<posy>-455</posy>
+		<include>wallphotoframe2</include>
+		<animation effect="rotate" end="-26" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>145</posx>
+		<posy>146</posy>
+		<include>wallphotoimage1</include>
+		<info>Container(59).ListItem(-3).Thumb</info>
+		<animation effect="rotate" end="2" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>130</posx>
+		<posy>130</posy>
+		<include>wallphotoframe1</include>
+		<animation effect="rotate" end="2" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>150</posx>
+		<posy>193</posy>
+		<include>wallphotoimage2</include>
+		<info>Container(59).ListItem(-1).Thumb</info>
+		<animation effect="rotate" end="-10" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>140</posx>
+		<posy>180</posy>
+		<include>wallphotoframe2</include>
+		<animation effect="rotate" end="-10" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="image">
+		<posx>-145</posx>
+		<posy>416</posy>
+		<include>wallphotoimage1</include>
+		<info>Container(59).ListItem(-2).Thumb</info>
+		<animation effect="rotate" end="20" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+	<control type="image">
+		<posx>-160</posx>
+		<posy>400</posy>
+		<include>wallphotoframe1</include>
+		<animation effect="rotate" end="20" time="0" condition="Control.IsVisible(2)">Conditional</animation>			
+	</control>
+
+	<control type="wraplist" id="59">
+	     <viewtype label="PhotoDesk">wrap</viewtype>
+	     <posx>350</posx>
+	     <posy>173</posy>
+	     <width>220</width>
+	     <height>310</height>
+	     <onleft>58</onleft>
+	     <onright>58</onright>
+	     <onup>2</onup>
+	     <ondown>2</ondown>
+	     <focusposition>0</focusposition>
+	     <scrolltime>0</scrolltime>
+	     <orientation>horizontal</orientation>
+	     <include>common-fade</include>
+	     <itemlayout height="310" width="220">
+		      <control type="image">
+			      <posx>15</posx>
+			      <posy>16</posy>
+			      <width>185</width>
+			      <height>243</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonpicture.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+			      <animation effect="rotate" end="5" time="0" condition="Control.IsVisible(2)">Conditional</animation>
+		      </control>
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>220</width>
+			      <height>310</height>
+			      <texture>wallphoto1.png</texture>
+			      <animation effect="rotate" end="5" time="0" condition="Control.IsVisible(2)">Conditional</animation>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="310" width="220">
+		      <control type="image">
+			      <posx>15</posx>
+			      <posy>16</posy>
+			      <width>185</width>
+			      <height>243</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonpicture.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+			      <animation effect="rotate" end="5" time="0">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>220</width>
+			      <height>310</height>
+			      <texture>wallphoto1.png</texture>
+			      <animation effect="rotate" end="5" time="0">Focus</animation>
+		      </control>
+		      <control type="label">
+			      <posx>40</posx>
+			      <posy>250</posy>
+			      <width>300</width>
+			      <height>30</height>
+			      <font>script</font>
+			      <angle>5</angle>
+			      <align>left</align>
+			      <info>ListItem.Label</info>
+			      <textcolor>ff5b5b5b</textcolor>
+		      </control>
+	     </focusedlayout>
+   	   </control>
+
+	      <control type="label">
+		      <posx>135</posx>
+		      <posy>40</posy>
+		      <width>300</width>
+		      <height>30</height>
+		      <font>scriptlarge</font>
+		      <align>center</align>
+		      <angle>1</angle>
+		      <info>Container.FolderPath</info>
+		      <visible>Control.HasFocus(59)</visible>
+		      <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
+		      <animation effect="fade" start="0" end="100" time="100">Visible</animation>
+		      <textcolor>835b5b5b</textcolor>
+	      </control>
+
+	      <control type="image">
+		      <posx>580</posx>
+		      <posy>350</posy>
+		      <width>62</width>
+		      <height>83</height>
+		      <texture>coin.png</texture>
+		      <include>common-fade</include>
+		      <visible>Skin.HasSetting(photoguff) + Control.IsVisible(59)</visible>
+	      </control>
+</include>
+
+<include name="PhotoWall2">
+
+	<control type="panel" id="51">
+	     <viewtype label="PhotoWall">icon</viewtype>
+	     <posx>-182</posx>
+	     <posy>-116</posy>
+	     <width>1000</width>
+	     <height>850</height>
+	     <onleft>51</onleft>
+	     <onright>51</onright>
+	     <onup>2</onup>
+	     <ondown>2</ondown>
+	     <orientation>horizontal</orientation>
+	     <itemlayout height="143" width="101">
+		      <control type="image">
+			      <posx>42</posx>
+			      <posy>56</posy>
+			      <width>101</width>
+			      <height>143</height>
+			      <info>ListItem.Thumb</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <texture>defaulticonpicture.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+		      </control>
+		      <control type="label">
+			      <posx>42</posx>
+			      <posy>56</posy>
+			      <width>101</width>
+			      <height>143</height>
+			      <font>font13c</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="143" width="101">
+		      <control type="image">
+			      <posx>42</posx>
+			      <posy>56</posy>
+			      <width>101</width>
+			      <height>143</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonpicture.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+			      <animation effect="zoom" end="20,26,144,204" reversible="false" time="200">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>32</posx>
+			      <posy>46</posy>
+			      <width>121</width>
+			      <height>163</height>
+			      <texture>photowallframe.png</texture>
+			      <animation type="focus" reversible="false">
+				<effect type="zoom" start="32,46,121,163" end="0,0,184,258" time="200" />
+			        <effect type="fade" start="100" end="0" time="200" delay="2000" />
+			      </animation>
+		      </control>
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>392</width>
+			      <height>258</height>
+			      <texture>photowallframefull.png</texture>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+			      <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>-208</posx>
+			      <posy>0</posy>
+			      <width>392</width>
+			      <height>258</height>
+			      <texture flipx="true">photowallframefull.png</texture>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+			      <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+		      </control>
+			<control type="label">
+				<posx>172</posx>
+				<posy>31</posy>
+				<width>240</width>
+				<font>font13c</font>
+				<textcolor>d0000000</textcolor>
+				<info>listitem.title</info>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>31</posy>
+				<width>240</width>
+				<font>font13c</font>
+				<textcolor>d0000000</textcolor>
+				<info>listitem.label</info>
+				<visible>IsEmpty(listitem.title)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>58</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<textcolor>9a000000</textcolor>
+				<label>TAKEN</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>72</posy>
+				<width>200</width>
+				<font>font13</font>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.picturedatetime]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>72</posy>
+				<width>200</width>
+				<font>font13</font>
+				<textcolor>d0000000</textcolor>
+				<label>Unspecified</label>
+			        <visible>Window.IsActive(2) + IsEmpty(listitem.picturedatetime)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>95</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<textcolor>9a000000</textcolor>
+				<label>RESOLUTION</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>109</posy>
+				<width>200</width>
+				<font>font13</font>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.pictureresolution]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>132</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<textcolor>9a000000</textcolor>
+				<label>SIZE</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>172</posx>
+				<posy>146</posy>
+				<width>200</width>
+				<font>font13</font>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.size]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>31</posy>
+				<width>240</width>
+				<font>font13c</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<info>listitem.title</info>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>31</posy>
+				<width>240</width>
+				<font>font13c</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<info>listitem.label</info>
+				<visible>IsEmpty(listitem.title)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>58</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<align>right</align>
+				<textcolor>9a000000</textcolor>
+				<label>TAKEN</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>72</posy>
+				<width>200</width>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.picturedatetime]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>72</posy>
+				<width>200</width>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<label>Unspecified</label>
+			        <visible>Window.IsActive(2) + IsEmpty(picturedatetime)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>95</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<align>right</align>
+				<textcolor>9a000000</textcolor>
+				<label>RESOLUTION</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>109</posy>
+				<width>200</width>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.pictureresolution]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>132</posy>
+				<width>200</width>
+				<font>font13csmall</font>
+				<align>right</align>
+				<textcolor>9a000000</textcolor>
+				<label>SIZE</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+			<control type="label">
+				<posx>12</posx>
+				<posy>146</posy>
+				<width>200</width>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>d0000000</textcolor>
+				<label>$INFO[listitem.size]</label>
+			        <visible>Window.IsActive(2)</visible>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    			        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+			</control>
+
+	     </focusedlayout>
+             <animation effect="slide" end="202,0" time="200" condition="Container.Column(0)">Conditional</animation>
+             <animation effect="slide" end="101,0" time="200" condition="Container.Column(1)">Conditional</animation>
+             <animation effect="slide" end="0,143" time="200" condition="Container.Row(0)">Conditional</animation>
+             <animation effect="slide" end="-101,0" time="200" condition="Container.Column(8)">Conditional</animation>
+             <animation effect="slide" end="0,-143" time="200" condition="Container.Row(4)">Conditional</animation>
+   	   </control>
+
+</include>
+
+<include name="PosterWall2">
+
+	<control type="panel" id="58">
+	     <viewtype label="PosterWall">icon</viewtype>
+	     <posx>-100</posx>
+	     <posy>-166</posy>
+	     <width>915</width>
+	     <height>900</height>
+	     <onleft>58</onleft>
+	     <onright>58</onright>
+	     <onup>2</onup>
+	     <ondown>2</ondown>
+	     <orientation>horizontal</orientation>
+	     <itemlayout height="188" width="92">
+		      <control type="image">
+			      <posx>46</posx>
+			      <posy>76</posy>
+			      <width>92</width>
+			      <height>188</height>
+			      <info>ListItem.Thumb</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <texture>defaulticonposter.png</texture>
+			      <aspectratio aligny="center">stretch</aspectratio>
+		      </control>
+		      <control type="label">
+			      <posx>46</posx>
+			      <posy>76</posy>
+			      <width>92</width>
+			      <height>188</height>
+			      <font>font13</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="188" width="92">
+		      <control type="image">
+			      <posx>46</posx>
+			      <posy>76</posy>
+			      <width>92</width>
+			      <height>188</height>
+			      <info>ListItem.Thumb</info>
+			      <texture>defaulticonposter.png</texture>
+			      <aspectratio aligny="center">stretch</aspectratio>
+			      <animation effect="zoom" start="46,76,92,188" end="29,41,124,256" reversible="false" time="200">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>32</posx>
+			      <posy>46</posy>
+			      <width>123</width>
+			      <height>229</height>
+			      <texture>posterwallframe.png</texture>
+			      <animation type="focus" reversible="false">
+				<effect type="zoom" start="32,46,123,229" end="8,15,166,310" time="200" />
+			        <effect type="fade" start="100" end="0" time="200" delay="2000" />
+			      </animation>
+		      </control>
+		      <control type="image">
+			      <posx>8</posx>
+			      <posy>15</posy>
+			      <width>417</width>
+			      <height>310</height>
+			      <texture>posterwallframefull.png</texture>
+			      <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+			      <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>-243</posx>
+			      <posy>15</posy>
+			      <width>417</width>
+			      <height>310</height>
+			      <texture flipx="true">posterwallframefull.png</texture>
+			      <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+			      <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+		      </control>
+	<control type="label">
+		<posx>162</posx>
+		<posy>41</posy>
+		<width>200</width>
+		<font>font13c</font>
+		<textcolor>d0000000</textcolor>
+		<info>listitem.title</info>
+   	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>41</posy>
+		<width>200</width>
+		<font>font13c</font>
+		<textcolor>d0000000</textcolor>
+		<info>listitem.label</info>
+		<visible>IsEmpty(listitem.title)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>68</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>DIRECTOR</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>82</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.director]</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>82</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.director)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>105</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>GENRE</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>119</posy>
+		<width>145</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.genre]</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>119</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.genre)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>142</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>RUNNING TIME</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>156</posy>
+		<width>130</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.duration]</label>
+		<visible>!IsEmpty(listitem.duration)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>156</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.duration)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>179</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>YEAR</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>193</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.year]</label>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>162</posx>
+		<posy>193</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.year)</visible>
+	        <visible>Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)</visible>
+    	        <animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+//------------------------------------------------------
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>41</posy>
+		<width>220</width>
+		<font>font13c</font>
+		<textcolor>d0000000</textcolor>
+		<info>listitem.title</info>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>41</posy>
+		<width>220</width>
+		<font>font13c</font>
+		<textcolor>d0000000</textcolor>
+		<info>listitem.label</info>
+		<visible>IsEmpty(listitem.title)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>68</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>DIRECTOR</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>82</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.director]</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>82</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.director)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>105</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>GENRE</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>119</posy>
+		<width>145</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.genre]</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>119</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.genre)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>142</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>RUNNING TIME</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>156</posy>
+		<width>130</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.duration]</label>
+		<visible>!IsEmpty(listitem.duration)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>156</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.duration)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>179</posy>
+		<width>200</width>
+		<font>font13csmall</font>
+		<textcolor>9a000000</textcolor>
+		<label>YEAR</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>193</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>$INFO[listitem.year]</label>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	<control type="label">
+		<posx>17</posx>
+		<posy>193</posy>
+		<width>200</width>
+		<font>font13</font>
+		<textcolor>d0000000</textcolor>
+		<label>Unavailable</label>
+		<visible>IsEmpty(listitem.year)</visible>
+		<align>right</align>
+    	        <visible>Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)</visible>
+    		<animation effect="fade" end="100" time="200" delay="2000">Focus</animation>
+	</control>
+
+	     </focusedlayout>
+             <animation effect="slide" end="92,0" time="200" condition="Container.Column(0)">Conditional</animation>
+             <animation effect="slide" end="0,188" time="200" condition="Container.Row(0)">Conditional</animation>
+             <animation effect="slide" end="-92,0" time="200" condition="Container.Column(8)">Conditional</animation>
+             <animation effect="slide" end="0,-188" time="200" condition="Container.Row(3)">Conditional</animation>
+   	   </control>
+
+</include>
+
+</includes>

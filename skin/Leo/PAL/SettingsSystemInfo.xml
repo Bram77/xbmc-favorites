@@ -1,0 +1,444 @@
+<window>
+	<id>7</id>
+	<defaultcontrol>95</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+<control>
+		<description>Panel Image</description>
+		<type>image</type>
+		<posx>5</posx>
+		<posy>10</posy>
+		<width>710</width>
+		<height>556</height>
+		<texture>background2.png</texture>
+        </control>
+
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>blacknwhite.png</texture>
+		<animation effect="fade" time="800">WindowOpen</animation>
+	    <animation effect="fade" time="800">WindowClose</animation> 
+        </control>
+		
+	<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>Back-Row.png</texture>
+		<animation effect="fade" time="800">WindowOpen</animation>
+	    <animation effect="fade" time="800">WindowClose</animation> 
+        </control>
+		<control type="image">
+    <description>Logo</description>
+    <posx>15</posx>
+    <posy>15</posy>
+    <width>30</width>
+    <height>40</height>
+    <texture>sub-info-focus-icon.png</texture>
+    <visible>!Skin.HasSetting(menulabels)</visible>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	 </control>
+
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>70</posy>
+		<width>740</width>
+		<height>455</height>
+		<texture>black.png</texture>
+		<animation effect="fade" time="800">WindowOpen</animation>
+	    <animation effect="fade" time="800">WindowClose</animation> 
+        </control>
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>65</posy>
+		<width>740</width>
+		<height>10</height>
+		<texture>separatorosd.png</texture>
+		<animation effect="fade" time="800">WindowOpen</animation>
+	    <animation effect="fade" time="800">WindowClose</animation> 
+        </control>
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>520</posy>
+		<width>740</width>
+		<height>10</height>
+		<texture>separatorosd.png</texture>
+		<animation effect="fade" time="800">WindowOpen</animation>
+	    <animation effect="fade" time="800">WindowClose</animation> 
+        </control>
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>25</posx>
+		<posy>90</posy>
+		<width>169</width>
+		<height>309</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<include>slideleft</include>
+		</control>
+		
+	<controlgroup>
+	<control>
+		<description>Button Default Values</description>
+		<type>button</type>
+		<id>95</id>
+		<posx>50</posx>
+		<posy>110</posy>
+		<label>13278</label>
+		<font>font13</font>
+		<onleft>95</onleft>
+		<onright>95</onright>
+		<onup>98</onup>
+		<ondown>94</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button Storage</description>
+		<type>button</type>
+		<id>94</id>
+		<posx>50</posx>
+		<posy>147</posy>
+		<label>13277</label>
+		<font>font13</font>
+		<onleft>94</onleft>
+		<onright>94</onright>
+		<onup>95</onup>
+		<ondown>92</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button HDD</description>
+		<type>button</type>
+		<id>92</id>
+		<posx>50</posx>
+		<posy>184</posy>
+		<label>13275</label>
+		<font>font13</font>
+		<onleft>92</onleft>
+		<onright>92</onright>
+		<onup>94</onup>
+		<ondown>93</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button DVD</description>
+		<type>button</type>
+		<id>93</id>
+		<posx>50</posx>
+		<posy>221</posy>
+		<label>13276</label>
+		<font>font13</font>
+		<onleft>93</onleft>
+		<onright>93</onright>
+		<onup>92</onup>
+		<ondown>96</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button Network</description>
+		<type>button</type>
+		<id>96</id>
+		<posx>50</posx>
+		<posy>258</posy>
+		<label>13279</label>
+		<font>font13</font>
+		<onleft>96</onleft>
+		<onright>96</onright>
+		<onup>93</onup>
+		<ondown>97</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button VIDEO</description>
+		<type>button</type>
+		<id>97</id>
+		<posx>50</posx>
+		<posy>295</posy>
+		<label>13280</label>
+		<font>font13</font>
+		<onleft>97</onleft>
+		<onright>97</onright>
+		<onup>96</onup>
+		<ondown>98</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+
+	<control>
+		<description>Button XBOX Hardware</description>
+		<type>button</type>
+		<id>98</id>
+		<posx>50</posx>
+		<posy>332</posy>
+		<label>13281</label>
+		<font>font13</font>
+		<onleft>98</onleft>
+		<onright>98</onright>
+		<onup>97</onup>
+		<ondown>95</ondown>
+		<align>Left</align>
+		<include>slideleft</include>
+	</control>
+	</controlgroup>
+
+	
+	<control>
+		<description>Section Label</description>
+		<type>label</type>
+		<id>40</id>
+		<posx>220</posx>
+		<posy>120</posy>
+		<font>font13</font>
+		<label>139</label>
+		<include>slideright</include>
+	</control>
+
+	<control>
+		<type>image</type>
+		<posx>200</posx>
+		<posy>143</posy>
+		<width>250</width>
+		<texture>separator.png</texture>
+		<include>slideright</include>
+	</control>
+
+	<control>
+		<description>Label 2</description>
+		<type>label</type>
+		<id>2</id>
+		<posx>220</posx>
+		<posy>150</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 3</description>
+		<type>label</type>
+		<id>3</id>
+		<posx>220</posx>
+		<posy>180</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 4</description>
+		<type>label</type>
+		<id>4</id>
+		<posx>220</posx>
+		<posy>210</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 5</description>
+		<type>label</type>
+		<id>5</id>
+		<posx>220</posx>
+		<posy>240</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 6</description>
+		<type>label</type>
+		<id>6</id>
+		<posx>220</posx>
+		<posy>270</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 7</description>
+		<type>label</type>
+		<id>7</id>
+		<posx>220</posx>
+		<posy>300</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 8</description>
+		<type>label</type>
+		<id>8</id>
+		<posx>220</posx>
+		<posy>330</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 9</description>
+		<type>label</type>
+		<id>9</id>
+		<posx>220</posx>
+		<posy>360</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 10</description>
+		<type>label</type>
+		<id>10</id>
+		<posx>220</posx>
+		<posy>390</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<control>
+		<description>Label 11</description>
+		<type>label</type>
+		<id>11</id>
+		<posx>220</posx>
+		<posy>402</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control>
+
+	<!-- <control>
+		<description>Label 12</description>
+		<type>label</type>
+		<id>12</id>
+		<posx>220</posx>
+		<posy>425</posy>
+		<label>13282</label>
+		<font>font13</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control> -->
+
+	<!-- Add fav values here!
+		<control>
+		<description>TEST Label</description>
+		<type>label</type>
+		<id>1</id>
+		<posx>220</posx>
+		<posy>426</posy>
+		<label>-</label>
+		<info>Network.IPAddress</info>
+		<align>left</align>
+		<font>font12</font>
+		<include>slideright</include>
+		<include>textcolorwhite-90</include>
+	</control> -->
+
+	<control>
+		<description>Current Time</description>
+		<type>label</type>
+		<id>50</id>
+		<posx>220</posx>
+		<posy>443</posy>
+		<label>143</label>
+		<font>font12</font>
+		<include>slideright</include>
+		<include>textcolorwhite-70</include>
+		</control>
+
+	<!-- <control>
+		<description>XBMC Version</description>
+		<type>label</type>
+		<id>51</id>
+		<posx>220</posx>
+		<posy>443</posy>
+		<label>144</label>
+		<font>font12</font>
+		<include>slideright</include>
+		<include>textcolorwhite-70</include>
+	</control> -->
+
+	<control>
+		<description>XBMC XBE BUILD Version</description>
+		<type>label</type>
+		<id>52</id>
+		<posx>220</posx>
+		<posy>465</posy>
+		<label>144</label>
+		<font>font12</font>
+		<include>slideright</include>
+		<include>textcolorwhite-70</include>
+	</control>
+
+	<control>
+		<description>Mplayer DLL Version</description>
+		<type>label</type>
+		<id>53</id>
+		<posx>220</posx>
+		<posy>485</posy>
+		<label>144</label>
+		<font>font12</font>
+		<include>slideright</include>
+		<include>textcolorwhite-70</include>
+	</control>
+	
+	<control>
+		<description>Description label</description>
+		<label>130</label>
+		<font>font18</font>
+	<textcolor>FFffffff</textcolor>
+		<include>description</include>
+	</control>
+
+	</controls>
+</window>

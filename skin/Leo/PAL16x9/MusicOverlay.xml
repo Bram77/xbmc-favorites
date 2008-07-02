@@ -1,0 +1,218 @@
+<window id="2004">
+	<defaultcontrol>2</defaultcontrol>
+
+<visible>!Skin.HasSetting(music-info2)</visible>
+<animation effect="slide" end="0,0" delay="30000" time="300">WindowOpen</animation>
+<visible>[Player.HasAudio + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)] | !Window.IsActive(Home) + !Window.IsActive(2007) + [Player.HasAudio + !Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasAudio + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)]</visible>
+	
+<controls>
+
+<controlgroup>
+
+	<control type="image">
+		<description>Background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>730</width>
+		<height>576</height>
+		<texture>Blacknwhite.png</texture>
+		</control>
+
+	<control type="label">
+		<description>dialog Heading</description>
+		<posx>0</posx>
+		<posy>35</posy>
+		<width>720</width>
+		<height>16</height>
+		<align>center</align>
+		<label>13350</label>
+		<font>font14</font>
+		</control>
+
+	
+	<!-- Music Content -->
+
+
+	<control type="image">
+		<description>Case bg Image</description>
+		<posx>40</posx>
+		<posy>104</posy>
+		<width>280</width>
+		<height>342</height>
+		<texture>case1.png</texture>
+		</control>	
+
+	<control type="image">
+		<description>Cover Image</description>
+		<posx>77</posx>
+		<posy>122</posy>
+		<width>229</width>
+		<height>309</height>
+		<info>MusicPlayer.Cover</info>
+	</control>
+
+	<control type="image">
+		<description>Cover Image rounds overlay</description>
+		<posx>43</posx>
+		<posy>106</posy>
+		<width>281</width>
+		<height>336</height>
+		<texture>case2.png</texture>
+		</control>
+
+
+
+<!--Reflection-->
+
+	<control type="image">
+   		<description>Cover reflection</description>
+   		<posx>77</posx>
+   		<posy>440</posy>
+   		<width>229</width>
+   		<height>309</height>
+   		<texture flipy="true" diffuse="Thumb_Mask.png" /> 
+   		<info>MusicPlayer.Cover</info>
+		</control> 
+
+	<control type="image">
+		<description>Case bg Image reflection</description>
+		<posx>40</posx>
+		<posy>423</posy>
+		<width>280</width>
+		<height>342</height>
+		<texture flipy="true" diffuse="Thumb_Mask.png">case1.png</texture>
+		</control>	
+
+	
+
+<control type="image">
+		<description>TextBox</description>
+		<posx>730</posx>
+		<posy>170</posy>
+		<width>320</width>
+		<height>250</height>
+		<texture></texture>
+		 <animation effect="slide" end="-360,0" delay="100" time="300">WindowOpen</animation>
+		</control>	
+
+
+<!-- Text info -->
+
+	<control type="label">
+		<description>Artist</description>
+		<posx>730</posx>
+		<posy>200</posy>
+		<width>280</width>
+		<font>special14</font>
+		<label>$LOCALIZE[171] $INFO[MusicPlayer.Artist]</label>
+		<scroll>true</scroll>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+	
+	<control type="label">
+		<description>Title</description>
+		<posx>730</posx>
+		<posy>240</posy>
+		<width>280</width>
+		<font>font04</font>
+		<label>$LOCALIZE[369]: $INFO[MusicPlayer.Title]</label>
+		<scroll>true</scroll>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+	
+	<control type="label">
+		<description>Album</description>
+		<posx>730</posx>
+		<posy>260</posy>
+		<width>280</width>
+		<font>font04</font>
+		<label>$LOCALIZE[170] $INFO[MusicPlayer.Album]</label>
+		<scroll>true</scroll>
+        <animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+
+	<control type="label">
+		<description>Year</description>
+		<posx>730</posx>
+		<posy>280</posy>
+		<width>270</width>
+		<font>font04</font>
+		<label>$LOCALIZE[201]  $INFO[MusicPlayer.Year]</label>
+		<scroll>true</scroll>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+
+	<control type="label">
+		<description>Play Time</description>
+		<posx>600</posx>
+		<posy>544</posy>
+		<font>font04</font>
+		<label>$LOCALIZE[142] $INFO[MusicPlayer.Time]  / $INFO[Player.TimeRemaining]</label>
+		</control>
+
+
+
+	<control type="label">
+		<description>Duration</description>
+		<posx>730</posx>
+		<posy>300</posy>
+		<font>font04</font>
+		<label>$LOCALIZE[437]  $INFO[MusicPlayer.Duration]</label>
+		<scroll>true</scroll>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+	
+	<control type="label">
+		<description>Track Number</description>
+		<posx>730</posx>
+		<posy>320</posy>
+		<font>font04</font>
+		<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
+		<scroll>true</scroll>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+	<control type="label">
+		<description>BitRate</description>
+		<posx>730</posx>
+		<posy>340</posy>
+		<font>font04</font>
+		<label>BitRate:  $INFO[MusicPlayer.BitRate] kbit</label>
+		<animation effect="slide" end="-330,0" delay="100" time="300">WindowOpen</animation>
+		<scroll>true</scroll>
+		</control>
+
+<control type="image">
+		<description>Rating</description>
+		<posx>730</posx>
+		<posy>365</posy>
+		<font>font04</font>
+		<info>ListItem.Rating</info>
+		<animation effect="slide" end="-360,0" delay="100" time="300">WindowOpen</animation>
+		</control>
+
+
+
+	<control type="progress">
+		<description>Progressbar</description>
+		<posx>0</posx>
+		<posy>565</posy>
+		<width>720</width>
+		<height>8</height>
+		<info>Player.Progress</info>
+		<lefttexture></lefttexture>
+		<midtexture>progress_mid-blue.png</midtexture>
+		<righttexture></righttexture>
+		<overlaytexture>-</overlaytexture>
+	</control>
+</controlgroup>
+
+
+
+	</controls>
+</window>
