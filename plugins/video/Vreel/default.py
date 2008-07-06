@@ -1,5 +1,5 @@
-import urllib,urllib2,re,xbmcplugin,xbmcgui,base64
-#joox V2008
+import urllib,urllib2,re,xbmcplugin,xbmcgui,socket
+#Vreel
 
 def INDEXCATS():
         res=[]
@@ -39,9 +39,6 @@ def SEARCH():
                 match=p.findall(link)
                 for url,thumbnail,name in match:
                         thumbnail="http://beta.vreel.net/"+thumbnail
-                        url="http://beta.vreel.net/"+url
-                        res.append((url,thumbnail,name))
-                for url,thumbnail,name in res:
                         addDir(name,url,2,thumbnail)
        
 def INDEX(url):
@@ -55,15 +52,10 @@ def INDEX(url):
         match=p.findall(link)
         next="http://beta.vreel.net/index.php?q=channels&id="+str(match[-1])
         addDir("    NEXT PAGE",next,1,"")
-        pass
-        p=re.compile('<a href="(.+?)"><img src=".+?(.+?)" width="149" height="104" border="0" /></a>\n\t<br><font size="5"><a href=".+?" style="font-size: 11px">(.+?)</a></font><br />\n\tDescription:(.+?)<br />')
+        p=re.compile('<a href="(.+?)"><img src=".+?(.+?)" width="149" height="104" border="0" /></a>\n\t<br><font size="5"><a href=".+?" style="font-size: 11px">(.+?)</a></font><br />')
         match=p.findall(link)
-        for url,thumbnail,name,desc in match:
-                thumbnail="http://beta.vreel.net/"+thumbnail
-                url="http://beta.vreel.net/"+url
-                res.append((url,thumbnail,name,desc))
-        for url,thumbnail,name,desc in res:
-                addDir(name+" "+desc,url,2,thumbnail)
+        for url,thumbnail,name in match:
+                addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
 
 def INDEX2(url):
         res=[]
@@ -83,22 +75,19 @@ def INDEX2(url):
         p=re.compile('<a href="(.+?)"><img width="149" height="104" src=".+?(.+?)" border="0"/></a></td>\n\t\t\t\t<td style="padding-left: 20px; padding-top: 5px; width: 300px"><font size="5"><a href=".+?">(.+?)</a>')
         match=p.findall(link)
         for url,thumbnail,name in match:
-                thumbnail="http://beta.vreel.net/"+thumbnail
-                url="http://beta.vreel.net/"+url
-                res.append((url,thumbnail,name))
-        for url,thumbnail,name in res:
-                addDir(name,url,2,thumbnail)
+                addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
                 
 def VIDEOLINK(url):
-        req = urllib2.Request(url)
+        
+        req = urllib2.Request('http://beta.vreel.net/'+url)
         req.add_header('User-Agent','Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
         response = urllib2.urlopen(req)
         link=response.read()
         response.close()
-        p=re.compile('<param name="src" value="(.+?)" />')
+        p=re.compile('<embed type="video/divx" src="(.+?)"')
         match=p.findall(link)
-        for url in match:
-                addLink("WATCH VIDEO",url,"")
+        vreel=match[0]
+        addLink("WATCH VIDEO",vreel,"")
                 
 def get_params():
         param=[]
