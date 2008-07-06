@@ -24,13 +24,4 @@ I will try to keep the SVN as up to date as possible.
   * Enter "ftp://YOUR_XBOX_IP_HERE" in the address bar and press "Enter"
   * You will be prompted a login dialog. The default username and password are *xbox*
   * Copy the "XBMC-Favorites Installer" directory you've extracted before to "E/XBMC/plugins/programs/"
-  * On your XBOX go to "Programs" and select "Add Location"
-  * Select "Browse" en go to "Program-plugins"
-  * Now the "XBMC-Favorites Installer" plugin will be listed. Simply select it and then add it. To select the plugin you'll only have to SELECT it. Do not enter the plugin directory.
-  * The plugin will now show in the "Programs" root and can be used.
-
-
-
-= TODO =
-
-  * Add an option to update all plugins with one click
+  * The rest is best explained by the first video on [http://theendofthelongestline.de/xbox/about-plugins/index.php this] page.
