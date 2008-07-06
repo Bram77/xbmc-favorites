@@ -20,18 +20,26 @@ def INDEX(url):
                 f=urllib.urlopen(url)
                 a=f.read()
                 code=re.sub('" style="color:white;','',a)
+                code2=re.sub('&#38;','&',code)
+                code3=re.sub('&#232;re','er',code2)
+                code4=re.sub('&#162;','c',code3)
+                code5=re.sub('&#183;','-',code4)
                 f.close()
                 p=re.compile('          <a href=".+?(.+?)">(.+?)</a><br />')
-                match=p.findall(code)
+                match=p.findall(code5)
                 for url,name in match:
                         addDir(name,"http://joox.net"+url,2,"")
         except IOError:
                 f=urllib.urlopen(url)
                 a=f.read()
                 code=re.sub('" style="color:white;','',a)
+                code2=re.sub('&#38;','&',code)
+                code3=re.sub('&#232;re','er',code2)
+                code4=re.sub('&#162;','c',code3)
+                code5=re.sub('&#183;','-',code4)
                 f.close()
                 p=re.compile('          <a href=".+?(.+?)">(.+?)</a><br />')
-                match=p.findall(code)
+                match=p.findall(code5)
                 for url,name in match:
                         addDir(name,"http://joox.net"+url,2,"")
                 
@@ -40,18 +48,26 @@ def INDEX2(url):
                 f=urllib.urlopen(url)
                 a=f.read()
                 code=re.sub('" style="color:white;','',a)
+                code2=re.sub('&#38;','&',code)
+                code3=re.sub('&#232;re','er',code2)
+                code4=re.sub('&#162;','c',code3)
+                code5=re.sub('&#183;','-',code4)
                 f.close()
                 p=re.compile('          <a href=".+?(.+?)">(.+?)</a><br />')
-                match=p.findall(code)
+                match=p.findall(code5)
                 for url,name in match:
                         addDir(name,"http://joox.net"+url,5,"")
         except IOError:
                 f=urllib.urlopen(url)
                 a=f.read()
                 code=re.sub('" style="color:white;','',a)
+                code2=re.sub('&#38;','&',code)
+                code3=re.sub('&#232;re','er',code2)
+                code4=re.sub('&#162;','c',code3)
+                code5=re.sub('&#183;','-',code4)
                 f.close()
                 p=re.compile('          <a href=".+?(.+?)">(.+?)</a><br />')
-                match=p.findall(code)
+                match=p.findall(code5)
                 for url,name in match:
                         addDir(name,"http://joox.net"+url,5,"")
         
@@ -88,7 +104,7 @@ def EPISODES(url):
                 for url,name in match:
                         addDir(name,"http://joox.net"+url,5,thumb)
 
-def PARTS(url):
+def PARTS(url,name):
         try:
                 f=urllib.urlopen(url)
                 a=f.read()
@@ -103,8 +119,8 @@ def PARTS(url):
                 match=p.findall(a)
                 p=re.compile('<a href="(.+?)">(.+?)</a>')
                 parts=p.findall(match[0])
-                for url,name in parts:
-                        addDir(name,"http://joox.net"+url,3,thumb)
+                for url,name2 in parts:
+                        addDir(name+"-"+name2,"http://joox.net"+url,3,thumb)
         except IOError:
                 f=urllib.urlopen(url)
                 a=f.read()
@@ -119,12 +135,12 @@ def PARTS(url):
                 match=p.findall(a)
                 p=re.compile('<a href="(.+?)">(.+?)</a>')
                 parts=p.findall(match[0])
-                for url,name in parts:
-                        addDir(name,"http://joox.net"+url,3,thumb)
+                for url,name2 in parts:
+                        addDir(name+"-"+name2,"http://joox.net"+url,3,thumb)
                 
        
 
-def VIDEOLINK(url):
+def VIDEOLINK(url,name):
         f=urllib.urlopen(url)
         a=f.read()
         f.close()
@@ -133,9 +149,9 @@ def VIDEOLINK(url):
         for url in match:
                 if url.find('messagefromme')>0:
                         url="http://127.0.0.1:64653/streamplug/"+base64.urlsafe_b64encode(url)+'?.ogm'
-                        addLink("WATCH STREAMPLUG - Play with DvD player & run Veohproxy",url,"")
+                        addLink(name+"-STREAMPLUG (DvD player,run Veohproxy)",url,"")
                 elif url.find('fliqz')>0:
-                        addLink("WATCH FLIQZ",url+"?.flv","")
+                        addLink(name+"-FLIQZ",url+"?.flv","")
                 elif url.find('beta.vreel.net')>0:
                         f=urllib.urlopen(url)
                         a=f.read()
@@ -143,13 +159,19 @@ def VIDEOLINK(url):
                         p=re.compile('<param name="src" value="(.+?)" />')
                         match=p.findall(a)
                         for url in match:
-                                addLink("VREEL",url,"")
+                                addLink(name+"-VREEL",url+"?.avi","")
                 elif url.find('torrent')>0:
-                        addLink("OTHER",url+"?.avi","")
+                        addLink(name+"-OTHER",url+"?.avi","")
                 elif url.find('vreel-')>0:
-                        addLink("VREEL",url,"")
+                        addLink(name+"-VREEL",url+"?.avi","")
+                elif url.find('smallurl')>0:
+                        request = urllib2.Request(url)
+                        opener = urllib2.build_opener()
+                        f = opener.open(request)
+                        vix=urllib.unquote(f.url)
+                        addLink(name,vix,"")
                 else:
-                        addLink("WATCH VIDEO","http://joox.net"+url+"?.avi","")
+                        addLink(name,"http://joox.net"+url,"")
                         
 
 def get_params():
@@ -176,6 +198,7 @@ def addLink(name,url,iconimage):
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
         return ok
+        
 
 
 def addDir(name,url,mode,iconimage):
@@ -185,6 +208,7 @@ def addDir(name,url,mode,iconimage):
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
+        
         
               
 params=get_params()
@@ -217,13 +241,13 @@ elif mode==2:
         EPISODES(url)
 elif mode==3:
         print "GET INDEX OF PAGE : "+url
-        VIDEOLINK(url)
+        VIDEOLINK(url,name)
 elif mode==4:
         print "GET INDEX OF PAGE : "+url
         INDEX2(url)
 elif mode==5:
         print "GET INDEX OF PAGE : "+url
-        PARTS(url)
+        PARTS(url,name)
 
 
 
