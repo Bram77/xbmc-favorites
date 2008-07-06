@@ -1,0 +1,400 @@
+<window type="buttonMenu" id="105">
+
+	
+	<!--  Change the defaultcontrol ID to have another button focussed when  !-->
+	<!--  you bring the panel up.                                            !-->
+	<!--  (look for this tag: <id>1123</id> on the button u want to focus)   !-->
+	<defaultcontrol always="true">1109</defaultcontrol>
+
+
+	<coordinates>
+		<system>1</system>
+		 <posx>515</posx>
+          <posy>35</posy>
+	</coordinates>
+
+	<controls>
+		
+
+		<controlgroup>
+		
+           <control>
+            <type>image</type>
+            <posx>210</posx>
+            <posy>-35</posy>
+            <width>210</width>
+            <height>576</height>
+            <texture>Right Curtain Panel.png</texture>
+           	<visible>!Skin.HasSetting(Wallpaper)</visible>
+	        <visible>!Skin.HasSetting(Default Wallpaper)</visible>
+			 </control>
+
+			 <control>
+            <type>image</type>
+            <posx>210</posx>
+            <posy>-35</posy>
+            <width>210</width>
+            <height>576</height>
+            <texture>black.png</texture>
+             </control>
+
+		<!--  To add another button to the submenu, just put in your hyperlink,  !-->
+		<!--  give it the desired label and set visible to YES!                  !-->
+		<!--  To link direct to a script,xbe/audio/video file use (eg):          !-->
+		<!--  <onclick>F:\Emulators\ScummVMx\default.xbe</onclick>               !-->
+		<!--  To link to a XBMC screen use                                       !-->
+		<!--  <onclick>XBMC.ActivateWindow('ID here')</onclick>                  !-->
+		
+		<control type="button" id="1123">
+			<description>SubMenu button</description>
+			<visible>Yes</visible>
+			<label>13006</label>
+			<onclick>C:\xboxdash.xbe</onclick>
+			<posx>212</posx>
+			<posy>10</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+            <textcolor>white</textcolor>
+			<onleft>1123</onleft>
+			<onright>1123</onright>
+			<onup>1109</onup>
+			<ondown>1122</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+			<texturenofocus>-</texturenofocus>
+            <texturefocus>list-focus1.png</texturefocus>
+           	</control>
+
+		<control type="button" id="1122">
+			<description>SubMenu button</description>
+			<visible>Yes</visible>
+			<label>7</label>
+			<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+			<posx>212</posx>
+			<posy>30</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1122</onleft>
+			<onright>1122</onright>
+			<onup>1123</onup>
+			<ondown>1121</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1121">
+			<description>SubMenu button</description>
+			<visible>Yes</visible>
+			<label>8</label>
+			<onclick>XBMC.ActivateWindow(Weather)</onclick>
+			<posx>212</posx>
+			<posy>50</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1121</onleft>
+			<onright>1121</onright>
+			<onup>1122</onup>
+			<ondown>1120</ondown>
+			<align>center</align>
+			<textoffsety>-1</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1120">
+			<description>SubMenu button</description>
+			<visible>Yes</visible>
+			<label>20077</label>
+			<onclick>XBMC.ActivateWindow(56)</onclick>
+			<posx>212</posx>
+			<posy>70</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1120</onleft>
+			<onright>1120</onright>
+			<onup>1121</onup>
+			<ondown>1119</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1119">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(Settings)</visible>
+			<label>5</label>
+			<onclick>XBMC.ActivateWindow(Settings)</onclick>
+			<posx>212</posx>
+			<posy>90</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1119</onleft>
+			<onright>1119</onright>
+			<onup>1120</onup>
+			<ondown>1118</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+
+		<control type="button" id="1118">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(Programs)</visible>
+			<label>0</label>
+			<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+			<posx>212</posx>
+			<posy>110</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1118</onleft>
+			<onright>1118</onright>
+			<onup>1119</onup>
+			<ondown>1117</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+
+		<control type="button" id="1117">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(DialogSubMenu8)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu8Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu8)]</onclick>
+			<posx>212</posx>
+			<posy>130</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1117</onleft>
+			<onright>1117</onright>
+			<onup>1118</onup>
+			<ondown>1116</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1116">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(DialogSubMenu7)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu7Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu7)]</onclick>
+			<posx>212</posx>
+			<posy>150</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1116</onleft>
+			<onright>1116</onright>
+			<onup>1117</onup>
+			<ondown>1115</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1115">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(DialogSubMenu6)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu6Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu6)]</onclick>
+			<posx>212</posx>
+			<posy>170</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1115</onleft>
+			<onright>1115</onright>
+			<onup>1116</onup>
+			<ondown>1114</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1114">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(DialogSubMenu5)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu5Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu5)]</onclick>
+			<posx>212</posx>
+			<posy>190</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1114</onleft>
+			<onright>1114</onright>
+			<onup>1115</onup>
+			<ondown>1113</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1113">
+			<description>SubMenu button</description>
+			<visible>Skin.HasSetting(DialogSubMenu4)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu4Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu4)]</onclick>
+			<posx>212</posx>
+			<posy>210</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1113</onleft>
+			<onright>1113</onright>
+			<onup>1114</onup>
+			<ondown>1112</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1112">
+			<description>scripts button</description>
+			<visible>Skin.HasSetting(DialogSubMenu3)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu3Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu3)]</onclick>
+			<posx>212</posx>
+			<posy>230</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1112</onleft>
+			<onright>1112</onright>
+			<onup>1113</onup>
+			<ondown>1111</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1111">
+			<description>Scripts button</description>
+			<visible>Skin.HasSetting(DialogSubMenu2)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu2Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu2)]</onclick>
+			<posx>212</posx>
+			<posy>250</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1111</onleft>
+			<onright>1111</onright>
+			<onup>1112</onup>
+			<ondown>1110</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1110">
+			<description>Scripts button</description>
+			<visible>Skin.HasSetting(DialogSubMenu1)</visible>
+			<label>$INFO[Skin.String(DialogSubMenu1Title)]</label>
+			<onclick>$INFO[Skin.String(DialogSubMenu1)]</onclick>
+			<posx>212</posx>
+			<posy>270</posy>
+			<width>205</width>
+			<textwidth>185</textwidth>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1110</onleft>
+			<onright>1110</onright>
+			<onup>1111</onup>
+			<ondown>1109</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+		<control type="button" id="1109">
+			<description>Scripts button</description>
+			<visible>yes</visible>
+			<label>247</label>
+			<onclick>XBMC.ActivateWindow(20)</onclick>
+			<posx>212</posx>
+			<posy>290</posy>
+			<textwidth>185</textwidth>
+			<width>205</width>
+			<height>20</height>
+			<font>font64</font>
+			<textcolor>white</textcolor>
+			<onleft>1109</onleft>
+			<onright>1109</onright>
+			<onup>1110</onup>
+			<ondown>1123</ondown>
+			<align>center</align>
+			<textoffsety>0</textoffsety>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>list-focus1.png</texturefocus>
+			</control>
+
+<control>
+		<description>Time</description>
+ 		<type>image</type>
+		<posx>210</posx>
+        <posy>390</posy>
+        <width>210</width>
+		<height>40</height>
+		<texture>homebutton-horizontal-nofocus.png</texture>
+		<align>center</align>
+		</control>
+	
+	
+	<control>
+		<description>Time</description>
+ 		<type>label</type>
+		<posx>212</posx>
+        <posy>400</posy>
+        <textwidth>125</textwidth>
+		<width>205</width>
+		<height>40</height>
+		<label>time</label>
+		<info>System.Time</info>
+        <align>center</align>
+		<font>special15</font>
+		<textcolor>red</textcolor>
+		</control>
+
+
+<animation effect="slide" end="-212,0" delay="50" tween="cubic" time="400">WindowOpen</animation>
+<animation effect="slide" start="-212,0" end="5,0" delay="50" tween="cubic" time="400">WindowClose</animation>
+</controlgroup>
+
+	</controls>
+</window>

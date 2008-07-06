@@ -1,0 +1,292 @@
+<window id="28">
+
+ <defaultcontrol always="true">50</defaultcontrol>
+ <allowoverlay>no</allowoverlay>
+
+ <controls>
+
+  <control>
+		<description>Panel Image</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>background2.png</texture>
+		<visible>!Skin.HasSetting(Background)</visible>
+		</control>
+
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>BlacknWhite.png</texture>
+		<visible>!Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="600">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+        </control>
+
+<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>Menus</imagepath>
+		<info>Skin.String(CustomMenu)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenu)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+
+
+
+
+		<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>-</imagepath>
+		<info>Skin.String(CustomMenuFolder)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+	
+<control type="image">
+    <description>Logo</description>
+    <posx>15</posx>
+    <posy>10</posy>
+    <width>40</width>
+    <height>40</height>
+    <texture>MyVideo.png</texture>
+    <visible>!Skin.HasSetting(menulabels)</visible>
+	 <animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	 </control>
+
+
+
+<control type="label">
+	<posx>60</posx>
+	<posy>30</posy>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>font18</font>
+	<textcolor>white</textcolor>
+	<visible>!Skin.HasSetting(menulabels)</visible>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+    <label>20012</label>
+</control>
+
+
+	<control>
+	<description>default listcontrol</description>
+	<type>listcontrol</type>
+	<id>50</id>
+	<posx>400</posx>
+	<posy>90</posy>
+	<width>310</width>
+	<height>424</height>
+	<onleft>28</onleft>
+   <onright>28</onright>
+   <onup>50</onup>
+   <ondown>50</ondown>
+	<spinwidth>16</spinwidth>
+	<spinheight>16</spinheight>
+	<spinposx>280</spinposx>
+	<spinposy>450</spinposy>
+	<spinfont>font13</spinfont>
+	<spincolor>ddffffff</spincolor>
+	<textureup>scroll-up.png</textureup>
+	<texturedown>scroll-down.png</texturedown>
+	<textureupfocus>scroll-up-focus.gif</textureupfocus>
+	<texturedownfocus>scroll-down-focus.gif</texturedownfocus>
+	<texturefocus>list-focus.png</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<image>icon-folder.png</image>
+	<keepaspectratio>true</keepaspectratio>
+	<textureheight>26</textureheight>
+	<font>font13</font>
+	<include>selectedcolor</include>
+	<textcolor>white</textcolor>
+	<textcolor2>60ffffff</textcolor2>
+	<include>controldefaults</include>
+	<suffix> |</suffix>
+	<textxoff>3</textxoff>
+	<textxoff2>500</textxoff2>
+	<aligny>center</aligny>
+</control>
+
+
+	
+   
+   <control type="videowindow">
+    <posx>30</posx>
+    <posy>85</posy>
+    <width>350</width>
+    <height>350</height>
+    <aspectratio>keep</aspectratio>
+   </control>
+
+   
+    <control type="label">
+    <description>Now Playing Label</description>
+    <posx>30</posx>
+    <posy>450</posy>
+    <width>350</width>
+    <height>200</height>
+    <font>font18</font>
+    <info>VideoPlayer.Title</info>
+    <scroll>true</scroll>
+    <include>button-text</include>
+    <visible>Player.HasVideo</visible>
+   </control>
+
+ 
+
+   <control type="image">
+    <description>Background shadow</description>
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>720</width>
+    <height>576</height>
+    <texture>black.png</texture>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <controlgroup>
+  <posx>10</posx>
+
+   <control type="image">
+    <description>Button Background</description>
+    <posx>260</posx>
+    <posy>105</posy>
+    <width>255</width>
+    <height>365</height>
+    <texture>button-menu-background.png</texture>
+    <include>button-fade</include>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <control type="button" id="20">
+    <description>Shuffle button</description>
+    <posx>270</posx>
+    <posy>185</posy>
+    <width>209</width>
+    <height>45</height>
+    <font>font13</font>
+    <label>191</label>
+    <textoffsetx>10</textoffsetx>
+    <texturefocus>input-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>22</onup>
+    <ondown>28</ondown>
+    <include>button-text</include>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <control type="radiobutton" id="28">
+    <description>Randomize button</description>
+    <posx>270</posx>
+    <posy>230</posy>
+    <width>209</width>
+    <height>45</height>
+    <font>font13</font>
+    <label>13319</label>
+    <label>194</label>
+    <textoffsetx>10</textoffsetx>
+    <texturefocus>input-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>20</onup>
+    <ondown>26</ondown>
+    <include>button-text</include>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <control type="button" id="26">
+    <description>Repeat button</description>
+    <posx>270</posx>
+    <posy>275</posy>
+    <width>209</width>
+    <height>45</height>
+    <font>font13</font>
+    <textoffsetx>10</textoffsetx>
+    <texturefocus>input-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <label></label>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>28</onup>
+    <ondown>21</ondown>
+    <include>button-text</include>
+   <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <control type="button" id="21">
+    <description>Save button</description>
+    <posx>270</posx>
+    <posy>320</posy>
+    <width>209</width>
+    <height>45</height>
+    <font>font13</font>
+    <label>190</label>
+    <textoffsetx>10</textoffsetx>
+    <texturefocus>input-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>26</onup>
+    <ondown>22</ondown>
+    <include>button-text</include>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+   <control type="button" id="22">
+    <description>Clear button</description>
+    <posx>270</posx>
+    <posy>365</posy>
+    <width>209</width>
+    <height>45</height>
+    <font>font13</font>
+    <label>192</label>
+    <textoffsetx>10</textoffsetx>
+    <texturefocus>input-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <onleft>50</onleft>
+    <onright>50</onright>
+    <onup>21</onup>
+    <ondown>20</ondown>
+    <include>button-text</include>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) |Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(59)]</visible>
+   </control>
+
+
+  </controlgroup>
+
+ </controls>
+
+</window>
+
