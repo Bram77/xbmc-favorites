@@ -158,12 +158,11 @@ def VIDEOLINK(url,name):
                         f.close()
                         p=re.compile('<param name="src" value="(.+?)" />')
                         match=p.findall(a)
-                        for url in match:
-                                addLink(name+"-VREEL",url+"?.avi","")
+                        addLink(name+"-VREEL",match[0],"")
                 elif url.find('torrent')>0:
                         addLink(name+"-OTHER",url+"?.avi","")
                 elif url.find('vreel-')>0:
-                        addLink(name+"-VREEL",url+"?.avi","")
+                        addLink(name+"-VREEL",url,"")
                 elif url.find('smallurl')>0:
                         request = urllib2.Request(url)
                         opener = urllib2.build_opener()
