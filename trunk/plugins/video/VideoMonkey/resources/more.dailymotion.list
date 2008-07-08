@@ -1,0 +1,15 @@
+﻿########################################################
+# Dailymotion coutry specific sites
+########################################################
+version=1
+########################################################
+name=Dailymotion (DE)
+type=rss
+thumb=video.monkey.image%dailymotion_de.png
+url=dailymotion.de.cfg
+########################################################
+name=Dailymotion (FR)
+type=rss
+thumb=video.monkey.image%dailymotion_fr.png
+url=dailymotion.fr.cfg
+########################################################

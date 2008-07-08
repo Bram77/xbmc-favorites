@@ -1,0 +1,36 @@
+﻿########################################################
+# GateMonkey Plugin extra sites list
+########################################################
+version=1
+title=Extra
+########################################################
+# Video sites
+########################################################
+name=ClipFish (Musikvideos)
+type=once
+thumb=video.monkey.image%clipfish.png
+url=musicvideos.clipfish.de.cfg
+########################################################
+name=Dailymotion (DE)
+type=rss
+thumb=video.monkey.image%dailymotion_de.png
+url=dailymotion.de.cfg
+########################################################
+name=Dailymotion (FR)
+type=rss
+thumb=video.monkey.image%dailymotion_fr.png
+url=dailymotion.fr.cfg
+########################################################
+name=YouTube (DE)
+type=rss
+thumb=video.monkey.image%youtube_de.png
+url=youtube.de.cfg
+########################################################
+name=YouTube (FR)
+type=rss
+thumb=video.monkey.image%youtube_fr.png
+url=youtube.fr.cfg
+########################################################
+# Adult video sites
+########################################################
+########################################################

@@ -1,0 +1,4 @@
+<settings>
+   <setting id="no_adult" type="bool" label="30002" default="true"/>
+   <setting type="sep" />
+</settings>
