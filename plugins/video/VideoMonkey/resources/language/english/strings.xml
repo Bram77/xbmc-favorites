@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">VideoGate</string>
+    <string id="30001">Xbox Media Center</string>
+
+    <string id="30002">Exclude adult content</string>
+
+    <string id="30100">Categories</string>
+    <string id="30101">Subcategories</string>
+    <string id="30102">Search</string>
+    <string id="30103">Next page</string>
+    <string id="30104">More</string>
+    <string id="30105">Genre</string>
+    <string id="30106">Current</string>
+    <string id="30107">Artist</string>
+    <string id="30108">Videos</string>
+    <string id="30109">Sorting</string>
+    <string id="30110">Suggestion</string>
+</strings>

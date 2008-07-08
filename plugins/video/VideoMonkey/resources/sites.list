@@ -1,0 +1,42 @@
+﻿########################################################
+# GateMonkey Plugin entry list
+########################################################
+version=1
+title=VideoGate
+########################################################
+# More sites
+########################################################
+name=video.monkey.locale%30104
+type=rss
+thumb=video.monkey.image%sites.png
+url=more.sites.list
+########################################################
+# Video sites
+########################################################
+name=Clipfish
+type=rss
+thumb=video.monkey.image%clipfish.png
+url=clipfish.de.cfg
+########################################################
+name=Dailymotion
+type=rss
+thumb=video.monkey.image%dailymotion.png
+url=dailymotion.com.cfg
+########################################################
+name=YouTube
+type=rss
+thumb=video.monkey.image%youtube.png
+url=youtube.com.cfg
+########################################################
+# Adult video sites
+########################################################
+name=Pornhub
+type=adult_rss
+thumb=video.monkey.image%pornhub.png
+url=pornhub.com.cfg
+########################################################
+name=RedTube
+type=adult_rss
+thumb=video.monkey.image%redtube.png
+url=redtube.com.cfg
+########################################################
