@@ -2,7 +2,7 @@
 <!--Language file translated with Team XBMC Translator-->
 <!--Translator: smuto-->
 <!--Email: smuto.promyk@gmail.com-->
-<!--Date of translation: 06/24/2008-->
+<!--Date of translation: 07/07/2008-->
 <!--$Revision$-->
 <strings>
   <string id="31000">Uruchom</string>
@@ -19,7 +19,7 @@
   </string>
   <string id="31010">gry lub emulatory</string>
   <string id="31011">filmy, seriale lub teledyski</string>
-  <string id="31012">muzyki z dysku lub płyt CD</string>
+  <string id="31012">muzyki z dysku lub CD</string>
   <string id="31013">fotografie lub obrazy</string>
   <string id="31014">ustawienia lub opcje</string>
   <string id="31015">prognozę pogody</string>
@@ -45,9 +45,16 @@
   <string id="31033">PAUZA</string>
   <string id="31034">PRZEWIŃ</string>
   <string id="31035">COFNIJ</string>
+  <string id="31036">WYCISZONE</string>
+  <string id="31037">Udane logowanie:</string>
   <string id="31100">Zamglenie tła</string>
   <string id="31101">Filmy w tle</string>
   <string id="31102">Wizualizacja w tle</string>
   <string id="31103">Wyświetlaj tematyczne tła dla zakładek</string>
   <string id="31104">Nie pokazuj informacji o ilości pozycji</string>
+  <string id="31105">Zablokuj (ukryj) wejście w ustawienia mediów</string>
+  <string id="31106">Info o pogodzie  na ekranie głównym</string>
+  <string id="31107">Zablokuj (ukryj) panel " Widok "</string>
+  <string id="31998">[B]</string>
+  <string id="31999">[/B]</string>
 </strings>

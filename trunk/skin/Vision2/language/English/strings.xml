@@ -57,10 +57,11 @@
 <!-- 
   The 2 strings below are special ones that control the forced Capitailization of text
   in the skin.  If your langauge does not support or use UPPERCASE (Capital) Letters
-  like English does then you need to blank out these 2 strings like this 
+  like English does then you need to change out these 2 strings like this if they are
+  blank it defaults back to the english uppercase ones
   
-  <string id="31998"></string>
-  <string id="31999"></string>
+  <string id="31998">[B]</string>
+  <string id="31999">[/B]</string>
   
   and all Custom forced uppercase text will now be its normal case and hopefully display
   correct in your lanaguage

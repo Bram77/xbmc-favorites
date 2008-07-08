@@ -957,7 +957,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>System.LoggedOn + System.HasLoginScreen</visible>
+					<visible>!System.IsMaster + System.LoggedOn + System.HasLocks</visible>
 				</control>
 				<control type="button" id="105">
 					<description>Button5</description>
@@ -972,7 +972,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>!System.IsMaster + System.LoggedOn + System.HasLocks</visible>
+					<visible>System.LoggedOn + System.HasLoginScreen</visible>
 				</control>
 			</control>
 			<control type="grouplist">
