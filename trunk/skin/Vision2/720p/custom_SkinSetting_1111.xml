@@ -62,9 +62,8 @@
 				<label>31100</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Grey_Overlay)</onclick>
 				<selected>!Skin.HasSetting(Grey_Overlay)</selected>
 			</control>
@@ -77,9 +76,8 @@
 				<label>31101</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Back_Video)</onclick>
 				<selected>!Skin.HasSetting(Back_Video)</selected>
 			</control>
@@ -92,9 +90,8 @@
 				<label>31102</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(Back_Vis)</onclick>
 				<selected>!Skin.HasSetting(Back_Vis)</selected>
 			</control>
@@ -112,9 +109,8 @@
 				<label>31103</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(No_HomeBacks)</onclick>
 				<selected>!Skin.HasSetting(No_HomeBacks)</selected>
 			</control>
@@ -127,9 +123,8 @@
 				<label>31105</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(No_Settings_In_Home)</onclick>
 				<selected>Skin.HasSetting(No_Settings_In_Home)</selected>
 			</control>
@@ -142,9 +137,8 @@
 				<label>31106</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(No_Weather_In_Home)</onclick>
 				<selected>!Skin.HasSetting(No_Weather_In_Home)</selected>
 			</control>
@@ -162,9 +156,8 @@
 				<label>31104</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(No_PageCounts)</onclick>
 				<selected>Skin.HasSetting(No_PageCounts)</selected>
 			</control>
@@ -177,9 +170,8 @@
 				<label>31107</label>
 				<textcolor>grey2</textcolor>
 				<focusedcolor>white</focusedcolor>
-				<textoffsetx>20</textoffsetx>
-				<texturefocus border="16,0,0,0">Dot_Settings.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus border="5">button-focus.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
 				<onclick>Skin.ToggleSetting(LockSideMenus)</onclick>
 				<selected>Skin.HasSetting(LockSideMenus)</selected>
 			</control>
