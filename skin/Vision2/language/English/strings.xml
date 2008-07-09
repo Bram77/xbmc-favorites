@@ -54,6 +54,15 @@
   <string id="31106">Show Weather on Home Screen</string>
   <string id="31107">Prevent Media Window Menu Focus</string>
   
+  <!-- Script Settings labels -->
+  <string id="31200">SCRIPT SETTINGS</string>
+  <string id="31201">Home submenu Options</string>
+  <string id="31202">Activate Custom Menu Item</string>
+  <string id="31203">Set Button Label</string>
+  <string id="31204">Script Path</string>
+  <string id="31205">Show Video Plugins Button</string>
+  <string id="31206">Show Music Plugins Button</string>
+
 <!-- 
   The 2 strings below are special ones that control the forced Capitailization of text
   in the skin.  If your langauge does not support or use UPPERCASE (Capital) Letters

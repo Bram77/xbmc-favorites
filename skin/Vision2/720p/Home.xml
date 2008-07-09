@@ -1001,6 +1001,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(HomeScriptMenu_VideoPlugins_Visible)</visible>
 				</control>
 				<control type="button" id="102">
 					<description>Button2</description>
@@ -1015,35 +1016,37 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>!Skin.HasSetting(HomeScriptMenu_MusicPlugins_Visible)</visible>
 				</control>
 				<control type="button" id="103">
 					<description>Button3</description>
 					<height>22</height>
 					<width>320</width>
-					<label>Apple Movie Trailers</label>
 					<font>font12</font>
-					<onclick>XBMC.RunScript(Q:\scripts\Apple Movie Trailers\default.py)</onclick>
+					<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
+					<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
+					<visible>[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))]</visible>
 				</control>
 				<control type="button" id="104">
 					<description>Button4</description>
 					<height>22</height>
 					<width>320</width>
-					<label>-</label>
 					<font>font12</font>
-					<onclick>-</onclick>
+					<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
+					<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>false</visible>
+					<visible>[Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))]</visible>
 				</control>
 				<control type="button" id="105">
 					<description>Button5</description>
@@ -1051,14 +1054,14 @@
 					<width>320</width>
 					<label>5</label>
 					<font>font12</font>
-					<onclick>ActivateWindow(Custom_ScriptSettings)</onclick>
+					<onclick>ActivateWindow(1112)</onclick>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>false</visible>
+					<visible>true</visible>
 				</control>
 			</control>
 			<control type="image">
