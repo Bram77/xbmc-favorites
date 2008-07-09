@@ -31,6 +31,11 @@ type=rss
 thumb=video.monkey.image%youtube_fr.png
 url=youtube.fr.cfg
 ########################################################
+name=YouTube (NL)
+type=rss
+thumb=video.monkey.image%youtube_nl.png
+url=youtube.nl.cfg
+########################################################
 # Adult video sites
 ########################################################
 ########################################################
