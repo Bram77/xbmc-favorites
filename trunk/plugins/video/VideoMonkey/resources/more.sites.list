@@ -36,6 +36,11 @@ type=rss
 thumb=video.monkey.image%youtube_nl.png
 url=youtube.nl.cfg
 ########################################################
+name=TUtv
+type=rss
+thumb=video.monkey.image%tu_tv.png
+url=tu.tv.cfg
+########################################################
 # Adult video sites
 ########################################################
 ########################################################

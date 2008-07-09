@@ -1,4 +1,4 @@
-# VideoMonkey version 0.1. by sfaxman
+# VideoMonkey version 0.2. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -12,7 +12,7 @@ import codecs
 import cookielib
 
 Version = '0'
-SubVersion = '1'
+SubVersion = '2'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';': rootDir = rootDir[0:-1]
@@ -22,12 +22,6 @@ resDir = rootDir + "resources\\"
 imgDir = resDir + "images\\"
 libDir = resDir + "libs\\"
 sys.path.append(libDir)
-
-import language
-#from BeautifulSoup import BeautifulSoup
-
-__language__ = language.Language().localized
-_ = sys.modules[ "__main__" ].__language__
 
 urlopen = urllib2.urlopen
 cj = cookielib.LWPCookieJar()
@@ -294,7 +288,7 @@ entitydefs = {
     'zwnj':     u'\u200C', # zero width non-joiner, U+200C NEW RFC 2070'
 }
 
-def unescape(s):
+def unescape_unicode(s):
     if not s:
         return ''
     for name, value in entitydefs.iteritems():
@@ -305,7 +299,7 @@ def unescape(s):
 def clean_name(s): # To adapt
     if not s:
         return ''
-    return unescape(s).replace(u'\u00BB', u'')
+    return unescape_unicode(s).replace(u'\u00BB', u'')
 
 def smart_unicode(s):
     try:
@@ -349,12 +343,14 @@ class CCurrentList:
         self.cfg_name = ''
         self.user = ''
         self.password = ''
-        self.cookie = ''
+        self.reference = ''
+        self.content = ''
         self.video_url_img_title = ''
         self.video_url_title_img = ''
         self.video_url_title = ''
         self.video_img = ''
         self.video_url_build = ''
+        self.video_img_build = ''
         self.next_url = ''
         self.next_url_build = ''
         self.next_url_altv = ''
@@ -362,6 +358,8 @@ class CCurrentList:
         self.next_thumb = 'default'
         self.target_url = ''
         self.catcher_data = ''
+        self.catcher_reference = ''
+        self.catcher_content = ''
         self.catcher_url_build = ''
         self.search_url_build = ''
         self.search_thumb = 'default'
@@ -427,14 +425,18 @@ class CCurrentList:
                         self.user = value
                     elif key == 'password':
                         self.password = value
-                    elif key == 'cookie':
-                        self.cookie = value
+                    elif key == 'header':
+                        index = value.find('|')
+                        self.reference = value[:index]
+                        self.content = value[index+1:]
                     elif key == 'video_url_img_title':
                         self.video_url_img_title = value
                     elif key == 'video_url_title_img':
                         self.video_url_title_img = value
                     elif key == 'video_url_build':
                         self.video_url_build = value
+                    elif key == 'video_img_build':
+                        self.video_img_build = value
                     elif key == 'video_url_title':
                         self.video_url_title = value
                     elif key == 'video_img':
@@ -456,6 +458,10 @@ class CCurrentList:
                         self.target_url = value
                     elif key == 'catcher_data':
                         self.catcher_data = value
+                    elif key == 'catcher_header':
+                        index = value.find('|')
+                        self.catcher_reference = value[:index]
+                        self.catcher_content = value[index+1:]
                     elif key == 'catcher_url_build':
                         self.catcher_url_build = value
                     elif key == 'search_url_build':
@@ -470,7 +476,7 @@ class CCurrentList:
                         dir_tmp.name = value
                         index = value.find('%')
                         if value[:index] == 'video.monkey.locale':
-                            dir_tmp.name = _(int(value[index+1:]))
+                            dir_tmp.name = xbmc.getLocalizedString(int(value[index+1:]))
                     elif key == 'dir_url':
                         dir_tmp.url = value
                     elif key == 'dir_url_build':
@@ -488,7 +494,7 @@ class CCurrentList:
                         tmp.name = value
                         index = value.find('%')
                         if value[:index] == 'video.monkey.locale':
-                            tmp.name = _(int(value[index+1:]))
+                            tmp.name = xbmc.getLocalizedString(int(value[index+1:]))
                     elif key == 'type':
                         tmp.type = value
                         if (recursive and tmp.type == 'once'):
@@ -506,7 +512,7 @@ class CCurrentList:
             result = self.loadRemote(self.start_url, False)
         if (self.search_url_build != ''):
             tmp = CListItem()
-            tmp.name = _(30102)
+            tmp.name = xbmc.getLocalizedString(30102)
             tmp.type = 'rss'
             tmp.thumb = self.search_thumb
             tmp.url = filename + '%search'
@@ -532,15 +538,15 @@ class CCurrentList:
                             f.close()
                         except:
                             curr_phrase = ''
-                        search_phrase = self.getKeyboard(default = curr_phrase, heading = _(30102))
+                        search_phrase = self.getKeyboard(default = curr_phrase, heading = xbmc.getLocalizedString(30102))
                         f = open(cacheDir + 'search', 'w')
                         f.write(search_phrase)
                         f.close()
                         curr_url = self.search_url_build % (search_phrase)
-            if (self.cookie == ''):
+            if (self.reference == ''):
                 txheaders = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7'}
             else:
-                txheaders = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'Cookie': self.cookie}
+                txheaders = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', self.reference: self.content}
             req = Request(curr_url, None, txheaders)
             handle = urlopen(req)
             data = handle.read()
@@ -566,6 +572,8 @@ class CCurrentList:
                 tmp = CListItem()
                 tmp.name = name
                 tmp.type = 'video'
+                if (self.video_img_build != ''):
+                    img = self.video_img_build % (img)
                 tmp.thumb = img
                 tmp.url = self.video_url_build % (url)
                 self.list.append(tmp)
@@ -575,6 +583,8 @@ class CCurrentList:
                 tmp = CListItem()
                 tmp.name = name
                 tmp.type = 'video'
+                if (self.video_img_build != ''):
+                    img = self.video_img_build % (img)
                 tmp.thumb = img
                 tmp.url = self.video_url_build % (url)
                 self.list.append(tmp)
@@ -615,7 +625,7 @@ class CCurrentList:
                 for name in recat.findall(data):
                     if f == None:
                         f = codecs.open(cacheDir + catfilename, 'w', 'utf-8')
-                    f.write('name=' + smart_unicode(name) + ' (' + _(30106) +')\n')
+                    f.write('name=' + smart_unicode(name) + ' (' + xbmc.getLocalizedString(30106) +')\n')
                     f.write('type=rss\n')
                     f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
                     f.write('url=' + smart_unicode(self.cfg_name + '%' + curr_url) + '\n')
@@ -636,7 +646,7 @@ class CCurrentList:
             for url in renext.findall(data):
                 if (not found):
                     tmp = CListItem()
-                    tmp.name = _(30103)
+                    tmp.name = xbmc.getLocalizedString(30103)
                     tmp.type = 'rss'
                     tmp.thumb = self.next_thumb
                     tmp.url = self.cfg_name + '%' + (self.next_url_build % (url))
@@ -647,7 +657,7 @@ class CCurrentList:
                 for url in renext.findall(data):
                     if (not found):
                         tmp = CListItem()
-                        tmp.name = _(30103)
+                        tmp.name = xbmc.getLocalizedString(30103)
                         tmp.type = 'rss'
                         tmp.thumb = self.next_thumb
                         tmp.url = self.cfg_name + '%' + (self.next_url_build_altv % (url))
@@ -690,21 +700,26 @@ class Main:
                                 opener = urllib2.build_opener()
                                 req = urllib2.Request(url)
                                 req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                                if (self.currentlist.catcher_reference != ''):
+                                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
                                 urlfile = opener.open(req)
                                 fc = urlfile.read()
                             else:
                                 data = self.currentlist.catcher_data % (m.url.replace('\r\n', '').replace('\n', ''))
                                 req = urllib2.Request(self.currentlist.catcher_url_build, data)
+                                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                                if (self.currentlist.catcher_reference != ''):
+                                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
                                 response = urllib2.urlopen(req)
                                 fc = response.read()
-                            #f = open(cacheDir + 'catcher.html', 'w')
-                            #f.write(fc)
-                            #f.close()
+                            f = open(cacheDir + 'catcher.html', 'w')
+                            f.write(fc)
+                            f.close()
                             resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                             urlsearch = resecurl.search(fc)
                             rURL = urlsearch.group(1)
-                            self.addMatchToList(m.url, rURL)
-                        self.addLink(clean_name(m.name), rURL, m.thumb, len(self.currentlist.list))
+                            self.addMatchToList(m.url, urllib.unquote(urllib.unquote(rURL)))
+                        self.addLink(clean_name(m.name), urllib.unquote(urllib.unquote(rURL)), m.thumb, len(self.currentlist.list))
                     except:
                         traceback.print_exc(file = sys.stdout)
 
