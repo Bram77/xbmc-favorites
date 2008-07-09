@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- settings labels -->
+    <string id="30000">Trailer quality</string>
+    <string id="30001">Standard</string>
+    <string id="30002">480p</string>
+    <string id="30003">720p</string>
+    <string id="30004">1080p</string>
+    <string id="30010">Use large poster</string>
+    <string id="30020">MPAA rating limit for trailers</string>
+    <string id="30030">Download mode</string>
+    <string id="30031">Temporary</string>
+    <string id="30032">Save</string>
+    <string id="30040">- Save folder</string>
+    <string id="30050">Zipcode/Post Code or City, State</string>
+    <string id="30060">Showtimes scraper</string>
+    <string id="30070">Day to list movies for</string>
+    <string id="30071">Today</string>
+    <string id="30072">Tomorrow</string>
+    <string id="30073">Day 3</string>
+    <string id="30074">Day 4</string>
+    <string id="30075">Day 5</string>
+    <string id="30076">Day 6</string>
+    <string id="30077">Day 7</string>
+    <string id="30078">Day 8</string>
+    <string id="30080">- Use movie title for saved filename</string>
+    <string id="30090">Fanart image</string>
+    <string id="30100">- Fanart color one (AARRGGBB)</string>
+    <string id="30110">- Fanart color two (AARRGGBB)</string>
+    <string id="30120">- Fanart color three (AARRGGBB)</string>
+
+    <!-- messages -->
+    <string id="30500">Downloading: %s</string>
+    <string id="30501">Saving: %s</string>
+    <string id="30502">To: %s</string>
+    <string id="30503">Copying: %s</string>
+
+    <!-- showtimes -->
+    <string id="30600">No showtimes found!</string>
+    <string id="30601">Finding showtimes, please wait...</string>
+    <string id="30602">Date</string>
+    <string id="30603">Location</string>
+
+    <!-- PluginCategory infolabel -->
+    <string id="30700">Standard videos</string>
+    <string id="30701">480p videos</string>
+    <string id="30702">720p videos</string>
+    <string id="30703">1080p videos</string>
+
+    <!-- context menu labels -->
+    <string id="30900">Theater Showtimes</string>
+    <string id="30910">Download Trailer</string>
+</strings>
