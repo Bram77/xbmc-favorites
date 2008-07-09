@@ -700,9 +700,9 @@ class Main:
                             #f = open(cacheDir + 'catcher.html', 'w')
                             #f.write(fc)
                             #f.close()
-                            resecurl=re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                            urlsearch=resecurl.search(fc)
-                            rURL=urlsearch.group(1)
+                            resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                            urlsearch = resecurl.search(fc)
+                            rURL = urlsearch.group(1)
                             self.addMatchToList(m.url, rURL)
                         self.addLink(clean_name(m.name), rURL, m.thumb, len(self.currentlist.list))
                     except:
@@ -775,17 +775,17 @@ class Main:
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
                 else:
                     params = sys.argv[2]
-                    cleanedparams=params.replace('?', '')
+                    cleanedparams = params.replace('?', '')
                     if (params[len(params)-1] == '/'):
                         params = params[0:len(params)-2]
-                    pairsofparams=cleanedparams.split('&')
+                    pairsofparams = cleanedparams.split('&')
                     param = {}
                     for i in range(len(pairsofparams)):
                         splitparams = {}
-                        splitparams=pairsofparams[i].split('=')
+                        splitparams = pairsofparams[i].split('=')
                         if (len(splitparams)) == 2:
                             param[splitparams[0]] = splitparams[1]
-                    currentView=urllib.unquote_plus(param['url'])
+                    currentView = urllib.unquote_plus(param['url'])
                     self.parseView(currentView)
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
             except Exception, e:
