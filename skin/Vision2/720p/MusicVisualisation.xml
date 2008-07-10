@@ -10,8 +10,8 @@
 			<height>720</height>
 		</control>
 		<control type="group" id="0">
-			<visible>Player.ShowCodec + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>media info background image</description>
 				<posx>0</posx>
@@ -71,8 +71,8 @@
 		<control type="group" id="1">
 			<posx>0</posx>
 			<posy>370</posy>
-			<visible>Player.ShowInfo + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
+			<visible>Player.ShowInfo</visible>
+			<include>VisibleFadeEffect</include>
 			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>0</posx>
@@ -88,15 +88,15 @@
 
 		<control type="group" id="1">
 			<posx>650r</posx>
-			<posy>550</posy>
-			<visible>Player.ShowInfo + ![Window.IsVisible(script-XBMC_Lyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<animation effect="fade" time="500">VisibleChange</animation>
+			<posy>540</posy>
+			<visible>Player.ShowInfo  + !Window.IsVisible(visualisationsettings) + !Window.IsVisible(visualisationpresetlist)</visible>
+			<include>VisibleFadeEffect</include>
 			<control type="image" id="1">
 				<description>media info background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>650</width>
-				<height>170</height>
+				<height>180</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture border="40">DialogBack.png</texture>
 			</control>
@@ -105,22 +105,23 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>650</width>
-				<height>170</height>
+				<height>180</height>
 				<texture border="40">DialogFront.png</texture>
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>42</posy>
+				<posy>45</posy>
 				<width>570</width>
 				<height>25</height>
-				<label>[B]$LOCALIZE[31998]$INFO[MusicPlayer.Title]$LOCALIZE[31999][/B]</label>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font18</font>
+				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>67</posy>
+				<posy>77</posy>
 				<width>570</width>
 				<height>25</height>
 				<label>$INFO[MusicPlayer.Artist]</label>
@@ -129,10 +130,19 @@
 				<font>font12</font>
 			</control>
 			<control type="label" id="1">
+				<description>Chapter Pos No</description>
+				<posx>325</posx>
+				<posy>100</posy>
+				<textcolor>grey</textcolor>
+				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
+				<align>center</align>
+				<font>font11</font>
+			</control>
+			<control type="label" id="1">
 				<description>time label</description>
 				<width>280</width>
 				<posx>45</posx>
-				<posy>90</posy>
+				<posy>100</posy>
 				<label>$INFO[MusicPlayer.Time]</label>
 				<align>left</align>
 				<font>font11</font>
@@ -142,7 +152,7 @@
 				<description>time label</description>
 				<width>280</width>
 				<posx>605</posx>
-				<posy>90</posy>
+				<posy>100</posy>
 				<label>$INFO[Player.Duration]</label>
 				<align>right</align>
 				<font>font11</font>
@@ -151,7 +161,7 @@
 			<control type="progress" id="1">
 				<description>Progressbar</description>
 				<posx>45</posx>
-				<posy>117</posy>
+				<posy>127</posy>
 				<width>560</width>
 				<height>10</height>
 				<info>Player.Progress</info>

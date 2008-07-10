@@ -134,15 +134,31 @@
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
+			<control type="rss">
+				<description>rss feed</description>
+				<posx>0</posx>
+				<posy>10</posy>
+				<width>1280</width>
+				<aligy>center</aligy>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<titlecolor>blue</titlecolor>
+				<headlinecolor>grey2</headlinecolor>
+				<textcolor>blue</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+			</control>
 			<control type="label">
 				<description>date/time label</description>
 				<posx>1260</posx>
 				<posy>10</posy>
 				<align>right</align>
 				<aligy>center</aligy>
-				<font>font11</font>
+				<font>font12</font>
 				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Date] [COLOR=blue] |  $INFO[System.Time][/COLOR]</label>
+				<animation effect="slide" time="0" start="0,30" end="0,30" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -1031,7 +1047,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))]</visible>
+					<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
 				</control>
 				<control type="button" id="104">
 					<description>Button4</description>
@@ -1046,7 +1062,7 @@
 					<focusedcolor>white</focusedcolor>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<visible>[Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))]</visible>
+					<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
 				</control>
 				<control type="button" id="105">
 					<description>Button5</description>
@@ -1081,7 +1097,7 @@
 					<height>200</height>
 					<texture>$INFO[Weather.Conditions]</texture>
 					<bordertexture>HomeSquares.png</bordertexture>
-					<bordersize>40</bordersize>
+					<bordersize>32</bordersize>
 				</control>
 				<control type="label">
 					<posx>225r</posx>
@@ -1106,6 +1122,45 @@
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<include>VisibleFadeEffect</include>
+				<visible>Player.HasAudio</visible>
+				<control type="image">
+					<posx>20</posx>
+					<posy>520</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture>$INFO[MusicPlayer.Cover]</texture>
+					<bordertexture>HomeSquares.png</bordertexture>
+					<bordersize>32</bordersize>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>635</posy>
+					<width>580</width>
+					<height>15</height>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>225</posx>
+					<posy>660</posy>
+					<width>580</width>
+					<height>15</height>
+					<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Album]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font11</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
 				</control>
 			</control>
 		</control>
