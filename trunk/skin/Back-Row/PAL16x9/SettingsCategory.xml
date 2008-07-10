@@ -134,7 +134,7 @@
 			<posy>11</posy>
 	        <align>center</align>
 	        <aligny>center</aligny>
-	        <font>font18</font>
+	        <font>special16</font>
 	        <textcolor>white</textcolor>
 			<width>720</width>
 			<height>42</height>
