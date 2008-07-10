@@ -40,12 +40,7 @@
       <activate>startup.wav</activate>
       </window>
 
-    <window>
-      <name>0</name>
-      <deactivate>Projector.wav</deactivate>
-	  <visible>!Skin.HasSetting(Wallpaper)</visible>
-	<visible>!Skin.HasSetting(Default Wallpaper)</visible>
-    </window>
+    
     
   </windows>
 </sounds>
