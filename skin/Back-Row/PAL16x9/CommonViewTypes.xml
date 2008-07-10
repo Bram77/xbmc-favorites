@@ -8092,10 +8092,10 @@
 
 <control type="label">
 <posx>0</posx>
-<posy>78</posy>
+<posy>72</posy>
 <width>720</width>
 <height>30</height>
-<font>special14</font>
+<font>special16</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -8274,10 +8274,10 @@
 
 <control type="label">
 <posx>0</posx>
-<posy>78</posy>
+<posy>72</posy>
 <width>720</width>
 <height>30</height>
-<font>special14</font>
+<font>special16</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10166,10 +10166,10 @@
 
 <control type="label">
 <posx>0</posx>
-<posy>78</posy>
+<posy>72</posy>
 <width>720</width>
 <height>30</height>
-<font>special14</font>
+<font>special16</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10662,11 +10662,11 @@
 <control type="label">
 <posx>535</posx>
 <posy>120</posy>
-<width>180</width>
+<width>75</width>
 <height>16</height>
-<font>font04</font>
+<font>font64</font>
 <textcolor>white</textcolor>
-<align>center</align>
+<align>left</align>
 <info>ListItem.Label2</info>
 <scroll>true</scroll>
 <shadowcolor>shadow</shadowcolor>
@@ -10674,6 +10674,23 @@
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
+
+<control type="label">
+<posx>715</posx>
+<posy>120</posy>
+<width>100</width>
+<height>16</height>
+<font>font64</font>
+<textcolor>grey</textcolor>
+<align>right</align>
+<label>($INFO[listItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
+<scroll>true</scroll>
+<shadowcolor>shadow</shadowcolor>
+<visible>container.content(tvshows) + Control.IsVisible(58)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
 
 
 

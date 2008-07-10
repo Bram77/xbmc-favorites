@@ -115,6 +115,14 @@
       <size>23</size>
     </font>
 
+	 <font>
+      <name>special16</name>
+      <filename>cgothic.ttf</filename>
+      <shadow>ff000000</shadow>
+	  <style>bold</style>
+      <size>28</size>
+    </font>
+
     <font>
       <name>fontBL</name>
       <filename>cgothic.ttf</filename>

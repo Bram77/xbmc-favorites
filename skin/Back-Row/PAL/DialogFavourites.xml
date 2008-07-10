@@ -95,15 +95,15 @@
 		<description>Time</description>
  		<type>label</type>
 		<posx>-205</posx>
-        <posy>435</posy>
+        <posy>427</posy>
         <textwidth>125</textwidth>
 		<width>200</width>
-		<height>40</height>
+		<height>36</height>
 		<label>Date</label>
 		<info>System.Time</info>
         <align>center</align>
-		<font>special15</font>
-		<textcolor>red</textcolor>
+		<font>special16</font>
+		<textcolor>white</textcolor>
 		</control>
 
          <animation effect="slide" end="203,0" delay="50" tween="cubic" time="400">WindowOpen</animation>
