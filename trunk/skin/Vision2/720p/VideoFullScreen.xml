@@ -7,17 +7,19 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>170</height>
+			<height>190</height>
 			<colordiffuse>CCFFFFFF</colordiffuse>
 			<texture border="40">DialogBack.png</texture>
+			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="image" id="0">
 			<description>media info background image</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>170</height>
+			<height>190</height>
 			<texture border="40">DialogFront.png</texture>
+			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="label" id="10">
 			<description>row 1 label</description>
@@ -26,6 +28,7 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font11</font>
+			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="label" id="11">
 			<description>row 2 label</description>
@@ -34,6 +37,7 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font11</font>
+			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="label" id="12">
 			<description>row 3 label</description>
@@ -42,6 +46,7 @@
 			<label>-</label>
 			<align>left</align>
 			<font>font11</font>
+			<include>VisibleFadeEffect</include>
 		</control>
 		
 		<!-- buffering dialog -->
@@ -58,7 +63,8 @@
 		<control type="group" id="1">
 			<posx>0</posx>
 			<posy>250</posy>
-			<visible>Player.ShowInfo + VideoPlayer.Content(Movies) + !Window.IsVisible(123) + !Window.IsVisible(124) + !Window.IsVisible(VideoBookmarks)</visible>
+			<include>VisibleFadeEffect</include>
+			<visible>Player.ShowInfo + VideoPlayer.Content(Movies)</visible>
 			<control type="image" id="1">
 				<description>cover image</description>
 				<posx>0</posx>
@@ -74,9 +80,10 @@
 		<control type="group" id="1">
 			<posx>0</posx>
 			<posy>370</posy>
-			<visible>Player.ShowInfo + !VideoPlayer.Content(Movies) + !Window.IsVisible(123) + !Window.IsVisible(124) + !Window.IsVisible(VideoBookmarks)</visible>
+			<include>VisibleFadeEffect</include>
+			<visible>Player.ShowInfo + !VideoPlayer.Content(Movies)</visible>
 			<control type="image" id="1">
-				<description>cover image</description>
+				<description>under cover image</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>500</width>
@@ -90,14 +97,15 @@
 
 		<control type="group" id="1">
 			<posx>650r</posx>
-			<posy>550</posy>
-			<visible>Player.ShowInfo + !Window.IsVisible(123) + !Window.IsVisible(124) + !Window.IsVisible(VideoBookmarks)</visible>
+			<posy>540</posy>
+			<include>VisibleFadeEffect</include>
+			<visible>Player.ShowInfo + !Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(VideoBookmarks)</visible>
 			<control type="image" id="1">
 				<description>media info background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>650</width>
-				<height>170</height>
+				<height>180</height>
 				<colordiffuse>CCFFFFFF</colordiffuse>
 				<texture border="40">DialogBack.png</texture>
 			</control>
@@ -106,22 +114,22 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>650</width>
-				<height>170</height>
+				<height>180</height>
 				<texture border="40">DialogFront.png</texture>
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>42</posy>
+				<posy>45</posy>
 				<width>570</width>
 				<height>25</height>
-				<label>[B]$LOCALIZE[31998]$INFO[VideoPlayer.Title]$LOCALIZE[31999][/B]</label>
+				<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font18</font>
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>67</posy>
+				<posy>77</posy>
 				<width>570</width>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.Genre]</label>
@@ -132,7 +140,7 @@
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>67</posy>
+				<posy>77</posy>
 				<width>570</width>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.TVShowTitle][COLOR=blue] - [/COLOR]$INFO[VideoPlayer.Season]x$INFO[VideoPlayer.Episode]</label>
@@ -143,7 +151,7 @@
 			</control>
 			<control type="label" id="1">
 				<posx>40</posx>
-				<posy>67</posy>
+				<posy>77</posy>
 				<width>570</width>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
@@ -155,7 +163,8 @@
 			<control type="label" id="1">
 				<description>Chapter Pos No</description>
 				<posx>325</posx>
-				<posy>90</posy>
+				<posy>100</posy>
+				<textcolor>grey</textcolor>
 				<label>$INFO[player.chapter,$LOCALIZE[21396] ]$INFO[player.chaptercount, / ]</label>
 				<visible>player.chaptercount</visible>
 				<align>center</align>
@@ -165,7 +174,7 @@
 				<description>time label</description>
 				<width>280</width>
 				<posx>45</posx>
-				<posy>90</posy>
+				<posy>100</posy>
 				<label>$INFO[VideoPlayer.Time]</label>
 				<align>left</align>
 				<font>font11</font>
@@ -175,7 +184,7 @@
 				<description>time label</description>
 				<width>280</width>
 				<posx>605</posx>
-				<posy>90</posy>
+				<posy>100</posy>
 				<label>$INFO[Player.Duration]</label>
 				<align>right</align>
 				<font>font11</font>
@@ -184,7 +193,7 @@
 			<control type="progress" id="1">
 				<description>Progressbar</description>
 				<posx>45</posx>
-				<posy>117</posy>
+				<posy>127</posy>
 				<width>560</width>
 				<height>10</height>
 				<info>Player.Progress</info>
