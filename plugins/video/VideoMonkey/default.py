@@ -1,4 +1,4 @@
-# VideoMonkey version 0.2. by sfaxman
+# VideoMonkey version 0.3. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -12,11 +12,11 @@ import codecs
 import cookielib
 
 Version = '0'
-SubVersion = '2'
+SubVersion = '3'
 
 rootDir = os.getcwd()
-if rootDir[-1] == ';': rootDir = rootDir[0:-1]
-if rootDir[-1] != '\\': rootDir = rootDir + '\\'
+if rootDir[-1] == ';':rootDir = rootDir[0:-1]
+if rootDir[-1] != '\\':rootDir = rootDir + '\\'
 cacheDir = rootDir + "cache\\"
 resDir = rootDir + "resources\\"
 imgDir = resDir + "images\\"
@@ -299,7 +299,7 @@ def unescape_unicode(s):
 def clean_name(s): # To adapt
     if not s:
         return ''
-    return unescape_unicode(s).replace(u'\u00BB', u'')
+    return unescape_unicode(smart_unicode(s)).replace(u'\u00BB', u'')
 
 def smart_unicode(s):
     try:
@@ -517,7 +517,6 @@ class CCurrentList:
             tmp.thumb = self.search_thumb
             tmp.url = filename + '%search'
             self.list.append(tmp)
-
         return 0
 
     def loadRemote(self, filename, recursive = True):
@@ -544,9 +543,9 @@ class CCurrentList:
                         f.close()
                         curr_url = self.search_url_build % (search_phrase)
             if (self.reference == ''):
-                txheaders = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7'}
+                txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7'}
             else:
-                txheaders = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', self.reference: self.content}
+                txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7', self.reference:self.content}
             req = Request(curr_url, None, txheaders)
             handle = urlopen(req)
             data = handle.read()
@@ -575,7 +574,7 @@ class CCurrentList:
                 if (self.video_img_build != ''):
                     img = self.video_img_build % (img)
                 tmp.thumb = img
-                tmp.url = self.video_url_build % (url)
+                tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
                 self.list.append(tmp)
         elif (self.video_url_title_img != ''):
             revid = re.compile(self.video_url_title_img, re.IGNORECASE + re.DOTALL + re.MULTILINE)
@@ -586,7 +585,7 @@ class CCurrentList:
                 if (self.video_img_build != ''):
                     img = self.video_img_build % (img)
                 tmp.thumb = img
-                tmp.url = self.video_url_build % (url)
+                tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
                 self.list.append(tmp)
         elif (self.video_url_title != ''):
             revid = re.compile(self.video_url_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
@@ -598,13 +597,11 @@ class CCurrentList:
                     tmp.name = name
                     tmp.type = 'video'
                     tmp.thumb = img
-                    tmp.url = self.video_url_build % (url)
+                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
                     self.list.append(tmp)
         # Find category items
         for dir in self.dir_list:
             oneFound = False
-            #testdata=BeautifulSoup(''.join(data))
-            #buf = testdata.findall("p", attrs={"class":"last"}).contents[0]
             catfilename = self.random_filename(prefix=(self.cfg_name + '%'), suffix = '.list')
             f = None
             if (dir.url != ''):
@@ -666,147 +663,161 @@ class CCurrentList:
         return 0
 
 class Main:
-        def __init__(self):
-            self.matchList = None
-            self.currentlist = CCurrentList()
+    def __init__(self):
+        self.pDialog = None
+        self.currentlist = CCurrentList()
 
-        def parseView(self, url):
-            ext = self.currentlist.getFileExtension(url)
-            if ext == 'cfg' or ext == 'list':
-                result = self.currentlist.loadLocal(url)
+    def getDirectLink(self, orig_url):
+        if (self.currentlist.catcher_data == ''):
+            url = self.currentlist.catcher_url_build % (orig_url.replace('\r\n', '').replace('\n', ''))
+            opener = urllib2.build_opener()
+            req = urllib2.Request(url)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+            if (self.currentlist.catcher_reference != ''):
+                req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
+            urlfile = opener.open(req)
+            fc = urlfile.read()
+        else:
+            data = self.currentlist.catcher_data % (orig_url.replace('\r\n', '').replace('\n', ''))
+            req = urllib2.Request(self.currentlist.catcher_url_build, data)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+            if (self.currentlist.catcher_reference != ''):
+                req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
+            response = urllib2.urlopen(req)
+            fc = response.read()
+        #f = open(cacheDir + 'catcher.html', 'w')
+        #f.write(fc)
+        #f.close()
+        resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+        urlsearch = resecurl.search(fc)
+        return urlsearch.group(1)
+
+    def playVideo(self, url):
+        cfg_pos = url.find('%')
+        self.currentlist.loadLocal(url[:cfg_pos], False)
+        sep_pos = url.rfind('|')
+        icon = url[sep_pos + 1:len(url) - 4]
+        url = url[cfg_pos+1:sep_pos]
+        sep_pos = url.rfind('|')
+        title = url[sep_pos + 1:]
+        vidURL = urllib.unquote(urllib.unquote(self.getDirectLink(url[:sep_pos])))
+        urllib.urlretrieve(icon, cacheDir+'thumb.tbn')
+        if(xbmcplugin.getSetting("download") == "true"):
+            self.pDialog = xbmcgui.DialogProgress()
+            self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
+        listitem = xbmcgui.ListItem(title, title, cacheDir+'thumb.tbn', cacheDir+'thumb.tbn')
+        listitem.setInfo("video", {"Title":title})
+        if(xbmcplugin.getSetting("download") == "true"):
+            flv_file = self.downloadMovie(vidURL, title+'.flv')
+            self.pDialog.close()
+        else:
+            flv_file = vidURL
+        palyer_type = {0:xbmc.PLAYER_CORE_DVDPLAYER, 1:xbmc.PLAYER_CORE_MPLAYER}[int(xbmcplugin.getSetting("player_type"))]
+        try:
+            if(flv_file and xbmcplugin.getSetting("download") == "true"):
+                xbmc.Player(palyer_type).play(flv_file, listitem)
             else:
-                result = self.currentlist.loadRemote(url)
+                xbmc.Player(palyer_type).play(vidURL, listitem)
+        except:
+            return
 
-            if result == -1:
-                dialog = xbmcgui.Dialog()
-                dialog.ok("Error", "Invalid directory version.")
-            elif result == -2:
-                dialog = xbmcgui.Dialog()
-                dialog.ok("Error", "Directory could not be opened.")
+    def downloadMovie(self, url, title):
+        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title))
+        try:
+            urllib.urlretrieve(url, filepath, self._report_hook)
+        except:
+            if(os.path.isfile(filepath)):
+                os.remove(filepath)
+        return filepath 
 
-            for m in self.currentlist.list:
-                if m.type == u'rss':
-                    self.addDir(clean_name(m.name), m.url, m.thumb, len(self.currentlist.list))
-                elif m.type == u'adult_rss' and xbmcplugin.getSetting( "no_adult" ) == 'false':
-                    self.addDir(clean_name(m.name), m.url, m.thumb, len(self.currentlist.list))
-                elif m.type == u'video':
-                    try:
-                        try:
-                            rURL = self.getMatchList()[m.url]
-                        except:
-                            traceback.print_exc(file = sys.stdout)
-                            if (self.currentlist.catcher_data == ''):
-                                url = self.currentlist.catcher_url_build % (m.url.replace('\r\n', '').replace('\n', ''))
-                                opener = urllib2.build_opener()
-                                req = urllib2.Request(url)
-                                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                                if (self.currentlist.catcher_reference != ''):
-                                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
-                                urlfile = opener.open(req)
-                                fc = urlfile.read()
-                            else:
-                                data = self.currentlist.catcher_data % (m.url.replace('\r\n', '').replace('\n', ''))
-                                req = urllib2.Request(self.currentlist.catcher_url_build, data)
-                                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                                if (self.currentlist.catcher_reference != ''):
-                                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
-                                response = urllib2.urlopen(req)
-                                fc = response.read()
-                            f = open(cacheDir + 'catcher.html', 'w')
-                            f.write(fc)
-                            f.close()
-                            resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                            urlsearch = resecurl.search(fc)
-                            rURL = urlsearch.group(1)
-                            self.addMatchToList(m.url, urllib.unquote(urllib.unquote(rURL)))
-                        self.addLink(clean_name(m.name), urllib.unquote(urllib.unquote(rURL)), m.thumb, len(self.currentlist.list))
-                    except:
-                        traceback.print_exc(file = sys.stdout)
+    def _report_hook(self, count, blocksize, totalsize):
+        percent = int(float(count * blocksize * 100) / totalsize)
+        self.pDialog.update(percent, xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
+        if (self.pDialog.iscanceled()):raise
 
-        def addLink(self, name, url, icon = None, totalItems = None):
-            if (icon == None or icon == 'default'or icon == ''):
-                liz = xbmcgui.ListItem(name)
-            else:
-                liz = xbmcgui.ListItem(name, name, icon, icon)
-            liz.setInfo( type = "Video", infoLabels = {"Title": name})
-            if totalItems == None:
-                ok=xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz)
-            else:
-                ok=xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz, totalItems = totalItems)
+    def parseView(self, url):
+        ext = self.currentlist.getFileExtension(url)
+        if ext == 'cfg' or ext == 'list':
+            result = self.currentlist.loadLocal(url)
+        elif ext == 'vid':
+            result = self.playVideo(url)
+            return
+        else:
+            result = self.currentlist.loadRemote(url)
 
-        def addMatchToList(self, url, realurl):
-            try:
-                f = open(resDir + "matches.list", "a")
-                f.write(url.replace('\r\n', '').replace('\n', '') + "|" + realurl.replace('\r\n', '').replace('\n', '') + "\n")
-                f.close()
-            except:
-                traceback.print_exc(file = sys.stdout)
-                pass
+        if result == -1:
+            dialog = xbmcgui.Dialog()
+            dialog.ok("Error", "Invalid directory version.")
+        elif result == -2:
+            dialog = xbmcgui.Dialog()
+            dialog.ok("Error", "Directory could not be opened.")
 
-        def getMatchList(self):
-            dic = {}
-            try:
-                try:
-                    if (self.matchList != None):
-                        return self.matchList
-                except:
-                    traceback.print_exc(file = sys.stdout)
-                    pass
-                f = open(resDir + "matches.list", "r")
-                for line in f:
-                    linesplit = line.replace('\r\n', '').replace('\n', '').split("|")
-                    dic[linesplit[0]] = linesplit[1]
-                self.matchList = dic
-            except:
-                pass
-            return dic
+        for m in self.currentlist.list:
+            if m.type == u'rss':
+                self.addDir(' ' + clean_name(m.name) + ' ', m.url, m.thumb, len(self.currentlist.list))
+            elif m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false':
+                self.addDir(' ' + clean_name(m.name) + ' ', m.url, m.thumb, len(self.currentlist.list))
+            elif m.type == u'video':
+                self.addDir(clean_name(m.name), m.url + '|' + clean_name(m.name) + '|' + m.thumb + '.vid', m.thumb, len(self.currentlist.list))
+        return result
 
-        def addDir(self, name, url, icon = None, totalItems = None):
-            u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
-            if (icon == None or icon == 'default' or icon == ''):
-                liz = xbmcgui.ListItem(name)
-            else:
-                liz = xbmcgui.ListItem(name, name, icon, icon)
-            if totalItems == None:
-                ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
-            else:
-                ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True, totalItems = totalItems)
+    #def addLink(self, name, url, icon = None, totalItems = None):
+    #    if (icon == None or icon == 'default'or icon == ''):
+    #        liz = xbmcgui.ListItem(name)
+    #    else:
+    #        liz = xbmcgui.ListItem(name, name, icon, icon)
+    #    liz.setInfo( type = "Video", infoLabels = {"Title":name})
+    #    if totalItems == None:
+    #        ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz)
+    #    else:
+    #        ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz, totalItems = totalItems)
 
-        def purgeCache(self):
-            for root, dirs, files in os.walk(cacheDir , topdown = False):
-                for name in files:
-                    os.remove(os.path.join(root, name))
+    def addDir(self, name, url, icon = None, totalItems = None):
+        u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
+        if (icon == None or icon == 'default' or icon == ''):
+            liz = xbmcgui.ListItem(name)
+        else:
+            liz = xbmcgui.ListItem(name, name, icon, icon)
+        if totalItems == None:
+            ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
+        else:
+            ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True, totalItems = totalItems)
 
-        def run(self):
-            try:
-                self.handle = int(sys.argv[1])
-                xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
-                paramstring = sys.argv[2]
-                if len(paramstring) <= 2:
-                    if not os.path.exists(cacheDir):
-                        os.mkdir(cacheDir)
-                    self.purgeCache()
-                    self.parseView('sites.list')
+    def purgeCache(self):
+        for root, dirs, files in os.walk(cacheDir , topdown = False):
+            for name in files:
+                os.remove(os.path.join(root, name))
+
+    def run(self):
+        try:
+            self.handle = int(sys.argv[1])
+            xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
+            paramstring = sys.argv[2]
+            if len(paramstring) <= 2:
+                if not os.path.exists(cacheDir):
+                    os.mkdir(cacheDir)
+                self.purgeCache()
+                if self.parseView('sites.list') == 0:
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
-                else:
-                    params = sys.argv[2]
-                    cleanedparams = params.replace('?', '')
-                    if (params[len(params)-1] == '/'):
-                        params = params[0:len(params)-2]
-                    pairsofparams = cleanedparams.split('&')
-                    param = {}
-                    for i in range(len(pairsofparams)):
-                        splitparams = {}
-                        splitparams = pairsofparams[i].split('=')
-                        if (len(splitparams)) == 2:
-                            param[splitparams[0]] = splitparams[1]
-                    currentView = urllib.unquote_plus(param['url'])
-                    self.parseView(currentView)
+            else:
+                params = sys.argv[2]
+                cleanedparams = params.replace('?', '')
+                if (params[len(params)-1] == '/'):
+                    params = params[0:len(params)-2]
+                pairsofparams = cleanedparams.split('&')
+                param = {}
+                for i in range(len(pairsofparams)):
+                    splitparams = {}
+                    splitparams = pairsofparams[i].split('=')
+                    if (len(splitparams)) == 2:
+                        param[splitparams[0]] = splitparams[1]
+                currentView = urllib.unquote_plus(param['url'])
+                if self.parseView(currentView) == 0:
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
-            except Exception, e:
-                    traceback.print_exc(file = sys.stdout)
-                    dialog = xbmcgui.Dialog()
-                    dialog.ok("Error", "Error running plugin.\n\nReason:\n" + str(e))
+        except Exception, e:
+            traceback.print_exc(file = sys.stdout)
+            dialog = xbmcgui.Dialog()
+            dialog.ok("Error", "Error running plugin.\n\nReason:\n" + str(e))
 
 win = Main()
 win.run()
