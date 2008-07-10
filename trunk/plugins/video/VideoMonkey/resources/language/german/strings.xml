@@ -1,9 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
-    <string id="30000">VideoGate</string>
+    <string id="30000">VideoMonkey</string>
     <string id="30001">Xbox Media Center</string>
 
     <string id="30002">Inhalte für Erwachsene ausschließen</string>
+    <string id="30003">Player Type</string>
+    <string id="30004">DVDPlayer</string>
+    <string id="30005">MPlayer</string>
+    <string id="30006">Video speichern</string>
+    <string id="30007">Download Pfad</string>
+
+    <string id="30050">Lade video herunter...</string>
+    <string id="30051">Bitte warten.</string>
 
     <string id="30100">Kategorien</string>
     <string id="30101">Unterkategorien</string>
