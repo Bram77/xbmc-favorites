@@ -39,10 +39,11 @@
 		<timeperimage>5000</timeperimage>
 		<fadetime>2000</fadetime>
         <randomize>true</randomize>
+		<visible>!Control.IsVisible(58)</visible>
 		<visible>!Skin.HasSetting(CustomMenu)</visible>
 		<visible>Skin.HasSetting(Background)</visible>
 		<animation effect="fade" time="200">WindowOpen</animation>
-        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">WindowClose</animation>
         <animation effect="fade" time="200">Visible</animation>
         <animation effect="fade" delay = "200" time="800">Hidden</animation>
 		</control>
@@ -60,10 +61,11 @@
 		<timeperimage>5000</timeperimage>
 		<fadetime>2000</fadetime>
         <randomize>true</randomize>
+		<visible>!Control.IsVisible(58)</visible>
 		<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
 		<visible>Skin.HasSetting(Background)</visible>
 		<animation effect="fade" time="200">WindowOpen</animation>
-        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">WindowClose</animation>
         <animation effect="fade" time="200">Visible</animation>
         <animation effect="fade" delay = "200" time="800">Hidden</animation>
 		</control>
