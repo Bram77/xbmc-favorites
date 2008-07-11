@@ -6,12 +6,12 @@
 import sys
 
 # plugin constants
-__plugin__ = "XBMC-Addons Installer"
-__author__ = "nuka1195"
+__plugin__ = "XBMC-Favorites Installer"
+__author__ = "Bram77"
 __url__ = "http://code.google.com/p/xbmc-favorites/"
 __svn_url__ = "http://xbmc-favorites.googlecode.com/svn/trunk/plugins/programs/XBMC-Favorites%20Installer"
 __credits__ = "Team XBMC"
-__version__ = "1.2a"
+__version__ = "1.3"
 
 
 if ( __name__ == "__main__" ):
