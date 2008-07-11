@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<repo>
-    <url>http://xbmc-addons.googlecode.com/svn</url>
-    <root>/trunk</root>
-    <structure name="plugins" offset="-2" install="" />
-    <structure name="scripts" offset="-1" install="" />
-    <structure name="skin" offset="-1" install="" />
-</repo>
