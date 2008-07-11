@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<repo>
-    <url>http://xbmc-favorites.googlecode.com/svn</url>
-    <root>/trunk</root>
-    <structure name="trunk" offset="-1" install="scripts\\" />
-</repo>
