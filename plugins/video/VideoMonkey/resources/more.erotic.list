@@ -1,0 +1,18 @@
+﻿########################################################
+# GateMonkey Plugin adult sites list
+########################################################
+version=1
+title=Extra Adult
+########################################################
+# Adult video sites
+########################################################
+name=Pornhub
+type=adult_rss
+thumb=video.monkey.image%pornhub.png
+url=pornhub.com.cfg
+########################################################
+name=RedTube
+type=adult_rss
+thumb=video.monkey.image%redtube.png
+url=redtube.com.cfg
+########################################################

@@ -13,11 +13,6 @@ url=more.sites.list
 ########################################################
 # Video sites
 ########################################################
-name=Clipfish
-type=rss
-thumb=video.monkey.image%clipfish.png
-url=clipfish.de.cfg
-########################################################
 name=Dailymotion
 type=rss
 thumb=video.monkey.image%dailymotion.png
@@ -28,15 +23,20 @@ type=rss
 thumb=video.monkey.image%youtube.png
 url=youtube.com.cfg
 ########################################################
-# Adult video sites
+name=Metacafe
+type=rss
+thumb=video.monkey.image%metacafe.png
+url=metacafe.com.cfg
 ########################################################
-name=Pornhub
-type=adult_rss
-thumb=video.monkey.image%pornhub.png
-url=pornhub.com.cfg
+#name=Google Video
+#type=rss
+#thumb=video.monkey.image%googlevideo.png
+#url=googlevideo.com.cfg
 ########################################################
-name=RedTube
+# More adult sites
+########################################################
+name=video.monkey.locale%30104
 type=adult_rss
-thumb=video.monkey.image%redtube.png
-url=redtube.com.cfg
+thumb=video.monkey.image%erotic.png
+url=more.erotic.list
 ########################################################
