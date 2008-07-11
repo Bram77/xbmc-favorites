@@ -1,5 +1,5 @@
 ﻿########################################################
-# GateMonkey Plugin adult sites list
+# VideoMonkey Plugin adult sites list
 ########################################################
 version=1
 title=Extra Adult
@@ -15,4 +15,9 @@ name=RedTube
 type=adult_rss
 thumb=video.monkey.image%redtube.png
 url=redtube.com.cfg
+########################################################
+name=TUtv
+type=rss
+thumb=video.monkey.image%tu_tv.png
+url=tu.tv.cfg
 ########################################################
