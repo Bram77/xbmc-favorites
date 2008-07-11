@@ -1,4 +1,4 @@
-# VideoMonkey version 0.3. by sfaxman
+# VideoMonkey version 0.4. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -12,7 +12,7 @@ import codecs
 import cookielib
 
 Version = '0'
-SubVersion = '3'
+SubVersion = '4'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -380,11 +380,11 @@ class CCurrentList:
         else:
             return ''
 
-    def random_filename(self, chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', length = 8, prefix = '', suffix = '', attempts = 1000):
+    def random_filename(self, dir = cacheDir, chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', length = 8, prefix = '', suffix = '', attempts = 1000):
         for attempt in range(attempts):
             filename = ''.join([random.choice(chars) for i in range(length)])
             filename = prefix + filename + suffix
-            if not os.path.exists(filename):
+            if not os.path.exists(os.path.join(dir, filename)):
                 return filename
 
     def loadLocal(self, filename, recursive = True):
@@ -551,15 +551,6 @@ class CCurrentList:
             data = handle.read()
             #cj.save(resDir + 'cookies.lwp', ignore_discard=True)
             cj.save(resDir + 'cookies.lwp')
-            #opener = urllib2.build_opener()
-            #req = urllib2.Request(curr_url)
-            #req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-            #req.add_header('Accept-Charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7')
-            #urlfile=opener.open(req)
-            #data=urlfile.read()
-            #f = open(cacheDir + 'page.html', 'w')
-            #f.write(data)
-            #f.close()
         except IOError:
             traceback.print_exc(file = sys.stdout)
             return -2
@@ -569,23 +560,29 @@ class CCurrentList:
             revid = re.compile(self.video_url_img_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
             for url, img, name in revid.findall(data):
                 tmp = CListItem()
-                tmp.name = name
+                tmp.name = name.lstrip().rstrip()
                 tmp.type = 'video'
                 if (self.video_img_build != ''):
                     img = self.video_img_build % (img)
                 tmp.thumb = img
-                tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                try:
+                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                except:
+                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
                 self.list.append(tmp)
         elif (self.video_url_title_img != ''):
             revid = re.compile(self.video_url_title_img, re.IGNORECASE + re.DOTALL + re.MULTILINE)
             for url, name, img in revid.findall(data):
                 tmp = CListItem()
-                tmp.name = name
+                tmp.name = name.lstrip().rstrip()
                 tmp.type = 'video'
                 if (self.video_img_build != ''):
                     img = self.video_img_build % (img)
                 tmp.thumb = img
-                tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                try:
+                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                except:
+                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
                 self.list.append(tmp)
         elif (self.video_url_title != ''):
             revid = re.compile(self.video_url_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
@@ -594,10 +591,13 @@ class CCurrentList:
                 reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for img in reimg.findall(data):
                     tmp = CListItem()
-                    tmp.name = name
+                    tmp.name = name.lstrip().rstrip()
                     tmp.type = 'video'
                     tmp.thumb = img
-                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                    try:
+                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                    except:
+                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
                     self.list.append(tmp)
         # Find category items
         for dir in self.dir_list:
@@ -646,7 +646,10 @@ class CCurrentList:
                     tmp.name = xbmc.getLocalizedString(30103)
                     tmp.type = 'rss'
                     tmp.thumb = self.next_thumb
-                    tmp.url = self.cfg_name + '%' + (self.next_url_build % (url))
+                    try:
+                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build % (url)))
+                    except:
+                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build % (smart_unicode(url))))
                     self.list.append(tmp)
                     found = True
             if (not found and self.next_url_altv != ''):
@@ -657,7 +660,10 @@ class CCurrentList:
                         tmp.name = xbmc.getLocalizedString(30103)
                         tmp.type = 'rss'
                         tmp.thumb = self.next_thumb
-                        tmp.url = self.cfg_name + '%' + (self.next_url_build_altv % (url))
+                        try:
+                            tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build_altv % (url)))
+                        except:
+                            tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build_altv % (smart_unicode(url))))
                         self.list.append(tmp)
                         found = True
         return 0
@@ -690,45 +696,86 @@ class Main:
         #f.close()
         resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
         urlsearch = resecurl.search(fc)
-        return urlsearch.group(1)
+        try:
+            return urlsearch.group(1)
+        except:
+            traceback.print_exc(file = sys.stdout)
+            return ''
 
     def playVideo(self, url):
         cfg_pos = url.find('%')
         self.currentlist.loadLocal(url[:cfg_pos], False)
         sep_pos = url.rfind('|')
-        icon = url[sep_pos + 1:len(url) - 4]
+        icon = url[sep_pos + 1:len(url) - 12]
         url = url[cfg_pos+1:sep_pos]
         sep_pos = url.rfind('|')
         title = url[sep_pos + 1:]
-        vidURL = urllib.unquote(urllib.unquote(self.getDirectLink(url[:sep_pos])))
-        urllib.urlretrieve(icon, cacheDir+'thumb.tbn')
-        if(xbmcplugin.getSetting("download") == "true"):
+        vidURL = self.getDirectLink(url[:sep_pos])
+        if vidURL == '':
+            return
+        vidURL = vidURL.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
+        try:
+            urllib.urlretrieve(icon, cacheDir + 'thumb.tbn')
+            icon = cacheDir + 'thumb.tbn'
+        except:
+            traceback.print_exc(file = sys.stdout)
+            icon = imageDir + 'video.png'
+        flv_file = vidURL
+        listitem = xbmcgui.ListItem(title, title, icon, icon)
+        listitem.setInfo("video", {"Title":title})
+        if (xbmcplugin.getSetting("download") == "true"):
             self.pDialog = xbmcgui.DialogProgress()
             self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
-        listitem = xbmcgui.ListItem(title, title, cacheDir+'thumb.tbn', cacheDir+'thumb.tbn')
-        listitem.setInfo("video", {"Title":title})
-        if(xbmcplugin.getSetting("download") == "true"):
-            flv_file = self.downloadMovie(vidURL, title+'.flv')
+            flv_file = self.downloadMovie(vidURL, title)
             self.pDialog.close()
-        else:
-            flv_file = vidURL
+        elif (xbmcplugin.getSetting("download") == "false" and xbmcplugin.getSetting("download_ask") == "true"):
+            dia = xbmcgui.Dialog()
+            if dia.yesno('', xbmc.getLocalizedString(30052)):
+                self.pDialog = xbmcgui.DialogProgress()
+                self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
+                flv_file = self.downloadMovie(vidURL, title)
+                self.pDialog.close()
         palyer_type = {0:xbmc.PLAYER_CORE_DVDPLAYER, 1:xbmc.PLAYER_CORE_MPLAYER}[int(xbmcplugin.getSetting("player_type"))]
-        try:
-            if(flv_file and xbmcplugin.getSetting("download") == "true"):
-                xbmc.Player(palyer_type).play(flv_file, listitem)
-            else:
-                xbmc.Player(palyer_type).play(vidURL, listitem)
-        except:
-            return
+        vidURL = urllib.unquote(urllib.unquote(vidURL))
+        if (os.path.isfile(flv_file)):
+            xbmc.Player(palyer_type).play(flv_file, listitem)
+        else:
+            xbmc.Player(palyer_type).play(vidURL, listitem)
 
     def downloadMovie(self, url, title):
-        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title))
+        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + '.flv'))
         try:
             urllib.urlretrieve(url, filepath, self._report_hook)
+            return filepath
         except:
-            if(os.path.isfile(filepath)):
+            traceback.print_exc(file = sys.stdout)
+            if (os.path.isfile(filepath)):
                 os.remove(filepath)
-        return filepath 
+            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.random_filename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
+            try:
+                urllib.urlretrieve(url, filepath, self._report_hook)
+                return filepath
+            except:
+                traceback.print_exc(file = sys.stdout)
+                if (os.path.isfile(filepath)):
+                    os.remove(filepath)
+        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + '.flv'))
+        try:
+            urllib.urlretrieve(urllib.unquote(urllib.unquote(url)), filepath, self._report_hook)
+            return filepath
+        except:
+            traceback.print_exc(file = sys.stdout)
+            if (os.path.isfile(filepath)):
+                os.remove(filepath)
+            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.random_filename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
+            try:
+                urllib.urlretrieve(urllib.unquote(urllib.unquote(url)), filepath, self._report_hook)
+                return filepath
+            except:
+                traceback.print_exc(file = sys.stdout)
+                if (os.path.isfile(filepath)):
+                    os.remove(filepath)
+        return filepath
 
     def _report_hook(self, count, blocksize, totalsize):
         percent = int(float(count * blocksize * 100) / totalsize)
@@ -739,7 +786,7 @@ class Main:
         ext = self.currentlist.getFileExtension(url)
         if ext == 'cfg' or ext == 'list':
             result = self.currentlist.loadLocal(url)
-        elif ext == 'vid':
+        elif ext == 'videomonkey':
             result = self.playVideo(url)
             return
         else:
@@ -753,12 +800,10 @@ class Main:
             dialog.ok("Error", "Directory could not be opened.")
 
         for m in self.currentlist.list:
-            if m.type == u'rss':
-                self.addDir(' ' + clean_name(m.name) + ' ', m.url, m.thumb, len(self.currentlist.list))
-            elif m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false':
+            if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
                 self.addDir(' ' + clean_name(m.name) + ' ', m.url, m.thumb, len(self.currentlist.list))
             elif m.type == u'video':
-                self.addDir(clean_name(m.name), m.url + '|' + clean_name(m.name) + '|' + m.thumb + '.vid', m.thumb, len(self.currentlist.list))
+                self.addDir(clean_name(m.name), m.url + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
         return result
 
     #def addLink(self, name, url, icon = None, totalItems = None):

@@ -9,9 +9,11 @@
     <string id="30005">MPlayer</string>
     <string id="30006">Save video</string>
     <string id="30007">Download path</string>
+    <string id="30008">Ask for download before playing video</string>
 
     <string id="30050">Downloading video...</string>
     <string id="30051">Please wait.</string>
+    <string id="30052">Do you want to download this video?</string>
 
     <string id="30100">Categories</string>
     <string id="30101">Subcategories</string>
@@ -24,4 +26,5 @@
     <string id="30108">Videos</string>
     <string id="30109">Sorting</string>
     <string id="30110">Suggestion</string>
+    <string id="30111">Refine</string>
 </strings>

@@ -4,5 +4,6 @@
    <setting id="player_type" type="enum" lvalues="30004|30005" label="30003" default="0"/>
    <setting type="sep" />
    <setting id="download" type="bool" label="30006" default="false"/>
-   <setting id="download_path" type="folder" enable="eq(-1,true)" source="video" label="30007"  option="writeable" default="F:\videos" />
+   <setting id="download_path" type="folder" enable="eq(-1,true)" source="video" label="30007"  option="writeable" default="F:\videos"/>
+   <setting id="download_ask" type="bool" enable="eq(-2,false)" label="30008" default="false"/>
 </settings>

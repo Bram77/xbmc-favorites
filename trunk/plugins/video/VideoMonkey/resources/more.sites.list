@@ -6,6 +6,11 @@ title=Extra
 ########################################################
 # Video sites
 ########################################################
+name=Clipfish
+type=rss
+thumb=video.monkey.image%clipfish.png
+url=clipfish.de.cfg
+########################################################
 name=ClipFish (Musikvideos)
 type=once
 thumb=video.monkey.image%clipfish.png
@@ -40,7 +45,4 @@ name=TUtv
 type=rss
 thumb=video.monkey.image%tu_tv.png
 url=tu.tv.cfg
-########################################################
-# Adult video sites
-########################################################
 ########################################################
