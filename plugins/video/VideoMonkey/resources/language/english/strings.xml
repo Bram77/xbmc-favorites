@@ -14,6 +14,7 @@
     <string id="30050">Downloading video...</string>
     <string id="30051">Please wait.</string>
     <string id="30052">Do you want to download this video?</string>
+    <string id="30053">Video download failed. Trying to stream video...</string>
 
     <string id="30100">Categories</string>
     <string id="30101">Subcategories</string>

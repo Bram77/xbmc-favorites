@@ -1,4 +1,4 @@
-# VideoMonkey version 0.4. by sfaxman
+# VideoMonkey version 0.5. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -12,7 +12,7 @@ import codecs
 import cookielib
 
 Version = '0'
-SubVersion = '4'
+SubVersion = '5'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -704,7 +704,8 @@ class Main:
 
     def playVideo(self, url):
         cfg_pos = url.find('%')
-        self.currentlist.loadLocal(url[:cfg_pos], False)
+        cfg_file = url[:cfg_pos]
+        self.currentlist.loadLocal(cfg_file, False)
         sep_pos = url.rfind('|')
         icon = url[sep_pos + 1:len(url) - 12]
         url = url[cfg_pos+1:sep_pos]
@@ -713,7 +714,7 @@ class Main:
         vidURL = self.getDirectLink(url[:sep_pos])
         if vidURL == '':
             return
-        vidURL = vidURL.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
+        vidURL = self.transformSiteSpecific(vidURL, cfg_file)
         try:
             urllib.urlretrieve(icon, cacheDir + 'thumb.tbn')
             icon = cacheDir + 'thumb.tbn'
@@ -728,6 +729,9 @@ class Main:
             self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
             flv_file = self.downloadMovie(vidURL, title)
             self.pDialog.close()
+            if (flv_file == ''):
+                dialog = xbmcgui.Dialog()
+                dialog.ok("VideoMonkey Info", xbmc.getLocalizedString(30053))
         elif (xbmcplugin.getSetting("download") == "false" and xbmcplugin.getSetting("download_ask") == "true"):
             dia = xbmcgui.Dialog()
             if dia.yesno('', xbmc.getLocalizedString(30052)):
@@ -735,9 +739,11 @@ class Main:
                 self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
                 flv_file = self.downloadMovie(vidURL, title)
                 self.pDialog.close()
+                if (flv_file == ''):
+                    dialog = xbmcgui.Dialog()
+                    dialog.ok("VideoMonkey Info", xbmc.getLocalizedString(30053))
         palyer_type = {0:xbmc.PLAYER_CORE_DVDPLAYER, 1:xbmc.PLAYER_CORE_MPLAYER}[int(xbmcplugin.getSetting("player_type"))]
-        vidURL = urllib.unquote(urllib.unquote(vidURL))
-        if (os.path.isfile(flv_file)):
+        if (flv_file != '' and os.path.isfile(flv_file)):
             xbmc.Player(palyer_type).play(flv_file, listitem)
         else:
             xbmc.Player(palyer_type).play(vidURL, listitem)
@@ -746,41 +752,37 @@ class Main:
         filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + '.flv'))
         try:
             urllib.urlretrieve(url, filepath, self._report_hook)
-            return filepath
         except:
             traceback.print_exc(file = sys.stdout)
             if (os.path.isfile(filepath)):
-                os.remove(filepath)
+                try:
+                    os.remove(filepath)
+                except:
+                    traceback.print_exc(file = sys.stdout)
             filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.random_filename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
             try:
                 urllib.urlretrieve(url, filepath, self._report_hook)
-                return filepath
             except:
                 traceback.print_exc(file = sys.stdout)
                 if (os.path.isfile(filepath)):
-                    os.remove(filepath)
-        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + '.flv'))
-        try:
-            urllib.urlretrieve(urllib.unquote(urllib.unquote(url)), filepath, self._report_hook)
-            return filepath
-        except:
-            traceback.print_exc(file = sys.stdout)
-            if (os.path.isfile(filepath)):
-                os.remove(filepath)
-            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.random_filename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
-            try:
-                urllib.urlretrieve(urllib.unquote(urllib.unquote(url)), filepath, self._report_hook)
-                return filepath
-            except:
-                traceback.print_exc(file = sys.stdout)
-                if (os.path.isfile(filepath)):
-                    os.remove(filepath)
+                    try:
+                        os.remove(filepath)
+                    except:
+                        traceback.print_exc(file = sys.stdout)
+                return ''
         return filepath
 
     def _report_hook(self, count, blocksize, totalsize):
         percent = int(float(count * blocksize * 100) / totalsize)
         self.pDialog.update(percent, xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
         if (self.pDialog.iscanceled()):raise
+
+    def transformSiteSpecific(self, url, cfg_file): # The only site specific part of the plugin
+        if (cfg_file == 'metacafe.com.cfg'):
+            return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20') # Metacafe
+        elif (cfg_file == 'tu.tv.cfg'): # TUtv
+            return urllib.unquote(urllib.unquote(url))
+        return url
 
     def parseView(self, url):
         ext = self.currentlist.getFileExtension(url)
@@ -862,7 +864,7 @@ class Main:
         except Exception, e:
             traceback.print_exc(file = sys.stdout)
             dialog = xbmcgui.Dialog()
-            dialog.ok("Error", "Error running plugin.\n\nReason:\n" + str(e))
+            dialog.ok("VideoMonkey Error", "Error running VideoMonkey.\n\nReason:\n" + str(e))
 
 win = Main()
 win.run()
