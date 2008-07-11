@@ -6861,7 +6861,7 @@
 <width>720</width>
 <height>370</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(58)</visible>
 </control>
@@ -6874,8 +6874,6 @@
 <width>720</width>
 <height>216</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(58)</visible>
 </control>
 
@@ -8296,7 +8294,7 @@
 <width>720</width>
 <height>370</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
@@ -8309,8 +8307,6 @@
 <width>720</width>
 <height>216</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
 
@@ -8625,7 +8621,7 @@
 <width>720</width>
 <height>370</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
@@ -8638,8 +8634,6 @@
 <width>720</width>
 <height>216</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
 
@@ -8956,7 +8950,7 @@
 <width>720</width>
 <height>458</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
@@ -8969,7 +8963,6 @@
 <width>720</width>
 <height>300</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
@@ -9272,7 +9265,7 @@
 <width>720</width>
 <height>458</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
@@ -9285,7 +9278,6 @@
 <width>720</width>
 <height>300</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
@@ -9587,7 +9579,7 @@
 <width>720</width>
 <height>370</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
@@ -9600,8 +9592,6 @@
 <width>720</width>
 <height>216</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(57)</visible>
 </control>
 
@@ -9773,7 +9763,7 @@
 <width>720</width>
 <height>458</height>
 <texture>Back-Row.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
+<animation effect="fade" time="200">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
@@ -9786,7 +9776,6 @@
 <width>720</width>
 <height>300</height>
 <texture>background2.png</texture>
-<animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(53)</visible>
 </control>
