@@ -10683,7 +10683,7 @@
 <font>font64</font>
 <textcolor>grey</textcolor>
 <align>right</align>
-<label>($INFO[listItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
+<label>($INFO[listItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]])</label>
 <scroll>true</scroll>
 <shadowcolor>shadow</shadowcolor>
 <visible>container.content(tvshows) + Control.IsVisible(58)</visible>
