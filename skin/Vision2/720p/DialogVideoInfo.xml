@@ -53,7 +53,7 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>[B][UPPERCASE]$INFO[Listitem.Title][/UPPERCASE][/B]</label>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
 				<font>font18</font>
 			</control>
 			<control type="image">
@@ -173,9 +173,9 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[563]:</label>
-						<label2>$INFO[ListItem.Rating]</label2>
+						<label2>$INFO[ListItem.RatingAndVotes]</label2>
 						<onclick>-</onclick>
-						<visible>!IsEmpty(ListItem.Rating)</visible>
+						<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[202]:</label>
@@ -227,7 +227,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[B][UPPERCASE]$INFO[Listitem.Title][/UPPERCASE][/B]</label>
+					<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
 					<font>font18</font>
 				</control>
 				<control type="image">
@@ -309,7 +309,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<label>[B][UPPERCASE]$INFO[Listitem.Title][/UPPERCASE][/B]</label>
+					<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
 					<font>font18</font>
 				</control>
 				<control type="image">
@@ -474,7 +474,7 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>[B][UPPERCASE]$INFO[Listitem.Title][/UPPERCASE][/B]</label>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
 				<font>font18</font>
 			</control>
 			<control type="image">
@@ -668,7 +668,7 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>[B][UPPERCASE]$INFO[Listitem.Title][/UPPERCASE][/B]</label>
+				<label>[B]$LOCALIZE[31998]$INFO[Listitem.Title]$LOCALIZE[31999][/B]</label>
 				<font>font18</font>
 			</control>
 			<control type="image">
