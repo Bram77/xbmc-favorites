@@ -56,5 +56,11 @@
 		<size>16</size>
   </font>
 
+	<font>
+		<name>font13</name>
+		<filename>DINMd.ttf</filename>
+		<size>16</size>
+	</font>
+
 	</fontset>
 </fonts>
