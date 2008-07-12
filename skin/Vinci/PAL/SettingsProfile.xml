@@ -1,0 +1,66 @@
+<window>
+  <id>34</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>453</posx>
+      <posy>310</posy>
+      <width>218</width>
+      <height>240</height>
+      <texture>16x9bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>35</posy>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>Settings text label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> 
+      <posx>660</posx> 
+      <posy>85</posy>
+      <label>13200</label>
+      <font>font04</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>Last loaded</description>
+      <type>fadelabel</type>
+      <id>3</id>
+      <posx>210</posx>
+      <posy>525</posy>
+      <width>656</width>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>listcontrol</description>
+      <type>listcontrol</type>
+      <id>2</id>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

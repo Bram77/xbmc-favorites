@@ -1,0 +1,64 @@
+<window>
+	<id>104</id>
+	<defaultcontrol>1</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<origin x="938" y="40">true</origin>
+	</coordinates>
+	<controls>
+
+		<control>
+			<description>Popup Volume Dialog Background</description>
+			<type>image</type>
+			<id>0</id>
+			<posx>1</posx>
+			<posy>2</posy>
+			<width>296</width>
+			<height>75</height>
+			<texture>voulume-panel-bg2.png</texture>
+		</control>
+		<control type="progress">
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>164</width>
+			<height>43</height>
+			<info>Player.Volume</info>
+			<lefttexture>-</lefttexture>
+			<texturebg>osd_slider_volume_bg50.png</texturebg>
+			<midtexture>osd_slider_volume_bg.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+		</control>
+		<control type="image">
+			<description>VolumeBar Cover Image</description>
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>164</width>
+			<height>43</height>
+			<texture>osd_slider_coverup.png</texture>
+		</control>
+		<control type="slider">
+			<posx>20</posx>
+			<posy>15</posy>
+			<width>164</width>
+			<height>43</height>
+			<info>Player.Volume</info>
+			<texturesliderbar>VolumeSlider.png</texturesliderbar>
+			<textureslidernib>-</textureslidernib>
+			<textureslidernibFocus>-</textureslidernibFocus>
+		</control>
+		<control type="label" id="0">
+			<description>Volume Label</description>
+			<posx>275</posx>
+			<posy>35</posy>
+			<width>100</width>
+			<height>16</height>
+			<font>font24</font>
+			<align>right</align>
+			<info>Player.Volume</info>
+		</control>
+
+	</controls>
+
+</window>
+

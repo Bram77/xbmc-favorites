@@ -1,0 +1,197 @@
+<window>
+  <id>2</id>
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <control>
+      <description>number of files text label</description>
+      <type>label</type>
+      <id>12</id>
+      <posx>1077</posx>
+      <posy>95</posy>
+      <label>-</label>
+      <align>right</align>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>My Pictures text label</description>
+      <type>label</type>
+      <id>1</id>
+	  <align>center</align> 
+      <posx>1</posx> 
+      <posy>-3</posy>
+	  <width>1280</width>
+	  <height>70</height>
+      <label>1</label>
+	  <font>font70Bb</font>
+	  <aligny>top</aligny>
+      <textcolor>ffc38433</textcolor>
+    </control>
+
+    <control>
+      <description>listcontrol</description>
+	  <include>contentpanelslide</include>
+      <type>listcontrol</type>
+      <id>50</id>
+	  <posx>190</posx>
+	  <posy>115</posy>
+	  <width>900</width>
+      <height>433</height>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+	  <font>font18</font>
+	  <texturefocus>listfocus.png</texturefocus>
+	  <texturenofocus>-</texturenofocus>
+	  <spinposx>427</spinposx>
+    </control>
+	
+	<include>musicinfobox</include>
+	<include>videoinfobox</include>
+	
+	<include>homescreenclock</include>
+	<include>tabhomescreenbuttons</include>
+
+    <control>
+      <description>pics thumbnailpanel</description>
+	  <include>contentpanelslide</include>
+      <type>thumbnailpanel</type>
+      <id>51</id>
+	  <posx>190</posx>
+	  <posy>115</posy>
+	  <width>900</width>
+	  <height>433</height>
+      <itemwidth>112</itemwidth>
+      <itemheight>132</itemheight>
+      <texturewidth>100</texturewidth>
+      <textureheight>110</textureheight>
+      <thumbwidth>90</thumbwidth>
+      <thumbheight>90</thumbheight>
+      <thumbposx>5</thumbposx>
+      <thumbposy>10</thumbposy>
+      <texturewidthbig>137</texturewidthbig>
+      <textureheightbig>152</textureheightbig>
+      <itemwidthbig>148</itemwidthbig>
+      <itemheightbig>200</itemheightbig>
+      <thumbwidthbig>121</thumbwidthbig>
+      <thumbheightbig>121</thumbheightbig>
+      <thumbposxbig>8</thumbposxbig>
+      <thumbposybig>16</thumbposybig>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+	  <spinposx>427</spinposx>
+    </control>
+	
+	<controlgroup>
+	  <control>
+	      <description>background image</description>
+	      <type>image</type>
+	      <id>1</id>
+	      <posx>448</posx>
+	      <posy>88</posy>
+	      <width>381</width>
+	      <height>420</height>
+		  <include>View-as</include>
+	      <texture>settings.png</texture>
+		  <include>View-as</include>
+		  <include>dialog-info</include>
+      </control>
+	  
+      <control>
+        <description>View As Icons button</description>
+        <type>button</type>
+        <id>2</id>
+		<posx>450</posx>
+        <posy>108</posy>
+		<width>379</width>
+		<align>center</align>
+        <label>100</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>7</onup>
+        <ondown>3</ondown>
+		<texturefocus>listfocus.png</texturefocus>
+		<include>View-as</include>
+		<include>dialog-infotext</include>
+      </control>
+
+      <control>
+        <description>Sort by button</description>
+        <type>button</type>
+        <id>3</id>
+        <posx>450</posx>
+        <posy>138</posy>
+		<width>379</width>
+		<align>center</align>
+        <label>103</label>
+        <onleft>50</onleft>
+        <onright>4</onright>
+        <onup>2</onup>
+        <ondown>6</ondown>
+		<texturefocus>listfocus.png</texturefocus>
+		<include>View-as</include>
+		<include>dialog-infotext</include>
+      </control>
+
+      <control>
+        <description>Sort asc</description>
+        <type>togglebutton</type>
+        <id>4</id>
+		<posx>700</posx>
+		<posy>150</posy>
+        <label>-</label>
+        <onleft>3</onleft>
+        <onright>50</onright>
+        <onup>4</onup>
+        <ondown>4</ondown>
+		<include>View-as</include>
+		<include>dialog-infotext</include>
+      </control>
+
+      <control>
+        <description>SlideShow button</description>
+        <type>button</type>
+        <id>6</id>
+		<posx>450</posx>
+        <posy>168</posy>
+		<width>379</width>
+		<align>center</align>
+        <label>108</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>3</onup>
+        <ondown>7</ondown>
+		<texturefocus>listfocus.png</texturefocus>
+		<include>View-as</include>
+		<include>dialog-infotext</include>
+      </control>
+
+      <control>
+        <description>recursive slideshow</description>
+        <type>button</type>
+        <id>7</id>
+		<posx>450</posx>
+        <posy>198</posy>
+		<width>379</width>
+		<align>center</align>
+        <label>361</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>6</onup>
+        <ondown>2</ondown>
+		<texturefocus>listfocus.png</texturefocus>
+		<include>View-as</include>
+		<include>dialog-infotext</include>
+      </control>
+    </controlgroup>
+
+  </controls>
+
+</window>
+

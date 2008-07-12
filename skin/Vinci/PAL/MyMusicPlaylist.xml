@@ -1,0 +1,154 @@
+<window>
+  <id>500</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>478</posx>
+      <posy>280</posy>
+      <width>240</width>
+      <height>270</height>
+      <texture>bg-mymusic.png</texture>
+    </control>
+
+    <control>
+      <description>music logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>50</posy>
+      <height>54</height>
+      <texture>background-mymusic.png</texture>
+    </control>
+
+    <control>
+      <description>number of files text label</description>
+      <type>label</type>
+      <id>12</id>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>playlist text label</description>
+      <type>label</type>
+      <id>14</id>
+      <align>right</align> 
+      <posx>660</posx> 
+      <posy>85</posy>
+      <label>136</label>
+      <font>font14</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <controlgroup>
+      <control>
+        <description>View As Icons button</description>
+        <type>button</type>
+        <id>2</id>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>22</onup>
+        <ondown>26</ondown>
+      </control>
+
+      <control>
+        <description>Repeat button</description>
+        <type>button</type>
+        <id>26</id>
+        <posx>60</posx>
+        <posy>157</posy>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>28</ondown>
+      </control>
+
+      <control>
+        <description>Randomize button</description>
+        <type>radiobutton</type>
+        <id>28</id>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>13319</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>26</onup>
+        <ondown>21</ondown>
+      </control>
+
+      <control>
+        <description>Save button</description>
+        <type>button</type>
+        <id>21</id>
+        <posx>60</posx>
+        <posy>231</posy>
+        <label>190</label>
+        <font>font13</font>
+        <onup>28</onup>
+        <onleft>50</onleft>
+        <onright>50</onright>
+      </control>
+
+      <control>
+        <description>Clear button</description>
+        <type>button</type>
+        <id>22</id>
+        <posx>60</posx>
+        <posy>268</posy>
+        <label>192</label>
+        <font>font13</font>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <ondown>2</ondown>
+      </control>
+    </controlgroup>
+	
+    <control>
+      <description>ListItems Icons</description>
+      <type>image</type>
+      <posx>67</posx>
+      <posy>375</posy>
+      <width>120</width>
+      <height>120</height>
+      <texture>defaultAlbumCover.png</texture>
+      <info>ListItem.Icon</info>
+      <include>listitem-icon</include>
+    </control>
+
+    <control>
+      <description>listcontrol</description>
+      <type>listcontrol</type>
+      <id>50</id>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+    <control>
+      <description>thumbnailpanel</description>
+      <type>thumbnailpanel</type>
+      <id>51</id>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+  </controls>
+
+</window>
+

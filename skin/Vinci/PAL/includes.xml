@@ -1,0 +1,142 @@
+<includes>
+  <include name="textcolorwhite">
+    <textcolor>FFffffff</textcolor>
+  </include>
+
+  <include name="textcolorgrey">
+    <textcolor>60ffffff</textcolor>
+  </include>
+
+  <include name="textcolorlightgrey">
+    <textcolor>d0ffffff</textcolor>
+  </include>
+
+  <include name="controldefaults">
+    <include>textcolorwhite</include>
+    <colordiffuse>FFffffff</colordiffuse>
+  </include>
+
+  <include name="selectedcolor">
+    <selectedcolor>FFff9600</selectedcolor>
+  </include>
+
+  <!-- Animations - Dialogs ---------------------------------------------------- -->
+
+  <!-- Normal Dialog Windows -->
+  <include name="dialog-effect">
+    <animation effect="fade" time="200">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>
+  </include>
+
+  <!-- Special Dialog Windows -->
+  <include name="dialog-effect-special">
+    <animation effect="slide" start="720,0" end="0,0" acceleration="-1" time="500">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="720,0" acceleration="1" time="500">WindowClose</animation>
+  </include>
+
+  <!-- Animations - Home / Menu ------------------------------------------------ -->
+
+  <!-- Home Icons -->
+  <include name="home-icons">
+    <animation effect="fade" time="300">WindowOpen</animation>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+  
+  <!-- Menu ListItem Icons -->
+  <include name="listitem-icon">
+    <visible>Skin.HasSetting(listitem) + Control.HasFocus(50) + [Player.HasMedia | !Player.HasMedia]</visible>
+    <animation effect="fade" time="100">VisibleChange</animation>
+  </include>
+
+  <!-- Animations - Media ------------------------------------------------------ -->
+
+  <!-- Home/Menu Music Covers -->
+  <include name="media-cover">
+    <visible>![Skin.HasSetting(listitem) + Control.HasFocus(50)] | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(2)</visible>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+
+  <!-- Home Music Cover Slide Effect -->
+  <include name="slide-effect">
+    <animation effect="slide" start="-200,0" end="0,0" acceleration="-1" time="300">WindowOpen</animation>
+    <animation effect="slide" start="-200,0" end="0,0" acceleration="-1" time="300">Visible</animation>
+    <animation effect="slide" start="0,0" end="-200,0" acceleration="1" time="300">Hidden</animation>
+  </include>
+
+  <!-- Fullscreen Info -->
+  <include name="dialog-info">
+    <animation effect="fade" time="500">WindowOpen</animation>
+    <animation effect="fade" time="500">WindowClose</animation>
+  </include>
+
+  <!-- Visualisation Codec/Media Info's -->
+  <include name="media-info">
+    <visible>yes</visible>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+
+  <!-- Animations - Keyboard --------------------------------------------------- -->
+
+  <include name="keyboard-effect">
+    <visible>[Window.IsActive(103) + !Window.IsActive(109)]</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <animation effect="fade" time="200">Hidden</animation>
+    <animation effect="zoom" start="100" end="99" center="360,288" acceleration="-2.8" time="200">Focus</animation>
+    <animation effect="zoom" start="99" end="100" center="360,288" acceleration="-2.8" time="200">Unfocus</animation>
+  </include>
+
+  <!-- Startup ----------------------------------------------------------------- -->
+
+  <!-- Startup - ReplaceWindow Trigger -->
+  <include name="startup-trigger">
+    <animation effect="fade" time="500">Focus</animation>
+  </include>
+
+  <!-- Startup - Image Fade Time -->
+  <include name="startup-image">
+    <animation effect="fade" start="0" end="100" condition="Window.IsActive(startup)" time="500">WindowOpen</animation>
+  </include>
+
+  <!-- Startup - Conditional Effect -->
+  <include name="startup-effect">
+    <animation effect="fade" start="0" end="100" condition="Window.Previous(startup)" time="300">WindowOpen</animation> 
+  </include>
+
+  <!-- Background -------------------------------------------------------------- -->
+
+  <include name="background">
+    <control>
+      <description>visualisation</description>
+      <type>visualisation</type>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <visible>Skin.HasSetting(visualisation) + Player.HasMedia</visible>
+    </control>
+
+	<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>720</width>
+      <height>576</height>
+      <texture>stenen.png</texture>
+      <include>startup-image</include>
+    </control>
+
+	<control>
+		<description>oranje bedekking</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>490</height>
+		<texture>orangeblade.png</texture>
+		<include>startup-image</include>
+	</control>	
+	
+  </include>
+
+</includes>

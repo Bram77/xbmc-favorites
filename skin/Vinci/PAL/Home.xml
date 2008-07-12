@@ -1,0 +1,353 @@
+<window>
+  <id>0</id>
+  <defaultcontrol>300</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <controlgroup>
+      <control>
+        <description>Home Buttons</description>
+        <type>buttonscroller</type>
+        <id>300</id>
+        <posx>55</posx>
+        <posy>110</posy>
+        <width>150</width>
+        <height>35</height>
+        <buttongap>3</buttongap>
+        <numbuttons>10</numbuttons>
+        <orientation>vertical</orientation>
+        <align>right</align>
+        <aligny>center</aligny>
+        <movement>0</movement>
+        <defaultbutton>4</defaultbutton>
+        <wraparound>yes</wraparound>
+        <smoothscrolling>yes</smoothscrolling>
+        <alpha>100</alpha>
+        <font>font12</font>
+        <onleft>100</onleft>
+        <onright>99</onright>
+        <onup>300</onup>
+        <ondown>300</ondown>
+        <textoffsetx>9</textoffsetx>
+        <texturefocus>homebutton-focus.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
+        <include>textcolorwhite</include>
+        <animation effect="fade" start="0" end="1000" delay="10000" time="300">WindowOpen</animation> 
+        <buttons>
+        <button id="1">
+          <description>My Programs</description>
+          <label>0</label>
+          <execute>XBMC.ActivateWindow(MyPrograms)</execute>
+          <icon>102</icon>
+        </button>
+	<button id="2">
+          <description>My Files</description>
+          <label>7</label>
+          <execute>XBMC.ActivateWindow(MyFiles)</execute>
+          <icon>106</icon>
+        </button>
+	<button id="3">
+          <description>My Pictures</description>
+          <label>1</label>
+          <execute>XBMC.ActivateWindow(MyPictures)</execute>
+          <icon>104</icon>
+        </button>
+	<button id="4">
+          <description>My Music</description>
+          <label>2</label>
+          <execute>XBMC.ActivateWindow(MyMusic)</execute>
+          <icon>103</icon>
+        </button>
+	<button id="5">
+          <description>My Videos</description>
+          <label>3</label>
+          <execute>XBMC.ActivateWindow(MyVideos)</execute>
+          <icon>105</icon>
+        </button>
+	<button id="6">
+          <description>Weather</description>
+          <label>8</label>
+          <execute>XBMC.ActivateWindow(Weather)</execute>
+          <icon>107</icon>
+        </button>
+	<button id="7">
+          <description>Settings</description>
+          <label>5</label>
+          <execute>XBMC.ActivateWindow(Settings)</execute>
+          <icon>109</icon>
+        </button>
+        </buttons>
+      </control>	  
+    </controlgroup>
+	
+
+
+    <!-- Home Icons -------------------------------------------------------------- -->
+
+    <control>
+      <type>image</type>
+      <id>102</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-myPrograms.png</texture>
+      <include>home-icons</include>
+      <visible>[Buttonscroller.HasFocus(1) | Control.HasFocus(99)]</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>106</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-myfiles.png</texture>
+      <include>home-icons</include>
+      <visible>Buttonscroller.HasFocus(2)</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>104</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-mypictures.png</texture>
+      <include>home-icons</include>
+      <visible>Buttonscroller.HasFocus(3)</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>103</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-mymusic.png</texture>
+      <include>home-icons</include>
+      <visible>Buttonscroller.HasFocus(4)</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>105</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-myvideos.png</texture>
+      <include>home-icons</include>
+      <visible>Buttonscroller.HasFocus(5)</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>107</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-myweather.png</texture>
+      <include>home-icons</include>
+      <visible>Buttonscroller.HasFocus(6)</visible>
+    </control>
+
+    <control>
+      <type>image</type>
+      <id>109</id>
+      <posx>210</posx>
+      <posy>0</posy>
+      <width>512</width>
+      <height>576</height>
+      <texture>home-settings.png</texture>
+      <include>home-icons</include>
+      <visible>[Buttonscroller.HasFocus(7) | Control.HasFocus(100)]</visible>
+    </control>
+
+    <!-- Time/Date --------------------------------------------------------------- -->
+
+    <control>
+      <description>date label</description>
+      <type>label</type>
+      <id>200</id>
+      <posx>630</posx>
+      <posy>510</posy>
+      <label>date</label>
+      <info>System.Date</info>
+      <align>right</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+      <visible>!System.KaiConnected</visible>
+    </control>
+    <control>
+      <description>time label</description>
+      <type>label</type>
+      <id>201</id>
+      <posx>630</posx>
+      <posy>495</posy>
+      <label>time</label>
+      <info>System.Time</info>
+      <align>right</align>
+      <font>font10</font>
+      <textcolor>60ffffff</textcolor>
+      <visible>!System.KaiConnected</visible>
+    </control>
+
+    <control>
+      <description>date label 2</description>
+      <type>label</type>
+      <id>200</id>
+      <posx>590</posx>
+      <posy>510</posy>
+      <label>date</label>
+      <info>System.Date</info>
+      <align>right</align>
+      <font>font10</font>
+      <include>textcolorlightgrey</include>
+      <visible>System.KaiConnected</visible>
+    </control>
+    <control>
+      <description>time label 2</description>
+      <type>label</type>
+      <id>201</id>
+      <posx>590</posx>
+      <posy>495</posy>
+      <label>time</label>
+      <info>System.Time</info>
+      <align>right</align>
+      <font>font10</font>
+      <textcolor>60ffffff</textcolor>
+      <visible>System.KaiConnected</visible>
+    </control>
+
+    <!-- Music Info -------------------------------------------------------------- -->
+
+    <control>
+      <description>music cover</description>
+      <type>image</type>
+      <posx>67</posx>
+      <posy>375</posy>
+      <width>120</width>
+      <height>120</height>
+      <texture>defaultAlbumCover.png</texture>
+      <info>MusicPlayer.Cover</info>
+      <include>slide-effect</include>
+      <include>media-cover</include>
+      <visible>Player.HasAudio + Skin.HasSetting(music-cover)</visible>
+    </control>
+
+    <control>
+      <description>Cover Case</description>
+      <type>image</type>
+      <posx>54</posx>
+      <posy>370</posy>
+      <width>140</width>
+      <height>137</height>
+      <texture>case.png</texture>
+      <include>slide-effect</include>
+      <visible>Player.HasAudio + Skin.HasSetting(music-cover)</visible>
+    </control>
+
+    <control>
+      <description>play time label</description>
+      <type>label</type>
+      <posx>67</posx>
+      <posy>500</posy>
+      <label>-</label>
+      <info>MusicPlayer.Time</info>
+      <align>left</align>
+      <font>font13</font>
+      <include>slide-effect</include>
+      <visible>Player.HasAudio + Skin.HasSetting(music-cover)</visible>
+    </control>
+
+    <control>
+      <description>album/artist/genre etc info label</description>
+      <type>fadelabel</type>
+      <width>130</width>
+      <posx>67</posx>
+      <posy>525</posy>
+      <font>font10</font>
+      <info>MusicPlayer.Title</info>
+      <info>MusicPlayer.Artist</info>
+      <info>MusicPlayer.Album</info>
+      <info>MusicPlayer.Year</info>
+      <include>slide-effect</include>
+      <visible>Player.HasAudio + Skin.HasSetting(music-cover)</visible>
+    </control>
+
+    <!-- Home Sub Buttons -------------------------------------------------------- -->
+
+    <control>
+      <description>submenu xlink button</description>
+      <type>button</type>
+      <id>99</id>
+      <posx>595</posx>
+      <posy>490</posy>
+      <width>41</width>
+      <height>41</height>
+      <font>font10</font>
+      <label>-</label>
+      <align>right</align>
+      <texturefocus>home-sub-kai-focus.png</texturefocus>
+      <texturenofocus>home-sub-kai-nofocus.png</texturenofocus>
+      <onclick>XBMC.ActivateWindow(XlinkKai)</onclick>
+      <onleft>300</onleft>
+      <onright>100</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <include>textcolorlightgrey</include>
+      <include>startup-effect</include>
+      <visible allowhiddenfocus="false">System.KaiConnected</visible>
+      <animation effect="zoom" start="100" end="110" center="615,510" acceleration="-2.8" time="300">Focus</animation>
+      <animation effect="zoom" start="110" end="100" center="615,510" acceleration="-2.8" time="300">Unfocus</animation>
+    </control>
+
+    <control>
+      <description>submenu button</description>
+      <type>button</type>
+      <id>100</id>
+      <posx>635</posx>
+      <posy>490</posy>
+      <width>41</width>
+      <height>41</height>
+      <onclick>XBMC.ActivateWindow(105)</onclick>
+      <texturefocus>home-sub-focus.png</texturefocus>
+      <texturenofocus>home-sub-nofocus.png</texturenofocus>
+      <onclick>XBMC.ActivateWindow(105)</onclick>
+      <label>-</label>
+      <onleft>99</onleft>
+      <onright>300</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <include>startup-effect</include>
+      <animation effect="zoom" start="100" end="110" center="655,510" acceleration="-2.8" time="300">Focus</animation>
+      <animation effect="zoom" start="110" end="100" center="655,510" acceleration="-2.8" time="300">Unfocus</animation>
+    </control>
+
+    <!-- RSS Feeds --------------------------------------------------------------- -->
+
+    <control>
+      <description>rss feed</description>
+      <type>rss</type>
+      <id>1</id>
+      <posx>0</posx>
+      <posy>35</posy>
+      <width>720</width>
+      <font>font13</font>
+      <urlset>1</urlset>
+      <include>textcolorlightgrey</include>
+      <titlecolor>d0ffffff</titlecolor>
+      <headlinecolor>d0ffffff</headlinecolor>
+      <visible>Skin.HasSetting(rss-feeds)</visible>
+    </control>
+
+  </controls>
+
+</window>
+

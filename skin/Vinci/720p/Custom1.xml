@@ -1,0 +1,323 @@
+<window>
+  <id>56</id>
+  <defaultcontrol>10</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <include>dialog-effect-special</include>
+  <type>dialog</type>
+  <controls>
+
+    <control>
+      <description>filemanager background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>720</width>
+      <height>576</height>
+      <texture>trainerpanel_bg.png</texture>
+      <visible>!Window.IsActive(126)</visible>
+      <animation effect="fade" time="400">Hidden</animation>
+    </control>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>250</posx>
+      <posy>70</posy>
+      <width>218</width>
+      <height>40</height>
+      <texture>Header-Settings.png</texture>
+      <visible>!Window.IsActive(126)</visible>
+      <animation effect="fade" time="400">Hidden</animation>
+    </control>
+
+    <controlgroup>
+        <control>
+          <description>cover switch</description>
+          <type>button</type>
+          <id>10</id>
+          <posx>100</posx>
+          <posy>150</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use Album Cover &amp; Music Information</label>
+          <onclick>Skin.ToggleSetting(music-cover)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>25</onup>
+          <ondown>11</ondown>
+        </control>
+                <control>
+                  <description>cover switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>157</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.HasSetting(music-cover)</visible>
+                </control>
+
+                <control>
+                  <description>cover switch radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>157</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.HasSetting(music-cover)</visible>
+                </control>
+
+        <control>
+          <description>visualisation switch</description>
+          <type>button</type>
+          <id>11</id>
+          <posx>100</posx>
+          <posy>181</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use Visualisation in Backgrounds</label>
+          <onclick>Skin.ToggleSetting(visualisation)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>10</onup>
+          <ondown>12</ondown>
+        </control>
+                <control>
+                  <description>visualisation switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>188</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.HasSetting(visualisation)</visible>
+                </control>
+
+                <control>
+                  <description>visualisation switch radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>188</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.HasSetting(visualisation)</visible>
+                </control>
+
+        <control>
+          <description>rss feeds switch</description>
+          <type>button</type>
+          <id>12</id>
+          <posx>100</posx>
+          <posy>212</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use RSS Feeds in Home Page</label>
+          <onclick>Skin.ToggleSetting(rss-feeds)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>11</onup>
+          <ondown>13</ondown>
+        </control>
+                <control>
+                  <description>rss feeds switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>219</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.HasSetting(rss-feeds)</visible>
+                </control>
+
+                <control>
+                  <description>rss feeds switch radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>219</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.HasSetting(rss-feeds)</visible>
+                </control>
+
+        <control>
+          <description>color background switch</description>
+          <type>button</type>
+          <id>13</id>
+          <posx>100</posx>
+          <posy>243</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use Color Texture for Backgrounds</label>
+          <onclick>Skin.ToggleSetting(color-background)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>12</onup>
+          <ondown>14</ondown>
+        </control>
+                <control>
+                  <description>color background switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>250</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.HasSetting(color-background)</visible>
+                </control>
+
+                <control>
+                  <description>color background switch radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>250</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.HasSetting(color-background)</visible>
+                </control>
+
+
+        <control>
+          <description>listitem switch</description>
+          <type>button</type>
+          <id>14</id>
+          <posx>100</posx>
+          <posy>274</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use Item Thumb for List View</label>
+          <onclick>Skin.ToggleSetting(listitem)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>13</onup>
+          <ondown>15</ondown>
+        </control>
+                <control>
+                  <description>listitem switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>281</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.HasSetting(listitem)</visible>
+                </control>
+
+                <control>
+                  <description>listitem radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>281</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.HasSetting(listitem)</visible>
+                </control>
+
+        <control>
+          <description>custom background switch</description>
+          <type>button</type>
+          <id>15</id>
+          <posx>100</posx>
+          <posy>305</posy>
+          <height>29</height>
+          <width>520</width>
+          <font>font12</font>
+          <textoffsetx>10</textoffsetx>
+          <aligny>center</aligny>
+          <texturefocus>list-focus.png</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <label>Use Custom Images in the background</label>
+          <onclick>Skin.SetImage(custom-background)</onclick>
+          <onleft>50</onleft>
+          <onright>50</onright>
+          <onup>14</onup>
+          <ondown>25</ondown>
+        </control>
+                <control>
+                  <description>custom background switch radiobutton-on</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>312</posy>
+                  <texture>settings-check-box.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>Skin.String(custom-background)</visible>
+                </control>
+
+                <control>
+                  <description>custom background radiobutton-off</description>
+                  <type>image</type>
+                  <posx>575</posx>
+                  <posy>311</posy>
+                  <texture>settings-check-boxNF.png</texture>
+                  <width>16</width>
+                  <height>16</height>
+                  <visible>!Skin.String(custom-background)</visible>
+                </control>
+
+        <control>
+           <description>reset switch</description>
+           <type>button</type>
+           <id>25</id>
+           <posx>100</posx>
+           <posy>460</posy>
+           <label>Reset All Skin Settings Back to Default</label>
+           <font>font13</font>
+           <onclick>Skin.ResetSettings</onclick>
+           <onclick>XBMC.Notification(PM2 Message,Skin Settings back to Default.)</onclick>
+           <align>left</align>
+           <texturefocus>list-focus.png</texturefocus>
+           <texturenofocus></texturenofocus>
+           <width>445</width>
+           <height>30</height>
+           <onleft>8</onleft>
+           <onright>8</onright>
+           <onup>15</onup>
+           <ondown>10</ondown>
+         </control>
+    </controlgroup>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>720</width>
+      <height>576</height>
+      <texture>trainerpanel.png</texture>
+      <visible>!Window.IsActive(126)</visible>
+      <animation effect="fade" time="400">Hidden</animation>
+    </control>
+
+  </controls>
+
+</window>
+

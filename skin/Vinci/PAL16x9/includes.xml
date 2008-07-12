@@ -1,0 +1,413 @@
+<includes>
+  <include file="CommonViewTypes.xml" />
+  <include file="defaults.xml" />
+
+  <include name="textcolorwhite">
+    <textcolor>FFffffff</textcolor>
+  </include>
+
+  <include name="textcolorgrey">
+    <textcolor>60ffffff</textcolor>
+  </include>
+
+  <include name="textcolorlightgrey">
+    <textcolor>d0ffffff</textcolor>
+  </include>
+
+  <include name="controldefaults">
+    <include>textcolorwhite</include>
+    <colordiffuse>FFffffff</colordiffuse>
+  </include>
+
+  <include name="selectedcolor">
+    <selectedcolor>FFff9600</selectedcolor>
+  </include>
+
+  <!-- Animations Dialogs ---------------------------------------------------- -->
+  
+  <!-- viewanimations -->
+  <include name="contentpanelslide">
+	<animation effect="fade" time="300">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+  <!-- Normal Dialog Windows -->
+  <include name="dialog-effect">
+    <animation effect="fade" time="500">WindowOpen</animation>
+    <animation effect="fade" time="200">WindowClose</animation>
+  </include>
+
+  <!-- Special Dialog Windows -->
+  <include name="dialog-effect-special">
+    <animation effect="slide" start="720,0" end="0,0" acceleration="-1" time="500">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="720,0" acceleration="1" time="500">WindowClose</animation>
+  </include>
+  
+  <!-- Side Dialog Slide-->
+  <include name="dialog-effect-slide">
+    <animation effect="slide" start="60,0" end="0,0" acceleration="-1" delay="500" time="200">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="60,0" acceleration="1" time="200">WindowClose</animation>
+  </include>
+
+  <!-- Animations - Home / Menu ------------------------------------------------ -->
+
+  <!-- Home Icons -->
+  <include name="home-icons">
+    <animation effect="fade" time="300">WindowOpen</animation>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+  
+  <!-- Menu ListItem Icons -->
+  <include name="listitem-icon">
+    <visible>Skin.HasSetting(listitem) + Control.HasFocus(50) + [Player.HasMedia | !Player.HasMedia]</visible>
+    <animation effect="fade" time="100">VisibleChange</animation>
+  </include>
+
+  <!-- Animations - Media ------------------------------------------------------ -->
+
+  <!-- Home/Menu Music Covers -->
+  <include name="media-cover">
+    <visible>![Skin.HasSetting(listitem) + Control.HasFocus(50)] | ![Window.IsMedia + Control.HasFocus(50)] | System.IdleTime(2)</visible>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+
+  <!-- Home Music animation -->
+  <include name="homemediainfo">
+	<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+	<animation effect="fade" time="1000">VisibleChange</animation>
+  </include>
+	<include name="homevideoinfo">
+	<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
+	<animation effect="fade" time="1000">VisibleChange</animation>
+  </include>
+
+  <!-- Fullscreen Info -->
+  <include name="dialog-info">
+	<animation effect="slide" start="0,-800" acceleration="-1" time="1000">Visible</animation>
+	<!--<animation effect="slide" end="0,-800" acceleration="1" time="1000">VisibleChange</animation>-->
+  </include>
+  <include name="dialog-infotext">
+	<animation effect="fade" time="300" delay="1000">Visible</animation>
+  </include>
+
+  <!-- Visualisation Codec/Media Info's -->
+  <include name="media-info">
+    <visible>yes</visible>
+    <animation effect="fade" time="300">VisibleChange</animation>
+  </include>
+
+  <!-- Animations - Keyboard --------------------------------------------------- -->
+  <include name="keyboard-effect">
+    <visible>[Window.IsActive(103) + !Window.IsActive(109)]</visible>
+    <animation effect="fade" time="200">Visible</animation>
+    <animation effect="fade" time="200">Hidden</animation>
+    <animation effect="zoom" start="100" end="99" center="360,288" acceleration="-2.8" time="200">Focus</animation>
+    <animation effect="zoom" start="99" end="100" center="360,288" acceleration="-2.8" time="200">Unfocus</animation>
+  </include>
+  
+  <!-- Visibility of submenus ----------------------------------------------- -->
+	<include name="View-as">
+		<visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(56) | Control.HasFocus(57) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(23) | Control.HasFocus(100)]</visible>
+	</include>
+
+  <!-- Visibility when blade moves ---------------------------------------- -->
+	<include name="Bladebuttons-fade-effect">
+			<visible>!Window.IsVisible(shutdownmenu)</visible>
+		<animation effect="fade" start="0" end="100" time="200" delay="3500">Visible</animation>
+	</include>
+	
+  <!-- Visibility shutdownbuttons ------------------------------------------ -->
+	<include name="shutdownbuttons">
+		<animation effect="fade" start="0" end="100" time="200" delay="2500">WindowOpen</animation>
+	</include> 
+  
+
+  <!-- Startup ----------------------------------------------------------------- -->
+  <!-- Startup - Image Fade Time -->
+  <include name="startup-image">
+    <animation effect="fade" start="0" end="100" condition="Window.IsActive(startup)" time="500">WindowOpen</animation>
+  </include>
+
+  <!-- Startup - Conditional Effect -->
+  <include name="startup-effect">
+    <animation effect="fade" start="0" end="100" condition="Window.Previous(startup)" time="300">WindowOpen</animation> 
+  </include>
+
+  <!-- Background -------------------------------------------------------------- -->
+  <include name="background">
+    <control type="visualisation">
+      <description>visualisation</description>
+      <posx>0</posx>
+      <posy>550</posy>
+      <width>1280</width>
+      <height>170</height>
+	  <visible>!Skin.HasSetting(HomeViewToggle)</visible>
+    </control>
+	<control type="videowindow">
+		<description>video preview window</description>
+		<posx>0</posx>
+		<posy>550</posy>
+		<width>1280</width>
+		<height>170</height>
+		<visible>!Skin.HasSetting(HomeViewToggle)</visible>
+	</control>
+	<control>
+      <description>background overlay</description>
+      <type>image</type>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+      <texture>stenen.png</texture>
+	  <visible>!Player.HasMedia | Skin.HasSetting(HomeViewToggle)</visible>
+      <include>startup-image</include>
+    </control>
+
+	<control>
+		<description>oranje bedekking</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>610</height>
+		<texture>orangeblade.png</texture>
+		<animation effect="slide" start="0,-610" end="0,0" acceleration="-1" delay="1500" time="2000">VisibleChange</animation>
+		<visible>!Window.IsVisible(startup) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(myfiles)</visible>
+	</control>		
+  </include>
+  
+  <!-- Musicinfobox-------------------------------------------------------------- -->
+  <include name="musicinfobox">
+   	<control type="group">
+		<posx>23</posx>
+		<posy>570</posy>
+		<include>homemediainfo</include>
+		<control type="image">
+			<description>Cover image</description>
+			<width>130</width>
+			<height>130</height>
+			<info>MusicPlayer.Cover</info>
+		</control>
+		<control>
+			<description>Cover Case</description>
+			<type>image</type>
+			<posx>-3</posx>
+			<width>136</width>
+			<height>137</height>
+			<texture>cdcoveroverlay.png</texture>
+        </control>
+		<control type="label">
+			<description>Time label</description>
+			<posx>143</posx>
+			<posy>1</posy>
+			<label>$INFO[MusicPlayer.Time]</label>
+			<align>left</align>
+			<font>font12b</font>
+			<titlecolor>d0ffffff</titlecolor>
+			<shadowcolor>60000000</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Artist label</description>
+			<posx>143</posx>
+			<posy>40</posy>
+			<info>MusicPlayer.Artist</info>
+			<align>left</align>
+			<font>font24</font>
+			<titlecolor>d0ffffff</titlecolor>
+			<shadowcolor>60000000</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Title label</description>
+			<posx>143</posx>
+			<posy>60</posy>
+			<info>MusicPlayer.Title</info>
+			<align>left</align>
+			<font>font24B</font>
+			<titlecolor>d0ffffff</titlecolor>
+			<shadowcolor>60000000</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Album label + date</description>
+			<posx>143</posx>
+			<posy>108</posy>
+			<info>MusicPlayer.Album</info>
+			<align>left</align>
+			<font>font12b</font>
+			<titlecolor>d0ffffff</titlecolor>
+			<shadowcolor>60000000</shadowcolor>
+		</control>
+	</control>
+  </include>
+  
+  <!-- Videoinfobox-------------------------------------------------------------- -->
+  <include name="videoinfobox">
+  <control type="group">
+			<posx>23</posx>
+			<posy>570</posy>
+			<include>homevideoinfo</include>
+			<control>
+				<description>defaultcover</description>
+				<type>image</type>
+				<width>91</width>
+				<height>130</height>
+				<texture>dvdcover.png</texture>
+			</control>			
+			<control type="image">
+				<description>Cover Image Window</description>
+				<width>91</width>
+				<height>130</height>
+				<info>VideoPlayer.cover</info>
+			</control>
+			<control>
+				<description>Cover Case</description>
+				<type>image</type>
+				<posx>-3</posx>
+				<posy>-3</posy>
+				<width>99</width>
+				<height>142</height>
+				<texture>dvdcoveroverlay.png</texture>
+			</control>
+			<control type="group">
+				<control type="label">
+					<description>Time label</description>
+					<posx>100</posx>
+					<posy>1</posy>
+					<label>$INFO[VideoPlayer.Time]</label>
+					<align>left</align>
+					<font>font12b</font>
+					<titlecolor>d0ffffff</titlecolor>
+					<shadowcolor>60000000</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Director label</description>
+					<posx>100</posx>
+					<posy>40</posy>
+					<info>VideoPlayer.Director</info>
+					<align>left</align>
+					<font>font24</font>
+					<titlecolor>d0ffffff</titlecolor>
+					<shadowcolor>60000000</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>100</posx>
+					<posy>60</posy>
+					<info>VideoPlayer.Title</info>
+					<align>left</align>
+					<font>font24B</font>
+					<titlecolor>d0ffffff</titlecolor>
+					<shadowcolor>60000000</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Genre label</description>
+					<width>250</width>
+					<posx>100</posx>
+					<posy>108</posy>
+					<info>VideoPlayer.Genre</info>
+					<align>left</align>
+					<font>font12b</font>
+					<titlecolor>d0ffffff</titlecolor>
+					<shadowcolor>60000000</shadowcolor>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<!-- the 2 tabhomescreenbuttons-------------------------------------------------------------- -->
+	<include name="tabhomescreenbuttons">
+	    <control>
+      <description>submenu button</description>
+      <type>button</type>
+      <id>100</id>
+      <posx>1085</posx>
+      <posy>533</posy>
+      <width>57</width>
+      <height>57</height>
+      <texturefocus>homescreenbtn-cd-active.png</texturefocus>
+      <texturenofocus>homescreenbtn-cd-nodisk.png</texturenofocus>
+      <onclick>XBMC.PlayDVD()</onclick>
+      <label>-</label>
+      <onleft>300</onleft>
+      <onright>101</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <include>startup-effect</include>
+	  <include>Bladebuttons-fade-effect</include>
+    </control>
+	<control>
+      <description>pwr button</description>
+      <type>button</type>
+      <id>101</id>
+      <posx>1166</posx>
+      <posy>533</posy>
+      <width>57</width>
+      <height>57</height>
+      <texturefocus>homescreenbtn-power-on.png</texturefocus>
+      <texturenofocus>homescreenbtn-power-off.png</texturenofocus>
+      <onclick>XBMC.ActivateWindow(Shutdownmenu)</onclick>
+      <label>-</label>
+      <onleft>100</onleft>
+      <onright>300</onright>
+      <onup>300</onup>
+      <ondown>300</ondown>
+      <include>startup-effect</include>
+	  <include>Bladebuttons-fade-effect</include>
+    </control>
+	</include>
+	
+	<!-- the clock-------------------------------------------------------------- -->
+	<include name="homescreenclock">
+	<control>
+      <description>hour label</description>
+      <type>label</type>
+      <id>201</id>
+      <posx>1130</posx>
+      <posy>575</posy>
+	  <width>200</width>
+      <label>time</label>
+      <info>System.Time(hh)</info>
+      <align>right</align>
+      <font>font120</font>
+	  <shadowcolor>30000000</shadowcolor>
+    </control>
+	<control>
+      <description>divider label</description>
+      <type>label</type>
+      <id>211</id>
+	  <posx>1125</posx>
+      <posy>587</posy>
+	  <width>120</width>
+      <label>:</label>
+	  <align>left</align>
+      <font>font60s</font>
+	  <shadowcolor>30000000</shadowcolor>
+	</control>
+	<control>
+      <description>minutes label</description>
+      <type>label</type>
+      <id>201</id>
+      <posx>1145</posx>
+      <posy>593</posy>
+	  <width>150</width>
+      <label>time</label>
+      <info>System.Time(mm)</info>
+      <align>left</align>
+      <font>font60s</font>
+	  <shadowcolor>30000000</shadowcolor>
+    </control>
+	<control>
+      <description>date label</description>
+      <type>label</type>
+      <id>200</id>
+      <posx>1125</posx>
+      <posy>655</posy>
+	  <width>140</width>
+      <label>date</label>
+      <info>System.Date</info>
+      <align>left</align>
+      <font>font10</font>
+	  <shadowcolor>30000000</shadowcolor>
+	  <wrapmultiline>true</wrapmultiline>
+    </control>
+	</include>
+</includes>

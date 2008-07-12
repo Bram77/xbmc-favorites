@@ -1,0 +1,266 @@
+<window>
+  <id>4</id>
+  <defaultcontrol>6</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include>background</include>
+    <control>
+      <description>settings label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>center</align> 
+      <posx>1</posx> 
+      <posy>-3</posy>
+	  <width>1280</width>
+	  <height>70</height>
+      <label>5</label>
+      <font>font70Bb</font>
+	  <aligny>top</aligny>
+      <textcolor>ffc38433</textcolor>
+    </control>
+	<control type="group" id="8000">
+		    <control>
+		      <description>My Videos</description>
+		      <type>button</type>
+		      <id>6</id>
+		      <font>font13</font>
+		      <posx>270</posx>
+		      <posy>140</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>defaultvideo.png</texturefocus>
+		      <texturenofocus>defaultvideo.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>3</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(17)</onclick>
+		      <onleft>1</onleft>
+		      <onright>7</onright>
+		      <onup>10</onup>
+		      <ondown>10</ondown>
+			  <animation effect="zoom" start="270,140,150,150" end="260,130,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="270,140,150,150" start="260,130,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+		    <control>
+		      <description>My Music</description>
+		      <type>button</type>
+		      <id>7</id>
+		      <font>font13</font>
+		      <posx>470</posx>
+		      <posy>140</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-ipodbig.png</texturefocus>
+		      <texturenofocus>default-ipodbig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>2</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(15)</onclick>
+		      <onleft>6</onleft>
+		      <onright>9</onright>
+		      <onup>2</onup>
+		      <ondown>2</ondown>
+			  <animation effect="zoom" start="470,140,150,150" end="460,130,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="470,140,150,150" start="460,130,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+
+		    <control>
+		      <description>My Pictures</description>
+		      <type>button</type>
+		      <id>9</id>
+		      <font>font13</font>
+		      <posx>670</posx>
+		      <posy>140</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-picturebig.png</texturefocus>
+		      <texturenofocus>default-picturebig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>1</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(12)</onclick>
+		      <onleft>7</onleft>
+		      <onright>8</onright>
+		      <onup>4</onup>
+		      <ondown>4</ondown>
+			  <animation effect="zoom" start="670,140,150,150" end="660,130,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="670,140,150,150" start="660,130,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+
+		    <control>
+		      <description>My Programs</description>
+		      <type>button</type>
+		      <id>8</id>
+		      <font>font13</font>
+		      <posx>870</posx>
+		      <posy>140</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-programsbig.png</texturefocus>
+		      <texturenofocus>default-programsbig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>0</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(13)</onclick>
+		      <onleft>9</onleft>
+		      <onright>6</onright>
+		      <onup>3</onup>
+		      <ondown>3</ondown>
+			  <animation effect="zoom" start="870,140,150,150" end="860,130,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="870,140,150,150" start="860,130,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+
+		    <control>
+		      <description>My Weather</description>
+		      <type>button</type>
+		      <id>10</id>
+		      <font>font13</font>
+		      <posx>270</posx>
+		      <posy>340</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-weatherbig.png</texturefocus>
+		      <texturenofocus>default-weatherbig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>8</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(14)</onclick>
+		      <onleft>3</onleft>
+		      <onright>2</onright>
+		      <onup>6</onup>
+		      <ondown>6</ondown>
+			  <animation effect="zoom" start="270,340,150,150" end="260,330,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="270,340,150,150" start="260,330,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+
+		    <control>
+		      <description>Network</description>
+		      <type>button</type>
+		      <id>2</id>
+		      <font>font13</font>
+		      <posx>470</posx>
+		      <posy>340</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-networkbig.png</texturefocus>
+		      <texturenofocus>default-networkbig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>705</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(18)</onclick>
+		      <onleft>10</onleft>
+		      <onright>4</onright>
+		      <onup>7</onup>
+		      <ondown>7</ondown>
+			  <animation effect="zoom" start="470,340,150,150" end="460,330,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="470,340,150,150" start="460,330,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+		    <control>
+		      <description>System</description>
+		      <type>button</type>
+		      <id>4</id>
+		      <font>font13</font>
+		      <posx>670</posx>
+		      <posy>340</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-harddiskbig.png</texturefocus>
+		      <texturenofocus>default-harddiskbig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>13000</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(16)</onclick>
+		      <onleft>2</onleft>
+		      <onright>3</onright>
+		      <onup>9</onup>
+		      <ondown>9</ondown>
+			  <animation effect="zoom" start="670,340,150,150" end="660,330,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="670,340,150,150" start="660,330,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+		    <control>
+		      <description>Appearance</description>
+		      <type>button</type>
+		      <id>3</id>
+		      <font>font13</font>
+		      <posx>870</posx>
+		      <posy>340</posy>
+		      <width>150</width>
+		      <height>150</height>
+		      <texturefocus>default-appearancebig.png</texturefocus>
+		      <texturenofocus>default-appearancebig.png</texturenofocus>
+		      <aligny>top</aligny>
+		      <textoffsety>150</textoffsety>
+		      <label>480</label>
+		      <align>center</align>
+		      <onclick>XBMC.ActivateWindow(19)</onclick>
+		      <onleft>4</onleft>
+		      <onright>10</onright>
+		      <onup>8</onup>
+		      <ondown>8</ondown>
+			  <animation effect="zoom" start="870,340,150,150" end="860,330,170,170" time="100">focus</animation>
+			  <animation effect="zoom" end="870,340,150,150" start="860,330,170,170" time="100">unfocus</animation>
+			  <include>contentpanelslide</include>
+		    </control>
+	</control>
+	<!--
+	<control type="group" id="9000">		<control>
+			<description>background image</description>
+			<type>image</type>			<id>1</id>
+			<posx>448</posx>
+			<posy>88</posy>
+			<width>379</width>			<height>420</height>
+			<include>View-as</include>
+			<texture>settings.png</texture>
+			<include>dialog-info</include>
+		</control>
+		<control type="button" id="21">
+			<description>Xbox Profiles button</description>
+			<posx>450</posx>
+			<posy>120</posy>
+			<label>13200</label>
+			<onclick>ActivateWindow(Profiles)</onclick>
+			<onleft>8000</onleft>
+			<onright>8000</onright>
+			<onup>20</onup>
+			<ondown>22</ondown>
+			<visible>!System.Platform.Linux</visible>
+			<include>View-as</include>
+			<include>dialog-infotext</include>
+		</control>
+		<control type="button" id="22">
+			<description>Reload Skin button</description>
+			<posx>450</posx>
+			<posy>157</posy>
+			<label>20183</label>
+			<onclick>XBMC.ReloadSkin()</onclick>
+			<onleft>8000</onleft>
+			<onright>8000</onright>
+			<onup>21</onup>
+			<ondown>20</ondown>
+			<include>View-as</include>
+			<include>dialog-infotext</include>
+		</control>	</control>
+	-->
+	<include>musicinfobox</include>
+	<include>videoinfobox</include>
+	
+	<include>homescreenclock</include>
+	<include>tabhomescreenbuttons</include>
+
+  </controls>
+
+</window>

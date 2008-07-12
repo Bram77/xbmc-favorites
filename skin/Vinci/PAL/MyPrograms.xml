@@ -1,0 +1,139 @@
+<window>
+  <id>1</id>
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>453</posx>
+      <posy>310</posy>
+      <width>218</width>
+      <height>240</height>
+      <texture>16x9bg-myprograms.png</texture>
+    </control>
+
+    <control>
+      <description>applications logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>33</posy>
+      <height>83</height>
+      <texture>background-myprograms.png</texture>
+    </control>
+
+    <control>
+      <description>My Programs text label</description>
+      <type>label</type>
+      <id>0</id>
+      <align>right</align> 
+      <posx>660</posx> 
+      <posy>85</posy>
+      <label>0</label>
+      <font>font14</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>number of files text label</description>
+      <type>label</type>
+      <id>12</id>
+      <posx>210</posx>
+      <posy>525</posy>
+      <label>-</label>
+      <font>font13</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <controlgroup>
+      <control>
+        <description>View As Icons button</description>
+        <type>button</type>
+        <id>2</id>
+        <posx>60</posx>
+        <posy>120</posy>
+        <label>100</label>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>99</onup>
+        <ondown>3</ondown>
+      </control>
+
+      <control>
+        <description>Sort by button</description>
+        <type>button</type>
+        <id>3</id>
+        <posx>60</posx>
+        <posy>157</posy>
+        <label>103</label>
+        <onleft>50</onleft>
+        <onright>4</onright>
+        <onup>2</onup>
+        <ondown>99</ondown>
+      </control>
+
+      <control>
+        <description>Sort asc</description>
+        <type>togglebutton</type>
+        <id>4</id>
+        <label>-</label>
+        <onleft>3</onleft>
+        <onright>50</onright>
+        <onup>2</onup>
+        <ondown>99</ondown>
+      </control>
+
+      <control>
+        <description>online gaming button</description>
+        <type>button</type>
+        <id>99</id>
+        <posx>60</posx>
+        <posy>194</posy>
+        <label>998</label>
+        <onclick>XBMC.ActivateWindow(XlinkKai)</onclick>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onup>3</onup>
+        <ondown>2</ondown>
+      </control>
+    </controlgroup>
+	
+    <control>
+      <description>ListItems Icons</description>
+      <type>image</type>
+      <posx>67</posx>
+      <posy>375</posy>
+      <width>120</width>
+      <height>120</height>
+      <info>ListItem.Icon</info>
+      <include>listitem-icon</include>
+    </control>
+
+    <control>
+      <description>apps listcontrol</description>
+      <type>listcontrol</type>
+      <id>50</id>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+    <control>
+      <description>thumbnailpanel</description>
+      <type>thumbnailpanel</type>
+      <id>51</id>
+      <onleft>2</onleft>
+      <onright>2</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+  </controls>
+
+</window>
+
