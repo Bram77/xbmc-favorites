@@ -1,0 +1,178 @@
+<window>
+	<id>6</id>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>background</include>
+
+		<control>
+			<description>number of files text label</description>
+			<type>label</type>
+			<id>12</id>
+			<posx>1077</posx>
+			<posy>85</posy>
+			<label>-</label>
+			<align>right</align>
+			<textcolor>d0ffffff</textcolor>
+		</control>
+
+		<control>
+			<description>My Video text label</description>
+			<type>label</type>
+			<id>1</id>
+			<align>center</align> 
+			<posx>1</posx> 
+			<posy>-3</posy>
+			<width>1280</width>
+			<height>70</height>
+			<label>3</label>
+			<font>font70Bb</font>
+			<aligny>top</aligny>
+			<textcolor>ffc38433</textcolor>
+		</control>
+
+		<control>
+			<description>ListItems Icons</description>
+			<type>image</type>
+			<posx>67</posx>
+			<posy>375</posy>
+			<width>120</width>
+			<height>120</height>
+			<texture>defaultDVDCover.png</texture>
+			<info>ListItem.Icon</info>
+			<include>listitem-icon</include>
+		</control>
+
+		<include>musicinfobox</include>
+		<include>videoinfobox</include>
+
+		<include>homescreenclock</include>
+		<include>tabhomescreenbuttons</include>
+
+		<include>OldListViewCommons</include>	
+		<include>AllViewCommonThumbSmall</include>
+		<include>AllViewCommonThumbLarge</include>
+		<include>3d_CoverView</include>
+		<include>Bigwraplist</include>
+		<include>Wide</include>
+		<include>WideMore</include>
+
+		<controlgroup>
+			<control>
+				<description>background image</description>
+				<type>image</type>
+				<id>1</id>
+				<posx>448</posx>
+				<posy>88</posy>
+				<width>381</width>
+				<height>420</height>
+				<include>View-as</include>
+				<texture>settings.png</texture>
+				<include>View-as</include>
+				<include>dialog-info</include>
+			</control>
+
+			<control>
+				<description>View As Icons button</description>
+				<type>button</type>
+				<id>2</id>
+				<posx>450</posx>
+				<posy>108</posy>
+				<width>379</width>
+				<align>center</align>
+				<label>100</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>7</onup>
+				<ondown>3</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+
+			<control type="button" id="3">
+				<description>Sort by button</description>
+				<posx>450</posx>
+				<posy>138</posy>
+				<width>379</width>
+				<align>center</align>
+				<label>103</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>4</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Sort asc</description>
+				<posx>700</posx>
+				<posy>150</posy>
+				<label>-</label>
+				<onleft>3</onleft>
+				<onright>50</onright>
+				<onup>2</onup>
+				<ondown>5</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+
+			<control type="radiobutton" id="5">
+				<description>Library button</description>
+				<posx>450</posx>
+				<posy>168</posy>
+				<width>379</width>
+				<align>center</align>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<font>font13</font>
+				<onclick>ReplaceWindow(myvideolibrary)</onclick>
+				<onclick>SetFocus(99)</onclick>
+				<selected>Window.IsVisible(myvideolibrary)</selected>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>3</onup>
+				<ondown>6</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+
+			<control>
+				<description>Play DVD</description>
+				<type>button</type>
+				<id>6</id>
+				<posx>450</posx>
+				<posy>198</posy>
+				<width>379</width>
+				<align>center</align>
+				<label>341</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>7</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+
+			<control>
+				<description>Stacking</description>
+				<type>radiobutton</type>
+				<id>7</id>
+				<posx>450</posx>
+				<posy>228</posy>
+				<width>379</width>
+				<align>center</align>
+				<posx>60</posx>
+				<posy>268</posy>
+				<label>346</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>2</ondown>
+				<include>View-as</include>
+				<include>dialog-infotext</include>
+			</control>
+		</controlgroup>
+	</controls>
+
+</window>
+

@@ -1,0 +1,52 @@
+<window id="133">
+	<defaultcontrol>402</defaultcontrol>
+	<include>dialogeffect</include>
+	<coordinates>
+		<system>1</system>
+		<origin x="838" y="42">true</origin>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<control type="image" id="1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>88</height>
+				<texture>voulume-panel-bg.png</texture>
+			</control>
+			<control type="label" id="401">
+				<description>Caption Label</description>
+				<posx>20</posx>
+				<posy>13</posy>
+				<font>font12</font>
+				<align>left</align>
+				<width>355</width>
+				<height>20</height>
+			</control>
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>20</posx>
+				<posy>33</posy>
+				<width>355</width>
+				<haspath>yes</haspath>
+				<font>font10</font>
+			</control>
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>15</posx>
+				<posy>57</posy>
+				<width>355</width>
+				<height>4</height>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			<control type="progress" id="404">
+				<description>progress control</description>
+				<posx>20</posx>
+				<posy>65</posy>
+				<width>355</width>
+				<height>4</height>
+				<overlaytexture>-</overlaytexture>
+			</control>
+		</control>
+	</controls>
+</window>

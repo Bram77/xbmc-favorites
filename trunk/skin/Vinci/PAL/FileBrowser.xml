@@ -1,0 +1,130 @@
+<window>
+  <id>126</id>
+  <defaultcontrol>450</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <include>dialog-effect</include>
+  <type>dialog</type>
+  <coordinates>
+    <system>1</system>
+    <posx>0</posx>
+    <posy>0</posy>
+  </coordinates>
+  <controls>
+
+    <control>
+      <description>filemanager background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>720</width>
+      <height>576</height>
+      <texture>trainerpanel_bg.png</texture>
+    </control>
+
+    <control>
+      <description>Listcontrol</description>
+      <type>listcontrol</type>
+      <id>450</id>
+      <posx>110</posx>
+      <posy>100</posy>
+      <width>500</width>
+      <height>350</height>
+      <onleft>413</onleft>
+      <onright>413</onright>
+      <onup>413</onup>
+      <ondown>413</ondown>
+    </control>
+
+    <control>
+      <description>Thumbnailpanel</description>
+      <type>thumbnailpanel</type>
+      <id>451</id>
+      <posx>110</posx>
+      <posy>80</posy>
+      <width>550</width>
+      <height>400</height>
+      <itemwidth>63</itemwidth>
+      <itemheight>78</itemheight>
+      <texturewidth>60</texturewidth>
+      <textureheight>64</textureheight>
+      <thumbwidth>56</thumbwidth>
+      <thumbheight>60</thumbheight>
+      <thumbposx>2</thumbposx>
+      <thumbposy>2</thumbposy>
+      <font>font10</font>
+      <include>selectedcolor</include>
+      <include>controldefaults</include>
+      <suffix>-</suffix>
+      <onleft>413</onleft>
+      <onright>413</onright>
+      <onup>413</onup>
+      <ondown>413</ondown>
+    </control>
+
+    <control>
+      <description>Path Label</description>
+      <type>label</type>
+      <id>412</id>
+      <posx>110</posx>
+      <posy>480</posy>
+      <width>300</width>
+      <align>left</align>
+      <font>font12</font>
+      <haspath>false</haspath>
+    </control>
+
+    <control>
+      <description>Heading Label</description>
+      <type>label</type>
+      <id>411</id>
+      <posx>120</posx>
+      <posy>60</posy>
+      <font>font12</font>
+      <width>480</width>
+      <align>center</align>
+    </control>
+
+    <control>
+      <description>OK button</description>
+      <type>button</type>
+      <id>413</id>
+      <posx>430</posx>
+      <posy>475</posy>
+      <width>80</width>
+      <align>center</align>
+      <label>186</label>
+    <texturefocus>list-focus.png</texturefocus>
+    <texturenofocus>list-nofocus.png</texturenofocus>
+      <onleft>450</onleft>
+      <onright>414</onright>
+      <onup>450</onup>
+      <ondown>450</ondown>
+    </control>
+
+    <control>
+      <description>Cancel button</description>
+      <type>button</type>
+      <id>414</id>
+      <posx>520</posx>
+      <posy>475</posy>
+      <width>80</width>
+      <align>center</align>
+      <label>222</label>
+    <texturefocus>list-focus.png</texturefocus>
+    <texturenofocus>list-nofocus.png</texturenofocus>
+      <onleft>413</onleft>
+      <onright>450</onright>
+      <onup>450</onup>
+      <ondown>450</ondown>
+    </control>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <width>720</width>
+      <height>576</height>
+      <texture>trainerpanel.png</texture>
+    </control>
+
+  </controls>
+</window>

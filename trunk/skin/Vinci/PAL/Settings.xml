@@ -1,0 +1,219 @@
+<window>
+  <id>4</id>
+  <defaultcontrol>6</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include>background</include>
+
+    <control>
+      <description>background image</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>453</posx>
+      <posy>310</posy>
+      <width>218</width>
+      <height>240</height>
+      <texture>16x9bg-settings.png</texture>
+    </control>
+
+    <control>
+      <description>start logo</description>
+      <type>image</type>
+      <id>1</id>
+      <posx>55</posx>
+      <posy>35</posy>
+      <height>75</height>
+      <texture>background-settings.png</texture>
+    </control>
+
+    <control>
+      <description>settings label</description>
+      <type>label</type>
+      <id>1</id>
+      <align>right</align> 
+      <posx>660</posx> 
+      <posy>85</posy>
+      <label>5</label>
+      <font>font14</font>
+      <textcolor>d0ffffff</textcolor>
+    </control>
+
+    <control>
+      <description>My Videos</description>
+      <type>button</type>
+      <id>6</id>
+      <font>font13</font>
+      <posx>100</posx>
+      <posy>150</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-videos-focus.png</texturefocus>
+      <texturenofocus>settings-videos-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>3</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(17)</onclick>
+      <onleft>8</onleft>
+      <onright>7</onright>
+      <onup>10</onup>
+      <ondown>10</ondown>
+    </control>
+
+    <control>
+      <description>My Music</description>
+      <type>button</type>
+      <id>7</id>
+      <font>font13</font>
+      <posx>240</posx>
+      <posy>150</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-music-focus.png</texturefocus>
+      <texturenofocus>settings-music-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>2</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(15)</onclick>
+      <onleft>6</onleft>
+      <onright>9</onright>
+      <onup>2</onup>
+      <ondown>2</ondown>
+    </control>
+
+    <control>
+      <description>My Pictures</description>
+      <type>button</type>
+      <id>9</id>
+      <font>font13</font>
+      <posx>380</posx>
+      <posy>150</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-pictures-focus.png</texturefocus>
+      <texturenofocus>settings-pictures-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>1</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(12)</onclick>
+      <onleft>7</onleft>
+      <onright>8</onright>
+      <onup>4</onup>
+      <ondown>4</ondown>
+    </control>
+
+    <control>
+      <description>My Programs</description>
+      <type>button</type>
+      <id>8</id>
+      <font>font13</font>
+      <posx>520</posx>
+      <posy>150</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-programs-focus.png</texturefocus>
+      <texturenofocus>settings-programs-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>0</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(13)</onclick>
+      <onleft>9</onleft>
+      <onright>6</onright>
+      <onup>3</onup>
+      <ondown>3</ondown>
+    </control>
+
+    <control>
+      <description>My Weather</description>
+      <type>button</type>
+      <id>10</id>
+      <font>font13</font>
+      <posx>100</posx>
+      <posy>310</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-weather-focus.png</texturefocus>
+      <texturenofocus>settings-weather-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>8</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(14)</onclick>
+      <onleft>3</onleft>
+      <onright>2</onright>
+      <onup>6</onup>
+      <ondown>6</ondown>
+    </control>
+
+    <control>
+      <description>Network</description>
+      <type>button</type>
+      <id>2</id>
+      <font>font13</font>
+      <posx>240</posx>
+      <posy>310</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-network-focus.png</texturefocus>
+      <texturenofocus>settings-network-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>705</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(18)</onclick>
+      <onleft>10</onleft>
+      <onright>4</onright>
+      <onup>7</onup>
+      <ondown>7</ondown>
+    </control>
+
+    <control>
+      <description>System</description>
+      <type>button</type>
+      <id>4</id>
+      <font>font13</font>
+      <posx>380</posx>
+      <posy>310</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-system-focus.png</texturefocus>
+      <texturenofocus>settings-system-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>13000</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(16)</onclick>
+      <onleft>2</onleft>
+      <onright>3</onright>
+      <onup>9</onup>
+      <ondown>9</ondown>
+    </control>
+
+    <control>
+      <description>Appearance</description>
+      <type>button</type>
+      <id>3</id>
+      <font>font13</font>
+      <posx>520</posx>
+      <posy>310</posy>
+      <width>100</width>
+      <height>100</height>
+      <texturefocus>settings-appearance-focus.png</texturefocus>
+      <texturenofocus>settings-appearance-nofocus.png</texturenofocus>
+      <aligny>top</aligny>
+      <textoffsety>100</textoffsety>
+      <label>480</label>
+      <align>center</align>
+      <onclick>XBMC.ActivateWindow(19)</onclick>
+      <onleft>4</onleft>
+      <onright>10</onright>
+      <onup>8</onup>
+      <ondown>8</ondown>
+    </control>
+
+  </controls>
+
+</window>
