@@ -1,9 +1,41 @@
 import urllib,urllib2,re,sys,xbmcplugin,xbmcgui
 
-#Podaudio Plugin - By Voinage 2008.
+#Podaudio/Librivox Plugin - By Voinage 2008.
 
-def INDEX():
-        url='http://podiobooks.com/'
+def MAINCATS():
+        addDir("POD-AUDIO","http://podiobooks.com/",1,"")
+        addDir("LIBRIVOX","http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=0",4,"")
+
+def ALPHABET():
+        addDir('A','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=0',4,'')
+        addDir('B','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=120',4,'')
+        addDir('C','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=280',4,'')
+        addDir('D','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=360',4,'')
+        addDir('E','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=440',4,'')
+        addDir('F','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=480',4,'')
+        addDir('G','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=480',4,'')
+        addDir('H','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=560',4,'')
+        addDir('I','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=640',4,'')
+        addDir('J','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=640',4,'')
+        addDir('K','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=680',4,'')
+        addDir('L','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=720',4,'')
+        addDir('M','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=800',4,'')
+        addDir('N','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=920',4,'')
+        addDir('O','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=960',4,'')
+        addDir('P','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=960',4,'')
+        addDir('Q','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1000',4,'')
+        addDir('R','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1000',4,'')
+        addDir('S','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1040',4,'')
+        addDir('T','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1160',4,'')
+        addDir('U','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1200',4,'')
+        addDir('V','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1240',4,'')
+        addDir('W','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1440',4,'')
+        addDir('X','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1520',4,'')
+        addDir('Y','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1520',4,'')
+        addDir('Z','http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=1520',4,'')
+
+        
+def INDEX(url):
         req = urllib2.Request(url)
         req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
         response = urllib2.urlopen(req)
@@ -14,7 +46,7 @@ def INDEX():
         for name,ident in match:
                 main="http://podiobooks.com/podiobooks/search.php?category="+ident
                 thumbnail="http://www.podiobooks.com/images/podiobooks300x300.jpg"
-                addDir(name,main,1,thumbnail)
+                addDir(name,main,2,thumbnail)
 
 def INDEX2(url):
         res=[]
@@ -30,7 +62,7 @@ def INDEX2(url):
                 thumbnail="http://podiobooks.com/"+thumbnail
                 res.append((name,main,thumbnail))
         for name,url,thumbnail in res:
-                addDir(name,url,2,thumbnail)
+                addDir(name,url,3,thumbnail)
 
 def AUDIO(url):
         res=[]
@@ -49,7 +81,48 @@ def AUDIO(url):
                 #mp3=re.sub('.mp3','',mp3)
                 thumbnail=thumb[0]
                 addLink(str(i)+". "+ name,mp3,thumbnail)
+
+def LIBRIVOX(url):
+        res=[]
+        url=url+"&"
+        req = urllib2.Request(url)
+        req.add_header('User-Agent','Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        response.close()
+        p=re.compile('<li><a href="(.+?)">.+?"(.+?)"</a>')
+        match=p.findall(link)
+        for uri,name in match:
+                addDir(name,uri,5,"")        
+        p=re.compile('http://librivox.org/newcatalog/search.+?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset=(.+?)&')
+        next=p.findall(url)
+        for page in next:
+                nextpage='http://librivox.org/newcatalog/search.php?reader=&mc=&bc=&cat=&genre=&language=&type=&author=&title=&status=complete&reader_exact=&mc_exact=&bc_exact=&date=&offset='+str(int(page)+40)
+                addDir(" NEXT PAGE",nextpage,4,"")
                 
+def LIBRIVOXAUDIO(url):
+        res=[]
+        req = urllib2.Request(url)
+        req.add_header('User-Agent','Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        response.close()
+        p=re.compile('<em>(.+?)</em> .+? <br />\nSource: <a href=".+?">.+?</a><br />\n.+?<a href="(.+?)">(.+?)</a>.+?<br />\n.+?<a href="(.+?)">(.+?)</a>.+?<br />\n.+?<a href="(.+?)">(.+?)</a>.+?\n</li>\n')
+        match=p.findall(link)
+        for mainname,lowmp3,lowname,medmp3,medname,highogg,highoggname in match:
+                addLink(mainname+" "+lowname,lowmp3,'')
+                addLink(mainname+" "+medname,medmp3,'')
+                addLink(mainname+" "+highoggname,highogg,'')
+                
+        p=re.compile('<em>(.+?)</em> .+? <br />\n.+?<a href="(.+?)">(.+?)</a>.+?<br />\n.+?<a href="(.+?)">(.+?)</a>.+?<br />\n.+?<a href="(.+?)">(.+?)</a>.+?<br />')
+        match2=p.findall(link)
+        for mainname,lowmp3,lowname,medmp3,medname,highogg,highoggname in match2:
+                addLink(mainname+" "+lowname,lowmp3,'')
+                addLink(mainname+" "+medname,medmp3,'')
+                addLink(mainname+" "+highoggname,highogg,'')                        
+        
+        
+                                
 def get_params():
         param=[]
         paramstring=sys.argv[2]
@@ -105,11 +178,25 @@ print "URL: "+str(url)
 print "Name: "+str(name)
 if mode==None or url==None or len(url)<1:
         print "categories"
-        INDEX()
+        MAINCATS()
 elif mode==1:
         print "index of : "+url
-        INDEX2(url)
+        INDEX(url)
 elif mode==2:
         print "index of : "+url
+        INDEX2(url)
+elif mode==3:
+        print "index of : "+url
         AUDIO(url)
+elif mode==4:
+        print "index of : "+url
+        LIBRIVOX(url)
+elif mode==5:
+        print "index of : "+url
+        LIBRIVOXAUDIO(url)
+elif mode==6:
+        print "index of : "+url
+        ALPHABET()
+
+        
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
