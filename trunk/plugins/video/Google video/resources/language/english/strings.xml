@@ -14,5 +14,7 @@
     <string id="300011">Search only DAILYMOTION</string> 
     <string id="300012">Search only TRILULILU</string>
     <string id="25000">SET DOWNLOAD DIRECTORY:</string>
-    <string id="30003">Download Directory (Function to be added)</string>
+    <string id="30003">Allow file download</string>
+    <string id="300013">Set Download Directory </string>
+
 </strings>

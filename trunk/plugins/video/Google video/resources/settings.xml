@@ -14,7 +14,9 @@
    <setting id="site : DAILYMOTION" type="bool" label="300011" default="false"/>
    <setting id="site : TRILULILU" type="bool" label="300012" default="false"/>
    <setting id="Set download directory" type="text" label="25000" default=""/>
-   <setting id="Download Video" type="text" label="30003" default="F:/MOVIES"/>
+   <setting id="Download Video" type="bool" label="30003" default="false"/>
+   <setting id="Download Directory" type="text" label="300013" default="F:/Movies"/>
+
 
    
 </settings>

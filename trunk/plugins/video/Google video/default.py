@@ -11,7 +11,7 @@ def SEARCH():
         
         if xbmcplugin.getSetting("Search Duration : Short") == "true":
                 dur="&dur=1"
-                (dur)
+                SITE(dur)
         elif xbmcplugin.getSetting("Search Duration : Medium") == "true":
                 dur="&dur=2"
                 SITE(dur)
@@ -51,6 +51,8 @@ def SITE(dur):
         elif xbmcplugin.getSetting("site : TRILULILU") == "true":
                 site="+site%3Atrilulilu.ro"
                 GOOGLESEARCH(dur,site)
+        #elif xbmcplugin.getSetting("Download Video") == "true":
+        #        
         else:
                 site=""
                 GOOGLESEARCH(dur,site)
@@ -65,7 +67,7 @@ def GOOGLESEARCH(dur,site):
                 test=search
                 encode=urllib.quote_plus(search)
                 encode2=urllib.quote(test)
-                req = urllib2.Request('http://video.google.com/videosearch?hl=en&q='+encode+''+site+'&btnG=Google+Search&lr='+dur+'&so=0&num=100#')
+                req = urllib2.Request('http://video.google.com/videosearch?hl=en&q='+encode+site+'&btnG=Google+Search&lr='+dur+'&so=0&num=100#')
                 req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
                 response = urllib2.urlopen(req)
                 link=response.read()
@@ -73,11 +75,17 @@ def GOOGLESEARCH(dur,site):
                 code=re.sub('&#39;','',link)
                 code2=re.sub('&amp;','',code)
                 code3=re.sub('&quot;','',code2)
-                p=re.compile('<a href="(.+?)" target="_top"><img src="(.+?)"></a></div>\n<div class="rl-thumbnail-rollover" onclick=".+?"></div>\n<img class="favicon" style="display:none;"></img>\n</div>\n<div class="rl-metadata">\n<div class="rl-title" onclick=".+?">\n<a href=".+?" target="_top">\n(.+?)\n</a>\n</div>')
+                p=re.compile('<a href="(.+?)" target="_top"><img src="(.+?)"></a></div>\n<div class="rl-thumbnail-rollover" onclick=".+?"></div>\n<div class="favicon" style=".+?"></div>\n<div class=".+?" title=".+?"></div>\n</div>\n<div class="rl-metadata">\n<div class="rl-title" onclick=".+?">\n<a href=".+?" target="_top">\n(.+?)\n</a>')
                 match=p.findall(code3)
                 for url,thumbnail,name in match:
                         url="http://video.google.com"+url
                         res.append((url,thumbnail,name))
+                p=re.compile('<img src="(.+?)"></a></div>\n<div class="rl-thumbnail-rollover" onclick=".+?"></div>\n<div class="favicon" style="display:none;"></div>\n</div>\n<div class="rl-metadata">\n<div class="rl-title" onclick=".+?">\n<a href="(.+?)" target="_top">\n(.+?)\n</a>\n</div>')
+                match=p.findall(code3)
+                for thumbnail,url,name in match:
+                        url="http://video.google.com"+url
+                        res.append((url,thumbnail,name))
+                for url,thumbnail,name in res:
                         addDir(name,url,2,thumbnail)
                 p=re.compile('<a id="main-pagi-next" href="(.+?)">\n')
                 nextpage=p.findall(link)
@@ -96,7 +104,7 @@ def INDEX(name,url):
         code=re.sub('&#39;','',link)
         code2=re.sub('&amp;','',code)
         code3=re.sub('&quot;','',code2)
-        p=re.compile('<a href="(.+?)" target="_top"><img src="(.+?)"></a></div>\n<div class="rl-thumbnail-rollover" onclick=".+?"></div>\n<img class="favicon" style="display:none;"></img>\n</div>\n<div class="rl-metadata">\n<div class="rl-title" onclick=".+?">\n<a href=".+?" target="_top">\n(.+?)\n</a>\n</div>')
+        p=re.compile('<a href="(.+?)" target="_top"><img src="(.+?)"></a></div>\n<div class="rl-thumbnail-rollover" onclick=".+?"></div>\n<div class="favicon" style=".+?"></div>\n<div class=".+?" title=".+?"></div>\n</div>\n<div class="rl-metadata">\n<div class="rl-title" onclick=".+?">\n<a href=".+?" target="_top">\n(.+?)\n</a>')
         match=p.findall(code3)
         for url,thumbnail,name in match:
                 url="http://video.google.com"+url
@@ -119,6 +127,16 @@ def VIDEO(name,url):
         match=p.findall(link)
         for videolink in match:
                 pass
+                if videolink.find('broadcaster')>0:
+                        req = urllib2.Request(videolink)
+                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                        response = urllib2.urlopen(req)
+                        link=response.read()
+                        response.close()
+                        p=re.compile('embed src="http://www.broadcaster.com/video/external/player.+?clip=(.+?)"')
+                        match=p.findall(link)
+                        addLink(match[0],"http://cache.broadcaster.com/peoplecaster/"+match[0]+"?.flv","")
+                        
                 if videolink.find('guba.com')>0:
                         req = urllib2.Request(videolink)
                         req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
@@ -146,9 +164,8 @@ def VIDEO(name,url):
                         match=p.findall(link)
                         for youtube in match:
                                 linkage="http://www.youtube.com/get_video?video_id="+code2+"&t="+youtube
-                                #H264="http://www.youtube.com/get_video?video_id="+code2+"&fmt=18"+"&t="+youtube+"?.avi"
                                 addLink(name+"-YOUTUBE",linkage,"http://www.webtvwire.com/wp-content/uploads/2007/06/youtube.jpg")
-                                #addLink(name+"-YOUTUBE H264 High Def",H264,"http://www.webtvwire.com/wp-content/uploads/2007/06/youtube.jpg")
+                              
                 if videolink.find('veoh.com')>0:
                         res=[]
                         req = urllib2.Request(videolink)
