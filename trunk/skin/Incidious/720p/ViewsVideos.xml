@@ -653,10 +653,10 @@
 			</control>
 		</control>
 		<control type="wraplist" id="58">
-			<posx>20</posx>
-			<posy>785</posy>
-			<width>7</width>
-			<height>1</height>
+			<posx>490</posx>
+			<posy>140</posy>
+			<width>300</width>
+			<height>440</height>
 			<onleft>58</onleft>
 			<onright>58</onright>
 			<onup>60</onup>
@@ -667,9 +667,23 @@
 			<scrolltime>250</scrolltime>
 			<focusedposition>3</focusedposition>
 			<visible>Container.Content(Movies) | Window.IsVisible(Videofiles)</visible>
-			<itemlayout height="1" width="1">
+			<itemlayout height="440" width="300">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture>-</texture>
+				</control>
 			</itemlayout>
-			<focusedlayout height="1" width="1">
+			<focusedlayout height="440" width="300">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture>-</texture>
+				</control>
 			</focusedlayout>
 		</control>
 	</include>
