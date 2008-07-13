@@ -1090,6 +1090,7 @@
 <ondown>50</ondown>
 <pagecontrol>90</pagecontrol>
 <itemlayout height="29">
+
 <control type="image">
 <posx>5</posx>
 <posy>2</posy>
@@ -1775,9 +1776,22 @@
 <description>Background</description>
 <type>image</type>
 <posx>0</posx>
+<posy>526</posy>
+<width>720</width>
+<height>50</height>
+<texture>Background2.png</texture>
+<animation effect="fade" time="800">WindowOpen</animation>
+<visible>Control.IsVisible(56)</visible>
+<animation effect="fade" time="800">WindowClose</animation>
+</control>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>0</posx>
 <posy>0</posy>
 <width>720</width>
-<height>576</height>
+<height>526</height>
 <texture>Back-Row.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
@@ -1787,9 +1801,9 @@
 <control type="wraplist" id="56">
 <viewtype label="Big Wide">Wide Icons</viewtype>
 <posx>0</posx>
-<posy>60</posy>
+<posy>50</posy>
 <width>700</width>
-<height>470</height>
+<height>460</height>
 <onleft>2</onleft>
 <onright>90</onright>
 <onup>56</onup>
@@ -1857,6 +1871,20 @@
 <height>150</height>
 <texture>left1.png</texture>
 <visible>Control.HasFocus(56)</visible>
+</control>
+
+<control type="label">
+<posx>-40</posx>
+<posy>536</posy>
+<width>760</width>
+<height>16</height>
+<font>special16</font>
+<scroll>true</scroll>
+<textcolor>white</textcolor>
+<info>ListItem.Label</info>
+<visible>Control.IsVisible(56)</visible>
+<align>center</align>
+<animation effect="fade" time="800">WindowClose</animation>
 </control>
 
 <control type="scrollbar" id="90">
@@ -1889,9 +1917,22 @@
 <description>Background</description>
 <type>image</type>
 <posx>0</posx>
+<posy>526</posy>
+<width>720</width>
+<height>50</height>
+<texture>Background2.png</texture>
+<animation effect="fade" time="800">WindowOpen</animation>
+<visible>Control.IsVisible(56)</visible>
+<animation effect="fade" time="800">WindowClose</animation>
+</control>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>0</posx>
 <posy>0</posy>
 <width>720</width>
-<height>576</height>
+<height>526</height>
 <texture>Back-Row.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
@@ -1902,9 +1943,9 @@
 <visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVshows)</visible>
 <viewtype label="Big Wide">Wide Icons</viewtype>
 <posx>0</posx>
-<posy>60</posy>
+<posy>50</posy>
 <width>700</width>
-<height>470</height>
+<height>460</height>
 <onleft>2</onleft>
 <onright>90</onright>
 <onup>56</onup>
@@ -1972,6 +2013,20 @@
 <height>150</height>
 <texture>left1.png</texture>
 <visible>Control.HasFocus(56)</visible>
+</control>
+
+<control type="label">
+<posx>-40</posx>
+<posy>536</posy>
+<width>760</width>
+<height>16</height>
+<font>special16</font>
+<scroll>true</scroll>
+<textcolor>white</textcolor>
+<info>ListItem.Label</info>
+<visible>Control.IsVisible(56)</visible>
+<align>center</align>
+<animation effect="fade" time="800">WindowClose</animation>
 </control>
 
 <control type="scrollbar" id="90">
@@ -2023,7 +2078,6 @@
 <height>56</height>
 <texture>Background2.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(59)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
@@ -2038,7 +2092,7 @@
 <posx>5</posx>
 <posy>0</posy>
 <width>720</width>
-<height>450</height>
+<height>440</height>
 <onleft>2</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -2103,10 +2157,10 @@
 
 <control type="label">
 <posx>0</posx>
-<posy>530</posy>
+<posy>533</posy>
 <width>720</width>
 <height>16</height>
-<font>special14</font>
+<font>special16</font>
 <scroll>true</scroll>
 <textcolor>white</textcolor>
 <info>ListItem.Label</info>
@@ -2164,7 +2218,6 @@
 <height>56</height>
 <texture>Background2.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
-<visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(59)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
@@ -2179,7 +2232,7 @@
 <posx>5</posx>
 <posy>0</posy>
 <width>720</width>
-<height>450</height>
+<height>440</height>
 <onleft>2</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -2244,10 +2297,10 @@
 
 <control type="label">
 <posx>0</posx>
-<posy>530</posy>
+<posy>533</posy>
 <width>720</width>
 <height>16</height>
-<font>special14</font>
+<font>special16</font>
 <scroll>true</scroll>
 <textcolor>white</textcolor>
 <info>ListItem.Label</info>
