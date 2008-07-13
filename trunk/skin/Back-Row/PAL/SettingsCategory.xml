@@ -153,9 +153,9 @@
 <control>
 		<description>Panel Image</description>
 		<type>image</type>
-		<posx>70</posx>
+		<posx>65</posx>
 		<posy>80</posy>
-		<width>580</width>
+		<width>590</width>
 		<height>460</height>
 		<texture>OSD Background.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>

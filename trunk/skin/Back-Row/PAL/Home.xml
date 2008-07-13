@@ -2101,24 +2101,24 @@
 
 	
 
-	
 	<!-- RSS Feeds -->
-	
-	<control type="image">
+
+<control type="image">
 		<posx>0</posx>
-		<posy>556</posy>
+		<posy>550</posy>
 		<width>720</width>
-		<height>20</height>
-		<texture>background2.png</texture>
+		<height>26</height>
+		<texture>black.png</texture>
+		<colordiffuse>aaffffff</colordiffuse>
 	    <visible>!Skin.HasSetting(rss)</visible>
        	</control>
 
 	<control>
 		<description>RSS Feeds</description>
 		<type>rss</type>
-		<posx>0</posx>
+		<posx>75</posx>
 		<posy>552</posy>
-		<width>720</width>
+		<width>645</width>
 		<font>Font18</font>
 		<aligny>center</aligny>
 		<scroll>true</scroll>
@@ -2130,15 +2130,6 @@
 
 
 <!-- Time -->	
-
-<control type="image">
-		<posx>0</posx>
-		<posy>556</posy>
-		<width>75</width>
-		<height>20</height>
-		<texture>background2.png</texture>
-	    <visible>!Skin.HasSetting(rss)</visible>
-       	</control>
 
 
 <control type="label">
@@ -2152,6 +2143,7 @@
 			<font>font18</font>
 			 <visible>!Skin.HasSetting(rss)</visible>
 		</control>
+
 
 	<!-- Weather Info Labels -->
 	<control> 
