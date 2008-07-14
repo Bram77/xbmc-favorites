@@ -205,7 +205,7 @@
 		<visible allowhiddenfocus="false">Skin.HasSetting(gametrailers)</visible>
 		</control>
 
-		<control type="button" id="12">
+		<control type="button" id="18">
 		<include>mediamenu</include>
 		<label>Trailers</label>
 		<onclick>Skin.SetBool(movietrailers)</onclick>
@@ -218,7 +218,7 @@
 		<visible allowhiddenfocus="false">Skin.HasSetting(videomovies)</visible>
 		</control>
 
-		<control type="button" id="14">
+		<control type="button" id="19">
 		<label>Movies</label>
 		<include>mediamenu</include>
 		<onclick>Skin.Reset(movietrailers)</onclick>
@@ -234,10 +234,10 @@
 		</control>
 	</control>
 
+	<include>Window-Files</include>
+	
 	<include>Viewtype_List</include>
 	<include>Viewtype_Poster</include>
-
-	<include>Window-Files</include>
 
 	</control>
 
@@ -245,6 +245,7 @@
 	<include>Viewtype_ShowcaseWide</include>
 	
 	<include>nowplayingpopup</include>
-
+	<include>showcaseimdb</include>
+	
 	</controls>
 </window>

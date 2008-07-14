@@ -29,173 +29,61 @@
 		<colordiffuse>EFFFFFFF</colordiffuse>
 		<texture>Home_Focus.png</texture>
 	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>PICTURES</label>
-		<visible>Window.IsActive(12) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-	</control>
-	
+
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>PICTURES</label>
-		<visible>Window.IsActive(12) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>PICTURES</label>
-		<visible>Window.IsActive(12) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(12)</visible>
 	</control>
 
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>GAMES</label>
-		<visible>Window.IsActive(13) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-	</control>
-	
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>GAMES</label>
-		<visible>Window.IsActive(13) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>GAMES</label>
-		<visible>Window.IsActive(13) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(13)</visible>
 	</control>
 
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>WEATHER</label>
-		<visible>Window.IsActive(14) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-	</control>
-	
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>WEATHER</label>
-		<visible>Window.IsActive(14) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>WEATHER</label>
-		<visible>Window.IsActive(14) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(14)</visible>
 	</control>
 
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>MUSIC</label>
-		<visible>Window.IsActive(15) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-	</control>
-	
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>MUSIC</label>
-		<visible>Window.IsActive(15) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>MUSIC</label>
-		<visible>Window.IsActive(15) + Skin.HasSetting(fontfranklein)</visible>
-	</control>
-
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>SYSTEM</label>
-		<visible>Window.IsActive(16) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
+		<visible>Window.IsActive(15)</visible>
 	</control>
 
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>SYSTEM</label>
-		<visible>Window.IsActive(16) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>SYSTEM</label>
-		<visible>Window.IsActive(16) + Skin.HasSetting(fontfranklein)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>VIDEO</label>
-		<visible>Window.IsActive(17) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
+		<visible>Window.IsActive(16)</visible>
 	</control>
 
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>VIDEO</label>
-		<visible>Window.IsActive(17) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>VIDEO</label>
-		<visible>Window.IsActive(17) + Skin.HasSetting(fontfranklein)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>NETWORK</label>
-		<visible>Window.IsActive(18) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitleacens</include>
-		<label>NETWORK</label>
-		<visible>Window.IsActive(18) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>NETWORK</label>
-		<visible>Window.IsActive(18) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(17)</visible>
 	</control>
 
 	<control type="label">
 		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<label>SCREEN</label>
-		<visible>Window.IsActive(19) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
+		<include>settingstitleacens</include>
+		<label>NETWORK</label>
+		<visible>Window.IsActive(18)</visible>
 	</control>
-	
+
 	<control type="label">
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<label>SCREEN</label>
-		<visible>Window.IsActive(19) + Skin.HasSetting(fontacens)</visible>
-	</control>
-	
-	<control type="label">
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<label>SCREEN</label>
-		<visible>Window.IsActive(19) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(19)</visible>
 	</control>
 
 	<include>nowplaying</include>

@@ -61,28 +61,8 @@
 	<control type="label">
 		<label>AEON</label>
 		<include>settingstitle</include>
-		<include>settingstitlexephyr</include>
-		<visible>Window.IsActive(56) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
-		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
-		<animation effect="fade" time="0" condition="!Window.Previous(Home)">WindowOpen</animation>
-	</control>
-	
-	<control type="label">
-		<label>AEON</label>
-		<include>settingstitle</include>
 		<include>settingstitleacens</include>
-		<visible>Window.IsActive(56) + Skin.HasSetting(fontacens)</visible>
-		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
-		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
-		<animation effect="fade" time="0" condition="!Window.Previous(Home)">WindowOpen</animation>
-	</control>
-	
-	<control type="label">
-		<label>AEON</label>
-		<include>settingstitle</include>
-		<include>settingstitlefranklein</include>
-		<visible>Window.IsActive(56) + Skin.HasSetting(fontfranklein)</visible>
+		<visible>Window.IsActive(56)</visible>
 		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
 		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
 		<animation effect="fade" time="0" condition="!Window.Previous(Home)">WindowOpen</animation>
@@ -244,24 +224,6 @@
 		<label>Lower Home scroller position (WIP - disables RSS and Now Playing)</label>
 		<onclick>Skin.ToggleSetting(drophome)</onclick>
 		<selected>Skin.HasSetting(drophome)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="109">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Use alternative Acens font for menu</label>
-		<onclick>Skin.ToggleSetting(fontacens)</onclick>
-		<onclick>Skin.Reset(fontfranklein)</onclick>
-		<selected>Skin.HasSetting(fontacens)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="110">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Use alternative Media Gothic font for menu</label>
-		<onclick>Skin.ToggleSetting(fontfranklein)</onclick>
-		<onclick>Skin.Reset(fontacens)</onclick>
-		<selected>Skin.HasSetting(fontfranklein)</selected>	
 	</control>
 
 	</control>

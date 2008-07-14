@@ -20,53 +20,19 @@
 		<scrolltime>200</scrolltime>
 		<itemlayout width="355" height="68">
 			<control type="label">
-				<posy>1</posy>
-				<height>68</height>
-				<font>menufont</font>
-				<include>scrollerlabel</include>
-				<visible>!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)</visible>
-				<textcolor>FF000000</textcolor>
-			</control>
-			<control type="label">
 				<posy>5</posy>
 				<height>68</height>
 				<font>menufontacens</font>
 				<include>scrollerlabel</include>
-				<visible>Skin.HasSetting(fontacens)</visible>
-				<textcolor>FF000000</textcolor>
-			</control>
-			<control type="label">
-				<posy>3</posy>
-				<height>68</height>
-				<font>menufontfranklein</font>
-				<include>scrollerlabel</include>
-				<visible>Skin.HasSetting(fontfranklein)</visible>
 				<textcolor>FF000000</textcolor>
 			</control>
 		</itemlayout>
 		<focusedlayout width="355" height="68">
 			<control type="label">
-				<posy>1</posy>
-				<height>68</height>
-				<font>menufont</font>
-				<include>scrollerlabel</include>
-				<visible>!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)</visible>
-				<textcolor>FF7d7d7d</textcolor>
-			</control>
-			<control type="label">
 				<posy>5</posy>
 				<height>68</height>
 				<font>menufontacens</font>
 				<include>scrollerlabel</include>
-				<visible>Skin.HasSetting(fontacens)</visible>
-				<textcolor>FF7d7d7d</textcolor>
-			</control>
-			<control type="label">
-				<posy>3</posy>
-				<height>68</height>
-				<font>menufontfranklein</font>
-				<include>scrollerlabel</include>
-				<visible>Skin.HasSetting(fontfranklein)</visible>
 				<textcolor>FF7d7d7d</textcolor>
 			</control>
 		</focusedlayout>
@@ -360,191 +326,65 @@
 
 		<control type="label">
 			<label>PICTURES</label>
-			<visible>Window.Next(12) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-		
-		<control type="label">
-			<label>PICTURES</label>
-			<visible>Window.Next(12) + Skin.HasSetting(fontacens)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>PICTURES</label>
-			<visible>Window.Next(12) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-	
-		<control type="label">
-			<label>GAMES</label>
-			<visible>Window.Next(13) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-
-		<control type="label">
-			<label>GAMES</label>
-			<visible>Window.Next(13) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(12)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>GAMES</label>
-			<visible>Window.Next(13) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-		
-		<control type="label">
-			<label>WEATHER</label>
-			<visible>Window.Next(14) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-		
-		<control type="label">
-			<label>WEATHER</label>
-			<visible>Window.Next(14) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(13)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>WEATHER</label>
-			<visible>Window.Next(14) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-
-		<control type="label">
-			<label>MUSIC</label>
-			<visible>Window.Next(15) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-
-		<control type="label">
-			<label>MUSIC</label>
-			<visible>Window.Next(15) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(14)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>MUSIC</label>
-			<visible>Window.Next(15) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-		
-		<control type="label">
-			<label>SYSTEM</label>
-			<visible>Window.Next(16) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-
-		<control type="label">
-			<label>SYSTEM</label>
-			<visible>Window.Next(16) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(15)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>SYSTEM</label>
-			<visible>Window.Next(16) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-		
-		<control type="label">
-			<label>VIDEO</label>
-			<visible>Window.Next(17) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-
-		<control type="label">
-			<label>VIDEO</label>
-			<visible>Window.Next(17) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(16)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>VIDEO</label>
-			<visible>Window.Next(17) + Skin.HasSetting(fontfranklein)</visible>
+			<visible>Window.Next(17)</visible>
 			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-		
-		<control type="label">
-			<label>NETWORK</label>
-			<visible>Window.Next(18) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
+			<include>homefocusacens</include>
 		</control>
 
 		<control type="label">
 			<label>NETWORK</label>
-			<visible>Window.Next(18) + Skin.HasSetting(fontacens)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>NETWORK</label>
-			<visible>Window.Next(18) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
-		</control>
-		
-		<control type="label">
-			<label>SCREEN</label>
-			<visible>Window.Next(19) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-		
-		<control type="label">
-			<label>SCREEN</label>
-			<visible>Window.Next(19) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(18)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
 		</control>
 		
 		<control type="label">
 			<label>SCREEN</label>
-			<visible>Window.Next(19) + Skin.HasSetting(fontfranklein)</visible>
+			<visible>Window.Next(19)</visible>
 			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
+			<include>homefocusacens</include>
 		</control>
 
 		<control type="label">
 			<label>AEON</label>
-			<visible>Window.Next(56) + [!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)]</visible>
-			<include>homefocustransition</include>
-			<include>homefocusxephyr</include>
-		</control>
-		
-		<control type="label">
-			<label>AEON</label>
-			<visible>Window.Next(56) + Skin.HasSetting(fontacens)</visible>
+			<visible>Window.Next(56)</visible>
 			<include>homefocustransition</include>
 			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>AEON</label>
-			<visible>Window.Next(56) + Skin.HasSetting(fontfranklein)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusfranklein</include>
 		</control>
 
 		<control type="group">
@@ -559,29 +399,11 @@
 		<include>homepolish</include>
 
 
-		
-		<control type="rss" id="1">
-			<description>rss feed</description>
-			<posy>397</posy>
-			<font>font13</font>
-			<include>rsstext</include>
-			<visible>!Skin.HasSetting(fontacens) + !Skin.HasSetting(fontfranklein)</visible>
-		</control>
-		
 		<control type="rss" id="1">
 			<description>rss feed</description>
 			<posy>400</posy>
 			<font>rssacens</font>
 			<include>rsstext</include>
-			<visible>Skin.HasSetting(fontacens)</visible>
-		</control>
-		
-		<control type="rss" id="1">
-			<description>rss feed</description>
-			<posy>397</posy>
-			<font>font13</font>
-			<include>rsstext</include>
-			<visible>Skin.HasSetting(fontfranklein)</visible>
 		</control>
 
 </include>
