@@ -3,13 +3,23 @@
 ########################################################
 version=1
 ########################################################
+name=Dailymotion (EN)
+type=rss
+thumb=video.monkey.image|en.png
+url=dailymotion.en.cfg
+########################################################
 name=Dailymotion (DE)
 type=rss
-thumb=video.monkey.image%dailymotion_de.png
+thumb=video.monkey.image|de.png
 url=dailymotion.de.cfg
 ########################################################
 name=Dailymotion (FR)
 type=rss
-thumb=video.monkey.image%dailymotion_fr.png
+thumb=video.monkey.image|fr.png
 url=dailymotion.fr.cfg
+########################################################
+name=YouTube (NL)
+type=rss
+thumb=video.monkey.image|nl.png
+url=dailymotion.nl.cfg
 ########################################################

@@ -1,0 +1,29 @@
+﻿########################################################
+# VideoMonkey Catcher list
+########################################################
+version=1
+########################################################
+# name: str
+# data: *%s*
+# header str|str
+# url: *%s* or str
+# target: RegEx
+########################################################
+# Catcher sites
+########################################################
+name=2video.de
+url=http://www.2video.de/index.php?dl=%s&action=download
+target=<div id=\"box\">[^<]*<h2>Download</h2>[^<]*<p><a href=\"([^\"]+)\" target=\"_blank\">
+########################################################
+name=keepvid.com
+data=url=%s&site=aa
+header=Referer|http://keepvid.com/
+url=http://keepvid.com/megaupload/keepvid.php
+target=Original link: <a href=\"[^\"]+\">[^<]+</a><br /><a href=\"([^\"]+)\"><b>[^D]+Download[^<]+</b>
+########################################################
+name=viloader.net
+data=action=formDownload&url=%s&json=false
+header=Referer|http://www.viloader.net
+url=http://www.viloader.net/mybic_server.php
+target=unescape%28%22(http.+?\.flv)%22%29%3
+########################################################
