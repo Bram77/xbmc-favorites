@@ -26,7 +26,7 @@ deb-src http://ppa.launchpad.net/team-xbmc-svn/ubuntu hardy main
   * Run the following in Terminal
 {{{
 sudo apt-get update
-sudio apt-get install xbmc
+sudo apt-get install xbmc
 }}}
 
 
