@@ -1,4 +1,4 @@
-# XBMC Lyrics script revision: 2194 - built with build.bat version 1.0 #
+# XBMC Lyrics script revision: 2202 - built with build.bat version 1.0 #
 
 # main import's 
 import sys
@@ -13,7 +13,7 @@ __url__ = "http://code.google.com/p/xbmc-scripting/"
 __svn_url__ = "http://xbmc-scripting.googlecode.com/svn/trunk/XBMC%20Lyrics"
 __credits__ = "XBMC TEAM, freenode/#xbmc-scripting"
 __version__ = "1.5.9"
-__svn_revision__ = "2194"
+__svn_revision__ = "2202"
 
 # Shared resources 
 BASE_RESOURCE_PATH = os.path.join( os.getcwd().replace( ";", "" ), "resources" )
