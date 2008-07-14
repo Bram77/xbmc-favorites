@@ -3,18 +3,23 @@
 ########################################################
 version=1
 ########################################################
+name=YouTube (EN)
+type=rss
+thumb=video.monkey.image|en.png
+url=youtube.en.cfg
+########################################################
 name=YouTube (DE)
 type=rss
-thumb=video.monkey.image%youtube_de.png
+thumb=video.monkey.image|de.png
 url=youtube.de.cfg
 ########################################################
 name=YouTube (FR)
 type=rss
-thumb=video.monkey.image%youtube_fr.png
+thumb=video.monkey.image|fr.png
 url=youtube.fr.cfg
 ########################################################
 name=YouTube (NL)
 type=rss
-thumb=video.monkey.image%youtube_nl.png
+thumb=video.monkey.image|nl.png
 url=youtube.nl.cfg
 ########################################################

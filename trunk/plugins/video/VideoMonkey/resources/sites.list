@@ -2,41 +2,41 @@
 # VideoMonkey Plugin entry list
 ########################################################
 version=1
-title=VideoGate
+title=VideoMonkey
 ########################################################
 # More sites
 ########################################################
-name=video.monkey.locale%30104
+name=video.monkey.locale|30104
 type=rss
-thumb=video.monkey.image%sites.png
+thumb=video.monkey.image|sites.png
 url=more.sites.list
 ########################################################
 # Video sites
 ########################################################
 name=Dailymotion
 type=rss
-thumb=video.monkey.image%dailymotion.png
+thumb=video.monkey.image|dailymotion.png
 url=dailymotion.com.cfg
 ########################################################
 name=YouTube
 type=rss
-thumb=video.monkey.image%youtube.png
+thumb=video.monkey.image|youtube.png
 url=youtube.com.cfg
 ########################################################
 name=Metacafe
 type=rss
-thumb=video.monkey.image%metacafe.png
+thumb=video.monkey.image|metacafe.png
 url=metacafe.com.cfg
 ########################################################
 #name=Google Video
 #type=rss
-#thumb=video.monkey.image%googlevideo.png
+#thumb=video.monkey.image|googlevideo.png
 #url=googlevideo.com.cfg
 ########################################################
 # More adult sites
 ########################################################
-name=video.monkey.locale%30104
+name=video.monkey.locale|30104
 type=adult_rss
-thumb=video.monkey.image%erotic.png
+thumb=video.monkey.image|erotic.png
 url=more.erotic.list
 ########################################################

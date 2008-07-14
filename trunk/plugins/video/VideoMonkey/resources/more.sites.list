@@ -8,36 +8,16 @@ title=Extra
 ########################################################
 name=Clipfish
 type=rss
-thumb=video.monkey.image%clipfish.png
+thumb=video.monkey.image|clipfish.png
 url=clipfish.de.cfg
 ########################################################
 name=ClipFish (Musikvideos)
 type=once
-thumb=video.monkey.image%clipfish.png
-url=musicvideos.clipfish.de.cfg
+thumb=video.monkey.image|clipfish.png
+url=clipfish.musicvideos.de.cfg
 ########################################################
-name=Dailymotion (DE)
+name=ZDF mediathek (DE)
 type=rss
-thumb=video.monkey.image%dailymotion_de.png
-url=dailymotion.de.cfg
-########################################################
-name=Dailymotion (FR)
-type=rss
-thumb=video.monkey.image%dailymotion_fr.png
-url=dailymotion.fr.cfg
-########################################################
-name=YouTube (DE)
-type=rss
-thumb=video.monkey.image%youtube_de.png
-url=youtube.de.cfg
-########################################################
-name=YouTube (FR)
-type=rss
-thumb=video.monkey.image%youtube_fr.png
-url=youtube.fr.cfg
-########################################################
-name=YouTube (NL)
-type=rss
-thumb=video.monkey.image%youtube_nl.png
-url=youtube.nl.cfg
+thumb=video.monkey.image|zdf.png
+url=zdf.de.cfg
 ########################################################

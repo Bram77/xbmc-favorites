@@ -1,4 +1,4 @@
-# VideoMonkey version 0.5. by sfaxman
+# VideoMonkey version 0.7. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -10,17 +10,17 @@ import re, os, time, datetime, traceback
 import shutil
 import codecs
 import cookielib
+import htmlentitydefs
 
 Version = '0'
-SubVersion = '5'
+SubVersion = '7'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
-if rootDir[-1] != '\\':rootDir = rootDir + '\\'
-cacheDir = rootDir + "cache\\"
-resDir = rootDir + "resources\\"
-imgDir = resDir + "images\\"
-libDir = resDir + "libs\\"
+cacheDir = os.path.join(rootDir, 'cache')
+resDir = os.path.join(rootDir, 'resources')
+imgDir = os.path.join(resDir, 'images')
+libDir = os.path.join(resDir, 'libs')
 sys.path.append(libDir)
 
 urlopen = urllib2.urlopen
@@ -28,8 +28,8 @@ cj = cookielib.LWPCookieJar()
 Request = urllib2.Request
 
 if cj != None:
-    if os.path.isfile(resDir + 'cookies.lwp'):
-        cj.load(resDir + 'cookies.lwp')
+    if os.path.isfile(os.path.join(resDir, 'cookies.lwp')):
+        cj.load(os.path.join(resDir, 'cookies.lwp'))
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
     urllib2.install_opener(opener)
 
@@ -285,21 +285,80 @@ entitydefs = {
     'yuml':     u'\u00FF', # latin small letter y with diaeresis, U+00FF ISOlat1'
     'zeta':     u'\u03B6', # greek small letter zeta, U+03B6 ISOgrk3'
     'zwj':      u'\u200D', # zero width joiner, U+200D NEW RFC 2070'
-    'zwnj':     u'\u200C', # zero width non-joiner, U+200C NEW RFC 2070'
+    'zwnj':     u'\u200C'  # zero width non-joiner, U+200C NEW RFC 2070'
 }
 
-def unescape_unicode(s):
+#entitydefs2 = {
+#    '$':    '%24',
+#    '&':    '%26',
+#    '+':    '%2B',
+#    ',':    '%2C',
+#    '/':    '%2F',
+#    ':':    '%3A',
+#    ';':    '%3B',
+#    '=':    '%3D',
+#    '?':    '%3F',
+#    '@':    '%40',
+#    ' ':    '%20',
+#    '"':    '%22',
+#    '<':    '%3C',
+#    '>':    '%3E',
+#    '#':    '%23',
+#    '%':    '%25',
+#    '{':    '%7B',
+#    '}':    '%7D',
+#    '|':    '%7C',
+#    '\\':   '%5C',
+#    '^':    '%5E',
+#    '~':    '%7E',
+#    '[':    '%5B',
+#    ']':    '%5D',
+#    '`':    '%60'
+#}
+
+def clean1(s): # Remove &XXX;
     if not s:
         return ''
     for name, value in entitydefs.iteritems():
         if u'&' in s:
-            s = s.replace(u'&'+name+u';', value)
+            s = s.replace(u'&' + name + u';', value)
     return s;
 
-def clean_name(s): # To adapt
+def clean2(s): #remove \\uXXX
+    pat = re.compile(r'\\u(....)')
+    def sub(mo):
+        return unichr(int(mo.group(1), 16))
+    return pat.sub(sub, smart_unicode(s))
+
+def clean3(s): #remove &#XXX;
+    pat = re.compile(r'&#(\d+);')
+    def sub(mo):
+        return unichr(int(mo.group(1)))
+    return clean31(pat.sub(sub, smart_unicode(s)))
+
+def clean31(s):
+    dic=htmlentitydefs.name2codepoint
+    for key in dic.keys():
+        entity='&' + key + ';'
+        s=s.replace(entity, unichr(dic[key]))
+    return s
+
+def clean4(s): # many '?' in url
     if not s:
         return ''
-    return unescape_unicode(smart_unicode(s)).replace(u'\u00BB', u'')
+    idx = s.rfind('?')
+    if idx != -1:
+        if s[:idx].rfind('?') != -1:
+            s[idx] = '&'
+            s = clean4(s)
+    return s
+
+#def safe_quote(s): # quote unicode friendly
+#    if not s:
+#        return ''
+#    for key, value in entitydefs2.iteritems():
+#        s = s.replace(key, value)
+#    return s;
 
 def smart_unicode(s):
     try:
@@ -320,20 +379,35 @@ def smart_unicode(s):
             s = unicode(s, 'ISO-8859-1')
     return s
 
+def clean_name(s):
+    if not s:
+        return ''
+    return clean1(clean2(clean3(smart_unicode(s))))
+
+def clean_url(s):
+    if not s:
+        return ''
+    return clean4(s)
+
 class CListItem:
-    def __init__(self, name = '', type = '', thumb = 'default', url = ''):
-        self.name = name
-        self.type = type
-        self.thumb = thumb
-        self.url = url
+    def __init__(self):
+        self.name = ''
+        self.type = ''
+        self.thumb = os.path.join(imgDir, 'video.png')
+        self.url = ''
 
 class CDirItem:
-    def __init__(self, name = '', url = '', url_build = '', curr_url = '', curr_url_build = '', thumb = 'default'):
-        self.name = name
-        self.url = url
-        self.url_build = url_build
-        self.curr_url = curr_url
-        self.thumb = thumb
+    def __init__(self):
+        self.name = ''
+        self.type = ''
+        self.url = ''
+        self.url_build = '%s'
+        self.curr_url = ''
+        self.img = ''
+        self.img_build = '%s'
+        self.curr_img = ''
+        self.curr_img_build = '%s'
+        self.thumb = ''
 
 class CCurrentList:
     def __init__(self):
@@ -341,28 +415,30 @@ class CCurrentList:
         self.title = ''
         self.start_url = ''
         self.cfg_name = ''
+        self.action = ''
         self.user = ''
         self.password = ''
         self.reference = ''
         self.content = ''
         self.video_url_img_title = ''
-        self.video_url_title_img = ''
-        self.video_url_title = ''
+        self.video_order = ''
         self.video_img = ''
-        self.video_url_build = ''
-        self.video_img_build = ''
+        self.video_title = ''
+        self.video_url_build = '%s'
+        self.video_img_build = '%s'
+        self.video_action = ''
         self.next_url = ''
-        self.next_url_build = ''
+        self.next_url_build = '%s'
         self.next_url_altv = ''
-        self.next_url_build_altv = ''
-        self.next_thumb = 'default'
+        self.next_url_build_altv = '%s'
+        self.next_thumb = ''
         self.target_url = ''
         self.catcher_data = ''
         self.catcher_reference = ''
         self.catcher_content = ''
-        self.catcher_url_build = ''
-        self.search_url_build = ''
-        self.search_thumb = 'default'
+        self.catcher_url_build = '%s'
+        self.search_url_build = '%s'
+        self.search_thumb = ''
         self.list = []
         self.dir_list = []
 
@@ -387,24 +463,58 @@ class CCurrentList:
             if not os.path.exists(os.path.join(dir, filename)):
                 return filename
 
+    def loadCatcher(self, name):
+        f = codecs.open(os.path.join(resDir, 'catcher.list'), 'r', 'utf-8')
+        data = f.read()
+        data = data.replace('\r\n', '\n')
+        data = data.split('\n')
+        f.close()
+
+        catcher_found = False
+        for m in data:
+            if m and m[0] != '#':
+                index = m.find('=')
+                if index != -1:
+                    key = m[:index]
+                    value = m[index+1:]
+                    if key == 'version':
+                        if value != '1':
+                            return -1
+                    elif key == 'name':
+                        if name == value:
+                            catcher_found = True
+                    elif key == 'data' and catcher_found == True:
+                        self.catcher_data = value
+                    elif key == 'header' and catcher_found == True:
+                        index = value.find('|')
+                        self.catcher_reference = value[:index]
+                        self.catcher_content = value[index+1:]
+                    elif key == 'url' and catcher_found == True:
+                        self.catcher_url_build = value
+                    elif key == 'target' and catcher_found == True:
+                        self.target_url = value
+                        return 0
+        return -1
+
     def loadLocal(self, filename, recursive = True):
         try:
-            f = codecs.open(resDir + '\\' + filename, 'r', 'utf-8')
+            f = codecs.open(os.path.join(resDir, filename.replace('|', '%')), 'r', 'utf-8')
             data = f.read()
             data = data.replace('\r\n', '\n')
             data = data.split('\n')
             f.close()
-        except IOError:
+        except:
             try:
-                f = codecs.open(cacheDir + '\\' + filename, 'r', 'utf-8')
+                f = codecs.open(os.path.join(cacheDir, filename.replace('|', '%')), 'r', 'utf-8')
                 data = f.read()
                 data = data.replace('\r\n', '\n')
                 data = data.split('\n')
                 f.close()
-            except IOError:
+            except:
                 traceback.print_exc(file = sys.stdout)
                 return -2
 
+        self.cfg_name = filename
         del self.list[:]
         for m in data:
             if m and m[0] != '#':
@@ -420,7 +530,31 @@ class CCurrentList:
                         self.title = value
                     elif key == 'start_url':
                         self.start_url = value
-                        self.cfg_name = filename
+                    elif key == 'action':
+                        self.action = value
+                        action_file = filename[:filename.find('.')] + '.lnk'
+                        if self.action.find('redirect') != -1:
+                            try:
+                                f = open(os.path.join(resDir, action_file), 'r')
+                                forward_cfg = f.read()
+                                f.close()
+                                if (forward_cfg != self.cfg_name):
+                                    return self.loadLocal(forward_cfg, recursive)
+                                return 0
+                            except:
+                                pass
+                        elif self.action.find('store') != -1:
+                            f = open(os.path.join(resDir, action_file), 'w')
+                            f.write(self.cfg_name)
+                            f.close()
+                    elif key == 'catcher':
+                        try:
+                            ret = self.loadCatcher(value)
+                            if ret != 0:
+                                return ret
+                        except:
+                            traceback.print_exc(file = sys.stdout)
+                            return -2
                     elif key == 'user':
                         self.user = value
                     elif key == 'password':
@@ -431,16 +565,18 @@ class CCurrentList:
                         self.content = value[index+1:]
                     elif key == 'video_url_img_title':
                         self.video_url_img_title = value
-                    elif key == 'video_url_title_img':
-                        self.video_url_title_img = value
+                    elif key == 'video_order':
+                        self.video_order = value
+                    elif key == 'video_img':
+                        self.video_img = value
+                    elif key == 'video_title':
+                        self.video_title = value
                     elif key == 'video_url_build':
                         self.video_url_build = value
                     elif key == 'video_img_build':
                         self.video_img_build = value
-                    elif key == 'video_url_title':
-                        self.video_url_title = value
-                    elif key == 'video_img':
-                        self.video_img = value
+                    elif key == 'video_action':
+                        self.video_action = value
                     elif key == 'next_url':
                         self.next_url = value
                     elif key == 'next_url_build':
@@ -451,9 +587,9 @@ class CCurrentList:
                         self.next_url_build_altv = value
                     elif key == 'next_thumb':
                         self.next_thumb = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.image':
-                            self.next_thumb = imgDir + value[index+1:]
+                            self.next_thumb = os.path.join(imgDir, value[index+1:])
                     elif key == 'target_url':
                         self.target_url = value
                     elif key == 'catcher_data':
@@ -468,54 +604,64 @@ class CCurrentList:
                         self.search_url_build = value
                     elif key == 'search_thumb':
                         self.search_thumb = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.image':
-                            self.search_thumb = imgDir + value[index+1:]
+                            self.search_thumb = os.path.join(imgDir, value[index+1:])
                     elif key == 'dir_name':
                         dir_tmp = CDirItem()
                         dir_tmp.name = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.locale':
                             dir_tmp.name = xbmc.getLocalizedString(int(value[index+1:]))
                     elif key == 'dir_url':
                         dir_tmp.url = value
+                    elif key == 'dir_type':
+                        dir_tmp.type = value
                     elif key == 'dir_url_build':
                         dir_tmp.url_build = value
                     elif key == 'dir_curr_url':
                         dir_tmp.curr_url = value
+                    elif key == 'dir_curr_img':
+                        dir_tmp.curr_img = value
+                    elif key == 'dir_curr_img_build':
+                        dir_tmp.curr_img_build = value
+                    elif key == 'dir_img':
+                        dir_tmp.img = value
+                    elif key == 'dir_img_build':
+                        dir_tmp.img_build = value
                     elif key == 'dir_thumb':
                         dir_tmp.thumb = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.image':
-                            dir_tmp.thumb = imgDir + value[index+1:]
+                            dir_tmp.thumb = os.path.join(imgDir, value[index+1:])
                         self.dir_list.append(dir_tmp)
                     elif key == 'name':
                         tmp = CListItem()
                         tmp.name = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.locale':
-                            tmp.name = xbmc.getLocalizedString(int(value[index+1:]))
+                            tmp.name = ' ' + xbmc.getLocalizedString(int(value[index+1:])) + ' '
                     elif key == 'type':
                         tmp.type = value
                         if (recursive and tmp.type == 'once'):
                             tmp.type = 'rss'
                     elif key == 'thumb':
                         tmp.thumb = value
-                        index = value.find('%')
+                        index = value.find('|')
                         if value[:index] == 'video.monkey.image':
-                            tmp.thumb = imgDir + value[index+1:]
+                            tmp.thumb = os.path.join(imgDir, value[index+1:])
                     elif key == 'url':
                         tmp.url = value
                         self.list.append(tmp)
 
         if (recursive and self.start_url != ''):
             result = self.loadRemote(self.start_url, False)
-        if (self.search_url_build != ''):
+        if (self.search_url_build != '%s'):
             tmp = CListItem()
-            tmp.name = xbmc.getLocalizedString(30102)
+            tmp.name = ' ' + xbmc.getLocalizedString(30102) + ' '
             tmp.type = 'rss'
             tmp.thumb = self.search_thumb
-            tmp.url = filename + '%search'
+            tmp.url = filename + '|search'
             self.list.append(tmp)
         return 0
 
@@ -523,7 +669,7 @@ class CCurrentList:
         try:
             curr_url = filename
             if (recursive):
-                splitvalues = filename.split('%')
+                splitvalues = filename.split('|')
                 if ((len(splitvalues)) > 1):
                     ext = self.getFileExtension(splitvalues[0])
                     if (ext == 'cfg'):
@@ -532,13 +678,14 @@ class CCurrentList:
                         curr_url = splitvalues[1]
                     if (splitvalues[1] == 'search'):
                         try:
-                            f = open(cacheDir + 'search', 'r')
+                            f = open(os.path.join(cacheDir, 'search'), 'r')
                             curr_phrase = urllib.unquote_plus(f.read())
                             f.close()
                         except:
                             curr_phrase = ''
                         search_phrase = self.getKeyboard(default = curr_phrase, heading = xbmc.getLocalizedString(30102))
-                        f = open(cacheDir + 'search', 'w')
+                        xbmc.sleep(10)
+                        f = open(os.path.join(cacheDir, 'search'), 'w')
                         f.write(search_phrase)
                         f.close()
                         curr_url = self.search_url_build % (search_phrase)
@@ -546,11 +693,15 @@ class CCurrentList:
                 txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7'}
             else:
                 txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7', self.reference:self.content}
+            #f = open(os.path.join(cacheDir, 'page.html'), 'w')
+            #f.write('<Titel>'+ curr_url + '</Title>\n\n')
             req = Request(curr_url, None, txheaders)
             handle = urlopen(req)
             data = handle.read()
-            #cj.save(resDir + 'cookies.lwp', ignore_discard=True)
-            cj.save(resDir + 'cookies.lwp')
+            cj.save(os.path.join(resDir, 'cookies.lwp'), ignore_discard=True)
+            #cj.save(os.path.join(resDir, 'cookies.lwp'))
+            #f.write(data)
+            #f.close()
         except IOError:
             traceback.print_exc(file = sys.stdout)
             return -2
@@ -558,47 +709,76 @@ class CCurrentList:
         # Find video items
         if (self.video_url_img_title != ''):
             revid = re.compile(self.video_url_img_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-            for url, img, name in revid.findall(data):
+            for pot_url, pot_img, pot_name in revid.findall(data):
+                if (self.video_order != ''):
+                    u_index = self.video_order.find('U')
+                    i_index = self.video_order.find('I')
+                    if (u_index == 0):
+                        url = pot_url
+                        if (i_index == 1):
+                            img = pot_img
+                            name = pot_name
+                        else:
+                            img = pot_name
+                            name = pot_img
+                    elif (u_index == 1):
+                        url = pot_img
+                        if (i_index == 0):
+                            img = pot_url
+                            name = pot_name
+                        else:
+                            img = pot_name
+                            name = pot_url
+                    else:
+                        url = pot_name
+                        if (i_index == 0):
+                            img = pot_url
+                            name = pot_img
+                        else:
+                            img = pot_img
+                            name = pot_url
+                else:
+                    url = pot_url
+                    img = pot_img
+                    name = pot_name
                 tmp = CListItem()
-                tmp.name = name.lstrip().rstrip()
                 tmp.type = 'video'
-                if (self.video_img_build != ''):
-                    img = self.video_img_build % (img)
-                tmp.thumb = img
+                img = self.video_img_build % (img)
+                if (img == ''):
+                    img = os.path.join(imgDir, 'video.png')
                 try:
-                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                    tmp.url = smart_unicode(self.cfg_name + '|' + (self.video_url_build % (url)))
                 except:
-                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
-                self.list.append(tmp)
-        elif (self.video_url_title_img != ''):
-            revid = re.compile(self.video_url_title_img, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-            for url, name, img in revid.findall(data):
-                tmp = CListItem()
-                tmp.name = name.lstrip().rstrip()
-                tmp.type = 'video'
-                if (self.video_img_build != ''):
-                    img = self.video_img_build % (img)
-                tmp.thumb = img
-                try:
-                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
-                except:
-                    tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
-                self.list.append(tmp)
-        elif (self.video_url_title != ''):
-            revid = re.compile(self.video_url_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-            for url, name in revid.findall(data):
-                img_catcher = self.video_img % (url)
-                reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                for img in reimg.findall(data):
-                    tmp = CListItem()
-                    tmp.name = name.lstrip().rstrip()
-                    tmp.type = 'video'
-                    tmp.thumb = img
+                    tmp.url = smart_unicode(self.cfg_name + '|' + (self.video_url_build % (smart_unicode(url))))
+                if (self.video_img != ''):
                     try:
-                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (url)))
+                        img_catcher = self.video_img % (url)
                     except:
-                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.video_url_build % (smart_unicode(url))))
-                    self.list.append(tmp)
+                        img_catcher = self.video_img
+                    reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                    imgsearch = reimg.search(data)
+                    try:
+                        img = self.video_img_build % (imgsearch.group(1))
+                    except:
+                        traceback.print_exc(file = sys.stdout)
+                        img = os.path.join(imgDir, 'video.png')
+                tmp.thumb = img
+                if (self.video_title != ''):
+                    try:
+                        title_catcher = self.video_title % (url)
+                    except:
+                        title_catcher = self.video_title
+                    retitle = re.compile(title_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                    titlesearch = retitle.search(data)
+                    try:
+                        name = titlesearch.group(1)
+                    except:
+                        traceback.print_exc(file = sys.stdout)
+                        name = self.random_filename(prefix = 'noname_')
+                tmp.name = name.lstrip().rstrip()
+                if (len(tmp.name) == 0):
+                    tmp.name = self.random_filename(prefix = 'noname_')
+                self.list.append(tmp)
         # Find category items
         for dir in self.dir_list:
             oneFound = False
@@ -607,29 +787,65 @@ class CCurrentList:
             if (dir.url != ''):
                 recat = re.compile(dir.url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for url, name in recat.findall(data):
-                    if f == None:
-                        f = codecs.open(cacheDir + catfilename, 'w', 'utf-8')
-                    f.write('name=' + smart_unicode(name) + '\n')
-                    f.write('type=rss\n')
-                    f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
-                    try:
-                        f.write('url=' + smart_unicode(self.cfg_name) + '%' + (dir.url_build % (url)) + '\n')
-                    except:
-                        f.write('url=' + smart_unicode(self.cfg_name) + '%' + (dir.url_build % (smart_unicode(url))) + '\n')
+                    if (dir.img != ''):
+                        img_catcher = dir.img % (url)
+                        reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                        imgsearch = reimg.search(data)
+                        try:
+                            dir.thumb = dir.img_build % (imgsearch.group(1))
+                        except:
+                            traceback.print_exc(file = sys.stdout)
+                    if dir.type.find('flat') != -1:
+                        tmp = CListItem()
+                        tmp.name = name.lstrip().rstrip()
+                        if (len(tmp.name) == 0):
+                            tmp.name = self.random_filename(prefix = 'noname_')
+                        tmp.type = 'rss'
+                        tmp.thumb = dir.thumb
+                        tmp.url = self.cfg_name + '|' + (dir.url_build % (url))
+                        self.list.append(tmp)
+                    else:
+                        if f == None:
+                            f = codecs.open(os.path.join(cacheDir, catfilename), 'w', 'utf-8')
+                        f.write('name= ' + smart_unicode(name) + ' \n')
+                        f.write('type=rss\n')
+                        f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
+                        try:
+                            f.write('url=' + smart_unicode(self.cfg_name) + '|' + (dir.url_build % (url)) + '\n')
+                        except:
+                            f.write('url=' + smart_unicode(self.cfg_name) + '|' + (dir.url_build % (smart_unicode(url))) + '\n')
                     oneFound = True
             if (dir.curr_url != ''):
                 recat = re.compile(dir.curr_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for name in recat.findall(data):
-                    if f == None:
-                        f = codecs.open(cacheDir + catfilename, 'w', 'utf-8')
-                    f.write('name=' + smart_unicode(name) + ' (' + xbmc.getLocalizedString(30106) +')\n')
-                    f.write('type=rss\n')
-                    f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
-                    f.write('url=' + smart_unicode(self.cfg_name + '%' + curr_url) + '\n')
+                    if (dir.img != ''):
+                        img_catcher = dir.curr_img % (name)
+                        reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                        imgsearch = reimg.search(data)
+                        try:
+                            dir.thumb = dir.curr_img_build % (imgsearch.group(1))
+                        except:
+                            traceback.print_exc(file = sys.stdout)
+                    if dir.type.find('flat') != -1:
+                        tmp = CListItem()
+                        tmp.name = name.lstrip().rstrip()
+                        if (len(tmp.name) == 0):
+                            tmp.name = self.random_filename(prefix = 'noname_')
+                        tmp.type = 'rss'
+                        tmp.thumb = dir.thumb
+                        tmp.url = self.cfg_name + '|' + curr_url
+                        self.list.append(tmp)
+                    else:
+                        if f == None:
+                            f = codecs.open(os.path.join(cacheDir, catfilename), 'w', 'utf-8')
+                        f.write('name= ' + smart_unicode(name) + ' (' + xbmc.getLocalizedString(30106) +') \n')
+                        f.write('type=rss\n')
+                        f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
+                        f.write('url=' + smart_unicode(self.cfg_name + '|' + curr_url) + '\n')
                     OneFound = True
-            if (oneFound):
+            if (oneFound and (dir.type.find('flat') == -1)):
                 tmp = CListItem()
-                tmp.name = dir.name
+                tmp.name = ' ' + dir.name + ' '
                 tmp.type = 'rss'
                 tmp.thumb = dir.thumb
                 tmp.url = catfilename
@@ -643,13 +859,13 @@ class CCurrentList:
             for url in renext.findall(data):
                 if (not found):
                     tmp = CListItem()
-                    tmp.name = xbmc.getLocalizedString(30103)
+                    tmp.name = ' ' + xbmc.getLocalizedString(30103) + ' '
                     tmp.type = 'rss'
                     tmp.thumb = self.next_thumb
                     try:
-                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build % (url)))
+                        tmp.url = smart_unicode(self.cfg_name + '|' + (self.next_url_build % (url)))
                     except:
-                        tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build % (smart_unicode(url))))
+                        tmp.url = smart_unicode(self.cfg_name + '|' + (self.next_url_build % (smart_unicode(url))))
                     self.list.append(tmp)
                     found = True
             if (not found and self.next_url_altv != ''):
@@ -657,13 +873,13 @@ class CCurrentList:
                 for url in renext.findall(data):
                     if (not found):
                         tmp = CListItem()
-                        tmp.name = xbmc.getLocalizedString(30103)
+                        tmp.name = ' ' + xbmc.getLocalizedString(30103) + ' '
                         tmp.type = 'rss'
                         tmp.thumb = self.next_thumb
                         try:
-                            tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build_altv % (url)))
+                            tmp.url = smart_unicode(self.cfg_name + '|' + (self.next_url_build_altv % (url)))
                         except:
-                            tmp.url = smart_unicode(self.cfg_name + '%' + (self.next_url_build_altv % (smart_unicode(url))))
+                            tmp.url = smart_unicode(self.cfg_name + '|' + (self.next_url_build_altv % (smart_unicode(url))))
                         self.list.append(tmp)
                         found = True
         return 0
@@ -674,36 +890,42 @@ class Main:
         self.currentlist = CCurrentList()
 
     def getDirectLink(self, orig_url):
-        if (self.currentlist.catcher_data == ''):
-            url = self.currentlist.catcher_url_build % (orig_url.replace('\r\n', '').replace('\n', ''))
-            opener = urllib2.build_opener()
-            req = urllib2.Request(url)
-            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-            if (self.currentlist.catcher_reference != ''):
-                req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
-            urlfile = opener.open(req)
-            fc = urlfile.read()
+        if (self.currentlist.catcher_url_build != '%s' and self.currentlist.target_url != ''):
+            if (self.currentlist.catcher_data == ''):
+                url = self.currentlist.catcher_url_build % (orig_url.replace('\r\n', '').replace('\n', ''))
+                opener = urllib2.build_opener()
+                req = urllib2.Request(url)
+                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                if (self.currentlist.catcher_reference != ''):
+                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
+                urlfile = opener.open(req)
+                fc = urlfile.read()
+            else:
+                data = self.currentlist.catcher_data % (orig_url.replace('\r\n', '').replace('\n', ''))
+                req = urllib2.Request(self.currentlist.catcher_url_build, data)
+                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                if (self.currentlist.catcher_reference != ''):
+                    req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
+                response = urllib2.urlopen(req)
+                fc = response.read()
+            #f = open(os.path.join(cacheDir, 'catcher.html'), 'w')
+            #f.write('<Titel>'+ orig_url + '</Title>\n\n')
+            #f.write(fc)
+            #f.close()
+            resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+            urlsearch = resecurl.search(fc)
+            try:
+                return urlsearch.group(1)
+            except:
+                traceback.print_exc(file = sys.stdout)
+                return ''
+        elif (self.currentlist.catcher_url_build != '%s'):
+            return self.currentlist.catcher_url_build % (orig_url.replace('\r\n', '').replace('\n', ''))
         else:
-            data = self.currentlist.catcher_data % (orig_url.replace('\r\n', '').replace('\n', ''))
-            req = urllib2.Request(self.currentlist.catcher_url_build, data)
-            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-            if (self.currentlist.catcher_reference != ''):
-                req.add_header(self.currentlist.catcher_reference, self.currentlist.catcher_content)
-            response = urllib2.urlopen(req)
-            fc = response.read()
-        #f = open(cacheDir + 'catcher.html', 'w')
-        #f.write(fc)
-        #f.close()
-        resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-        urlsearch = resecurl.search(fc)
-        try:
-            return urlsearch.group(1)
-        except:
-            traceback.print_exc(file = sys.stdout)
-            return ''
+            return orig_url
 
     def playVideo(self, url):
-        cfg_pos = url.find('%')
+        cfg_pos = url.find('|')
         cfg_file = url[:cfg_pos]
         self.currentlist.loadLocal(cfg_file, False)
         sep_pos = url.rfind('|')
@@ -714,37 +936,44 @@ class Main:
         vidURL = self.getDirectLink(url[:sep_pos])
         if vidURL == '':
             return
-        vidURL = self.transformSiteSpecific(vidURL, cfg_file)
+        vidURL = clean_url(self.siteSpecificUrlTarget(vidURL, cfg_file))
+        #f = open(os.path.join(cacheDir, 'video.html'), 'w')
+        #f.write('<VidURL>'+ vidURL + '</VidURL>')
+        #f.close()
         try:
-            urllib.urlretrieve(icon, cacheDir + 'thumb.tbn')
-            icon = cacheDir + 'thumb.tbn'
+            urllib.urlretrieve(icon, os.path.join(cacheDir, 'thumb.tbn'))
+            icon = os.path.join(cacheDir, 'thumb.tbn')
         except:
             traceback.print_exc(file = sys.stdout)
-            icon = imageDir + 'video.png'
+            icon = os.path.join(imgDir, 'video.png')
         flv_file = vidURL
         listitem = xbmcgui.ListItem(title, title, icon, icon)
         listitem.setInfo("video", {"Title":title})
-        if (xbmcplugin.getSetting("download") == "true"):
-            self.pDialog = xbmcgui.DialogProgress()
-            self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
-            flv_file = self.downloadMovie(vidURL, title)
-            self.pDialog.close()
-            if (flv_file == ''):
-                dialog = xbmcgui.Dialog()
-                dialog.ok("VideoMonkey Info", xbmc.getLocalizedString(30053))
-        elif (xbmcplugin.getSetting("download") == "false" and xbmcplugin.getSetting("download_ask") == "true"):
-            dia = xbmcgui.Dialog()
-            if dia.yesno('', xbmc.getLocalizedString(30052)):
+        if self.currentlist.video_action.find('nodownload') == -1:
+            if (xbmcplugin.getSetting("download") == "true"):
                 self.pDialog = xbmcgui.DialogProgress()
                 self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
                 flv_file = self.downloadMovie(vidURL, title)
                 self.pDialog.close()
-                if (flv_file == ''):
+                if (flv_file == None):
                     dialog = xbmcgui.Dialog()
                     dialog.ok("VideoMonkey Info", xbmc.getLocalizedString(30053))
+            elif (xbmcplugin.getSetting("download") == "false" and xbmcplugin.getSetting("download_ask") == "true"):
+                dia = xbmcgui.Dialog()
+                if dia.yesno('', xbmc.getLocalizedString(30052)):
+                    self.pDialog = xbmcgui.DialogProgress()
+                    self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
+                    flv_file = self.downloadMovie(vidURL, title)
+                    self.pDialog.close()
+                    if (flv_file == None):
+                        dialog = xbmcgui.Dialog()
+                        dialog.ok("VideoMonkey Info", xbmc.getLocalizedString(30053))
+        else:
+            flv_file = None
         palyer_type = {0:xbmc.PLAYER_CORE_DVDPLAYER, 1:xbmc.PLAYER_CORE_MPLAYER}[int(xbmcplugin.getSetting("player_type"))]
-        if (flv_file != '' and os.path.isfile(flv_file)):
-            xbmc.Player(palyer_type).play(flv_file, listitem)
+        xbmc.sleep(100)
+        if (flv_file != None and os.path.isfile(flv_file)):
+            xbmc.Player(palyer_type).play(vidURL, listitem)
         else:
             xbmc.Player(palyer_type).play(vidURL, listitem)
 
@@ -769,7 +998,7 @@ class Main:
                         os.remove(filepath)
                     except:
                         traceback.print_exc(file = sys.stdout)
-                return ''
+                return None
         return filepath
 
     def _report_hook(self, count, blocksize, totalsize):
@@ -777,11 +1006,28 @@ class Main:
         self.pDialog.update(percent, xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
         if (self.pDialog.iscanceled()):raise
 
-    def transformSiteSpecific(self, url, cfg_file): # The only site specific part of the plugin
-        if (cfg_file == 'metacafe.com.cfg'):
-            return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20') # Metacafe
-        elif (cfg_file == 'tu.tv.cfg'): # TUtv
+    def siteSpecificUrlTarget(self, url, cfg_file): # The only site specific part of the plugin
+        if cfg_file == 'metacafe.com.cfg' or cfg_file == 'metacafe.adult.com.cfg': # Metacafe
+            return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
+        elif cfg_file == 'tu.tv.cfg': # TUtv
             return urllib.unquote(urllib.unquote(url))
+        if cfg_file == 'zdf.de.cfg': # ZDF mediathek
+            request = urllib2.Request(url)
+            opener = urllib2.build_opener()
+            req = urllib2.Request(url)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+            urlfile=opener.open(req)
+            feed_data = urlfile.read()
+            #f = open(os.path.join(cacheDir, 'feed.html'), 'w')
+            #f.write('<Titel>'+ url + '</Title>\n\n')
+            #f.write(feed_data)
+            #f.close()
+            resecurl=re.compile('href=\"([^\"]+)\"', re.IGNORECASE)
+            urlsearch=resecurl.search(feed_data)
+            try:
+                url=urlsearch.group(1)
+            except:
+                traceback.print_exc(file = sys.stdout)
         return url
 
     def parseView(self, url):
@@ -801,15 +1047,22 @@ class Main:
             dialog = xbmcgui.Dialog()
             dialog.ok("Error", "Directory could not be opened.")
 
-        for m in self.currentlist.list:
-            if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
-                self.addDir(' ' + clean_name(m.name) + ' ', m.url, m.thumb, len(self.currentlist.list))
-            elif m.type == u'video':
-                self.addDir(clean_name(m.name), m.url + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
+        if self.currentlist.video_action.find('play') != -1 and len(self.currentlist.list) == 1 and self.currentlist.list[0].type == u'video':
+            result = self.parseView(self.currentlist.list[0].url + '|' + clean_name(self.currentlist.list[0].name) + '|' + self.currentlist.list[0].thumb + '.videomonkey')
+            return result
+        if self.currentlist.video_action.find('play') != -1 and self.currentlist.search_url_build != '' and len(self.currentlist.list) == 2 and self.currentlist.list[1].type == u'video':
+            result = self.parseView(self.currentlist.list[1].url + '|' + clean_name(self.currentlist.list[1].name) + '|' + self.currentlist.list[1].thumb + '.videomonkey')
+            return result
+        else:
+            for m in self.currentlist.list:
+                if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
+                    self.addDir(clean_name(m.name), clean_url(m.url), m.thumb, len(self.currentlist.list))
+                elif m.type == u'video':
+                    self.addDir(clean_name(m.name), clean_url(m.url) + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
         return result
 
     #def addLink(self, name, url, icon = None, totalItems = None):
-    #    if (icon == None or icon == 'default'or icon == ''):
+    #    if (icon == None or icon == ''):
     #        liz = xbmcgui.ListItem(name)
     #    else:
     #        liz = xbmcgui.ListItem(name, name, icon, icon)
@@ -821,7 +1074,7 @@ class Main:
 
     def addDir(self, name, url, icon = None, totalItems = None):
         u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
-        if (icon == None or icon == 'default' or icon == ''):
+        if (icon == None or icon == ''):
             liz = xbmcgui.ListItem(name)
         else:
             liz = xbmcgui.ListItem(name, name, icon, icon)
@@ -838,6 +1091,10 @@ class Main:
     def run(self):
         try:
             self.handle = int(sys.argv[1])
+            try:
+                xbmcplugin.setPluginFanart(self.handle, os.path.join(imgDir, 'fanart.jpg'))
+            except:
+                traceback.print_exc(file = sys.stdout)
             xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
             paramstring = sys.argv[2]
             if len(paramstring) <= 2:
