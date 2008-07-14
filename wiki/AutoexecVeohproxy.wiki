@@ -8,7 +8,7 @@ Once downloaded, your "scripts/veohproxy/" directory will contain a "autoexec.py
 
 = Instructions =
 
-  * FTP to your XBOX (take a look at the Installation wiki to find out how to do this)
+  * FTP to your XBOX (take a look at the [http://code.google.com/p/xbmc-favorites/wiki/Installation Installation wiki] to find out how to do this)
   * Navigate to the XBMC-scripts directory. This usually is "E/XBMC/scripts".
   * You'll find the "veohproxy' directory there. Enter it and copy the "autoexec.py" file present.
   * Move one directory up (to "E/XBMC/scripts/") and paste the file there.
