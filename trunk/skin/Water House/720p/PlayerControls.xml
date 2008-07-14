@@ -1,0 +1,106 @@
+<window type="dialog" id="114">
+	<defaultcontrol always="true">4</defaultcontrol>
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + Window.IsActive(FullscreenVideo)</visible>
+	<animation type="WindowOpen">
+		<effect type="slide" start="0,100" end="0" time="400" />
+		<effect type="fade" time="200" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="slide" start="0" end="0,100" time="400" />
+		<effect type="fade" time="200" />
+	</animation>
+	
+	<controls>
+
+
+
+<control type="image" id="3">
+      <description>Background</description>
+      <posx>0</posx>
+      <posy>0</posy>
+	<visible>Player.Paused</visible>
+      <width>1280</width>
+      <height>720</height>
+      <texture border="0" flipY="false" flipX="false">PlayBg.png</texture>
+</control>
+
+<control type="image" id="3">
+      <description>Background</description>
+      <posx>320</posx>
+      <posy>680</posy>
+      <width>600</width>
+      <height>21</height>
+      <texture border="0" flipY="false" flipX="false">Topbg.png</texture>
+</control>
+
+<control type="wraplist" id="4">
+      <description>Wraplist container</description>
+	  <viewtype>bigwide</viewtype>
+      <posx>0</posx>
+      <posy>12</posy>
+      <width>1280</width>
+      <height>100</height>
+      <onup>4</onup>
+      <ondown>4</ondown>
+      <viewtype label="3D list">list</viewtype>
+      <orientation>horizontal</orientation>
+      <pagecontrol>25</pagecontrol>
+      <focusposition>4</focusposition>
+      <scrolltime>200</scrolltime>
+
+      <content>
+<item id="1">
+<label>Add source</label>
+<onclick>XBMC.ActivateWindow(MyVideo)</onclick>
+</item>
+<item id="2">
+<label>Remove source</label>
+<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+</item>
+<item id="3">
+<label>System.png</label>
+<onclick>XBMC.ActivateWindow(Setting)</onclick>
+</item>
+<item id="4">
+<label>Images.png</label>
+<onclick>XBMC.ActivateWindow(MyPics)</onclick>
+</item>
+      </content>
+			
+      <itemlayout height="100" width="160" aligny="top">
+				
+		<control type="label">
+			<description>Name</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>160</width>
+			<height>100</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<info>ListItem.Label</info>
+			<font>font6</font>
+			<textcolor>FFFFFFFF</textcolor>
+			</control>
+
+      </itemlayout>
+
+      <focusedlayout height="100" width="160" aligny="top">
+				
+		<control type="label">
+			<description>Name</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>160</width>
+			<height>100</height>
+			<align>center</align>
+			<aligny>top</aligny>
+			<info>ListItem.Label</info>
+			<font>font6</font>
+			<textcolor>FFFFFFFF</textcolor>
+			</control>
+
+      </focusedlayout>
+</control>		
+
+	</controls>
+</window>
