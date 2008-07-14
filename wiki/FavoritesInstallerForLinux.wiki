@@ -47,4 +47,4 @@ unzip ~/Desktop/xbmc_favorites_installer_linux_v1.3a.zip -d ~/.xbmc/plugins/prog
 
 
 
-Now you're good to go. A lot of plugins won't work with Linux (yet). XBMC for Linux isn't even in Alpha stage. SO don't expect to much :)
+Now you're good to go. A lot of plugins won't work with Linux (yet). XBMC for Linux isn't even in Alpha stage. You'll have to try to find out which ones do and which ones don't. All skins will work (as far as I know)!
