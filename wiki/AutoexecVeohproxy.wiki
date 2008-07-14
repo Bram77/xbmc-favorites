@@ -1,5 +1,5 @@
 #labels Featured,Phase-Deploy
-#A lot of video plugins use the veohproxy script, so it's nice to have the script starting automatically. Below instructions on how to do that.
+^A lot of video plugins use the veohproxy script, so it's nice to have the script starting automatically. Below instructions on how to do that.^
 
 = Introduction =
 
