@@ -6,12 +6,31 @@
       <filename>xephyr.ttf</filename>
       <size>56</size>
     </font>
+
+	<font>
+		<name>fruity21</name>
+		<filename>fruitylight.ttf</filename>
+		<size>21</size>
+	</font>
 	
-    <font>
-      <name>menufontfranklein</name>
-      <filename>Md_Gothic11.ttf</filename>
-      <size>54</size>
-    </font>
+	<font>
+		<name>fruity17</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+	</font>
+	
+	<font>
+		<name>fruity17s</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+		<shadow>dF000000</shadow>
+	</font>
+	
+	<font>
+		<name>acens21</name>
+		<filename>Acens.ttf</filename>
+		<size>21</size>
+	</font>
 	
     <font>
       <name>menufontacens</name>

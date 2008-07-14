@@ -148,18 +148,18 @@
 
 <include name="timeformat">
 		<posx>907</posx>
-		<posy>7</posy>
+		<posy>9</posy>
 		<width>355</width>
-		<font>font13s</font>
+		<font>fruity21</font>
 		<align>right</align>
 		<textcolor>d0ffffff</textcolor>
 </include>
 
 <include name="timeformat2">
 		<posx>1262</posx>
-		<posy>7</posy>
+		<posy>9</posy>
 		<width>355</width>
-		<font>font13s</font>
+		<font>fruity21</font>
 		<align>right</align>
 		<textcolor>d0ffffff</textcolor>
 </include>
@@ -301,15 +301,44 @@
 </include>	
 
 <include name="mediafocuslabel">
+	<control type="label">
 	<description>Selected items in Media panes</description>
 	<posx>1254</posx>
 	<posy>567</posy>
-	<info>listitem.label</info>
+	<label>[COLOR d0ffffff]$INFO[listitem.title][/COLOR] [COLOR ffa1a1a1]($INFO[listitem.year])[/COLOR]</label>
 	<align>right</align>
-	<font>font13s</font>
+	<font>fruity21</font>
 	<textcolor>d0ffffff</textcolor>
 	<include>common-fade</include>
-	<visible>[!Control.HasFocus(53) | !Container.HasFocus(57)] + [!Container.Content(episodes) | !Container.Content(movies)]</visible>
+	<visible>Window.IsActive(25) + [Control.IsVisible(52) | Control.IsVisible(56)] + [!Control.IsVisible(57)] + !Window.IsActive(2004) + !Window.IsActive(106)</visible>
+	</control>
+	
+	<control type="label">
+	<description>Selected items in Media panes</description>
+	<posx>1254</posx>
+	<posy>567</posy>
+	<label>$INFO[listitem.label]</label>
+	<align>right</align>
+	<font>fruity21</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>common-fade</include>
+	<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(56)] + [!Control.IsVisible(57)] + !Window.IsActive(2004) + !Window.IsActive(106)</visible>
+	</control>
+	
+	<control type="fadelabel">
+	<description>Selected items in Media panes</description>
+	<posx>453</posx>
+	<posy>567</posy>
+	<width>800</width>
+	<label>[COLOR ffa1a1a1]Running time:[/COLOR][COLOR d0ffffff] $INFO[listitem.duration][/COLOR]</label>
+	<label>[COLOR ffa1a1a1]Director:[/COLOR][COLOR d0ffffff] $INFO[listitem.director][/COLOR]</label>
+	<align>right</align>
+	<pauseatend>6000</pauseatend>
+	<scrollout>false</scrollout>
+	<font>fruity21</font>
+	<include>common-fade</include>
+	<visible>Control.IsVisible(50) + !Window.IsActive(2004) + !Window.IsActive(106) + Container.Content(movies)</visible>
+	</control>
 </include>
 
 <include name="mediafocusvideo">
@@ -338,10 +367,10 @@
 <include name="Window-Files">
 	<control type="label" id="12">
 		<posx>26</posx>
-		<posy>564</posy>
+		<posy>567</posy>
 		<label>-</label>
-		<font>font13s</font>
-		<textcolor>d0ffffff</textcolor>
+		<font>fruity21</font>
+		<textcolor>ffa1a1a1</textcolor>
 		<include>common-fade-quick</include>
 		<visible>!Window.IsActive(106) + !Window.IsActive(132) + !Window.IsActive(129) + !Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(53)</visible>
 	</control>
@@ -356,7 +385,7 @@
 		<textcolor>d0ffffff</textcolor>
 		<label>Selected: $INFO[ListItem.Label]</label>
 		<include>common-fade</include>
-		<visible>[Window.IsActive(106) | Window.IsActive(132)] + !Container.Content(episodes)</visible>
+		<visible>[Window.IsActive(106) | Window.IsActive(132)] + + !Control.IsVisible(50) + !Container.Content(episodes)</visible>
 	</control>
 </include>
 
@@ -373,7 +402,7 @@
 	<posx>26</posx> 
 	<posy>116</posy>
 	<height>34</height>
-	<font>font13</font>
+	<font>acens21</font>
 	<textcolor>d0FFFFFF</textcolor>
 	<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
 	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(53) | Window.IsActive(2600)">Conditional</animation>
@@ -707,6 +736,29 @@
 	
 </include>
 
+<include name="showcaseimdb">
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<include>common-fade</include>
+	<visible>Window.IsActive(2003) + Control.IsVisible(57)</visible>
+		<control type="image">
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>1380</width>
+			<height>537</height>
+			<texture>m-glassimdb.png</texture>
+		</control>
+		<control type="image">
+			<posx>517</posx>
+			<posy>586</posy>
+			<width>1104</width>
+			<height>37</height>
+			<texture>m-glassimdbtab.png</texture>
+		</control>
+	</control>
+</include>
+
 <include name="mediaglasslib">
 	<control type="image">
 		<posx>-599</posx>
@@ -769,7 +821,7 @@
 <!-- Menu styles ================================== -->
 
 <include name="mediamenugroup">
-	<posx>142</posx>
+	<posx>162</posx>
 	<posy>116</posy>
 	<width>513</width>
 	<height>34</height>
@@ -806,7 +858,7 @@
 	<disabledcolor>3cFFFFFF</disabledcolor>
 	<textoffsetx>0</textoffsetx>
 	<align>center</align>
-	<font>font13</font>
+	<font>fruity21</font>
 	<include>common-fade</include>
 </include>
 
@@ -1809,7 +1861,7 @@
 	<posy>400</posy>
 	<width>800</width>
 	<height>300</height>
-	<visible>Control.HasFocus(57) + [Container.Content(movies) | Container.Content(tvshows)] + [!Container(57).OnNext + !Container(57).OnPrevious]</visible>
+	<visible>Control.HasFocus(57) + [Container.Content(movies) | Container.Content(tvshows)] + [!Container(57).OnNext + !Container(57).OnPrevious] + !Window.IsActive(2003)</visible>
 	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
 	<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>

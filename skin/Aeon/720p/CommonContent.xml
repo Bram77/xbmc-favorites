@@ -12,6 +12,7 @@
 		<onright>2</onright>
 		<onup>50</onup>
 		<ondown>50</ondown>
+		<scrolltime>0</scrolltime>
 		<include>common-fade</include>
 		<visible>[Window.IsActive(24) + [Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers) | Skin.HasSetting(gametrailers)] + !Skin.HasSetting(listmovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtv)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(listclips)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(listapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(listgames)] | [Window.IsActive(2) + !Skin.HasSetting(listpictures)] | [Window.IsActive(20) + !Skin.HasSetting(listscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(listarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(listadult)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(listmovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtvlib)]</visible>
 
@@ -26,24 +27,31 @@
 				<include>listcolornofocus</include>
 				<info>ListItem.Label</info>
 			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>36</posy>
+				<width>845</width>
+				<height>3</height>
+				<texture>listdivider.png</texture>
+			</control>
 			<control type="label">
-				<posx>890</posx>
+				<posx>880</posx>
 				<posy>0</posy>
 				<width>120</width>
 				<height>39</height>
-				<font>fruity21</font>
+				<font>fruity17</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<include>listcolornofocus</include>
-				<info>ListItem.Label2</info>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
 				<visible>!Container.Content(movies)</visible>
 			</control>
 			<control type="label">
-				<posx>890</posx>
+				<posx>880</posx>
 				<posy>0</posy>
 				<width>120</width>
 				<height>39</height>
-				<font>fruity21</font>
+				<font>fruity17</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<include>listcolornofocus</include>
@@ -59,7 +67,7 @@
 				<height>40</height>
 				<texture>listhighlightstub.png</texture>
 				<colordiffuse>d0FFFFFF</colordiffuse>
-				<visible>Control.HasFocus(50)</visible>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129)</visible>
 				<animation effect="fade" start="0" end="100">VisibleChange</animation>
 			</control>
 			<control type="label">
@@ -75,45 +83,35 @@
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
-				<posx>890</posx>
+				<posx>880</posx>
 				<posy>0</posy>
 				<width>120</width>
 				<height>39</height>
-				<font>fruity21</font>
+				<font>fruity17</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>
-				<info>ListItem.Label2</info>
-				<visible>!Container.Content(movies) + !Container.Content(tvshows)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+				<visible>!Container.Content(movies)</visible>
 			</control>
 			<control type="label">
-				<posx>890</posx>
+				<posx>880</posx>
 				<posy>0</posy>
 				<width>120</width>
 				<height>39</height>
-				<font>fruity21</font>
+				<font>fruity17</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<include>listcolorfocus</include>
 				<info>ListItem.Year</info>
 				<visible>Container.Content(movies)</visible>
 			</control>
-			<control type="label">
-				<posx>890</posx>
-				<posy>0</posy>
-				<width>120</width>
-				<height>39</height>
-				<font>fruity21</font>
-				<align>right</align>
-				<aligny>center</aligny>
-				<include>listcolorfocus</include>
-				<label>$INFO[ListItem.episode] episodes</label>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
  		</focusedlayout>
 
 	</control>
 
+	<include>mediafocuslabel</include>
+	
 	<control type="group">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -133,6 +131,17 @@
 			<height>350</height>
 			<info>ListItem.Thumb</info>
 			<texture>defaulticonposter.png</texture>
+			<visible>!Window.IsActive(2)</visible>
+		</control>
+		<control type="image">
+			<posx>965</posx>
+			<posy>154</posy>
+			<width>242</width>
+			<height>350</height>
+			<info>ListItem.Thumb</info>
+			<texture>defaulticonposter.png</texture>
+			<visible>Window.IsActive(2)</visible>
+			<aspectratio aligny="center">scale</aspectratio>
 		</control>
 		<control type="image">
 			<posx>926</posx>
@@ -454,11 +463,8 @@
    	   </control>
 
 	<include>movieinfopanel</include>
-	   
-	<control type="label">
-		<include>mediafocusvideo</include>
-		<visible>Control.IsVisible(56) + !Window.IsActive(25) + !Window.IsActive(2004)</visible>
-	</control>
+
+	<include>mediafocuslabel</include>
 
 	<include>contextselected</include>
 
