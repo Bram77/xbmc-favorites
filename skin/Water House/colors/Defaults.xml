@@ -1,0 +1,15 @@
+<colors>
+	<color name="button-text">FF373737</color>
+	<color name="rss-headline-text">FF373737</color>
+	<color name="rss-title-text">FF373737</color>
+	<color name="info-text">FF373737</color>
+	<color name="listselectedtext">FF373737</color>
+	<color name="listselectedcolor">FF373737</color>
+	<color name="kai-text-alpha">FF373737</color>
+	<color name="kai-text">FF373737</color>
+	<color name="disabled-text">FF373737</color>
+	<color name="osd-nf">FF373737</color>
+	<color name="recording-nf">FF373737</color>
+	<color name="recording">FF373737</color>
+	<color name="shutdown-text">FF373737</color>
+</colors>
