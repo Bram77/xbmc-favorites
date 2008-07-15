@@ -1,166 +1,180 @@
 ﻿<window id="115">
 	<defaultcontrol>901</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
-	<controls>
-
-	<control type="group" id="901">
+	
+	<coordinates>
+		<system>1</system>
 		<posx>0</posx>
-		<posy>505</posy>
-		<width>720</width>
-		<height>576</height>
-		<align>center</align>
-		<include>fadeinout</include>
+		<posy>536</posy>
+	</coordinates>
+	
+	<controls>
 		
-		<control type="progress" id="1">
-			<description>Progressbar</description>
-			<posx>100</posx>
-			<posy>40</posy>
-			<width>520</width>
-			<height>8</height>
-			<info>Player.Progress</info>
-			<texturebg>progress_back.png</texturebg>
-			<lefttexture>progress_left.png</lefttexture>
-			<midtexture>progress_mid.png</midtexture>
-			<righttexture>progress_right.png</righttexture>
-			<overlaytexture>-</overlaytexture>
-			<visible>Window.IsActive(115)</visible>
-		</control>
 		
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>PAUSED</label>
-			<visible>Player.Paused</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>FORWARD 2X</label>
-			<visible>Player.Forwarding2x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>FORWARD 4X</label>
-			<visible>Player.Forwarding4x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>FORWARD 8X</label>
-			<visible>Player.Forwarding8x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>FORWARD 16X</label>
-			<visible>Player.Forwarding16x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>FORWARD 32X</label>
-			<visible>Player.Forwarding32x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>REWIND 2X</label>
-			<visible>Player.Rewinding2x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>REWIND 4X</label>
-			<visible>Player.Rewinding4x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>REWIND 8X</label>
-			<visible>Player.Rewinding8x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>REWIND 16X</label>
-			<visible>Player.Rewinding16x</visible>
-		</control>
-
-		<control type="label" id="0">
-			<posx>100</posx>
-			<posy>0</posy>
-			<width>720</width>
-			<align>left</align>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
-			<label>REWIND 32X</label>
-			<visible>Player.Rewinding32x</visible>
-		</control>
+		<control type="group" id="901">
+			<include>fadeinout</include>
+			<visible>![Window.IsActive(2901) | Window.IsActive(114)]</visible>
+			
 		
-		<control type="label" id="22">
-			<description>seek time</description>
-			<posx>620</posx>
-			<posy>0</posy>
-			<font>h4</font>
-			<align>right</align>
-			<label>$INFO[Player.SeekTime] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
-			<textcolor>label-text</textcolor>
-			<width>720</width>
-			<visible>!Window.IsActive(2006)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>40</height>
+				<width>720</width>
+				<texture border="4">infobar2.png</texture>
+				<visible>Window.IsActive(2005) + !Player.ShowInfo</visible>
+				<include>fadeinout</include>
+			</control>
+	
+		
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>200</posx>
+				<posy>16</posy>
+				<width>285</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+			
+			<control type="label" id="0">
+				<posx>125</posx>
+				<posy>4</posy>
+				<width>100</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>PAUSED</label>
+				<visible>!Window.IsActive(2901) + Player.Paused</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 2X</label>
+				<visible>Player.Forwarding2x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 4X</label>
+				<visible>Player.Forwarding4x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 8X</label>
+				<visible>Player.Forwarding8x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 16X</label>
+				<visible>Player.Forwarding16x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 32X</label>
+				<visible>Player.Forwarding32x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 2X</label>
+				<visible>Player.Rewinding2x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 4X</label>
+				<visible>Player.Rewinding4x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 8X</label>
+				<visible>Player.Rewinding8x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 16X</label>
+				<visible>Player.Rewinding16x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h4</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 32X</label>
+				<visible>Player.Rewinding32x</visible>
+			</control>
+			
+			<control type="label" id="22">
+				<description>seek time</description>
+				<posx>500</posx>
+				<posy>4</posy>
+				<font>h4</font>
+				<align>left</align>
+				<label>$INFO[Player.SeekTime] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+				<textcolor>label-text</textcolor>
+				<width>720</width>
+				<visible>!Window.IsActive(2006)</visible>
+			</control>
+
 		</control>
-
-
-	</control>
 
 	</controls>
 </window>

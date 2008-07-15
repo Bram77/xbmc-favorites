@@ -4,6 +4,35 @@
 	<previouswindow>Home</previouswindow>
 	<controls>
 		<include>background</include>
+		<include>infobar</include>
+		
+		
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+			<info>Skin.String(backgroundMusic)</info>
+			<visible>Skin.String(backgroundMusic) + Skin.HasSetting(backgroundContent)</visible>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+		</control>
+		<control type="image">
+			<description>multiimage overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>multiimage-overlay.png</texture>
+			<colordiffuse>ffa3a3a3</colordiffuse>
+			<visible>Skin.String(backgroundMusic) + Skin.HasSetting(backgroundContent)</visible>
+		</control>
+		
+		
 		<include>allscreens</include>
 		<include>mediaoverlay</include>
 		
@@ -63,10 +92,7 @@
 			<font>page</font>
 			<visible>!IsEmpty(container.pluginname) + ![container.content(albums) | container.content(artists) | container.content(songs)]</visible>
 		</control>
-		
 
-		
-		
 		<include>LibraryMusicMenu</include>	
 		
 <!----- CONTENT START ------------------->	
@@ -76,17 +102,21 @@
 			<include>pageslide</include>
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
-			<include>MediaInfoM</include>
 			<include>ListView</include>
-			<include>TilesView2</include>
-			<include>VideoDVDWrapView</include>
 			<include>AlbumCoverflow</include>
 			<include>BigListMusic</include>
 			<include>AlbumSlide</include>
 			<include>PageControl</include>
-			<include>BigIcons</include>
-			<include>Icons</include>
+			<include>BigIconsAU</include>
+			<include>IconsMusic</include>
 			<include>Album</include>
+			<include>AllViewCommonPageControls</include>
+			
+			<!--
+			<include>MediaInfoM</include>
+			<include>TilesView2</include>
+			<include>VideoDVDWrapView</include>
+			-->
 
   <!--- COMMON -------------------------->
 			<control type="image" id="999">
@@ -234,7 +264,7 @@
 				<font>h2</font>
 				<textcolor>sublabel-text</textcolor>
 				<scroll>true</scroll>
-				<label fallback="31930">$INFO[ListItem.Genre]</label>
+				<label>$INFO[ListItem.Genre]</label>
 				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
 			</control>
 			<control type="label">
@@ -480,17 +510,6 @@
 				<width>260</width>
 				<height>280</height>
 				<info>ListItem.Thumb</info>
-				<aspectratio align="bottom">keep</aspectratio>
-				<visible>Control.IsVisible(50) + Container.Content(artists)</visible>
-			</control>
-			<control type="image">
-				<description>list item icon reflection</description>
-				<posx>430</posx>
-				<posy>370</posy>
-				<width>260</width>
-				<height>280</height>
-				<info>ListItem.Thumb</info>
-				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio align="bottom">keep</aspectratio>
 				<visible>Control.IsVisible(50) + Container.Content(artists)</visible>
 			</control>

@@ -2,34 +2,31 @@
 	<defaultcontrol>2</defaultcontrol>
 	<animation effect="fade" time="400">WindowOpen</animation>
 	<animation effect="fade" time="400">WindowClose</animation>
-	
-	
 	<coordinates>
 		<system>1</system>
 		<posx>150</posx>
-		<posy>80</posy>
+		<posy>90</posy>
 	</coordinates>
-	
 	<controls>
-		
 		<control type="image" id="1">
 			<description>background image</description>
-			<posx>-40</posx>
-			<posy>-35</posy>
+			<posx>-35</posx>
+			<posy>-25</posy>
 			<width>480</width>
 			<height>430</height>
-			<texture>dialog-panel2.png</texture>
+			<texture border="38">dialogpanel.png</texture>
+			<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
 		</control>
 		
 		<control type="label" id="2">
 			<description>Settings Label</description>
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>2</posy>
 			<width>420</width>
 			<align>left</align>
-			<font>h1D</font>
-			<textcolor>label-text</textcolor>
+			<font>h1</font>
 		</control>
+		
 		
 		<control type="label" id="3">
 			<description>No Settings Label</description>
@@ -38,13 +35,12 @@
 			<width>408</width>
 			<align>center</align>
 			<label>13390</label>
-			<font>h4</font>
+			<font>font12</font>
 		</control>
-		
 		<control type="spincontrol" id="60">
 			<description>Next page button</description>
-			<posx>370</posx>
-			<posy>8</posy>
+			<posx>365</posx>
+			<posy>10</posy>
 			<subtype>page</subtype>
 			<font>h4</font>
 			<onleft>5</onleft>
@@ -53,22 +49,14 @@
 			<onup>28</onup>
 			<showonepage>false</showonepage>
 		</control>
-		
-		<control type="image">
-			<description>separator</description>
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>330</width>
-			<height>3</height>
-			<texture>dialog-seperator.png</texture>
-		</control>
+
 		
 		<control type="grouplist" id="5">
 			<description>control area</description>
 			<posx>0</posx>
-			<posy>55</posy>
-			<width>400</width>
-			<height>297</height>
+			<posy>50</posy>
+			<width>410</width>
+			<height>315</height>
 			<itemgap>2</itemgap>
 			<pagecontrol>60</pagecontrol>
 			<onleft>28</onleft>
@@ -81,9 +69,9 @@
 			<description>Default Button</description>
 			<posx>530</posx>
 			<posy>150</posy>
-			<height>31</height>
-			<font>h4</font>
-			<textoffsetx>6</textoffsetx>
+			<height>33</height>
+			<font>menu</font>
+			<textoffsetx>10</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus>list-focus.png</texturefocus>
 			<texturenofocus>list-nofocus.png</texturenofocus>
@@ -93,12 +81,11 @@
 			<description>Default RadioButton</description>
 			<posx>530</posx>
 			<posy>150</posy>
-			<height>31</height>
-			<font>h4</font>
+			<height>33</height>
+			<font>menu</font>
 			<texturefocus>list-focus.png</texturefocus>
 			<texturenofocus>list-nofocus.png</texturenofocus>
-			<textoffsetx>6</textoffsetx>
-			<textcolor>label-text</textcolor>
+			<textoffsetx>10</textoffsetx>
 			<aligny>center</aligny>
 			<textureradiofocus>settings-check-box.png</textureradiofocus>
 			<textureradionofocus>settings-check-boxNF.png</textureradionofocus>
@@ -108,7 +95,7 @@
 			<description>Default SpinControlex</description>
 			<posx>530</posx>
 			<posy>150</posy>
-			<height>31</height>
+			<height>33</height>
 			<width>300</width>
 			<texturefocus>list-focus.png</texturefocus>
 			<texturenofocus>list-nofocus.png</texturenofocus>
@@ -116,10 +103,10 @@
 			<texturedown>scroll-down.png</texturedown>
 			<textureupfocus>scroll-up-focus.png</textureupfocus>
 			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>
 			<disabledcolor>disabled</disabledcolor>
-			<textoffsetx>6</textoffsetx>
+			<textoffsetx>10</textoffsetx>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
@@ -128,7 +115,7 @@
 			<description>Default Slider</description>
 			<posx>530</posx>
 			<posy>150</posy>
-			<height>31</height>
+			<height>33</height>
 			<width>300</width>
 			<texturefocus>list-focus.png</texturefocus>
 			<texturenofocus>list-nofocus.png</texturenofocus>
@@ -137,12 +124,19 @@
 			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
 			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 			<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
-			<font>h4</font>
-			<textcolor>label-text</textcolor>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>
 			<disabledcolor>disabled</disabledcolor>
-			<textoffsetx>6</textoffsetx>
+			<textoffsetx>10</textoffsetx>
 		</control>
-
+		
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>0</height>
+			<texture>separatorOSD.png</texture>
+			<visible>false</visible>
+		</control>
 		
 	</controls>
 </window>

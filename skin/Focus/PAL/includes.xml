@@ -15,8 +15,7 @@
 	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="FilesMenu.xml">-</include>
 
-
-<!-- SCREEN INCLUDES --------------------------------------------------------------------->
+<!-- ALL SCREEN INCLUDES --------------------------------------------------------------------->
 
 	<include name="allscreens">	
 		<control type="image" id="999">
@@ -32,25 +31,24 @@
 		<control type="label" id="12">
 			<description>number of files text label</description>
 			<posx>20</posx>
-			<posy>6</posy>
+			<posy>7</posy>
 			<align>left</align>
 			<label>-</label>
 			<font>objects</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
 			<include>home-menubar</include>
 		</control>
 		<control type="fadelabel" id="200">
 			<description>Time and Date Label</description>
-			<posx>660</posx>
-			<posy>9</posy>
-			<width>315</width>
+			<posx>655</posx>
+			<posy>8</posy>
+			<width>415</width>
 			<label>$INFO[System.Time]</label>
 			<scrollout>false</scrollout>
 			<pauseatend>5000</pauseatend>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
 			<align>right</align>
 			<font>date</font>
-			<include>textcolorlightgrey</include>
 			<include>home-menubar</include>
 		</control>
 		<control type="label" id="1000">
@@ -64,36 +62,9 @@
 			<font>h3</font>
 			<include>home-menubar</include>
 			<visible>Skin.HasSetting(ProfileNameEnable)</visible>
-		</control>	
-	</include>
-
-	<include name="mediaoverlay">
-		
-		<control type="image">
-			<posx>30</posx>
-			<posy>540</posy>
-			<width>24</width>
-			<height>24</height>
-			<texture>lastfm.png</texture>
-			<aspectratio align="left">keep</aspectratio>
-			<include>fadeinout</include>
-			<visible>![Control.IsVisible(54) | Window.IsActive(112)] + Skin.HasSetting(overlay) + Player.HasAudio + LastFM.RadioPlaying</visible>
 		</control>
-		
-		<control type="label" id="200">
-			<include>home-start</include>
-			<posx>60</posx>
-			<posy>540</posy>
-			<width>600</width>
-			<label>31078</label>
-			<textcolor>label-text</textcolor>
-			<align>center</align>
-			<font>h4</font>
-			<include>fadeinout</include>						
-			<visible>![Control.IsVisible(54) | Window.IsActive(112)] + Skin.HasSetting(overlay) + Player.HasAudio</visible>
-		</control>	
-				
-	</include>	
+	
+	</include>
 
 
 <!-- ANIMATIONS ------------------------------------------------------------------------->
@@ -108,47 +79,37 @@
 		<animation effect="slide" start="190" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
 	</include>
 
-	<include name="viewsmenudialog">
-		<animation effect="slide" tween="elastic" start="0" end="-150" time="600" reversible="false" condition="ControlGroup(999).HasFocus(id)">Conditional</animation>
-		<animation effect="slide" tween="elastic" start="-150" end="0" time="600" reversible="false" condition="!ControlGroup(999).HasFocus(id)">Conditional</animation>
-	</include>
-
-
-	<include name="select-fade">
-		<animation reversible="false" effect="fade" start="0" end="400" time="150">focus</animation>
-		<animation reversible="false" effect="fade" start="400" end="0" time="150">unfocus</animation>
-	</include>
-	
-	<include name="icon-focus">
-		<animation reversible="false" effect="zoom" center="auto" start="100" end="110" time="100">focus</animation>
-		<animation reversible="false" effect="zoom" center="auto" start="110" end="100" time="100">unfocus</animation>
-	</include>
-	
-	<include name="icon-focus-overlay">
-		<animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="100">focus</animation>
-		<animation type="unfocus">
-			<effect reversible="false" type="fade" start="100" end="0" time="200" />
-			<effect reversible="false" type="zoom" center="auto" start="110" end="100" time="100" />
-		</animation>
-	</include>
-	
-	<include name="dialog-ani">
+	<include name="dialog-open">
 		<animation type="WindowOpen">
-			<effect type="zoom" start="50" end="100" center="auto" time="200" />
-			<effect type="fade" time="200" />
+			<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
+			<effect type="fade" start="0" end="300" time="400" />
 		</animation>
 		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="50" center="auto" time="200" />
-			<effect type="fade" time="200" />
+			<effect type="zoom" start="100" end="50" center="212,125" time="150" />
+			<effect type="fade" start="300" end="0" time="200" />
 		</animation>
 	</include>
 	
-	<include name="zoom">
-		<animation effect="zoom" end="120" center="360,288" time="200">Focus</animation>
+	<include name="dialog-open-fav">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
+			<effect type="fade" start="0" end="300" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
+			<effect type="fade" start="300" end="0" time="200" />
+		</animation>
 	</include>
 	
-	<include name="zoomout">
-		<animation effect="fade" time="300">WindowClose</animation>
+	<include name="dialog-open-num">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
+			<effect type="fade" start="0" end="300" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
+			<effect type="fade" start="300" end="0" time="200" />
+		</animation>
 	</include>
 	
 	<include name="fadeinout">
@@ -160,47 +121,49 @@
 		</animation>
 	</include>
 	
-	<include name="osdfadeinout">
-		<animation effect="fade" start="0" end="500"  time="600">WindowOpen</animation>
-	</include>
-	
-	<include name="osdzoom">
-		<animation effect="zoom" end="120" center="360,288" time="200">WindowOpen</animation>
-	</include>	
-
-	<include name="fadereplace">
+	<include name="fadeinout-osd">
 		<animation type="Visible">
-			<effect type="fade" start="0" end="300" time="300" />
-			</animation>
+			<effect type="fade" start="0" end="100" time="600" />
+		</animation>
 		<animation type="Hidden">
-			<effect type="fade" start="300" end="0" time="300" />
-			</animation>
+			<effect type="fade" start="100" end="0" time="600" />
+		</animation>
 	</include>
 	
-	<include name="select">
+	<include name="icon-focus">
+		<animation reversible="false" effect="fade" start="70" end="100" time="100">focus</animation>
+		<animation reversible="false" effect="fade" start="100" end="70" time="100">unfocus</animation>
+	</include>
+	
+	<include name="idle-fade-movie">
+		<animation effect="fade" start="100" end="0" time="150" condition="!IsEmpty(ListItem.Plot) + Skin.HasSetting(movielistPlot) + System.IdleTime(2)">Conditional</animation>
+	</include>
+	
+	<include name="idle-fade-episode">
+		<animation effect="fade" start="100" end="0" time="150" condition="!IsEmpty(ListItem.Plot) + Skin.HasSetting(episodelistPlot) + System.IdleTime(2)">Conditional</animation>
+	</include>
+	
+	<include name="home-submenu">
 		<animation type="Focus">
-			<effect type="slide" tween="back" easing="Out" start="0,-800" time="300" />
+			<effect type="slide" tween="back" easing="Out" start="0,-600" time="300" />
 			<effect type="fade" start="0" end="400" time="800"/>
 		</animation>
 		<animation type="UnFocus">
-			<effect type="slide" tween="back" easing="In" start="-800,0" time="300" />
+			<effect type="slide" tween="back" easing="In" start="-600,0" time="300" />
 			<effect type="fade" start="400" end="0" time="800"/>
 		</animation>
 	</include>
-
-	<include name="pageslide">
-		<animation effect="slide" time="200" start="300,0" end="0,0" acceleration="-1" >WindowOpen</animation>
-		<animation effect="slide" time="200" start="0,0" end="-800,0" >WindowClose</animation>
-	</include>
 	
-	<include name="pageslideright">
-		<animation effect="slide" time="200" start="300,0" end="0,0" acceleration="-1" >WindowOpen</animation>
-		<animation effect="slide" time="200" start="0,0" end="300,0" >WindowClose</animation>
-	</include>
-	
-	<include name="pageslideleft">
-		<animation effect="slide" time="200" start="-300,0" end="0,0" acceleration="-1" >WindowOpen</animation>
-		<animation effect="slide" time="200" start="0,0" end="-300,0" >WindowClose</animation>
+	<include name="pageslide">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="600" />
+			<effect type="slide" start="200" end="0" time="300" tween="Back" easing="Out"/>
+		</animation>
+		
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="150" />
+			<effect type="slide" start="0" end="200" time="150" />
+		</animation>
 	</include>
 	
 	<include name="home-start">
@@ -224,11 +187,6 @@
 			<effect type="slide" start="0,0" end="0,-100" tween="back" condition="!Window.Previous(startup)" time="150" />
 			<effect type="fade" condition="!Window.Previous(startup)" time="200" />
 		</animation>
-	</include>
-		
-	<include name="home-submenu">	
-		<animation effect="fade" start="0" end="800" time="400">Visible</animation>
-		<animation effect="fade" start="800" end="0" time="200">Hidden</animation>
 	</include>
 
 
@@ -259,23 +217,48 @@
 			<width>720</width>
 			<height>576</height>
 			<texture diffuse="background-diffuse.png">background.bmp</texture>
-			<visible>!Skin.String(custom-background)</visible>
+			<visible>!Skin.HasSetting(backgroundFolder)</visible>
 			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
-			<animation effect="fade" start="0" end="80" time="0" reversible="true" condition="[Player.HasVideo + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
-			
+			<animation effect="fade" start="100" end="0" time="0" reversible="true" condition="[Player.HasVideo  + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" reversible="true" condition="[Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
 		</control>
-	
-		<control type="image">
-			<description>custom background</description>
+
+		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>720</width>
 			<height>576</height>
-			<info>Skin.String(custom-background)</info>
-			<visible>Skin.String(custom-background)</visible>
-			<texture diffuse="background-diffuse.png">$INFO[Skin.String(custom-background)]</texture>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+			<visible>Skin.HasSetting(backgroundFolder)</visible>
+			<info>Skin.String(backgroundFolderSet)</info>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation effect="fade" time="200">VisibleChange</animation>
 			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
-			<animation effect="fade" start="0" end="80" time="0" reversible="true" condition="[Player.HasVideo + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" reversible="true" condition="[Player.HasVideo + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="0" reversible="true" condition="[Player.HasAudio + Visualisation.Enabled  + !Skin.HasSetting(HomeViewToggle)]">Conditional</animation>
+		</control>
+		
+		<control type="image">
+			<description>multiimage overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>multiimage-overlay.png</texture>
+			<colordiffuse>ffa3a3a3</colordiffuse>
+			<visible>Skin.String(backgroundFolderSet)</visible>
+		</control>
+
+		<control type="image">
+			<description>multiimage overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+			<visible>Player.HasVideo + !Skin.HasSetting(HomeViewToggle)</visible>
 		</control>
 		
 		<control type="image">
@@ -284,8 +267,8 @@
 			<posy>0</posy>
 			<width>720</width>
 			<height>576</height>
-			<texture diffuse="fanart-diffuse.png">$INFO[FanArt.Image]</texture>
-			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54)</visible>
+			<texture>$INFO[FanArt.Image]</texture>
+			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54) + Skin.HasSetting(FanartViewEnable)</visible>
 			<animation effect="fade" start="0" end="800" time="400">WindowOpen</animation>
 			<animation effect="fade" start="800" end="0" time="400">WindowClose</animation> 
 		</control>
@@ -297,24 +280,35 @@
 			<height>576</height>
 			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable)</visible>
 			<texture>$INFO[FanArt.Image]</texture>
-			<animation effect="fade" start="100" end="20" time="0" condition="!Skin.HasSetting(FanartDiffuseEnable)">Conditional</animation>
-			<colordiffuse>ffa3a3a3</colordiffuse>
+			<animation effect="fade" start="100" end="80" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimLight)">Conditional</animation>
+			<animation effect="fade" start="100" end="30" time="100" condition="Skin.HasSetting(FanartDim) + Skin.HasSetting(FanartDimStrong)">Conditional</animation>
 		</control>
-	
+		
+		<control type="image">
+			<description>multiimage overlay</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>multiimage-overlay.png</texture>
+			<colordiffuse>ffa3a3a3</colordiffuse>
+			<visible>[Container.Content(seasons) | Container.Content(episodes)] + !Control.IsVisible(54) + Skin.HasSetting(FanartEnable)</visible>
+		</control>
+
 	</include>		
 	
 
 <!-- FANART INCLUDES -------------------------------------------------------------------->
 
-	<include name="fanart">
+	<include name="Fanart">
 
 		<control>
 			<description>fanart osd background, fanart colors available</description>
 			<type>image</type>
 			<posx>0</posx>
-			<posy>320</posy>
+			<posy>120</posy>
 			<width>720</width>
-			<height>260</height>
+			<height>460</height>
 			<texture>fanart-osd-diffuse.png</texture>
 			<colordiffuse>Fanart.Color2</colordiffuse>
 			<visible>Container.Content(episodes) + Control.IsVisible(54)</visible>
@@ -328,9 +322,9 @@
 			<description>fanart osd background, no fanart colors available</description>
 			<type>image</type>
 			<posx>0</posx>
-			<posy>340</posy>
+			<posy>120</posy>
 			<width>720</width>
-			<height>240</height>
+			<height>460</height>
 			<texture>osd-background.png</texture>
 			<visible>Container.Content(episodes) + Control.IsVisible(54)</visible>
 			<animation effect="fade" start="0" end="800" time="400">WindowOpen</animation>
@@ -338,7 +332,6 @@
 			<include>fadeinout</include>
 			<visible>!Skin.HasSetting(fanartcolorEnable) | IsEmpty(Fanart.Color2)</visible>
 		</control>
-		
 
 	</include>		
 

@@ -1,6 +1,6 @@
 <window id="2004">
 	<defaultcontrol>5</defaultcontrol>
-	<include>dialog-ani</include>
+	<include>dialog-open</include>
 	
 	<coordinates>
 		<system>1</system>
@@ -9,15 +9,14 @@
 	</coordinates>
 	
 	<controls>
-		<control type="image" id="1">
-			<description>background image</description>
-			<posx>-40</posx>
-			<posy>-40</posy>
+		<control type="image">
+			<posx>-35</posx>
+			<posy>-30</posy>
 			<width>450</width>
-			<height>436</height>
-			<texture>dialog-panel2.png</texture>
+			<height>435</height>
+			<texture border="38">dialogpanel.png</texture>
 		</control>
-		
+	
 		<control type="label" id="1">
 			<description>description label</description>
 			<posx>0</posx>
@@ -30,7 +29,7 @@
 			<description>textarea</description>
 			<posx>0</posx>
 			<posy>40</posy>
-			<width>380</width>
+			<width>400</width>
 			<height>287</height>
 			<font>h4</font>
 			<textcolor>button-text</textcolor>

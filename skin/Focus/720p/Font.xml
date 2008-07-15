@@ -98,7 +98,7 @@
 			<name>date</name>
 			<filename>Calibri.ttf</filename>
 			<shadow>ff000000</shadow>
-			<size>23</size>
+			<size>26</size>
 			<style>bold</style>
 		</font>
 
@@ -115,23 +115,17 @@
 		<font>
 			<name>menu</name>
 			<filename>Calibri.ttf</filename>
-			<size>27</size>
+			<size>26</size>
 			<shadow>ff000000</shadow>
 		</font>
 		
 		<font>
 			<name>description</name>
 			<filename>Calibri.ttf</filename>
-			<size>26</size>
+			<size>24</size>
 			<shadow>ff000000</shadow>
 		</font>
-		
-		<font>
-			<name>descriptionsmall</name>
-			<filename>Calibri.ttf</filename>
-			<size>20</size>
-			<shadow>ff000000</shadow>
-		</font>
+
 		
 		<font>
 			<name>h1</name>
@@ -170,7 +164,7 @@
 		<font>
 			<name>h3</name>
 			<filename>Calibri.ttf</filename>
-			<size>27</size>
+			<size>24</size>
 			<shadow>ff000000</shadow>
 		</font>
 		
@@ -226,7 +220,6 @@
 		<font>
 			<name>h1OSD</name>
 			<filename>ZegoeUI-UBold.ttf</filename>
-			<shadow>FF000000</shadow>	
 			<size>38</size>
 		</font>
 		

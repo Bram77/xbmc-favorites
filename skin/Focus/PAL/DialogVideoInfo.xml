@@ -15,13 +15,32 @@
 			<texture>infodialog.bmp</texture>
 		</control>
 		
-		
 <!--- MOVIES --------------------------------->
-			
+		
+		<control type="image">
+			<description>icon</description>
+			<posx>30</posx>
+			<posy>30</posy>
+			<height>265</height>
+			<width>300</width>
+			<texture>defaultMoviePoster.png</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Container.Content(movies) + IsEmpty(ListItem.Thumb)</visible>
+		</control>
 		<control>
 			<description>Cover image</description>
-			<type>image</type>
-			<id>3</id>
+			<posx>30</posx>
+			<posy>295</posy>
+			<width>300</width>
+			<height>265</height>
+			<texture>defaultMoviePoster.png</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Container.Content(movies) + IsEmpty(ListItem.Thumb)</visible>
+			<texture flipy="true" diffuse="fade.png">-</texture>
+		</control>
+		
+		<control type="image" id="3">
+			<description>Cover image</description>
 			<posx>30</posx>
 			<posy>30</posy>
 			<width>300</width>
@@ -30,10 +49,8 @@
 			<aspectratio align="left">keep</aspectratio>
 			<visible>Container.Content(movies)</visible>
 		</control>
-		<control>
+		<control type="image" id="3">
 			<description>Cover image</description>
-			<type>image</type>
-			<id>3</id>
 			<posx>30</posx>
 			<posy>295</posy>
 			<width>300</width>
@@ -272,15 +289,15 @@
 		<control type="textbox" id="4">
 			<description>textarea</description>
 			<posx>30</posx>
-			<posy>310</posy>
+			<posy>320</posy>
 			<width>665</width>
-			<height>180</height>
+			<height>165</height>
 			<onleft>5</onleft>
 			<onright>999</onright>
 			<onup>50</onup>
 			<ondown>5</ondown>
 			<spinposx>630</spinposx>
-			<spinposy>180</spinposy>
+			<spinposy>170</spinposy>
 			<font>description</font>
 			<align>justify</align>
 			<visible>Container.Content(movies)</visible>
@@ -288,14 +305,14 @@
 			
 			
 <!--- TV SHOWS --------------------------------->
-				
+		
 		<control type="image">
 			<description>Cover image</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>140</height>
 			<width>720</width>
-			<info>ListItem.Icon</info>
+			<info>ListItem.Thumb</info>
 			<aspectratio align="left">stretch</aspectratio>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
@@ -305,7 +322,7 @@
 			<posy>140</posy>
 			<height>140</height>
 			<width>720</width>
-			<info>ListItem.Icon</info>
+			<info>ListItem.Thumb</info>
 			<aspectratio align="left">stretch</aspectratio>
 			<texture flipy="true" diffuse="fade.png">-</texture>
 			<visible>Container.Content(tvshows)</visible>

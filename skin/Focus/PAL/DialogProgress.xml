@@ -1,25 +1,35 @@
 <window id="101">
 	<defaultcontrol>10</defaultcontrol>
-	<include>dialog-ani</include>
+	
+	<animation type="WindowOpen">
+		<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
+		<effect type="fade" start="0" end="300" time="400" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="zoom" start="100" end="50" center="212,125" time="150" />
+		<effect type="fade" start="300" end="0" time="200" />
+	</animation>
 	
 	<coordinates>
 		<system>1</system>
-		<posx>188</posx>
+		<posx>183</posx>
 		<posy>100</posy>
 	</coordinates>
 	
 	<controls>
 		
 		<control type="group">
-		
+			
 			<control type="image">
-				<posx>-40</posx>
+				<description>background image</description>
+				<posx>-35</posx>
 				<posy>-30</posy>
 				<width>425</width>
-				<height>290</height>
-				<texture>dialog-panel2.png</texture>
+				<height>280</height>
+				<texture border="38">dialogpanel.png</texture>
+				<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
 			</control>
-		
+
 			<control type="label" id="1">
 				<description>dialog Heading</description>
 				<posx>0</posx>
@@ -65,19 +75,19 @@
 			</control>
 			
 			<control type="image">
-				<posx>20</posx>
-				<posy>145</posy>
-				<width>305</width>
-				<height>18</height>
+				<posx>10</posx>
+				<posy>140</posy>
+				<width>325</width>
+				<height>16</height>
 				<texture>progressbar-background.png</texture>
 			</control>
 			
 			<control type="progress" id="20">
 				<description>progress control</description>
-				<posx>20</posx>
-				<posy>145</posy>
-				<width>305</width>
-				<height>18</height>
+				<posx>10</posx>
+				<posy>140</posy>
+				<width>325</width>
+				<height>16</height>
 				<texturebg>progressbar-background.png</texturebg>
 				<lefttexture>progress-left.png</lefttexture>
 				<midtexture>progress-middle.png</midtexture>
@@ -88,13 +98,13 @@
 			<control type="button" id="10">
 				<description>Cancel button</description>
 				<posx>128</posx>
-				<posy>190</posy>
+				<posy>175</posy>
 				<width>90</width>
-				<height>35</height>
+				<height>36</height>
 				<label>222</label>
 				<font>buttonD</font>
 				<align>center</align>
-				<textoffsety>3</textoffsety>
+				<textoffsety>2</textoffsety>
 				<texturenofocus>button2.png</texturenofocus>
 				<texturefocus>button2-focus.png</texturefocus>
 				<textcolor>button-alttext</textcolor>

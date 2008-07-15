@@ -2,158 +2,296 @@
 	<defaultcontrol>213</defaultcontrol>
 	
 	<animation type="WindowOpen">
-		<effect type="slide" start="0,100" end="0" time="200" />
-		<effect type="fade" time="200" />
+		<effect type="slide" start="0,70" end="0" time="150" />
+		<effect type="fade" start="0" end="80" time="150" />
 	</animation>
 	<animation type="WindowClose">
-		<effect type="slide" start="0" end="0,100" time="200" />
-		<effect type="fade" time="200" />
+		<effect type="slide" start="0,0" end="0,70" time="150" />
+		<effect type="fade" start="80" end="0" time="150" />
 	</animation>
 	
 	<controls>
 		
 	<control type="image">
-		<description>Panel</description>
-		<posx>0</posx>
-		<posy>460</posy>
-		<height>120</height>
-		<width>720</width>
-		<texture>osd-background.png</texture>
+		<posx>-10</posx>
+		<posy>513</posy>
+		<height>65</height>
+		<width>740</width>
+		<texture>controls-background.png</texture>
+		<visible>!Player.ShowInfo</visible>
 	</control>
 
+
+	<!---------- INFO IS ACTIVE -------------------->
+	
 	<control type="group" id="213">
-		<posx>200</posx>
-		<posy>505</posy>
+		<posx>0</posx>
+		<posy>539</posy>
 		<width>720</width>
 		<height>140</height>
+		<animation effect="slide" time="0" start="0,0" end="185,-5" condition="Player.ShowInfo">conditional</animation>
 		
-		<control type="button" id="12">
-			<width>32</width>
-			<height>32</height>
-			<posx>5</posx>
-			<posy>0</posy>
-			<onleft>19</onleft>
-			<onright>13</onright>
-			<align>center</align>
-			<texturefocus>mediacontrols-bookmarks-focus.png</texturefocus>
-	        <texturenofocus>mediacontrols-bookmarks.png</texturenofocus>
-			<onclick>XBMC.ActivateWindow(125)</onclick>
-		</control>
-
-		<control type="button" id="13">
-			<posx>40</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>12</onleft>
-			<onright>14</onright>
-	        <texturefocus>mediacontrols-previous-focus.png</texturefocus>
-	        <texturenofocus>mediacontrols-previous.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Previous)</onclick>
-		</control>
-
-		<control type="button" id="14">
-			<posx>80</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>13</onleft>
-			<onright>15</onright>
-		    <texturefocus>mediacontrols-rewind-focus.png</texturefocus>
-		    <texturenofocus>mediacontrols-rewind.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Rewind)</onclick>
-		</control>
 		
-		<control type="button" id="15">
-			<posx>120</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>14</onleft>
-			<onright>16</onright>
-		    <texturefocus>mediacontrols-pause-focus.png</texturefocus>
-		    <texturenofocus>mediacontrols-pause.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Play)</onclick>
-			<visible>!Player.Paused</visible>
+		<control type="group">
+			<posx>205</posx>
+			
+			<control type="button" id="12">
+				<width>32</width>
+				<height>32</height>
+				<posx>5</posx>
+				<posy>0</posy>
+				<onleft>19</onleft>
+				<onright>13</onright>
+				<align>center</align>
+				<texturefocus>mediacontrols-bookmarks-focus.png</texturefocus>
+		        <texturenofocus>mediacontrols-bookmarks.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(125)</onclick>
+			</control>
+	
+			<control type="button" id="13">
+				<posx>40</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>12</onleft>
+				<onright>14</onright>
+		        <texturefocus>mediacontrols-previous-focus.png</texturefocus>
+		        <texturenofocus>mediacontrols-previous.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+			</control>
+	
+			<control type="button" id="14">
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>13</onleft>
+				<onright>15</onright>
+			    <texturefocus>mediacontrols-rewind-focus.png</texturefocus>
+			    <texturenofocus>mediacontrols-rewind.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			</control>
+	
+			
+			<control type="button" id="15">
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>14</onleft>
+				<onright>16</onright>
+			    <texturefocus>mediacontrols-pause-focus.png</texturefocus>
+			    <texturenofocus>mediacontrols-pause.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>!Player.Paused</visible>
+			</control>
+			
+			<control type="button" id="15">
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>14</onleft>
+				<onright>16</onright>
+			    <texturefocus>mediacontrols-play-focus.png</texturefocus>
+			    <texturenofocus>mediacontrols-play.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>Player.Paused</visible>
+			</control>
+	
+			<control type="button" id="16">
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>15</onleft>
+				<onright>17</onright>
+			    <texturefocus>mediacontrols-forward-focus.png</texturefocus>
+			    <texturenofocus>mediacontrols-forward.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+			</control>
+			
+			<control type="button" id="17">
+				<posx>200</posx>
+				<posy>0</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>16</onleft>
+				<onright>18</onright>
+			    <texturefocus>mediacontrols-next-focus.png</texturefocus>
+			    <texturenofocus>mediacontrols-next.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+			</control>
+			
+			<control type="button" id="18">
+				<width>32</width>
+				<height>32</height>
+				<posx>240</posx>
+				<posy>0</posy>
+				<onleft>17</onleft>
+				<onright>19</onright>
+				<texturefocus>mediacontrols-audio-focus.png</texturefocus>
+		        <texturenofocus>mediacontrols-audio.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(124)</onclick>
+			</control>
+			
+			<control type="button" id="19">
+				<width>32</width>
+				<height>32</height>
+				<posx>275</posx>
+				<posy>0</posy>
+				<onleft>18</onleft>
+				<onright>12</onright>
+				<texturefocus>mediacontrols-video-focus.png</texturefocus>
+		        <texturenofocus>mediacontrols-video.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(123)</onclick>
+			</control>
+			
+			<control type="label" id="22">
+				<description>seek time</description>
+				<posx>500</posx>
+				<posy>0</posy>
+				<font>h4</font>
+				<align>right</align>
+				<label>$INFO[Player.SeekTime] / [COLOR=sublabel-text]$INFO[Player.Duration][COLOR]</label>
+				<textcolor>label-text</textcolor>
+				<width>300</width>
+				<visible>!Player.ShowInfo</visible>
+			</control>
 		</control>
+	
 		
-		<control type="button" id="15">
-			<posx>120</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>14</onleft>
-			<onright>16</onright>
-		    <texturefocus>mediacontrols-play-focus.png</texturefocus>
-		    <texturenofocus>mediacontrols-play.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Play)</onclick>
-			<visible>Player.Paused</visible>
-		</control>
-
-		<control type="button" id="16">
-			<posx>160</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>15</onleft>
-			<onright>17</onright>
-		    <texturefocus>mediacontrols-forward-focus.png</texturefocus>
-		    <texturenofocus>mediacontrols-forward.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Forward)</onclick>
-		</control>
 		
-		<control type="button" id="17">
-			<posx>200</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<onleft>16</onleft>
-			<onright>18</onright>
-		    <texturefocus>mediacontrols-next-focus.png</texturefocus>
-		    <texturenofocus>mediacontrols-next.png</texturenofocus>
-			<onclick>XBMC.PlayerControl(Next)</onclick>
+		<control type="group">
+			<posx>20</posx>
+			<posy>2</posy>
+			
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>PAUSED</label>
+				<visible>Player.Paused</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 2X</label>
+				<visible>Player.Forwarding2x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 4X</label>
+				<visible>Player.Forwarding4x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 8X</label>
+				<visible>Player.Forwarding8x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 16X</label>
+				<visible>Player.Forwarding16x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>FORWARD 32X</label>
+				<visible>Player.Forwarding32x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 2X</label>
+				<visible>Player.Rewinding2x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 4X</label>
+				<visible>Player.Rewinding4x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 8X</label>
+				<visible>Player.Rewinding8x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 16X</label>
+				<visible>Player.Rewinding16x</visible>
+			</control>
+	
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h5</font>
+				<textcolor>label-text</textcolor>
+				<label>REWIND 32X</label>
+				<visible>Player.Rewinding32x</visible>
+			</control>
 		</control>
-		
-		<control type="button" id="18">
-			<width>32</width>
-			<height>32</height>
-			<posx>240</posx>
-			<posy>0</posy>
-			<onleft>17</onleft>
-			<onright>19</onright>
-			<texturefocus>mediacontrols-audio-focus.png</texturefocus>
-	        <texturenofocus>mediacontrols-audio.png</texturenofocus>
-			<onclick>XBMC.ActivateWindow(124)</onclick>
-		</control>
-		
-		<control type="button" id="19">
-			<width>32</width>
-			<height>32</height>
-			<posx>275</posx>
-			<posy>0</posy>
-			<onleft>18</onleft>
-			<onright>12</onright>
-			<texturefocus>mediacontrols-video-focus.png</texturefocus>
-	        <texturenofocus>mediacontrols-video.png</texturenofocus>
-			<onclick>XBMC.ActivateWindow(123)</onclick>
-		</control>
-
 	</control>
+	
+	
+	
 
-	<control type="progress">
-		<description>progress control</description>
-		<posx>20</posx>
-		<posy>550</posy>
-		<width>680</width>
-		<height>5</height>
-		<info>Player.Progress</info>
-		<texturebg>progressbar-background.png</texturebg>
-		<lefttexture>progress-left.png</lefttexture>
-		<midtexture>progress-middle.png</midtexture>
-		<righttexture>progress-right.png</righttexture>
-		<overlaytexture>-</overlaytexture>
-		<visible>Player.HasVideo</visible>
-	</control>
 
 </controls>
 </window>

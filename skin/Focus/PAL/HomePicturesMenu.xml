@@ -35,8 +35,8 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textoffsetx>0</textoffsetx>
-				<textcolor>FF97d9ff</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
+				<textcolor>sublabel-text</textcolor>
+				<focusedcolor>label-text</focusedcolor>
 				<include>select</include>
 	
 				<buttons>

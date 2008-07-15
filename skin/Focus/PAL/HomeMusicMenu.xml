@@ -3,6 +3,7 @@
 		
 		<control type="group" id="1200">
 			<include>home-start-column</include>
+			<include>fadeinout</include>
 			<include>zoomout</include>
 			<include>home-submenu</include>
 			<posx>145</posx>
@@ -35,8 +36,8 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textoffsetx>0</textoffsetx>
-				<textcolor>FF97d9ff</textcolor>
-				<focusedcolor>ffffffff</focusedcolor>
+				<textcolor>sublabel-text</textcolor>
+				<focusedcolor>label-text</focusedcolor>
 				<include>select</include>
 		
 				<buttons>			

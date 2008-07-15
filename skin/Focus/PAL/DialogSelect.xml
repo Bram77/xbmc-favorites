@@ -1,10 +1,11 @@
 <window id="2000">
 	<defaultcontrol>3</defaultcontrol>
-	<include>dialog-ani</include>
+	
+	<include>dialog-open</include>
 	
 	<coordinates>
 		<system>1</system>
-		<posx>200</posx>
+		<posx>185</posx>
 		<posy>100</posy>
 	</coordinates>
 	
@@ -15,38 +16,29 @@
 		
 		<control type="image" id="0">
 			<description>background image</description>
-			<posx>-35</posx>
+			<posx>-30</posx>
 			<posy>-30</posy>
-			<width>380</width>
-			<height>345</height>
-			<texture>dialog-panel2.png</texture>
+			<width>385</width>
+			<height>400</height>
+			<texture border="38">dialogpanel.png</texture>
 		</control>
 		
 		<control type="label" id="1">
 			<description>heading label</description>
-			<posx>0</posx>
+			<posx>5</posx>
 			<posy>0</posy>
-			<width>310</width>
+			<width>325</width>
 			<align>left</align>
 			<font>h1D</font>
 			<scroll>true</scroll>
 			<label>1023</label>
 		</control>
-		
-		<control type="image" id="1">
-			<description>seperator</description>
-			<posx>0</posx>
-			<posy>40</posy>
-			<width>310</width>
-			<height>3</height>
-			<texture>dialog-seperator.png</texture>
-		</control>
 
 		<control type="list" id="3">
 			<posx>0</posx>
-			<posy>53</posy>
-			<width>310</width>
-			<height>180</height>
+			<posy>50</posy>
+			<width>325</width>
+			<height>245</height>
 			<onleft>5</onleft>
 			<onright>60</onright>
 			<onup>3</onup>
@@ -58,14 +50,14 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>310</width>
+					<width>325</width>
 					<height>33</height>
 					<texture>list-nofocus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>300</width>
+					<width>315</width>
 					<height>28</height>
 					<font>menu</font>
 					<align>left</align>
@@ -78,21 +70,21 @@
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>310</width>
+					<width>325</width>
 					<height>33</height>
 					<texture>list-focus.png</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>310</width>
+					<width>325</width>
 					<height>33</height>
 					<texture>input-focus.png</texture>
 				</control>
 				<control type="label">
 					<posx>10</posx>
 					<posy>0</posy>
-					<width>300</width>
+					<width>315</width>
 					<height>28</height>
 					<font>menu</font>
 					<align>left</align>
@@ -114,8 +106,8 @@
 		
 		<control type="label" id="2">
 			<description>Objects Label</description>
-			<posx>310</posx>
-			<posy>253</posy>
+			<posx>325</posx>
+			<posy>305</posy>
 			<width>100</width>
 			<label>-</label>
 			<textcolor>sublabel-text</textcolor>
@@ -126,16 +118,16 @@
 		<control type="button" id="5">
 			<description>manual button</description>
 			<posx>0</posx>
-			<posy>243</posy>
-			<width>90</width>
-			<height>35</height>
+			<posy>300</posy>
+			<width>100</width>
+			<height>36</height>
 			<align>center</align>
 			<label>368</label>
 			<font>buttonD</font>
 			<texturenofocus>button2.png</texturenofocus>
 			<texturefocus>button2-focus.png</texturefocus>
 			<focusedcolor>button-alttext</focusedcolor>
-			<textoffsety>3</textoffsety>
+			<textoffsety>1</textoffsety>
 			<onleft>3</onleft>
 			<onright>3</onright>
 			<onup>3</onup>

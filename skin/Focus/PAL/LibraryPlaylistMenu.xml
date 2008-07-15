@@ -25,7 +25,6 @@
 				<onright>50</onright>
 				<onup>31</onup>
 				<ondown>20</ondown>
-				<include>View-as</include>
 			</control>
 				
 			<control type="button" id="20">
@@ -44,7 +43,6 @@
 				<onup>22</onup>
 				<ondown>28</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 			
 			<control type="radiobutton" id="28">
@@ -64,7 +62,6 @@
 				<onup>2</onup>
 				<ondown>26</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 			
 			<control type="button" id="26">
@@ -83,7 +80,6 @@
 				<onup>28</onup>
 				<ondown>21</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 			
 			<control type="button" id="21">
@@ -102,7 +98,6 @@
 				<onup>26</onup>
 				<ondown>22</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 			
 			<control type="button" id="22">
@@ -122,7 +117,6 @@
 				<onup>21</onup>
 				<ondown>30</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 			
 			<control type="button" id="30">
@@ -143,7 +137,6 @@
 				<include>View-as</include>
 				<onclick>XBMC.LastFM.Love</onclick>
 				<visible>LastFM.RadioPlaying</visible>
-				<include>View-as</include>
 			</control>
 				
 			<control type="button" id="31">
@@ -163,7 +156,6 @@
 				<texturenofocus>list-nofocus.png</texturenofocus>
 				<onclick>XBMC.LastFM.Ban</onclick>
 				<visible>LastFM.RadioPlaying</visible>
-				<include>View-as</include>
 			</control>
 																	
 		</control>

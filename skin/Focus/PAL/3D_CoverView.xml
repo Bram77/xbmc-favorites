@@ -14,7 +14,7 @@
 			<include>list-fade</include>
 			<focusposition>2</focusposition>
 			<orientation>horizontal</orientation>
-			<visible>Container.Content(movies) | Container.Content(seasons)</visible>
+			<visible>Skin.HasSetting(viewtypeCoverFlow) + Container.Content(movies)</visible>
 			<itemlayout height="390" width="140">
 			</itemlayout>
 			<focusedlayout height="410" width="320">
@@ -22,8 +22,8 @@
 		</control>
 	
 		<control type="group" id="3011">
-			<posy>95</posy>
-			<camera x="360" y="288" />
+			<posy>75</posy>
+			<camera x="360" y="228" />
 			<visible>Control.IsVisible(57) + Container.OnNext</visible>
                         <animation effect="slide" end="-50,0" time="200" reversible="false">Hidden</animation>
 			<include>list-fade</include>
@@ -209,8 +209,8 @@
 			</control>
 		</control>
 		<control type="group" id="3012">
-			<posy>95</posy>
-			<camera x="360" y="288" />
+			<posy>75</posy>
+			<camera x="360" y="228" />
 			<visible>Control.IsVisible(57) + Container.OnPrevious</visible>
                         <animation effect="slide" end="50,0" time="200" reversible="false">Hidden</animation>
 			<include>list-fade</include>
@@ -396,8 +396,8 @@
 			</control>
 		</control>
 		<control type="group" id="3010">
-			<posy>95</posy>
-			<camera x="360" y="288" />
+			<posy>75</posy>
+			<camera x="360" y="228" />
 			<visible>Control.IsVisible(57) + !Control.IsVisible(3011)  + !Control.IsVisible(3012)</visible>
 			<include>list-fade</include>
 			<control type="image">
@@ -559,7 +559,7 @@
 		
 		<control type="label">
 			<posx>0</posx>
-			<posy>475</posy>
+			<posy>455</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h1</font>
@@ -572,7 +572,7 @@
 			</control>
 		<control type="label">
 			<posx>0</posx>
-			<posy>510</posy>
+			<posy>490</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h2</font>
@@ -587,7 +587,7 @@
 		</control>
 		<control type="label">
 			<posx>0</posx>
-			<posy>540</posy>
+			<posy>525</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h2</font>

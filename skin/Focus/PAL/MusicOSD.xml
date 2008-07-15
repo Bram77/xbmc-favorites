@@ -14,7 +14,7 @@
 			<posy>-8</posy>
 			<height>106</height>
 			<width>563</width>
-			<texture>osd-panel.png</texture>
+			<texture>osd-bar.png</texture>
 			<visible>!Player.CanRecord</visible>
 		</control>
 		<control type="image">
@@ -23,9 +23,11 @@
 			<posy>-8</posy>
 			<height>106</height>
 			<width>635</width>
-			<texture>osd-panel.png</texture>
+			<texture>osd-bar.png</texture>
 			<visible>Player.CanRecord</visible>
 		</control>
+		
+		
 		<!-- Start OSD Text -->
 		<!-- Start OSD Text if Player Can't Record -->
 		<control type="label">
