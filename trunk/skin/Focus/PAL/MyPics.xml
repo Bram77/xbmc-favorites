@@ -5,19 +5,20 @@
 	
 	<controls>
 		<include>background</include>
-		<include>#files</include>
-		<include>Fake-Overlay</include>
-
+		<include>infobar</include>
+	
 		<control type="group">
-			<description>start page content</description>		
+			<description>page content</description>
+			<include>pageslide</include>		
 			<include>ListView</include>
 			<include>PageControl</include>
 			<include>Icons</include>
 			<include>PictureSlide</include>
-			<include>BigIconsF</include>
+			<include>BigIcons</include>
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
 			<include>fadeinout</include>
+			<include>AllViewCommonPageControls</include>
 			<include>AllViewCommonThumbSmall</include>
 
 			
@@ -29,21 +30,12 @@
 				<width>256</width>
 				<height>256</height>
 				<info>ListItem.Thumb</info>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>4</bordersize>
 				<aspectratio align="bottom">keep</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
+				<include>fadeinout</include>
 			</control>
-	
-			<control type="image">
-				<description>list item thumb reflection</description>
-				<posx>430</posx>
-				<posy>346</posy>
-				<height>256</height>
-				<width>256</width>
-				<info>ListItem.Thumb</info>
-				<texture flipy="true" diffuse="fade.png">-</texture>
-				<aspectratio align="top">keep</aspectratio>
-				<visible>Control.IsVisible(50)</visible>
-			</control>	
 								
 			<control type="image" id="999">
 				<description>list item icon</description>
@@ -54,6 +46,7 @@
 				<info>ListItem.Icon</info>
 				<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 				<aspectratio align="bottom">keep</aspectratio>
+				<include>fadeinout</include>
 			</control>
 			<control type="image" id="999">
 				<description>list item icon</description>
@@ -65,6 +58,7 @@
 				<visible>IsEmpty(ListItem.Thumb) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio align="bottom">keep</aspectratio>
+				<include>fadeinout</include>
 			</control>
 
 			<control type="label">

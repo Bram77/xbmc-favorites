@@ -4,9 +4,7 @@
 	
 	<controls>
 		<include>background</include>
-		<include>#files</include>
 		<include>allscreens</include>
-		<include>Fake-Overlay</include>
 		
 		<control type="label">
 			<description>description label</description>
@@ -71,22 +69,11 @@
 			<visible>!Player.HasAudio</visible>
 			<include>fadereplace</include>
 		</control>
-		
-		<control type="image">
-			<posx>656</posx>
-			<posy>65</posy>
-			<width>48</width>
-			<height>48</height>
-			<texture>lastfm.png</texture>
-			<aspectratio align="left">keep</aspectratio>
-			<visible>LastFM.RadioPlaying</visible>
-			<include>fadereplace</include>
-		</control>
 	
 		<control type="label">
 			<description>title</description>
-			<posx>160</posx>
-			<posy>70</posy>
+			<posx>180</posx>
+			<posy>65</posy>
 			<align>left</align>
 			<font>h1</font>
 			<info>MusicPlayer.Title</info>
@@ -95,9 +82,9 @@
 		</control>
 	
 		<control type="label">
-			<description>title</description>
-			<posx>160</posx>
-			<posy>105</posy>
+			<description>artist</description>
+			<posx>180</posx>
+			<posy>100</posy>
 			<align>left</align>
 			<font>h2</font>
 			<info>MusicPlayer.Artist</info>
@@ -106,9 +93,9 @@
 		</control>
 	
 		<control type="label">
-			<description>title</description>
-			<posx>160</posx>
-			<posy>135</posy>
+			<description>album</description>
+			<posx>180</posx>
+			<posy>130</posy>
 			<align>left</align>
 			<font>h2</font>
 			<info>MusicPlayer.Album</info>
@@ -116,11 +103,22 @@
 			<visible>Player.HasAudio</visible>
 		</control>
 	
+		<control type="label">
+			<description>Time Label</description>
+			<posx>180</posx>
+			<posy>167</posy>
+			<align>left</align>
+			<font>h4</font>
+			<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
+			<visible>Player.HasAudio</visible>
+			<include>sublabel</include>
+		</control>
+
 		<control type="progress">
 			<description>progress control</description>
-			<posx>160</posx>
-			<posy>205</posy>
-			<width>530</width>
+			<posx>180</posx>
+			<posy>207</posy>
+			<width>510</width>
 			<height>8</height>
 			<info>Player.Progress</info>
 			<texturebg>progressbar-background.png</texturebg>
@@ -131,34 +129,13 @@
 			<visible>Player.HasAudio</visible>
 		</control>
 
-		<control type="label">
-			<description>Time Label</description>
-			<posx>160</posx>
-			<posy>172</posy>
-			<align>left</align>
-			<font>h4</font>
-			<info>Player.Time</info>
-			<visible>Player.HasAudio</visible>
-			<textcolor>label-text</textcolor>
-		</control>
-		<control type="label">
-			<description>Time Label</description>
-			<posx>691</posx>
-			<posy>172</posy>
-			<align>right</align>
-			<font>h4</font>
-			<info>Player.Duration</info>
-			<visible>Player.HasAudio</visible>
-			<textcolor>label-text</textcolor>
-		</control>
-
 	</control>
 	
 	<control type="image">
 		<posx>30</posx>
-		<posy>544</posy>
-		<width>24</width>
-		<height>24</height>
+		<posy>539</posy>
+		<width>32</width>
+		<height>32</height>
 		<texture>lastfm.png</texture>
 		<aspectratio align="left">keep</aspectratio>
 		<include>fadeinout</include>
@@ -167,17 +144,16 @@
 	
 	<control type="label" id="200">
 		<posx>0</posx>
-		<posy>542</posy>
+		<posy>540</posy>
 		<width>720</width>
-		<label>status: $INFO[AudioScrobbler.ConnectState] | submit in: $INFO[AudioScrobbler.SubmitState] | cached songs: $INFO[AudioScrobbler.FilesCached]</label>
+		<label>$LOCALIZE[31082]</label>
 		<textcolor>label-text</textcolor>
 		<align>center</align>
 		<font>h4</font>
 		<include>fadeinout</include>						
-		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable)</visible>
+		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable) + ![Window.IsActive(114)]</visible>
 	</control>
 
-	
-	
+
 	</controls>
 </window>

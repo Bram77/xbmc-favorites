@@ -1,11 +1,19 @@
 <window id="132">
 	<defaultcontrol>3</defaultcontrol>
-	<include>dialog-ani</include>
+	
+	<animation type="WindowOpen">
+		<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
+		<effect type="fade" start="0" end="300" time="400" />
+	</animation>
+	<animation type="WindowClose">
+		<effect type="zoom" start="100" end="50" center="212,125" time="150" />
+		<effect type="fade" start="300" end="0" time="200" />
+	</animation>
 	
 	<coordinates>
 		<system>1</system>
-		<posx>190</posx>
-		<posy>85</posy>
+		<posx>183</posx>
+		<posy>120</posy>
 	</coordinates>
 
 	<controls>
@@ -15,11 +23,11 @@
 		
 			<control type="image" id="1">
 				<description>background image</description>
-				<posx>-36</posx>
-				<posy>-40</posy>
-				<width>412</width>
-				<height>460</height>
-				<texture>dialog-panel2.png</texture>
+				<posx>-35</posx>
+				<posy>-30</posy>
+				<width>425</width>
+				<height>455</height>
+				<texture border="23">dialogpanel.png</texture>
 			</control>
 			
 			<control type="label" id="1000">
@@ -35,7 +43,7 @@
 			<control type="spincontrolex" id="3">
 				<description>directory content select spincontrol</description>
 				<align>right</align>
-				<width>175</width>
+				<width>190</width>
 				<height>17</height>
 				<posx>173</posx>
 				<posy>5</posy>
@@ -48,7 +56,6 @@
 				<onright>3</onright>
 				<disabledcolor>disabled</disabledcolor>
 			</control>
-
 			
 			<control type="image">
 				<description>scraper background</description>
@@ -74,8 +81,8 @@
 			<control type="list" id="4">
 				<posx>0</posx>
 				<posy>40</posy>
-				<width>340</width>
-				<height>132</height>
+				<width>355</width>
+				<height>140</height>
 				<onup>3</onup>
 				<ondown>30</ondown>
 				<onleft>3</onleft>
@@ -83,26 +90,26 @@
 				<scrolltime>200</scrolltime>
 				<pagecontrol>60</pagecontrol>
 				
-				<itemlayout height="33">
+				<itemlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>340</width>
-						<height>31</height>
+						<width>355</width>
+						<height>33</height>
 						<texture>list-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<posx>5</posx>
-						<posy>1</posy>
-						<width>27</width>
-						<height>27</height>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<posx>40</posx>
-						<posy>2</posy>
-						<width>158</width>
-						<height>26</height>
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>345</width>
+						<height>28</height>
 						<font>h4</font>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -110,35 +117,35 @@
 					</control>
 				</itemlayout>
 				
-				<focusedlayout height="33">
+				<focusedlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>340</width>
-						<height>31</height>
+						<width>355</width>
+						<height>33</height>
 						<visible>Control.HasFocus(4)</visible>
 						<texture>list-focus.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>340</width>
+						<width>355</width>
 						<height>31</height>
 						<visible>!Control.HasFocus(4)</visible>
 						<texture border="3">list-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<posx>5</posx>
-						<posy>1</posy>
-						<width>27</width>
-						<height>27</height>
+						<posy>2</posy>
+						<width>30</width>
+						<height>30</height>
 						<info>ListItem.Icon</info>
 					</control>
 					<control type="label">
-						<posx>40</posx>
-						<posy>2</posy>
-						<width>158</width>
-						<height>26</height>
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>345</width>
+						<height>28</height>
 						<font>h4</font>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -152,7 +159,7 @@
 				<description>control area</description>
 				<posx>-4</posx>
 				<posy>187</posy>
-				<width>345</width>
+				<width>360</width>
 				<height>150</height>
 				<itemgap>2</itemgap>
 				<onup>4</onup>
@@ -166,12 +173,12 @@
 				<description>Default RadioButton</description>
 				<posx>530</posx>
 				<posy>150</posy>
-				<height>31</height>
+				<height>33</height>
+				<aligny>-</aligny>
 				<font>h4D</font>
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textoffsetx>6</textoffsetx>
-				<aligny>center</aligny>
 				<textureradiofocus>check-box.png</textureradiofocus>
 				<textureradionofocus>check-boxNF.png</textureradionofocus>
 			</control>
@@ -179,9 +186,9 @@
 			<control type="button" id="6">
 				<description>Settings button</description>
 				<posx>0</posx>
-				<posy>340</posy>
-				<width>90</width>
-				<height>33</height>
+				<posy>350</posy>
+				<width>110</width>
+				<height>36</height>
 				<textoffsety>1</textoffsety>
 				<aligny>-</aligny>
 				<align>center</align>
@@ -198,10 +205,10 @@
 			
 			<control type="button" id="28">
 				<description>OK button</description>
-				<posx>150</posx>
-				<posy>340</posy>
+				<posx>165</posx>
+				<posy>350</posy>
 				<width>90</width>
-				<height>33</height>
+				<height>36</height>
 				<textoffsety>1</textoffsety>
 				<align>center</align>
 				<label>186</label>
@@ -217,10 +224,10 @@
 			
 			<control type="button" id="29">
 				<description>Cancel button</description>
-				<posx>250</posx>
-				<posy>340</posy>
+				<posx>265</posx>
+				<posy>350</posy>
 				<width>90</width>
-				<height>33</height>
+				<height>36</height>
 				<textoffsety>1</textoffsety>
 				<align>center</align>
 				<label>222</label>

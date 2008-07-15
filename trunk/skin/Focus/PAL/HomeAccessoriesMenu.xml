@@ -5,6 +5,7 @@
 			<include>home-start-column</include>
 			<include>zoomout</include>
 			<include>home-submenu</include>
+			<include>fadeinout</include>
 			<posx>332</posx>
 			<posy>55</posy>
 			<onup>9000</onup>

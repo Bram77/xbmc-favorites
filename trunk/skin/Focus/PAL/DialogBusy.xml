@@ -1,19 +1,18 @@
 <window id="136">
-	<animation effect="fade" time="100">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
+
 	<controls>
 
-		<control type="multiimage">
-			<description>Busy animation</description>
-			<posx>350</posx>
-			<posy>5</posy>
-			<width>32</width>
-			<height>32</height>
-			<imagepath>busy</imagepath>
-			<timeperimage>100</timeperimage>
-			<fadetime>0</fadetime>
-			<aspectratio>keep</aspectratio>
-		</control>
+		<control type="label" id="200">
+			<include>home-start</include>
+			<posx>0</posx>
+			<posy>542</posy>
+			<width>720</width>
+			<label>31906</label>
+			<align>center</align>
+			<font>h4</font>
+			<include>fadeinout</include>	
+		</control>	
 		
 	</controls>
+	
 </window>

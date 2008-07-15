@@ -6,9 +6,7 @@
 	<controls>
 		
 		<include>background</include>
-		<include>#files</include>
-		<include>Fake-Overlay</include>
-		<include>mediaoverlay</include>
+		<include>infobar</include>
 
 		<control type="group">
 			<description>page content</description>
@@ -28,7 +26,7 @@
 				<height>256</height>
 				<width>256</width>
 				<info>ListItem.Icon</info>
-				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+				<visible>Control.IsVisible(50)</visible>
 				<aspectratio align="bottom">keep</aspectratio>
 				<include>pageslide</include>
 			</control>
@@ -40,7 +38,7 @@
 				<height>256</height>
 				<width>256</width>
 				<info>ListItem.Icon</info>
-				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+				<visible>Control.IsVisible(50)</visible>
 				<texture flipy="true" diffuse="fade2.png">-</texture>
 				<aspectratio align="bottom">keep</aspectratio>
 				<include>pageslide</include>

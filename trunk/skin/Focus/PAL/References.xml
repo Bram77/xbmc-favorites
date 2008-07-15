@@ -269,11 +269,9 @@
 	<texturedownfocus>scroll-down-focus.gif</texturedownfocus>
 	<keepaspectratio>true</keepaspectratio>
 	<align>right</align>
-	<width>11</width>
-	<height>15</height>
-	<font>font14</font>
+	<width>22</width>
+	<height>22</height>
 	<reverse>yes</reverse>
-	<include>textcolorwhite</include>
 	<disabledcolor>60ffffff</disabledcolor>
 	<subtype>text</subtype>
 	<textoffsetx>-5</textoffsetx>
@@ -289,8 +287,8 @@
 	<posy>150</posy>
 	<width>300</width>
 	<height>35</height>
-	<spinwidth>15</spinwidth>
-	<spinheight>15</spinheight>
+	<spinwidth>22</spinwidth>
+	<spinheight>22</spinheight>
 	<texturefocus>list-focus.png</texturefocus>
 	<texturenofocus>-</texturenofocus>
 	<textureup>scroll-up.png</textureup>

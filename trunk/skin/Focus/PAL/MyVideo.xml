@@ -6,10 +6,7 @@
 	<controls>
 		
 		<include>background</include>
-		<include>#files</include>
-		<include>Fake-Overlay</include>
-		<include>mediaoverlay</include>
-		<include>mediaoverlay</include>
+		<include>infobar</include>
 		
 		<control type="group">
 			<description>page content</description>
@@ -19,7 +16,8 @@
 			<include>pageslide</include>
 			<include>ListView</include>
 			<include>Icons</include>
-			<include>BigIcons</include>
+			<include>BigIconsF</include>
+			<include>AllViewCommonPageControls</include>
 			
 			
 			<control type="image" id="999">

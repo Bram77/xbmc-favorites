@@ -4,7 +4,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>160</posx>
-		<posy>150</posy>
+		<posy>160</posy>
 	</coordinates>
 	
 	<include>dialogeffect</include>
@@ -15,18 +15,18 @@
 	<control type="group">	
 		<control type="image" id="1">
 			<description>background image</description>
-			<posx>-50</posx>
-			<posy>-60</posy>
-			<width>500</width>
-			<height>340</height>
-			<texture>dialog-panel2.png</texture>
+			<posx>-35</posx>
+			<posy>-30</posy>
+			<width>470</width>
+			<height>350</height>
+			<texture border="38">dialogpanel.png</texture>
+			<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
 		</control>
 		
 		
 		<control type="wraplist" id="11">
-			<viewtype label="546">Cover Slide</viewtype>
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>20</posy>
 			<width>400</width>
 			<height>430</height>
 			<onleft>56</onleft>
@@ -183,15 +183,15 @@
 		
 	
 	<control type="group" id="999">
-		<posx>65</posx>
-		<posy>200</posy>
+		<posx>45</posx>
+		<posy>230</posy>
 				
 		<control type="button" id="2">
 			<description>Create Bookmark button</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>140</width>
-			<height>35</height>
+			<width>150</width>
+			<height>36</height>
 			<label>294</label>
 			<font>buttonD</font>
 			<align>center</align>
@@ -199,24 +199,24 @@
 			<texturenofocus>button2.png</texturenofocus>
 			<texturefocus>button2-focus.png</texturefocus>
 			<focusedcolor>button-alttext</focusedcolor>
-			<textoffsety>5</textoffsety>
+			<textoffsety>2</textoffsety>
 			<onright>3</onright>
 			<onup>11</onup>
 			<ondown>11</ondown>
 		</control>
 		<control type="button" id="3">
 			<description>Clear Bookmarks button</description>
-			<posx>135</posx>
+			<posx>160</posx>
 			<posy>0</posy>
-			<width>140</width>
-			<height>35</height>
+			<width>150</width>
+			<height>36</height>
 			<label>296</label>
 			<font>buttonD</font>
 			<align>center</align>
 			<texturenofocus>button2.png</texturenofocus>
 			<texturefocus>button2-focus.png</texturefocus>
 			<focusedcolor>button-alttext</focusedcolor>
-			<textoffsety>5</textoffsety>
+			<textoffsety>2</textoffsety>
 			<onleft>2</onleft>
 			<onright>4</onright>
 			<onup>11</onup>

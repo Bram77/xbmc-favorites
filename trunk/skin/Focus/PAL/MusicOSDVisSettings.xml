@@ -14,7 +14,7 @@
 			<posy>-11</posy>
 			<width>446</width>
 			<height>365</height>
-			<texture>button-menu-background.png</texture>
+			<texture>dialogpanel.png</texture>
 			<colordiffuse>-</colordiffuse>
 		</control>
 		<control type="label">

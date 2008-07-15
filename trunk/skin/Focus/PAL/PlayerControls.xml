@@ -1,6 +1,13 @@
 <window type="dialog" id="114">
 	<defaultcontrol always="true">14</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>536</posy>
+	</coordinates>
+	
 	<animation type="WindowOpen">
 		<effect type="slide" start="0,100" end="0" time="400" />
 		<effect type="fade" time="200" />
@@ -11,23 +18,13 @@
 	</animation>
 	
 	<controls>
-		
-		<control type="image">
-			<description>Panel</description>
-			<posx>0</posx>
-			<posy>500</posy>
-			<height>95</height>
-			<width>720</width>
-			<texture>osd-background.png</texture>
-		</control>
 			
 		<control type="group">
 			<posx>220</posx>
-			<posy>537</posy>
 	
 			<control type="button" id="13">
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>32</width>
 				<height>32</height>
 				<onleft>601</onleft>
@@ -39,7 +36,7 @@
 			
 			<control type="togglebutton" id="14">
 				<posx>40</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>32</width>
 				<height>32</height>
 				<label>-</label>
@@ -57,7 +54,7 @@
 			
 			<control type="button" id="15">
 				<posx>80</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>32</width>
 				<height>32</height>
 				<onleft>14</onleft>
@@ -69,7 +66,7 @@
 			
 			<control type="button" id="16">
 				<posx>120</posx>
-				<posy>0</posy>
+				<posy>4</posy>
 				<width>32</width>
 				<height>32</height>
 				<onleft>15</onleft>
@@ -82,15 +79,15 @@
 			<control type="radiobutton" id="600">
 				<description>Random button</description>
 				<posx>160</posx>
-				<posy>0</posy>
-				<width>90</width>
-				<height>36</height>
+				<posy>1</posy>
+				<width>100</width>
+				<height>34</height>
 				<font>h4</font>
 				<label>590</label>
 				<align>left</align>
 				<aligny>-</aligny>
-				<textoffsety>3</textoffsety>
-				<texturefocus>default-button.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<onclick>XBMC.PlayerControl(Random)</onclick>
 				<selected>Playlist.IsRandom</selected>
@@ -103,19 +100,19 @@
 			</control>
 			
 			<control type="togglebutton" id="601">
-				<description>Random button</description>
-				<posx>260</posx>
-				<posy>0</posy>
-				<width>90</width>
-				<height>36</height>
+				<description>Repeat button</description>
+				<posx>270</posx>
+				<posy>1</posy>
+				<width>100</width>
+				<height>34</height>
 				<font>h4</font>
 				<label>$LOCALIZE[486]: $INFO[Playlist.Repeat]</label>
 				<align>center</align>
 				<aligny>-</aligny>
-				<textoffsety>3</textoffsety>
-				<texturefocus>default-button.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<texturefocus border="2">list-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<alttexturefocus>default-button.png</alttexturefocus>
+				<alttexturefocus border="2">list-focus.png</alttexturefocus>
 				<alttexturenofocus>-</alttexturenofocus>
 				<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				<pulseonselect>yes</pulseonselect>

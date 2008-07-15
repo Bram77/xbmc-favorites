@@ -1,61 +1,51 @@
 <window id="126">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<include>dialog-open</include>
 	
 	<coordinates>
 		<system>1</system>
 		<posx>195</posx>
-		<posy>135</posy>
+		<posy>110</posy>
 	</coordinates>
-	
-	<animation type="WindowOpen">
-		<effect type="zoom" start="50" end="100" center="212,260" time="200" />
-		<effect type="fade" time="200" />
-	</animation>
-	<animation type="WindowClose">
-		<effect type="zoom" start="100" end="50" center="212,260" time="200" />
-		<effect type="fade" time="200" />
-	</animation>
 
 	<controls>
 		
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(128)">Conditional</animation>
 	
-			<control type="image" id="1">
-				<description>background image</description>
+			<control type="image">
 				<posx>-35</posx>
-				<posy>-35</posy>
+				<posy>-27</posy>
 				<width>400</width>
-				<height>460</height>
-				<texture>dialog-panel2.png</texture>
+				<height>450</height>
+				<texture border="38">dialogpanel.png</texture>
 			</control>
 	
 			<control type="label" id="411">
 				<description>heading label</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>335</width>
+				<width>380</width>
 				<align>left</align>
 				<font>h1</font>
 				<label>1023</label>
 				<textcolor>label-text</textcolor>
 			</control>
 			
-			<control type="image">
-				<description>separator</description>
-				<posx>0</posx>
-				<posy>40</posy>
-				<width>330</width>
-				<height>3</height>
-				<texture>dialog-seperator.png</texture>
+			<control type="image" id="0">
+				<posx>-13</posx>
+				<posy>38</posy>
+				<width>356</width>
+				<height>37</height>
+				<texture>text-input.png</texture>
 			</control>
-			
+
 			<control type="label" id="412">
 				<description>path label control</description>
 				<posx>0</posx>
-				<posy>50</posy>
-				<width>335</width>
+				<posy>40</posy>
+				<width>300</width>
 				<align>left</align>
 				<font>h4</font>
 				<haspath>true</haspath>
@@ -66,7 +56,7 @@
 				<posx>0</posx>
 				<posy>85</posy>
 				<width>330</width>
-				<height>231</height>
+				<height>245</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<onup>450</onup>
@@ -74,17 +64,17 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				
-				<itemlayout height="33">
+				<itemlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>330</width>
-						<height>31</height>
+						<height>33</height>
 						<texture>list-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<posx>2</posx>
-						<posy>2</posy>
+						<posx>4</posx>
+						<posy>3</posy>
 						<width>28</width>
 						<height>28</height>
 						<info>ListItem.ActualIcon</info>
@@ -92,21 +82,21 @@
 					<control type="label">
 						<posx>37</posx>
 						<posy>0</posy>
-						<width>280</width>
+						<width>310</width>
 						<height>31</height>
-						<font>h4</font>
+						<font>menu</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
 				
-				<focusedlayout height="33">
+				<focusedlayout height="35">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>330</width>
-						<height>31</height>
+						<height>33</height>
 						<visible>!Control.HasFocus(450)</visible>
 						<texture>list-nofocus.png</texture>
 					</control>
@@ -119,8 +109,8 @@
 						<texture>list-focus.png</texture>
 					</control>
 					<control type="image">
-						<posx>2</posx>
-						<posy>2</posy>
+						<posx>4</posx>
+						<posy>3</posy>
 						<width>28</width>
 						<height>28</height>
 						<info>ListItem.ActualIcon</info>
@@ -128,9 +118,9 @@
 					<control type="label">
 						<posx>37</posx>
 						<posy>0</posy>
-						<width>280</width>
+						<width>310</width>
 						<height>31</height>
-						<font>h4</font>
+						<font>menu</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -254,10 +244,10 @@
 					<posx>140</posx>
 					<posy>345</posy>
 					<width>90</width>
-					<height>33</height>
+					<height>36</height>
 					<aligny>-</aligny>
 					<align>center</align>
-					<textoffsety>1</textoffsety>
+					<textoffsety>2</textoffsety>
 					<font>buttonD</font>
 					<label>186</label>
 					<texturenofocus>button2.png</texturenofocus>
@@ -273,9 +263,9 @@
 					<posx>240</posx>
 					<posy>345</posy>
 					<width>90</width>
-					<height>33</height>
+					<height>36</height>
 					<aligny>-</aligny>
-					<textoffsety>1</textoffsety>
+					<textoffsety>2</textoffsety>
 					<align>center</align>
 					<font>buttonD</font>
 					<label>222</label>
@@ -291,10 +281,10 @@
 					<description>Create folder button</description>
 					<posx>0</posx>
 					<posy>345</posy>
-					<width>100</width>
-					<height>33</height>
+					<width>110</width>
+					<height>36</height>
 					<aligny>-</aligny>
-					<textoffsety>1</textoffsety>
+					<textoffsety>2</textoffsety>
 					<align>center</align>
 					<font>buttonD</font>
 					<label>119</label>

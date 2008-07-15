@@ -3,7 +3,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<include>allscreens</include>
 	<include>dialog-ani</include>
-	<include>Fake-Overlay</include>
 	
 	<controls>
 
@@ -376,6 +375,7 @@
 			<onright>61</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
+			<font>description</font>
 			<pagecontrol>61</pagecontrol>
 			<visible>!Control.IsVisible(50)</visible>
 			<include>autoscrollmedium</include>
@@ -450,9 +450,7 @@
 		</control>
 	</control>
 	
-	
-			
-		
+
 		<control type="list" id="50">
 			<description>Track List Container</description>
 			<posx>40</posx>

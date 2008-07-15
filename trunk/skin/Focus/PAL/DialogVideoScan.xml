@@ -1,25 +1,30 @@
 <window id="112">
-	<defaultcontrol>402</defaultcontrol>
-	<allowoverlay>yes</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>536</posy>
+	</coordinates>
 	
 	<controls>
-	
+		
 		<control type="group">
+
 			<control type="label" id="401">
 				<description>Caption Label</description>
 				<posx>30</posx>
-				<posy>530</posy>
+				<posy>4</posy>
 				<font>h4</font>
 				<align>left</align>
-				<width>752</width>
-				<textcolor>sublabel-text</textcolor>
+				<width>400</width>
+				<textcolor>label-text</textcolor>
 				<include>fadeinout</include>
 			</control>
 			
 			<control type="label" id="402">
 				<description>Current Directory Label</description>
 				<posx>690</posx>
-				<posy>530</posy>
+				<posy>4</posy>
 				<width>400</width>
 				<haspath>yes</haspath>
 				<font>h4</font>
@@ -34,10 +39,10 @@
 			
 			<control type="progress" id="403">
 				<description>progress control</description>
-				<posx>30</posx>
-				<posy>560</posy>
-				<width>660</width>
-				<height>6</height>
+				<posx>-5</posx>
+				<posy>36</posy>
+				<width>730</width>
+				<height>3</height>
 				<texturebg>progressbar-background.png</texturebg>
 				<lefttexture>progress-left.png</lefttexture>
 				<midtexture>progress-middle.png</midtexture>
@@ -45,8 +50,6 @@
 				<overlaytexture>-</overlaytexture>
 				<include>fadeinout</include>
 			</control>
-			
 		</control>
-		
 	</controls>
 </window>

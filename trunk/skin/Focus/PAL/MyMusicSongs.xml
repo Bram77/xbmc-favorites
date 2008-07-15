@@ -6,6 +6,8 @@
 	<controls>
 		<include>background</include>
 		<include>allscreens</include>
+		<include>mediaoverlay</include>
+		<include>infobar</include>
 	
 		<control type="label">
 			<description>description label</description>
@@ -63,9 +65,8 @@
 			</control>
 			
 			<control type="label">
-				<description>album value</description>
 				<posx>430</posx>
-				<posy>500</posy>
+				<posy>480</posy>
 				<width>260</width>
 				<label>$INFO[ListItem.size]</label>
 				<scroll>true</scroll>

@@ -23,14 +23,13 @@
 			<textcolor>ffffffff</textcolor>
 			<align>right</align>
 			<font>date</font>
-			<include>textcolorlightgrey</include>
 			<include>home-menubar</include>
 			<visible>Player.ShowInfo</visible>
 		</control>
 		
 		<control type="group" id="1">
 			<posx>-10</posx>
-			<posy>410</posy>
+			<posy>430</posy>
 			<visible>Player.ShowInfo</visible>
 			<animation effect="fade" time="500">VisibleChange</animation>
 			
@@ -39,9 +38,9 @@
 				<posx>-20</posx>
 				<posy>0</posy>
 				<width>760</width>
-				<height>170</height>
-				<texture>osd-background.png</texture>
-				<visible>!videoplayer.content(livetv) + Player.HasAudio</visible>
+				<height>130</height>
+				<texture border="3">osd-bar.png</texture>
+				<visible>Player.HasAudio</visible>
 			</control>
 	
 			<control type="group" id="1">
@@ -50,7 +49,7 @@
 				<control type="image" id="1">
 					<description>cover image</description>
 					<posx>30</posx>
-					<posy>15</posy>
+					<posy>0</posy>
 					<width>92</width>
 					<height>130</height>
 					<info>MusicPlayer.Cover</info>
@@ -61,7 +60,7 @@
 					<description>Title</description>
 					<width>560</width>
 					<posx>140</posx>
-					<posy>10</posy>
+					<posy>3</posy>
 					<info>MusicPlayer.Title</info>
 					<align>left</align>
 					<font>h1</font>
@@ -71,7 +70,7 @@
 					<description>Album</description>
 					<width>560</width>
 					<posx>140</posx>
-					<posy>45</posy>
+					<posy>43</posy>
 					<info>MusicPlayer.Album</info>
 					<align>left</align>
 					<font>h2</font>
@@ -82,7 +81,7 @@
 					<description>Artist</description>
 					<width>560</width>
 					<posx>140</posx>
-					<posy>75</posy>
+					<posy>73</posy>
 					<info>Musicplayer.Artist</info>
 					<align>left</align>
 					<font>h2</font>
@@ -91,19 +90,19 @@
 				
 				<control type="label" id="1">
 					<description>time label</description>
-					<width>520</width>
-					<posx>140</posx>
-					<posy>105</posy>
+					<width>200</width>
+					<posx>700</posx>
+					<posy>73</posy>
 					<label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, / ]</label>
-					<align>left</align>
-					<font>h4</font>
+					<align>right</align>
+					<font>h2</font>
 				</control>
 				
 				<control type="label" id="1">
 					<description>Playlist Pos No</description>
 					<width>200</width>
 					<posx>700</posx>
-					<posy>105</posy>
+					<posy>43</posy>
 					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[435] ]$INFO[musicplayer.Playlistlength, / ]</label>
 					<visible>!MusicPartyMode.Enabled</visible>
 					<align>right</align>
@@ -114,7 +113,7 @@
 					<description>PartyMode Enabled</description>
 					<width>200</width>
 					<posx>700</posx>
-					<posy>105</posy>
+					<posy>3</posy>
 					<label>589</label>
 					<visible>MusicPartyMode.Enabled</visible>
 					<align>right</align>
@@ -124,7 +123,7 @@
 				<control type="progress" id="1">
 					<description>Progressbar</description>
 					<posx>140</posx>
-					<posy>135</posy>
+					<posy>110</posy>
 					<width>560</width>
 					<height>5</height>
 					<info>Player.Progress</info>

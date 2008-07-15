@@ -5,25 +5,25 @@
 		<allowoverlay>yes</allowoverlay>
 		<include>background</include>
 		<include>allscreens</include>
-		<include>Fake-Overlay</include>
+		<include>mediaoverlay</include>
 		
 		<control type="image">
 			<description>Focus Background</description>
 			<posx>45</posx>
-			<posy>440</posy>
-			<width>112</width>
-			<height>112</height>
-			<texture>focuslogo.png</texture>
+			<posy>480</posy>
+			<width>128</width>
+			<height>29</height>
+			<texture>focus-skinsettings.png</texture>
 			<include>fadeinout</include>
 			<aspectratio align="left">keep</aspectratio>
 		</control>
 		<control type="image">
 			<description>Focus Background</description>
 			<posx>45</posx>
-			<posy>476</posy>
-			<width>112</width>
-			<height>112</height>
-			<texture flipy="true" diffuse="fade.png">focuslogo.png</texture>
+			<posy>509</posy>
+			<width>128</width>
+			<height>29</height>
+			<texture flipy="true" diffuse="fade.png">focus-skinsettings.png</texture>
 			<include>fadeinout</include>
 			<aspectratio align="left">keep</aspectratio>
 		</control>
@@ -48,80 +48,126 @@
 				<description>General Settings</description>
 				<posx>0</posx>
 				<posy>0</posy>
+				<height>36</height>
+				<width>150</width>
 				<label>128</label>
-				<font>Button</font>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
 				<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
-				<onleft>9002</onleft>
+				<onleft>11</onleft>
 				<onright>9002</onright>
 				<onup>15</onup>
 				<ondown>12</ondown>
-				<texturefocus>default-button.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<textcolor>button-text</textcolor>
-				<height>39</height>
-				<width>150</width>
-				<textoffsety>7</textoffsety>
-				<textoffsetx>10</textoffsetx>
 			</control>
 			
 			<control type="button" id="12">
 				<description>Home Settings</description>
 				<posx>0</posx>
-				<posy>35</posy>
+				<posy>36</posy>
+				<height>36</height>
+				<width>150</width>
 				<label>513</label>
-				<font>Button</font>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
 				<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
-				<onleft>9003</onleft>
+				<onleft>12</onleft>
 				<onright>9003</onright>
 				<onup>11</onup>
-				<ondown>16</ondown>
-				<texturefocus>default-button.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<textcolor>button-text</textcolor>
-				<height>39</height>
+				<ondown>13</ondown>
+			</control>
+			
+			<control type="button" id="13">
+				<description>Background Settings</description>
+				<posx>0</posx>
+				<posy>72</posy>
+				<height>36</height>
 				<width>150</width>
-				<textoffsety>7</textoffsety>
+				<label>31908</label>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
 				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
+				<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
+				<onleft>13</onleft>
+				<onright>9003</onright>
+				<onup>12</onup>
+				<ondown>16</ondown>
 			</control>
 			
 			<control type="button" id="16">
 				<description>Fanart Settings</description>
 				<posx>0</posx>
-				<posy>70</posy>
-				<label>Fanart</label>
-				<font>Button</font>
-				<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
-				<onleft>9004</onleft>
-				<onright>9004</onright>
-				<onup>12</onup>
-				<ondown>15</ondown>
-				<texturefocus>default-button.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<textcolor>button-text</textcolor>
-				<height>39</height>
+				<posy>108</posy>
+				<height>36</height>
 				<width>150</width>
-				<textoffsety>7</textoffsety>
+				<label>Fanart</label>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
 				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
+				<onfocus>Skin.SetString(SkinSettings,4)</onfocus>
+				<onleft>16</onleft>
+				<onright>9004</onright>
+				<onup>13</onup>
+				<ondown>17</ondown>
+			</control>
+			
+			<control type="button" id="17">
+				<description>Viewtype Settings</description>
+				<posx>0</posx>
+				<posy>144</posy>
+				<height>36</height>
+				<width>150</width>
+				<label>32001</label>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
+				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
+				<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
+				<onleft>17</onleft>
+				<onright>9007</onright>
+				<onup>16</onup>
+				<ondown>15</ondown>
 			</control>
 
 			<control type="button" id="15">
 				<description>Skin credits</description>
 				<posx>0</posx>
-				<posy>105</posy>
-				<label>Skin Credits</label>
-				<font>Button</font>
-				<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
-				<onleft>9005</onleft>
-				<onright>9005</onright>
-				<onup>16</onup>
-				<ondown>11</ondown>
-				<texturefocus>default-button.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<textcolor>button-text</textcolor>
-				<height>39</height>
+				<posy>180</posy>
+				<height>36</height>
 				<width>150</width>
-				<textoffsety>7</textoffsety>
+				<label>31909</label>
+				<font>menu</font>
+				<textcolor>button-text</textcolor>
+				<align>left</align>
+				<textoffsety>3</textoffsety>
 				<textoffsetx>10</textoffsetx>
+				<texturefocus>default-button.png</texturefocus>
+				<texturenofocus>-</texturenofocus>	
+				<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>17</onup>
+				<ondown>11</ondown>
 			</control>
 			
 		
@@ -135,9 +181,9 @@
 			<include>pageslide</include>
 				
 			<control type="grouplist" id="9002">
-				<posx>230</posx>
+				<posx>210</posx>
 				<posy>90</posy>
-				<width>450</width>
+				<width>480</width>
 				<height>450</height>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
@@ -148,12 +194,12 @@
 					
 				<control type="radiobutton" id="120">
 					<description>toggle scrollbars</description>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>31024</label>
 					<font>menu</font>
-					<onclick>Skin.ToggleSetting(sbar)</onclick>
-					<selected>Skin.HasSetting(sbar)</selected>
+					<onclick>Skin.ToggleSetting(scrollbar)</onclick>
+					<selected>Skin.HasSetting(scrollbar)</selected>
 					<aligny>-</aligny>
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
@@ -164,7 +210,7 @@
 				<control type="radiobutton" id="121">
 					<description>toggle media overlays</description>
 					<label>31025</label>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>	
 					<onclick>Skin.ToggleSetting(overlay)</onclick>
@@ -176,71 +222,8 @@
 					<texturenofocus>list-nofocus.png</texturenofocus>
 				</control>
 
-				<control type="radiobutton" id="124">
-					<description>QWERTY Keyboard Button</description>
-					<width>450</width>
-					<height>34</height>
-					<label>QWERTY $LOCALIZE[15028]</label>
-					<font>menu</font>
-					<onclick>Skin.ToggleSetting(QWERTYKeys)</onclick>
-					<selected>Skin.HasSetting(QWERTYKeys)</selected>
-					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
-					<textoffsetx>10</textoffsetx>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-				</control>
-
-				<control type="button" id="126">
-					<description>Custom Background Button</description>
-					<width>450</width>
-					<height>34</height>
-					<font>menu</font>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<label>31030</label>
-					<onclick>Skin.SetImage(custom-background)</onclick>
-					<textcolor>button-text</textcolor>
-					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
-					<textoffsetx>10</textoffsetx>
-					<visible>!Skin.String(custom-background)</visible>
-				</control>
-						
-				<control type="button" id="127">
-					<description>Reset Custom Background Button</description>
-					<width>450</width>
-					<height>34</height>
-					<font>menu</font>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<label>31031</label>
-					<onclick>Skin.Reset(custom-background)</onclick>
-					<textcolor>button-text</textcolor>
-					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
-					<textoffsetx>10</textoffsetx>
-					<visible>Skin.String(custom-background)</visible>
-				</control>
-	
-				<control type="radiobutton" id="128">
-					<description>visuals behind background</description>
-					<width>450</width>
-					<height>34</height>
-					<font>menu</font>
-					<texturefocus>list-focus.png</texturefocus>
-					<texturenofocus>list-nofocus.png</texturenofocus>
-					<label>31032</label>
-					<onclick>Skin.ToggleSetting(HomeViewToggle)</onclick>
-					<selected>!Skin.HasSetting(HomeViewToggle)</selected>
-					<textcolor>button-text</textcolor>
-					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
-					<textoffsetx>10</textoffsetx>
-				</control>
-
 				<control type="radiobutton" id="130">
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
@@ -255,7 +238,7 @@
 				</control>
 
 				<control type="radiobutton" id="132">
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
@@ -269,15 +252,105 @@
 					<textoffsetx>10</textoffsetx>
 				</control>
 
+				<control type="radiobutton" id="134">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Plot in TV Shows List View</label>
+					<onclick>Skin.ToggleSetting(tvlistPlot)</onclick>
+					<selected>Skin.HasSetting(tvlistPlot)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="135">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Plot in Episode List View (when idle)</label>
+					<onclick>Skin.ToggleSetting(episodelistPlot)</onclick>
+					<selected>Skin.HasSetting(episodelistPlot)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="136">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Plot in Movies List View (when idle)</label>
+					<onclick>Skin.ToggleSetting(movielistPlot)</onclick>
+					<selected>Skin.HasSetting(movielistPlot)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="137">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Watched Overlays for Movies</label>
+					<onclick>Skin.ToggleSetting(overlayMovies)</onclick>
+					<selected>Skin.HasSetting(overlayMovies)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="138">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Watched Overlays for TV Show Seasons</label>
+					<onclick>Skin.ToggleSetting(overlaySeasons)</onclick>
+					<selected>Skin.HasSetting(overlaySeasons)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="139">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Watched Overlays for TV Show Episodes</label>
+					<onclick>Skin.ToggleSetting(overlayEpisodes)</onclick>
+					<selected>Skin.HasSetting(overlayEpisodes)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
 			</control>
 			
 				
 <!--- HOME SCREEN SETTINGS --------------------------------->
 					
 			<control type="grouplist" id="9003">
-				<posx>230</posx>
+				<posx>210</posx>
 				<posy>90</posy>
-				<width>450</width>
+				<width>480</width>
 				<height>450</height>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
@@ -290,7 +363,7 @@
 				<control type="radiobutton" id="30">
 					<description>enable RSS</description>
 					<font>menu</font>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>31073</label>
 					<onclick>Skin.ToggleSetting(enableRSSFeed)</onclick>
@@ -309,7 +382,7 @@
 				<control type="radiobutton" id="37">
 					<description>enable date/time</description>
 					<font>menu</font>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>31077</label>
 					<onclick>Skin.ToggleSetting(homepageDateTime)</onclick>
@@ -328,7 +401,7 @@
 				<control type="radiobutton" id="31">
 					<description>enable video info</description>
 					<font>menu</font>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>20176</label>
 					<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
@@ -347,7 +420,7 @@
 				<control type="radiobutton" id="32">
 					<description>enable music info</description>
 					<font>menu</font>
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>20083</label>
 					<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
@@ -366,7 +439,7 @@
 				<control type="radiobutton" id="33">
 					<description>enable weather info</description>
 					<font>menu</font>		
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<label>20084</label>
 					<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
@@ -382,16 +455,84 @@
 					<texturenofocus>list-nofocus.png</texturenofocus>
 				</control>
 
-
 			</control>
+
+			
+<!--- BACKGROUNDS SETTINGS --------------------------------->
+					
+			<control type="grouplist" id="9003">
+				<posx>210 </posx>
+				<posy>90</posy>
+				<width>480</width>
+				<height>450</height>
+				<onleft>9001</onleft>
+				<onright>9001</onright>
+				<onup>9003</onup>
+				<ondown>9003</ondown>
+				<include>pageslide</include>
+				<itemgap>2</itemgap>
+				<visible>Skin.String(SkinSettings,3)</visible>
+						
+				<control type="radiobutton" id="126">
+					<description>Use Custom Background</description>
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Use Custom Background Folder</label>
+					<onclick>Skin.ToggleSetting(backgroundFolder)</onclick>
+					<selected>Skin.HasSetting(backgroundFolder)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+				
+				<control type="button" id="127">
+					<description>Use Custom Background</description>
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>657</label>
+					<onclick>Skin.SetPath(backgroundFolderSet)</onclick>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+					<enable>Skin.HasSetting(backgroundFolder)</enable>
+				</control>
+		
+				<control type="radiobutton" id="128">
+					<description>visuals behind background</description>
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>31032</label>
+					<onclick>Skin.ToggleSetting(HomeViewToggle)</onclick>
+					<selected>!Skin.HasSetting(HomeViewToggle)</selected>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>10</textoffsetx>
+				</control>
+
+
+			</control>			
+			
+			
 			
 
 <!--- FANART SETTINGS --------------------------------->
 
 	<control type="grouplist" id="9004">
-			<posx>230</posx>
+			<posx>210</posx>
 			<posy>90</posy>
-			<width>450</width>
+			<width>480</width>
 			<height>450</height>
 			<onleft>9001</onleft>
 			<onright>9001</onright>
@@ -401,8 +542,8 @@
 			<itemgap>2</itemgap>
 			<visible>Skin.String(SkinSettings,4)</visible>
 			
-				<control type="radiobutton" id="110">
-					<width>450</width>
+				<control type="radiobutton" id="109">
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
@@ -415,25 +556,57 @@
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 				</control>
-			
-				<control type="radiobutton" id="112">
-					<width>450</width>
+				<control type="radiobutton" id="110">
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
 					<texturenofocus>list-nofocus.png</texturenofocus>
-					<label>Blend Global Fanart With Background</label>
-					<onclick>Skin.ToggleSetting(FanartDiffuseEnable)</onclick>
-					<selected>!Skin.HasSetting(FanartDiffuseEnable)</selected>
+					<label>Dim Fanart Images</label>
+					<onclick>Skin.ToggleSetting(FanartDim)</onclick>
+					<selected>Skin.HasSetting(FanartDim)</selected>
 					<enable>Skin.HasSetting(FanartEnable)</enable>
 					<textcolor>button-text</textcolor>
 					<aligny>-</aligny>
 					<textoffsety>2</textoffsety>
 					<textoffsetx>10</textoffsetx>
 				</control>
+				<control type="radiobutton" id="111">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Light</label>
+					<onclick>Skin.ToggleSetting(FanartDimLight)</onclick>
+					<onclick>Skin.ToggleSetting(FanartDimStrong)</onclick>
+					<selected>Skin.HasSetting(FanartDimLight)</selected>
+					<enable>Skin.HasSetting(FanartDim)</enable>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>20</textoffsetx>
+				</control>
+				
+				<control type="radiobutton" id="113">
+					<width>480</width>
+					<height>34</height>
+					<font>menu</font>
+					<texturefocus>list-focus.png</texturefocus>
+					<texturenofocus>list-nofocus.png</texturenofocus>
+					<label>Strong</label>
+					<onclick>Skin.ToggleSetting(FanartDimStrong)</onclick>
+					<onclick>Skin.ToggleSetting(FanartDimLight)</onclick>
+					<selected>Skin.HasSetting(FanartDimStrong)</selected>
+					<enable>Skin.HasSetting(FanartDim)</enable>
+					<textcolor>button-text</textcolor>
+					<aligny>-</aligny>
+					<textoffsety>2</textoffsety>
+					<textoffsetx>20</textoffsetx>
+				</control>
 				
 				<control type="radiobutton" id="114">
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
@@ -448,7 +621,7 @@
 				</control>
 				
 				<control type="radiobutton" id="115">
-					<width>450</width>
+					<width>480</width>
 					<height>34</height>
 					<font>menu</font>
 					<texturefocus>list-focus.png</texturefocus>
@@ -464,7 +637,177 @@
 				</control>
 		
 									
-			</control>			
+			</control>
+			
+
+
+
+<!--- VIEWTYPE SETTINGS --------------------------------->					
+
+	<control type="grouplist" id="9007">
+			<posx>210</posx>
+			<posy>90</posy>
+			<width>480</width>
+			<height>450</height>
+			<onleft>9001</onleft>
+			<onright>9001</onright>
+			<onup>9003</onup>
+			<ondown>9003</ondown>
+			<include>pageslide</include>
+			<itemgap>2</itemgap>
+			<visible>Skin.String(SkinSettings,5)</visible>
+
+			<control type="button" id="700">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Movies</label>
+				<textcolor>sublabel-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="701">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Detail List</label>
+				<onclick>Skin.ToggleSetting(viewtypeDetail)</onclick>
+				<selected>!Skin.HasSetting(viewtypeDetail)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="702">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Big List</label>
+				<onclick>Skin.ToggleSetting(viewtypeBigList)</onclick>
+				<selected>!Skin.HasSetting(viewtypeBigList)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="704">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>CoverFlow</label>
+				<onclick>Skin.ToggleSetting(viewtypeCoverFlow)</onclick>
+				<selected>!Skin.HasSetting(viewtypeCoverFlow)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="705">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>CoverSlide</label>
+				<onclick>Skin.ToggleSetting(viewtypeCoverSlide)</onclick>
+				<selected>!Skin.HasSetting(viewtypeCoverSlide)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="706">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Icons</label>
+				<onclick>Skin.ToggleSetting(viewtypeIcons)</onclick>
+				<selected>!Skin.HasSetting(viewtypeIcons)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="707">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Big Icons</label>
+				<onclick>Skin.ToggleSetting(viewtypeBigIcons)</onclick>
+				<selected>!Skin.HasSetting(viewtypeBigIcons)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="button" id="708">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>TV Shows</label>
+				<textcolor>sublabel-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="709">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>Big Icons</label>
+				<onclick>Skin.ToggleSetting(viewtypeWideIcons)</onclick>
+				<selected>!Skin.HasSetting(viewtypeWideIcons)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+			
+			<control type="radiobutton" id="710">
+				<width>480</width>
+				<height>34</height>
+				<font>menu</font>
+				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus>list-nofocus.png</texturenofocus>
+				<label>CoverSlide</label>
+				<onclick>Skin.ToggleSetting(viewtypeCoverSlideTV)</onclick>
+				<selected>!Skin.HasSetting(viewtypeCoverSlideTV)</selected>
+				<textcolor>button-text</textcolor>
+				<aligny>-</aligny>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
+			</control>
+
+
+		</control>
+
+
+		
 
 						
 
@@ -473,63 +816,72 @@
 	<control type="group" id="9005">
 		<include>pageslide</include>
 		<visible>Skin.String(SkinSettings,6)</visible>
-	
-			
-	
+
 		<control type="label">
 			<font>h1</font>
 			<label>FOCUS</label>
-			<posx>230</posx>
+			<posx>210</posx>
 			<posy>80</posy>
 			<width>500</width>
 			<height>50</height>
 			<align>left</align>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
 		</control>
 		<control type="label">
 			<font>h2</font>
-			<label>version: alpha 1 preview 1</label>
-			<posx>230</posx>
+			<label>version: alpha 3</label>
+			<posx>210</posx>
 			<posy>115</posy>
 			<width>500</width>
 			<height>37</height>
 			<align>left</align>
-			<textcolor>ff95bfff</textcolor>
+			<textcolor>sublabel-text</textcolor>
 		</control>
 	
 		<control type="label">
 			<font>h2</font>
-			<label>skin created by: Jeroen</label>
-			<posx>230</posx>
+			<label>Skin created by: Jeroen</label>
+			<posx>210</posx>
 			<posy>155</posy>
 			<width>460</width>
 			<height>37</height>
 			<align>left</align>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
+		</control>
+		
+		<control type="label">
+			<font>h2</font>
+			<info>Skin</info>
+			<posx>210</posx>
+			<posy>155</posy>
+			<width>460</width>
+			<height>37</height>
+			<align>left</align>
+			<textcolor>label-text</textcolor>
 		</control>
 								
 		<control type="textbox">
 			<font>h2</font>
 			<label>This skin uses icons from and icons based on the Tango! Desktop Project (http://tango.freedesktop.org)</label>
-			<posx>230</posx>
+			<posx>210</posx>
 			<posy>215</posy>
 			<width>460</width>
 			<height>200</height>
 			<align>left</align>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
 			<spinposx>5000</spinposx>
 			<spinposy>5170</spinposy>
 		</control>
 								
 		<control type="textbox">
 			<font>h2</font>
-			<label>Thanks: The developers of xbmc, all plugin, script and skin developers and everyone contributing in whatever way to making xbmc so great. And YOU, for trying out this skin.</label>
-			<posx>230</posx>
+			<label>Thanks: Team-XBMC, all plugin, script and skin developers and everyone contributing in whatever way to making xbmc so great. And YOU, for using Focus.</label>
+			<posx>210</posx>
 			<posy>300</posy>
 			<width>460</width>
 			<height>200</height>
 			<align>left</align>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>label-text</textcolor>
 			<spinposx>5000</spinposx>
 			<spinposy>5170</spinposy>
 		</control>

@@ -3,9 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>background</include>
-		<include>#files</include>
-		<include>Fake-Overlay</include>
-		<include>mediaoverlay</include>
+		<include>infobar</include>
 		
 		<control type="group">
 			<include>PageControl</include>

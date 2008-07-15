@@ -1,6 +1,6 @@
 <window id="2008">
 	<defaultcontrol>450</defaultcontrol>
-	<include>dialog-ani</include>
+	<include>dialog-open</include>
 	
 	<controls>
 		
@@ -10,11 +10,13 @@
 		<width>450</width>
 
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>250</width>
-		<height>160</height>
-		<texture>dialog-panel.png</texture>
+		<description>background image</description>
+		<posx>-35</posx>
+		<posy>-30</posy>
+		<width>300</width>
+		<height>170</height>
+		<texture border="38">dialogpanel.png</texture>
+		<!---<colordiffuse>AAFFFFFF</colordiffuse>-->
 	</control>
 
 	<control type="list" id="450">
@@ -55,7 +57,7 @@
 				<font>h2</font>
 				<include>selectedcolor</include>
 				<align>center</align>
-				<info>ListItem.Label</info>
+				<label>ListItem.Label</label>
 			</control>
 		</itemlayout>
 			
