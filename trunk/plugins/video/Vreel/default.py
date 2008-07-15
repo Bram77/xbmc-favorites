@@ -8,8 +8,9 @@ def INDEXCATS():
         response = urllib2.urlopen(req)
         link=response.read()
         response.close()
-        p=re.compile('\n                <a href="(.+?)">(.+?)</a>')
+        p=re.compile('<li><a href="(.+?)">(.+?)</a></li>')
         match=p.findall(link)
+        del match[0:9]
         for url,name in match:
                 url="http://beta.vreel.net/"+url
                 res.append((url,name))
@@ -29,17 +30,21 @@ def SEARCH():
                 response = urllib2.urlopen(req)
                 link=response.read()
                 response.close()
-                p=re.compile('index.php.+?q=search&k=(.+?)">next</a>')
+                p=re.compile('page=(.+?)">.+?</a>')
                 match=p.findall(link)
-                for url in match:
-                        next="http://beta.vreel.net/index.php?q=search&k="+url
-                addDir("    NEXT PAGE",next,4,"")
-                pass
-                p=re.compile('<a href="(.+?)"><img width="149" height="104" src=".+?(.+?)" border="0"/></a></td>\n\t\t\t\t<td style="padding-left: 20px; padding-top: 5px; width: 300px"><font size="5"><a href=".+?">(.+?)</a>')
-                match=p.findall(link)
-                for url,thumbnail,name in match:
-                        thumbnail="http://beta.vreel.net/"+thumbnail
-                        addDir(name,url,2,thumbnail)
+                del match[-1]
+                for page in match:
+                        req = urllib2.Request('http://beta.vreel.net/index.php?q=search&k='+encode+'&page='+page)
+                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                        response = urllib2.urlopen(req)
+                        link=response.read()
+                        response.close()
+                        p=re.compile('<a href="(.+?)"><img width="155" height="100" src="(.+?)" border="0"/></a>\n\t\t\t\t<h2><a href=".+?">(.+?)</a>')
+                        match=p.findall(link)
+                        for url,thumbnail,name in match:
+                                res.append((url,thumbnail,name))
+                for url,thumbnail,name in res:
+                        addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
        
 def INDEX(url):
         res=[]
@@ -48,34 +53,28 @@ def INDEX(url):
         response = urllib2.urlopen(req)
         link=response.read()
         response.close()
-        p=re.compile('index.php.+?q=channels&id=(.+?)">.+?</a>')
+        p=re.compile('<span>Pages:</span>\n(.*)<a href=".+?">next</a>\n')
         match=p.findall(link)
-        next="http://beta.vreel.net/index.php?q=channels&id="+str(match[-1])
-        addDir("    NEXT PAGE",next,1,"")
-        p=re.compile('<a href="(.+?)"><img src=".+?(.+?)" width="149" height="104" border="0" /></a>\n\t<br><font size="5"><a href=".+?" style="font-size: 11px">(.+?)</a></font><br />')
-        match=p.findall(link)
-        for url,thumbnail,name in match:
-                addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
-
-def INDEX2(url):
-        res=[]
-        req = urllib2.Request(url)
-        req.add_header('User-Agent','Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        response.close()
-        p=re.compile('index.php.+?q=search&k=(.+?)">next</a>')
-        match=p.findall(link)
-        for url in match:
-                next="http://beta.vreel.net/index.php?q=search&k="+url
+        p=re.compile('<a href="(.+?)">.+?</a>')
         try:
-                addDir("    NEXT PAGE",next,4,"")
-        except UnboundLocalError:
-                pass
-        p=re.compile('<a href="(.+?)"><img width="149" height="104" src=".+?(.+?)" border="0"/></a></td>\n\t\t\t\t<td style="padding-left: 20px; padding-top: 5px; width: 300px"><font size="5"><a href=".+?">(.+?)</a>')
-        match=p.findall(link)
-        for url,thumbnail,name in match:
-                addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
+                match2=p.findall(str(match[0]))
+                for page in match2:
+                        req = urllib2.Request('http://beta.vreel.net/'+page)
+                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                        response = urllib2.urlopen(req)
+                        link=response.read()
+                        response.close()
+                        p=re.compile('<a href="(.+?)"><img src="(.+?)" width="155" height="100" border="0" /></a>\n\t\t\t\t<h2><a href=".+?">(.+?)</a></h2>\n\t\t\t\t<p>.+?</p>')
+                        match=p.findall(link)
+                        for url,thumbnail,name in match:
+                                res.append((url,thumbnail,name))
+                for url,thumbnail,name in res:
+                        addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
+        except IndexError:
+                p=re.compile('<a href="(.+?)"><img src="(.+?)" width="155" height="100" border="0" /></a>\n\t\t\t\t<h2><a href=".+?">(.+?)</a></h2>\n\t\t\t\t<p>.+?</p>')
+                match=p.findall(link)
+                for url,thumbnail,name in match:
+                        addDir(name,url,2,"http://beta.vreel.net/"+thumbnail)
                 
 def VIDEOLINK(url):
         
@@ -155,9 +154,7 @@ elif mode==2:
 elif mode==3:
         print "GET INDEX OF PAGE : "+url
         SEARCH()
-elif mode==4:
-        print "GET INDEX OF PAGE : "+url
-        INDEX2(url)
+
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
