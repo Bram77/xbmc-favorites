@@ -79,7 +79,21 @@
 		<texture>weather_bg.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
 	    <animation effect="fade" time="200">WindowClose</animation> 
-        </control>
+        <visible>!Skin.HasSetting(Background)</visible>
+		</control>
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>55</posy>
+		<width>723</width>
+		<height>521</height>
+		<texture>weather_bg custom.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+        <visible>Skin.HasSetting(Background)</visible>
+		</control>
 
 <control type="image">
     <description>Logo</description>
@@ -108,15 +122,24 @@
     </control>
 
 	<controlgroup>
-<posy>95</posy>
-<include>header</include>
+<posy>93</posy>
+<control type="image">
+    <description>header</description>
+    <posx>67</posx>
+    <posy>25</posy>
+    <width>587</width>
+    <height>40</height>
+    <texture>button-nofocus.png</texture>
+	<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+   </control>
 	</controlgroup>
 
 
 	<controlgroup>
 	<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
-	<posy>95</posy>
+	<posy>93</posy>
 
 	<control>
 		<description>Refresh Button</description>
@@ -163,84 +186,10 @@
 	<controlgroup>
      <posy>82</posy>
 
-	<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>70</posx>
-		<posy>80</posy>
-		<width>580</width>
-		<height>410</height>
-		<texture>OSD Background.png</texture>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
+	
 
-	<control>
-		<description>Panel Image (Top Bar)</description>
-		<type>button</type>
-		<id>1</id>
-		<posx>70</posx>
-		<posy>80</posy>
-		<width>580</width>
-		<texturefocus>button-nofocus.png</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
-
-	<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>70</posx>
-		<posy>290</posy>
-		<width>120</width>
-		<height>198</height>
-		<texture>blue_rectangle_weather.png</texture>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
-
-	<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>223</posx>
-		<posy>290</posy>
-		<width>120</width>
-		<height>198</height>
-		<texture>blue_rectangle_weather.png</texture>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
-
-	<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>376</posx>
-		<posy>290</posy>
-		<width>120</width>
-		<height>198</height>
-		<texture>blue_rectangle_weather.png</texture>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
-
-	<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>529</posx>
-		<posy>290</posy>
-		<width>120</width>
-		<height>198</height>
-		<texture>blue_rectangle_weather.png</texture>
-		<include>slideright</include>
-		<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-	</control>
+	
+	
 
 	<control>
 		<description>weather location select spincontrol</description>
