@@ -1,13 +1,13 @@
 ﻿########################################################
-# VideoMonkey Plugin extra sites list
+# VideoMonkey Plugin tv sites list
 ########################################################
 version=1
-title=Extra
+title=TV
 ########################################################
-# Video sites
+# TV sites
 ########################################################
-name=Clipfish
+name=ZDF mediathek (DE)
 type=rss
-thumb=video.monkey.image|clipfish.png
-url=clipfish.de.cfg
+thumb=video.monkey.image|zdf_mediathek.png
+url=zdf.de.cfg
 ########################################################

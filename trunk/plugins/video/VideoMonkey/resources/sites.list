@@ -4,6 +4,20 @@
 version=1
 title=VideoMonkey
 ########################################################
+# TV sites
+########################################################
+name=  TV  
+type=rss
+thumb=video.monkey.image|tv.png
+url=tv.sites.list
+########################################################
+# Live sites
+########################################################
+name=  LIVE  
+type=rss
+thumb=video.monkey.image|station.png
+url=live.sites.list
+########################################################
 # More sites
 ########################################################
 name=video.monkey.locale|30104
@@ -38,5 +52,5 @@ url=metacafe.com.cfg
 name=video.monkey.locale|30104
 type=adult_rss
 thumb=video.monkey.image|erotic.png
-url=more.erotic.list
+url=more.adult.list
 ########################################################

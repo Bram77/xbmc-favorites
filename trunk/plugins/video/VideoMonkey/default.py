@@ -1,4 +1,4 @@
-# VideoMonkey version 0.7. by sfaxman
+# VideoMonkey version 0.8. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -13,7 +13,7 @@ import cookielib
 import htmlentitydefs
 
 Version = '0'
-SubVersion = '7'
+SubVersion = '8'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -1006,7 +1006,7 @@ class Main:
         self.pDialog.update(percent, xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
         if (self.pDialog.iscanceled()):raise
 
-    def siteSpecificUrlTarget(self, url, cfg_file): # The only site specific part of the plugin
+    def siteSpecificUrlTarget(self, url, cfg_file): # The site specific target url handling
         if cfg_file == 'metacafe.com.cfg' or cfg_file == 'metacafe.adult.com.cfg': # Metacafe
             return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
         elif cfg_file == 'tu.tv.cfg': # TUtv
@@ -1030,6 +1030,9 @@ class Main:
                 traceback.print_exc(file = sys.stdout)
         return url
 
+    def siteSpecificName(self, name, cfg_file): # The site specific name handling
+        return name
+
     def parseView(self, url):
         ext = self.currentlist.getFileExtension(url)
         if ext == 'cfg' or ext == 'list':
@@ -1037,6 +1040,10 @@ class Main:
         elif ext == 'videomonkey':
             result = self.playVideo(url)
             return
+        #elif ext == 'livemonkey':
+        #    palyer_type = {0:xbmc.PLAYER_CORE_DVDPLAYER, 1:xbmc.PLAYER_CORE_MPLAYER}[int(xbmcplugin.getSetting("player_type"))]
+        #    xbmc.Player(palyer_type).play(url[:len(url) - 11])
+        #    return
         else:
             result = self.currentlist.loadRemote(url)
 
@@ -1047,8 +1054,10 @@ class Main:
             dialog = xbmcgui.Dialog()
             dialog.ok("Error", "Directory could not be opened.")
 
-        if self.currentlist.video_action.find('play') != -1 and len(self.currentlist.list) == 1 and self.currentlist.list[0].type == u'video':
-            result = self.parseView(self.currentlist.list[0].url + '|' + clean_name(self.currentlist.list[0].name) + '|' + self.currentlist.list[0].thumb + '.videomonkey')
+        if self.currentlist.video_action.find('play') != -1 :
+            for m in self.currentlist.list:
+                if m.type == u'video':
+                    result = self.parseView(m.url + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey')
             return result
         if self.currentlist.video_action.find('play') != -1 and self.currentlist.search_url_build != '' and len(self.currentlist.list) == 2 and self.currentlist.list[1].type == u'video':
             result = self.parseView(self.currentlist.list[1].url + '|' + clean_name(self.currentlist.list[1].name) + '|' + self.currentlist.list[1].thumb + '.videomonkey')
@@ -1056,21 +1065,23 @@ class Main:
         else:
             for m in self.currentlist.list:
                 if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addDir(clean_name(m.name), clean_url(m.url), m.thumb, len(self.currentlist.list))
+                    self.addDir(clean_name(self.siteSpecificName(m.name, self.currentlist.cfg_name)), clean_url(m.url), m.thumb, len(self.currentlist.list))
+                elif (m.type == u'live') or (m.type == u'adult_live' and xbmcplugin.getSetting("no_adult") == 'false'):
+                    self.addLink(m.name, m.url, m.thumb, len(self.currentlist.list))
                 elif m.type == u'video':
-                    self.addDir(clean_name(m.name), clean_url(m.url) + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
+                    self.addDir(clean_name(self.siteSpecificName(m.name, self.currentlist.cfg_name)), clean_url(m.url) + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
         return result
 
-    #def addLink(self, name, url, icon = None, totalItems = None):
-    #    if (icon == None or icon == ''):
-    #        liz = xbmcgui.ListItem(name)
-    #    else:
-    #        liz = xbmcgui.ListItem(name, name, icon, icon)
-    #    liz.setInfo( type = "Video", infoLabels = {"Title":name})
-    #    if totalItems == None:
-    #        ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz)
-    #    else:
-    #        ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz, totalItems = totalItems)
+    def addLink(self, name, url, icon = None, totalItems = None):
+        if (icon == None or icon == ''):
+            liz = xbmcgui.ListItem(name)
+        else:
+            liz = xbmcgui.ListItem(name, name, icon, icon)
+        liz.setInfo( type = "Video", infoLabels = {"Title":name})
+        if totalItems == None:
+            ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz)
+        else:
+            ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz, totalItems = totalItems)
 
     def addDir(self, name, url, icon = None, totalItems = None):
         u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
@@ -1092,7 +1103,7 @@ class Main:
         try:
             self.handle = int(sys.argv[1])
             try:
-                xbmcplugin.setPluginFanart(self.handle, os.path.join(imgDir, 'fanart.jpg'))
+                xbmcplugin.setPluginFanart(self.handle, os.path.join(imgDir, 'fanart.png'))
             except:
                 traceback.print_exc(file = sys.stdout)
             xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
