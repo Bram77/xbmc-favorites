@@ -1,0 +1,43 @@
+﻿########################################################
+# VideoMonkey live streams list
+########################################################
+version=1
+title=Live
+########################################################
+# Live streams
+########################################################
+name=n-tv (DE)
+type=live
+thumb=video.monkey.image|ntv.png
+url=mms://stream.n-tv.de/ntvlive
+########################################################
+name=GIGA (DE)
+type=live
+thumb=video.monkey.image|giga.png
+url=mms://stream.giga.de/GIGA
+########################################################
+name=NDR (DE)
+type=live
+thumb=video.monkey.image|ndr.png
+url=mms://213.254.239.66/ndrfernsehen$ndr_nds
+########################################################
+name=MCM Top (FR)
+type=live
+thumb=video.monkey.image|mcm_top.png
+url=mms://vipmms9.yacast.net/mcm_top
+########################################################
+name=NRJ Hits (FR)
+type=live
+thumb=video.monkey.image|nrj_hits.png
+url=mms://vipnrj.yacast.net/nrj_tvhit
+########################################################
+name=TMF NL (NL)
+type=live
+thumb=video.monkey.image|tmf_nl.png
+url=mms://81.23.249.20/MTV_Low_006?.wma
+########################################################
+name=Maxx-XS (NL)
+type=live
+thumb=video.monkey.image|maxx_xs.png
+url=mms://62.204.69.103/home_channel
+########################################################

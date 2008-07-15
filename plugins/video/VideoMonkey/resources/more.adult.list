@@ -1,0 +1,28 @@
+﻿########################################################
+# VideoMonkey Plugin adult sites list
+########################################################
+version=1
+title=Extra Adult
+########################################################
+# Adult video sites
+########################################################
+name=Pornhub
+type=adult_rss
+thumb=video.monkey.image|pornhub.png
+url=pornhub.com.cfg
+########################################################
+name=RedTube
+type=adult_rss
+thumb=video.monkey.image|redtube.png
+url=redtube.com.cfg
+########################################################
+name=Metacafe
+type=adult_rss
+thumb=video.monkey.image|metacafe.png
+url=metacafe.adult.com.cfg
+########################################################
+name=TUtv
+type=adult_rss
+thumb=video.monkey.image|tu_tv.png
+url=tu.tv.cfg
+########################################################
