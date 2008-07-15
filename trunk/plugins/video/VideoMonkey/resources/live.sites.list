@@ -21,10 +21,65 @@ type=live
 thumb=video.monkey.image|ndr.png
 url=mms://213.254.239.66/ndrfernsehen$ndr_nds
 ########################################################
+name=3sat (DE)
+type=live
+thumb=video.monkey.image|3sat.png
+url=mms://c36000-l.w.core.cdn.streamfarm.net/36000zdf/live/3546zdf/encoder.zdf.3sat_vh_16zu9.wmv
+########################################################
+name=Toon TV (DE)
+type=live
+thumb=video.monkey.image|toon_tv.png
+url=mms://85.214.87.175/toon-tv
+########################################################
+name=9live (DE)
+type=live
+thumb=video.monkey.image|9live.png
+url=mms://streamer12.streaming.szm.de/9live_wmt_mid
+########################################################
+name=Streetclip (DE)
+type=live
+thumb=video.monkey.image|streetclip.png
+url=mms://streetclip.tv:1234/
+########################################################
+name=Germany TV Motosport (DE)
+type=live
+thumb=video.monkey.image|germanytv_motorsport.png
+url=mms://195.122.130.135/speedup-tv_Motorsport-TV_10
+########################################################
+name=Germany TV Tennis (DE)
+type=live
+thumb=video.monkey.image|germanytv_tennis.png
+url=mms://195.122.130.135/speedup-tv_Tennis-TV_10
+########################################################
+name=Bundesligen TV (DE)
+type=live
+thumb=video.monkey.image|bundesligen_tv.png
+url=mms://195.122.130.139/Bundesligen-TV
+########################################################
+name=Plus TV (DE)
+type=live
+thumb=video.monkey.image|plus_tv.png
+url=mms://195.122.130.133/ptv%20erfurt_standard_10
+########################################################
+name=Campus TV (DE)
+type=live
+thumb=video.monkey.image|campus_tv.png
+url=mms://webtv-bb.de/CampusTV
+########################################################
+name=Wetterfernsehen (DE)
+type=live
+thumb=video.monkey.image|Wetterfernsehen.png
+url=mms://wm-ipx-10.stream.tv1.de/3271wetterfernsehen.wmv?cid=59334&dummy=.wm
+########################################################
 name=MCM Top (FR)
 type=live
 thumb=video.monkey.image|mcm_top.png
 url=mms://vipmms9.yacast.net/mcm_top
+########################################################
+name=Planète insolite (FR)
+type=live
+thumb=video.monkey.image|planete_insolite.png
+url=mms://live210.impek.com/biosphere
 ########################################################
 name=NRJ Hits (FR)
 type=live
@@ -40,4 +95,19 @@ name=Maxx-XS (NL)
 type=live
 thumb=video.monkey.image|maxx_xs.png
 url=mms://62.204.69.103/home_channel
+########################################################
+name=Nickelodeon JR (NL)
+type=live
+thumb=video.monkey.image|nickelodeon_jr.png
+url=mms://81.23.249.20/MTV_Low_003?.wma
+########################################################
+name=OldCartoonTV (USA)
+type=live
+thumb=video.monkey.image|oldcartoons_tv.png
+url=mms://us.impek.com/oldcartoontv
+########################################################
+name=Discovery Channel (USA)
+type=live
+thumb=video.monkey.image|discovery_channel.png
+url=mms://tv1.lzu.edu.cn/discovery
 ########################################################
