@@ -102,6 +102,7 @@
 <!----- VIEWTYPES ----------------------->	
 			<include>ListView</include>
 			<include>DetailListView</include>
+			<include>BigList</include>
 			<include>Coverflow</include>
 			<include>CoverSlide</include>
 			<include>Icons</include>
