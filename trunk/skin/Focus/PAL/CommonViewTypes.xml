@@ -1373,7 +1373,7 @@
 			<scrolltime>200</scrolltime>	
 			<wraparound>yes</wraparound>
 			<pagecontrol>61</pagecontrol>
-			<visible>[!Skin.HasSetting(viewtypeDetail) + Container.Content(movies)] | [!Skin.HasSetting(viewtypeDetail) + Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(viewtypeDetail) + Container.Content(movies) | !Skin.HasSetting(viewtypeDetail) + Container.Content(episodes)</visible>
 			<include>pageslide</include>	
 			
 			<itemlayout condition="Container.Content(movies)" width="700" height="35">
