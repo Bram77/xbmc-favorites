@@ -46,6 +46,7 @@
 			<onright>9000</onright>
 			<ondown>9000</ondown>
 			<onup>28</onup>
+			<visible>false</visible>
 		</control>
 		
 		<control type="grouplist" id="2">
