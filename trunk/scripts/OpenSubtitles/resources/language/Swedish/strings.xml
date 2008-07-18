@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="0">OpenSubtitles</string>
+    <string id="1">Xbox Media Center</string>
+    <string id="2">Leo</string>
+
+    <!-- User Messages -->
+    <string id="100">Undantag för</string>
+
+    <!-- Settings labels -->
+    <string id="201">Server</string>
+    <string id="202">Användarnamn</string>
+    <string id="203">Lösenord</string>
+    <string id="204">Packa upp undertexter till filmens mapp</string>
+    <string id="205">Undertextsmapp</string>
+
+    <!-- Settings error messages -->
+    <string id="230">Ett fel uppstod när inställningarna sparades!</string>
+
+    <!-- Settings restart required message -->
+    <string id="240">Ändringarna genomförs inte förräns du startar om.</string>
+    <string id="241">Starta om %s nu?</string>
+
+    <!-- Settings buttons -->
+    <string id="250">Använd</string>
+    <string id="251">Avbryt</string>
+    <string id="252">Uppdatera</string>
+    <string id="253">Credits</string>
+    <string id="255">Starta om</string>
+    <string id="256">Senare</string>
+    
+    <!-- Labels -->
+    <string id="630">Undertextsfil nedladdad och uppackad</string>
+    <string id="631">Packar upp %s till %s</string>
+    <string id="632">Laddar ner %s</string>
+    <string id="633">Laddar ner fil</string>
+    <string id="634">Fel! %s</string>
+    <string id="635">Ansluten</string>
+    <string id="636">Ansluter anonymt...</string>
+    <string id="637">Ansluter som %s...</string>
+    <string id="638">Vad vill du köra detta för?</string>
+    <string id="639">Ingen musik spelas, dummer!</string>
+    <string id="640">Välj en video fil</string>
+    <string id="641">%s inställningar</string>
+    <string id="642">Söker efter undertexter för %s</string>
+
+    <!-- OSDB Messages -->
+    <string id="730">OSDB server namn saknas</string>
+    <string id="731">XMLRPC %s: %s</string>
+    <string id="732">LoggaIn</string>
+    <string id="733">LoggaUt</string>
+    <string id="734">ErhållaUndertextsSpråk</string>
+    <string id="735">KontrolleraFilmHash</string>
+    <string id="736">SökUndertexter</string>
+    <string id="737">Inte ansluten till osdb server</string>
+    <string id="738">Hashar %s hittades inte</string>
+    <string id="739">Hashar %s %s</string>
+    <string id="740">Fil hittade på utdelning, fjärrfiler stöds inte</string>
+    <string id="741">Inga undertexter hittade</string>
+    <string id="742">%s undertexter hittade</string>
+    <string id="743"></string>
+    <string id="744"></string>
+
+    <!-- Credits -->
+    <string id="900">Version</string>
+    <string id="901">Team Credits:</string>
+    <string id="902">Extra Credits:</string>
+    <string id="903">Skal Credits:</string>
+
+    <!-- Credits headings-->
+    <string id="910">Huvudutvecklare &amp; programmerare</string>
+    <string id="911">Original Författare</string>
+    <string id="912">Original Skalmod</string>
+    <string id="913">Unicode Support</string>
+    <string id="914">Språkfil</string>
+
+    <!-- Update messages -->
+    <string id="1000">Din version är aktuell.</string>
+    <string id="1001">Hämtar nuvarande taggade versioner...</string>
+    <string id="1002">är nyare</string>
+    <string id="1003">Vill du uppdatera?</string>
+    <string id="1004">Hämtar fillista...</string>
+    <string id="1005">Var god vänta...</string>
+    <string id="1006">Version</string>
+    <string id="1007">Hämtar:</string>
+    <string id="1008">Sökväg:</string>
+    <string id="1009">Fil:</string>
+    <string id="1010">Din nya version sparades till:</string>
+
+    <!-- Update error messages -->
+    <string id="1030">Inga taggade verisoner hittades!</string>
+    <string id="1031">Ett fel uppstod under uppdatering av skriptet!</string>
+</strings>
