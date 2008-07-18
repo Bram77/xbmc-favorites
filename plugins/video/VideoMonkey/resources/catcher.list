@@ -27,3 +27,7 @@ header=Referer|http://www.viloader.net
 url=http://www.viloader.net/mybic_server.php
 target=unescape%28%22(http.+?\.flv)%22%29%3
 ########################################################
+name=grabit.to
+url=http://www.grabit.to/index.php?txt_url=%s
+target=<h1>Der Downloadlink wurde erfolgreich gefunden\!</h1>[^<]+<p>Video: </p>[^<]+<p><strong><a href=\"([^\"]+)\">
+########################################################

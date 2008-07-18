@@ -111,3 +111,8 @@ type=live
 thumb=video.monkey.image|discovery_channel.png
 url=mms://tv1.lzu.edu.cn/discovery
 ########################################################
+name=Teleasturias (SP)
+type=live
+thumb=video.monkey.image|teleasturias.png
+url=mms://DWS28.dinaserver.com/directo
+########################################################

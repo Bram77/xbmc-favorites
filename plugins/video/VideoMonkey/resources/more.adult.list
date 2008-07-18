@@ -16,13 +16,18 @@ type=adult_rss
 thumb=video.monkey.image|redtube.png
 url=redtube.com.cfg
 ########################################################
+name=PornoTube
+type=adult_rss
+thumb=video.monkey.image|pornotube.png
+url=pornotube.com.cfg
+########################################################
 name=Metacafe
 type=adult_rss
 thumb=video.monkey.image|metacafe.png
 url=metacafe.adult.com.cfg
 ########################################################
-name=TUtv
-type=adult_rss
-thumb=video.monkey.image|tu_tv.png
-url=tu.tv.cfg
+#name=TUtv       ####  INCOMPLETE  ####
+#type=adult_rss
+#thumb=video.monkey.image|tu_tv.png
+#url=tu.tv.cfg
 ########################################################
