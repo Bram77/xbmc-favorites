@@ -1,0 +1,9 @@
+<%
+import xbmc
+
+plist = xbmc.PlayList(0)
+plist.shuffle()
+# xbmc.Player().play(plist)
+
+response.write("Shuffled playlist : on")
+%>

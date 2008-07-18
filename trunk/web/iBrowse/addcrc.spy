@@ -1,0 +1,12 @@
+[[
+
+import xbmc
+sql = 'SELECT * FROM songview WHERE dwFileNameCRC="'+request.get("crc")[0]+'";'
+queryresults = xbmc.executehttpapi("QueryMusicDatabase("+sql+")")
+results = queryresults.split("<li>")
+file = results[21] + "/" + results[9]
+#xbmc.AddToPlaylist(file+";1")
+#xbmc.PlayList(1).add(file)
+
+queryresults = xbmc.executehttpapi("AddToPlaylist("+file+");0")
+]]

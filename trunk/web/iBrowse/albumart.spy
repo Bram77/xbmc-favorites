@@ -1,0 +1,10 @@
+[[
+	import dircache, xbmc
+
+	thumbs = dircache.listdir("q:\\UserData\\Thumbnails\\Music\\")
+	for i in thumbs:
+		thisthumb = thumbs[i].split(".")
+		tbn = thisthumb[0]
+		xbmc.executehttpapi("FileCopy(q:\\UserData\\Thumbnails\\Music\\"+tbn+".tbn;f:\\Apps\\XBMC\\web\\iBrowse\\musicthumbs\\"+tbn+".jpg)")
+
+]]

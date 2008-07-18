@@ -1,0 +1,13 @@
+<%
+import xbmc
+
+from pysqlite2 import dbapi2 as sqlite
+db = sqlite.connect('MyMusic6')
+curs = db.cursor()
+curs.execute('SELECT * FROM some_table')
+curs.execute('INSERT INTO some_table VALUES (some_value, another_value, etc)')
+db.commit() # Note, without this commit the previous query sits in limbo
+db.close()
+
+response.write("ran it")
+%>

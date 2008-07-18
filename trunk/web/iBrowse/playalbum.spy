@@ -1,0 +1,126 @@
+[[\
+
+import xbmc, urllib
+
+
+
+from urllib import urlencode
+
+def testcase(text, result):
+   """Test to see if the double_urlencode function's output for an input of 'text' matches 'result'."""
+   text = double_urlencode(text)
+
+   if (result != text):
+       print "Error: double_urlencode testcase failure :("
+
+
+       # Pretty up the problem for debugging purposes
+       print text
+       print result
+
+       buf = ""
+       for i in range(0, len(result)):
+           try:
+               if text[i] == result[i]:
+                   buf += " "
+               else:
+                   buf += "^"
+           except IndexError:
+               buf += "*"
+
+       print buf
+
+
+def double_urlencode(text):
+   """double URL-encode a given 'text'.  Do not return the 'variablename=' portion."""
+
+   text = single_urlencode(text)
+   text = single_urlencode(text)
+
+   return text
+
+def single_urlencode(text):
+   """single URL-encode a given 'text'.  Do not return the 'variablename=' portion."""
+
+   blah = urlencode({'blahblahblah':text})
+
+   #we know the length of the 'blahblahblah=' is equal to 13.  This lets us avoid any messy string matches
+   blah = blah[13:]
+
+   return blah
+
+
+
+
+
+
+
+
+
+
+sql = 'SELECT * FROM songview WHERE idAlbum="'+request.get("idAlbum")[0]+'";'
+queryresults = xbmc.executehttpapi("QueryMusicDatabase("+sql+")")
+
+responseArr = queryresults.split("<li>")
+
+
+print xbmc.executehttpapi("setcurrentplaylist(0)");
+print xbmc.executehttpapi("clearplaylist");
+
+#print queryresults + "<br><br>";
+
+#xbmc.AddToPlaylist(file+";1")
+#xbmc.PlayList(1).add(file)
+
+responseArr.reverse();
+
+for i in responseArr:
+
+	idAlbum = responseArr.pop(); 
+	idAlbum	= responseArr.pop(); 
+	idAlbum = responseArr.pop(); 
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+
+	idAlbum = responseArr.pop();
+
+	idAlbum = responseArr.pop();
+
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	strFileName = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	strPath = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+	idAlbum = responseArr.pop();
+
+	file = strPath + "/" + strFileName
+	print file+"<br>";
+
+	#file = single_urlencode(file)
+
+	#print xbmc.executehttpapi("AddToPlaylist("+file+");0");
+
+	#print xbmc.AddToPlaylist(file+";0")
+
+	#xbmc.executebuiltin('xbmc.playmedia(' + file + ')')
+	print xbmc.executehttpapi("AddToPlaylist("+file+");0")
+
+
+print xbmc.executehttpapi("getplaylistcontents(0)");
+print xbmc.executehttpapi("setcurrentplaylist(0)");
+print xbmc.executehttpapi("setplaylistsong(0)");
+
+]]
