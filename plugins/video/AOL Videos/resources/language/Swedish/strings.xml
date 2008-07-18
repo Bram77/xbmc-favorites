@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">Land</string>
+    <string id="30010">Föredragen bitrate</string>
+    <string id="30011">Låg</string>
+    <string id="30012">Medium</string>
+    <string id="30013">Hög</string>
+    <string id="30020">Inkludera wmv videor (vissa fungerar endast i USA)</string>
+    <string id="30030">Spelläge (wmv trailers laddas inte ned)</string>
+    <string id="30031">Strömma</string>
+    <string id="30032">Ladda ner</string>
+    <string id="30033">Ladda ner &amp; Spara</string>
+    <string id="30040">- Sökväg för sparade videofiler</string>
+</strings>
