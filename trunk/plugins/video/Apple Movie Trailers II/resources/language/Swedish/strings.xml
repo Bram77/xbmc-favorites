@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- settings labels -->
+    <string id="30000">Trailer kvalitet</string>
+    <string id="30001">Standard</string>
+    <string id="30002">480p</string>
+    <string id="30003">720p</string>
+    <string id="30004">1080p</string>
+    <string id="30010">Använd stor poster</string>
+    <string id="30020">MPAA klassbegränsning för trailers</string>
+    <string id="30030">Nedladdningsläge</string>
+    <string id="30031">Temporär</string>
+    <string id="30032">Spara</string>
+    <string id="30040">- Sparmapp</string>
+    <string id="30050">Postnr eller ort, delstat</string>
+    <string id="30060">Showtimes scraper</string>
+    <string id="30070">Dag att lista filmer för</string>
+    <string id="30071">Idag</string>
+    <string id="30072">Imorgon</string>
+    <string id="30073">Dag 3</string>
+    <string id="30074">Dag 4</string>
+    <string id="30075">Dag 5</string>
+    <string id="30076">Dag 6</string>
+    <string id="30077">Dag 7</string>
+    <string id="30078">Dag 8</string>
+    <string id="30080">- Använd filmtitel för sparat filnamn</string>
+    <string id="30090">Fan-konstsbild</string>
+    <string id="30100">- Fan-konst färg ett (AARRGGBB)</string>
+    <string id="30110">- Fan-konst färg två (AARRGGBB)</string>
+    <string id="30120">- Fan-konst färg tre (AARRGGBB)</string>
+
+    <!-- messages -->
+    <string id="30500">Laddar ner: %s</string>
+    <string id="30501">Sparar: %s</string>
+    <string id="30502">Till: %s</string>
+    <string id="30503">Kopierar: %s</string>
+
+    <!-- showtimes -->
+    <string id="30600">Inga showtimes hittades!</string>
+    <string id="30601">Letar showtimes, var god vänta...</string>
+    <string id="30602">Datum</string>
+    <string id="30603">Plats</string>
+
+    <!-- PluginCategory infolabel -->
+    <string id="30700">Standard filmer</string>
+    <string id="30701">480p filmer</string>
+    <string id="30702">720p filmer</string>
+    <string id="30703">1080p filmer</string>
+
+    <!-- context menu labels -->
+    <string id="30900">Theater Showtimes</string>
+    <string id="30910">Ladda ner trailer</string>
+</strings>
