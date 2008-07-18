@@ -88,7 +88,7 @@ class Main:
                     heading = "download_url"
                     thumbnail = self._get_thumbnail( "%s%s/%sdefault.tbn" % ( self.BASE_URL, items[ "url" ], item, ) )
                     isFolder = False
-                elif ( items[ "url" ].split( "/" )[ -1 ] == "skin" ):
+                elif ( items[ "url" ].split( "/" )[ -1 ] == "skin" ) or ( items[ "url" ].split( "/" )[ -1 ] == "web" ):
                     heading = "download_url"
                     thumbnail = "defaultprogram.png"
                     isFolder = False
