@@ -1,0 +1,361 @@
+html,body {
+	height: 100%;
+}
+
+div#browserArea {
+	height: 90%;
+}
+div#loadingWidget {
+display: block;
+background:#FFFFFF;
+color:#000000;
+vertical-align : middle;
+}
+
+body {
+  font-family : Georgia, serif;
+  font-size : 25px;
+  margin:     0px;
+  margin-top: 0px;
+  background: url(images/background.gif) repeat-x #232323;
+  overflow: hidden;
+}
+
+a, a:hover, a:visited, a:active { 
+  color: #7E9E50;
+      font-family : Georgia, serif;
+      font-size : 16px;
+}
+
+img { border: 0; }
+
+input {font-size: 46px;}
+
+#header {
+  height: 110px;
+  text-align:right;
+  background: #FFFFFF;
+  color: #333;
+  margin-bottom:25px;
+}
+
+#header p {
+  display: block;
+  padding-right: 10px;
+  margin:0px;
+  padding-top: 10px;
+  text-transform:lowercase;
+}
+
+#currentlyPlayingText{
+  font-size : 18px;
+
+}
+
+.musiclibrary {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:5px;
+  margin:5px;
+  margin-left : 5px;
+  padding:0px;
+z-index:100;
+
+}
+
+.musiclibrary li {
+  width:98%;
+	height:50px;
+  margin-top:5px;
+  margin-left : 0px;
+  background-color: #C5DEA1;
+  border:1px solid #ECF3E1;
+  cursor: move;
+  list-style-type : none;
+  display : block;
+  font-family : Georgia;
+  font-size : 18px;
+  color : #000000;
+  vertical-align : middle;
+  position:relative;
+}
+.musiclibrary li a {
+	  cursor: move;
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+      padding : 20px;
+      color : #000000;
+      background-color : #C5DEA1;
+      border : 1px solid #ECF3E1;
+      padding : 18px;
+      margin : auto;
+      text-decoration : none;
+
+  }
+
+.musiclibrary li a:hover{
+  background-color: #000000;
+  border:1px solid #C5DEA1;
+  color: white;
+  position:relative
+}
+
+
+.playlist {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:5px;
+  margin:5px;
+  margin-left : 5px;
+  padding:0px;
+  z-index:100;
+
+}
+
+.playlist li {
+  width:98%;
+  margin-top:5px;
+  margin-left : 0px;
+  background-color: #FFF4D8;
+  border:1px solid #E8A400;
+  cursor: move;
+      list-style-type : none;
+      display : block;
+      font-family : Georgia, serif;
+      font-size : 18px;
+      color : #000000;
+      vertical-align : middle;
+position:relative;
+
+}
+.playlist li a {
+	  cursor: move;
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+      color : #000000;
+      background-color : #FFF4D8;
+      border : 1px solid #FFF4D8;
+      padding : 3px;
+      margin : auto;
+      text-decoration : none;
+      }
+
+.playlist li a:hover{
+  background-color: #E8A400;
+  border:1px solid #E8A400;
+  color: white;
+  position:relative
+}
+
+span.handle {
+  background-color: #E8A400;
+  color:white;
+  cursor: move;
+}
+
+div.drophover {
+  background-color: #FFF4D8;
+  border:1px solid #E8A400;
+}
+
+
+h3 {
+    font-size: 16px;
+    padding: 4px 6px 4px 6px;
+    margin: 0;
+    border-style: solid none solid none;
+    border-top-color: #BDC7E7;
+    border-bottom-color: #182052;
+    border-width: 1px 0px 1px 0px;
+    color:#fff;
+  background: #000000;
+    cursor:pointer;
+}
+
+
+
+
+.menu3 {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:5px;
+  margin:0px;
+  margin-left : 0px;
+}
+
+.menu3 li {
+  margin:2px;
+  margin-top:5px;
+  margin-left : 0px;
+  border:1px solid #7D777C;
+  background-color: #FFFFFF;
+      list-style-type : none;
+      display : block;
+	  position:relative;
+      font-family : Georgia, serif;
+      font-size : 16px;
+      color : #000000;
+      vertical-align : middle;
+	float: left
+}
+.menu3 li a {
+	  cursor: move;
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+	padding:20px;
+      color : #000000;
+      background-color : #FFFFFF;
+      border : 1px solid #000000;
+      margin : auto;
+      text-decoration : none;
+      }
+
+.menu3 li a:hover{
+  background-color: #000000;
+  border:1px solid #FFFFFF;
+  color: white;
+  position:relative
+}
+
+
+
+.menu4 {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left : 0px;
+  padding:0px;
+}
+.menu4 li {
+  margin:0px;
+  margin-top:5px;
+  margin-left : 0px;
+  border:1px solid #7D777C;
+  background-color: #000000;
+      list-style-type : none;
+      display : block;
+      font-family : Verdana, serif;
+      font-size : 16px;
+      color : #FFFFFF;
+      vertical-align : middle;
+	float: left
+}
+.menu4 li a {
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+      padding : 4px;
+      color : #FFFFFF;
+      font-family : Verdana, serif;
+      font-size : 16px;
+      background-color : #000000;
+      border : 1px solid #FFFFFF;
+      text-decoration : none;
+      }
+
+.menu4 li a:hover{
+  background-color: #FFFFFF;
+  border:1px solid #000000;
+  color: #000000;
+      font-family : Verdana, serif;
+  position:relative
+}
+
+
+.menu5 {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left : 0px;
+  padding:0px;
+
+}
+.menu5 li {
+  margin:0px;
+  margin-top:5px;
+  margin-left : 0px;
+  border:1px solid #7D777C;
+  background-color: #000000;
+      list-style-type : none;
+      display : block;
+      font-family : Courier New, serif;
+      font-size : 25px;
+      color : #FFFFFF;
+      vertical-align : middle;
+	float: left
+
+}
+.menu5 li a {
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+      padding : 15px;
+      color : #FFFFFF;
+      font-family : Verdana, serif;
+      font-size : 25px;
+      background-color : #000000;
+      border : 1px solid #FFFFFF;
+      text-decoration : none;
+	width:30px;
+      }
+
+.menu5 li a:hover{
+  background-color: #FFFFFF;
+  border:1px solid #000000;
+      font-size : 25px;
+  color: #000000;
+      font-family : Verdana, serif;
+  position:relative
+}
+
+
+.menu6 {
+  list-style-image:none;
+  list-style-type:none;
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left : 0px;
+  padding:0px;
+
+}
+.menu6 li {
+  margin:0px;
+  margin-top:5px;
+  margin-left : 0px;
+  border:1px solid #7D777C;
+  background-color: #000000;
+      list-style-type : none;
+      display : block;
+      font-family : Courier New, serif;
+      font-size : 25px;
+      color : #FFFFFF;
+      vertical-align : middle;
+	float: left
+
+}
+.menu6 li a {
+      margin-left : 0px;
+      list-style-type : none;
+      display : block;
+      padding : 15px;
+      color : #FFFFFF;
+      font-family : Verdana, serif;
+      font-size : 25px;
+      background-color : #000000;
+      border : 1px solid #FFFFFF;
+      text-decoration : none;
+      }
+
+.menu6 li a:hover{
+  background-color: #FFFFFF;
+  border:1px solid #000000;
+      font-size : 25px;
+  color: #000000;
+      font-family : Verdana, serif;
+  position:relative
+}
