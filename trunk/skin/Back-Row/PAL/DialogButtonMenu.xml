@@ -31,7 +31,7 @@
 		<width>322</width>
 		<height>20</height>
 		<align>center</align>
-		<font>nasa-small</font>
+		<font>Heading-S</font>
 	</control>
 
 	<!--- No Logon Yes Lock --> 

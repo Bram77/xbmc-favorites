@@ -247,7 +247,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>480</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(1)</visible>
@@ -280,7 +280,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>3</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(2)</visible>
@@ -313,7 +313,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>2</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(3)</visible>
@@ -346,7 +346,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>1</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(4)</visible>
@@ -379,7 +379,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>0</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(5)</visible>
@@ -412,7 +412,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>8</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(6)</visible>
@@ -445,7 +445,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>705</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(7)</visible>
@@ -478,7 +478,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>13000</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(8)</visible>
@@ -511,7 +511,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>13200</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(9)</visible>
@@ -543,7 +543,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<label>482</label>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(10)</visible>
@@ -576,7 +576,7 @@
 		<align>right</align>
 		<aligny>center</aligny>
 		<include>20125</include>
-		<font>nasa-big</font>
+		<font>Heading-M</font>
 		<include>settings-labels</include>
 		<visible>!Skin.HasSetting(Settings-menu)</visible>
 		<visible>ButtonScroller.HasFocus(11)</visible>

@@ -3292,7 +3292,7 @@
 <posy>517</posy>
 <width>720</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -4116,7 +4116,7 @@
 <posx>65</posx>
 <posy>445</posy>
 <width>592</width>
-<height>118</height>
+<height>115</height>
 <font>font11</font>
 <textcolor>white</textcolor>
 <info>ListItem.Plot</info>
@@ -5112,7 +5112,7 @@
 <posy>520</posy>
 <width>600</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -7045,7 +7045,7 @@
 <posy>55</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -8399,7 +8399,7 @@
 <posy>57</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -8726,7 +8726,7 @@
 <posy>57</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -9055,7 +9055,7 @@
 <posy>73</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -9370,7 +9370,7 @@
 <posy>73</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -9817,7 +9817,7 @@
 <posy>55</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10002,7 +10002,7 @@
 <posy>65</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10909,7 +10909,7 @@
 <posy>390</posy>
 <width>180</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10967,12 +10967,11 @@
 <posx>535</posx>
 <posy>150</posy>
 <width>180</width>
-<height>265</height>
+<height>270</height>
 <font>font04</font>
 <textcolor>lightgrey</textcolor>
 <info>ListItem.Plot</info>
 <include>selectedcolor</include>
-
 <colordiffuse>white</colordiffuse>
 <align>justify</align>
 <pagecontrol>91</pagecontrol>
@@ -11223,6 +11222,7 @@
 <scrolltime>300</scrolltime>
 <info>ListItem.Label</info>
 <align>center</align>
+<aligny>center</aligny>
 </control>
 
 </focusedlayout>
