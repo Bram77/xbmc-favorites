@@ -795,7 +795,7 @@
      <visible>Control.HasFocus(3)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>1</label>
 	  </control>
@@ -822,7 +822,7 @@
      <visible>Control.HasFocus(8)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>1</label>
 	  </control>
@@ -877,7 +877,7 @@
      <visible>Control.HasFocus(2)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>2</label>
 	  </control>
@@ -904,7 +904,7 @@
      <visible>Control.HasFocus(7)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>2</label>
 	  </control>
@@ -964,7 +964,7 @@
      <visible>Control.HasFocus(1)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>342</label>
 	  </control>
@@ -991,7 +991,7 @@
      <visible>Control.HasFocus(6)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>342</label>
 	  </control>
@@ -1020,7 +1020,7 @@
      <visible>Control.HasFocus(20)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>342</label>
 	  </control>
@@ -1080,7 +1080,7 @@
      <visible>!Skin.HasSetting(tv-library)</visible>
 	 <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>20343</label>
 	  </control>
@@ -1109,7 +1109,7 @@
      <visible>!Skin.HasSetting(tv-library)</visible>
 	 <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>20343</label>
 	  </control>
@@ -1171,7 +1171,7 @@
 	 <visible>Control.HasFocus(5)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>5</label>
 	  </control>
@@ -1200,7 +1200,7 @@
 	 <visible>Control.HasFocus(10)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>5</label>
 	  </control>
@@ -1260,7 +1260,7 @@
      <visible>Control.HasFocus(4)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>0</label>
 	  </control>
@@ -1287,7 +1287,7 @@
      <visible>Control.HasFocus(9)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>0</label>
 	  </control>
@@ -1331,7 +1331,7 @@
      <visible>Control.HasFocus(14)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>10020</label>
 	  </control>
@@ -1373,7 +1373,7 @@
      <visible>Control.HasFocus(15)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>7</label>
 	  </control>
@@ -1415,7 +1415,7 @@
      <visible>Control.HasFocus(16)</visible>
      <animation effect="slide" start="-300,0" tween="cubic" delay="0" time="400">Visible</animation>
       <animation effect="fade" time="10">Windowclose</animation>
-	 <font>nasa-big</font>
+	 <font>Heading-M</font>
      <textcolor>white</textcolor>
 	 <label>8</label>
 	  </control>
@@ -2196,7 +2196,7 @@
 		<texturefocus>home-power-focus.png</texturefocus>
 		<texturenofocus>home-power.png</texturenofocus>
 		<onleft>161</onleft>
-		<onright>157</onright>
+		<onright>160</onright>
 		<onup>11</onup>
 		<ondown>11</ondown>
 		<include>home-global-button</include>
@@ -2252,49 +2252,14 @@
 		<texturefocus>home-tray-focus.png</texturefocus>
 		<texturenofocus>home-tray.png</texturenofocus>
 		<onclick>XBMC.PlayDVD()</onclick>
-		<onleft>159</onleft>
+		<onleft>162</onleft>
 		<onright>157</onright>
 		<onup>11</onup>
 		<ondown>11</ondown>
 		<include>home-dvd-button</include>
 	</control>
 
-	<control>
-		<description>Xlink Kai Button 2</description>
-		<type>button</type>
-		<id>159</id>
-		<posx>465</posx>
-		<posy>500</posy>
-		<width>40</width>
-		<height>40</height>
-		<texturefocus>home-kai-focus.png</texturefocus>
-		<texturenofocus>home-kai.png</texturenofocus>
-		<onclick>XBMC.ActivateWindow(xlinkkai)</onclick>
-		<onleft>158</onleft>
-		<onright>160</onright>
-		<onup>11</onup>
-		<ondown>11</ondown>
-		<include>home-xlink2-button</include>
-	</control>
-
-<control>
-		<description>Xlink Kai Button 1</description>
-		<type>button</type>
-		<id>158</id>
-		<posx>420</posx>
-		<posy>500</posy>
-		<width>40</width>
-		<height>40</height>
-		<texturefocus>home-kai-focus.png</texturefocus>
-		<texturenofocus>home-kai.png</texturenofocus>
-		<onclick>XBMC.ActivateWindow(xlinkkai)</onclick>
-		<onleft>162</onleft>
-		<onright>159</onright>
-		<onup>11</onup>
-		<ondown>11</ondown>
-		<include>home-xlink1-button</include>
-	</control>
-
+	
 	</control>
 
 
@@ -2359,7 +2324,7 @@
 						<info>ListItem.Label</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>nasa-big</font>
+						<font>Heading-M</font>
 						<textcolor>99ffffff</textcolor>
 						</control>
                   		
@@ -2389,7 +2354,7 @@
 						<info>ListItem.Label</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>nasa-big</font>
+						<font>Heading-M</font>
 						<textcolor>white</textcolor>
 						
 					</control>

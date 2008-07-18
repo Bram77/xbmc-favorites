@@ -2926,7 +2926,7 @@
 <posy>485</posy>
 <width>720</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -4321,7 +4321,7 @@
 <posy>505</posy>
 <width>600</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -6260,7 +6260,7 @@
 <posy>60</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -7607,7 +7607,7 @@
 <posy>68</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -7934,7 +7934,7 @@
 <posy>68</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -8264,7 +8264,7 @@
 <posy>65</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -8583,7 +8583,7 @@
 <posy>65</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -9035,7 +9035,7 @@
 <posy>68</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -9222,7 +9222,7 @@
 <posy>65</posy>
 <width>720</width>
 <height>30</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -10783,7 +10783,7 @@
 <posy>380</posy>
 <width>180</width>
 <height>16</height>
-<font>broadway</font>
+<font>Heading-L</font>
 <textcolor>white</textcolor>
 <align>center</align>
 <info>ListItem.Label</info>
@@ -11097,6 +11097,7 @@
 <scrolltime>300</scrolltime>
 <info>ListItem.Label</info>
 <align>center</align>
+<aligny>center</aligny>
 </control>
 
 </focusedlayout>

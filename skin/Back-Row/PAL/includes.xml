@@ -140,16 +140,7 @@
 
 
 <!-- Home - Sub-Buttons ------------------------------------------------- -->
-<!-- Xlink Button I -->
-<include name="home-xlink1-button">
-	<visible allowhiddenfocus="false">!Skin.HasSetting(homebuttons) + System.KaiConnected + System.hasmediadvd</visible>
-	<animation effect="slide" start="33,0" end="0,0" acceleration="1" time="200">VisibleChange</animation>
-</include>
-<!-- Xlink Button II -->
-<include name="home-xlink2-button">
-	<visible allowhiddenfocus="false">!Skin.HasSetting(homebuttons) + System.KaiConnected + !System.hasmediadvd</visible>
-	<animation effect="fade" time="200">VisibleChange</animation>
-</include>
+
 <!-- DVD Launch Button -->
 <include name="home-dvd-button">
 	<visible allowhiddenfocus="false">!Skin.HasSetting(homebuttons) + System.hasmediadvd</visible>
