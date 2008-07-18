@@ -53,7 +53,7 @@ def ogmfile(url,name):
         p=re.compile("StreamPlugLoadUrl.+?.+?(.+?)\'")
         match=p.findall(link)
         a=match[0]
-        url="http://127.0.0.1:64652/streamplug/"+base64.urlsafe_b64encode(a)
+        url="http://127.0.0.1:64653/streamplug/"+base64.urlsafe_b64encode(a)+'?.ogm'
         pass
         # Get Thumb
         p=re.compile('<div align="center"><a href="(.+?)" rel="lightbox" title=".+?">')
