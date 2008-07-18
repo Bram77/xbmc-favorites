@@ -1,0 +1,19 @@
+<strings>
+    <string id="20000">SÖK INSTÄLLNINGAR:</string>
+    <string id="30000">Söklängd KORT</string>
+    <string id="30001">Söklängd MELLAN</string>
+    <string id="30002">Söklängd LÅNG</string>
+    <string id="24000">SÖK SIDA:</string>
+    <string id="30004">Sök endast GOOGLE</string>
+    <string id="30005">Sök endast YOUTUBE</string>
+    <string id="30006">Sök endast GUBA</string>
+    <string id="30007">Sök endast YOUKU</string>
+    <string id="30008">Sök endast TUDOU</string>
+    <string id="30009">Sök endast VEOH</string>
+    <string id="300010">Sök endast MYSPACE</string> 
+    <string id="300011">Sök endast DAILYMOTION</string> 
+    <string id="300012">Sök endast TRILULILU</string>
+    <string id="25000">ANGE NEDLADDNINGSMAPP:</string>
+    <string id="30003">Tillåt filnedladdning</string>
+    <string id="300013">Ange nedladdningsmapp </string>
+</strings>
