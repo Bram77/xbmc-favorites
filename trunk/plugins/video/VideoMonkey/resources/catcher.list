@@ -31,3 +31,9 @@ name=grabit.to
 url=http://www.grabit.to/index.php?txt_url=%s
 target=<h1>Der Downloadlink wurde erfolgreich gefunden\!</h1>[^<]+<p>Video: </p>[^<]+<p><strong><a href=\"([^\"]+)\">
 ########################################################
+name=clipnabber.com
+data=mode=1&url=%s
+header=Referer|http://www.clipnabber.com
+url=http://clipnabber.com/gethint.php
+target=<a href='([^']+)' *><strong>
+########################################################
