@@ -1,5 +1,5 @@
 ﻿########################################################
-# Dailymotion coutry specific sites
+# Dailymotion country specific sites
 ########################################################
 version=1
 ########################################################
@@ -18,8 +18,13 @@ type=rss
 thumb=video.monkey.image|fr.png
 url=dailymotion.fr.cfg
 ########################################################
-name=YouTube (NL)
+name=Dailymotion (NL)
 type=rss
 thumb=video.monkey.image|nl.png
 url=dailymotion.nl.cfg
+########################################################
+name=Dailymotion (SE)
+type=rss
+thumb=video.monkey.image|se.png
+url=dailymotion.se.cfg
 ########################################################

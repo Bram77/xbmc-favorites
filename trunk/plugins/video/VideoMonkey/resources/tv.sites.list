@@ -11,3 +11,13 @@ type=rss
 thumb=video.monkey.image|zdf_mediathek.png
 url=zdf.de.cfg
 ########################################################
+#name=ARD mediathek (DE)
+#type=rss
+#thumb=video.monkey.image|ard_mediathek.png
+#url=ard.de.cfg
+########################################################
+name=arte+7
+type=rss
+thumb=video.monkey.image|arte_plus7.png
+url=arteplus7.cfg
+########################################################

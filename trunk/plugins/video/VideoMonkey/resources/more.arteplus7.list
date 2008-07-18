@@ -1,0 +1,15 @@
+﻿########################################################
+# arte+7 country specific sites
+########################################################
+version=1
+########################################################
+name=arte+7 (DE)
+type=rss
+thumb=video.monkey.image|de.png
+url=arteplus7.de.cfg
+########################################################
+name=arte+7 (FR)
+type=rss
+thumb=video.monkey.image|fr.png
+url=arteplus7.fr.cfg
+########################################################
