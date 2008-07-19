@@ -1,0 +1,9 @@
+<window type="dialog" id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	</controls>
+</window>

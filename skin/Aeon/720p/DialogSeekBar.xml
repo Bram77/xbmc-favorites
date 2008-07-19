@@ -1,0 +1,155 @@
+<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+	<visible>[Window.IsActive(2006) | VideoPlayer.IsFullscreen] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<controls>
+
+	<!-- playstate images -->
+
+	<control type="image">
+		<description>Panel</description>
+		<posx>-331</posx>
+		<posy>194</posy>
+		<height>331</height>
+		<width>331</width>
+		<texture>osdleft.png</texture>
+		<colordiffuse>e8FFFFFF</colordiffuse>
+		<animation effect="slide" start="0,0" end="201,0" time="200" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" start="201,0" end="0,0" time="200" acceleration="1">WindowClose</animation>
+	</control>
+
+	<control type="group" id="901">
+		<posx>-160</posx>
+		<posy>199</posy>
+		<width>160</width>
+		<height>51</height>
+		<animation effect="slide" start="0,0" end="347,0" time="200" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" start="347,0" end="0,0" time="200" acceleration="1">WindowClose</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>6</posy>
+				<height>241</height>
+				<width>171</width>
+				<info>VideoPlayer.Cover</info>
+			</control>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>248</posy>
+				<height>241</height>
+				<width>171</width>
+   			        <texture flipy="true" diffuse="Thumb_Mask4.png">$INFO[VideoPlayer.Cover]</texture>
+			</control>
+			<control type="label">
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<posx>0</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>right</align>
+				<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding</visible>
+			</control>
+			<control type="fadelabel">
+				<label>PAUSED</label>
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<posx>-178</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<scroll>false</scroll>
+				<scrollout>false</scrollout>
+				<pauseatend>4000</pauseatend>
+				<font>dropdowns</font>
+				<align>right</align>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>-172</posx>
+				<posy>280</posy>
+				<width>172</width>
+				<height>9</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+	</control>
+
+	<!-- progressbar dialog -->
+
+	<control type="label" id="22">
+		<description>Elapsed Time Label</description>
+		<posx>320</posx>
+		<posy>625</posy>
+		<font>special18</font>
+		<align>right</align>
+		<info>Player.Time</info>
+		<width>178</width>
+		<height>20</height>
+		<include>DialogInfo</include>
+		<visible>Player.Seeking + !Player.Paused</visible>
+	</control>
+
+	<control type="label" id="22">
+		<description>Seek Time Label</description>
+		<posx>231</posx>
+		<posy>625</posy>
+		<font>special18</font>
+		<align>right</align>
+		<info>Player.SeekTime</info>
+		<width>178</width>
+		<height>20</height>
+		<include>DialogInfo</include>
+		<visible>Player.Seeking + !Player.Paused</visible>
+	</control>
+
+	<control type="label" id="0">
+		<description>Duration Label</description>
+		<posx>996</posx>
+		<posy>625</posy>
+		<label>$INFO[Player.Duration,/ ]</label>
+		<font>special18</font>
+		<align>left</align>
+		<width>178</width>
+		<height>20</height>
+		<include>DialogInfo</include>
+		<visible>Player.Seeking + !Player.Paused</visible>
+	</control>
+
+	<control type="progress" id="23">
+		<description>Progressbar</description>
+		<posx>343</posx>
+		<posy>633</posy>
+		<width>622</width>
+		<height>10</height>
+		<info>Player.Progress</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+		<include>DialogInfo</include>
+		<visible>Player.Seeking + !Player.Paused</visible>
+	</control>
+
+	<control type="slider" id="401">
+		<description>Seek Slider</description>
+		<posx>320</posx>
+		<posy>406</posy>
+		<width>622</width>
+		<height>8</height>
+		<texturesliderbar>seekslider.png</texturesliderbar>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus>-</textureslidernibfocus>
+		<visible>true</visible>
+		<onup>1</onup>
+		<ondown>1</ondown>
+		<onleft>1</onleft>
+		<onright>1</onright>
+		<include>DialogInfo</include>
+	</control>
+
+	</controls>
+</window>
