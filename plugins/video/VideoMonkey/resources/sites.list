@@ -37,6 +37,11 @@ type=rss
 thumb=video.monkey.image|youtube.png
 url=youtube.com.cfg
 ########################################################
+name=GoogleVideo
+type=rss
+thumb=video.monkey.image|googlevideo.png
+url=googlevideo.com.cfg
+########################################################
 name=Metacafe
 type=rss
 thumb=video.monkey.image|metacafe.png

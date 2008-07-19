@@ -1,4 +1,4 @@
-# VideoMonkey version 0.2. by sfaxman
+# VideoMonkey version 0.3. by sfaxman
 
 from string import *
 import xbmcplugin
@@ -13,7 +13,7 @@ import cookielib
 import htmlentitydefs
 
 Version = '0'
-SubVersion = '2'
+SubVersion = '3'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -316,7 +316,7 @@ entitydefs = {
 #    '`':    '%60'
 #}
 
-def clean1(s): # Remove &XXX;
+def clean1(s): # remove &XXX;
     if not s:
         return ''
     for name, value in entitydefs.iteritems():
@@ -324,26 +324,19 @@ def clean1(s): # Remove &XXX;
             s = s.replace(u'&' + name + u';', value)
     return s;
 
-def clean2(s): #remove \\uXXX
+def clean2(s): # remove \\uXXX
     pat = re.compile(r'\\u(....)')
     def sub(mo):
         return unichr(int(mo.group(1), 16))
     return pat.sub(sub, smart_unicode(s))
 
-def clean3(s): #remove &#XXX;
+def clean3(s): # remove &#XXX;
     pat = re.compile(r'&#(\d+);')
     def sub(mo):
         return unichr(int(mo.group(1)))
-    return clean31(pat.sub(sub, smart_unicode(s)))
+    return decode(pat.sub(sub, smart_unicode(s)))
 
-def clean31(s):
-    dic=htmlentitydefs.name2codepoint
-    for key in dic.keys():
-        entity='&' + key + ';'
-        s=s.replace(entity, unichr(dic[key]))
-    return s
-
-def clean4(s): # many '?' in url
+def clean4(s): # remove multiple '?'
     if not s:
         return ''
     idx = s.rfind('?')
@@ -353,7 +346,14 @@ def clean4(s): # many '?' in url
             s = clean4(s)
     return s
 
-#def safe_quote(s): # quote unicode friendly
+def decode(s):
+    dic=htmlentitydefs.name2codepoint
+    for key in dic.keys():
+        entity='&' + key + ';'
+        s=s.replace(entity, unichr(dic[key]))
+    return s
+
+#def XXXXXX(s): # XXXXXX
 #    if not s:
 #        return ''
 #    for key, value in entitydefs2.iteritems():
@@ -382,12 +382,12 @@ def smart_unicode(s):
 def clean_name(s):
     if not s:
         return ''
-    return clean1(clean2(clean3(smart_unicode(s))))
+    return clean1(clean2(clean3(smart_unicode(s)))).replace('\r\n', '').replace('\n', '')
 
 def clean_url(s):
     if not s:
         return ''
-    return clean4(s.replace('&amp;', '&'))
+    return clean4(s)
 
 class CListItem:
     def __init__(self):
@@ -417,6 +417,7 @@ class CDirItem:
         self.name = ''
         self.type = ''
         self.url = ''
+        self.url_action = ''
         self.url_build = '%s'
         self.curr_url = ''
         self.img = ''
@@ -630,6 +631,8 @@ class CCurrentList:
                         dir_tmp.url = value
                     elif key == 'dir_type':
                         dir_tmp.type = value
+                    elif key == 'dir_url_action':
+                        dir_tmp.url_action = value
                     elif key == 'dir_url_build':
                         dir_tmp.url_build = value
                     elif key == 'dir_curr_url':
@@ -711,8 +714,8 @@ class CCurrentList:
             req = Request(curr_url, None, txheaders)
             handle = urlopen(req)
             data = handle.read()
-            cj.save(os.path.join(resDir, 'cookies.lwp'), ignore_discard=True)
-            #cj.save(os.path.join(resDir, 'cookies.lwp'))
+            #cj.save(os.path.join(resDir, 'cookies.lwp'), ignore_discard=True)
+            cj.save(os.path.join(resDir, 'cookies.lwp'))
             #f.write(data)
             #f.close()
         except IOError:
@@ -755,6 +758,9 @@ class CCurrentList:
                         url = pot_url
                         img = pot_img
                         name = pot_name
+                    url = decode(url)
+                    img = decode(img)
+                    name = clean_name(name)
                     tmp = CListItem()
                     tmp.type = 'video'
                     img = video.img_build % (img)
@@ -772,7 +778,7 @@ class CCurrentList:
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            img = video.img_build % (imgsearch.group(1))
+                            img = video.img_build % (decode(imgsearch.group(1)))
                         except:
                             traceback.print_exc(file = sys.stdout)
                             img = os.path.join(imgDir, 'video.png')
@@ -801,22 +807,36 @@ class CCurrentList:
             if (dir.url != ''):
                 recat = re.compile(dir.url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for url, name in recat.findall(data):
+                    url = decode(url)
+                    name = clean_name(name.lstrip().rstrip())
                     if (dir.img != ''):
                         img_catcher = dir.img % (url)
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            dir.thumb = dir.img_build % (imgsearch.group(1))
+                            dir.thumb = dir.img_build % (decode(imgsearch.group(1)))
                         except:
                             traceback.print_exc(file = sys.stdout)
+                    try:
+                        url = dir.url_build % (url)
+                    except:
+                        url = dir.url_build % (smart_unicode(url))
+                    if dir.url_action.find('append') != -1:
+                        if curr_url[len(curr_url) - 1] == '?':
+                            url = curr_url + url
+                        else:
+                            url = curr_url + '&' + url
                     if dir.type.find('flat') != -1:
                         tmp = CListItem()
-                        tmp.name = name.lstrip().rstrip()
+                        if dir.type.find('space') != -1:
+                            tmp.name = ' ' + name + ' '
+                        else:
+                            tmp.name = name
                         if (len(tmp.name) == 0):
                             tmp.name = self.random_filename(prefix = 'noname_')
                         tmp.type = 'rss'
                         tmp.thumb = dir.thumb
-                        tmp.url = self.cfg_name + '|' + (dir.url_build % (url))
+                        tmp.url = self.cfg_name + '|' + url
                         self.list.append(tmp)
                     else:
                         if f == None:
@@ -824,25 +844,26 @@ class CCurrentList:
                         f.write('name= ' + smart_unicode(name) + ' \n')
                         f.write('type=rss\n')
                         f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
-                        try:
-                            f.write('url=' + smart_unicode(self.cfg_name) + '|' + (dir.url_build % (url)) + '\n')
-                        except:
-                            f.write('url=' + smart_unicode(self.cfg_name) + '|' + (dir.url_build % (smart_unicode(url))) + '\n')
+                        f.write('url=' + smart_unicode(self.cfg_name) + '|' + smart_unicode(url) + '\n')
                     oneFound = True
             if (dir.curr_url != ''):
                 recat = re.compile(dir.curr_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for name in recat.findall(data):
+                    name = clean_name(name.lstrip().rstrip())
                     if (dir.img != ''):
                         img_catcher = dir.curr_img % (name)
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            dir.thumb = dir.curr_img_build % (imgsearch.group(1))
+                            dir.thumb = dir.curr_img_build % (decode(imgsearch.group(1)))
                         except:
                             traceback.print_exc(file = sys.stdout)
                     if dir.type.find('flat') != -1:
                         tmp = CListItem()
-                        tmp.name = name.lstrip().rstrip()
+                        if dir.type.find('space') != -1:
+                            tmp.name = ' ' + name + ' '
+                        else:
+                            tmp.name = name
                         if (len(tmp.name) == 0):
                             tmp.name = self.random_filename(prefix = 'noname_')
                         tmp.type = 'rss'
@@ -872,6 +893,7 @@ class CCurrentList:
             if (not found):
                 renext = re.compile(next.url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                 for url in renext.findall(data):
+                    url = decode(url)
                     if (not found):
                         tmp = CListItem()
                         tmp.name = ' ' + xbmc.getLocalizedString(30103) + ' '
@@ -1093,17 +1115,17 @@ class Main:
             xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
 
         if self.currentlist.video_action.find('play') != -1 and len(self.currentlist.list) == 1 and self.currentlist.list[0].type == u'video':
-            result = self.parseView(self.currentlist.list[0].url + '|' + clean_name(self.currentlist.list[0].name) + '|' + self.currentlist.list[0].thumb + '.videomonkey')
+            result = self.parseView(self.currentlist.list[0].url + '|' + self.currentlist.list[0].name + '|' + self.currentlist.list[0].thumb + '.videomonkey')
         elif self.currentlist.video_action.find('play') != -1 and self.currentlist.search_url_build != '' and len(self.currentlist.list) == 2 and self.currentlist.list[1].type == u'video':
-            result = self.parseView(self.currentlist.list[1].url + '|' + clean_name(self.currentlist.list[1].name) + '|' + self.currentlist.list[1].thumb + '.videomonkey')
+            result = self.parseView(self.currentlist.list[1].url + '|' + self.currentlist.list[1].name + '|' + self.currentlist.list[1].thumb + '.videomonkey')
         else:
             for m in self.currentlist.list:
                 if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addDir(clean_name(self.siteSpecificName(m.name, self.currentlist.cfg_name)), clean_url(m.url), m.thumb, len(self.currentlist.list))
+                    self.addDir(self.siteSpecificName(m.name, self.currentlist.cfg_name), clean_url(m.url), m.thumb, len(self.currentlist.list))
                 elif (m.type == u'live') or (m.type == u'adult_live' and xbmcplugin.getSetting("no_adult") == 'false'):
                     self.addLink(m.name, m.url, m.thumb, len(self.currentlist.list))
                 elif (m.type == u'video') or (m.type == u'adult_video' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addDir(clean_name(self.siteSpecificName(m.name, self.currentlist.cfg_name)), clean_url(m.url) + '|' + clean_name(m.name) + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
+                    self.addDir(self.siteSpecificName(m.name, self.currentlist.cfg_name), clean_url(m.url) + '|' + m.name + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
         return result
 
     def addLink(self, name, url, icon = None, totalItems = None):
