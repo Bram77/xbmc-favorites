@@ -1,4 +1,4 @@
-# VideoMonkey version 0.3. by sfaxman
+# VideoMonkey by sfaxman
 
 from string import *
 import xbmcplugin
@@ -11,9 +11,6 @@ import shutil
 import codecs
 import cookielib
 import htmlentitydefs
-
-Version = '0'
-SubVersion = '3'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -1075,6 +1072,21 @@ class Main:
                     url=''
             else:
                 url = ''
+        elif cfg_file == 'youporn.com.cfg': # YouPorn
+            request = urllib2.Request(url)
+            opener = urllib2.build_opener()
+            req = urllib2.Request(url)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+            req.add_header('Cookie','age_check=1')
+            urlfile=opener.open(req)
+            feed_data=urlfile.read()
+            resecurl=re.compile('<p><a\ href="([^"]+)">FLV[^<]+</a>')
+            urlsearch=resecurl.search(feed_data)
+            try:
+                url=urlsearch.group(1)
+            except:
+                traceback.print_exc(file = sys.stdout)
+                url=''
         return url
 
     def siteSpecificName(self, name, cfg_file): # Site specific name handling
