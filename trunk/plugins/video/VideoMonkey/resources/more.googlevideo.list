@@ -1,0 +1,25 @@
+﻿########################################################
+# Google Video country specific sites
+########################################################
+version=1
+########################################################
+name=GoogleVideo (EN)
+type=rss
+thumb=video.monkey.image|en.png
+url=googlevideo.en.cfg
+########################################################
+name=GoogleVideo (DE)
+type=rss
+thumb=video.monkey.image|de.png
+url=googlevideo.de.cfg
+########################################################
+name=GoogleVideo (FR)
+type=rss
+thumb=video.monkey.image|fr.png
+url=googlevideo.fr.cfg
+########################################################
+name=GoogleVideo (NL)
+type=rss
+thumb=video.monkey.image|nl.png
+url=googlevideo.nl.cfg
+########################################################
