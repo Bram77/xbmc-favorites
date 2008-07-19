@@ -21,6 +21,11 @@ type=adult_rss
 thumb=video.monkey.image|pornotube.png
 url=pornotube.com.cfg
 ########################################################
+name=YouPorn
+type=adult_rss
+thumb=video.monkey.image|youporn.png
+url=youporn.com.cfg
+########################################################
 name=Metacafe
 type=adult_rss
 thumb=video.monkey.image|metacafe.png
