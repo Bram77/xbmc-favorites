@@ -50,14 +50,14 @@
 		<include>mediabackgroundfolder</include>
 		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
 		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
-		<visible>[Control.IsVisible(53) | Control.IsVisible(57)] + [Container.Content(movies) | Container.Content(tvshows) | Skin.hasSetting(fanart)] + !Window.IsActive(2003)</visible>
+		<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)] + [Container.Content(movies) | Container.Content(tvshows) | Skin.hasSetting(fanart)] + !Window.IsActive(2003)</visible>
 	</control>
 	
 	<control type="image">
 		<include>mediabackgroundfolder</include>
 		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
 		<texture>photowallpaper.png</texture>
-		<visible>[Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(fanart) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+		<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)] + !Skin.HasSetting(fanart) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 	</control>
 	
 	<control type="image">
@@ -174,7 +174,6 @@
 		</control>
 	
 		<include>Window-Files</include>
-		<include>nowplayingpopup</include>
 		<include>contextselected</include>
 	
 		<control type="label">
@@ -192,6 +191,7 @@
 	<include>Viewtype_Episode</include>
 	
 	<include>showcaseimdb</include>
+	<include>nowplayingpopup</include>
 	
 </controls>	
 </window>
