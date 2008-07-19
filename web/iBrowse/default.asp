@@ -31,7 +31,7 @@ var custom = false;
 var customIP = "10.0.0.42";
 var maxItems = "50";
 //var playlistLocation = "smb://MEDIAONE/media/Playlists/";
-var playlistLocation = "q:\\UserData\\playlists\\music\\";
+var playlistLocation = "";
 
 <%
     navigatorstate = xbmcCommand("navigatorstate");
@@ -91,7 +91,7 @@ function resize(){
 
 
 <td width="66">
-<a href="javascript:getContent('home');setupMenubars('browser')"><img src="images/browseBtn.gif" border=0></a>
+<a href="javascript:getContent('folder');setupMenubars('browser')"><img src="images/browseBtn.gif" border=0></a>
 
 </td>
 
@@ -1694,7 +1694,7 @@ document.getElementById("musiclibrary").innerHTML = resultsHTML;
 
 //	setupMenubars("browser");
 
-getContent("home");
+getContent("folder");
 //resize div
 resize();
 </script>
