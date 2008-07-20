@@ -334,8 +334,6 @@ def clean3(s): # remove &#XXX;
     return decode(pat.sub(sub, smart_unicode(s)))
 
 def clean4(s): # remove multiple '?'
-    if not s:
-        return ''
     idx = s.rfind('?')
     if idx != -1:
         if s[:idx].rfind('?') != -1:
@@ -344,10 +342,15 @@ def clean4(s): # remove multiple '?'
     return s
 
 def decode(s):
-    dic=htmlentitydefs.name2codepoint
-    for key in dic.keys():
-        entity='&' + key + ';'
-        s=s.replace(entity, unichr(dic[key]))
+    if not s:
+        return ''
+    try:
+        dic=htmlentitydefs.name2codepoint
+        for key in dic.keys():
+            entity='&' + key + ';'
+            s=s.replace(entity, unichr(dic[key]))
+    except:
+        traceback.print_exc(file = sys.stdout)
     return s
 
 #def XXXXXX(s): # XXXXXX
@@ -358,6 +361,8 @@ def decode(s):
 #    return s;
 
 def smart_unicode(s):
+    if not s:
+        return ''
     try:
         if not isinstance(s, basestring):
             if hasattr(s, '__unicode__'):
@@ -379,12 +384,20 @@ def smart_unicode(s):
 def clean_name(s):
     if not s:
         return ''
-    return clean1(clean2(clean3(smart_unicode(s)))).replace('\r\n', '').replace('\n', '')
+    try:
+        s = clean1(clean2(clean3(smart_unicode(s)))).replace('\r\n', '').replace('\n', '')
+    except:
+        traceback.print_exc(file = sys.stdout)
+    return s
 
 def clean_url(s):
     if not s:
         return ''
-    return clean4(s)
+    try:
+        s = clean4(s)
+    except:
+        traceback.print_exc(file = sys.stdout)
+    return s
 
 class CListItem:
     def __init__(self):
@@ -709,7 +722,11 @@ class CCurrentList:
             #f = open(os.path.join(cacheDir, 'page.html'), 'w')
             #f.write('<Titel>'+ curr_url + '</Title>\n\n')
             req = Request(curr_url, None, txheaders)
-            handle = urlopen(req)
+            try:
+                handle = urlopen(req)
+            except:
+                traceback.print_exc(file = sys.stdout)
+                return
             data = handle.read()
             #cj.save(os.path.join(resDir, 'cookies.lwp'), ignore_discard=True)
             cj.save(os.path.join(resDir, 'cookies.lwp'))
