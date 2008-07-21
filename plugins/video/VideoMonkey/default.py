@@ -451,6 +451,7 @@ class CCurrentList:
         self.reference = ''
         self.content = ''
         self.target_url = ''
+        self.ext_target_url = ''
         self.catcher_data = ''
         self.catcher_reference = ''
         self.catcher_content = ''
@@ -511,6 +512,8 @@ class CCurrentList:
                         self.catcher_content = value[index+1:]
                     elif key == 'url' and catcher_found == True:
                         self.catcher_url_build = value
+                    elif key == 'ext_target' and catcher_found == True:
+                        self.ext_target_url = value
                     elif key == 'target' and catcher_found == True:
                         self.target_url = value
                         return 0
@@ -614,6 +617,8 @@ class CCurrentList:
                         if value[:index] == 'video.monkey.image':
                             next_tmp.thumb = os.path.join(imgDir, value[index+1:])
                         self.next_list.append(next_tmp)
+                    elif key == 'ext_target_url':
+                        self.ext_target_url = value
                     elif key == 'target_url':
                         self.target_url = value
                     elif key == 'catcher_data':
@@ -773,7 +778,7 @@ class CCurrentList:
                         img = pot_img
                         name = pot_name
                     url = decode(url)
-                    img = decode(img)
+                    img = decode(img).replace(' ', '%20')
                     name = clean_name(name)
                     tmp = CListItem()
                     tmp.type = 'video'
@@ -792,7 +797,7 @@ class CCurrentList:
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            img = video.img_build % (decode(imgsearch.group(1)))
+                            img = video.img_build % (decode(imgsearch.group(1)).replace(' ', '%20'))
                         except:
                             traceback.print_exc(file = sys.stdout)
                             img = os.path.join(imgDir, 'video.png')
@@ -828,7 +833,7 @@ class CCurrentList:
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            dir.thumb = dir.img_build % (decode(imgsearch.group(1)))
+                            dir.thumb = dir.img_build % (decode(imgsearch.group(1)).replace(' ', '%20'))
                         except:
                             traceback.print_exc(file = sys.stdout)
                     try:
@@ -869,7 +874,7 @@ class CCurrentList:
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            dir.thumb = dir.curr_img_build % (decode(imgsearch.group(1)))
+                            dir.thumb = dir.curr_img_build % (decode(imgsearch.group(1)).replace(' ', '%20'))
                         except:
                             traceback.print_exc(file = sys.stdout)
                     if dir.type.find('flat') != -1:
@@ -951,6 +956,21 @@ class Main:
             #f.close()
             resecurl = re.compile(self.currentlist.target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
             urlsearch = resecurl.search(fc)
+            try:
+                match = urlsearch.group(1)
+            except:
+                traceback.print_exc(file = sys.stdout)
+                return ''
+            if self.currentlist.ext_target_url == '':
+                return match
+            request = urllib2.Request(match)
+            opener = urllib2.build_opener()
+            req = urllib2.Request(match)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+            urlfile = opener.open(req)
+            feed_data = urlfile.read(500)
+            match = re.compile(self.currentlist.ext_target_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+            urlsearch = match.search(feed_data)
             try:
                 return urlsearch.group(1)
             except:

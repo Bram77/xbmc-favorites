@@ -37,3 +37,10 @@ header=Referer|http://www.clipnabber.com
 url=http://clipnabber.com/gethint.php
 target=<a href='([^']+)' *><strong>
 ########################################################
+name=porn2pc.com
+data=url=%s&Submit=Downlod+video+with+Porn2PC
+header=Referer|http://porn2pc.com/
+url=http://porn2pc.com/post.php
+ext_target=<h2>([^<]+)</h2>
+target=<a href=\"([^\"]+)\"[^>]+><b>CLICK HERE TO DOWNLOAD MOVIE</b></a>
+########################################################
