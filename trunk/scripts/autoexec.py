@@ -1,2 +1,2 @@
 import xbmc
-xbmc.executescript('Q:\\scripts\\veohproxy\\default.py')
+xbmc.executescript('Q:\\scripts\\veohproxy\\veohproxy.py')
