@@ -104,8 +104,21 @@
 		<texture>film1.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
 	    <animation effect="fade" time="200">WindowClose</animation> 
+		<visible>!Skin.HasSetting(Background)</visible>
         </control>
 
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>130</posy>
+		<width>740</width>
+		<height>320</height>
+		<texture>film.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+		<visible>Skin.HasSetting(Background)</visible>
+        </control>
 
 
 		
