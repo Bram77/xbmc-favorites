@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!--  21.7.2008 Finnish   -->
+    <string id="30000">VideoMonkey</string>
+    <string id="30001">XBMC Media Center</string>
+
+    <string id="30002">Sisällytä aikuis sisältö hakuun</string>
+    <string id="30003">Toistotapa</string>
+    <string id="30004">Automaattinen</string>
+    <string id="30005">MPlayer</string>
+    <string id="30006">DVDPlayer</string>
+    <string id="30007">Tallenna video</string>
+    <string id="30008">Latauspolku</string>
+    <string id="30009">Kysy latauksesta ennen toistoa</string>
+
+    <string id="30050">Ladataan video...</string>
+    <string id="30051">Odota hetki.</string>
+    <string id="30052">Haluatko ladata tämän videon?</string>
+    <string id="30053">Videon lataus epäonnistui. Yritetään katsoa video...</string>
+
+    <string id="30100">Kategoria</string>
+    <string id="30101">Alikategoria</string>
+    <string id="30102">Haku</string>
+    <string id="30103">Seuraava sivu</string>
+    <string id="30104">Lisää</string>
+    <string id="30105">Lajityyppi</string>
+    <string id="30106">Nykyinen</string>
+    <string id="30107">Esittäjä</string>
+    <string id="30108">Videot</string>
+    <string id="30109">Lajittelu</string>
+    <string id="30110">Toive</string>
+    <string id="30111">Tyhjennä</string>
+    <string id="30112">Alue</string>
+    <string id="30113">Ajan ylitys</string>
+</strings>
