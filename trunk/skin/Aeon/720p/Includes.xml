@@ -160,8 +160,9 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>contextback.png</texture>
-			<visible>Window.IsVisible(106) | Window.IsVisible(129) | Window.IsVisible(602) | Window.IsVisible(132) | Window.IsVisible(126) | Window.IsVisible(103) | Window.IsVisible(111) | Window.IsVisible(600) | Window.IsVisible(601) | Window.IsVisible(2003)</visible>
+			<texture>black.png</texture>
+			<colordiffuse>c3FFFFFF</colordiffuse>
+			<visible>Window.IsVisible(106) | Window.IsVisible(129) | Window.IsVisible(602) | Window.IsVisible(132) | Window.IsVisible(126) | Window.IsVisible(103) | Window.IsVisible(111) | Window.IsVisible(600) | Window.IsVisible(601) | Window.IsVisible(2003) | Window.IsVisible(2001)</visible>
 			<include>context-fade</include>
 		</control>
 </include>
@@ -860,6 +861,16 @@
 	<include>common-fade-quick</include>
 </include>
 
+<include name="musicinfomenugroup">
+	<posx>67</posx>
+	<posy>565</posy>
+	<width>1145</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<include>common-fade-quick</include>
+</include>
+
 <include name="browsermenugroup">
 	<posx>67</posx>
 	<posy>565</posy>
@@ -1537,8 +1548,8 @@
 
 		<control type="image">
 			<posx>-44</posx>
-			<width>1098</width>
-			<height>282</height>
+			<width>1097</width>
+			<height>396</height>
 			<texture>playpanel.png</texture>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<colordiffuse>d0FFFFFF</colordiffuse>
@@ -1547,8 +1558,8 @@
 		<control type="image">
 			<posx>-44</posx>
 			<posy>-12</posy>
-			<width>1098</width>
-			<height>322</height>
+			<width>1097</width>
+			<height>396</height>
 			<texture>playpanel.png</texture>
 			<visible>!system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<colordiffuse>d0FFFFFF</colordiffuse>

@@ -54,7 +54,7 @@
 				<height>40</height>
 				<texture>listhighlightstub.png</texture>
 				<colordiffuse>d0FFFFFF</colordiffuse>
-				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111)</visible>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2001)</visible>
 				<animation effect="fade" start="0" end="100">VisibleChange</animation>
 			</control>
 			<control type="label">

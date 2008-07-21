@@ -2,7 +2,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-	
+
 	<control type="multiimage">
 		<include>mediabackground</include>
 		<imagepath>Default</imagepath>
@@ -47,31 +47,6 @@
 	</control>
 	
 	<control type="image">
-		<include>mediabackgroundfolder</include>
-		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
-		<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)] + [Container.Content(movies) | Container.Content(tvshows) | Skin.hasSetting(fanart)]</visible>
-	</control>
-	
-	<control type="image">
-		<include>mediabackgroundfolder</include>
-		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-		<texture>photowallpaper.png</texture>
-		<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)] + !Skin.HasSetting(fanart) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
-	</control>
-	
-	<control type="image">
-		<posx>-5</posx>
-		<posy>-5</posy>
-		<width>1290</width>
-		<height>730</height>
-		<animation effect="fade" end="0" time="200">WindowClose</animation>
-		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-		<texture diffuse="tvmask.png">$INFO[Fanart.Image]</texture>
-		<visible>Skin.HasSetting(videotv) + [Container.Content(episodes) | Container.Content(seasons)] + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(fanart)</visible>
-	</control>
-	
-	<control type="image">
 		<posx>-5</posx>
 		<posy>-5</posy>
 		<width>1290</width>
@@ -79,7 +54,14 @@
 		<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
 		<texture>$INFO[Fanart.Image]</texture>
-		<visible>[Skin.HasSetting(videotv) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons)] + [!Control.IsVisible(53) + !Control.IsVisible(57)] + !Skin.HasSetting(fanart)]</visible>
+		<visible>Skin.HasSetting(videotv) + [Container.Content(episodes) | Container.Content(seasons)] + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(fanart)</visible>
+	</control>
+
+	<control type="image">
+		<include>mediabackgroundfolder</include>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
+		<visible>Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)</visible>
 	</control>
 	
 	<include>wallglass</include>

@@ -83,13 +83,6 @@
 	</control>
 	
 	<control type="image">
-		<include>mediabackgroundfolder</include>
-		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
-		<visible>Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(55)</visible>
-	</control>
-	
-	<control type="image">
 		<posx>-5</posx>
 		<posy>-5</posy>
 		<width>1290</width>
@@ -100,6 +93,13 @@
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 	</control>
 
+	<control type="image">
+		<include>mediabackgroundfolder</include>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
+		<visible>Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(55)</visible>
+	</control>	
+	
 	<include>wallglass</include>
 	<include>vignette</include>
 	<include>Viewtype_Posterwall</include>

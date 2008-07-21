@@ -322,8 +322,8 @@
 		<width>533</width>
 		<onleft>3</onleft>
 		<onright>5</onright>
-		<onup>6</onup>
-		<ondown>6</ondown>
+		<onup>4</onup>
+		<ondown>4</ondown>
 		<visible allowhiddenfocus="true">Control.HasFocus(11) | ControlGroup(3).HasFocus() | ControlGroup(4).HasFocus()</visible>
 
 	<control type="button" id="305">
