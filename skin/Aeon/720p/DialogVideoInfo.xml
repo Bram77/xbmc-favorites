@@ -92,6 +92,20 @@
 		<control type="button" id="12">
 		<label>Get Fanart</label>
 		<include>contextformatinfo</include>
+		<visible>Container.Content(tvshows)</visible>
+		</control>
+		
+		<control type="button" id="11">
+		<label>Trailer</label>
+		<include>contextformatinfo</include>
+		<visible>!IsEmpty(ListItem.Trailer)</visible>
+		</control>
+		
+		<control type="button" id="99">
+		<label>Video settings</label>
+		<include>contextformatinfo</include>
+		<visible>IsEmpty(ListItem.Trailer) + !Container.Content(tvshows)</visible>
+		<onclick>XBMC.ActivateWindow(17)</onclick>
 		</control>
 	</control>
 
