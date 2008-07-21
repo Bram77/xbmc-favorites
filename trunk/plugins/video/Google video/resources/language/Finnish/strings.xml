@@ -1,0 +1,20 @@
+﻿<strings>
+    <!-- Finnish 21.7.2008 -->
+    <string id="20000">Haku asetukset:</string>
+    <string id="30000">Haun kesto LYHYT</string>
+    <string id="30001">Haun kesto KESKI</string>
+    <string id="30002">Haun kesto PITKÄ</string>
+    <string id="24000">Hakupaikka:</string>
+    <string id="30004">Hae vain GOOGLE:sta</string>
+    <string id="30005">Hae vain YOUTUBE:sta</string>
+    <string id="30006">Hae vain GUBA:sta</string>
+    <string id="30007">Hae vain YOUKU:sta</string>
+    <string id="30008">Hae vain TUDOU:sta</string>
+    <string id="30009">Hae vain VEOH:sta</string>
+    <string id="300010">Hae vain MYSPACE:sta</string> 
+    <string id="300011">Hae vain DAILYMOTION:sta</string> 
+    <string id="300012">Hae vain TRILULILU:sta</string>
+    <string id="25000">Aseta latauskansio:</string>
+    <string id="30003">Lataa tiedosto</string>
+    <string id="300013">Aseta latauskansio </string>
+</strings>
