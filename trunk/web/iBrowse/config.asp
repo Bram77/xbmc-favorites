@@ -2,8 +2,19 @@
 	<head>
 		<title></title>
 		<style>
-			html,body		{ font-familty:Georgia, serif; font-size:14px;}
+			html,body		{ font-familty:Georgia, serif; font-size:12px;}
+			.mediaBookmarks	{ display:none; }
 		</style>
+		<script type="text/javascript">
+			function ShowMediaBookmarks()
+			{
+				var mBookmarks = document.getElementById('mediaBookmarks');
+				if( mBookmarks.style.display=='none' )
+					mBookmarks.style.display='';
+				else
+					mBookmarks.style.display='none';
+			}
+		</script>
 	</head>
 <body>
 
@@ -21,6 +32,9 @@
       xbmcCfgSetOption(name, value)
     
      */
+    write("\n<a href='#' onclick='ShowMediaBookmarks();return false;'>Modify Media Bookmarks</a><br><br><a href='http://www.liquidicelabs.com/xbmc/installAJAX.php' target='_self'>Upgrade to the Latest Web GUI</a><br><br><table><tr ><td id='mediaBookmarks' style='display:none;'>\n");
+    write("<br />\n");
+    write("<br />\n");
     
     
     /* if action isset we want to save / edit or remove something */
@@ -428,5 +442,8 @@
     }
 %>
 
+			</td>
+		</tr>
+	</table>
 </body>
 </html>
