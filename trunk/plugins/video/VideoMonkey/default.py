@@ -1,5 +1,3 @@
-# VideoMonkey by sfaxman
-
 from string import *
 import xbmcplugin
 import sys, os.path
@@ -11,6 +9,14 @@ import shutil
 import codecs
 import cookielib
 import htmlentitydefs
+import socket
+
+__plugin__ = "VideoMonkey"
+__author__ = "sfaxman"
+__url__ = "http://code.google.com/p/xbmc-addons/"
+__svn_url__ = "http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/"
+__credits__ = "sfaxman"
+__version__ = "1.0" # of this file
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -19,6 +25,7 @@ resDir = os.path.join(rootDir, 'resources')
 imgDir = os.path.join(resDir, 'images')
 libDir = os.path.join(resDir, 'libs')
 sys.path.append(libDir)
+socket.setdefaulttimeout(20)
 
 urlopen = urllib2.urlopen
 cj = cookielib.LWPCookieJar()
@@ -1215,6 +1222,11 @@ class Main:
             if len(paramstring) <= 2:
                 if not os.path.exists(cacheDir):
                     os.mkdir(cacheDir)
+                if not os.path.exists(xbmcplugin.getSetting("download_Path")):
+                    try:
+                        os.mkdir(xbmcplugin.getSetting("download_Path"))
+                    except:
+                        traceback.print_exc(file = sys.stdout)
                 self.purgeCache()
                 if self.parseView('sites.list') == 0:
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))

@@ -18,6 +18,11 @@ type=rss
 thumb=video.monkey.image|fr.png
 url=googlevideo.fr.cfg
 ########################################################
+name=GoogleVideo (FI)
+type=rss
+thumb=video.monkey.image|fi.png
+url=googlevideo.fi.cfg
+########################################################
 name=GoogleVideo (NL)
 type=rss
 thumb=video.monkey.image|nl.png
