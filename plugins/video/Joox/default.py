@@ -168,9 +168,16 @@ def VIDEOLINK(url,name):
                         opener = urllib2.build_opener()
                         f = opener.open(request)
                         vix=urllib.unquote(f.url)
-                        addLink(name,vix,"")
+                        addLink(name,vix+"?.avi","")
+                elif url.find('megavideo')>0:
+                        addLink(name,url+"voinage.flv","")
+                elif url.find('stage')>0:
+                        addLink(name,url,"")
+                elif url.find('pages')>0:
+                        addLink(name,'http://joox.net'+url,"")
                 else:
-                        addLink(name,"http://joox.net"+url,"")
+                        addLink(name,url,"")
+                        
                         
 
 def get_params():
