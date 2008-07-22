@@ -41,6 +41,7 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
+        self.guid = "8F932D18-42F3-11DD-85FF-7DF255D89593"
         self.icon = "kkicon.png"
         self.iconLarge = "kklarge.png"
         self.noImage = "kkimage.png"
@@ -56,7 +57,8 @@ class Channel(chn_class.Channel):
         
         self.requiresLogon = False
         
-        self.episodeItemRegex = '<tr id="d-(\d+)"><td width="25" class="num">\d+</td><td class="title" id="m-(\d+)"><h2>([^<]+)</h2>'  # used for the ParseMainList
+        #self.episodeItemRegex = '<tr id="d-(\d+)"><td width="25" class="num">\d+</td><td class="title" id="m-(\d+)"><h2>([^<]+)</h2>'  # used for the ParseMainList
+        self.episodeItemRegex = '<tr[^>]+id="d-(\d+)"><td width="25" class="num">\d+</td><td class="title" id="m-(\d+)"><a [^>]+>([^<]+)</a>'  # used for the ParseMainList
         self.videoItemRegex = '([^*|]+)\*([^*|]+)\*([^*|]+)\*([^*|]+)\*([^*|]+)\*(\d+)'   # used for the CreateVideoItem 
         self.folderItemRegex = '<h1>([^<]+)</h1>'  # used for the CreateFolderItem
         #232|Adventure Free TV|http://www.adventurefree.tv/unicast_mov/AFTVAdventureH264500.mov|0|mov|http://www.adventurefree.tv/|#|
