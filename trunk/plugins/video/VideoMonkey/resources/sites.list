@@ -47,10 +47,10 @@ type=rss
 thumb=video.monkey.image|metacafe.png
 url=metacafe.com.cfg
 ########################################################
-#name=Google Video
-#type=rss
-#thumb=video.monkey.image|googlevideo.png
-#url=googlevideo.com.cfg
+name=Joox (INCOMPLETE)
+type=rss
+thumb=video.monkey.image|joox.png
+url=joox.net.cfg
 ########################################################
 # More adult sites
 ########################################################
