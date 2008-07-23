@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!--          Finnish 23.7.2008 -->
+    <string id="30000">Haluttu esittelyn kuvanlaatu</string>
+    <string id="30001">Vakio</string>
+    <string id="30002">480p</string>
+    <string id="30003">720p</string>
+    <string id="30004">1080p</string>
+    <string id="30010">Suuret julistekuvat käytössä</string>
+    <string id="30020">MPAA luokituksen rajoitus esittelyille</string>
+    <string id="30030">Muoto</string>
+    <string id="30031">Tilapäinen</string>
+    <string id="30032">Tallenna</string>
+    <string id="30040">- Tallennuskansio</string>
+    <string id="30050">Zipcode/Post Code or City, State</string>
+    <string id="30060">Hakupaikka</string>
+    <string id="30070">Näytä elokuvat</string>
+    <string id="30071">Tänään</string>
+    <string id="30072">Huomenna</string>
+    <string id="30073">3.päivänä</string>
+    <string id="30074">4.päivänä</string>
+    <string id="30075">5.päivänä</string>
+    <string id="30076">6.päivänä</string>
+    <string id="30077">7.päivänä</string>
+    <string id="30078">8.päivänä</string>
+    <string id="30080">- Käytä elokuvan nimeä tallennusnimeen</string>
+    <string id="30090">Fanitaide kuvat</string>
+    <string id="30100">Fanitaiteen väri yksi(AARRGGBB)</string>
+    <string id="30110">Fanitaiteen väri kaksi(AARRGGBB)</string>
+    <string id="30120">Fanitaiteen väri kolme(AARRGGBB)</string>
+
+    <!-- messages -->
+    <string id="30500">Ladataan: %s</string>
+    <string id="30501">Tallennetaan: %s</string>
+    <string id="30502">Kansioon: %s</string>
+    <string id="30503">Kopioidaan: %s</string>
+
+    <!-- showtimes -->
+    <string id="30600">Esityksiä ei löydy!</string>
+    <string id="30601">Etsitään esityksiä, odota hetki...</string>
+    <string id="30602">Päivä</string>
+    <string id="30603">Sijainti</string>
+   
+    <!-- PluginCategory infolabel -->
+    <string id="30700">Standard videot</string>
+    <string id="30701">480p videot</string>
+    <string id="30702">720p videot</string>
+    <string id="30703">1080p videot</string>
+
+    <!-- context menu labels -->
+    <string id="30900">Teatteriesitykset</string>
+    <string id="30910">Lataa esittely</string>
+</strings>
