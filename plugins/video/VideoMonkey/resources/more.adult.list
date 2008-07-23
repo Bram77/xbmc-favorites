@@ -6,7 +6,7 @@ title=Extra Adult
 ########################################################
 # Adult video sites
 ########################################################
-name=Pornhub
+name=Pornhub (BROKEN)
 type=adult_rss
 thumb=video.monkey.image|pornhub.png
 url=pornhub.com.cfg
@@ -36,8 +36,8 @@ type=adult_rss
 thumb=video.monkey.image|metacafe.png
 url=metacafe.adult.com.cfg
 ########################################################
-#name=TUtv       ####  INCOMPLETE  ####
-#type=adult_rss
-#thumb=video.monkey.image|tu_tv.png
-#url=tu.tv.cfg
+name=TUtv (INCOMPLETE)
+type=adult_rss
+thumb=video.monkey.image|tu_tv.png
+url=tu.tv.cfg
 ########################################################

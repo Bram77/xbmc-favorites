@@ -292,33 +292,33 @@ entitydefs = {
     'zwnj':     u'\u200C'  # zero width non-joiner, U+200C NEW RFC 2070'
 }
 
-#entitydefs2 = {
-#    '$':    '%24',
-#    '&':    '%26',
-#    '+':    '%2B',
-#    ',':    '%2C',
-#    '/':    '%2F',
-#    ':':    '%3A',
-#    ';':    '%3B',
-#    '=':    '%3D',
-#    '?':    '%3F',
-#    '@':    '%40',
-#    ' ':    '%20',
-#    '"':    '%22',
-#    '<':    '%3C',
-#    '>':    '%3E',
-#    '#':    '%23',
-#    '%':    '%25',
-#    '{':    '%7B',
-#    '}':    '%7D',
-#    '|':    '%7C',
-#    '\\':   '%5C',
-#    '^':    '%5E',
-#    '~':    '%7E',
-#    '[':    '%5B',
-#    ']':    '%5D',
-#    '`':    '%60'
-#}
+entitydefs2 = {
+    '$':    '%24',
+    '&':    '%26',
+    '+':    '%2B',
+    ',':    '%2C',
+    '/':    '%2F',
+    ':':    '%3A',
+    ';':    '%3B',
+    '=':    '%3D',
+    '?':    '%3F',
+    '@':    '%40',
+    ' ':    '%20',
+    '"':    '%22',
+    '<':    '%3C',
+    '>':    '%3E',
+    '#':    '%23',
+    '%':    '%25',
+    '{':    '%7B',
+    '}':    '%7D',
+    '|':    '%7C',
+    '\\':   '%5C',
+    '^':    '%5E',
+    '~':    '%7E',
+    '[':    '%5B',
+    ']':    '%5D',
+    '`':    '%60'
+}
 
 def clean1(s): # remove &XXX;
     if not s:
@@ -360,12 +360,25 @@ def decode(s):
         traceback.print_exc(file = sys.stdout)
     return s
 
-#def XXXXXX(s): # XXXXXX
-#    if not s:
-#        return ''
-#    for key, value in entitydefs2.iteritems():
-#        s = s.replace(key, value)
-#    return s;
+def unquote_safe(s): # unquote
+    if not s:
+        return ''
+    try:
+        for key, value in entitydefs2.iteritems():
+            s = s.replace(value, key)
+    except:
+        traceback.print_exc(file = sys.stdout)
+    return s;
+
+def quote_safe(s): # quote
+    if not s:
+        return ''
+    try:
+        for key, value in entitydefs2.iteritems():
+            s = s.replace(key, value)
+    except:
+        traceback.print_exc(file = sys.stdout)
+    return s;
 
 def smart_unicode(s):
     if not s:
@@ -484,12 +497,24 @@ class CCurrentList:
         else:
             return ''
 
-    def random_filename(self, dir = cacheDir, chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', length = 8, prefix = '', suffix = '', attempts = 1000):
+    def randomFilename(self, dir = cacheDir, chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', length = 8, prefix = '', suffix = '', attempts = 1000):
         for attempt in range(attempts):
             filename = ''.join([random.choice(chars) for i in range(length)])
             filename = prefix + filename + suffix
             if not os.path.exists(os.path.join(dir, filename)):
                 return filename
+
+    def videoCount(self):
+        count = 0
+        for item in self.list:
+            if item.type == 'video':
+                count = count +1
+        return count
+
+    def getVideo(self):
+        for item in self.list:
+            if item.type == 'video':
+                return item
 
     def loadCatcher(self, name):
         f = codecs.open(os.path.join(resDir, 'catcher.list'), 'r', 'utf-8')
@@ -820,15 +845,15 @@ class CCurrentList:
                             name = titlesearch.group(1)
                         except:
                             traceback.print_exc(file = sys.stdout)
-                            name = self.random_filename(prefix = 'noname_')
+                            name = self.randomFilename(prefix = 'noname_')
                     tmp.name = name.lstrip().rstrip()
                     if (len(tmp.name) == 0):
-                        tmp.name = self.random_filename(prefix = 'noname_')
+                        tmp.name = self.randomFilename(prefix = 'noname_')
                     self.list.append(tmp)
         # Find category items
         for dir in self.dir_list:
             oneFound = False
-            catfilename = self.random_filename(prefix=(self.cfg_name + '%'), suffix = '.list')
+            catfilename = self.randomFilename(prefix=(self.cfg_name + '%'), suffix = '.list')
             f = None
             if (dir.url != ''):
                 recat = re.compile(dir.url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
@@ -836,11 +861,15 @@ class CCurrentList:
                     url = decode(url)
                     name = clean_name(name.lstrip().rstrip())
                     if (dir.img != ''):
-                        img_catcher = dir.img % (url)
+                        try:
+                            img_catcher = dir.img % (url)
+                        except:
+                            img_catcher = dir.img
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
-                            dir.thumb = dir.img_build % (decode(imgsearch.group(1)).replace(' ', '%20'))
+                            #dir.thumb = dir.img_build % (decode(imgsearch.group(1)).replace(' ', '%20'))
+                            dir.thumb = dir.img_build % (decode(unquote_safe(imgsearch.group(1))).replace(' ', '%20'))
                         except:
                             traceback.print_exc(file = sys.stdout)
                     try:
@@ -859,7 +888,7 @@ class CCurrentList:
                         else:
                             tmp.name = name
                         if (len(tmp.name) == 0):
-                            tmp.name = self.random_filename(prefix = 'noname_')
+                            tmp.name = self.randomFilename(prefix = 'noname_')
                         tmp.type = 'rss'
                         tmp.thumb = dir.thumb
                         tmp.url = self.cfg_name + '|' + url
@@ -877,7 +906,10 @@ class CCurrentList:
                 for name in recat.findall(data):
                     name = clean_name(name.lstrip().rstrip())
                     if (dir.img != ''):
-                        img_catcher = dir.curr_img % (name)
+                        try:
+                            img_catcher = dir.curr_img % (name)
+                        except:
+                            img_catcher = dir.curr_img
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
                         imgsearch = reimg.search(data)
                         try:
@@ -891,7 +923,7 @@ class CCurrentList:
                         else:
                             tmp.name = name
                         if (len(tmp.name) == 0):
-                            tmp.name = self.random_filename(prefix = 'noname_')
+                            tmp.name = self.randomFilename(prefix = 'noname_')
                         tmp.type = 'rss'
                         tmp.thumb = dir.thumb
                         tmp.url = self.cfg_name + '|' + curr_url
@@ -1042,7 +1074,7 @@ class Main:
             player_type = xbmc.PLAYER_CORE_DVDPLAYER
 
         if (flv_file != None and os.path.isfile(flv_file)):
-            xbmc.Player(player_type).play(vidURL, listitem)
+            xbmc.Player(player_type).play(flv_file, listitem)
         else:
             xbmc.Player(player_type).play(vidURL, listitem)
         xbmc.sleep(200)
@@ -1058,7 +1090,7 @@ class Main:
                     os.remove(filepath)
                 except:
                     traceback.print_exc(file = sys.stdout)
-            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.random_filename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
+            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.randomFilename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
             try:
                 urllib.urlretrieve(url, filepath, self._report_hook)
             except:
@@ -1170,10 +1202,9 @@ class Main:
         else:
             xbmcplugin.addSortMethod(handle = self.handle, sortMethod = xbmcplugin.SORT_METHOD_LABEL)
 
-        if self.currentlist.video_action.find('play') != -1 and len(self.currentlist.list) == 1 and self.currentlist.list[0].type == u'video':
-            result = self.parseView(self.currentlist.list[0].url + '|' + self.currentlist.list[0].name + '|' + self.currentlist.list[0].thumb + '.videomonkey')
-        elif self.currentlist.video_action.find('play') != -1 and self.currentlist.search_url_build != '' and len(self.currentlist.list) == 2 and self.currentlist.list[1].type == u'video':
-            result = self.parseView(self.currentlist.list[1].url + '|' + self.currentlist.list[1].name + '|' + self.currentlist.list[1].thumb + '.videomonkey')
+        if self.currentlist.video_action.find('play') != -1 and self.currentlist.videoCount() == 1:
+            videoItem = self.currentlist.getVideo()
+            result = self.parseView(videoItem.url + '|' + videoItem.name + '|' + videoItem.thumb + '.videomonkey')
         else:
             for m in self.currentlist.list:
                 if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
