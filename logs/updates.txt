@@ -1,0 +1,91 @@
+>> XBMC Favorites Installer plugin update log
+  
+
+  24-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  24-07-2008 :: [skin]              ~ Added the "MARK-III" skin
+  23-07-2008 :: [plugins][video]    ~ Updated the "Apple Movie Trailers II" plugin to the latest SVN version
+  23-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  23-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 13
+  22-07-2008 :: [scripts]           ~ Updated the "XOT-Uzg.v3" plugin to the latest  version
+  22-07-2008 :: [plugins][video]    ~ Updated the "XOT-Uzg.v3" plugin to the latest  version
+  22-07-2008 :: [plugins][video]    ~ Updated the "Joox" plugin to the latest version
+  21-07-2008 :: [scripts]           ~ Updated the "autoexec.py" file to work with the new Veohproxy script
+  21-07-2008 :: [scripts]           ~ Updated the "Veohproxy" script toversion 1.4 (remove previous version! Install new autoexec.py file!)
+  21-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  21-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 12a
+  21-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  19-07-2008 :: [plugins][programs] ~ Updated the "XBMC-Favorites Installer for Linux" to version 1.4 (web interfaces download support added) and added it to the SVN trunk
+  19-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  19-07-2008 :: [skin]              ~ Updated the "Aeon" skin (some 720p file changes, nothing mojor)
+  19-07-2008 :: [web]               ~ Updated the "iBrowse" AJAX web interface to a slightly modified version (no library mode support since it wasn't working). 
+  19-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  19-07-2008 :: [skin]              ~ Updated the "Incidious" skin to the latest SVN version
+  19-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  18-07-2008 :: [plugins][video]    ~ Added the "TV-Links" plugin
+  18-07-2008 :: [plugins][video]    ~ Updated the "DivVin" plugin to the latest version
+  18-07-2008 :: [scripts]           ~ Added the "OpenSubtitles" script
+  18-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  18-07-2008 :: [plugins][video]    ~ Updated the "AOL Videos" plugin to the latest SVN version
+  18-07-2008 :: [plugins][video]    ~ Updated the "The Best of ITV" plugin to the latest SVN version
+  18-07-2008 :: [plugins][video]    ~ Updated the "Google-video" plugin to the latest SVN version
+  18-07-2008 :: [scripts]           ~ Updated the "XBMC Lyrics" script to the lastest SVN version 
+  18-07-2008 :: [scripts]           ~ Updated the "T3CH-Upgrader" script to the lastest SVN version 
+  18-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  18-07-2008 :: [web]               ~ Added the "PDA" web interface. (http://<your_xbox_ip>/pda/)
+  18-07-2008 :: [web]               ~ Added the "AJAX" web interface. (http://<your_xbox_ip>/ajax/)
+  18-07-2008 :: [web]               ~ Added the "iBrowse" AJAX web interface. (http://<your_xbox_ip>/iBrowse/) The library part in this addon does not work!Browse by folder!
+  18-07-2008 :: [plugins][programs] ~ Updated the "XBMC-Favorites Installer" to version 1.4 
+  16-07-2008 :: [skin]              ~ Updated the "Focus" to Alpha 3b (another fix)
+  16-07-2008 :: [skin]              ~ Updated the "Focus" with a small fix (PAL detailed view problem)
+  16-07-2008 :: [scripts]           ~ Updated the "Veohproxy" script (NinjaVideo fix) 
+  16-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 9
+  16-07-2008 :: [skin]              ~ Updated the "Focus" skin to version Alpha 3
+  15-07-2008 :: [plugins][video]    ~ Updated the "Vreel" plugin to the latest SVN version
+  15-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 8
+  15-07-2008 :: [scripts]           ~ Updated the "T3CH Upgrader" to the latest SVN version
+  15-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  14-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 7
+  14-07-2008 :: [plugins][programs] ~ Added the Linux version of "XBMC-Favorites" plugin (!test version!, installation instructions are in the wiki)
+  14-07-2008 :: [scripts]           ~ Moved the "autoexec.py" file from the scripts root to the "veohproxy" folder (read wiki for instructions)
+  14-07-2008 :: [scripts]           ~ Updated the "XBMC Lyrics" script to the latest SVN version
+  14-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 11c 
+  13-07-2008 :: [plugins][video]    ~ Updated the "Google Video" plugin to the latest SVN version
+  13-07-2008 :: [plugins][pictures] ~ Added the "One manga" plugin
+  13-07-2008 :: [plugins][music]    ~ Updated the "Pod-Audioplugin" to the latest SVN version
+  13-07-2008 :: [skin]              ~ Updated the "Insidious" skin to the latest SVN version
+  13-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  11-07-2008 :: [skin]              ~ Added the "Vinci" skin 
+  11-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  11-07-2008 :: [plugins][programs] ~ Fixed a bug in the XBMC-Favorites installer. New version available
+  11-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 6
+  11-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 5
+  11-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  11-07-2008 :: [skin]              ~ Updated the "Vision2" skin to the latest SVN version
+  10-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  10-07-2008 :: [skin]              ~ Updated the "Vision2" skin to the latest SVN version
+  10-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 4
+  09-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  09-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin to revision 3
+  09-07-2008 :: [plugins][music]    ~ Added the "Infinite-Media-Corp" plugin
+  09-07-2008 :: [scripts]           ~ Added the "XBMC Lyrics" script
+  09-07-2008 :: [plugins][video]    ~ Updated the "Ninja Video" plugin to the latest available version
+  09-07-2008 :: [plugins][video]    ~ Updated the "Apple Movie Trailers II" plugin to the latest SVN version
+  09-07-2008 :: [skin]              ~ Updated the "Vision2" skin to the latest SVN version
+  09-07-2008 :: [plugins][video]    ~ Updated the "Videomonkey" plugin. Now it supports Dutch Youtube.
+  08-07-2008 :: [plugins][video]    ~ Added the "Videomonkey" plugin (thanks sfaxman)
+  08-07-2008 :: [skin]              ~ Updated the "Vision2" skin to the latest SVN version
+  07-07-2008 :: [plugins][video]    ~ Added the MediaPortal TVserver "LiveTV" plugin. Plugin dll for the TV server can be found in the plugin directory
+  07-07-2008 :: [scripts]           ~ Added the "TVgids" plugin (simple dutch TVguide). It was outdated, so I updated it.
+  07-07-2008 :: [plugins][music]    ~ Added the "Dutch Radiostreams" 'plugin' (read the Notes on this page for instructions)
+  07-07-2008 :: [scripts]           ~ Added the "Navi-X" script
+  07-07-2008 :: [plugins][video]    ~ Updated the "Joox" plugin to V2008
+  07-07-2008 :: [scripts]           ~ Updated the "T3CH Upgrader" to the latest SVN version
+  06-07-2008 :: [skin]              ~ Added three Project Mayhem III themes
+  06-07-2008 :: [skin]              ~ Added the OSX theme for the xTV skin
+  06-07-2008 :: [skin]              ~ Added the back-Row and MC360 skin (latest SVN versions of cource)
+  06-07-2008 :: [plugins][video]    ~ Updated the "Vreel" plugin to version 2
+  06-07-2008 :: [plugins][video]    ~ Updated the "Ninja Video" plugin to version 4
+  06-07-2008 :: [plugins][video]    ~ Updated the "Joox" plugin to version 3
+  06-07-2008 :: [wiki]              ~ Updated the wiki with a clearer explanation of how to install a plugin in XBMC (credits go to Unbehagen) 
+  06-07-2008 :: [scripts]           ~ Added the "XOT-Uzg.v3" again because there might have been a problem with the version that was added before
+  06-07-2008 :: [skin]              ~ Updated the "Vision2" skin to the latest SVN version
