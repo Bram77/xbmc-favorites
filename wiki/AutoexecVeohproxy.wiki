@@ -5,6 +5,10 @@ _A lot of video plugins require the veohproxy script to be running, so it's nice
 
 Once downloaded, your "scripts/veohproxy/" directory will contain a "autoexec.py" file. If you place this file in the root of the "scripts/" direcotry it will automatically start the script on XBMC boot.
 
+= Download =
+
+You can download the autoexec.py file by right clicking and selecting "Save target as..." on [http://xbmc-favorites.googlecode.com/svn/trunk/scripts/autoexec.py this] link.
+
 
 = Instructions =
 
