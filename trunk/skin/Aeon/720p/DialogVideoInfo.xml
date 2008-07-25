@@ -1,5 +1,5 @@
 <window type="dialog" id="2003">
-	<defaultcontrol>8</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<zorder>2</zorder>
 	<coordinates>
 	<system>1</system>
@@ -87,9 +87,14 @@
 			<visible>container.content(episodes)</visible>
 		</control>
 	
-	<control type="grouplist">
+	<control type="grouplist" id="9000">
 		<include>imdbmenugroup</include>
 
+		<control type="button" id="5">
+		<label>Cast / Credits</label>
+		<include>contextformatinfo</include>
+		</control>
+		
 		<control type="button" id="8">
 		<label>Play</label>
 		<include>contextformatinfo</include>
@@ -137,24 +142,8 @@
 		<control type="group">
 		<posx>50</posx>
 		<posy>70</posy>
-		<visible>Container.Content(movies)</visible>
-			<control type="label" id="1">
-				<description>Movie Title value</description>
-				<posx>370</posx>
-				<posy>85</posy>
-				<width>750</width>
-				<label>$INFO[listitem.title]</label>
-				<include>scraperimdbheader</include>
-				<visible>container.content(movies)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="image" id="1">
-				<posx>370</posx>
-				<posy>126</posy>
-				<width>800</width>
-				<height>4</height>
-				<texture>infoline.png</texture>
-			</control>
+		<visible>Container.Content(movies) + !Control.IsVisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 			<control type="label" id="1">
 				<description>Studio txt</description>
 				<posx>370</posx>
@@ -396,24 +385,8 @@
 		<control type="group">
 		<posx>50</posx>
 		<posy>70</posy>
-		<visible>Container.Content(tvshows)</visible>
-			<control type="label" id="20">
-				<description>TV Show Title value</description>
-				<posx>370</posx>
-				<posy>85</posy>
-				<width>750</width>
-				<label>-</label>
-				<include>scraperimdbheader</include>
-				<visible>container.content(tvshows)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="image" id="1">
-				<posx>370</posx>
-				<posy>126</posy>
-				<width>800</width>
-				<height>4</height>
-				<texture>infoline.png</texture>
-			</control>
+		<visible>Container.Content(tvshows) + !Control.IsVisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 			<control type="label" id="1">
 				<description>Episodes txt</description>
 				<posx>370</posx>
@@ -478,23 +451,8 @@
 		<control type="group">
 		<posx>50</posx>
 		<posy>70</posy>
-			<control type="label" id="1">
-				<description>Tv ShowTitle value</description>
-				<posx>370</posx>
-				<posy>85</posy>
-				<width>750</width>
-				<label>$INFO[listitem.title]</label>
-				<include>scraperimdbheader</include>
-				<visible>container.content(episodes)</visible>
-				<scroll>true</scroll>
-			</control>
-			<control type="image" id="1">
-				<posx>370</posx>
-				<posy>126</posy>
-				<width>800</width>
-				<height>4</height>
-				<texture>infoline.png</texture>
-			</control>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+		<visible>container.content(episodes)</visible>
 			<control type="label" id="1">
 				<description>Episode txt</description>
 				<posx>370</posx>
@@ -628,6 +586,64 @@
 				<visible>container.content(episodes)</visible>
 				<scroll>true</scroll>
 			</control>
+		</control>
+
+		<control type="label" id="1">
+			<description>Movie Title value</description>
+			<posx>420</posx>
+			<posy>155</posy>
+			<width>750</width>
+			<label>$INFO[listitem.title]</label>
+			<include>scraperimdbheader</include>
+			<scroll>true</scroll>
+		</control>
+		
+		<control type="image" id="1">
+			<posx>420</posx>
+			<posy>196</posy>
+			<width>800</width>
+			<height>4</height>
+			<texture>infoline.png</texture>
+		</control>
+		
+		<control type="list" id="50">
+			<description>Track List Container</description>
+			<posx>420</posx>
+			<posy>210</posy>
+			<width>455</width>
+			<height>288</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>vertical</orientation>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+		    <animation effect="fade" start="0" end="100" time="100">Visible</animation>
+			<itemlayout width="455" height="26">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>655</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26" width="250">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>655</width>
+					<height>26</height>
+					<include>scraperimdbtitle</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
 		</control>
 
 	</controls>

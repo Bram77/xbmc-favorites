@@ -105,8 +105,8 @@
 		</control>
 		
 		<control type="togglebutton" id="556">
-			<label>Info Off</label>
-			<altlabel>Info On</altlabel>
+			<label>Info On</label>
+			<altlabel>Info Off</altlabel>
 			<include>mediamenu</include>
 			<onclick>Skin.SetBool(wallinfopanelpics)</onclick>
 			<altclick>Skin.Reset(wallinfopanelpics)</altclick>

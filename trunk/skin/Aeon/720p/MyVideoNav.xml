@@ -71,6 +71,18 @@
 		<visible>Skin.HasSetting(eeemode) + [Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)]</visible>
 	</control>
 	
+	<control type="image">
+		<posx>0</posx>
+		<posy>607</posy>
+		<width>1280</width>
+		<height>161</height>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<colordiffuse>75FFFFFF</colordiffuse>
+		<include>common-fade</include>
+		<texture>showcasefloor.png</texture>
+		<visible>Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(57)</visible>
+	</control>
+	
 	<include>wallglass</include>
 	<include>vignette</include>
 	<include>Viewtype_Posterwall</include>
@@ -155,8 +167,8 @@
 			</control>
 			
 			<control type="togglebutton" id="556">
-				<label>Info Off</label>
-				<altlabel>Info On</altlabel>
+				<label>Info On</label>
+				<altlabel>Info Off</altlabel>
 				<include>mediamenu</include>
 				<onclick>Skin.SetBool(wallinfopanelvids)</onclick>
 				<altclick>Skin.Reset(wallinfopanelvids)</altclick>
