@@ -276,7 +276,7 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
-				<posx>150</posx>
+				<posx>155</posx>
 				<posy>51</posy>
 				<width>75</width>
 				<height>20</height>
