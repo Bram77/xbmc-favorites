@@ -1474,7 +1474,7 @@
 <posx>30</posx>
 <posy>340</posy>
 <width>320</width>
-<height>132</height>
+<height>138</height>
 <font>font12</font>
 <label>$INFO[ListItem.Plot]</label>
 <visible>Control.IsVisible(50)</visible>
@@ -1529,7 +1529,7 @@
 <posx>30</posx>
 <posy>390</posy>
 <width>320</width>
-<height>82</height>
+<height>92</height>
 <font>font12</font>
 <label>$INFO[ListItem.Plot]</label>
 <visible>Control.IsVisible(50)</visible>
@@ -10967,7 +10967,7 @@
 <posx>535</posx>
 <posy>150</posy>
 <width>180</width>
-<height>270</height>
+<height>285</height>
 <font>font04</font>
 <textcolor>lightgrey</textcolor>
 <info>ListItem.Plot</info>
