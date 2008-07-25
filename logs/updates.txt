@@ -1,6 +1,6 @@
 >> XBMC Favorites Installer plugin update log
   
-
+  25-07-2008 :: [skin]		    ~ Added the "XBOX-Backs" theme to the MARK-III skin (better performance on XBOX)
   25-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   25-07-2008 :: [skin]              ~ Updated the "Back-Row" to the latest svn version
   24-07-2008 :: [skin]              ~ Added the "Photeon" backdrops to the Aeon skin directory. (15MB extra; "E/XBMC/skins/Aeon/Backgrops/Photeon/").
