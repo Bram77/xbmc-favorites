@@ -38,6 +38,7 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
+        self.guid = "A6FF1534-42F3-11DD-8F18-08F555D89593"
         self.mainListUri = "http://www.myvideo.nl/"
         self.baseUrl = "http://www.myvideo.nl"
         self.icon = "myvideoicon.png"
@@ -59,7 +60,7 @@ class Channel(chn_class.Channel):
         
         
         self.episodeItemRegex = "<a class='nArrow' href='([^']+)' title='[^']*'>([^<]+)</a>"
-        self.videoItemRegex = "<img id='([^']+)' src='([^']+)' class='vThumb' alt='[^']*'/></a></div></div><div class='sCenter vTitle'><span class='title'><a[^>]+title='([^']+)'>" 
+        self.videoItemRegex = "<img id='([^']+)' src='([^']+)' class='vThumb' alt='[^']*'/></a></div></div><div class='sCenter vTitle'><span class='title'><a[^>]+title='([^']+)'" 
         self.folderItemRegex = ''
         self.mediaUrlRegex = '<item>\W*<file>\W*([^>]*)\W*</file>\W*<bandwidth>(\d+)</bandwidth>'
         
@@ -219,5 +220,4 @@ class Channel(chn_class.Channel):
             item.downloaded = True
             return item
         else:
-            logFile.warning('Error determining folder/video type of selected item');
-   
+            logFile.warning('Error determining folder/video type of selected item')
