@@ -37,7 +37,9 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.mainListUri = "http://www.rtl.nl//system/video/menu/videomenu.xml"
+        self.guid = "15D92364-42F4-11DD-AF9B-7BFF55D89593"
+        #self.mainListUri = "http://www.rtl.nl//system/video/menu/videomenu.xml"
+        self.mainListUri = "http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/videomenu.xml"
         self.baseUrl = "http://www.rtl.nl"
         self.icon = "rtlthumb.png"
         self.iconLarge = "rtllarge.png"
@@ -53,7 +55,7 @@ class Channel(chn_class.Channel):
         self.sortOrder = 5
         
         self.episodeItemRegex = '<li class="folder" rel="([^"]+)videomenu.xml">([^<]+)</li>'
-        self.videoItemRegex = '<li class="video" (thumb="([^"]+)" ){0,1}rel="([^"]*/)([^"]+)" (link="([^"]+)"){0,1}>([^<]+)</li>' 
+        self.videoItemRegex = '<li class="video" (thumb="([^"]+)" ){0,1}(ctime="\d+" ){0,1}rel="([^"]*/)([^"]+)" (link="([^"]+)"){0,1}>([^<]+)</li>' 
         self.folderItemRegex = '<li class="folder" rel="([^"]*/)([^"]+)">([^<]+)</li>'
         #self.mediaUrlRegex = '<item target="web">[^<]*<file>([^>]*)</file>\W*<description>[^>]*>\W*<bandwidth>(\d+)</bandwidth>'
         self.mediaUrlRegex = '<item>\W*<file>\W*([^>]*)\W*</file>\W*<bandwidth>(\d+)</bandwidth>'
@@ -76,12 +78,12 @@ class Channel(chn_class.Channel):
         items = chn_class.Channel.ParseMainList(self)
         
         # then add GTST
-        gtstItem = common.clistItem('Goede Tijden, Slechte Tijden (Oud)', 'http://www.rtl.nl//system/video/menu/soaps/gtst/videomenu.xml', 'folder')
+        gtstItem = common.clistItem('Goede Tijden, Slechte Tijden (Oud)', 'http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/soaps/gtst/videomenu.xml', 'folder')
         gtstItem.icon = self.folderIcon
         gtstItem.thumb = self.noImage
         items.append(gtstItem)
         
-        gtstItem = common.clistItem('Goede Tijden, Slechte Tijden', 'http://www.rtl.nl/system/video/menu/soaps/gtst/home/videomenu.xml', 'folder')
+        gtstItem = common.clistItem('Goede Tijden, Slechte Tijden', 'http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/soaps/gtst/home/videomenu.xml', 'folder')
         gtstItem.icon = self.folderIcon
         gtstItem.thumb = self.noImage
         items.append(gtstItem)
@@ -142,7 +144,7 @@ class Channel(chn_class.Channel):
         """
         logFile.debug('starting FormatVideoItem for %s', self.channelName)
         #logFile.debug(resultSet)
-        item = common.clistItem(resultSet[6], self.RtlVideoUri(self.videoMenu, resultSet[2] + resultSet[3]))
+        item = common.clistItem(resultSet[7], self.RtlVideoUri(self.videoMenu, resultSet[3] + resultSet[4]))
         if len(self.folderHistory)>1:
             item.description = self.folderHistory[-1].description + item.name
         else:
