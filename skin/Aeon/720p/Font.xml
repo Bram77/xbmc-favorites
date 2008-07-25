@@ -20,6 +20,13 @@
 	</font>
 	
 	<font>
+		<name>fruity19b</name>
+		<filename>fruitylight.ttf</filename>
+		<size>19</size>
+		<style>bold</style>
+	</font>
+	
+	<font>
 		<name>fruity19s</name>
 		<filename>fruitylight.ttf</filename>
 		<size>19</size>
@@ -30,6 +37,13 @@
 		<name>fruity17</name>
 		<filename>fruitylight.ttf</filename>
 		<size>17</size>
+	</font>
+
+	<font>
+		<name>fruity17b</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+		<style>bold</style>
 	</font>
 	
 	<font>
@@ -115,7 +129,6 @@
       <name>episodetext</name>
       <filename>frutiger.ttf</filename>
       <size>20</size>
-	  <linespacing>1.1</linespacing>
     </font>
 	
     <font>

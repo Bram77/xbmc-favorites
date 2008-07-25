@@ -54,7 +54,7 @@
 		<height>720</height>
 		<texture>black.png</texture>
 		<colordiffuse>c3FFFFFF</colordiffuse>
-		<visible>[[Control.HasFocus(58) + !Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)] | [Control.HasFocus(51) + !Skin.HasSetting(wallinfopanelpics) + Window.IsActive(2)]] + !Container(58).OnNext + !Container(58).OnPrevious + !Container(51).OnNext + !Container(51).OnPrevious</visible>
+		<visible>[[Control.HasFocus(58) + Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)] | [Control.HasFocus(51) + Skin.HasSetting(wallinfopanelpics) + [Window.IsActive(2) | Window.IsActive(502)]]] + !Container(58).OnNext + !Container(58).OnPrevious + !Container(51).OnNext + !Container(51).OnPrevious</visible>
 		<animation effect="fade" start="0" end="100" time="100" reversible="false" delay="3000">Visible</animation>
 	</control>
 </include>
@@ -111,7 +111,7 @@
 			      <colordiffuse>8eFFFFFF</colordiffuse>
 			      <texture>posterback.png</texture>
 			      <aspectratio aligny="center">scale</aspectratio>
-				  <visible>Control.IsVisible(987) + !Skin.HasSetting(wallinfopanelpics)</visible>
+				  <visible>Control.IsVisible(987) + Skin.HasSetting(wallinfopanelpics)</visible>
 		          <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
 			</control>
 		      <control type="label">
@@ -198,7 +198,7 @@
 			      <colordiffuse>8eFFFFFF</colordiffuse>
 			      <texture>posterback.png</texture>
 			      <aspectratio aligny="center">scale</aspectratio>
-				  <visible>Control.IsVisible(987) + !Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)</visible>
+				  <visible>Control.IsVisible(987) + Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)</visible>
 		          <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
 		    </control>
 		      <control type="label">

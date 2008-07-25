@@ -44,7 +44,7 @@
 		<posy>162</posy>
 		<width>510</width>
 		<align>left</align>
-		<font>fruity21</font>
+		<font>fruity19b</font>
 		<haspath>false</haspath>
 		<textcolor>FF8f8f8f</textcolor>
 		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
@@ -72,10 +72,10 @@
 		<itemlayout height="41">
 			<control type="label">
 				<posx>30</posx>
-				<posy>2</posy>
+				<posy>4</posy>
 				<width>400</width>
 				<height>30</height>
-				<font>fruity21</font>
+				<font>fruity19b</font>
 				<textcolor>FFFFFFFF</textcolor>
 				<info>ListItem.Label</info>
 			</control>
@@ -90,10 +90,10 @@
 		<focusedlayout height="41">
 			<control type="label">
 				<posx>30</posx>
-				<posy>2</posy>
+				<posy>4</posy>
 				<width>400</width>
 				<height>30</height>
-				<font>fruity21</font>
+				<font>fruity19b</font>
 				<textcolor>FFc1ff03</textcolor>
 				<scroll>true</scroll>
 				<info>ListItem.Label</info>
@@ -197,29 +197,29 @@
 
 		<control type="button" id="8">
 		<label>7</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>Skin.Togglesetting(browserinfo)</onclick>
 		</control>
 
 		<control type="button" id="9">
 		<label>Toggle info</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>Skin.Togglesetting(browserinfo)</onclick>
 		</control>
 
 		<control type="button" id="415">
 		<label>119</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="414">
 		<label>222</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="413">
 		<label>186</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 	</control>
 	

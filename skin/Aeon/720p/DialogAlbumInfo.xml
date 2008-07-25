@@ -86,27 +86,27 @@
 
 		<control type="button" id="8">
 		<label>Play</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="9">
 		<label>Resume</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="6">
 		<label>Refresh</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="10">
 		<label>Get Thumb</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="5">
 		<label>182</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 		
 	</control>

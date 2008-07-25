@@ -4,7 +4,7 @@
 	<control type="wraplist" id="53">
 		<viewtype label="Episode">wrap</viewtype>
 		<posx>-101</posx>
-		<posy>210</posy>
+		<posy>222</posy>
 		<width>1400</width>
 		<height>574</height>
 		<onleft>52</onleft>

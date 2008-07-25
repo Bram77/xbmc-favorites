@@ -6,8 +6,6 @@
 	<posx>0</posx>
 	<posy>0</posy>
 	</coordinates>
-	<include>common-fade</include>
-	<visible>Window.IsActive(3)</visible>
 	<controls>
 
 	<control type="multiimage">
@@ -16,8 +14,8 @@
 		<width>1280</width>
 		<height>720</height>
 		<imagepath>Default</imagepath>
-		<info>Skin.String(CustomFiles)</info>
-		<visible>!Skin.HasSetting(CustomFiles) + !Skin.HasSetting(CustomFilesFoldOn)</visible>
+		<info>Skin.String(CustomSettings)</info>
+		<visible>!Skin.HasSetting(CustomSettings) + !Skin.HasSetting(CustomSettingsFoldOn)</visible>
 	</control>
 
 	<control type="multiimage">
@@ -29,8 +27,8 @@
 		<timeperimage>20000</timeperimage>
 		<fadetime>2000</fadetime>
 		<randomize>true</randomize>
-		<info>Skin.String(CustomFilesFolder)</info>
-		<visible>!Skin.HasSetting(CustomFilesFolder)</visible>
+		<info>Skin.String(CustomSettingsFolder)</info>
+		<visible>!Skin.HasSetting(CustomSettingsFolder)</visible>
 	</control>
 
 	<include>vignette</include>
@@ -97,7 +95,7 @@
 		<posx>110</posx>
 		<posy>130</posy>
 		<width>200</width>
-		<font>fruity19s</font>
+		<font>imdb</font>
 		<textcolor>FF818181</textcolor>
 		<animation effect="fade" time="100" start="100" end="50" condition="!Control.HasFocus(21)">Conditional</animation>
 	</control>
@@ -108,7 +106,7 @@
 		<posx>675</posx>
 		<posy>130</posy>
 		<width>200</width>
-		<font>fruity19s</font>
+		<font>imdb</font>
 		<textcolor>FF818181</textcolor>
 		<animation effect="fade" time="100" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
 	</control>
@@ -118,7 +116,7 @@
 		<posx>110</posx>
 		<posy>496</posy>
 		<label>-</label>
-		<font>fruity17s</font>
+		<font>fruity17b</font>
 		<textcolor>FF818181</textcolor>
 		<animation effect="fade" time="100" start="100" end="50" condition="!Control.HasFocus(21)">Conditional</animation>
 	</control>
@@ -128,7 +126,7 @@
 		<posx>675</posx>
 		<posy>496</posy>
 		<label>-</label>
-		<font>fruity17s</font>
+		<font>fruity17b</font>
 		<textcolor>FF818181</textcolor>
 		<animation effect="fade" time="100" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
 	</control>
@@ -149,7 +147,7 @@
 				<posy>2</posy>
 				<width>450</width>
 				<height>16</height>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFa8a8a8</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -161,7 +159,7 @@
 				<height>16</height>
 				<width>100</width>
 				<align>right</align>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFa8a8a8</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -181,7 +179,7 @@
 				<posy>2</posy>
 				<width>450</width>
 				<height>16</height>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -195,7 +193,7 @@
 				<height>16</height>
 				<width>100</width>
 				<align>right</align>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -227,10 +225,10 @@
 		<itemlayout height="32">
 			<control type="label">
 				<posx>20</posx>
-				<posy>2</posy>
+				<posy>3</posy>
 				<width>450</width>
 				<height>16</height>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFa8a8a8</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -238,11 +236,11 @@
 			</control>
 			<control type="label">
 				<posx>470</posx>
-				<posy>2</posy>
+				<posy>3</posy>
 				<height>16</height>
 				<width>100</width>
 				<align>right</align>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFa8a8a8</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -259,10 +257,10 @@
 		<focusedlayout height="32">
 			<control type="label">
 				<posx>20</posx>
-				<posy>2</posy>
+				<posy>3</posy>
 				<width>450</width>
 				<height>16</height>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -272,11 +270,11 @@
 			</control>
 			<control type="label">
 				<posx>470</posx>
-				<posy>2</posy>
+				<posy>3</posy>
 				<height>16</height>
 				<width>100</width>
 				<align>right</align>
-				<font>fruity19</font>
+				<font>imdb</font>
 				<aligny>center</aligny>
 				<textcolor>FFFFFFFF</textcolor>
 				<selectedcolor>e1b1e021</selectedcolor>
@@ -960,32 +958,32 @@
 
 		<control type="button" id="8">
 		<label>File Manager</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>Skin.Reset(aeoninfo)</onclick>
 		<onclick>Skin.Reset(xbmcinfo)</onclick>
 		</control>
 
 		<control type="button" id="9">
 		<label>TV calibration</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>XBMC.ActivateWindow(678)</onclick>
 		</control>
 
 		<control type="button" id="6">
 		<label>Viewing habits</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		</control>
 
 		<control type="button" id="10">
 		<label>Aeon system</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>Skin.Reset(xbmcinfo)</onclick>
 		<onclick>Skin.SetBool(aeoninfo)</onclick>
 		</control>
 
 		<control type="button" id="12">
 		<label>XBMC system</label>
-		<include>contextformatinfo</include>
+		<include>contextformatbrowser</include>
 		<onclick>Skin.Reset(aeoninfo)</onclick>
 		<onclick>Skin.SetBool(xbmcinfo)</onclick>
 		</control>

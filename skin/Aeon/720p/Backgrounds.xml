@@ -26,9 +26,7 @@
 		<info>Skin.String(CustomSettings)</info>
 		<visible>[[Container(302).HasFocus(8) + Control.IsVisible(302)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]] | [[Container(301).HasFocus(8) + Control.IsVisible(301)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]]</visible>
 		<visible>!Skin.HasSetting(CustomSettings) + !Skin.HasSetting(CustomSettingsFoldOn)</visible>
-                <visible>!Control.IsVisible(87)</visible>
-                    <animation effect="fade" time="800" condition="Window.Previous(56) | Window.Previous(12) | Window.Previous(13) | Window.Previous(14) | Window.Previous(15) | Window.Previous(16) | Window.Previous(17) | Window.Previous(18) | Window.Previous(19)">Visible</animation> -->
-                    <animation effect="fade" delay = "200" time="800">Hidden</animation> -->
+        <animation effect="fade" delay = "200" time="800">Hidden</animation> -->
 	</control>
 
 	<control type="multiimage">

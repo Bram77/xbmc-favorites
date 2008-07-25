@@ -16,8 +16,8 @@
 		<viewtype>list</viewtype>
 		<orientation>horizontal</orientation>
 		<focusposition>3</focusposition>
-		<include>common-fade-quick</include>
 		<scrolltime>200</scrolltime>
+		<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
 		<itemlayout width="355" height="68">
 			<control type="label">
 				<posy>5</posy>
@@ -25,6 +25,7 @@
 				<font>menufontacens</font>
 				<include>scrollerlabel</include>
 				<textcolor>FF000000</textcolor>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(56) | Window.Next(12) | Window.Next(13) | Window.Next(14) | Window.Next(15) | Window.Next(16) | Window.Next(17) | Window.Next(18) | Window.Next(19) | Window.Next(3) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)">Conditional</animation>
 			</control>
 		</itemlayout>
 		<focusedlayout width="355" height="68">
@@ -34,6 +35,7 @@
 				<font>menufontacensfocus</font>
 				<include>scrollerlabel</include>
 				<textcolor>FF7d7d7d</textcolor>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(3) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)">Conditional</animation>
 			</control>
 		</focusedlayout>
 		
@@ -231,8 +233,6 @@
 		<ondown>300</ondown>
 		<onleft>302</onleft>
 		<onright>302</onright>
-		<animation effect="fade" time="500" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
-		<animation effect="fade" time="200">WindowClose</animation>
 		<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
 		<include>scrollerobjects</include>
 		<content>
@@ -281,17 +281,6 @@
 
 </include>
 
-<include name="homefocustransition">
-			<posx>632</posx>
-			<width>350</width>
-			<height>68</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<textcolor>FF7d7d7d</textcolor>
-			<animation effect="fade" start="0" end="100" time="200">WindowClose</animation>
-			<animation effect="fade" start="60" end="0" time="1000">WindowOpen</animation>
-</include>
-
 <include name="homefocusacens">
 		<font>menufontacensfocus</font>
 		<posy>324</posy>
@@ -305,76 +294,13 @@
 			<posx>632</posx>
 			<posy>322</posy>
 			<width>355</width>
-			<height>69</height>
+			<height>71</height>
 			<colordiffuse>EFFFFFFF</colordiffuse>
 			<texture>Home_Focus.png</texture>
 			<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
 			<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
 			<animation effect="fade" time="500" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="!Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
-		</control>
-
-		<control type="label">
-			<label>PICTURES</label>
-			<visible>Window.Next(12)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>GAMES</label>
-			<visible>Window.Next(13)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>WEATHER</label>
-			<visible>Window.Next(14)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>MUSIC</label>
-			<visible>Window.Next(15)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>SYSTEM</label>
-			<visible>Window.Next(16)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>VIDEO</label>
-			<visible>Window.Next(17)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-
-		<control type="label">
-			<label>NETWORK</label>
-			<visible>Window.Next(18)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-		
-		<control type="label">
-			<label>SCREEN</label>
-			<visible>Window.Next(19)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
-		</control>
-
-		<control type="label">
-			<label>AEON</label>
-			<visible>Window.Next(56)</visible>
-			<include>homefocustransition</include>
-			<include>homefocusacens</include>
 		</control>
 
 		<control type="group">

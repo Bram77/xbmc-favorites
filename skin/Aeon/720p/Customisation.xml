@@ -12,8 +12,6 @@
 		<imagepath>Default</imagepath>
 		<info>Skin.String(CustomSettings)</info>
 		<visible>true</visible>
-		<animation effect="fade" start="0" end="100" time="500" condition="Player.HasMedia + !Skin.HasSetting(Visualisation)">WindowOpen</animation>
-		<animation effect="fade" start="100" end="0" time="500" condition="Player.HasMedia + !Skin.HasSetting(Visualisation)">WindowClose</animation>
 	</control>
 
 	<include>vignette</include>
@@ -25,7 +23,7 @@
 		<posx>632</posx>
 		<posy>322</posy>
 		<width>355</width>
-		<height>69</height>
+		<height>71</height>
 		<texture>Home_Focus.png</texture>
 		<colordiffuse>EFFFFFFF</colordiffuse>
 		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
@@ -149,7 +147,7 @@
 	<control type="button" id="14">
 		<include>customsettingsmenu</include>
 		<posx>996</posx>
-		<label>View Types</label>
+		<label>System</label>
 		<include>customsettingsmenu</include>
 		<ondown>7</ondown>
 		<onleft>13</onleft>
@@ -160,7 +158,7 @@
 	<control type="label">
 		<posx>996</posx>
 		<include>customsettingsmenu2</include>
-		<label>View Types</label>
+		<label>System</label>
 		<textcolor>FFFFFFFF</textcolor>
 		<animation effect="fade" time="500">WindowClose</animation>
 		<visible>ControlGroup(7).HasFocus() | ControlGroup(8).HasFocus()</visible>
@@ -674,21 +672,12 @@
 	<control type="radiobutton" id="501">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Live tutorials</label>
+		<label>Aeon Assistant (coming soon)</label>
 		<onclick>Skin.ToggleSetting(tutorials)</onclick>
 		<selected>!Skin.HasSetting(tutorials)</selected>
 	</control>
 
-
 	<control type="radiobutton" id="502">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Vignette visual effect for fullscreen views (e.g. PhotoWall)</label>
-		<onclick>Skin.ToggleSetting(vignette)</onclick>
-		<selected>!Skin.HasSetting(vignette)</selected>	
-	</control>
-
-	<control type="radiobutton" id="503">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
 		<label>Contextual artwork for Movies and TV (must be locally stored: filename-fanart.jpg)</label>
@@ -696,7 +685,7 @@
 		<selected>!Skin.HasSetting(listitemfanart)</selected>	
 	</control>
 	
-	<control type="radiobutton" id="504">
+	<control type="radiobutton" id="503">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
 		<label>Contextual artwork for Seasons / Episodes (note: set content source to TVDB.com)</label>
@@ -704,7 +693,7 @@
 		<selected>!Skin.HasSetting(fanart)</selected>	
 	</control>
 
-	<control type="radiobutton" id="505">
+	<control type="radiobutton" id="504">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
 		<label>Music Visualisation info fade (prevents burn-in on Plasma TVs)</label>
@@ -712,15 +701,7 @@
 		<selected>!Skin.HasSetting(musicinfovanish)</selected>	
 	</control>
 
-	<control type="radiobutton" id="506">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Display extended info in Poster view (video library modes only)</label>
-		<onclick>Skin.ToggleSetting(movieinfopanel)</onclick>
-		<selected>Skin.HasSetting(movieinfopanel)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="507">
+	<control type="radiobutton" id="505">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
 		<label>Disable plot/show info scrolling (applies to Showcase view)</label>
@@ -728,470 +709,66 @@
 		<selected>Skin.HasSetting(disablescroll)</selected>	
 	</control>
 	
-	<control type="radiobutton" id="508">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Light crest special effects</label>
-		<onclick>Skin.ToggleSetting(nosfx)</onclick>
-		<selected>!Skin.HasSetting(nosfx)</selected>	
 	</control>
-	
-	<control type="radiobutton" id="509">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Force Xbox mode (improves performance on Xbox)</label>
-		<onclick>Skin.ToggleSetting(lowerres)</onclick>
-		<onclick>Skin.Reset(eeemode)</onclick>
-		<selected>Skin.HasSetting(lowerres)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="510">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Force eeePC mode (improves performance on Asus eeePCs)</label>
-		<onclick>Skin.ToggleSetting(eeemode)</onclick>
-		<onclick>Skin.Reset(xboxmode)</onclick>
-		<selected>Skin.HasSetting(eeemode)</selected>	
-	</control>
-
-	<control type="button" id="511">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Reset all settings to default (recommended for Home menu troubleshooting)</label>
-		<include>resetsettings</include>
-	</control>
-
-	<control type="button" id="512">
-		<width>1156</width>
-		<include>customsettingsbutton</include>
-		<label>Reset all settings to default except custom paths</label>
-		<include>keepusersettings</include>
-	</control>
-
-	</control>
-
-
 
 	<control type="grouplist" id="7">
+		<include>customsettingsgroup</include>
 		<posx>62</posx>
 		<width>1156</width>
 		<onleft>6</onleft>
-		<onright>8</onright>
+		<onright>2</onright>
 		<onup>7</onup>
 		<ondown>7</ondown>
-		<visible allowhiddenfocus="true">Control.HasFocus(14) | ControlGroup(7).HasFocus() | ControlGroup(8).HasFocus()</visible>
-		<include>customsettingsgroup</include>
+		<visible allowhiddenfocus="true">Control.HasFocus(14) | ControlGroup(7).HasFocus() | ControlGroup(7).HasFocus()</visible>
 
-	<control type="button" id="601">
-		<include>customsettingsbutton</include>
-		<label>Activate all</label>
-		<onclick>-</onclick>
-		<selected>-</selected>	
-	</control>
-
-	<control type="label" id="602">
-		<width>1156</width>
-		<include>customsettingslabel</include>
-		<label>Movies (Files):</label>
-	</control>
-
-	<control type="radiobutton" id="603">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listmovies)</onclick>
-		<selected>!Skin.HasSetting(listmovies)</selected>	
-	</control>
-
-	<control type="radiobutton" id="606">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(postermovies)</onclick>
-		<selected>!Skin.HasSetting(postermovies)</selected>	
-	</control>
-
-	<control type="radiobutton" id="607">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(wallmovies)</onclick>
-		<selected>!Skin.HasSetting(wallmovies)</selected>	
-	</control>
-
-	<control type="radiobutton" id="608">
-		<include>customsettingsbutton</include>
-		<label>Showcase</label>
-		<onclick>Skin.ToggleSetting(showcasemovies)</onclick>
-		<selected>!Skin.HasSetting(showcasemovies)</selected>	
-	</control>
+		<control type="radiobutton" id="601">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Force Xbox mode (improves performance on Xbox)</label>
+			<onclick>Skin.ToggleSetting(lowerres)</onclick>
+			<onclick>Skin.Reset(eeemode)</onclick>
+			<selected>Skin.HasSetting(lowerres)</selected>	
+		</control>
 	
-	<control type="label" id="609">
-		<width>1156</width>
-		<include>customsettingslabel</include>
-		<label>Movies (Library):</label>
-	</control>
+		<control type="radiobutton" id="602">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Force eeePC mode (improves performance on Asus eeePCs)</label>
+			<onclick>Skin.ToggleSetting(eeemode)</onclick>
+			<onclick>Skin.Reset(xboxmode)</onclick>
+			<selected>Skin.HasSetting(eeemode)</selected>	
+		</control>
 
-	<control type="radiobutton" id="610">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listmovieslib)</onclick>
-		<selected>!Skin.HasSetting(listmovieslib)</selected>	
-	</control>
+		<control type="radiobutton" id="603">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Vignette visual effect for fullscreen views (e.g. PhotoWall)</label>
+			<onclick>Skin.ToggleSetting(vignette)</onclick>
+			<selected>!Skin.HasSetting(vignette)</selected>	
+		</control>
+		
+		<control type="radiobutton" id="604">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Light crest special effects</label>
+			<onclick>Skin.ToggleSetting(nosfx)</onclick>
+			<selected>!Skin.HasSetting(nosfx)</selected>	
+		</control>
+		
+		<control type="button" id="605">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Reset all settings to default (recommended for Home menu troubleshooting)</label>
+			<include>resetsettings</include>
+		</control>
 
-	<control type="radiobutton" id="613">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(postermovieslib)</onclick>
-		<selected>!Skin.HasSetting(postermovieslib)</selected>	
-	</control>
+		<control type="button" id="606">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Reset all settings to default except custom paths</label>
+			<include>keepusersettings</include>
+		</control>
 
-	<control type="radiobutton" id="614">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(wallmovieslib)</onclick>
-		<selected>!Skin.HasSetting(wallmovieslib)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="615">
-		<include>customsettingsbutton</include>
-		<label>Showcase</label>
-		<onclick>Skin.ToggleSetting(showcasemovieslib)</onclick>
-		<selected>!Skin.HasSetting(showcasemovieslib)</selected>	
-	</control>
-
-	<control type="label" id="616">
-		<width>1156</width>
-		<include>customsettingslabel</include>
-		<label>TV Shows (Files):</label>
-	</control>
-
-	<control type="radiobutton" id="617">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listtv)</onclick>
-		<selected>!Skin.HasSetting(listtv)</selected>	
-	</control>
-
-	<control type="radiobutton" id="618">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(postertv)</onclick>
-		<selected>!Skin.HasSetting(postertv)</selected>	
-	</control>
-
-	<control type="radiobutton" id="619">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(walltv)</onclick>
-		<selected>!Skin.HasSetting(walltv)</selected>	
-	</control>
-
-	<control type="radiobutton" id="620">
-		<include>customsettingsbutton</include>
-		<label>Showcase</label>
-		<onclick>Skin.ToggleSetting(showcasetv)</onclick>
-		<selected>!Skin.HasSetting(showcasetv)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="622">
-		<include>customsettingsbutton</include>
-		<label>Banner</label>
-		<onclick>Skin.ToggleSetting(showcasewidetv)</onclick>
-		<selected>Skin.HasSetting(showcasewidetv)</selected>	
-	</control>
-
-	<control type="label" id="623">
-		<width>1156</width>
-		<include>customsettingslabel</include>
-		<label>TV Shows (Library):</label>
-	</control>
-
-	<control type="radiobutton" id="624">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listtvlib)</onclick>
-		<selected>!Skin.HasSetting(listtvlib)</selected>	
-	</control>
-
-	<control type="radiobutton" id="627">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(posterstvlib)</onclick>
-		<selected>!Skin.HasSetting(posterstvlib)</selected>	
-	</control>
-
-	<control type="radiobutton" id="628">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(walltvlib)</onclick>
-		<selected>!Skin.HasSetting(walltvlib)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="629">
-		<include>customsettingsbutton</include>
-		<label>Episode</label>
-		<onclick>Skin.ToggleSetting(episodetvlib)</onclick>
-		<selected>!Skin.HasSetting(episodetvlib)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="630">
-		<include>customsettingsbutton</include>
-		<label>Showcase</label>
-		<onclick>Skin.ToggleSetting(showcasetvlib)</onclick>
-		<selected>!Skin.HasSetting(showcasetvlib)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="631">
-		<include>customsettingsbutton</include>
-		<label>Banner</label>
-		<onclick>Skin.ToggleSetting(showcasewidetvlib)</onclick>
-		<selected>Skin.HasSetting(showcasewidetvlib)</selected>	
-	</control>
-	
-	<control type="label" id="632">
-		<include>customsettingslabel</include>
-		<label>Music (Files):</label>
-	</control>
-
-	<control type="radiobutton" id="633">
-		<include>customsettingsbutton</include>
-		<label>Roller</label>
-		<onclick>Skin.ToggleSetting(listmusic)</onclick>
-		<selected>!Skin.HasSetting(listmusic)</selected>	
-	</control>
-
-	<control type="radiobutton" id="634">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(wallmusic)</onclick>
-		<selected>!Skin.HasSetting(wallmusic)</selected>	
-	</control>
-
-	<control type="label" id="635">
-		<include>customsettingslabel</include>
-		<label>Music (Library):</label>
-	</control>
-
-	<control type="radiobutton" id="636">
-		<include>customsettingsbutton</include>
-		<label>Roller</label>
-		<onclick>Skin.ToggleSetting(listmusiclib)</onclick>
-		<selected>!Skin.HasSetting(listmusiclib)</selected>	
-	</control>
-
-	<control type="radiobutton" id="637">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(wallmusiclib)</onclick>
-		<selected>!Skin.HasSetting(wallmusiclib)</selected>	
-	</control>
-
-	</control>
-
-	<control type="grouplist" id="8">
-		<posx>658</posx>
-		<width>1156</width>
-		<onleft>7</onleft>
-		<onright>2</onright>
-		<onup>8</onup>
-		<ondown>8</ondown>
-		<visible allowhiddenfocus="true">Control.HasFocus(14) | ControlGroup(7).HasFocus() | ControlGroup(8).HasFocus()</visible>
-		<include>customsettingsgroup</include>
-
-	<control type="button" id="701">
-		<include>customsettingsbutton</include>
-		<label>Deactivate all</label>
-		<onclick>-</onclick>
-		<selected>-</selected>	
-	</control>
-
-	<control type="label" id="702">
-		<include>customsettingslabel</include>
-		<label>Pictures:</label>
-	</control>
-
-	<control type="radiobutton" id="703">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listpictures)</onclick>
-		<selected>!Skin.HasSetting(listpictures)</selected>	
-	</control>
-
-	<control type="radiobutton" id="704">
-		<include>customsettingsbutton</include>
-		<label>Icon</label>
-		<onclick>Skin.ToggleSetting(iconpictures)</onclick>
-		<selected>!Skin.HasSetting(iconpictures)</selected>	
-	</control>
-
-	<control type="radiobutton" id="705">
-		<include>customsettingsbutton</include>
-		<label>Wall</label>
-		<onclick>Skin.ToggleSetting(wallpictures)</onclick>
-		<selected>!Skin.HasSetting(wallpictures)</selected>	
-	</control>
-
-	<control type="label" id="706">
-		<include>customsettingslabel</include>
-		<label>Games:</label>
-	</control>
-
-	<control type="radiobutton" id="707">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listgames)</onclick>
-		<selected>!Skin.HasSetting(listgames)</selected>	
-	</control>
-
-	<control type="radiobutton" id="708">
-		<include>customsettingsbutton</include>
-		<label>Icons</label>
-		<onclick>Skin.ToggleSetting(icongames)</onclick>
-		<selected>!Skin.HasSetting(icongames)</selected>	
-	</control>
-
-	<control type="radiobutton" id="709">
-		<include>customsettingsbutton</include>
-		<label>Posters</label>
-		<onclick>Skin.ToggleSetting(postergames)</onclick>
-		<selected>!Skin.HasSetting(postergames)</selected>	
-	</control>
-
-	<control type="radiobutton" id="710">
-		<include>customsettingsbutton</include>
-		<label>Quad</label>
-		<onclick>Skin.ToggleSetting(quadgames)</onclick>
-		<selected>!Skin.HasSetting(quadgames)</selected>	
-	</control>
-	
-	<control type="label" id="711">
-		<include>customsettingslabel</include>
-		<label>Arcade:</label>
-	</control>
-
-	<control type="radiobutton" id="712">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listarcade)</onclick>
-		<selected>!Skin.HasSetting(listarcade)</selected>	
-	</control>
-
-	<control type="radiobutton" id="713">
-		<include>customsettingsbutton</include>
-		<label>Icon</label>
-		<onclick>Skin.ToggleSetting(iconarcade)</onclick>
-		<selected>!Skin.HasSetting(iconarcade)</selected>	
-	</control>
-
-	<control type="radiobutton" id="714">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(posterarcade)</onclick>
-		<selected>!Skin.HasSetting(posterarcade)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="715">
-		<include>customsettingsbutton</include>
-		<label>Quad</label>
-		<onclick>Skin.ToggleSetting(quadarcade)</onclick>
-		<selected>!Skin.HasSetting(quadarcade)</selected>	
-	</control>
-	
-	<control type="label" id="716">
-		<include>customsettingslabel</include>
-		<label>Scripts:</label>
-	</control>
-
-	<control type="radiobutton" id="717">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listscripts)</onclick>
-		<selected>!Skin.HasSetting(listscripts)</selected>	
-	</control>
-
-	<control type="radiobutton" id="718">
-		<include>customsettingsbutton</include>
-		<label>Icon</label>
-		<onclick>Skin.ToggleSetting(iconscripts)</onclick>
-		<selected>!Skin.HasSetting(iconscripts)</selected>	
-	</control>
-
-	<control type="radiobutton" id="719">
-		<include>customsettingsbutton</include>
-		<label>Posters</label>
-		<onclick>Skin.ToggleSetting(posterscripts)</onclick>
-		<selected>!Skin.HasSetting(posterscripts)</selected>	
-	</control>
-	
-	<control type="label" id="720">
-		<include>customsettingslabel</include>
-		<label>Apps:</label>
-	</control>
-
-	<control type="radiobutton" id="721">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listapps)</onclick>
-		<selected>!Skin.HasSetting(listapps)</selected>	
-	</control>
-
-	<control type="radiobutton" id="722">
-		<include>customsettingsbutton</include>
-		<label>Icon</label>
-		<onclick>Skin.ToggleSetting(iconapps)</onclick>
-		<selected>!Skin.HasSetting(iconapps)</selected>	
-	</control>
-
-	<control type="radiobutton" id="723">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(posterapps)</onclick>
-		<selected>!Skin.HasSetting(posterapps)</selected>	
-	</control>
-	
-	<control type="radiobutton" id="724">
-		<include>customsettingsbutton</include>
-		<label>Quad</label>
-		<onclick>Skin.ToggleSetting(quadapps)</onclick>
-		<selected>!Skin.HasSetting(quadapps)</selected>	
-	</control>
-	
-	<control type="label" id="725">
-		<include>customsettingslabel</include>
-		<label>Adult:</label>
-	</control>
-
-	<control type="radiobutton" id="726">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listadult)</onclick>
-		<selected>!Skin.HasSetting(listadult)</selected>	
-	</control>
-
-	<control type="radiobutton" id="727">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(posteradult)</onclick>
-		<selected>!Skin.HasSetting(posteradult)</selected>	
-	</control>
-	
-	<control type="label" id="728">
-		<include>customsettingslabel</include>
-		<label>Clips:</label>
-	</control>
-
-	<control type="radiobutton" id="729">
-		<include>customsettingsbutton</include>
-		<label>List</label>
-		<onclick>Skin.ToggleSetting(listclips)</onclick>
-		<selected>!Skin.HasSetting(listclips)</selected>	
-	</control>
-
-	<control type="radiobutton" id="730">
-		<include>customsettingsbutton</include>
-		<label>Poster</label>
-		<onclick>Skin.ToggleSetting(posterclips)</onclick>
-		<selected>!Skin.HasSetting(posterclips)</selected>	
-	</control>
-	
 	</control>
 
 	<include>contextback</include>

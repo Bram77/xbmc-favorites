@@ -75,6 +75,15 @@
 		<include>mediamenu</include>
 		<onclick>XBMC.ActivateWindow(602)</onclick>
 		</control>
+		
+		<control type="togglebutton" id="556">
+			<label>Info On</label>
+			<altlabel>Info Off</altlabel>
+			<include>mediamenu</include>
+			<onclick>Skin.SetBool(wallinfopanelpics)</onclick>
+			<altclick>Skin.Reset(wallinfopanelpics)</altclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
 	</control>
 	<include>Viewtype_Musicroller</include>
 
