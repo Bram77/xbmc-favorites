@@ -71,6 +71,11 @@ type=live
 thumb=video.monkey.image|Wetterfernsehen.png
 url=mms://wm-ipx-10.stream.tv1.de/3271wetterfernsehen.wmv?cid=59334&dummy=.wm
 ########################################################
+name=München TV (DE)
+type=live
+thumb=video.monkey.image|muenchen.tv.png
+url=mms://d8019013969.w.glx.core006.cdn.streamfarm.net/11008bmt/live/3338s15muenchentv/300.wmv?cid=60919&dummy=.wmv
+########################################################
 name=MCM Top (FR)
 type=live
 thumb=video.monkey.image|mcm_top.png

@@ -31,6 +31,11 @@ type=adult_rss
 thumb=video.monkey.image|shufuni.png
 url=shufuni.com.cfg
 ########################################################
+name=Boysfood
+type=adult_rss
+thumb=video.monkey.image|boysfood.png
+url=boysfood.com.cfg
+########################################################
 name=Metacafe
 type=adult_rss
 thumb=video.monkey.image|metacafe.png
