@@ -1,6 +1,7 @@
 >> XBMC Favorites Installer plugin update log
   
   
+  25-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 13a
   25-07-2008 :: [scripts]    	    ~ Updated the "XOT-Uzg.v3" script to the latest version (channel updates)
   25-07-2008 :: [plugins][video]    ~ Updated the "XOT-Uzg.v3" plugin to the latest version (channel updates)
   25-07-2008 :: [skin]		    ~ Updated the "Mark-III" skin to the latest SVN version
