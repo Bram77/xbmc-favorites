@@ -1,9 +1,9 @@
   27-07-2008 :: [skin]              ~ Removed two of the additional "Project Mayhem III" themes (reached quota limit)
-  27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+NOT YET!!!!! 27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed the "Leo" skin (reached quota limit)
-  27-07-2008 :: [skin]              ~ Removed the "Vinci" skin (reached quota limit)
+NOT YET!!!!! 27-07-2008 :: [skin]              ~ Removed the "Vinci" skin (reached quota limit)
   27-07-2008 :: [skin]              ~ Updated the "Photeon" backdrops (included in the Aeon skin download) to version 1.1 (19MB extra; "E/XBMC/skins/Aeon/Backgrops/photeon/").
-  27-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 13c
+NOT YET!!!!!  27-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 13c
   25-07-2008 :: [skin]              ~ Updated the "Aeon" skin to version Alpha 13a
   25-07-2008 :: [scripts]    	    ~ Updated the "XOT-Uzg.v3" script to the latest version (channel updates)
   25-07-2008 :: [plugins][video]    ~ Updated the "XOT-Uzg.v3" plugin to the latest version (channel updates)
