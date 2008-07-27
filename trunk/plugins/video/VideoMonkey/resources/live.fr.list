@@ -1,0 +1,23 @@
+﻿########################################################
+# FR live streams list
+########################################################
+version=1
+title=Live
+########################################################
+# Live streams
+########################################################
+name=MCM Top
+type=live
+thumb=video.monkey.image|mcm_top.png
+url=mms://vipmms9.yacast.net/mcm_top
+########################################################
+name=Planète insolite
+type=live
+thumb=video.monkey.image|planete_insolite.png
+url=mms://live210.impek.com/biosphere
+########################################################
+name=NRJ Hits
+type=live
+thumb=video.monkey.image|nrj_hits.png
+url=mms://vipnrj.yacast.net/nrj_tvhit
+########################################################
