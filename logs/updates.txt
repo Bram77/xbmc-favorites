@@ -1,3 +1,4 @@
+  27-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed two of the additional "Project Mayhem III" themes (reached quota limit)
 NOT YET!!!!! 27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed the "Leo" skin (reached quota limit)
