@@ -1,3 +1,4 @@
+  27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed the "Leo" skin (reached quota limit, had to do it)
   27-07-2008 :: [skin]              ~ Removed the "Vinci" skin (reached quota limit, had to do it)
   27-07-2008 :: [skin]              ~ Updated the "Photeon" backdrops (included in the Aeon skin download) to version 1.1 (19MB extra; "E/XBMC/skins/Aeon/Backgrops/photeon/").
