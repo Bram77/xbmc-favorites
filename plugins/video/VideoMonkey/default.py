@@ -1110,6 +1110,8 @@ class Main:
     def siteSpecificUrlTarget(self, url, cfg_file): # Site specific target url handling
         if cfg_file == 'metacafe.com.cfg' or cfg_file == 'metacafe.adult.com.cfg': # Metacafe
             return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
+        elif cfg_file == 'pornhub.com.cfg': # Pornhub
+            return urllib.unquote(url)
         elif cfg_file == 'joox.net.cfg': # Joox # thx voinage
             if url.find('messagefromme') > 0:
                 url = "http://127.0.0.1:64653/streamplug/" + base64.urlsafe_b64encode(url) + '?.ogm'

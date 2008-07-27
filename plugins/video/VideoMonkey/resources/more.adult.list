@@ -6,7 +6,7 @@ title=Extra Adult
 ########################################################
 # Adult video sites
 ########################################################
-name=Pornhub (BROKEN)
+name=Pornhub
 type=adult_rss
 thumb=video.monkey.image|pornhub.png
 url=pornhub.com.cfg

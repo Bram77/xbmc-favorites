@@ -44,3 +44,9 @@ url=http://porn2pc.com/post.php
 ext_target=<h2>([^<]+)</h2>
 target=<a href=\"([^\"]+)\"[^>]+><b>CLICK HERE TO DOWNLOAD MOVIE</b></a>
 ########################################################
+name=atrapavideo.com
+data=data[url]=%s
+header=Referer|http://www.atrapavideo.com/en/
+url=http://www.atrapavideo.com/video
+target=so.addVariable\('file','(.+?.flv)
+########################################################
