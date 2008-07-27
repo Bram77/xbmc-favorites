@@ -1,3 +1,4 @@
+  27-07-2008 :: [skin]              ~ Removed two of the additional "Project Mayhem III" themes (reached quota limit)
   27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed the "Leo" skin (reached quota limit)
   27-07-2008 :: [skin]              ~ Removed the "Vinci" skin (reached quota limit)
