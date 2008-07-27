@@ -1,0 +1,259 @@
+<window>
+	<id>34</id>
+	<defaultcontrol>2</defaultcontrol>
+	<animation effect="fade" time="200">WindowClose</animation> 
+	<allowoverlay>no</allowoverlay>
+	<controls>
+<control>
+		<description>Panel Image</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>background2.png</texture>
+		<visible>!Skin.HasSetting(Background)</visible>
+		</control>
+
+
+
+
+
+<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>Menus</imagepath>
+		<info>Skin.String(CustomMenu)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenu)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+
+
+
+
+		<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>-</imagepath>
+		<info>Skin.String(CustomMenuFolder)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>Back-Row.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation>
+		<visible>!Skin.HasSetting(Background)</visible>
+        </control>
+	
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>90</posy>
+		<width>740</width>
+		<height>425</height>
+		<texture>black.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+        </control>
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>85</posy>
+		<width>740</width>
+		<height>10</height>
+		<texture>separatorosd.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+        </control>
+
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>510</posy>
+		<width>740</width>
+		<height>10</height>
+		<texture>separatorosd.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation> 
+        </control>
+
+
+
+
+	<control type="radiobutton" id="4">
+		<description>Enable Login Screen</description>
+		<posx>10</posx>
+		<posy>110</posy>
+		<height>30</height>
+		<width>110</width>
+		<label>20096</label>
+		<font>menubutton</font>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		</control>
+
+
+	<control type="fadelabel" id="3">
+		<description>Last Loaded</description>
+		<type>fadelabel</type>
+		<id>3</id>
+		<posx>210</posx>
+		<posy>525</posy>
+		<width>656</width>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		</control>
+
+	<control type="list" id="2">
+		<posx>110</posx>
+		<posy>160</posy>
+		<width>500</width>
+		<height>370</height>
+		<onleft>4</onleft>
+		<onright>90</onright>
+		<onup>4</onup>
+		<ondown>4</ondown>
+		<pagecontrol>90</pagecontrol>
+		<visible>!Window.IsActive(126)</visible>
+		<itemlayout height="27">
+			<control type="image">
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>16</width>
+				<height>16</height>
+				<info>ListItem.Icon</info>
+				<texture>defaultfolderbig.png</texture>
+			</control>
+			<control type="label">
+				<posx>25</posx>
+				<posy>2</posy>
+				<width>400</width>
+				<height>16</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>480</posx>
+				<posy>2</posy>
+				<width>150</width>
+				<height>16</height>
+				<font>font13</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>40</height>
+				<texture>list-focus.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>40</height>
+				<texture>-</texture>
+				<visible>!Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>3</posy>
+				<width>32</width>
+				<height>32</height>
+				<info>ListItem.Icon</info>
+				<texture>defaultfolderbig.png</texture>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>8</posy>
+				<width>370</width>
+				<height>16</height>
+				<font>font18</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>480</posx>
+				<posy>8</posy>
+				<width>150</width>
+				<height>16</height>
+				<font>font18</font>
+				<align>right</align>
+				<textcolor>white</textcolor>
+				<include>selectedcolor</include>
+				<info>ListItem.Label2</info>
+			</control>
+		</focusedlayout>
+	</control>
+
+	
+<control type="image">
+    <description>Logo</description>
+    <posx>15</posx>
+    <posy>10</posy>
+    <width>40</width>
+    <height>40</height>
+    <texture>unknown-user.png</texture>
+    <visible>!Skin.HasSetting(menulabels)</visible>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	 </control>
+
+<control type="label">
+	<posx>60</posx>
+	<posy>30</posy>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>special13</font>
+	<textcolor>white</textcolor>
+	<visible>!Skin.HasSetting(menulabels)</visible>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+    <label>13200</label>
+</control>
+
+<include>Music-Info</include>
+
+	</controls>
+</window>

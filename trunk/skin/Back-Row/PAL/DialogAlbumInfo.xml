@@ -1,0 +1,377 @@
+<window id="2001">
+	<defaultcontrol>5</defaultcontrol>
+	<animation effect="fade" time="800">WindowClose</animation> 
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		
+<control type="image">
+		<description>background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>back-row.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		<visible>!Skin.HasSetting(Background)</visible>
+	</control>
+	
+
+
+<control type="image">
+		<description>background</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>sub-background3.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+	</control>
+	
+	<controlgroup>
+<posx>25</posx>
+		<control type="image">
+			<description>Album Cover image</description>
+			<posx>430</posx>
+			<posy>80</posy>
+			<width>180</width>
+			<height>180</height>
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<info>ListItem.Icon</info>
+			<include>dialog-effect</include>
+		</control>
+
+
+		<control type="image">
+   			<description>Cover reflection</description>
+   			<posx>430</posx>
+   			<posy>260</posy>
+   			<width>180</width>
+   			<height>180</height>
+			<aspectratio aligny="top">keep</aspectratio>
+   			<texture flipy="true" diffuse="Thumb_Mask.png" /> 
+   			<info>ListItem.Icon</info>
+			<include>dialog-effect</include>
+  		</control> 
+
+
+
+		
+		<control type="label" id="21">
+			<description>Artist value</description>
+			<posx>105</posx>
+			<posy>80</posy>
+			<width>300</width>
+			<label>-</label>
+			<font>special12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="20">
+			<description>Album value</description>
+			<posx>105</posx>
+			<posy>105</posy>
+			<width>300</width>
+			<label>-</label>
+			<font>special13</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="1">
+			<description>Year</description>
+			<posx>105</posx>
+			<posy>140</posy>
+			<label>$LOCALIZE[562]:</label>
+			<font>font12</font>
+			<include>dialog-effect</include>
+		</control>
+		
+         <control type="label">
+			<description>Rating</description>
+			<posx>105</posx>
+			<posy>165</posy>
+			<label>$LOCALIZE[563]:</label>
+			<font>font12</font>
+			<include>dialog-effect</include>
+		</control>
+
+		
+		<control type="label" id="1">
+			<description>Genre</description>
+			<posx>105</posx>
+			<posy>190</posy>
+			<label>$LOCALIZE[515]:</label>
+			<font>font12</font>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="1">
+			<description>Moods</description>
+			<posx>105</posx>
+			<posy>215</posy>
+			<label>$LOCALIZE[175]:</label>
+			<font>font12</font>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="1">
+			<description>Styles</description>
+			<posx>105</posx>
+			<posy>240</posy>
+			<label>$LOCALIZE[176]:</label>
+			<font>font12</font>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="22">
+			<description>year value</description>
+			<width>210</width>
+			<posx>205</posx>
+			<posy>140</posy>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="23">
+			<description>Rating value</description>
+			<width>210</width>
+			<posx>205</posx>
+			<posy>165</posy>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="24">
+			<description>Genre value</description>
+			<width>210</width>
+			<posx>205</posx>
+			<posy>190</posy>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="25">
+			<description>Tones value</description>
+			<posx>205</posx>
+			<posy>215</posy>
+			<width>210</width>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+		<control type="label" id="26">
+			<description>Styles value</description>
+			<width>210</width>
+			<posx>205</posx>
+			<posy>240</posy>
+			<label>-</label>
+			<font>font12</font>
+			<scroll>true</scroll>
+			<include>dialog-effect</include>
+		</control>
+
+
+
+	
+		<control type="textbox" id="4">
+			<description>textarea</description>
+			<posx>-10</posx>
+			<posy>300</posy>
+			<width>690</width>
+			<height>205</height>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<align>justify</align>
+			<pagecontrol>90</pagecontrol>
+		    <autoscroll time="6000" delay="45000" repeat="15000"></autoscroll>
+			<include>dialog-effect</include>
+		</control>
+		</controlgroup>
+		
+		<control type="group">
+			<posx>10</posx>
+			<posy>-20</posy>
+
+	    <control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>116</posy>
+		<width>123</width>
+		<height>125</height>
+		<texture>keyboard-numeric-bg.png</texture>
+		<include>slideleft</include>
+		
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+			
+
+
+			<control type="button" id="5">
+				<description>Tracks/Review</description>
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>110</width>
+		        <height>35</height>
+				<label>182</label>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+				<font>font13</font>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<include>dialog-effect</include>
+			</control>
+
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<posx>0</posx>
+				<posy>158</posy>
+				<width>110</width>
+		        <height>35</height>
+				<label>184</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>10</ondown>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<include>dialog-effect</include>
+			</control>
+			<control type="button" id="10">
+				<description>Get Thumb</description>
+				<posx>0</posx>
+				<posy>196</posy>
+				<width>110</width>
+		        <height>35</height>
+				<label>13405</label>
+				<font>font13</font>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>6</onup>
+				<ondown>5</ondown>
+				<texturenofocus>button-nofocus.png</texturenofocus>
+				<texturefocus>button-focus.png</texturefocus>
+				<include>dialog-effect</include>
+			</control>
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>-10</posx>
+		<posy>116</posy>
+		<width>123</width>
+		<height>125</height>
+		<texture>keyboard-numeric-bg1.png</texture>
+		<include>slideleft</include>
+		
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+		</control>
+			
+
+
+		</control>
+		
+  <control type="list" id="50">
+				<description>Track List Container + Scrollbar Area</description>
+				<posx>200</posx>
+				<posy>300</posy>
+				<width>455</width>
+				<height>175</height>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<orientation>vertical</orientation>
+			        <pagecontrol>61</pagecontrol>
+			        <scrolltime>200</scrolltime>
+			        <itemlayout width="250" height="29">
+				    <control type="image">
+				        <posx>5</posx>
+				       	<posy>3</posy>
+				       	<width>17</width>
+				       	<height>22</height>
+				        <texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="left">keep</aspectratio>
+				    </control>
+				    <control type="label">
+			        	<posx>30</posx>
+			        	<posy>3</posy>
+        				<width>320</width>
+				        <height>22</height>
+        				<font>font13</font>
+				        <aligny>center</aligny>
+		        		<selectedcolor>green</selectedcolor>
+		        		<align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+				    </control>
+				    <control type="label">
+			        	<posx>450</posx>
+			        	<posy>3</posy>
+        				<width>100</width>
+				        <height>22</height>
+        				<font>font13</font>
+				        <aligny>center</aligny>
+		        		<selectedcolor>green</selectedcolor>
+		        		<align>right</align>
+					<label>$INFO[ListItem.Duration]</label>
+				    </control>
+				</itemlayout>
+                                <focusedlayout height="29" width="250">
+		   		    <control type="image">
+				        <width>455</width>
+				        <height>29</height>
+				        <posx>0</posx>
+				        <posy>0</posy>
+			        	<visible>Control.HasFocus(50)</visible>
+				        <texture>list-focus.png</texture>
+		 	            </control>
+				    <control type="image">
+				        <posx>5</posx>
+				        <posy>3</posy>
+				        <width>17</width>
+				        <height>22</height>
+				        <texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio align="left">keep</aspectratio>
+				    </control>
+				    <control type="label">
+ 				        <posx>30</posx>
+				        <posy>3</posy>
+				        <width>320</width>
+				        <height>22</height>
+				        <font>font13</font>
+				        <aligny>center</aligny>
+				        <selectedcolor>green</selectedcolor>
+				        <align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+				    </control>
+				    <control type="label">
+			        	<posx>450</posx>
+			        	<posy>3</posy>
+        				<width>100</width>
+				        <height>22</height>
+        				<font>font13</font>
+				        <aligny>center</aligny>
+		        		<selectedcolor>green</selectedcolor>
+		        		<align>right</align>
+					<label>$INFO[ListItem.Duration]</label>
+				    </control>
+                                </focusedlayout>
+
+
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
+                        </control>
+		
+		<include>Music-Info</include>
+
+	</controls>
+</window>

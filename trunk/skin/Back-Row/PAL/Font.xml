@@ -1,0 +1,162 @@
+<fonts>
+
+<fontset id="Default" unicode="true">
+    <font>
+      <name>font18</name>
+      <filename>Decker.ttf</filename>
+      <size>17</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>Decker.ttf</filename>
+      <size>16</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>Decker.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>Decker.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>Decker.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>Decker.ttf</filename>
+      <size>15</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>Decker.ttf</filename>
+      <size>11</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>Decker.ttf</filename>
+      <size>13</size>
+      <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>15</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>special12</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>special13</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>special14</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+	   <style>bold</style>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>special15</name>
+      <filename>broadw.ttf</filename>
+      <shadow>ff000000</shadow>
+      <size>23</size>
+    </font>
+
+	 <font>
+      <name>special16</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+	  <style>bold</style>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>fontBL</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+      <style>bold</style>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>Heading-M</name>
+      <filename>broadw.ttf</filename>
+      <size>16</size>
+	  <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+    <font>
+      <name>Heading-S</name>
+      <filename>broadw.ttf</filename>
+      <size>18</size>
+      <shadow>ff000000</shadow>
+    </font>
+
+ <font>
+      <name>Heading-L</name>
+      <filename>broadw.ttf</filename>
+      <size>24</size>
+	  <style>bold</style>
+      <shadow>ff000000</shadow>
+    </font>
+
+  </fontset>
+
+ 
+
+</fonts>

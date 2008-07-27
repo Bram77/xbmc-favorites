@@ -1,0 +1,2412 @@
+<window>
+<id>56</id>
+<defaultcontrol always="true">1</defaultcontrol>
+<coordinates>
+<system>1</system>
+<origin x="0" y="-30">true</origin>
+</coordinates>
+
+<allowoverlay>yes</allowoverlay>
+<controls>
+
+
+<control>
+<description>Panel Image</description>
+<type>image</type>
+<posx>0</posx>
+<posy>30</posy>
+<width>720</width>
+<height>576</height>
+<texture>background2.png</texture>
+<visible>!Skin.HasSetting(Background)</visible>
+</control>
+
+
+
+<control type="multiimage">
+<posx>0</posx>
+<posy>30</posy>
+<width>720</width>
+<height>576</height>
+<imagepath>Menus</imagepath>
+<info>Skin.String(CustomMenu)</info>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<visible>!Skin.HasSetting(CustomMenu)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="300">WindowClose</animation>
+<animation effect="fade" time="200">Visible</animation>
+<animation effect="fade" delay = "200" time="800">Hidden</animation>
+</control>
+
+
+
+
+<control type="multiimage">
+<posx>0</posx>
+<posy>30</posy>
+<width>720</width>
+<height>576</height>
+<imagepath>-</imagepath>
+<info>Skin.String(CustomMenuFolder)</info>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="300">WindowClose</animation>
+<animation effect="fade" time="200">Visible</animation>
+<animation effect="fade" delay = "200" time="800">Hidden</animation>
+</control>
+
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>0</posx>
+<posy>30</posy>
+<width>720</width>
+<height>576</height>
+<texture>Back-Row.png</texture>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+<visible>!Skin.HasSetting(Background)</visible>
+</control>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>-10</posx>
+<posy>100</posy>
+<width>740</width>
+<height>455</height>
+<texture>black.png</texture>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>-10</posx>
+<posy>95</posy>
+<width>740</width>
+<height>10</height>
+<texture>separatorosd.png</texture>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>-10</posx>
+<posy>550</posy>
+<width>740</width>
+<height>10</height>
+<texture>separatorosd.png</texture>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+
+
+<control type="image">
+<description>Logo</description>
+<posx>15</posx>
+<posy>40</posy>
+<width>30</width>
+<height>40</height>
+<texture>settings-more-focus.png</texture>
+<visible>!Skin.HasSetting(menulabels)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="label">
+<posx>60</posx>
+<posy>70</posy>
+<align>left</align>
+<aligny>center</aligny>
+<font>font18</font>
+<textcolor>white</textcolor>
+<visible>!Skin.HasSetting(menulabels)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+<label>20077</label>
+</control>
+
+<controlgroup id="1">
+
+<posx>-20</posx>
+<posy>20</posy>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>35</posx>
+<posy>104</posy>
+<width>169</width>
+<height>209</height>
+<texture>keyboard-numeric-bg.png</texture>
+<include>slideleft</include>
+</control>
+
+<control>
+<description>Home Options Button</description>
+<type>button</type>
+<id>1</id>
+<posx>50</posx>
+<posy>110</posy>
+<include>20000</include>
+<font>font13</font>
+<align>left</align>
+<texturefocus>button-focus.png</texturefocus>
+<texturenofocus>button-nofocus.png</texturenofocus>
+<textoffsetx>17</textoffsetx>
+<aligny>center</aligny>
+<width>150</width>
+<height>35</height>
+<onleft>502</onleft>
+<onright>502</onright>
+<onup>22</onup>
+<ondown>3</ondown>
+<include>slideleft</include>
+</control>
+
+<control>
+<description>Media Options Button</description>
+<type>button</type>
+<id>3</id>
+<posx>50</posx>
+<posy>147</posy>
+<include>20040</include>
+<font>font13</font>
+<align>left</align>
+<texturefocus>button-focus.png</texturefocus>
+<texturenofocus>button-nofocus.png</texturenofocus>
+<textoffsetx>17</textoffsetx>
+<aligny>center</aligny>
+<width>150</width>
+<height>35</height>
+<onleft>701</onleft>
+<onright>701</onright>
+<onup>1</onup>
+<ondown>4</ondown>
+<include>slideleft</include>
+</control>
+
+<control>
+<description>Menu Options Button</description>
+<type>button</type>
+<id>4</id>
+<posx>50</posx>
+<posy>184</posy>
+<include>20060</include>
+<font>font13</font>
+<align>left</align>
+<texturefocus>button-focus.png</texturefocus>
+<texturenofocus>button-nofocus.png</texturenofocus>
+<textoffsetx>17</textoffsetx>
+<aligny>center</aligny>
+<width>150</width>
+<height>35</height>
+<onleft>600</onleft>
+<onright>600</onright>
+<onup>3</onup>
+<ondown>14</ondown>
+<include>slideleft</include>
+</control>
+
+
+
+<control type="button" id="14">
+<description>Submenu</description>
+<posx>50</posx>
+<posy>221</posy>
+<label>1034</label>
+<align>left</align>
+<texturefocus>button-focus.png</texturefocus>
+<texturenofocus>button-nofocus.png</texturenofocus>
+<textoffsetx>17</textoffsetx>
+<aligny>center</aligny>
+<width>150</width>
+<height>35</height>				
+<onleft>39</onleft>
+<onright>39</onright>
+<onup>4</onup>
+<ondown>22</ondown>
+<include>slideleft</include>
+</control>
+
+<control>
+<description>Custom Wallpaper Folders</description>
+<type>button</type>
+<id>22</id>
+<posx>50</posx>
+<posy>258</posy>
+<label>Wallpaper</label>
+<font>font13</font>
+<align>left</align>
+<texturefocus>button-focus.png</texturefocus>
+<texturenofocus>button-nofocus.png</texturenofocus>
+<textoffsetx>17</textoffsetx>
+<aligny>center</aligny>
+<width>150</width>
+<height>35</height>
+<onleft>100</onleft>
+<onright>100</onright>
+<onup>14</onup>
+<ondown>1</ondown>
+<include>slideleft</include>
+</control>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>35</posx>
+<posy>104</posy>
+<width>169</width>
+<height>209</height>
+<texture>keyboard-numeric-bg1.png</texture>
+<include>slideleft</include>
+</control>
+
+
+
+</controlgroup>
+
+<!-- Home Options - Weather -->
+<control type="group" id="2">
+
+<control>
+<description>"Weather" Switch</description>
+<type>radiobutton</type>
+<id>502</id>
+<posx>211</posx>
+<posy>115</posy>
+<include>20005</include>
+<font>font13</font>
+<selected>Skin.HasSetting(weather)</selected>
+<onclick>Skin.ToggleSetting(weather)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>514</onup>
+<ondown>503</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - RSS Feeds -->
+<control>
+<description>"RSS Feeds" Switch</description>
+<type>radiobutton</type>
+<id>503</id>
+<posx>211</posx>
+<posy>145</posy>
+<include>20006</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(rss)</selected>
+<onclick>Skin.ToggleSetting(rss)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>502</onup>
+<ondown>504</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<control>
+<description>separator image</description>
+<type>image</type>
+<posx>211</posx>
+<posy>178</posy>
+<width>477</width>
+<height>5</height>
+<texture>separator.png</texture>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+
+<!-- Home Options - Settings Toggle -->
+<control>
+<description>"Settings Home Visibility" Switch</description>
+<type>radiobutton</type>
+<id>504</id>
+<posx>211</posx>
+<posy>187</posy>
+<include>20016</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Settings)</onclick>
+<selected>!Skin.HasSetting(Settings)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>503</onup>
+<ondown>505</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - Programs Toggle -->
+<control>
+<description>"Programs Visibility" Switch</description>
+<type>radiobutton</type>
+<id>505</id>
+<posx>211</posx>
+<posy>217</posy>
+<include>20013</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Programs)</onclick>
+<selected>!Skin.HasSetting(Programs)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>504</onup>
+<ondown>506</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - TV Shows Toggle -->
+<control>
+<description>"TV Shows Visibility" Switch</description>
+<type>radiobutton</type>
+<id>506</id>
+<posx>211</posx>
+<posy>247</posy>
+<include>20015</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(tv-library)</onclick>
+<selected>!Skin.HasSetting(tv-library)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>505</onup>
+<ondown>507</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - Files Toggle -->
+<control>
+<description>"Files Visibility" Switch</description>
+<type>radiobutton</type>
+<id>507</id>
+<posx>211</posx>
+<posy>277</posy>
+<include>200018</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Files)</onclick>
+<selected>Skin.HasSetting(Files)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>506</onup>
+<ondown>508</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+<!-- Home Options - Scripts Toggle -->
+<control>
+<description>"Scripts Home Visibility" Switch</description>
+<type>radiobutton</type>
+<id>508</id>
+<posx>211</posx>
+<posy>307</posy>
+<include>200017</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Scripts)</onclick>
+<selected>Skin.HasSetting(Scripts)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>507</onup>
+<ondown>509</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+
+
+<!-- Home Options - Weather Toggle -->
+<control>
+<description>"Weather Home Visibility" Switch</description>
+<type>radiobutton</type>
+<id>509</id>
+<posx>211</posx>
+<posy>337</posy>
+<include>200019</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Weather1)</onclick>
+<selected>Skin.HasSetting(Weather1)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>508</onup>
+<ondown>510</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+<control>
+<description>separator image</description>
+<type>image</type>
+<posx>211</posx>
+<posy>370</posy>
+<width>477</width>
+<height>5</height>
+<texture>separator.png</texture>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - Library Toggle -->
+<control>
+<description>"Toggle Video Libary Mode" Switch</description>
+<type>radiobutton</type>
+<id>510</id>
+<posx>211</posx>
+<posy>379</posy>
+<include>20014</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(movie-library)</onclick>
+<selected>Skin.HasSetting(movie-library)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>509</onup>
+<ondown>511</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+
+<!-- Home Options - Alternate Home Screen Layout -->
+<control>
+<description>"Alt Home Screen Layout</description>
+<type>radiobutton</type>
+<id>511</id>
+<posx>211</posx>
+<posy>409</posy>
+<include>20018</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(AltHome)</onclick>
+<selected>Skin.HasSetting(AltHome)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>510</onup>
+<ondown>512</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+<!-- Home Options - Multi Folder Wallpaper -->
+<control>
+<description>"Home Wallpaper Toggle" Switch</description>
+<type>radiobutton</type>
+<id>512</id>
+<posx>211</posx>
+<posy>439</posy>
+<include>20017</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Wallpaper)</onclick>
+<selected>Skin.HasSetting(Wallpaper)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>511</onup>
+<ondown>513</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+
+
+<!-- Home Options - Single Folder Wallpaper -->
+<control>
+<description>"Single Folder Wallpaper</description>
+<type>radiobutton</type>
+<id>513</id>
+<posx>211</posx>
+<posy>469</posy>
+<include>20019</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Default Wallpaper)</onclick>
+<selected>Skin.HasSetting(Default Wallpaper)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>512</onup>
+<ondown>514</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<!-- Home Options - Dark Mask Overlay -->
+<control>
+<description>"Dark Mask Overlay</description>
+<type>radiobutton</type>
+<id>514</id>
+<posx>211</posx>
+<posy>499</posy>
+<include>20032</include>
+<font>font13</font>
+<onclick>Skin.ToggleSetting(Mask Overlay)</onclick>
+<selected>Skin.HasSetting(Mask Overlay)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>1</onleft>
+<onright>1</onright>
+<onup>513</onup>
+<ondown>502</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(1) | ControlGroup(2).HasFocus()</visible>
+</control>
+
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+</control>
+
+<!-- Menu Options - Menu Labels -->
+
+<control type="group" id="13">
+
+<control>
+<description>"Menu Labels" Switch</description>
+<type>radiobutton</type>
+<id>600</id>
+<posx>211</posx>
+<posy>115</posy>
+<include>20061</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(menulabels)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<onclick>Skin.ToggleSetting(menulabels)</onclick>
+<width>470</width>
+<height>30</height>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>606</onup>
+<ondown>602</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+
+<!-- Menu Options - Skin Reset -->
+<control>
+<description>"Reset Skin" Switch</description>
+<type>radiobutton</type>
+<id>602</id>
+<posx>211</posx>
+<posy>152</posy>
+<include>20063</include>
+<font>font13</font>
+<onclick>Skin.ResetSettings</onclick>
+<onclick>XBMC.Notification(Back-Row Skin Setting,Settings back to Default),100</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>600</onup>
+<ondown>603</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+<control type="radiobutton" id="603">
+<description>Scrollbar Toggle</description>
+<font>font13</font>
+<posx>211</posx>
+<posy>189</posy>
+<width>470</width>
+<height>30</height>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<label>Scroll Bar Toggle</label>
+<onclick>Skin.ToggleSetting(sbar)</onclick>
+<selected>Skin.HasSetting(sbar)</selected>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>602</onup>
+<ondown>604</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+<control>
+<description>"Curtain Backgrounds" Switch</description>
+<type>radiobutton</type>
+<id>604</id>
+<posx>211</posx>
+<posy>226</posy>
+<include>20065</include>
+<font>font13</font>
+<selected>Skin.HasSetting(Background)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<onclick>Skin.ToggleSetting(Background)</onclick>
+<width>470</width>
+<height>30</height>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>603</onup>
+<ondown>605</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+<control>
+<description>"Now Showing Coverflow" Switch</description>
+<type>radiobutton</type>
+<id>605</id>
+<posx>211</posx>
+<posy>263</posy>
+<include>20067</include>
+<font>font13</font>
+<selected>Skin.HasSetting(Now Showing)</selected>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<onclick>Skin.ToggleSetting(Now Showing)</onclick>
+<width>470</width>
+<height>30</height>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>604</onup>
+<ondown>606</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+
+<!-- Menu Options - DVD Case Animation toggle -->
+<control type="radiobutton" id="606">
+<description>DVD Case Animation toggle</description>
+<font>font13</font>
+<posx>211</posx>
+<posy>300</posy>
+<width>470</width>
+<height>30</height>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<include>20068</include>
+<align>left</align>
+<selected>!Skin.HasSetting(DVD Animation)</selected>
+<onclick>Skin.ToggleSetting(DVD Animation)</onclick>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>605</onup>
+<ondown>600</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+
+
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+</control>
+
+<!-- Media Options -->
+
+<control type="group" id="12">
+
+<!-- Media Options - Home Music Info -->
+<control>
+<description>"Home Music Info" Switch</description>
+<type>radiobutton</type>
+<id>701</id>
+<posx>211</posx>
+<posy>115</posy>
+<include>20042</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(home-music-info)</selected>
+<onclick>Skin.ToggleSetting(home-music-info)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>710</onup>
+<ondown>702</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Menu Music Info -->
+<control>
+<description>"Menu Music Info" Switch</description>
+<type>radiobutton</type>
+<id>702</id>
+<posx>211</posx>
+<posy>152</posy>
+<include>20043</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(music-info)</selected>
+<onclick>Skin.ToggleSetting(music-info)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>701</onup>
+<ondown>703</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Menu Music Info -->
+<control>
+<description>"Menu Music Info2" Switch</description>
+<type>radiobutton</type>
+<id>703</id>
+<posx>211</posx>
+<posy>189</posy>
+<include>20050</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(music-info2)</selected>
+<onclick>Skin.ToggleSetting(music-info2)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>702</onup>
+<ondown>704</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Home Visualisation Switch -->
+<control>
+<description>"Home visualisation" Switch</description>
+<type>radiobutton</type>
+<id>704</id>
+<posx>211</posx>
+<posy>226</posy>
+<include>20044</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(home-visualisation)</selected>
+<onclick>Skin.ToggleSetting(home-visualisation)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>703</onup>
+<ondown>705</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<control>
+<description>separator image</description>
+<type>image</type>
+<posx>211</posx>
+<posy>223</posy>
+<width>477</width>
+<height>5</height>
+<texture>separator.png</texture>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Home Video Info -->
+<control>
+<description>"Home Video Info" Switch</description>
+<type>radiobutton</type>
+<id>705</id>
+<posx>211</posx>
+<posy>265</posy>
+<include>20046</include>
+<font>font13</font>
+<selected>Skin.HasSetting(home-video-info)</selected>
+<onclick>Skin.ToggleSetting(home-video-info)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>704</onup>
+<ondown>706</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Menu Video Info -->
+<control>
+<description>"Menu Video Info" Switch</description>
+<type>radiobutton</type>
+<id>706</id>
+<posx>211</posx>
+<posy>304</posy>
+<include>20047</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(video-info)</selected>
+<onclick>Skin.ToggleSetting(video-info)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>705</onup>
+<ondown>707</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Video Preview Switch -->
+<control>
+<description>"Video Preview" Switch</description>
+<type>radiobutton</type>
+<id>707</id>
+<posx>211</posx>
+<posy>343</posy>
+<include>20048</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(home-video-preview)</selected>
+<onclick>Skin.ToggleSetting(home-video-preview)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>706</onup>
+<ondown>708</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Menu Video Preview -->
+<control>
+<description>"Menu Video Preview" Switch</description>
+<type>radiobutton</type>
+<id>708</id>
+<posx>211</posx>
+<posy>382</posy>
+<include>20049</include>
+<font>font13</font>
+<selected>!Skin.HasSetting(video-preview)</selected>
+<onclick>Skin.ToggleSetting(video-preview)</onclick>
+<onclick>!Skin.SetBool(video-info)</onclick>
+<align>left</align>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus></texturenofocus>
+<width>470</width>
+<height>30</height>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>707</onup>
+<ondown>6</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<!-- Media Options - Turn Watched/UnWatched Overlay On/Off -->
+<control type="radiobutton" id="6">
+<description>Watched/Unwatched Overlay Toggle</description>
+<font>font13</font>
+<posx>211</posx>
+<posy>421</posy>
+<width>470</width>
+<height>30</height>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<include>20132</include>
+<selected>Skin.HasSetting(menu-overlay)</selected>
+<onclick>Skin.ToggleSetting(menu-overlay)</onclick>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>708</onup>
+<ondown>709</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+
+<!-- Media Options - Startup Playlist -->
+<control type="radiobutton" id="709">
+<description>Enable Playlist Toggle</description>
+<posx>211</posx>
+<posy>460</posy>
+<width>470</width>
+<height>30</height>
+<font>font13</font>
+<label>21398</label>
+<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>6</onup>
+<ondown>710</ondown>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<control type="button" id="710">
+<description>Startup Playlist Path</description>
+<posx>211</posx>
+<posy>499</posy>
+<width>470</width>
+<height>30</height>
+<font>font13</font>
+<label>15311</label>
+<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
+<onleft>3</onleft>
+<onright>3</onright>
+<onup>709</onup>
+<ondown>701</ondown>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+<include>slideright</include>
+<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
+</control>
+
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+
+
+
+<!-- Submenu button Options -->
+
+<control type="group" id="9006">
+
+<control type="radiobutton" id="39">
+<description>Sub Menu Control</description>
+<posx>220</posx>
+<posy>115</posy>
+<width>485</width>
+<align>left</align>
+<label>Sub Menu Control</label>
+<onclick>Skin.ToggleSetting(submenubuttons)</onclick>
+<selected>Skin.HasSetting(submenubuttons)</selected>
+<onleft>14</onleft>
+<onright>14</onright>
+<onup>47</onup>
+<ondown>41</ondown>
+<font>font13</font>
+<color>white</color>
+<textoffsetx>7</textoffsetx>
+<texturefocus>list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+
+
+<!-- Submenu Bookmarks -->
+<control type="image" id="1">
+<description>Submenu background</description>
+<posx>218</posx>
+<posy>157</posy>
+<height>338</height>
+<width>197</width>
+<texture>black.png</texture>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="1">
+<description>Submenu label</description>
+<posx>218</posx>
+<posy>157</posy>
+<width>197</width>
+<height>30</height>
+<align>center</align>
+<label>1034</label>
+<texturefocus>-</texturefocus>
+<texturenofocus>black.png</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="41">
+<description>Submenu button String Set 1</description>
+<posx>223</posx>
+<posy>194</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu1Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu1Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu1)</onclick>
+<onleft>9001</onleft>
+<onright>51</onright>
+<onup>39</onup>
+<ondown>42</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 1 String NOT SET label</description>
+<posx>240</posx>
+<posy>209</posy>
+<width>150</width>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu1Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="51">
+<description>enable Submenu button 1</description>
+<posx>378</posx>
+<posy>194</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu1)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu1)</selected>
+<onleft>41</onleft>
+<onright>49</onright>
+<onup>40</onup>
+<ondown>52</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="42">
+<description>Submenu button String Set 2</description>
+<posx>223</posx>
+<posy>231</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu2Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu2Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu2)</onclick>
+<onleft>9001</onleft>
+<onright>52</onright>
+<onup>41</onup>
+<ondown>43</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 2 String NOT SET label</description>
+<posx>240</posx>
+<posy>246</posy>
+<width>150</width>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu2Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="52">
+<description>enable Submenu button 2</description>
+<posx>378</posx>
+<posy>231</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu2)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu2)</selected>
+<onleft>42</onleft>
+<onright>410</onright>
+<onup>51</onup>
+<ondown>53</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="43">
+<description>Submenu button String Set 3</description>
+<posx>223</posx>
+<posy>268</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu3Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu3Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu3)</onclick>
+<onleft>9001</onleft>
+<onright>53</onright>
+<onup>42</onup>
+<ondown>44</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 3 String NOT SET label</description>
+<posx>240</posx>
+<posy>283</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu3Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="53">
+<description>enable Submenu button 3</description>
+<posx>378</posx>
+<posy>268</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu3)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu3)</selected>
+<onleft>43</onleft>
+<onright>411</onright>
+<onup>52</onup>
+<ondown>54</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="44">
+<description>Submenu button String Set 4</description>
+<posx>223</posx>
+<posy>305</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu4Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu4Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu4)</onclick>
+<onleft>9001</onleft>
+<onright>54</onright>
+<onup>43</onup>
+<ondown>45</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 4 String NOT SET label</description>
+<posx>240</posx>
+<posy>320</posy>
+<width>150</width>
+<aligny>center</aligny>
+<font>font13</font>
+<color>white</color>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu4Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="54">
+<description>enable Submenu button 4</description>
+<posx>378</posx>
+<posy>305</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu4)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu4)</selected>
+<onleft>44</onleft>
+<onright>412</onright>
+<onup>53</onup>
+<ondown>55</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="45">
+<description>Submenu button String Set 5</description>
+<posx>223</posx>
+<posy>342</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu5Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu5Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu5)</onclick>
+<onleft>9001</onleft>
+<onright>55</onright>
+<onup>44</onup>
+<ondown>46</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 5 String NOT SET label</description>
+<posx>240</posx>
+<posy>357</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu5Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="55">
+<description>enable Submenu button 5</description>
+<posx>378</posx>
+<posy>342</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu5)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu5)</selected>
+<onleft>45</onleft>
+<onright>413</onright>
+<onup>54</onup>
+<ondown>56</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="46">
+<description>Submenu button String Set 6</description>
+<posx>223</posx>
+<posy>379</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu6Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu6Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu6)</onclick>
+<onleft>9001</onleft>
+<onright>56</onright>
+<onup>45</onup>
+<ondown>47</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 6 String NOT SET label</description>
+<posx>240</posx>
+<posy>394</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu6Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="56">
+<description>enable Submenu button 6</description>
+<posx>378</posx>
+<posy>379</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu6)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu6)</selected>
+<onleft>46</onleft>
+<onright>414</onright>
+<onup>55</onup>
+<ondown>57</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="47">
+<description>Submenu button String Set 7</description>
+<posx>223</posx>
+<posy>416</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu7Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu7Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu7)</onclick>
+<onleft>9001</onleft>
+<onright>57</onright>
+<onup>46</onup>
+<ondown>48</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 7 String NOT SET label</description>
+<posx>240</posx>
+<posy>431</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu7Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="57">
+<description>enable Submenu button 7</description>
+<posx>378</posx>
+<posy>416</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu7)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu7)</selected>
+<onleft>47</onleft>
+<onright>415</onright>
+<onup>56</onup>
+<ondown>58</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="48">
+<description>Submenu button String Set 8</description>
+<posx>223</posx>
+<posy>453</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu8Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu8Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu8)</onclick>
+<onleft>9001</onleft>
+<onright>58</onright>
+<onup>47</onup>
+<ondown>41</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 8 String NOT SET label</description>
+<posx>240</posx>
+<posy>468</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu8Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="58">
+<description>enable Submenu button 8</description>
+<posx>378</posx>
+<posy>453</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu8)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu8)</selected>
+<onleft>48</onleft>
+<onright>416</onright>
+<onup>57</onup>
+<ondown>51</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="image" id="1">
+<description>Submenu background</description>
+<posx>438</posx>
+<posy>157</posy>
+<height>124</height>
+<width>197</width>
+<texture>black.png</texture>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="1">
+<description>Submenu label</description>
+<posx>438</posx>
+<posy>157</posy>
+<width>197</width>
+<height>30</height>
+<align>center</align>
+<label>1034</label>
+<texturefocus>-</texturefocus>
+<texturenofocus>black.png</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="49">
+<description>Submenu button String Set 9</description>
+<posx>443</posx>
+<posy>194</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu9Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu9Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu9)</onclick>
+<onleft>51</onleft>
+<onright>59</onright>
+<onup>39</onup>
+<ondown>410</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 9 String NOT SET label</description>
+<posx>458</posx>
+<posy>205</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu9Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="59">
+<description>enable Submenu button 9</description>
+<posx>598</posx>
+<posy>194</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu9)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu9)</selected>
+<onleft>49</onleft>
+<onright>59</onright>
+<onup>40</onup>
+<ondown>60</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="button" id="410">
+<description>Submenu button String Set 10</description>
+<posx>443</posx>
+<posy>231</posy>
+<width>150</width>
+<textwidth>125</textwidth>
+<label>$INFO[Skin.String(DialogSubMenu10Title)]</label>
+<onclick>Skin.SetString(DialogSubMenu10Title)</onclick>
+<onclick>Skin.SetFile(DialogSubMenu10)</onclick>
+<onleft>52</onleft>
+<onright>60</onright>
+<onup>49</onup>
+<ondown>411</ondown>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="label">
+<description>Submenu button 10 String NOT SET label</description>
+<posx>458</posx>
+<posy>242</posy>
+<width>150</width>
+<font>font13</font>
+<color>white</color>
+<aligny>center</aligny>
+<label>20078</label>
+<visible>!Skin.String(DialogSubMenu10Title)</visible>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+
+<control type="radiobutton" id="60">
+<description>enable Submenu button 10</description>
+<posx>598</posx>
+<posy>231</posy>
+<width>32</width>
+<label>-</label>
+<onclick>Skin.ToggleSetting(DialogSubMenu10)</onclick>
+<selected>Skin.HasSetting(DialogSubMenu10)</selected>
+<onleft>410</onleft>
+<onright>60</onright>
+<onup>59</onup>
+<ondown>61</ondown>
+<texturefocus border="5">list-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<visible>Skin.HasSetting(submenubuttons)</visible> 
+<visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
+</control>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+</control>
+
+<!-- Wallpaper -->
+
+<control type="group" id="32">
+
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+
+
+<control type="grouplist" id="32">
+<width>470</width>
+<onleft>22</onleft>
+<onright>22</onright>
+<onup>2</onup>
+<ondown>2</ondown>
+<posx>216</posx>
+<posy>119</posy>
+<height>420</height>
+<texturewidth>200</texturewidth>
+<font>font13</font>
+<itemgap>3</itemgap>
+<orientation>vertical</orientation>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+
+
+<control type="togglebutton" id="98">
+<include>customsettingsbutton</include>
+<label>Set Menu background image</label>
+<altlabel>Reset Menu background image</altlabel>
+<onclick>Skin.SetImage(CustomMenu)</onclick>
+<altclick>Skin.Reset(CustomMenu)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="99">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomMenuFolder)</onclick>
+<onclick>Skin.SetBool(CustomMenuFoldOn)</onclick>
+<onclick>Skin.Reset(CustomMenu)</onclick>
+<altclick>Skin.Reset(CustomMenuFolder)</altclick>
+<altclick>Skin.Reset(CustomMenuFoldOn)</altclick>
+<label>Set Menu background folder</label>
+<altlabel>Clear Menu background folder</altlabel>
+<usealttexture>Skin.String(CustomMenuFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="100">
+<include>customsettingsbutton</include>
+<label>Set Movies background image</label>
+<altlabel>Reset Movies background image</altlabel>
+<onclick>Skin.SetImage(CustomMovies)</onclick>
+<altclick>Skin.Reset(CustomMovies)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="101">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomMoviesFolder)</onclick>
+<onclick>Skin.SetBool(CustomMoviesFoldOn)</onclick>
+<onclick>Skin.Reset(CustomMovies)</onclick>
+<altclick>Skin.Reset(CustomMoviesFolder)</altclick>
+<altclick>Skin.Reset(CustomMoviesFoldOn)</altclick>
+<label>Set Movies background folder</label>
+<altlabel>Clear Movies background folder</altlabel>
+<usealttexture>Skin.String(CustomMoviesFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="102">
+<include>customsettingsbutton</include>
+<label>Set TV Shows background image</label>
+<altlabel>Reset TV Shows background image</altlabel>
+<onclick>Skin.SetImage(CustomTV)</onclick>
+<altclick>Skin.Reset(CustomTV)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="103">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomTVFolder)</onclick>
+<onclick>Skin.SetBool(CustomTVFoldOn)</onclick>
+<onclick>Skin.Reset(CustomTV)</onclick>
+<altclick>Skin.Reset(CustomTVFolder)</altclick>
+<altclick>Skin.Reset(CustomTVFoldOn)</altclick>
+<label>Set TV Shows background folder</label>
+<altlabel>Clear TV Shows background folder</altlabel>
+<usealttexture>Skin.String(CustomTVFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="104">
+<include>customsettingsbutton</include>
+<label>Set Pictures background image</label>
+<altlabel>Reset Pictures background image</altlabel>
+<onclick>Skin.SetImage(CustomPictures)</onclick>
+<altclick>Skin.Reset(CustomPictures)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="105">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomPicturesFolder)</onclick>
+<onclick>Skin.SetBool(CustomPicturesFoldOn)</onclick>
+<onclick>Skin.Reset(CustomPictures)</onclick>
+<altclick>Skin.Reset(CustomPicturesFolder)</altclick>
+<altclick>Skin.Reset(CustomPicturesFoldOn)</altclick>
+<label>Set Pictures background folder</label>
+<altlabel>Clear Pictures background folder</altlabel>
+<usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="106">
+<include>customsettingsbutton</include>
+<label>Set Music background image</label>
+<altlabel>Reset Music background image</altlabel>
+<onclick>Skin.SetImage(CustomMusic)</onclick>
+<altclick>Skin.Reset(CustomMusic)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="107">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomMusicFolder)</onclick>
+<onclick>Skin.SetBool(CustomMusicFoldOn)</onclick>
+<onclick>Skin.Reset(CustomMusic)</onclick>
+<altclick>Skin.Reset(CustomMusicFolder)</altclick>
+<altclick>Skin.Reset(CustomMusicFoldOn)</altclick>
+<label>Set Music background folder</label>
+<altlabel>Clear Music background folder</altlabel>
+<usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="108">
+<include>customsettingsbutton</include>
+<label>Set Apps background image</label>
+<altlabel>Reset Apps background image</altlabel>
+<onclick>Skin.SetImage(CustomApps)</onclick>
+<altclick>Skin.Reset(CustomApps)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="109">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomAppsFolder)</onclick>
+<onclick>Skin.SetBool(CustomAppsFoldOn)</onclick>
+<onclick>Skin.Reset(CustomApps)</onclick>
+<altclick>Skin.Reset(CustomAppsFolder)</altclick>
+<altclick>Skin.Reset(CustomAppsFoldOn)</altclick>
+<label>Set Apps background folder</label>
+<altlabel>Clear Apps background folder</altlabel>
+<usealttexture>Skin.String(CustomAppsFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="110">
+<include>customsettingsbutton</include>
+<label>Set Scripts background image</label>
+<altlabel>Reset Scripts background image</altlabel>
+<onclick>Skin.SetImage(CustomScripts)</onclick>
+<altclick>Skin.Reset(CustomScripts)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="111">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomScriptsFolder)</onclick>
+<onclick>Skin.SetBool(CustomScriptsFoldOn)</onclick>
+<onclick>Skin.Reset(CustomScripts)</onclick>
+<altclick>Skin.Reset(CustomScriptsFolder)</altclick>
+<altclick>Skin.Reset(CustomScriptsFoldOn)</altclick>
+<label>Set Scripts background folder</label>
+<altlabel>Clear Scripts background folder</altlabel>
+<usealttexture>Skin.String(CustomScriptsFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="112">
+<include>customsettingsbutton</include>
+<label>Set Files background image</label>
+<altlabel>Reset Files background image</altlabel>
+<onclick>Skin.SetImage(CustomFiles)</onclick>
+<altclick>Skin.Reset(CustomFiles)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="113">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomFilesFolder)</onclick>
+<onclick>Skin.SetBool(CustomFilesFoldOn)</onclick>
+<onclick>Skin.Reset(CustomFiles)</onclick>
+<altclick>Skin.Reset(CustomFilesFolder)</altclick>
+<altclick>Skin.Reset(CustomFilesFoldOn)</altclick>
+<label>Set Files background folder</label>
+<altlabel>Clear Files background folder</altlabel>
+<usealttexture>Skin.String(CustomFilesFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="114">
+<include>customsettingsbutton</include>
+<label>Set Weather background image</label>
+<altlabel>Reset Weather background image</altlabel>
+<onclick>Skin.SetImage(CustomWeather)</onclick>
+<altclick>Skin.Reset(CustomWeather)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="115">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomWeatherFolder)</onclick>
+<onclick>Skin.SetBool(CustomWeatherFoldOn)</onclick>
+<onclick>Skin.Reset(CustomWeather)</onclick>
+<altclick>Skin.Reset(CustomWeatherFolder)</altclick>
+<altclick>Skin.Reset(CustomWeatherFoldOn)</altclick>
+<label>Set Weather background folder</label>
+<altlabel>Clear Weather background folder</altlabel>
+<usealttexture>Skin.String(CustomWeatherFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="116">
+<include>customsettingsbutton</include>
+<label>Set Settings background image</label>
+<altlabel>Reset Settings background image</altlabel>
+<onclick>Skin.SetImage(CustomSettings)</onclick>
+<altclick>Skin.Reset(CustomSettings)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+
+<control type="togglebutton" id="117">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomSettingsFolder)</onclick>
+<onclick>Skin.SetBool(CustomSettingsFoldOn)</onclick>
+<onclick>Skin.Reset(CustomSettings)</onclick>
+<altclick>Skin.Reset(CustomSettingsFolder)</altclick>
+<altclick>Skin.Reset(CustomSettingsFoldOn)</altclick>
+<label>Set Settings background folder</label>
+<altlabel>Clear Settings background folder</altlabel>
+<usealttexture>Skin.String(CustomSettingsFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="118">
+<include>customsettingsbutton</include>
+<label>Set Sub-Menu background image</label>
+<altlabel>Reset Sub-Menu background image</altlabel>
+<onclick>Skin.SetImage(CustomSub)</onclick>
+<altclick>Skin.Reset(CustomSub)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="119">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomsubFolder)</onclick>
+<onclick>Skin.SetBool(CustomsubFoldOn)</onclick>
+<onclick>Skin.Reset(Customsub)</onclick>
+<altclick>Skin.Reset(CustomsubFolder)</altclick>
+<altclick>Skin.Reset(CustomsubFoldOn)</altclick>
+<label>Set Sub-Menu background folder</label>
+<altlabel>Clear Sub-Menu background folder</altlabel>
+<usealttexture>Skin.String(CustomSubFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="120">
+<include>customsettingsbutton</include>
+<label>Set Single Default background image</label>
+<altlabel>Reset Single Default background image</altlabel>
+<onclick>Skin.SetImage(Customdef)</onclick>
+<altclick>Skin.Reset(Customdef)</altclick>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+<control type="togglebutton" id="121">
+<include>customsettingsbutton</include>
+<onclick>Skin.SetPath(CustomdefFolder)</onclick>
+<onclick>Skin.SetBool(CustomdefFoldOn)</onclick>
+<onclick>Skin.Reset(Customdef)</onclick>
+<altclick>Skin.Reset(CustomdefFolder)</altclick>
+<altclick>Skin.Reset(CustomdefFoldOn)</altclick>
+<label>Set Single Default background folder</label>
+<altlabel>Clear Single Default background folder</altlabel>
+<usealttexture>Skin.String(CustomdefFolder)</usealttexture>
+<visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
+</control>
+
+</control>
+
+</control>
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>453</posx>
+<posy>120</posy>
+<width>241</width>
+<height>220</height>
+<texture>Plot panel.png</texture>
+<visible allowhiddenfocus="true">ControlGroup(32).HasFocus()</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomMenu)</info>
+<visible>Control.HasFocus(98)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>-</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomMenuFolder)</info>
+<visible>Control.HasFocus(99)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomMovies)</info>
+<visible>Control.HasFocus(100)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Movies</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomMoviesFolder)</info>
+<visible>Control.HasFocus(101)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomTV)</info>
+<visible>Control.HasFocus(102)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>TV</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomTVFolder)</info>
+<visible>Control.HasFocus(103)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomPictures)</info>
+<visible>Control.HasFocus(104)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Photos</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomPicturesFolder)</info>
+<visible>Control.HasFocus(105)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomMusic)</info>
+<visible>Control.HasFocus(106)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Music</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomMusicFolder)</info>
+<visible>Control.HasFocus(107)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomApps)</info>
+<visible>Control.HasFocus(108)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Apps</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomAppsFolder)</info>
+<visible>Control.HasFocus(109)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomScripts)</info>
+<visible>Control.HasFocus(110)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Scripts</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomScriptsFolder)</info>
+<visible>Control.HasFocus(111)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomFiles)</info>
+<visible>Control.HasFocus(112)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Files</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomFilesFolder)</info>
+<visible>Control.HasFocus(113)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomWeather)</info>
+<visible>Control.HasFocus(114)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>weather</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomWeatherFolder)</info>
+<visible>Control.HasFocus(115)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomSettings)</info>
+<visible>Control.HasFocus(116)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>settings</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomSettingsFolder)</info>
+<visible>Control.HasFocus(117)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(CustomSub)</info>
+<visible>Control.HasFocus(118)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Sub Button Wallpaper</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomSubFolder)</info>
+<visible>Control.HasFocus(119)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<info>Skin.String(Customdef)</info>
+<visible>Control.HasFocus(120)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="multiimage">
+<imagepath>Default Wallpaper</imagepath>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<info>Skin.String(CustomdefFolder)</info>
+<visible>Control.HasFocus(121)</visible>
+<posx>460</posx>
+<posy>125</posy>
+<width>230</width>
+<height>200</height>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<controlgroup>
+
+<visible>Player.HasAudio</visible>
+<visible>!Skin.HasSetting(music-info)</visible>
+
+<posy>-59</posy>
+<posx>50</posx>
+
+
+<control>
+<description>Music Gradient</description>
+<type>image</type>
+<posx>400</posx>
+<posy>0</posy>
+<width>465</width>
+<height>69</height>
+<texture>button-focus.png</texture>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Gradient</description>
+<type>image</type>
+<posx>385</posx>
+<posy>0</posy>
+<width>15</width>
+<height>69</height>
+<texture>Nowplaying.png</texture>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Cover Image</description>
+<type>image</type>
+<posx>610</posx>
+<posy>1</posy>
+<width>53</width>
+<height>65</height>
+<texture>case1.png</texture>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Cover Image</description>
+<type>image</type>
+<posx>617</posx>
+<posy>5</posy>
+<width>43</width>
+<height>56</height>
+<texture>defaultAlbumCover.png</texture>
+<info>MusicPlayer.Cover</info>
+<visible>Player.HasAudio</visible>
+</control>
+<control>
+<description>Music Cover Image</description>
+<type>image</type>
+<posx>612</posx>
+<posy>1</posy>
+<width>43</width>
+<height>65</height>
+<texture>case2.png</texture>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Artist Label</description>
+<type>label</type>
+<width>200</width>
+<posx>605</posx>
+<posy>2</posy>
+<info>MusicPlayer.Artist</info>
+<align>right</align>
+<font>font12</font>
+<scroll>true</scroll>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Title Label</description>
+<type>label</type>
+<width>200</width>
+<posx>605</posx>
+<posy>16</posy>
+<info>MusicPlayer.Title</info>
+<align>right</align>
+<font>font12</font>
+<scroll>true</scroll>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Album Label</description>
+<type>label</type>
+<width>200</width>
+<posx>605</posx>
+<posy>31</posy>
+<info>MusicPlayer.Album</info>
+<align>right</align>
+<font>font12</font>
+<scroll>true</scroll>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Time Label</description>
+<type>label</type>
+<posx>605</posx>
+<posy>48</posy>
+<label>$INFO[Musicplayer.Time] / $INFO[Musicplayer.Duration]</label>   
+<align>right</align>
+<font>font12</font>
+<visible>Player.HasAudio</visible>
+</control>
+
+<control>
+<description>Music Gradient</description>
+<type>image</type>
+<posx>400</posx>
+<posy>0</posy>
+<width>465</width>
+<height>69</height>
+<texture>glass3.png</texture>
+<visible>Player.HasAudio</visible>
+</control>
+
+
+<animation effect="slide" end="0,89" delay="5000" time="300" condition="Player.HasAudio">Conditional</animation>
+<animation effect="slide" end="0,-89" time="300">Windowclose</animation>
+
+</controlgroup>
+
+
+</controls>
+</window>
