@@ -1,12 +1,11 @@
 ﻿########################################################
 # VideoMonkey Catcher list
 ########################################################
-version=1
-########################################################
 # name: str
 # data: *%s*
 # header str|str
 # url: *%s* or str
+# ext_target: RegEx
 # target: RegEx
 ########################################################
 # Catcher sites
@@ -16,10 +15,9 @@ url=http://www.2video.de/index.php?dl=%s&action=download
 target=<div id=\"box\">[^<]*<h2>Download</h2>[^<]*<p><a href=\"([^\"]+)\" target=\"_blank\">
 ########################################################
 name=keepvid.com
-data=url=%s&site=aa
+url=http://keepvid.com/?url=%s
 header=Referer|http://keepvid.com/
-url=http://keepvid.com/megaupload/keepvid.php
-target=Original link: <a href=\"[^\"]+\">[^<]+</a><br /><a href=\"([^\"]+)\"><b>[^D]+Download[^<]+</b>
+target=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">
 ########################################################
 name=viloader.net
 data=action=formDownload&url=%s&json=false
@@ -49,4 +47,8 @@ data=data[url]=%s
 header=Referer|http://www.atrapavideo.com/en/
 url=http://www.atrapavideo.com/video
 target=so.addVariable\('file','(.+?.flv)
+########################################################
+name=degrab.de
+url=http://www.degrab.de/?url=%s
+target=klicke bitte auf diesen Link: <a href=\"([^\"]+)\"
 ########################################################

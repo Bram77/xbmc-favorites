@@ -1,7 +1,6 @@
 ﻿########################################################
-# VideoMonkey Plugin entry list
+# VideoMonkey Plugin static entry list
 ########################################################
-version=1
 title=VideoMonkey
 ########################################################
 # TV sites
@@ -24,33 +23,6 @@ name=video.monkey.locale|30104
 type=rss
 thumb=video.monkey.image|sites.png
 url=more.sites.list
-########################################################
-# Video sites
-########################################################
-name=Dailymotion
-type=rss
-thumb=video.monkey.image|dailymotion.png
-url=dailymotion.com.cfg
-########################################################
-name=YouTube
-type=rss
-thumb=video.monkey.image|youtube.png
-url=youtube.com.cfg
-########################################################
-name=GoogleVideo
-type=rss
-thumb=video.monkey.image|googlevideo.png
-url=googlevideo.com.cfg
-########################################################
-name=Metacafe
-type=rss
-thumb=video.monkey.image|metacafe.png
-url=metacafe.com.cfg
-########################################################
-name=Joox
-type=rss
-thumb=video.monkey.image|joox.png
-url=joox.net.cfg
 ########################################################
 # More adult sites
 ########################################################

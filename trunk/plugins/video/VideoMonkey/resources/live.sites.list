@@ -1,8 +1,7 @@
 ﻿########################################################
 # VideoMonkey live streams list
 ########################################################
-version=1
-title=Live
+title=Live Streams
 ########################################################
 # Regions
 ########################################################
@@ -11,25 +10,20 @@ type=once
 thumb=video.monkey.image|globe.png
 url=live.region.list
 ########################################################
-# Favourites live streams
+# Genres
 ########################################################
-name=GIGA (DE)
-type=live
-thumb=video.monkey.image|giga.png
-url=mms://stream.giga.de/GIGA
+name=video.monkey.locale|30114
+type=once
+thumb=video.monkey.image|sport.png
+url=live.sport.list
 ########################################################
-name=Germany TV Motosport (DE)
-type=live
-thumb=video.monkey.image|germanytv_motorsport.png
-url=mms://195.122.130.135/speedup-tv_Motorsport-TV_10
+name=video.monkey.locale|30115
+type=once
+thumb=video.monkey.image|kids.png
+url=live.kids.list
 ########################################################
-name=MCM Top (FR)
-type=live
-thumb=video.monkey.image|mcm_top.png
-url=mms://vipmms9.yacast.net/mcm_top
-########################################################
-name=NRJ Hits (FR)
-type=live
-thumb=video.monkey.image|nrj_hits.png
-url=mms://vipnrj.yacast.net/nrj_tvhit
+name=video.monkey.locale|30116
+type=once
+thumb=video.monkey.image|music.png
+url=live.music.list
 ########################################################

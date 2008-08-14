@@ -11,11 +11,14 @@
     <string id="30007">Video speichern</string>
     <string id="30008">Download Pfad</string>
     <string id="30009">Fragen nach dem download vor dem Abspielen</string>
+    <string id="30010">Verknüpfung erstellen</string>
+    <string id="30011">Verknüpfung löschen</string>
 
     <string id="30050">Lade video herunter...</string>
     <string id="30051">Bitte warten.</string>
     <string id="30052">Wollen Sie dieses video herunterladen?</string>
     <string id="30053">Video download scheiterte. Versuche das video zu streamen...</string>
+    <string id="30054">Wollen Sie wirklich diese Verknüpfung löschen?</string>
 
     <string id="30100">Kategorien</string>
     <string id="30101">Unterkategorien</string>
@@ -31,4 +34,7 @@
     <string id="30111">Verfeinern</string>
     <string id="30112">Region</string>
     <string id="30113">Zeitspanne</string>
+    <string id="30114">Sport</string>
+    <string id="30115">Kinder</string>
+    <string id="30116">Musik</string>
 </strings>

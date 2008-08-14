@@ -1,8 +1,8 @@
 ﻿########################################################
 # DE live streams list
 ########################################################
-version=1
-title=Live
+title=DE Live
+action=add
 ########################################################
 # Live streams
 ########################################################
@@ -26,10 +26,10 @@ type=live
 thumb=video.monkey.image|3sat.png
 url=mms://c36000-l.w.core.cdn.streamfarm.net/36000zdf/live/3546zdf/encoder.zdf.3sat_vh_16zu9.wmv
 ########################################################
-name=Toon TV
-type=live
-thumb=video.monkey.image|toon_tv.png
-url=mms://85.214.87.175/toon-tv
+#name=Toon TV
+#type=live
+#thumb=video.monkey.image|toon_tv.png
+#url=mms://85.214.87.175/toon-tv
 ########################################################
 name=9live
 type=live

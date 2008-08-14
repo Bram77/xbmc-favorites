@@ -1,7 +1,7 @@
 ﻿########################################################
 # Region specific live streams
 ########################################################
-version=1
+title=Live - Regions
 ########################################################
 name=EN
 type=rss
@@ -32,4 +32,9 @@ name=THA
 type=rss
 thumb=video.monkey.image|tha.png
 url=live.tha.list
+########################################################
+name=VN
+type=rss
+thumb=video.monkey.image|vn.png
+url=live.vn.list
 ########################################################
