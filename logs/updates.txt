@@ -1,4 +1,6 @@
-  27-07-2008 :: [skin]              ~ Updated the "Focus" skin to version Alpha 4
+  14-08-2008 :: [skin]              ~ Updated the "MARK-III" skin to the latest SVN version
+  14-08-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  14-08-2008 :: [skin]              ~ Updated the "Focus" skin to version Alpha 4
   27-07-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   27-07-2008 :: [skin]              ~ Removed two of the additional "Project Mayhem III" themes (reached quota limit)
   27-07-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
