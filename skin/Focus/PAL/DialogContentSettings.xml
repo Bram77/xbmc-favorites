@@ -1,15 +1,7 @@
 <window id="132">
 	<defaultcontrol>3</defaultcontrol>
-	
-	<animation type="WindowOpen">
-		<effect type="zoom" start="50" end="100" center="212,125" tween="back" time="250" />
-		<effect type="fade" start="0" end="300" time="400" />
-	</animation>
-	<animation type="WindowClose">
-		<effect type="zoom" start="100" end="50" center="212,125" time="150" />
-		<effect type="fade" start="300" end="0" time="200" />
-	</animation>
-	
+	<include>dialog-open</include>
+
 	<coordinates>
 		<system>1</system>
 		<posx>183</posx>
@@ -55,28 +47,10 @@
 				<onleft>3</onleft>
 				<onright>3</onright>
 				<disabledcolor>disabled</disabledcolor>
+				<spinwidth>15</spinwidth>
+				<spinheight>15</spinheight>
 			</control>
-			
-			<control type="image">
-				<description>scraper background</description>
-				<posx>290</posx>
-				<posy>87</posy>
-				<width>80</width>
-				<height>130</height>
-				<texture>list-nofocus.png</texture>
-				<visible>false</visible>
-			</control>
-			
-			<control type="image">
-				<description>scraper image</description>
-				<posx>295</posx>
-				<posy>87</posy>
-				<width>70</width>
-				<height>108</height>
-				<aspectratio>keep</aspectratio>
-				<info>ListItem.Icon</info>
-				<visible>false</visible>
-			</control>
+
 
 			<control type="list" id="4">
 				<posx>0</posx>
@@ -110,7 +84,7 @@
 						<posy>0</posy>
 						<width>345</width>
 						<height>28</height>
-						<font>h4</font>
+						<font>menu</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -146,7 +120,7 @@
 						<posy>0</posy>
 						<width>345</width>
 						<height>28</height>
-						<font>h4</font>
+						<font>menu</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -178,7 +152,8 @@
 				<font>h4D</font>
 				<texturefocus>list-focus.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<textoffsetx>6</textoffsetx>
+				<textoffsety>2</textoffsety>
+				<textoffsetx>10</textoffsetx>
 				<textureradiofocus>check-box.png</textureradiofocus>
 				<textureradionofocus>check-boxNF.png</textureradionofocus>
 			</control>
@@ -189,14 +164,13 @@
 				<posy>350</posy>
 				<width>110</width>
 				<height>36</height>
-				<textoffsety>1</textoffsety>
 				<aligny>-</aligny>
 				<align>center</align>
+				<textoffsety>3</textoffsety>
 				<label>5</label>
 				<font>buttonD</font>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
-				<focusedcolor>button-alttext</focusedcolor>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>29</onleft>
 				<onright>28</onright>
 				<onup>30</onup>
@@ -209,13 +183,13 @@
 				<posy>350</posy>
 				<width>90</width>
 				<height>36</height>
-				<textoffsety>1</textoffsety>
+				<aligny>-</aligny>
 				<align>center</align>
+				<textoffsety>3</textoffsety>
 				<label>186</label>
 				<font>buttonD</font>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
-				<focusedcolor>button-alttext</focusedcolor>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>6</onleft>
 				<onright>29</onright>
 				<onup>30</onup>
@@ -228,13 +202,13 @@
 				<posy>350</posy>
 				<width>90</width>
 				<height>36</height>
-				<textoffsety>1</textoffsety>
+				<aligny>-</aligny>
 				<align>center</align>
+				<textoffsety>3</textoffsety>
 				<label>222</label>
 				<font>buttonD</font>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
-				<focusedcolor>button-alttext</focusedcolor>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>28</onleft>
 				<onright>6</onright>
 				<onup>30</onup>

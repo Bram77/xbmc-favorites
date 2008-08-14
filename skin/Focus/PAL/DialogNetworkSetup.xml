@@ -4,17 +4,17 @@
 	<animation effect="fade" time="400">WindowClose</animation>
 	<coordinates>
 		<system>1</system>
-		<posx>165</posx>
-		<posy>195</posy>
+		<posx>140</posx>
+		<posy>155</posy>
 	</coordinates>
 	<controls>
 		
 		<control type="image" id="0">
 			<description>background image</description>
-			<posx>-35</posx>
+			<posx>-30</posx>
 			<posy>-30</posy>
-			<width>512</width>
-			<height>395</height>
+			<width>500</width>
+			<height>380</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
 		
@@ -33,7 +33,7 @@
 		<control type="spincontrolex" id="10">
 			<description>Protocol SpinControl</description>
 			<posx>0</posx>
-			<posy>50</posy>
+			<posy>40</posy>
 			<height>33</height>
 			<width>437</width>
 			<texturefocus>list-focus.png</texturefocus>
@@ -42,6 +42,8 @@
 			<texturedown>scroll-down.png</texturedown>
 			<textureupfocus>scroll-up-focus.png</textureupfocus>
 			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<spinwidth>15</spinwidth>
+			<spinheight>15</spinheight>
 			<font>h4</font>
 			<textcolor>button-text</textcolor>
 			<disabledcolor>60d0d0d0</disabledcolor>
@@ -59,7 +61,7 @@
 		<control type="button" id="11">
 			<description>Server Name Button</description>
 			<posx>0</posx>
-			<posy>86</posy>
+			<posy>76</posy>
 			<width>325</width>
 			<height>33</height>
 			<font>h4</font>
@@ -79,17 +81,16 @@
 		<control type="button" id="12">
 			<description>Server Browse Button</description>
 			<posx>337</posx>
-			<posy>86</posy>
+			<posy>76</posy>
 			<width>100</width>
-			<height>32</height>
+			<height>33</height>
 			<font>buttonD</font>
 			<textcolor>button-text</textcolor>
 			<label>1024</label>
 			<align>center</align>
 			<textoffsety>0</textoffsety>
-			<texturenofocus>button2.png</texturenofocus>
-			<texturefocus>button2-focus.png</texturefocus>
-			<focusedcolor>button-alttext</focusedcolor>
+			<texturenofocus>buttonD.png</texturenofocus>
+			<texturefocus>buttonD-focus.png</texturefocus>
 			<onup>10</onup>
 			<onleft>11</onleft>
 			<onright>11</onright>
@@ -99,7 +100,7 @@
 		<control type="button" id="16">
 			<description>Remote path Button</description>
 			<posx>0</posx>
-			<posy>122</posy>
+			<posy>112</posy>
 			<width>437</width>
 			<height>33</height>
 			<font>h4</font>
@@ -119,7 +120,7 @@
 		<control type="button" id="13">
 			<description>Port Button</description>
 			<posx>0</posx>
-			<posy>158</posy>
+			<posy>148</posy>
 			<width>437</width>
 			<height>33</height>
 			<font>h4</font>
@@ -137,7 +138,7 @@
 		<control type="button" id="14">
 			<description>Username Button</description>
 			<posx>0</posx>
-			<posy>194</posy>
+			<posy>184</posy>
 			<width>437</width>
 			<height>33</height>
 			<font>h4</font>
@@ -145,7 +146,7 @@
 			<aligny>-</aligny>
 			<textoffsetx>10</textoffsetx>
 			<texturefocus>list-focus.png</texturefocus>
-			<texturenofocus>list-nofocus.png</texturenofocus>
+			<texturenofocus>dialog-input.png</texturenofocus>
 			<label>1014</label>
 			<onup>13</onup>
 			<onleft>14</onleft>
@@ -155,7 +156,7 @@
 		<control type="button" id="15">
 			<description>Password Button</description>
 			<posx>0</posx>
-			<posy>230</posy>
+			<posy>220</posy>
 			<width>437</width>
 			<height>33</height>
 			<font>h4</font>
@@ -163,7 +164,7 @@
 			<aligny>-</aligny>
 			<textoffsetx>10</textoffsetx>
 			<texturefocus>list-focus.png</texturefocus>
-			<texturenofocus>list-nofocus.png</texturenofocus>
+			<texturenofocus>dialog-input.png</texturenofocus>
 			<label>15052</label>
 			<onup>14</onup>
 			<onleft>15</onleft>
@@ -173,17 +174,17 @@
 		
 		<control type="button" id="18">
 			<description>Ok Button</description>
-			<posx>230</posx>
-			<posy>290</posy>
-			<width>100</width>
+			<posx>245</posx>
+			<posy>275</posy>
+			<width>90</width>
 			<height>36</height>
 			<font>buttonD</font>
 			<focusedcolor>button-alttext</focusedcolor>
 			<align>center</align>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
-			<texturenofocus>button2.png</texturenofocus>
-			<texturefocus>button2-focus.png</texturefocus>
+			<textoffsety>3</textoffsety>
+			<texturenofocus>buttonD.png</texturenofocus>
+			<texturefocus>buttonD-focus.png</texturefocus>
 			<label>186</label>
 			<onup>15</onup>
 			<onleft>19</onleft>
@@ -192,17 +193,17 @@
 		</control>
 		<control type="button" id="19">
 			<description>Cancel Button</description>
-			<posx>340</posx>
-			<posy>290</posy>
-			<width>100</width>
+			<posx>345</posx>
+			<posy>275</posy>
+			<width>90</width>
 			<height>36</height>
 			<font>buttonD</font>
 			<focusedcolor>button-alttext</focusedcolor>
 			<align>center</align>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
-			<texturenofocus>button2.png</texturenofocus>
-			<texturefocus>button2-focus.png</texturefocus>
+			<textoffsety>3</textoffsety>
+			<texturenofocus>buttonD.png</texturenofocus>
+			<texturefocus>buttonD-focus.png</texturefocus>
 			<label>222</label>
 			<onup>15</onup>
 			<onleft>18</onleft>

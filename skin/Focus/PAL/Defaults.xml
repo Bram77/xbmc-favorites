@@ -223,12 +223,14 @@
 		<width>22</width>
 		<height>22</height>
 		<font>H4</font>
-		<reverse>yes</reverse>
+		<reverse>no</reverse>
 		<textcolor>button-text</textcolor>
 		<disabledcolor>60d0d0d0</disabledcolor>
 		<subtype>text</subtype>
 		<textoffsetx>-6</textoffsetx>
 	</default>
+	
+	
 	<default type="spincontrolex">
 		<posx>530</posx>
 		<posy>150</posy>
@@ -245,7 +247,7 @@
 		<textcolor>button-text</textcolor>
 		<disabledcolor>60d0d0d0</disabledcolor>
 		<textoffsetx>8</textoffsetx>
-		<reverse>yes</reverse>
+		<reverse>no</reverse>
 	</default>
 	
 	

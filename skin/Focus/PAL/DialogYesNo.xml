@@ -27,7 +27,7 @@
 				<width>342</width>	
 				<label>-</label>
 				<align>center</align>
-				<font>h1</font>
+				<font>h1D</font>
 				<textcolor>button-text</textcolor>
 			</control>
 		
@@ -71,16 +71,16 @@
 				<description>Yes button</description>
 				<posx>80</posx>
 				<posy>135</posy>
-				<width>100</width>
+				<width>90</width>
 				<height>36</height>
 				<label>107</label>
 				<font>buttonD</font>
 				<focusedcolor>button-alttext</focusedcolor>
-				<textoffsety>2</textoffsety>
-				<aligny>-</aligny>
+				<textoffsety>0</textoffsety>
+				<aligny>center</aligny>
 				<align>center</align>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<onup>11</onup>
@@ -89,18 +89,17 @@
 			
 			<control type="button" id="10">
 				<description>No button</description>
-				<posx>190</posx>
+				<posx>180</posx>
 				<posy>135</posy>
-				<width>100</width>
+				<width>90</width>
 				<height>36</height>
 				<label>106</label>
 				<font>buttonD</font>
-				<focusedcolor>button-alttext</focusedcolor>
 				<align>center</align>
-				<textoffsety>2</textoffsety>
-				<aligny>-</aligny>
-				<texturenofocus>button2.png</texturenofocus>
-				<texturefocus>button2-focus.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<aligny>center</aligny>
+				<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<onup>10</onup>

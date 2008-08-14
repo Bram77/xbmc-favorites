@@ -2,19 +2,16 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
-	
 	<controls>
 
 		<include>background</include>
 		<include>allscreens</include>
-		<include>Fake-Overlay</include>
-		<include>mediaoverlay</include>
-		
+
 		<control type="label">
 			<description>description label</description>
 			<include>home-menubar</include>
 			<posx>0</posx>
-			<posy>4</posy>
+			<posy>5</posy>
 			<width>752</width>
 			<align>center</align>
 			<label>5</label>
@@ -156,7 +153,7 @@
 			  
 			  <item id="5">
 			    <label>8</label>
-			    <label2>$LOCALIZE[396]</label2>
+			    <label2>$LOCALIZE[396], $LOCALIZE[20026]</label2>
 			    <icon>settings-weather-nofocus.png</icon>
 			    <thumb>settings-weather-nofocus.png</thumb>
 			    <onclick>ActivateWindow(MyWeatherSettings)</onclick>
@@ -198,7 +195,7 @@
 			  
 			  <item id="10">
 			    <label>20077</label>
-			    <label2>$LOCALIZE[31014], $LOCALIZE[31015], $LOCALIZE[31016], $LOCALIZE[470]</label2>
+			    <label2>$LOCALIZE[31015], $LOCALIZE[31016], $LOCALIZE[31020], $LOCALIZE[31022], $LOCALIZE[470]</label2>
 			    <icon>settings-skin-nofocus.png</icon>
 			    <thumb>settings-skin-nofocus.png</thumb>
 			    <onclick>ActivateWindow(59)</onclick>
@@ -208,10 +205,6 @@
 		      
 		</control>      
 
-		      
-		      
-		
-		
-		
-		</controls>
-	</window>
+	</controls>
+
+</window>

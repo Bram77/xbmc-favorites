@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">5</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<include>allscreens</include>
-	<include>dialog-ani</include>
+	<include>dialog-open-fs</include>
 	
 	<controls>
 
@@ -13,6 +13,27 @@
 			<width>740</width>
 			<height>592</height>
 			<texture>infodialog.bmp</texture>
+		</control>
+		
+		<control type="image" id="999">
+			<description>list item Icon</description>
+			<posx>20</posx>
+			<posy>40</posy>
+			<width>230</width>
+			<height>230</height>
+			<texture>defaultAlbumCover.png</texture>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(albums)</visible>
+		</control>
+		<control type="image">
+			<description>list item icon reflection</description>
+			<posx>20</posx>
+			<posy>270</posy>
+			<width>230</width>
+			<height>230</height>
+			<texture flipy="true" diffuse="fade.png">defaultAlbumCover.png</texture>
+			<aspectratio align="top">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(albums)</visible>
 		</control>
 	
 		<control type="image" id="999">
@@ -36,16 +57,16 @@
 			<aspectratio align="left">keep</aspectratio>
 			<visible>container.content(albums)</visible>
 		</control>
-		
+
 		<control type="image" id="999">
-			<description>list item icon</description>
+			<description>list item Icon</description>
 			<posx>40</posx>
 			<posy>40</posy>
 			<width>170</width>
 			<height>170</height>
-			<info>ListItem.Icon</info>
+			<texture>defaultAlbumCover.png</texture>
 			<aspectratio align="bottom">keep</aspectratio>
-			<visible>container.content(artists)</visible>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(artists)</visible>
 		</control>
 		<control type="image">
 			<description>list item icon reflection</description>
@@ -53,7 +74,28 @@
 			<posy>198</posy>
 			<width>170</width>
 			<height>170</height>
-			<info>ListItem.Icon</info>
+			<texture flipy="true" diffuse="fade.png">defaultAlbumCover.png</texture>
+			<aspectratio align="top">keep</aspectratio>
+			<visible>IsEmpty(ListItem.Thumb) + Container.Content(artists)</visible>
+		</control>
+
+		<control type="image" id="999">
+			<description>list item thumb</description>
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>170</width>
+			<height>170</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio align="bottom">keep</aspectratio>
+			<visible>container.content(artists)</visible>
+		</control>
+		<control type="image">
+			<description>list item thumb reflection</description>
+			<posx>40</posx>
+			<posy>198</posy>
+			<width>170</width>
+			<height>170</height>
+			<info>ListItem.Thumb</info>
 			<texture flipy="true" diffuse="fade.png">-</texture>
 			<aspectratio align="top">keep</aspectratio>
 			<visible>container.content(artists)</visible>
@@ -64,8 +106,8 @@
 		<visible>container.content(albums)</visible>
 		
 		<control type="fadelabel" id="20">
-			<description>ALBUM</description>
-			<posx>230</posx>
+			<description>Album</description>
+			<posx>250</posx>
 			<posy>40</posy>
 			<width>700</width>
 			<font>h1</font>
@@ -75,11 +117,11 @@
 		
 		<control type="label">
 			<description>Artist</description>	
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>80</posy>
 			<width>420</width>
-			<label>171</label>
-			<font>h2</font>
+			<label>557</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -90,17 +132,17 @@
 			<scroll>true</scroll>
 			<align>right</align>
 			<label>-</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label">
 			<description>Genre</description>	
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>110</posy>
 			<width>420</width>
-			<label>174</label>
-			<font>h2</font>
+			<label>515</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -110,17 +152,17 @@
 			<posy>110</posy>
 			<width>360</width>
 			<label>-</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label">
 			<description>Year</description>	
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>140</posy>
 			<width>420</width>
-			<label>201</label>
-			<font>h2</font>
+			<label>345</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -130,16 +172,16 @@
 			<posy>140</posy>
 			<width>200</width>
 			<label>-</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label" id="1">
 			<description>Rating</description>
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>170</posy>
-			<label>173</label>
-			<font>h2</font>
+			<label>563</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -149,16 +191,16 @@
 			<posy>170</posy>
 			<width>360</width>
 			<label fallback="416">$INFO[ListItem.Rating]</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label">
 			<description>Moods</description>
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>200</posy>
 			<label>175</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -168,16 +210,16 @@
 			<posx>320</posx>
 			<posy>200</posy>
 			<label fallback="416">$INFO[ListItem.Property(AlbumMoods)]</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="label" id="1">
 			<description>Styles</description>
-			<posx>230</posx>
+			<posx>250</posx>
 			<posy>230</posy>
 			<label>176</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		
@@ -187,22 +229,22 @@
 			<posx>320</posx>
 			<posy>230</posy>
 			<label fallback="416">$INFO[ListItem.Property(AlbumStyles)]</label>
-			<font>h2</font>
+			<font>description</font>
 			<textcolor>label-text</textcolor>
 		</control>
 		
 		<control type="textbox" id="4">
 			<description>textarea</description>
 			<posx>40</posx>
-			<posy>300</posy>
+			<posy>295</posy>
 			<width>640</width>
-			<height>180</height>
-			<onleft>5</onleft>
-			<onright>5</onright>
-			<onup>5</onup>
-			<ondown>5</ondown>
-			<spinposx>0</spinposx>
-			<spinposy>220</spinposy>
+			<height>185</height>
+			<onleft>4</onleft>
+			<onright>4</onright>
+			<onup>999</onup>
+			<ondown>999</ondown>
+			<spinposx>605</spinposx>
+			<spinposy>195</spinposy>
 			<font>description</font>
 			<textcolor>button-text</textcolor>
 			<align>justify</align>
@@ -215,7 +257,7 @@
 	<!--- ARTISTS --------------------------------->
 	
 	<control type="group">
-			<visible>container.content(artists)</visible>
+		<visible>container.content(artists)</visible>
 			
 		<control type="label">
 			<description>Artist</description>
@@ -362,23 +404,23 @@
 			<textcolor>label-text</textcolor>
 			<scroll>true</scroll>
 		</control>
-		
-		
 
 		<control type="textbox" id="4">
 			<description>textarea</description>
 			<posx>40</posx>
 			<posy>235</posy>
 			<width>640</width>
-			<height>235</height>
+			<height>230</height>
 			<onleft>9000</onleft>
 			<onright>61</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
+			<align>justify</align>
 			<font>description</font>
-			<pagecontrol>61</pagecontrol>
 			<visible>!Control.IsVisible(50)</visible>
 			<include>autoscrollmedium</include>
+			<spinposx>610</spinposx>
+			<spinposy>260</spinposy>
 			<info>ListItem.Property(Biography)</info>
 		</control>
 	</control>
@@ -406,7 +448,7 @@
 			<texturenofocus>button.png</texturenofocus>
 			<onleft>10</onleft>
 			<onright>6</onright>
-			<onup>50</onup>
+			<onup>4</onup>
 			<ondown>-</ondown>
 			<textcolor>button-text</textcolor>
 		</control>
@@ -425,7 +467,7 @@
 			<texturenofocus>button.png</texturenofocus>
 			<onleft>5</onleft>
 			<onright>10</onright>
-			<onup>50</onup>
+			<onup>4</onup>
 			<ondown>-</ondown>
 			<textcolor>button-text</textcolor>
 		</control>
@@ -444,7 +486,7 @@
 			<texturenofocus>button.png</texturenofocus>
 			<onleft>6</onleft>
 			<onright>5</onright>
-			<onup>50</onup>
+			<onup>4</onup>
 			<ondown>-</ondown>
 			<textcolor>button-text</textcolor>
 		</control>

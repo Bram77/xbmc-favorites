@@ -26,7 +26,7 @@
 				<align>center</align>
 				<font>h4</font>
 				<include>fadeinout</include>	
-				<visible>Skin.HasSetting(overlay) + ![Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(115) | Window.IsActive(500) | Window.IsActive(28)]</visible>
+				<visible>!Skin.HasSetting(overlay) + ![Window.IsActive(112) | Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(115) | Window.IsActive(500) | Window.IsActive(28)]</visible>
 				<animation effect="fade" start="100" end="0" time="150" condition="[Container.Content(episodes) + Control.IsVisible(54)]">Conditional</animation>
 			</control>
 		

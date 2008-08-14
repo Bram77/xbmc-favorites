@@ -37,8 +37,8 @@
 		
 		<control type="label">
 			<description>Song Title value</description>
-			<posx>230</posx>
-			<posy>30</posy>
+			<posx>250</posx>
+			<posy>38</posy>
 			<width>480</width>
 			<font>h1</font>
 			<info>ListItem.Title</info>
@@ -46,71 +46,71 @@
 		
 		<control type="label">
 			<description>Artist Label</description>
-			<posx>230</posx>
-			<posy>80</posy>
+			<posx>250</posx>
+			<posy>87</posy>
 			<width>90</width>
-			<label>Artist:</label>
-			<font>h2</font>
+			<label>$LOCALIZE[557]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="fadelabel">
 			<description>Artist value</description>
-			<posx>320</posx>
-			<posy>80</posy>
+			<posx>340</posx>
+			<posy>87</posy>
 			<width>190</width>
 			<info>ListItem.Artist</info>
-			<font>h2</font>
+			<font>description</font>
 		</control>
 		
 		<control type="label">
 			<description>Album Label</description>
-			<posx>230</posx>
-			<posy>110</posy>
+			<posx>250</posx>
+			<posy>117</posy>
 			<width>90</width>
-			<label>170</label>
-			<font>h2</font>
+			<label>$LOCALIZE[558]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="fadelabel">
 			<description>Album value</description>
-			<posx>320</posx>
-			<posy>110</posy>
+			<posx>340</posx>
+			<posy>117</posy>
 			<width>400</width>
 			<info>ListItem.Album</info>
-			<font>h2</font>
+			<font>description</font>
 		</control>
 		
 		<control type="label">
 			<description>Year Label</description>
-			<posx>230</posx>
-			<posy>140</posy>
+			<posx>250</posx>
+			<posy>147</posy>
 			<width>90</width>
-			<label>201</label>
-			<font>h2</font>
+			<label>$LOCALIZE[345]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="fadelabel">
 			<description>Year value</description>
-			<posx>320</posx>
-			<posy>140</posy>
+			<posx>340</posx>
+			<posy>147</posy>
 			<width>190</width>
 			<info>ListItem.Year</info>
-			<font>h2</font>
+			<font>description</font>
 		</control>
 		
 		<control type="label">
 			<description>Track Number Label</description>
-			<posx>230</posx>
-			<posy>170</posy>
+			<posx>250</posx>
+			<posy>177</posy>
 			<width>90</width>
-			<label>$LOCALIZE[435] :</label>
-			<font>h2</font>
+			<label>$LOCALIZE[554]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="fadelabel">
 			<description>Track Number value</description>
-			<posx>320</posx>
-			<posy>170</posy>
+			<posx>340</posx>
+			<posy>177</posy>
 			<width>190</width>
 			<info>ListItem.TrackNumber</info>
 			<font>h2</font>
@@ -118,47 +118,47 @@
 
 		<control type="label">
 			<description>Genre Label</description>
-			<posx>230</posx>
-			<posy>200</posy>
+			<posx>250</posx>
+			<posy>207</posy>
 			<width>90</width>
-			<label>174</label>
-			<font>h2</font>
+			<label>$LOCALIZE[515]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="fadelabel">
 			<description>Genre Value</description>
-			<posx>320</posx>
-			<posy>200</posy>
+			<posx>340</posx>
+			<posy>207</posy>
 			<width>190</width>
 			<info>ListItem.Genre</info>
-			<font>h2</font>
+			<font>description</font>
 		</control>
 		
 		<control type="label">
 			<description>Rating Label</description>
-			<posx>230</posx>
-			<posy>230</posy>
+			<posx>250</posx>
+			<posy>237</posy>
 			<width>90</width>
-			<label>173</label>
-			<font>h2</font>
+			<label>$LOCALIZE[563]:</label>
+			<font>description</font>
 			<textcolor>sublabel-text</textcolor>
 		</control>
 		<control type="image">
 			<description>Rating Value</description>
-			<posx>267</posx>
-			<posy>233</posy>
+			<posx>294</posx>
+			<posy>240</posy>
 			<width>190</width>
 			<height>24</height>
 			<info>ListItem.Rating</info>
 			<aspectratio>keep</aspectratio>
-			<font>h2</font>
+			<font>description</font>
 		</control>
 
 		<control type="textbox">
-			<description>textarea</description>
+			<description>track comments textarea</description>
 			<posx>40</posx>
 			<posy>300</posy>
-			<width>6800</width>
+			<width>640</width>
 			<height>200</height>
 			<info>ListItem.Comment</info>
 			<onleft>5</onleft>
@@ -168,6 +168,7 @@
 			<textcolor>button-text</textcolor>
 			<spinposx>3100</spinposx>
 			<spinposy>1900</spinposy>
+			<font>description</font>
 		</control>
 		
 		
@@ -181,11 +182,11 @@
 			<description>OK Button</description>
 			<posx>0</posx>
 			<width>110</width>
-			<height>34</height>
-			<font>menu</font>
+			<height>35</height>
+			<font>buttonD2</font>
 			<label>186</label>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
+			<textoffsety>1</textoffsety>
 			<align>center</align>
 			<texturefocus>button-focus.png</texturefocus>
 			<texturenofocus>button.png</texturenofocus>
@@ -200,11 +201,11 @@
 			<description>Get Thumb</description>
 			<posx>120</posx>
 			<width>110</width>
-			<height>34</height>
-			<font>menu</font>
+			<height>35</height>
+			<font>buttonD2</font>
 			<label>13405</label>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
+			<textoffsety>1</textoffsety>
 			<align>center</align>
 			<texturefocus>button-focus.png</texturefocus>
 			<texturenofocus>button.png</texturenofocus>
@@ -219,11 +220,11 @@
 			<description>Album Info</description>
 			<posx>240</posx>
 			<width>110</width>
-			<height>34</height>
-			<font>menu</font>
+			<height>35</height>
+			<font>buttonD2</font>
 			<label>10523</label>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
+			<textoffsety>1</textoffsety>
 			<align>center</align>
 			<texturefocus>button-focus.png</texturefocus>
 			<texturenofocus>button.png</texturenofocus>
@@ -238,11 +239,11 @@
 			<description>Rating Increase</description>
 			<posx>360</posx>
 			<width>110</width>
-			<height>34</height>
-			<font>menu</font>
+			<height>35</height>
+			<font>buttonD2</font>
 			<label>Rating +</label>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
+			<textoffsety>1</textoffsety>
 			<align>center</align>
 			<texturefocus>button-focus.png</texturefocus>
 			<texturenofocus>button.png</texturenofocus>
@@ -258,11 +259,11 @@
 			<description>Rating Decrease</description>
 			<posx>480</posx>
 			<width>110</width>
-			<height>34</height>
-			<font>menu</font>
+			<height>35</height>
+			<font>buttonD2</font>
 			<label>Rating -</label>
 			<aligny>-</aligny>
-			<textoffsety>2</textoffsety>
+			<textoffsety>1</textoffsety>
 			<align>center</align>
 			<texturefocus>button-focus.png</texturefocus>
 			<texturenofocus>button.png</texturenofocus>
@@ -275,12 +276,9 @@
 		</control>
 		
 	</control>
-
-	
-
 		
 	<control type="image">
-		<description>fake rating button</description>
+		<description>Fake Rating Button</description>
 		<posx>530</posx>
 		<posy>520</posy>
 		<width>120</width>

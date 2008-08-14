@@ -2,7 +2,7 @@
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Window.IsActive(130)</visible>
 	
-	<include>dialog-ani</include>
+	<include>dialog-open</include>
 	
 	<coordinates>
 		<system>1</system>

@@ -1,23 +1,16 @@
 <fonts>
-  <fontset id="Default" unicode="true">
-  	
-  	
+	<fontset id="Default" unicode="true">
+
+<!--- HOME --------------------------------->
   
-  <!--- HOME --------------------------------->
-  
+		<!--
 		<font>
 			<name>home</name>
-			<filename>segoeui.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>28</size>
-		</font>
-		
-		<font>
-			<name>menubar</name>
 			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>ff000000</shadow>
+			<shadow>FF000000</shadow>	
+			<size>32</size>
 		</font>
+		-->
 		
 		<font>
 			<name>homemenu</name>
@@ -28,8 +21,16 @@
 		
 		<font>
 			<name>rss</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans.ttf</filename>
+			<size>20</size>
+			<shadow>FF000000</shadow>
+		</font>
+		
+		<font>
+			<name>menubar</name>
+			<filename>DejaVuSans.ttf</filename>
 			<size>22</size>
+			<shadow>ff000000</shadow>
 		</font>
 		
 		
@@ -37,24 +38,24 @@
   	
 	  	<font>
 			<name>page</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans.ttf</filename>
 			<shadow>00000000</shadow>
-			<size>26</size>
+			<size>24</size>
 		</font>	
 
 		<font>
 			<name>date</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans-Bold.ttf</filename>
 			<shadow>ff000000</shadow>
-			<size>24</size>
+			<size>22</size>
 			<style>bold</style>
 		</font>
 		
 		<font>
 			<name>objects</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans.ttf</filename>
 			<shadow>99000000</shadow>
-			<size>24</size>
+			<size>20</size>
 		</font>
 
 		
@@ -62,43 +63,49 @@
 		
 		<font>
 			<name>menu</name>
-			<filename>Calibri.ttf</filename>
-			<size>20</size>
+			<filename>DroidSans.ttf</filename>
+			<size>18</size>
+			<shadow>ff000000</shadow>
+		</font>
+		
+		<font>
+			<name>Button</name>
+			<filename>DejaVuSans.ttf</filename>
+			<size>22</size>
+			<shadow>ff000000</shadow>
+		</font>
+		
+		<font>
+			<name>description</name>
+			<filename>DroidSans.ttf</filename>
+			<size>18</size>
 			<shadow>ff000000</shadow>
 		</font>
 		
 		<font>
 			<name>h1</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans-Bold.ttf</filename>
 			<shadow>FF000000</shadow>	
 			<size>28</size>
-			<style>bold</style>
 		</font>
 		
 		<font>
 			<name>h2</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<shadow>FF000000</shadow>	
 			<size>20</size>
 		</font>
-		
-		<font>
-			<name>description</name>
-			<filename>Calibri.ttf</filename>
-			<size>20</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
+
 		<font>
 			<name>h3</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<shadow>FF000000</shadow>	
 			<size>20</size>
 		</font>
 				
 		<font>
 			<name>h4</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<shadow>FF000000</shadow>
 			<size>20</size>
 		</font>
@@ -107,52 +114,43 @@
 <!--- DIALOGS ------------------------------>		
 		
 		<font>
-			<name>Button</name>
-			<filename>Calibri.ttf</filename>
-			<size>22</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>buttonD</name>
-			<filename>Calibri.ttf</filename>
-			<size>22</size>
-		</font>
-		
-		<font>
-			<name>buttonD2</name>
-			<filename>Calibri.ttf</filename>
-			<size>22</size>
-		</font>
-		
-		<font>
 			<name>h1D</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DroidSans-Bold.ttf</filename>
 			<shadow>FF000000</shadow>	
-			<size>26</size>
+			<size>24</size>
 		</font>
 	
 		<font>
 			<name>h2D</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>20</size>
 		</font>
 		
 		<font>
 			<name>h4D</name>
-			<filename>Calibri.ttf</filename>
+			<filename>DejaVuSans.ttf</filename>
 			<size>22</size>
+		</font>
+		
+		<font>
+			<name>buttonD</name>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
+		</font>
+		
+		<font>
+			<name>buttonD2</name>
+			<filename>DejaVuSans.ttf</filename>
+			<size>20</size>
 		</font>
 
 		<font>
 			<name>keyboard</name>
-			<filename>Calibri.ttf</filename>
-			<size>20</size>
+			<filename>DejaVuSans.ttf</filename>
+			<size>18</size>
 		</font>
 
-
-
-<!--- LEGACY ------------------------------>
+<!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
 
 		<font>
 			<name>font101</name>

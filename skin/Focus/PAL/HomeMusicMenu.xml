@@ -10,7 +10,7 @@
 			<posy>55</posy>
 			<onup>9000</onup>
 		
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(2) | ControlGroup(1200).HasFocus(0)</visible>	
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(2)</visible>	
 			
 			<control type="buttonscroller" id="700">
 				<visible allowhiddenfocus="true">Control.HasFocus(700)</visible>
