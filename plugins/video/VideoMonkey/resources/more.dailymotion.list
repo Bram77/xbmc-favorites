@@ -1,7 +1,7 @@
 ﻿########################################################
 # Dailymotion country specific sites
 ########################################################
-version=1
+title=Dailymotion - Countries
 ########################################################
 name=Dailymotion (EN)
 type=rss

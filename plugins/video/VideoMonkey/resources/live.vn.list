@@ -1,0 +1,23 @@
+﻿########################################################
+# VN live streams list
+########################################################
+title=VN Live
+action=add
+########################################################
+# Live streams
+########################################################
+name=HTV7
+type=live
+thumb=video.monkey.image|htv7.png
+url=mms://210.245.126.153/HTV7
+########################################################
+name=VNN
+type=live
+thumb=video.monkey.image|vnn.png
+url=mms://tv.vietnamnet.vn/live
+########################################################
+name=HTVC
+type=live
+thumb=video.monkey.image|htvc.png
+url=mms://210.245.126.153/HTVCMOVIE
+########################################################

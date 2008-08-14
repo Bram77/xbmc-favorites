@@ -1,7 +1,7 @@
 ﻿########################################################
 # Google Video country specific sites
 ########################################################
-version=1
+title=GoogleVideo - Coutries
 ########################################################
 name=GoogleVideo (EN)
 type=rss

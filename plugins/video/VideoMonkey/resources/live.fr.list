@@ -1,8 +1,8 @@
 ﻿########################################################
 # FR live streams list
 ########################################################
-version=1
-title=Live
+title=FR Live
+action=add
 ########################################################
 # Live streams
 ########################################################
@@ -20,4 +20,14 @@ name=NRJ Hits
 type=live
 thumb=video.monkey.image|nrj_hits.png
 url=mms://vipnrj.yacast.net/nrj_tvhit
+########################################################
+name=NRJ Dance
+type=live
+thumb=video.monkey.image|nrj_dance.png
+url=mms://vipnrj.yacast.net/nrj_webtv02
+########################################################
+name=NRJ Groove
+type=live
+thumb=video.monkey.image|nrj_groove.png
+url=mms://vipnrj.yacast.net/nrj_webtv01
 ########################################################

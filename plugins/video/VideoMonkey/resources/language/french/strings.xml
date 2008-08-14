@@ -11,11 +11,14 @@
     <string id="30007">Télécharger vidéo</string>
     <string id="30008">Lieu de téléchargement</string>
     <string id="30009">Demander le téléchargement avant de jouer le vidéo</string>
+    <string id="30010">Ajouter raccourci</string>
+    <string id="30011">Supprimer raccourci</string>
 
     <string id="30050">Télécharge vidéo...</string>
     <string id="30051">Attendez svp.</string>
     <string id="30052">Voulez-vous télécherger ce vidéo?</string>
     <string id="30053">Échec du téléchargement. Essaye de jouer le vidéo...</string>
+    <string id="30054">Voulez-vous vraiment supprimer ce raccourci?</string>
 
     <string id="30100">Catégories</string>
     <string id="30101">Sous-catégories</string>
@@ -31,4 +34,7 @@
     <string id="30111">Affiner</string>
     <string id="30112">Région</string>
     <string id="30113">Période de temps</string>
+    <string id="30114">Sport</string>
+    <string id="30115">Enfants</string>
+    <string id="30116">Musique</string>
 </strings>

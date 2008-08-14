@@ -1,8 +1,8 @@
 ﻿########################################################
 # THA live streams list
 ########################################################
-version=1
-title=Live
+title=THA Live
+action=add
 ########################################################
 # Live streams
 ########################################################
@@ -21,17 +21,18 @@ type=live
 thumb=video.monkey.image|thaitv7.png
 url=http://61.90.201.61/live?WMContentBitrate=256000
 ########################################################
-name=TV7 (BBTV)
+name=TV7 BBTV
 type=live
-thumb=video.monkey.image|thaitv7.png
+thumb=video.monkey.image|thaitv7_bbtv.png
 url=http://61.90.201.61/live2?WMContentBitrate=256000
 ########################################################
-name=TV9
+name=Modernine TV (TV9)
 type=live
 thumb=video.monkey.image|thaitv9.png
-url=mms://202.142.200.130/tv9?WMcontentBitrate=256000
+#url=mms://202.142.200.130/tv9?WMcontentBitrate=256000
+url=http://modernine.mcot.net/live/mcot_live512.asx
 ########################################################
-name=TV11
+name=NBT (TV11)
 type=live
 thumb=video.monkey.image|thaitv11.png
 url=mms://mms.prd.go.th/prdtv11
@@ -46,17 +47,17 @@ type=live
 thumb=video.monkey.image|nationtv.png
 url=mms://202.60.199.44/Nation/nationchannel?WMContentBitrate=256000
 ########################################################
-name=MVtv (MIC)
+name=MVtv MIC
 type=live
 thumb=video.monkey.image|mvtv_mic.png
 url=http://61.19.248.196/mvtv_1?WMContentBitrate=256000
 ########################################################
-name=MVtv (Variety)
+name=MVtv Variety
 type=live
 thumb=video.monkey.image|mvtv_variety.png
 url=http://61.19.248.196/mvtv_2?WMContentBitrate=256000
 ########################################################
-name=MVtv (Hit Station)
+name=MVtv Hit Station
 type=live
 thumb=video.monkey.image|mvtv_hit_station.png
 url=http://61.19.248.196/mvtv_3?WMContentBitrate=256000
@@ -66,8 +67,33 @@ type=live
 thumb=video.monkey.image|mvtv_5.png
 url=http://61.19.248.196/mvtv_5?WMContentBitrate=256000
 ########################################################
+name=MVtv News
+type=live
+thumb=video.monkey.image|mvtv_news.png
+url=mms://61.47.2.118/NTTV?WMContentBitrate=256000
+########################################################
+name=MVtv Health+
+type=live
+thumb=video.monkey.image|mvtv_health_plus.png
+url=http://tv.sanook.com/player/sanook/playlist.php?contentID=382033&kb=512
+########################################################
+name=ASTV News1
+type=live
+thumb=video.monkey.image|astv_news1.png
+url=mms://tv.manager.co.th/videoclip/11News1/Footage/Kuanchai_290708.wmv
+########################################################
+name=ASTV2 TOC
+type=live
+thumb=video.monkey.image|astv_toc.png
+url=mms://broadcast.manager.co.th/toc
+########################################################
 name=Faikham TV
 type=live
 thumb=video.monkey.image|faikham.png
 url=mms://media.ru.ac.th/Faikham_TV
+########################################################
+name=DMC
+type=live
+thumb=video.monkey.image|dmc.png
+url=http://203.146.251.191/vcont450k_4
 ########################################################

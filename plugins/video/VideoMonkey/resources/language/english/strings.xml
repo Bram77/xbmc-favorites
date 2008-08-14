@@ -11,11 +11,14 @@
     <string id="30007">Save video</string>
     <string id="30008">Download path</string>
     <string id="30009">Ask for download before playing video</string>
+    <string id="30010">Add shortcut</string>
+    <string id="30011">Remove shortcut</string>
 
     <string id="30050">Downloading video...</string>
     <string id="30051">Please wait.</string>
     <string id="30052">Do you want to download this video?</string>
     <string id="30053">Video download failed. Trying to stream video...</string>
+    <string id="30054">Do you really want to remove this shortcut?</string>
 
     <string id="30100">Categories</string>
     <string id="30101">Subcategories</string>
@@ -31,4 +34,7 @@
     <string id="30111">Refine</string>
     <string id="30112">Region</string>
     <string id="30113">Time span</string>
+    <string id="30114">Sport</string>
+    <string id="30115">Kids</string>
+    <string id="30116">Music</string>
 </strings>

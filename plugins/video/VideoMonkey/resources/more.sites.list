@@ -1,8 +1,8 @@
 ﻿########################################################
-# VideoMonkey Plugin extra sites list
+# VideoMonkey Plugin sites list
 ########################################################
-version=1
-title=Extra
+title=Video Sites
+action=add
 ########################################################
 # Video sites
 ########################################################
@@ -10,4 +10,34 @@ name=Clipfish
 type=rss
 thumb=video.monkey.image|clipfish.png
 url=clipfish.de.cfg
+########################################################
+name=Dailymotion
+type=rss
+thumb=video.monkey.image|dailymotion.png
+url=dailymotion.com.cfg
+########################################################
+name=YouTube
+type=rss
+thumb=video.monkey.image|youtube.png
+url=youtube.com.cfg
+########################################################
+name=GoogleVideo
+type=rss
+thumb=video.monkey.image|googlevideo.png
+url=googlevideo.com.cfg
+########################################################
+name=Metacafe
+type=rss
+thumb=video.monkey.image|metacafe.png
+url=metacafe.com.cfg
+########################################################
+name=Joox
+type=rss
+thumb=video.monkey.image|joox.png
+url=joox.net.cfg
+########################################################
+name=Myspass
+type=rss
+thumb=video.monkey.image|myspass.png
+url=myspass.de.cfg
 ########################################################
