@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <strings>
   <!-- 31000 to 31009 reseved for home buttons -->
-  <string id="31000"></string>
+  <string id="31000">MENU</string>
   <string id="31001"></string>
   <string id="31002"></string>
   <string id="31003"></string>

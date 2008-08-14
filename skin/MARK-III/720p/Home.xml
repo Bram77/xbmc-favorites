@@ -148,6 +148,7 @@
 					<focusposition>2</focusposition>
 					<orientation>horizontal</orientation>
 					<scrolltime>300</scrolltime>
+					<hitrect x="512" y="195" w="256" h="96" />
 					<itemlayout  width="256" height="96">
 						<control type="image">
 							<posx>0</posx>
@@ -321,10 +322,42 @@
 					<texture>MenuFront.png</texture>
 					<include>HomeBar_Window_OpenClose_Animation</include>
 				</control>
+				<control type="button">
+					<posx>515</posx>
+					<posy>312</posy>
+					<width>26</width>
+					<height>26</height>
+					<label>-</label>
+					<texturefocus>scroll-left-focus.png</texturefocus>
+					<texturenofocus>scroll-left.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,-1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
+				<control type="button">
+					<posx>735</posx>
+					<posy>312</posy>
+					<width>26</width>
+					<height>26</height>
+					<label>-</label>
+					<texturefocus>scroll-right-focus.png</texturefocus>
+					<texturenofocus>scroll-right.png</texturenofocus>
+					<onleft>601</onleft>
+					<onright>401</onright>
+					<onup>400</onup>
+					<ondown>400</ondown>
+					<onclick>Control.Move(2,1)</onclick>
+					<visible>system.getbool(lookandfeel.enablemouse)</visible>
+					<include>HomeBar_Window_OpenClose_Animation</include>
+				</control>
 				<control type="label">
-					<posx>477</posx>
+					<posx>545</posx>
 					<posy>310</posy>
-					<width>326</width>
+					<width>185</width>
 					<height>30</height>
 					<label>[B]$INFO[Container(2).ListItem.label][/B]</label>
 					<align>center</align>

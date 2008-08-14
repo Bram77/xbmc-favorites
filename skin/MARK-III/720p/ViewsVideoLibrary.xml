@@ -303,6 +303,7 @@
 			<scrolltime>200</scrolltime>
 			<focusposition>3</focusposition>
 			<orientation>horizontal</orientation>
+			<hitrect x="536" y="180" w="218" h="310" />
 			<itemlayout height="300" width="218">
 				<control type="image">
 					<posx>2</posx>
@@ -876,6 +877,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
+				<animation effect="slide" end="0,15" start="0,0" time="0" condition="system.getbool(lookandfeel.enablemouse)">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>20</posx>
