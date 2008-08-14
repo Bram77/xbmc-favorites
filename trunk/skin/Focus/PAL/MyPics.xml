@@ -5,7 +5,6 @@
 	
 	<controls>
 		<include>background</include>
-		<include>infobar</include>
 	
 		<control type="group">
 			<description>page content</description>
@@ -31,7 +30,7 @@
 				<height>256</height>
 				<info>ListItem.Thumb</info>
 				<bordertexture border="2">list-focus.png</bordertexture>
-				<bordersize>4</bordersize>
+				<bordersize>6</bordersize>
 				<aspectratio align="bottom">keep</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
 				<include>fadeinout</include>

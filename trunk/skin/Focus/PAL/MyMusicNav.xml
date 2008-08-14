@@ -6,7 +6,7 @@
 		<include>background</include>
 		<include>infobar</include>
 		
-		
+		<!--
 		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -31,10 +31,9 @@
 			<colordiffuse>ffa3a3a3</colordiffuse>
 			<visible>Skin.String(backgroundMusic) + Skin.HasSetting(backgroundContent)</visible>
 		</control>
-		
+		-->
 		
 		<include>allscreens</include>
-		<include>mediaoverlay</include>
 		
 <!--- PAGE LABELS --------------------------------->
 
@@ -510,6 +509,8 @@
 				<width>260</width>
 				<height>280</height>
 				<info>ListItem.Thumb</info>
+				<bordertexture border="2">list-focus.png</bordertexture>
+				<bordersize>4</bordersize>
 				<aspectratio align="bottom">keep</aspectratio>
 				<visible>Control.IsVisible(50) + Container.Content(artists)</visible>
 			</control>

@@ -6,7 +6,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>195</posx>
-		<posy>110</posy>
+		<posy>105</posy>
 	</coordinates>
 
 	<controls>
@@ -34,16 +34,16 @@
 			</control>
 			
 			<control type="image" id="0">
-				<posx>-13</posx>
+				<posx>0</posx>
 				<posy>38</posy>
-				<width>356</width>
+				<width>330</width>
 				<height>37</height>
-				<texture>text-input.png</texture>
+				<texture border="2">dialog-input.png</texture>
 			</control>
 
 			<control type="label" id="412">
 				<description>path label control</description>
-				<posx>0</posx>
+				<posx>10</posx>
 				<posy>40</posy>
 				<width>300</width>
 				<align>left</align>
@@ -167,8 +167,18 @@
 						<width>100</width>
 						<height>100</height>
 						<visible>!Control.HasFocus(451)</visible>
-						<texture>button2-nofocus.png</texture>
+						<texture border="2">list-nofocus.png</texture>
 					</control>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<visible>Control.HasFocus(451)</visible>
+						<texture border="2">list-focus.png</texture>
+					</control>
+					
 					<control type="image">
 						<posx>3</posx>
 						<posy>3</posy>
@@ -176,14 +186,7 @@
 						<height>94</height>
 						<info>ListItem.Icon</info>
 					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>100</width>
-						<height>100</height>
-						<visible>Control.HasFocus(451)</visible>
-						<texture>folder-focus.png</texture>
-					</control>
+					
 					<control type="label">
 						<posx>50</posx>
 						<posy>98</posy>
@@ -247,16 +250,15 @@
 					<height>36</height>
 					<aligny>-</aligny>
 					<align>center</align>
-					<textoffsety>2</textoffsety>
+					<textoffsety>3</textoffsety>
 					<font>buttonD</font>
 					<label>186</label>
-					<texturenofocus>button2.png</texturenofocus>
-					<texturefocus>button2-focus.png</texturefocus>
+					<texturenofocus>buttonD.png</texturenofocus>
+					<texturefocus>buttonD-focus.png</texturefocus>
 					<onleft>60</onleft>
 					<onright>414</onright>
 					<onup>450</onup>
 					<ondown>413</ondown>
-					<focusedcolor>button-alttext</focusedcolor>
 				</control>
 				<control type="button" id="414">
 					<description>Cancel button</description>
@@ -265,13 +267,12 @@
 					<width>90</width>
 					<height>36</height>
 					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
+					<textoffsety>3</textoffsety>
 					<align>center</align>
 					<font>buttonD</font>
 					<label>222</label>
-					<texturenofocus>button2.png</texturenofocus>
-					<texturefocus>button2-focus.png</texturefocus>
-					<focusedcolor>button-alttext</focusedcolor>
+					<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 					<onleft>60</onleft>
 					<onright>415</onright>
 					<onup>450</onup>
@@ -284,13 +285,12 @@
 					<width>110</width>
 					<height>36</height>
 					<aligny>-</aligny>
-					<textoffsety>2</textoffsety>
+					<textoffsety>3</textoffsety>
 					<align>center</align>
 					<font>buttonD</font>
 					<label>119</label>
-					<texturenofocus>button2.png</texturenofocus>
-					<texturefocus>button2-focus.png</texturefocus>
-					<focusedcolor>button-alttext</focusedcolor>
+					<texturenofocus>buttonD.png</texturenofocus>
+				<texturefocus>buttonD-focus.png</texturefocus>
 					<onleft>60</onleft>
 					<onright>413</onright>
 					<onup>450</onup>

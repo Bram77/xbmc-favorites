@@ -3,12 +3,14 @@
   	
 <!--- HOME --------------------------------->
   	
+  	<!--
   	<font>
 		<name>home</name>
-		<filename>segoeui.ttf</filename>
+		<filename>Calibri.ttf</filename>
 		<shadow>FF000000</shadow>	
 		<size>32</size>
 	</font>
+	-->
 	
   	<!---
   	<font>
@@ -35,7 +37,16 @@
 		<shadow>99000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
+	
+	<font>
+		<name>menubar</name>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>24</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
   	
+  	<!--
   	<font>
 		<name>time</name>
 		<filename>Calibri.ttf</filename>
@@ -44,45 +55,37 @@
 		<style>bold</style>
 		<aspect>1.1</aspect>
 	</font>
+	-->
 	
 	<font>
 		<name>rss</name>
-		<filename>Calibri.ttf</filename>
-		<size>22</size>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 	</font>
   	
 <!--- PAGE --------------------------------->
   	
   	<font>
 		<name>page</name>
-		<filename>Calibri.ttf</filename>
-		<shadow>FF000000</shadow>
-		<size>26</size>
+		<filename>DroidSans.ttf</filename>
+		<shadow>ff000000</shadow>
+		<size>24</size>
 		<aspect>1.1</aspect>
 	</font>
   	
   	<font>
 		<name>date</name>
-		<filename>Calibri.ttf</filename>
+		<filename>DroidSans-Bold.ttf</filename>
 		<shadow>ff000000</shadow>
 		<size>22</size>
-		<style>bold</style>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>objects</name>
-		<filename>Calibri.ttf</filename>
-		<shadow>99000000</shadow>
-		<size>22</size>
-		<aspect>1.1</aspect>
-	</font>
-	
-	<font>
-		<name>menubar</name>
-		<filename>Calibri.ttf</filename>
-		<size>28</size>
+		<filename>DroidSans.ttf</filename>
 		<shadow>ff000000</shadow>
+		<size>22</size>
 		<aspect>1.1</aspect>
 	</font>
 
@@ -91,46 +94,47 @@
   	
   	<font>
 		<name>menu</name>
-		<filename>Calibri.ttf</filename>
-		<size>22</size>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>Button</name>
-		<filename>Calibri.ttf</filename>
-		<size>26</size>
+		<filename>DroidSans.ttf</filename>
+		<size>24</size>
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>description</name>
-		<filename>Calibri.ttf</filename>
-		<size>22</size>
-		<shadow>ff000000</shadow>	
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>h1</name>
-		<filename>ZegoeUI-UBold.ttf</filename>
+		<filename>DroidSans-Bold.ttf</filename>
 		<shadow>FF000000</shadow>	
-		<size>26</size>
+		<size>24</size>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>h2</name>
-		<filename>Calibri.ttf</filename>
+		<filename>DroidSans.ttf</filename>
 		<shadow>FF000000</shadow>
-		<size>22</size>
+		<size>20</size>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>h3</name>
-		<filename>Calibri.ttf</filename>
+		<filename>DroidSans.ttf</filename>
 		<size>22</size>
 		<shadow>ff000000</shadow>
 		<aspect>1.1</aspect>
@@ -138,9 +142,16 @@
 	
 	<font>
 		<name>h4</name>
-		<filename>Calibri.ttf</filename>
+		<filename>DejaVuSans.ttf</filename>
 		<shadow>ff000000</shadow>
-		<size>24</size>
+		<size>20</size>
+	</font>
+	
+	<font>
+		<name>no-img</name>
+		<filename>DroidSans.ttf</filename>
+		<size>40</size>
+		<aspect>1.1</aspect>
 	</font>
 	
 	<!---
@@ -157,53 +168,59 @@
   	
 	<font>
 		<name>buttonD</name>
-		<filename>Calibri.ttf</filename>
-		<size>24</size>
+		<filename>DroidSans.ttf</filename>
+		<size>21</size>
 	</font>
 	
 	<font>
 		<name>buttonD2</name>
-		<filename>Calibri.ttf</filename>
-		<size>24</size>
+		<filename>DroidSans.ttf</filename>
+		<size>22</size>
+	</font>
+	
+	<font>
+		<name>buttonD3</name>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 	</font>
 	
 	<font>
 		<name>h1D</name>
-		<filename>ZegoeUI-UBold.ttf</filename>
+		<filename>DroidSans-Bold.ttf</filename>
 		<shadow>FF000000</shadow>	
-		<size>26</size>
+		<size>24</size>
 		<aspect>1.1</aspect>
 	</font>
 
 	<font>
 		<name>h2D</name>
-		<filename>Calibri.ttf</filename>
-		<size>25</size>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>h3D</name>
-		<filename>Calibri.ttf</filename>
-		<size>24</size>
+		<filename>DroidSans.ttf</filename>
+		<size>22</size>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>h4D</name>
-		<filename>Calibri.ttf</filename>
-		<size>24</size>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 	</font>
 	
 	<font>
 		<name>keyboard</name>
-		<filename>Calibri.ttf</filename>
-		<size>22</size>
+		<filename>DroidSans.ttf</filename>
+		<size>20</size>
 		<aspect>1.1</aspect>
 	</font>
 
 
-<!--- OSD ------------------------------->
+<!--- OSD ---------------------------
 	
 	<font>
 		<name>osdh1</name>
@@ -219,9 +236,9 @@
 		<shadow>99000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
-	
+---->	
 
-<!--- LEGACY ------------------------------>
+<!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
 	
 	<font>
 		<name>font101</name>
@@ -266,12 +283,7 @@
 		
 <!--- TOGO ------------------------------>
 
-	<font>
-		<name>mainpage</name>
-		<filename>Calibri.ttf</filename>
-		<size>100</size>
-		<aspect>1.3</aspect>
-	</font>
+
 	
 	<font>
 		<name>descriptionsmall</name>

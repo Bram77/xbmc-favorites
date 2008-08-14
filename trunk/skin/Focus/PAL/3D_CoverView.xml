@@ -14,7 +14,7 @@
 			<include>list-fade</include>
 			<focusposition>2</focusposition>
 			<orientation>horizontal</orientation>
-			<visible>Skin.HasSetting(viewtypeCoverFlow) + Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(viewtypeCoverFlow) + Container.Content(movies) | !Skin.HasSetting(viewtypeCoverFlowS) + Container.Content(Seasons)</visible>
 			<itemlayout height="390" width="140">
 			</itemlayout>
 			<focusedlayout height="410" width="320">
@@ -559,7 +559,7 @@
 		
 		<control type="label">
 			<posx>0</posx>
-			<posy>455</posy>
+			<posy>465</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h1</font>
@@ -572,7 +572,7 @@
 			</control>
 		<control type="label">
 			<posx>0</posx>
-			<posy>490</posy>
+			<posy>500</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h2</font>
@@ -587,7 +587,7 @@
 		</control>
 		<control type="label">
 			<posx>0</posx>
-			<posy>525</posy>
+			<posy>535</posy>
 			<width>720</width>
 			<height>30</height>
 			<font>h2</font>

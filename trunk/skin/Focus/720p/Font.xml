@@ -1,289 +1,223 @@
 <fonts>
-  <fontset id="Default" unicode="true">
-
-    <!--- STARTUP ---------------------------------------->	
-    	
-    	<font>
-			<name>startup</name>
-			<filename>ZegoeCapsBold.ttf</filename>
-			<size>50</size>
-			<shadow>99000000</shadow>
-		</font>
-		
-		<font>
-			<name>startup2</name>
-			<filename>ZegoeLight-U.ttf</filename>
-			<size>40</size>
-			<shadow>99000000</shadow>
-		</font>
+	<fontset id="Default" unicode="true">
 	
-	<!--- DIALOGS ---------------------------------------->
+<!--- HOME --------------------------------->
+		
+	<!--
+		<font>
+		<name>home</name>
+		<filename>Calibri.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>32</size>
+	</font>
+	-->
 	
 	<font>
-		<name>dialog-header</name>
-		<filename>Calibri.ttf</filename>
-		<size>25</size>
+		<name>homemenu</name>
+		<filename>ZegoeLight-U.ttf</filename>
+		<size>32</size>
+		<shadow>99000000</shadow>
 	</font>
 	
 	<font>
-		<name>dialog-line</name>
-		<filename>Calibri.ttf</filename>
+		<name>rss</name>
+		<filename>DroidSans.ttf</filename>
+		<size>26</size>
+		<shadow>FF000000</shadow>
+	</font>
+	
+	<font>
+		<name>menubar</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>30</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	
+<!--- PAGE --------------------------------->
+	
+	<font>
+		<name>page</name>
+		<filename>DroidSans.ttf</filename>
+		<shadow>FF000000</shadow>
+		<size>30</size>
+	</font>
+	
+	<font>
+		<name>date</name>
+		<filename>DroidSans-Bold.ttf</filename>
+		<shadow>ff000000</shadow>
+		<size>28</size>
+	</font>
+	
+	<font>
+		<name>objects</name>
+		<filename>DroidSans.ttf</filename>
+		<shadow>ff000000</shadow>
+		<size>28</size>
+	</font>
+	
+	
+<!--- COMMON ---------------------------------------->
+	
+	<font>
+		<name>menu</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>20</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	<font>
+		<name>Button</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>24</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	<font>
+		<name>description</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>20</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	<font>
+		<name>h1</name>
+		<filename>DejaVuSans-Bold.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>26</size>
+	</font>
+	
+	<font>
+		<name>h2</name>
+		<filename>DejaVuSans.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>22</size>
+	</font>
+	
+	<font>
+		<name>h3</name>
+		<filename>DroidSans.ttf</filename>
+		<size>22</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	<font>
+		<name>h4</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>20</size>
+		<shadow>ff000000</shadow>
+	</font>
+	
+	
+<!--- DIALOGS ---------------------------------------->
+	
+	<font>
+		<name>h1D</name>
+		<filename>DejaVuSans-Bold.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>24</size>
+	</font>
+	
+	<font>
+		<name>h2D</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>22</size>
+	</font>
+		
+	<font>
+		<name>h4D</name>
+		<filename>DejaVuSans.ttf</filename>
 		<size>20</size>
 	</font>
-	
-		
-	
-	<!--- HOME SCREEN ------------------------------------>
-    	
-    	<font>
-			<name>home</name>
-			<filename>segoeui.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>32</size>
-		</font>
-    	
-    	<font>
-			<name>homemenu</name>
-			<filename>ZegoeLight-U.ttf</filename>
-			<size>32</size>
-			<shadow>99000000</shadow>
-		</font>
-		
-		<font>
-			<name>althomeh1</name>
-			<filename>ZegoeCapsBold.ttf</filename>
-			<size>65</size>
-			<shadow>99000000</shadow>
-		</font>
-		
-		<font>
-			<name>althomeh2</name>
-			<filename>ZegoeLight-U.ttf</filename>
-			<size>36</size>
-			<shadow>99000000</shadow>
-		</font>
-		
-		<font>
-			<name>time</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>30</size>
-			<style>bold</style>
-		</font>
-		
-		<font>
-			<name>rss</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>FF000000</shadow>
-		</font>
-    	
-    <!--- MENUBAR ---------------------------------------->	
-    	
-		<font>
-			<name>menubar</name>
-			<filename>ZegoeUISemiBold-U.ttf</filename>
-			<size>30</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>page</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>FF000000</shadow>
-			<size>30</size>
-		</font>
-		
-		<font>
-			<name>date</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>ff000000</shadow>
-			<size>26</size>
-			<style>bold</style>
-		</font>
 
-		<font>
-			<name>objects</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>ff000000</shadow>
-			<size>28</size>
-		</font>
-		
-		
-	<!--- COMMON ---------------------------------------->	
-		
-		<font>
-			<name>menu</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>description</name>
-			<filename>Calibri.ttf</filename>
-			<size>24</size>
-			<shadow>ff000000</shadow>
-		</font>
+	<font>
+		<name>buttonD</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>22</size>
+	</font>
+	
+	<font>
+		<name>buttonD2</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>24</size>
+	</font>
+	
+	<font>
+		<name>keyboard</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>20</size>
+	</font>
 
-		
-		<font>
-			<name>h1</name>
-			<filename>ZegoeUI-UBold.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>32</size>
-		</font>
-		
-		<font>
-			<name>h1D</name>
-			<filename>ZegoeUI-UBold.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>30</size>
-		</font>
-		
-		<font>
-			<name>h1Fanart1</name>
-			<filename>ZegoeUI-UBold.ttf</filename>
-			<shadow>FFFFFFFF</shadow>	
-			<size>32</size>
-		</font>
-		
-		<font>
-			<name>h2</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>28</size>
-		</font>
-		
-		<font>
-			<name>h2D</name>
-			<filename>Calibri.ttf</filename>
-			<size>28</size>
-		</font>
-			
-		<font>
-			<name>h3</name>
-			<filename>Calibri.ttf</filename>
-			<size>24</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>h4</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>h4D</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-		</font>
-		
-		<font>
-			<name>h5</name>
-			<filename>Calibri.ttf</filename>
-			<size>24</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>Button</name>
-			<filename>Calibri.ttf</filename>
-			<size>24</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>buttonD</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-		</font>
-		
-		<font>
-			<name>buttonD2</name>
-			<filename>Calibri.ttf</filename>
-			<size>27</size>
-		</font>
 
-		<font>
-			<name>ButtonSmall</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>ff000000</shadow>
-		</font>
+<!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
+
+	<font>
+		<name>font101</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>14</size>
+	</font>
+	<font>
+		<name>font10</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>14</size>
+		<style>bold</style>
+	</font>
+	<font>
+		<name>font12</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>16</size>
+		<style>bold</style>
+	</font>
+	<font>
+		<name>font13</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>17</size>
+	</font>
+	<font>
+		<name>special12</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>19</size>
+		<aspect>0.85</aspect>
+	</font>
+	<font>
+		<name>special13</name>
+		<filename>FrancophilSans.ttf</filename>
+		<size>19</size>
+		<style>bold</style>
+		<aspect>0.80</aspect>
+	</font>
 	
+
+<!--- OSD ------------------------------------
+	<font>
+		<name>h1OSD</name>
+		<filename>ZegoeUI-UBold.ttf</filename>
+		<size>38</size>
+	</font>
 	
-	<!--- OSD ---------------------------------------->
-	
-		<font>
-			<name>h1OSD</name>
-			<filename>ZegoeUI-UBold.ttf</filename>
-			<size>38</size>
-		</font>
+	<font>
+		<name>h2OSD</name>
+		<filename>Calibri.ttf</filename>
+		<shadow>FF000000</shadow>	
+		<size>36</size>
+	</font>
 		
-		<font>
-			<name>h2OSD</name>
-			<filename>Calibri.ttf</filename>
-			<shadow>FF000000</shadow>	
-			<size>36</size>
-		</font>
-			
-		<font>
-			<name>h3OSD</name>
-			<filename>Calibri.ttf</filename>
-			<size>30</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
-		<font>
-			<name>h4OSD</name>
-			<filename>Calibri.ttf</filename>
-			<size>26</size>
-			<shadow>ff000000</shadow>
-		</font>
-		
+	<font>
+		<name>h3OSD</name>
+		<filename>Calibri.ttf</filename>
+		<size>30</size>
+		<shadow>ff000000</shadow>
+	</font>
 	
-	<!--- ORIGINALS FOR REFERENCE/LEGACY ---------------------------------------->
-	
-		<font>
-			<name>font101</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>14</size>
-		</font>
-		<font>
-			<name>font10</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>14</size>
-			<style>bold</style>
-		</font>
-		<font>
-			<name>font12</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>16</size>
-			<style>bold</style>
-		</font>
-		<font>
-			<name>font13</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>17</size>
-		</font>
-		<font>
-			<name>special12</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>19</size>
-			<aspect>0.85</aspect>
-		</font>
-		<font>
-			<name>special13</name>
-			<filename>FrancophilSans.ttf</filename>
-			<size>19</size>
-			<style>bold</style>
-			<aspect>0.80</aspect>
-		</font>
+	<font>
+		<name>h4OSD</name>
+		<filename>Calibri.ttf</filename>
+		<size>26</size>
+		<shadow>ff000000</shadow>
+	</font>
+	---->
+		
 	</fontset>
-	
-	
 
 </fonts>

@@ -6,8 +6,6 @@
 		
 		<include>background</include>
 		<include>allscreens</include>
-		<include>Fake-Overlay</include>
-		<include>#files</include>
 
 		<control type="label">
 			<description>description label</description>
@@ -21,7 +19,7 @@
 		</control>
 		
 		<control type="group">
-			<include>fadeinout</include>
+			<include>pageslide</include>
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
 				
@@ -33,33 +31,33 @@
 				<font>h2</font>
 				<width>400</width>
 				<align>left</align>
-				<include>sublabel</include>
+				<textcolor>sublabel-text</textcolor>
 			</control>
 			
 			<control type="label" id="101">
 				<description>number of songs in playlist text label</description>
 				<posx>693</posx>
-				<posy>75</posy>
+				<posy>70</posy>
 				<label>-</label>
 				<font>h2</font>
 				<align>right</align>
-				<include>sublabel</include>
+				<textcolor>sublabel-text</textcolor>
 			</control>
 			
 			<control type="label">
 				<description>playlist label</description>
 				<align>left</align>
 				<posx>380</posx>
-				<posy>75</posy>
+				<posy>70</posy>
 				<width>270</width>
 				<font>h2</font>
 				<label>32003</label>
-				<include>sublabel</include>
+				<textcolor>sublabel-text</textcolor>
 			</control>
 
 			<control type="list" id="50">
 				<posx>30</posx>
-				<posy>120</posy>
+				<posy>110</posy>
 				<width>310</width>
 				<height>396</height>
 				<onleft>6</onleft>
@@ -147,7 +145,7 @@
 			
 			<control type="list" id="100">
 				<posx>373</posx>
-				<posy>120</posy>
+				<posy>110</posy>
 				<width>310</width>
 				<height>396</height>
 				<onleft>50</onleft>
@@ -224,13 +222,14 @@
 				</focusedlayout>
 
 			</control>
-		</control>	
+		</control>
 		
-<!-- VIEW SETTINGS -->	
+		<include>LibraryPlaylistEditorMenu</include>	
+		
+<!-- VIEW SETTINGS 	
 				
 		<control type="group" id="9000">
 			<description>right/left view menu</description>
-			<visible>!Skin.HasSetting(view-as-lock)</visible>
 			<include>fadeinout</include>
 			
 			<control type="button" id="6">
@@ -251,7 +250,6 @@
 				<onup>8</onup>
 				<ondown>7</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 				
 			<control type="button" id="7">
@@ -272,7 +270,6 @@
 				<onup>6</onup>
 				<ondown>8</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
 				
 			<control type="button" id="8">
@@ -293,9 +290,8 @@
 				<onup>7</onup>
 				<ondown>6</ondown>
 				<textcolor>button-text</textcolor>
-				<include>View-as</include>
 			</control>
-		</control>
+		</control>-->
 			
 	</controls>
 </window>

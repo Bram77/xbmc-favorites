@@ -91,8 +91,7 @@
 	<alttexturenofocus>toggle-down.png</alttexturenofocus>
 	<keepaspectratio>true</keepaspectratio>
 	<label>-</label>
-	<font>font13</font>
-	<include>controldefaults</include>
+	<font>menu</font>
 	<disabledcolor>90ffffff</disabledcolor>
 </control>
 
@@ -155,7 +154,6 @@
 	<keepaspectratio>true</keepaspectratio>
 	<font>font12</font>
 	<include>selectedcolor</include>
-	<include>controldefaults</include>
 	<suffix> |</suffix>
 	<aligny>-</aligny>
 	<textoffsety>0</textoffsety>
@@ -301,10 +299,11 @@
 	<colordiffuse>ffffffff</colordiffuse>
 	<disabledcolor>60d0d0d0</disabledcolor>
 	<textoffsetx>7</textoffsetx>
-	<aligny>center</aligny>
+	<aligny>-</aligny>
 	<reverse>yes</reverse>
 	<textoffsetx>30</textoffsetx>
 	<textoffsetx2>30</textoffsetx2>
+
 </control>
 
 <control>

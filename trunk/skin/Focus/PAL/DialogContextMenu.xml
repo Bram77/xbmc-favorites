@@ -15,33 +15,7 @@
 			<posx>0</posx>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
 			<onright>SetFocus(50)</onright>
-			
-			<control type="image" id="997">
-				<description>background top image</description>
-				<posx>1</posx>
-				<posy>-26</posy>
-				<width>229</width>
-				<height>26</height>
-				<texture>context-top.png</texture>
-				<visible>false</visible>
-			</control>
-			<control type="image" id="999">
-				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>230</width>
-				<texture>context-middle.png</texture>
-				<visible>false</visible>
-			</control>
-			<control type="image" id="998">
-				<description>background bottom image</description>
-				<posx>1</posx>
-				<posy>0</posy>
-				<width>228</width>
-				<height>26</height>
-				<texture>context-bottom.png</texture>
-				<visible>false</visible>
-			</control>
+
 			<control type="button" id="1000">
 				<description>button template</description>
 				<posx>19</posx>
@@ -51,8 +25,8 @@
 				<align>left</align>
 				<aligny>left</aligny>
 				<font>menu</font>
-				<texturenofocus>list-nofocus.png</texturenofocus>
-				<texturefocus>list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				<texturefocus border="2">list-focus.png</texturefocus>
 			</control>
 		</control>
 	</controls>
