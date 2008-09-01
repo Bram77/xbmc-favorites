@@ -36,13 +36,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font18</font>
-				<label>[UPPERCASE]$INFO[Control.GetLabel(20)][/UPPERCASE] - ( $INFO[Control.GetLabel(30)] )</label>
+				<label>$LOCALIZE[SCRIPT0] - ( $INFO[Control.GetLabel(30)] )</label>
 				<textcolor>white</textcolor>
-			</control>
-			<control type="label" id="20">
-				<description>heading label</description>
-				<label>-</label>
-				<visible>false</visible>
 			</control>
 			<control type="label" id="30">
 				<description>Version label</description>
@@ -74,10 +69,10 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
+					<label>$LOCALIZE[SCRIPT201]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<label>-</label>
 				</control>
 				<control type="image" id="1">
 					<description>separator image</description>
@@ -91,7 +86,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT202]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -102,7 +97,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT203]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -113,7 +108,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT204]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -122,7 +117,7 @@
 					<description>Setting5 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT205]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -140,7 +135,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT206]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -149,7 +144,7 @@
 					<description>Setting7 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT207]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -167,7 +162,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT208]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -178,7 +173,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT209]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -189,7 +184,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT210]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -200,7 +195,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT211]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -215,7 +210,7 @@
 					<description>Setting12 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT212]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -225,7 +220,7 @@
 					<description>Setting18 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT218]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -235,7 +230,7 @@
 					<description>Setting13 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT213]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -245,7 +240,7 @@
 					<description>Setting14 Button</description>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT214]</label>
 					<pulseonselect>no</pulseonselect>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
@@ -257,7 +252,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT215]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -274,7 +269,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT216]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -285,7 +280,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT217]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -296,7 +291,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT219]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -308,7 +303,7 @@
 					<posy>0</posy>
 					<width>570</width>
 					<height>35</height>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT220]</label>
 					<font>font12</font>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -326,7 +321,7 @@
 					<width>150</width>
 					<height>35</height>
 					<align>center</align>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT250]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>
@@ -341,7 +336,7 @@
 					<width>150</width>
 					<height>35</height>
 					<align>center</align>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT251]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>
@@ -356,7 +351,7 @@
 					<width>150</width>
 					<height>35</height>
 					<align>center</align>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT252]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>
@@ -371,7 +366,7 @@
 					<width>150</width>
 					<height>35</height>
 					<align>center</align>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT253]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>
@@ -386,7 +381,7 @@
 					<width>150</width>
 					<height>35</height>
 					<align>center</align>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT255]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>
@@ -402,7 +397,7 @@
 					<height>35</height>
 					<align>center</align>
 					<font>font12</font>
-					<label>-</label>
+					<label>$LOCALIZE[SCRIPT254]</label>
 					<texturenofocus>button-nofocus.png</texturenofocus>
 					<texturefocus>button-focus.png</texturefocus>
 					<onleft>9000</onleft>

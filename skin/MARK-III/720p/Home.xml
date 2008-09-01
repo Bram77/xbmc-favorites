@@ -677,7 +677,7 @@
 					<itemgap>1</itemgap>
 					<control type="button" id="101">
 						<description>Button1</description>
-						<label>$LOCALIZE[13005] XBMC</label>
+						<label>$LOCALIZE[13005]</label>
 						<onclick>XBMC.ShutDown()</onclick>
 						<include>ButtonHomeSubCommonValues</include>
 					</control>
@@ -686,13 +686,13 @@
 						<label>$LOCALIZE[13005] Linux</label>
 						<onclick>System.Exec(shutdown -h now)</onclick>
 						<include>ButtonHomeSubCommonValues</include>
+						<visible>false</visible>
 					</control>
 					<control type="button" id="103">
 						<description>Button3</description>
-						<label>-</label>
-						<onclick>-</onclick>
+						<label>13313</label>
+						<onclick>XBMC.RestartApp()</onclick>
 						<include>ButtonHomeSubCommonValues</include>
-						<visible>false</visible>
 					</control>
 					<control type="button" id="104">
 						<description>Button4</description>
