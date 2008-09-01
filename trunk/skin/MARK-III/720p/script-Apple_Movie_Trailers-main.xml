@@ -251,7 +251,7 @@
 						<scroll>true</scroll>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>[UPPERCASE]$INFO[Control.GetLabel(20)][/UPPERCASE]</label>
+						<label>[UPPERCASE]$LOCALIZE[SCRIPT0][/UPPERCASE]</label>
 					</control>
 					<control type="image">
 						<posx>900</posx>
@@ -693,7 +693,7 @@
 					<posy>80</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$INFO[Container.Property(Shortcut1)]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>2</onup>
@@ -705,7 +705,7 @@
 					<posy>110</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$INFO[Container.Property(Shortcut2)]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>100</onup>
@@ -717,7 +717,7 @@
 					<posy>140</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$INFO[Container.Property(Shortcut3)]</label>
 					<onleft>70</onleft>
 					<onright>50</onright>
 					<onup>101</onup>
@@ -729,7 +729,7 @@
 					<posy>170</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT103]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>102</onup>
@@ -741,7 +741,7 @@
 					<posy>200</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT104]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>103</onup>
@@ -753,7 +753,7 @@
 					<posy>230</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT105]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>104</onup>
@@ -765,7 +765,7 @@
 					<posy>260</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT106]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>105</onup>
@@ -777,7 +777,7 @@
 					<posy>290</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT107]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>106</onup>
@@ -789,7 +789,7 @@
 					<posy>320</posy>
 					<align>center</align>
 					<include>ButtonCommonValues</include>
-					<label>208</label>
+					<label>$LOCALIZE[SCRIPT108]</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>107</onup>
