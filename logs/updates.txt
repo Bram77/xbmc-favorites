@@ -1,3 +1,5 @@
+  01-09-2008 :: [plugins][music]    ~ Added the "Live Music Archive" plugin
+  01-09-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   14-08-2008 :: [scripts]    	    ~ Updated the "XBMC Lyrics" script to the latest SVN version
   14-08-2008 :: [scripts]    	    ~ Updated the "T3CH Upgrader" script to the latest SVN version
   14-08-2008 :: [skin]              ~ Updated the "MARK-III" skin to the latest SVN version
