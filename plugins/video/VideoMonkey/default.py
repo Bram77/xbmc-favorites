@@ -14,7 +14,7 @@ __author__ = "sfaxman"
 __url__ = "http://code.google.com/p/xbmc-addons/"
 __svn_url__ = "http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/"
 __credits__ = "sfaxman"
-__version__ = "1.1" # of this file
+__version__ = "1.2" # of this file
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -425,6 +425,13 @@ class CListItem:
         self.url = ''
         # to-do: date, duration, size...
 
+class CSourceItem:
+    def __init__(self):
+        self.rule = ''
+        self.extension = ''
+        self.quality = 'standard'
+        self.url = ''
+
 class CVideoItem:
     def __init__(self):
         self.url_img_title = ''
@@ -468,6 +475,7 @@ class CCurrentList:
         self.reference = ''
         self.content = ''
         self.target_url = ''
+        self.target_extension = ''
         self.ext_target_url = ''
         self.catcher_data = ''
         self.catcher_reference = ''
@@ -477,6 +485,7 @@ class CCurrentList:
         self.search_thumb = ''
         self.list = []
         self.video_list = []
+        self.source_list = []
         self.dir_list = []
         self.next_list = []
 
@@ -599,8 +608,18 @@ class CCurrentList:
                         self.catcher_content = value[index+1:]
                     elif key == 'url' and catcher_found == True:
                         self.catcher_url_build = value
+                    elif key == 'source':
+                        source_tmp = CSourceItem()
+                        source_tmp.rule = value
+                    elif key == 'source_extension':
+                        source_tmp.extension = value
+                    elif key == 'source_quality':
+                        source_tmp.quality = value
+                        self.source_list.append(source_tmp)
                     elif key == 'ext_target' and catcher_found == True:
                         self.ext_target_url = value
+                    elif key == 'extension' and catcher_found == True:
+                        self.target_extension = value
                     elif key == 'target' and catcher_found == True:
                         self.target_url = value
                         return 0
@@ -709,6 +728,8 @@ class CCurrentList:
                         self.next_list.append(next_tmp)
                     elif key == 'ext_target_url':
                         self.ext_target_url = value
+                    elif key == 'target_extension':
+                        self.target_extension = value
                     elif key == 'target_url':
                         self.target_url = value
                     elif key == 'catcher_data':
@@ -719,6 +740,14 @@ class CCurrentList:
                         self.catcher_content = value[index+1:]
                     elif key == 'catcher_url_build':
                         self.catcher_url_build = value
+                    elif key == 'catcher_source':
+                        source_tmp = CSourceItem()
+                        source_tmp.rule = value
+                    elif key == 'catcher_source_extension':
+                        source_tmp.extension = value
+                    elif key == 'catcher_source_quality':
+                        source_tmp.quality = value
+                        self.source_list.append(source_tmp)
                     elif key == 'search_url_build':
                         self.search_url_build = value
                     elif key == 'search_thumb':
@@ -1029,10 +1058,15 @@ class CCurrentList:
 class Main:
     def __init__(self):
         self.pDialog = None
+        self.urlList = []
+        self.extensionList = []
+        self.selectionList = []
         self.videoExtension = '.flv'
         self.currentlist = CCurrentList()
 
     def getDirectLink(self, orig_url):
+        if self.currentlist.target_extension != '':
+            self.videoExtension = '.' + self.currentlist.target_extension
         if (self.currentlist.catcher_url_build != '%s' and self.currentlist.target_url != ''):
             if (self.currentlist.catcher_data == ''):
                 url = self.currentlist.catcher_url_build % (orig_url.replace('\r\n', '').replace('\n', ''))
@@ -1059,6 +1093,71 @@ class Main:
             urlsearch = resecurl.search(fc)
             try:
                 match = urlsearch.group(1)
+                if len(self.currentlist.source_list) > 0:
+                    for source in self.currentlist.source_list:
+                        resecurl = re.compile(source.rule, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                        urlsearch = resecurl.search(fc)
+                        try:
+                            source.url = urlsearch.group(1)
+                            self.urlList.append(source.url)
+                            self.extensionList.append(source.extension)
+                            if source.quality == 'low':
+                                self.selectionList.append(xbmc.getLocalizedString(30056) + ' (' + source.extension + ')')
+                            elif source.quality == 'standard':
+                                self.selectionList.append(xbmc.getLocalizedString(30057) + ' (' + source.extension + ')')
+                            elif source.quality == 'high':
+                                self.selectionList.append(xbmc.getLocalizedString(30058) + ' (' + source.extension + ')')
+                        except:
+                            source.url = ''
+                    if len(self.urlList) > 0:
+                        if len(self.urlList) == 1:
+                            self.videoExtension = '.' + self.extensionList[0]
+                            return self.urlList[0]
+                        elif int(xbmcplugin.getSetting("video_type")) == 0:
+                            dia = xbmcgui.Dialog()
+                            selection = dia.select(xbmc.getLocalizedString(30055), self.selectionList)
+                            self.videoExtension = '.' + self.extensionList[selection]
+                            return self.urlList[selection]
+                        elif int(xbmcplugin.getSetting("video_type")) == 1: # low
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'low' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'standard' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'high' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                        elif int(xbmcplugin.getSetting("video_type")) == 3: # high
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'high' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'standard' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'low' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                        elif int(xbmcplugin.getSetting("video_type")) == 2: # standard
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'standard' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'low' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                            for source in self.currentlist.source_list:
+                                if source.quality == 'high' and source.url != '':
+                                    self.videoExtension = '.' + source.extension
+                                    return source.url
+                return match
             except:
                 traceback.print_exc(file = sys.stdout)
                 return ''
@@ -1142,8 +1241,9 @@ class Main:
         xbmc.sleep(200)
 
     def downloadMovie(self, url, title):
-        filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + self.videoExtension))
+        filepath = ''
         try:
+            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + self.videoExtension))
             urllib.urlretrieve(url, filepath, self._report_hook)
         except:
             traceback.print_exc(file = sys.stdout)
@@ -1152,7 +1252,7 @@ class Main:
                     os.remove(filepath)
                 except:
                     traceback.print_exc(file = sys.stdout)
-            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.randomFilename(dir = xbmcplugin.getSetting("download_Path"), suffix = '.flv')))
+            filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), self.currentlist.randomFilename(dir = xbmcplugin.getSetting("download_Path"), suffix = self.videoExtension)))
             try:
                 urllib.urlretrieve(url, filepath, self._report_hook)
             except:

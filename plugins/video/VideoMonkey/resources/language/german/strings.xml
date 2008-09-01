@@ -13,12 +13,21 @@
     <string id="30009">Fragen nach dem download vor dem Abspielen</string>
     <string id="30010">Verknüpfung erstellen</string>
     <string id="30011">Verknüpfung löschen</string>
+    <string id="30012">Videoqualität (falls mehrere vorhanden)</string>
+    <string id="30013">Frag mich</string>
+    <string id="30014">Niedrig</string>
+    <string id="30015">Standard</string>
+    <string id="30016">Hoch</string>
 
     <string id="30050">Lade video herunter...</string>
     <string id="30051">Bitte warten.</string>
     <string id="30052">Wollen Sie dieses video herunterladen?</string>
     <string id="30053">Video download scheiterte. Versuche das video zu streamen...</string>
     <string id="30054">Wollen Sie wirklich diese Verknüpfung löschen?</string>
+    <string id="30055">Mehrere Videoquellen vorhanden. Wählen Sie bitte eine:</string>
+    <string id="30056">Niedrige Qualität</string>
+    <string id="30057">Standard Qualität</string>
+    <string id="30058">Hohe Qualität</string>
 
     <string id="30100">Kategorien</string>
     <string id="30101">Unterkategorien</string>
