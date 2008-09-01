@@ -13,12 +13,21 @@
     <string id="30009">Fråga om nedladdning innan uppspelning</string>
     <string id="30010">Lägg till genväg</string>
     <string id="30011">Ta bort genväg</string>
+    <string id="30012">Videokvalitet (om valbar)</string>
+    <string id="30013">Fråga mig</string>
+    <string id="30014">Låg</string>
+    <string id="30015">Standard</string>
+    <string id="30016">Hög</string>
 
     <string id="30050">Laddar ner film...</string>
     <string id="30051">Var god vänta.</string>
     <string id="30052">Vill du ladda ner denna film?</string>
     <string id="30053">Filmnedladdning misslyckades. Försöker strömma filmen...</string>
     <string id="30054">Vill du verkligen ta bort denna genväg?</string>
+    <string id="30055">Många videokällor tillgängliga. Vänligen välj en:</string>
+    <string id="30056">Låg kvalitet</string>
+    <string id="30057">Standardkvalitet</string>
+    <string id="30058">Hög kvalitet</string>
 
     <string id="30100">Kategorier</string>
     <string id="30101">Underkategorier</string>

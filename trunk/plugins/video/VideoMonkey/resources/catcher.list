@@ -1,12 +1,16 @@
 ﻿########################################################
 # VideoMonkey Catcher list
 ########################################################
-# name: str
+# name: str <- Start flag
 # data: *%s*
 # header str|str
 # url: *%s* or str
+# source: RegEx <- Start flag
+# source_extension: str
+# source_quality: low, standard or high <- End flag
 # ext_target: RegEx
-# target: RegEx
+# extension: str (default: flv)
+# target: RegEx <- End flag
 ########################################################
 # Catcher sites
 ########################################################
@@ -17,6 +21,12 @@ target=<div id=\"box\">[^<]*<h2>Download</h2>[^<]*<p><a href=\"([^\"]+)\" target
 name=keepvid.com
 url=http://keepvid.com/?url=%s
 header=Referer|http://keepvid.com/
+source=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">[^<]+</a>[^<]+<em>\(video\.flv - Low Quality\)
+source_extension=flv
+source_quality=standard
+source=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">[^<]+</a>[^<]+<em>\(video\.mp4 - High Quality\)
+source_extension=mp4
+source_quality=high
 target=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">
 ########################################################
 name=viloader.net
@@ -33,6 +43,12 @@ name=clipnabber.com
 data=mode=1&url=%s
 header=Referer|http://www.clipnabber.com
 url=http://clipnabber.com/gethint.php
+source=<a href='([^']+)' *><strong>FLV
+source_extension=flv
+source_quality=standard
+source=<a href='([^']+)' *><strong>MP4
+source_extension=mp4
+source_quality=high
 target=<a href='([^']+)' *><strong>
 ########################################################
 name=porn2pc.com
