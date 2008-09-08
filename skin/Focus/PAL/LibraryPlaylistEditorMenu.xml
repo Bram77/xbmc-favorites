@@ -6,9 +6,7 @@
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pageslide</include>
-			
-			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
-			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
+			<include>pagemenus</include>
 
 			<control type="group">
 			
@@ -17,19 +15,11 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
 					<label>502</label>
-					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
-					<textoffsety>2</textoffsety>
-					<texturefocus border="2">list-focus.png</texturefocus>
-					<texturenofocus border="2">list-nofocus.png</texturenofocus>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>8</onup>
 					<ondown>7</ondown>
-					<textcolor>button-text</textcolor>
 				</control>
 					
 				<control type="button" id="7">
@@ -37,43 +27,24 @@
 					<posx>0</posx>
 					<posy>35</posy>
 					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
 					<label>190</label>
-					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
-					<textoffsety>2</textoffsety>
-					<texturefocus border="2">list-focus.png</texturefocus>
-					<texturenofocus border="2">list-nofocus.png</texturenofocus>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>6</onup>
 					<ondown>8</ondown>
-					<textcolor>button-text</textcolor>
 				</control>
 					
 				<control type="button" id="8">
 					<description>Clear button</description>
 					<posx>0</posx>
 					<posy>70</posy>
-					<width>185</width>
-					<height>34</height>
-					<font>menu</font>
-					<textoffsetx>10</textoffsetx>
-					<aligny>-</aligny>	
-					<textoffsety>2</textoffsety>
-					<texturefocus border="2">list-focus.png</texturefocus>
-					<texturenofocus border="2">list-nofocus.png</texturenofocus>
 					<label>192</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>7</onup>
 					<ondown>6</ondown>
-					<textcolor>button-text</textcolor>
 				</control>
-		
 			</control>
 		</control>
 	</include>
-
 </includes>

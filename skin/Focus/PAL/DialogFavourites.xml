@@ -14,7 +14,7 @@
 		<control type="image">
 			<posx>-27</posx>
 			<posy>-27</posy>
-			<width>270</width>
+			<width>268</width>
 			<height>373</height>
 			<texture border="38">dialogpanel.png</texture>
 		</control>
@@ -58,6 +58,7 @@
 					<width>215</width>
 					<height>30</height>
 					<texture>list-focus.png</texture>
+					<include>ListScroll</include>
 				</control>
 				<control type="label">
 					<posx>10</posx>

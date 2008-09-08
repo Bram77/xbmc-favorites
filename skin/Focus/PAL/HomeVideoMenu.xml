@@ -17,7 +17,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>300</width>
-				<height>37</height>
+				<height>35</height>
 				<buttongap>0</buttongap>
 				<numbuttons>7</numbuttons>
 				<orientation>vertical</orientation>
@@ -27,7 +27,7 @@
 				<defaultbutton>2</defaultbutton>
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
-				<alpha>70</alpha>
+				<alpha>80</alpha>
 				<font>homemenu</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
@@ -41,7 +41,7 @@
 				<include>select</include>
 	
 				<buttons>
-							
+
 					<button id="1">
 						<label>31914</label>
 						<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
@@ -75,14 +75,12 @@
 					
 					<button id="7">
 						<label>31011</label>
-						<onclick>ActivateWindow(MyVideoFiles,plugin://video/Apple Movie Trailers)</onclick>
+						<onclick>ActivateWindow(MyVideoLibrary,plugin://video/Apple Movie Trailers)</onclick>
 					</button>
 	
 				</buttons>
 			</control>
-			
 
-			
 		</control>
 		
 	</include>

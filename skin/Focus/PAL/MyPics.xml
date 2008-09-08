@@ -5,26 +5,39 @@
 	
 	<controls>
 		<include>background</include>
+		
+		<!--
+		<control type="image">
+			<description>selected pic background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<info>ListItem.Thumb</info>
+			<aspectratio>scale</aspectratio>
+			<visible>Control.IsVisible(52)</visible>
+		</control>
+	-->
 	
 		<control type="group">
 			<description>page content</description>
 			<include>pageslide</include>		
 			<include>ListView</include>
 			<include>PageControl</include>
-			<include>Icons</include>
+			<include>PictureThumbs</include>
 			<include>PictureSlide</include>
-			<include>BigIcons</include>
+			<include>BigThumbs</include>
 			<include>viewsmenu</include>
 			<include>viewsmenucontext</include>
 			<include>fadeinout</include>
 			<include>AllViewCommonPageControls</include>
-			<include>AllViewCommonThumbSmall</include>
+
 
 			
 <!--- COMMON -------------------------->			
 			<control type="image">
 				<description>list item thumb</description>
-				<posx>430</posx>
+				<posx>415</posx>
 				<posy>90</posy>
 				<width>256</width>
 				<height>256</height>
@@ -38,7 +51,7 @@
 								
 			<control type="image" id="999">
 				<description>list item icon</description>
-				<posx>430</posx>
+				<posx>415</posx>
 				<posy>90</posy>
 				<height>256</height>
 				<width>256</width>
@@ -49,7 +62,7 @@
 			</control>
 			<control type="image" id="999">
 				<description>list item icon</description>
-				<posx>430</posx>
+				<posx>415</posx>
 				<posy>345</posy>
 				<height>256</height>
 				<width>256</width>
@@ -59,11 +72,11 @@
 				<aspectratio align="bottom">keep</aspectratio>
 				<include>fadeinout</include>
 			</control>
-
+			
 			<control type="label">
-				<posx>430</posx>
+				<posx>400</posx>
 				<posy>375</posy>
-				<width>260</width>
+				<width>290</width>
 				<height>200</height>
 				<info>ListItem.PictureResolution</info>
 				<scroll>true</scroll>
@@ -76,9 +89,9 @@
 								
 			<control type="label">
 				<label>$INFO[ListItem.Size]</label>
-				<posx>430</posx>
+				<posx>400</posx>
 				<posy>405</posy>
-				<width>260</width>
+				<width>290</width>
 				<height>300</height>
 				<scroll>true</scroll>
 				<font>h2</font>
@@ -89,9 +102,9 @@
 			</control>
 								
 			<control type="label">
-				<posx>430</posx>
+				<posx>400</posx>
 				<posy>435</posy>
-				<width>260</width>
+				<width>290</width>
 				<height>200</height>
 				<label>$INFO[ListItem.PictureDateTime]</label>
 				<scroll>true</scroll>
@@ -106,84 +119,115 @@
 	<!--- PICTURESLIDE -------------------------->		
 			
 			<control type="label">
-				<posx>200</posx>
-				<posy>385</posy>
+				<posx>92</posx>
+				<posy>400</posy>
 				<width>530</width>
 				<height>30</height>
 				<font>h1</font>
 				<textcolor>label-text</textcolor>
-				<selectedcolor>listselectedtext</selectedcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.IsVisible(52)</visible>
 			</control>
+			
 			<control type="label">
-				<posx>200</posx>
-				<posy>425</posy>
+				<posx>92</posx>
+				<posy>435</posy>
 				<width>530</width>
 				<height>30</height>
-				<font>h2</font>
+				<font>h4</font>
 				<textcolor>sublabel-text</textcolor>
-				<selectedcolor>listselectedtext</selectedcolor>
-				<scroll>true</scroll>
-				<label>$INFO[ListItem.Size]</label>
-				<visible>Control.IsVisible(52)</visible>
-			</control>
-	
-			<control type="label">
-				<posx>200</posx>
-				<posy>455</posy>
-				<width>577</width>
-				<height>30</height>
-				<font>h2</font>
-				<textcolor>sublabel-text</textcolor>
-				<selectedcolor>listselectedtext</selectedcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
 				<visible>Control.IsVisible(52)</visible>
 			</control>
 	
 			<control type="label">
-				<posx>200</posx>
-				<posy>485</posy>
+				<posx>92</posx>
+				<posy>465</posy>
+				<width>577</width>
+				<height>30</height>
+				<font>h4</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<label>$INFO[ListItem.Size]</label>
+				<visible>Control.IsVisible(52)</visible>
+			</control>
+	
+			<control type="label">
+				<posx>92</posx>
+				<posy>490</posy>
 				<width>577</width>
 				<height>30</height>
 				<font>h2</font>
 				<textcolor>sublabel-text</textcolor>
-				<selectedcolor>listselectedtext</selectedcolor>
 				<scroll>true</scroll>
 				<label>$INFO[ListItem.PictureDateTime,$LOCALIZE[21820] - ]</label>
 				<visible>Control.IsVisible(52)</visible>
 			</control>
 
+		
+		
+		
+<!----- THUMBNAILS VIEW ----->
+		
+		<control type="label">
+			<posx>40</posx>
+			<posy>470</posy>
+			<width>530</width>
+			<height>30</height>
+			<info>ListItem.Label</info>
+			<font>h1</font>
+			<textcolor>label-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(55)</visible>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<posx>40</posx>
+			<posy>495</posy>
+			<width>530</width>
+			<height>30</height>
+			<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(55)</visible>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="label">
+			<posx>676</posx>
+			<posy>495</posy>
+			<width>300</width>
+			<height>30</height>
+			<label>$INFO[ListItem.PictureDateTime]</label>
+			<font>h2</font>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(55)</visible>
+			<include>fadeinout</include>
+		</control>
+		
 		</control>
 		
 		<include>allscreens</include>
 			
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>4</posy>
-			<width>720</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>1</label>
-			<font>page</font>
 			<visible>IsEmpty(container.pluginname)</visible>
 		</control>
 		
 		<control type="label">
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>720</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<info>Container.PluginName</info>
-			<font>page</font>
 			<visible>!IsEmpty(container.pluginname)</visible>
 		</control>	
 		
 		<include>FilesMenu</include>
-	
 
 	</controls>
 </window>

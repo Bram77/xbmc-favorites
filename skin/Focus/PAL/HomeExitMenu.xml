@@ -52,22 +52,20 @@
 					</button>
 					
 					<button id="3">
-						<label>20126</label>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>system.logoff</onclick>
+						<label>13313</label>
+						<onclick>XBMC.RestartApp()</onclick>
 					</button>
 					
 					<button id="4">
-						<label>13313</label>
-						<onclick>XBMC.RestartApp()</onclick>
+						<label>20126</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>system.logoff</onclick>
 					</button>
 					
 					<button id="5">
 						<label>13005</label>
 						<onclick>XBMC.ShutDown()</onclick>
 					</button>
-					
-					
 
 				</buttons>
 			</control>

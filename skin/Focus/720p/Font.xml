@@ -2,34 +2,25 @@
 	<fontset id="Default" unicode="true">
 	
 <!--- HOME --------------------------------->
-		
-	<!--
-		<font>
-		<name>home</name>
-		<filename>Calibri.ttf</filename>
-		<shadow>FF000000</shadow>	
-		<size>32</size>
-	</font>
-	-->
-	
+
 	<font>
 		<name>homemenu</name>
-		<filename>ZegoeLight-U.ttf</filename>
-		<size>32</size>
+		<filename>LeroyLetteringLightBeta01.ttf</filename>
+		<size>30</size>
 		<shadow>99000000</shadow>
 	</font>
 	
 	<font>
 		<name>rss</name>
-		<filename>DroidSans.ttf</filename>
-		<size>26</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>20</size>
 		<shadow>FF000000</shadow>
 	</font>
 	
 	<font>
 		<name>menubar</name>
 		<filename>DejaVuSans.ttf</filename>
-		<size>30</size>
+		<size>29</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
@@ -63,7 +54,7 @@
 	<font>
 		<name>menu</name>
 		<filename>DejaVuSans.ttf</filename>
-		<size>20</size>
+		<size>21</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
@@ -92,13 +83,13 @@
 		<name>h2</name>
 		<filename>DejaVuSans.ttf</filename>
 		<shadow>FF000000</shadow>	
-		<size>22</size>
+		<size>24</size>
 	</font>
 	
 	<font>
 		<name>h3</name>
-		<filename>DroidSans.ttf</filename>
-		<size>22</size>
+		<filename>DejaVuSans.ttf</filename>
+		<size>20</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
@@ -109,14 +100,31 @@
 		<shadow>ff000000</shadow>
 	</font>
 	
+	<font>
+		<name>notice</name>
+		<filename>LeroyLetteringLightBeta01.ttf</filename>
+		<size>40</size>
+		<shadow>99000000</shadow>
+		<aspect>1.1</aspect>
+	</font>
+	
+	<font>
+		<name>scroller</name>
+		<filename>DroidSans.ttf</filename>
+		<size>60</size>
+		<shadow>ff000000</shadow>
+		<style>bold</style>
+	</font>
+	
 	
 <!--- DIALOGS ---------------------------------------->
 	
 	<font>
 		<name>h1D</name>
-		<filename>DejaVuSans-Bold.ttf</filename>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<style>bold</style>
 		<shadow>FF000000</shadow>	
-		<size>24</size>
+		<size>26</size>
 	</font>
 	
 	<font>
