@@ -7,14 +7,8 @@
 		<include>allscreens</include>
 		
 		<control type="label">
-			<description>description label</description>
-			<include>home-menubar</include>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>752</width>
-			<align>center</align>
+			<include>pageLabel</include>
 			<label>10517</label>
-			<font>page</font>
 		</control>
 	
 	<include>LibraryPlaylistMenu</include>
@@ -22,117 +16,106 @@
 	<control type="group">		
 		<include>viewsmenu</include>
 		<include>viewsmenucontext</include>
-		<include>PageControl</include>
+		<include>AllViewCommonPageControls</include>
 		<include>pageslide</include>
 		<include>PlaylistView</include>
-
-		<control type="image">
-			<posx>32</posx>
-			<posy>70</posy>
-			<width>150</width>
-			<height>150</height>
-			<info>MusicPlayer.Cover</info>
-			<bordertexture border="2">list-focus.png</bordertexture>
-			<bordersize>4</bordersize>
-			<aspectratio align="left">keep</aspectratio>
-			<visible>Player.HasAudio</visible>
-			<include>fadereplace</include>
-		</control>
-		<control type="image">
-			<posx>32</posx>
-			<posy>210</posy>
-			<width>150</width>
-			<height>150</height>
-			<info>MusicPlayer.Cover</info>
-			<bordertexture border="2">-</bordertexture>
-			<bordersize>4</bordersize>
-			<texture flipy="true" diffuse="fade2.png">-</texture>
-			<aspectratio align="left">keep</aspectratio>
-			<visible>Player.HasAudio</visible>
-			<include>fadereplace</include>
-		</control>
-
-		<control type="image">
-			<posx>30</posx>
-			<posy>70</posy>
-			<width>150</width>
-			<height>150</height>
-			<texture>CDCase.png</texture>
-			<aspectratio>keep</aspectratio>
-			<visible>!Player.HasAudio</visible>
-			<include>fadereplace</include>
-		</control>
+		<include>BigListAU</include>
 		
 		<control type="image">
-			<posx>30</posx>
-			<posy>220</posy>
-			<width>150</width>
-			<height>150</height>
-			<texture flipy="true" diffuse="fade2.png">CDCase.png</texture>
-			<aspectratio align="bottom">keep</aspectratio>
-			<visible>!Player.HasAudio</visible>
-			<include>fadereplace</include>
+			<posx>470</posx>
+			<posy>70</posy>
+			<width>240</width>
+			<height>240</height>
+			<info>MusicPlayer.Cover</info>
+			<bordertexture border="2">list-focus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
 		</control>
-	
+		<control type="image">
+			<posx>470</posx>
+			<posy>300</posy>
+			<width>240</width>
+			<height>240</height>
+			<info>MusicPlayer.Cover</info>
+			<bordertexture border="2">-</bordertexture>
+			<bordersize>5</bordersize>
+			<texture flipy="true" diffuse="fade2.png">-</texture>
+			<aspectratio align="left">keep</aspectratio>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
+		</control>
+		
 		<control type="label">
-			<description>title</description>
-			<posx>180</posx>
-			<posy>65</posy>
+			<description>Playing Track</description>
+			<posx>470</posx>
+			<posy>325</posy>
+			<width>200</width>
+			<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
 			<align>left</align>
-			<font>h1</font>
-			<info>MusicPlayer.Title</info>
+			<font>h2</font>
+			<include>listHeadLabel</include>
+		</control>
+		
+		<control type="label">
+			<description>Playing Track Artist</description>
+			<posx>470</posx>
+			<posy>353</posy>
+			<width>200</width>
+			<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
+			<align>left</align>
+			<include>listSubLabel</include>
+		</control>
+		
+		<control type="label">
+			<description>Playing Track Album</description>
+			<posx>470</posx>
+			<posy>379</posy>
+			<width>200</width>
+			<label>$INFO[MusicPlayer.Album] ($INFO[MusicPlayer.Year])</label>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
+			<align>left</align>
+			<include>listSubLabel</include>
+		</control>
+		
+		<control type="label">
+			<description>Time Progress</description>
+			<include>timeProgress</include>
+			<posx>470</posx>
+			<posy>410</posy>
+			<width>200</width>
+			<align>left</align>
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
+		</control>
+		
+		<control type="label">
+			<posx>470</posx>
+			<posy>450</posy>
+			<width>200</width>
+			<label>$LOCALIZE[209]:[CR]$INFO[MusicPlayer.offset(1).Title][CR]</label>
 			<textcolor>label-text</textcolor>
-			<visible>Player.HasAudio</visible>
-		</control>
-	
-		<control type="label">
-			<description>artist</description>
-			<posx>180</posx>
-			<posy>100</posy>
 			<align>left</align>
-			<font>h2</font>
-			<info>MusicPlayer.Artist</info>
-			<textcolor>sublabel-text</textcolor>
-			<visible>Player.HasAudio</visible>
+			<font>description</font>
+			<include>fadeinout</include>						
+			<visible>Player.HasAudio + Control.IsVisible(50)</visible>
 		</control>
-	
-		<control type="label">
-			<description>album</description>
-			<posx>180</posx>
-			<posy>130</posy>
+		
+		<control type="fadelabel">
+			<posx>470</posx>
+			<posy>505</posy>
+			<width>200</width>
+			<info>AudioScrobbler.FilesCached</info>
+			<info>AudioScrobbler.SubmitState</info>
+			<textcolor>label-text</textcolor>
 			<align>left</align>
-			<font>h2</font>
-			<info>MusicPlayer.Album</info>
-			<textcolor>sublabel-text</textcolor>
-			<visible>Player.HasAudio</visible>
+			<font>description</font>
+			<include>fadeinout</include>		
+			<scroll>true</scroll>
+      	  	<scrollout>false</scrollout>
+       	 	<pauseatend>5000</pauseatend>
+			<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable) + Control.IsVisible(50)</visible>
 		</control>
-	
-		<control type="label">
-			<description>Time Label</description>
-			<posx>180</posx>
-			<posy>167</posy>
-			<align>left</align>
-			<font>h4</font>
-			<label>$INFO[player.Time]$INFO[player.Duration, / ]</label>
-			<visible>Player.HasAudio</visible>
-			<include>sublabel</include>
-		</control>
-
-		<control type="progress">
-			<description>progress control</description>
-			<posx>180</posx>
-			<posy>207</posy>
-			<width>510</width>
-			<height>8</height>
-			<info>Player.Progress</info>
-			<texturebg>progressbar-background.png</texturebg>
-			<lefttexture>progress-left.png</lefttexture>
-			<midtexture>progress-middle.png</midtexture>
-			<righttexture>progress-right.png</righttexture>
-			<overlaytexture>-</overlaytexture>
-			<visible>Player.HasAudio</visible>
-		</control>
-
 	</control>
 	
 	<control type="image">
@@ -146,17 +129,7 @@
 		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable) +![Window.IsActive(107)]</visible>
 	</control>
 	
-	<control type="label" id="200">
-		<posx>0</posx>
-		<posy>540</posy>
-		<width>720</width>
-		<label>$LOCALIZE[31082]</label>
-		<textcolor>label-text</textcolor>
-		<align>center</align>
-		<font>h4</font>
-		<include>fadeinout</include>						
-		<visible>Player.HasAudio + Skin.HasSetting(ASStatusEnable) + ![Window.IsActive(114) | Window.IsActive(107)]</visible>
-	</control>
+	
 
 
 	</controls>

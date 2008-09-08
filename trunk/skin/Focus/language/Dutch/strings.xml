@@ -1,2 +1,106 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<strings />
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+	
+<string id="31000">Skin ontwikkelaar: Jeroen[CR][CR]Deze Skin gebruikt pictogrammen uit en pictogrammen gebaseerd op het Tango! Desktop Project (http://tango.freedesktop.org)[CR][CR]Bedankt: Team-XBMC, alle plugin, script en skin ontwikkelaars en iedereen die op wat voor manier een bijdrage levert waardoor XBMC zo geweldig is. En JIJ, voor het gebruiken van Focus [CR][CR]Standaard schermafbeelding gemaakt door Adam Moore, gebruikt met toestemming. Bezoek elusive.deviantart.com voor zijn portfolio.</string>
+	
+<string id="31003">LastFM Informatie in Muziek Afspeellijst</string>
+	
+<string id="31006">Accessoires</string>
+<string id="31010">Foto's</string>		
+<string id="31011">Apple Movie Trailers</string>
+<string id="31012">Video Afpeellijst</string>
+<string id="31013">Einde</string>
+
+<string id="31016">Fanart</string>
+<string id="31017">Beheer Profielen</string>	
+<string id="31018">Aangepast</string>
+<string id="31019">Voorbeeld</string>
+<string id="31020">Achtergronden</string>
+<string id="31021">Profiel Instellingen</string>
+<string id="31022">Layout</string>
+<string id="31023">Toon Mini Video Scherm</string>
+<string id="31024">Gebruik Aangepaste Achtergrond</string>	
+<string id="31025">Toon Media Informatie</string>
+<string id="31026">Toon Plot in Brede Iconen Layout</string>
+<string id="31027">Use Now Playing Screens</string>
+<string id="31028">Toon Video in Achtergrond</string>
+<string id="31029">Toon Visualisatie in Achtergrond</string>
+
+<string id="31030">Kies Aangepaste Achtergrond</string>
+<string id="31031">Herstel Achtergrond</string>
+<string id="31033">Beeld Instellingen</string>
+
+<string id="31069">Video Instellingen</string>
+<string id="31007">Programma's Instellingen</string>
+<string id="31900">Muziek Instellingen</string>
+<string id="31901">Afbeeldingen Instellingen</string>
+<string id="31902">Netwerk Instellingen</string>
+<string id="31903">Weer Instellingen</string>
+<string id="31904">Systeem Instellingen</string>
+
+<string id="31905">Update XBMC</string>
+<string id="31906">Moment Geduld...</string>
+	
+<string id="31908">Achtergronden</string>
+<string id="31909">Skin Credits</string>
+	
+<string id="31911">Uitschakelen in 30 min.</string>
+<string id="31912">Uitschakelen in 60 min.</string>
+<string id="31913">Uitschakelen in 120 min.</string>
+<string id="31914">Plugins</string>
+
+<string id="31916">Aangepaste Timer</string>
+<string id="31917">Gebruik Vloeiend Scrollen in Lijsten</string>
+<string id="31918">Toon TV-serie Plot in Lijst Layout</string>
+<string id="31919">Toon Aflevering Plot in Lijst Layout (na pauze)</string>
+<string id="31920">Toon Film Plot in Lijst Layout (na pauze)</string>
+
+<string id="31922">Bekeken Indicatie Voor Films</string>
+<string id="31923">Bekeken Indicatie Voor Seizoenen</string>
+<string id="31924">Bekeken Indicatie Voor Afleveringen</string>
+
+<string id="31927">Toon Timer Opties in Uitschakel Menu</string>
+<string id="31928">Gebruik Map Voor Aangepaste Achtergronden</string>
+<string id="31929">Gebruik Fanart In Alle Schermen</string>
+<string id="31930">Maak Fanart Minder Fel</string>
+<string id="31931">Trailer Beschikbaar</string>
+<string id="31933">Gebruik Fanart Layout</string>
+
+<string id="31040">PAUZE</string>
+<string id="31041">FWD 2X</string>
+<string id="31042">FWD 4X</string>
+<string id="31043">FWD 8X</string>
+<string id="31044">FWD 16X</string>
+<string id="31045">FWD 32X</string>
+<string id="31046">RWD 2X</string>
+<string id="31047">RWD 4X</string>
+<string id="31048">RWD 8X</string>
+<string id="31049">RWD 16X</string>
+<string id="31050">RWD 32X</string>
+<string id="31051">AFSPELEN</string>
+	
+<string id="31064">Hoog</string>
+<string id="31065">Laag</string>
+<string id="31066">Gedempt</string>
+<string id="31067">Gebruik Fanart Kleuren (Indien Beschikbaar)</string>
+<string id="31068">Einde Over: $INFO[Player.FinishTime]</string>
+<string id="31070">Algemeen</string>
+<string id="31071">Achtergrond</string>
+
+<string id="31077">$INFO[MusicPlayer.offset(1).Title,[COLOR=sublabel-text]Volgende Nummer: [/COLOR],]$INFO[MusicPlayer.offset(1).Artist, [COLOR=sublabel-text]door [/COLOR],]</string>
+<string id="31078">[COLOR=sublabel-text]Speelt [/COLOR]$INFO[MusicPlayer.Title] [COLOR=sublabel-text]door [/COLOR]$INFO[MusicPlayer.Artist] [COLOR=sublabel-text]van het album [/COLOR]$INFO[MusicPlayer.Album]</string>
+<string id="31079">[COLOR=sublabel-text]Speelt [/COLOR]$INFO[VideoPlayer.Title]</string>
+<string id="31080">[COLOR=sublabel-text]Speelt [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]van de TV-Serie[/COLOR] $INFO[VideoPlayer.TVShowTitle]</string>
+<string id="31081">[COLOR=sublabel-text]Speelt [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]door [/COLOR]$INFO[VideoPlayer.Artist] [COLOR=sublabel-text]</string>
+<string id="31082">[COLOR=sublabel-text]Status: [/COLOR]$INFO[AudioScrobbler.ConnectState ] [COLOR=sublabel-text]Verzenden over: [/COLOR]$INFO[AudioScrobbler.SubmitState] [COLOR=sublabel-text]$INFO[AudioScrobbler.FilesCached][/COLOR]</string>
+	
+	
+<string id="31083">door</string>
+<string id="31084">Layouts</string>
+<string id="31085">$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</string>
+<string id="31086">Bestanden</string>
+<string id="31087">Seizoen</string>
+<string id="31088">Aflevering</string>
+<string id="31089">Eerste Uitzending:</string>
+	
+</strings>

@@ -19,7 +19,7 @@
 				<width>420</width>
 				<height>37</height>
 				<buttongap>0</buttongap>
-				<numbuttons>7</numbuttons>
+				<numbuttons>6</numbuttons>
 				<orientation>vertical</orientation>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -27,7 +27,7 @@
 				<defaultbutton>2</defaultbutton>
 				<wraparound>yes</wraparound>
 				<smoothscrolling>yes</smoothscrolling>
-				<alpha>70</alpha>
+				<alpha>80</alpha>
 				<font>homemenu</font>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
@@ -70,11 +70,6 @@
 					<button id="6">
 						<label>130</label>
 						<onclick>ActivateWindow(SystemInfo)</onclick>
-					</button>
-					
-					<button id="7">
-						<label>31905</label>
-						<onclick>XBMC.RunScript(Q:\scripts\T3CH Upgrader\default.py)</onclick>
 					</button>
 						
 				</buttons>

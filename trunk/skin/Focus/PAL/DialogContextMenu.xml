@@ -2,8 +2,8 @@
 	<defaultcontrol>1000</defaultcontrol>
 	
 	<coordinates>
-	<system>1</system>
-	<origin x="0" y="67">true</origin>
+		<system>1</system>
+		<origin x="0" y="66">true</origin>
 	</coordinates>
 	
 	<animation effect="slide" time="150" start="-190,0" end="0,0">WindowOpen</animation>
@@ -20,13 +20,9 @@
 				<description>button template</description>
 				<posx>19</posx>
 				<posy>14</posy>
-				<width>192</width>
-				<height>33</height>
-				<align>left</align>
-				<aligny>left</aligny>
-				<font>menu</font>
-				<texturenofocus border="2">list-nofocus.png</texturenofocus>
-				<texturefocus border="2">list-focus.png</texturefocus>
+				<width>200</width>
+				<textwidth>175</textwidth>
+				<scroll>yes</scroll>
 			</control>
 		</control>
 	</controls>

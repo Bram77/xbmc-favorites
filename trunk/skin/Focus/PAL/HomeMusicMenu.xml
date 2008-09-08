@@ -75,7 +75,7 @@
 						<label>136</label>
 						<onclick>ActivateWindow(MyMusicLibrary,playlists)</onclick>
 					</button>
-						
+					
 					<button id="8">
 						<label>31914</label>
 						<onclick>ActivateWindow(MyMusicFiles,plugin://music)</onclick>

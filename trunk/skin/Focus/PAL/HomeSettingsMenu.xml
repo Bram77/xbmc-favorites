@@ -6,7 +6,7 @@
 			<include>zoomout</include>
 			<include>home-submenu</include>
 			<include>fadeinout</include>
-			<posx>200</posx>
+			<posx>210</posx>
 			<posy>55</posy>
 			<onup>9000</onup>
 			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(5)</visible>	
