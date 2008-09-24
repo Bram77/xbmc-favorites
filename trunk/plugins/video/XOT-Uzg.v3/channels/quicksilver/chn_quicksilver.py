@@ -37,7 +37,6 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.guid = "1ABEDEDC-42F4-11DD-86A5-EAFF55D89593"
         self.mainListUri = "http://quicksilverscreen.com/"
         self.baseUrl = "http://quicksilverscreen.com/"
         self.icon = "quicksilverthumb.png"

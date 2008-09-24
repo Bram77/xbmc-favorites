@@ -32,23 +32,6 @@ Direct contact can be done using the following e-mailadres:
 --------------------------------------------------------------------------------------------
  2. Changelog
 --------------------------------------------------------------------------------------------
-Changelog v3.2.0a1 - 2008-08-19 ****Needs at least XBMC revision R14899 ****
-* Fixed: NOS channel needed fixing because of new check on the website.
-* Fixed: quickfix for unexplainable clearing of channellist
-* Changed: layout of script folder to support WindowXML rev14899
-* Fixed: MyVideo regex
-* Fixed: some more syntax issues
-* Changed: User Agent for URLLib is now XOT/3.0 (compatible; XBMC; U)
-* Removed: Unneeded imports
-* Fixed: RTL changed their layout
-* Fixed: Regex changed for Kanalenkiezer
-* Changed: Veronica channel needed multiple fixes (FLV detection)
-* Changed: Favorites now use ChannelGUID for identification
-* Added: GUID for each channel used for identification.
-* Added: bitrate selection of RTL streams
-* Updated: SVT.se image
-* Updated: Donations updated in readme.txt
-
 Changelog v3.1.0 - 2008-05-07 ****Needs at least XBMC revision R10008 ****
 * Added: Auto Channel Updater
 * Changed: update now has a verbose option to also show a message if no update was available

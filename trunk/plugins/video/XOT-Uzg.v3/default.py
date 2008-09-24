@@ -29,7 +29,7 @@
 import os.path
 import sys, traceback
 import xbmcgui
-sys.path.append(os.path.join(os.getcwd().replace(";",""),'resources','libs'))
+sys.path.append(os.path.join(os.getcwd().replace(";",""),'libs'))
 #sys.path.insert(1, os.path.join(os.getcwd().replace(";",""),'libs'))
 
 #===============================================================================

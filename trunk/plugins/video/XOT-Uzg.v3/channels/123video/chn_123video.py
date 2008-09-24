@@ -36,7 +36,6 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.guid = "743D04B2-42F3-11DD-84F5-6CEF55D89593"
         self.mainListUri = "http://www.123video.nl"
         self.baseUrl = "http://www.123video.nl/"
         self.icon = "123icon.png"

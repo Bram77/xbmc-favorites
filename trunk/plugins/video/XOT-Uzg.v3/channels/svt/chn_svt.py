@@ -38,7 +38,6 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.guid = "06DB83A2-42F4-11DD-AAC1-CEFD55D89593"
         self.mainListUri = "http://svt.se/svt/road/Classic/shared/mediacenter/navigation.jsp?d=37591&frameset=true"
         self.baseUrl = "http://svt.se/svt/road/Classic/shared/mediacenter/"
         self.icon = "svticon.png"
@@ -269,4 +268,5 @@ class Channel(chn_class.Channel):
             item.downloaded = True
             return item
         else:
-            logFile.warning('Error determining folder/video type of selected item')
+            logFile.warning('Error determining folder/video type of selected item');
+   
