@@ -1,3 +1,4 @@
+  24-09-2008 :: [plugins][video]    ~ Downgraded the "Xot-Uzg v.3" plugin to version 3.1.0 (problems with 3.2.0 Alpha) + added channel updates
   08-09-2008 :: [skin]              ~ Updated the "Focus" skin to version Alpha 5
   01-09-2008 :: [plugins][video]    ~ Updated the "Xot-Uzg v.3" plugin to version 3.2.0a1 + RTL and SBS6nl updates
   01-09-2008 :: [skin]              ~ Updated the "xTv" skin to the latest SVN version
