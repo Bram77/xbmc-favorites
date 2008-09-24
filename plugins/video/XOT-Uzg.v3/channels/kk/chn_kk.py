@@ -12,7 +12,7 @@ import common
 import config
 import controls
 import contextmenu
-#import chn_class
+import chn_class
 
 logFile = sys.modules['__main__'].globalLogFile
 uriHandler = sys.modules['__main__'].globalUriHandler

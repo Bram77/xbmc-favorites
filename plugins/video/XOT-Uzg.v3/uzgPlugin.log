@@ -1,0 +1,459 @@
+20080924 11:46:54 - INFO     - plugin.py        - 135 - Plugin::ShowProgramList
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_123video
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_dumpert
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_joox
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_kk
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_lamas
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_myvideo
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_net5
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_nos
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_nossearch
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_quicksilver
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_rtl
+20080924 11:46:55 - INFO     - progwindow.py    - 35  - Importing chn_sbs6
+20080924 11:46:56 - INFO     - progwindow.py    - 35  - Importing chn_sbs6nl
+20080924 11:46:56 - INFO     - progwindow.py    - 35  - Importing chn_svt
+20080924 11:46:56 - INFO     - progwindow.py    - 35  - Importing chn_veronica
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: dumpert
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: joox
+20080924 11:46:56 - WARNING  - chn_class.py     - 1010 - Joox.Net has maxVersion 3.0.0 and is to old for XOT version 3.1.0. (maxXot=00300000099, currentXot=00300100099)
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: delamas
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: net5
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: ned1
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: ned2
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: ned3
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: nedsearch
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: sbs
+20080924 11:46:56 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:46:56 - DEBUG    - chn_class.py     - 52  - ChannelCode present: veronica
+20080924 11:46:56 - INFO     - progwindow.py    - 74  - Starting XOT-Uzg (XOT-Uzg.v3) ProgWindow with Fallback=Q:\plugins\video\XOT-Uzg.v3\ and DefaultName=Default
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 1
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 2
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 3
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 4
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 5
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 6
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 7
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 7
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 8
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:46:56 - DEBUG    - plugin.py        - 148 - 255
+20080924 11:47:08 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:47:09 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:47:09 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:47:09 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '?chn_rtl.py|']
+20080924 11:47:09 - DEBUG    - plugin.py        - 71  - ['chn_rtl.py', '']
+20080924 11:47:09 - INFO     - plugin.py        - 83  - Importing chn_rtl from Q:\plugins\video\XOT-Uzg.v3\channels\rtl
+20080924 11:47:09 - DEBUG    - plugin.py        - 85  - ['chn_rtl.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder)']
+20080924 11:47:09 - INFO     - plugin.py        - 87  - Only one channel present. Intialising it.
+20080924 11:47:09 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:47:09 - INFO     - plugin.py        - 103 - Loaded: RTL 4,5&7
+20080924 11:47:09 - INFO     - plugin.py        - 167 - Plugin::ParseMainList
+20080924 11:47:09 - DEBUG    - plugin.py        - 170 - Doing ParseMainlist
+20080924 11:47:09 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/videomenu.xml (already 1 threads)
+20080924 11:47:10 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:47:10 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=7942)
+20080924 11:47:10 - INFO     - uriopener.py     - 198 - Url http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/videomenu.xml was opened successfully
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/71gradennoord/)/system/video/menu/reality/71gradennoord/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/albert/)/system/video/menu/shows/albert/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/allyouneedislove/)/system/video/menu/shows/allyouneedislove/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/AmsterdamBeijingRally/)/system/video/menu/programma/AmsterdamBeijingRally/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/aperitivo/)/system/video/menu/shows/aperitivo/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/beautyendenerd/)/system/video/menu/reality/beautyendenerd/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/beautytouch/)/system/video/menu/programma/beautytouch/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reizen/bestemmingnederland/)/system/video/menu/reizen/bestemmingnederland/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/beurslife/)/system/video/menu/programma/beurslife/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reizen/boardingnow/)/system/video/menu/reizen/boardingnow/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/boomingbusiness/)/system/video/menu/financien/boomingbusiness/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/brand/)/system/video/menu/programma/brand/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reizen/campinglife/)/system/video/menu/reizen/campinglife/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/gezondheid/chirurgenwerk/)/system/video/menu/gezondheid/chirurgenwerk/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/cowboysandangels/)/system/video/menu/reality/cowboysandangels/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/damesindedop/)/system/video/menu/reality/damesindedop/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/dancingonice/)/system/video/menu/shows/dancingonice/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/dancingwiththestars/)/system/video/menu/shows/dancingwiththestars/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/debeestenbus/)/system/video/menu/reality/debeestenbus/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/debloemenstal/)/system/video/menu/programma/debloemenstal/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/debouwers/)/system/video/menu/reality/debouwers/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/degoudenkooi/)/system/video/menu/reality/degoudenkooi/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/dewegnaarfame/)/system/video/menu/reality/dewegnaarfame/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/games/dealornodeal/)/system/video/menu/games/dealornodeal/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/derek/)/system/video/menu/reality/derek/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/echteliefdeisteregelen/)/system/video/menu/reality/echteliefdeisteregelen/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/actueel/editienl/)/system/video/menu/actueel/editienl/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/eigenhuisentuin/)/system/video/menu/huistuinkeuken/eigenhuisentuin/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/films/filmsensterren/)/system/video/menu/films/filmsensterren/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/foodenfit/)/system/video/menu/huistuinkeuken/foodenfit/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/fromalaskawithlove/)/system/video/menu/reality/fromalaskawithlove/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/gekopwielen/)/system/video/menu/automotor/gekopwielen/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/gewoonmooier/)/system/video/menu/programma/gewoonmooier/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/system/video/menu/soaps/gtst/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/soaps/gtst/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/goodies/)/system/video/menu/programma/goodies/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/helpikkrijgeenbaan/)/system/video/menu/programma/helpikkrijgeenbaan/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/helppapakookt/)/system/video/menu/huistuinkeuken/helppapakookt/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/hermanshelden/)/system/video/menu/huistuinkeuken/hermanshelden/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/hetzesdezintuig/)/system/video/menu/programma/hetzesdezintuig/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/housevision/)/system/video/menu/programma/housevision/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/idols3/)/system/video/menu/shows/idols3/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/idols4/)/system/video/menu/shows/idols4/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/service/reclame/)/system/video/menu/service/reclame/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/jensen/)/system/video/menu/shows/jensen/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/jetsetters/)/system/video/menu/programma/jetsetters/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/kiesbeter/)/system/video/menu/programma/kiesbeter/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/muziek/klassiekop8/)/system/video/menu/muziek/klassiekop8/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/lifeencooking/)/system/video/menu/huistuinkeuken/lifeencooking/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/lookinggood/)/system/video/menu/shows/lookinggood/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/lostintokyo/)/system/video/menu/reality/lostintokyo/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/mannenmannen/)/system/video/menu/shows/mannenmannen/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/mijntentistop2/)/system/video/menu/reality/mijntentistop2/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/modelmasters_hollandsnexttopmodel/)/system/video/menu/reality/modelmasters_hollandsnexttopmodel/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/myfirsthome/)/system/video/menu/huistuinkeuken/myfirsthome/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/nederlandinbedrijf/)/system/video/menu/programma/nederlandinbedrijf/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/nederlandonderweg/)/system/video/menu/programma/nederlandonderweg/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/opvolgergezocht/)/system/video/menu/financien/opvolgergezocht/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/prautotype/)/system/video/menu/automotor/prautotype/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/rtlprojectcatwalk/)/system/video/menu/reality/rtlprojectcatwalk/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/experience/rtl4/)/system/video/menu/experience/rtl4/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/experience/rtl5/)/system/video/menu/experience/rtl5/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/experience/rtl7/)/system/video/menu/experience/rtl7/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/experience/rtl8/)/system/video/menu/experience/rtl8/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/rtlautowereld/)/system/video/menu/automotor/rtlautowereld/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/actueel/rtlboulevard/)/system/video/menu/actueel/rtlboulevard/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/rtlfilm/)/system/video/menu/programma/rtlfilm/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/sport/rtl_gp/rtlgp/)/system/video/menu/sport/rtl_gp/rtlgp/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/muziek/musicworld/)/system/video/menu/muziek/musicworld/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/actueel/rtlnieuws/)/system/video/menu/actueel/rtlnieuws/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/sport/rtl_sport/)/system/video/menu/sport/rtl_sport/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/rtltransportwereld/)/system/video/menu/automotor/rtltransportwereld/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reizen/rtltravel/)/system/video/menu/reizen/rtltravel/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/sport/rtlvoetbal/)/system/video/menu/sport/rtlvoetbal/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/rtlz/)/system/video/menu/financien/rtlz/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/muziek/singingbee/)/system/video/menu/muziek/singingbee/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/smarttraveller/)/system/video/menu/financien/smarttraveller/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/spanningophetspoor/)/system/video/menu/programma/spanningophetspoor/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/studioew/)/system/video/menu/financien/studioew/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/financien/thuisopdebeurs/)/system/video/menu/financien/thuisopdebeurs/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/truckermv/)/system/video/menu/automotor/truckermv/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/tvmakelaar/)/system/video/menu/programma/tvmakelaar/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/expeditierobinson/)/system/video/menu/reality/expeditierobinson/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/vanamstelveennaarafrika/)/system/video/menu/reality/vanamstelveennaarafrika/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/vanettertotengel/)/system/video/menu/reality/vanettertotengel/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/vktk/)/system/video/menu/huistuinkeuken/vktk/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reizen/viavacanceitalia/)/system/video/menu/reizen/viavacanceitalia/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/viplog/)/system/video/menu/reality/viplog/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/soaps/voetbalvrouwen/)/system/video/menu/soaps/voetbalvrouwen/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/huistuinkeuken/vriendenhoudenhuis/)/system/video/menu/huistuinkeuken/vriendenhoudenhuis/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/actueel/whosnext/)/system/video/menu/actueel/whosnext/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/reality/wiewordtdemanvanfroukje/)/system/video/menu/reality/wiewordtdemanvanfroukje/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/willemalexanderenmaxima/)/system/video/menu/programma/willemalexanderenmaxima/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/wonenindewolken/)/system/video/menu/programma/wonenindewolken/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/automotor/worldsolarchallenge/)/system/video/menu/automotor/worldsolarchallenge/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/shows/xfactor/)/system/video/menu/shows/xfactor/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/yachtvision/)/system/video/menu/programma/yachtvision/videomenu.xml
+20080924 11:47:10 - DEBUG    - plugin.py        - 177 - http://www.rtl.nl/(vm=/programma/yourbodyenmind/)/system/video/menu/programma/yourbodyenmind/videomenu.xml
+20080924 11:47:26 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:47:26 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:47:27 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:47:27 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '?chn_rtl.py||http://www.rtl.nl/(vm=/sport/rtl_gp/rtlgp/)/system/video/menu/sport/rtl_gp/rtlgp/videomenu.xml ']
+20080924 11:47:27 - DEBUG    - plugin.py        - 71  - ['chn_rtl.py', '', 'http://www.rtl.nl/(vm=/sport/rtl_gp/rtlgp/)/system/video/menu/sport/rtl_gp/rtlgp/videomenu.xml ']
+20080924 11:47:27 - INFO     - plugin.py        - 83  - Importing chn_rtl from Q:\plugins\video\XOT-Uzg.v3\channels\rtl
+20080924 11:47:27 - DEBUG    - plugin.py        - 85  - ['chn_rtl.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder)']
+20080924 11:47:27 - INFO     - plugin.py        - 87  - Only one channel present. Intialising it.
+20080924 11:47:27 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:47:27 - INFO     - plugin.py        - 103 - Loaded: RTL 4,5&7
+20080924 11:47:27 - INFO     - plugin.py        - 204 - Plugin::ProcessFolderList Doing ProcessFolderList
+20080924 11:47:27 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.rtl.nl/(vm=/sport/rtl_gp/rtlgp/)/system/video/menu/sport/rtl_gp/rtlgp/videomenu.xml (already 1 threads)
+20080924 11:47:27 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:47:27 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=1201)
+20080924 11:47:27 - INFO     - uriopener.py     - 198 - Url http://www.rtl.nl/(vm=/sport/rtl_gp/rtlgp/)/system/video/menu/sport/rtl_gp/rtlgp/videomenu.xml was opened successfully
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - chn_rtl.py       - 130 - starting CreateFolderItem for RTL 4,5&7
+20080924 11:47:27 - DEBUG    - plugin.py        - 211 - ProcessFolderList returned 12 items
+20080924 11:47:27 - DEBUG    - plugin.py        - 216 - Adding: A1 GP () which is a folder episodeItem and complete=True
+20080924 11:47:27 - DEBUG    - plugin.py        - 216 - Adding: Dakar () which is a folder episodeItem and complete=True
+20080924 11:47:27 - DEBUG    - plugin.py        - 216 - Adding: Dakar Series () which is a folder episodeItem and complete=True
+20080924 11:47:27 - DEBUG    - plugin.py        - 216 - Adding: DTM () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Dutch Power Pack () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Formule 1 () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Laatste video's () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Rally Report () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Red Bull Air Race () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Red Bull X-Fighters () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: Superbike () which is a folder episodeItem and complete=True
+20080924 11:47:28 - DEBUG    - plugin.py        - 216 - Adding: WTCC () which is a folder episodeItem and complete=True
+20080924 11:47:34 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:47:34 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:47:34 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:47:34 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '?chn_rtl.py||http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/system/video/menu/sport/rtl_gp/rtlgp/video/wtcc/videomenu.xml ']
+20080924 11:47:34 - DEBUG    - plugin.py        - 71  - ['chn_rtl.py', '', 'http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/system/video/menu/sport/rtl_gp/rtlgp/video/wtcc/videomenu.xml ']
+20080924 11:47:34 - INFO     - plugin.py        - 83  - Importing chn_rtl from Q:\plugins\video\XOT-Uzg.v3\channels\rtl
+20080924 11:47:34 - DEBUG    - plugin.py        - 85  - ['chn_rtl.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder)']
+20080924 11:47:34 - INFO     - plugin.py        - 87  - Only one channel present. Intialising it.
+20080924 11:47:35 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:47:35 - INFO     - plugin.py        - 103 - Loaded: RTL 4,5&7
+20080924 11:47:35 - INFO     - plugin.py        - 204 - Plugin::ProcessFolderList Doing ProcessFolderList
+20080924 11:47:35 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/system/video/menu/sport/rtl_gp/rtlgp/video/wtcc/videomenu.xml (already 1 threads)
+20080924 11:47:35 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:47:35 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=18708)
+20080924 11:47:35 - INFO     - uriopener.py     - 198 - Url http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/system/video/menu/sport/rtl_gp/rtlgp/video/wtcc/videomenu.xml was opened successfully
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - chn_rtl.py       - 147 - starting FormatVideoItem for RTL 4,5&7
+20080924 11:47:35 - DEBUG    - plugin.py        - 211 - ProcessFolderList returned 50 items
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: zondag Imola (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week39/di_wtcc_zondag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week39/di_wtcc_zondag_imola08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: zaterdag Imola (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: vrijdag Imola (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/za_wtcc_vrijdag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/za_wtcc_vrijdag_imola08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag: Oschersleben (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week36/zo_wtcc_7sept.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week36/zo_wtcc_7sept.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: race Oschersleben (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week36/ma_wtcc_zondag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week36/ma_wtcc_zondag_oschersleben.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: kwali Oschersleben (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/zo_wtcc_zaterdag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/zo_wtcc_zaterdag_oschersleben.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC: vrijdag Oschersleben (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag Brands Hatch (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week31/zo_wtcc_3aug.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week31/zo_wtcc_3aug.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - Review Brands Hatch (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week31/ma_wtcc_bh_zondag.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week31/ma_wtcc_bh_zondag.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - kwali Brands Hatch (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/zo_wtcc_kwali_brands_hatch08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/zo_wtcc_kwali_brands_hatch08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: Coronel over Brands Hatch (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/do_wttc_preview_coronel_brands_hatch.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/do_wttc_preview_coronel_brands_hatch.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag Estoril 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/di_wtcc_estoril_mag08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week30/di_wtcc_estoril_mag08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - review Estoril (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week29/ma_wtcc_review_estoril08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week29/ma_wtcc_review_estoril08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - kwali Estoril (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week28/zo_wtcc_kwa_estoril08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week28/zo_wtcc_kwa_estoril08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: Coronel preview Estoril (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week28/wo_wtcc_coronel_estoril_preview.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week28/wo_wtcc_coronel_estoril_preview.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag Brno 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week26/ma_wtcc_mag_brno08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week26/ma_wtcc_mag_brno08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC- Review Brno (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week25/ma_wtcc_review_brno08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week25/ma_wtcc_review_brno08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: Kwalificatie Brno (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/za_wtcc_kwa_brno08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/za_wtcc_kwa_brno08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: Coronel preview Brno (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/do_wtcc_coronel_preview_brno08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/do_wtcc_coronel_preview_brno08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag - Pau 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/ma_wtcc_magazine_pau08_01.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week24/ma_wtcc_magazine_pau08_01.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - Review Pau (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week23/ma_wtcc_review_pau.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week23/ma_wtcc_review_pau.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - preview Pau (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week22/za_wtcc_preview_rvijdag.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week22/za_wtcc_preview_rvijdag.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC - kwalificatie Pau (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week22/za_wtcc_kwali_vrijdag_pau.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week22/za_wtcc_kwali_vrijdag_pau.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:35 - DEBUG    - plugin.py        - 216 - Adding: WTCC Mag - Valencia 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week21/zo_wtcc_spanje.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week21/zo_wtcc_spanje.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Valencia Review (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week21/ma_wtcc_review_valencia08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week21/ma_wtcc_review_valencia08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Formula Master - Chris vd Drift (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/zo_wtcc_formula_master_valencia08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/zo_wtcc_formula_master_valencia08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Kwalificatie Valencia (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/zo_wtcc_quali_valencia08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/zo_wtcc_quali_valencia08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Tom Coronel over Valencia (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/di_wtcc_coronel_preview_valencia_def.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week20/di_wtcc_coronel_preview_valencia_def.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: WTCC Magazine - Puebla 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week17/wo_wtcc_mag_puebla.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week17/wo_wtcc_mag_puebla.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: WTCC-clip Puebla 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/43/miMedia/2008/week16/do_puebla08_clip.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/43/miMedia/2008/week16/do_puebla08_clip.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Terugblik WTCC Puebla (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week15/ma_wtcc_terugblik_puebla.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week15/ma_wtcc_terugblik_puebla.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Kwalificatie in Puebla (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week14/zo_wtcc_kwali_puebla08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week14/zo_wtcc_kwali_puebla08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: De vrijdag in Puebla (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week14/za_wtcc_vrij_puebla.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week14/za_wtcc_vrij_puebla.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Tom Coronel over WTCC in Puebla (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week13/vr_tom_over_puebla.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week13/vr_tom_over_puebla.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: WTCC Magazine - Curitiba 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week12/ma_wtcc_mag_curitiba08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week12/ma_wtcc_mag_curitiba08.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: WTCC - bargesprek Coronel, Huff en Müller (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week11/vr_wtcc_bar_curitiba.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week11/vr_wtcc_bar_curitiba.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Highlights WTCC Curitiba en quotes (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week10/do_rtlgp_curitiba.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week10/do_rtlgp_curitiba.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: WTCC preview 2008 (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week10/ma_wtcc_preview2008.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week10/ma_wtcc_preview2008.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: RTL GP bij het WTCC in Curitiba (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week09/vr_curitiba_01.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week09/vr_curitiba_01.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Rij een rondje mee met een SEAT WTCC-bolide (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week05/vr_rondje_met_seat.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week05/vr_rondje_met_seat.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Andy Priaulx over racen (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week03/vr_andy_priaulx.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week03/vr_andy_priaulx.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Andy Priaulx onthult eigen postzegel (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week03/vr_priaulx_stamp.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week03/vr_priaulx_stamp.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Monza (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week49/ma_wtcc_mon07.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week49/ma_wtcc_mon07.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Pre-show A1GP Tsjechië (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week49/ma_a1_pre_brn07.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week49/ma_a1_pre_brn07.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Macau (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week48/zo_wtcc_1dec.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week48/zo_wtcc_1dec.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Brands Hatch (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week42/wo_wtcc_brandshatch2007.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week42/wo_wtcc_brandshatch2007.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Anderstorp (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week37/wo_wtcc_video_anderstorp.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week37/wo_wtcc_video_anderstorp.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Oschersleben (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week37/wo_wtcc_video_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week37/wo_wtcc_video_oschersleben.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Porto (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week32/do_rtlgp_wtcc_porto2007.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week32/do_rtlgp_wtcc_porto2007.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:36 - DEBUG    - plugin.py        - 216 - Adding: Uitzending WTCC Brno (['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week32/do_rtlgp_wtcc_brno2007.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/169_anamorf/miMedia/2007/week32/do_rtlgp_wtcc_brno2007.avi_plain.xml/min.wvx']) which is a video episodeItem and complete=False
+20080924 11:47:47 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:47:47 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:47:47 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:47:47 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', "?chn_rtl.py||processVideo|(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'WTCC:zaterdagImola-http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml'\np4\nsS'thumbUrl'\np5\nS'http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg'\np6\nsS'description'\np7\nS'WTCC: zaterdag Imola'\np8\nsS'parent'\np9\nNsS'mediaurl'\np10\n(lp11\nS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx'\np12\naS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx'\np13\nasS'url'\np14\nS'http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml'\np15\nsS'items'\np16\n(lp17\nsS'name'\np18\ng8\nsS'channels'\np19\n(lp20\nsS'downloaded'\np21\nI00\nsS'downloadable'\np22\nI00\nsS'complete'\np23\nI00\nsS'date'\np24\nS''\np25\nsS'icon'\np26\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlthumb.png'\np27\nsS'type'\np28\nS'video'\np29\nsS'thumb'\np30\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlimage.png'\np31\nsb. "]
+20080924 11:47:47 - DEBUG    - plugin.py        - 71  - ['chn_rtl.py', '', 'processVideo', "(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'WTCC:zaterdagImola-http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml'\np4\nsS'thumbUrl'\np5\nS'http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg'\np6\nsS'description'\np7\nS'WTCC: zaterdag Imola'\np8\nsS'parent'\np9\nNsS'mediaurl'\np10\n(lp11\nS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx'\np12\naS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx'\np13\nasS'url'\np14\nS'http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml'\np15\nsS'items'\np16\n(lp17\nsS'name'\np18\ng8\nsS'channels'\np19\n(lp20\nsS'downloaded'\np21\nI00\nsS'downloadable'\np22\nI00\nsS'complete'\np23\nI00\nsS'date'\np24\nS''\np25\nsS'icon'\np26\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlthumb.png'\np27\nsS'type'\np28\nS'video'\np29\nsS'thumb'\np30\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlimage.png'\np31\nsb. "]
+20080924 11:47:47 - INFO     - plugin.py        - 83  - Importing chn_rtl from Q:\plugins\video\XOT-Uzg.v3\channels\rtl
+20080924 11:47:48 - DEBUG    - plugin.py        - 85  - ['chn_rtl.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder)']
+20080924 11:47:48 - INFO     - plugin.py        - 87  - Only one channel present. Intialising it.
+20080924 11:47:48 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:47:48 - INFO     - plugin.py        - 103 - Loaded: RTL 4,5&7
+20080924 11:47:48 - INFO     - plugin.py        - 258 - Plugin::ProcessVideoItem starting
+20080924 11:47:48 - DEBUG    - plugin.py        - 272 - mediaUrl=['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx']
+20080924 11:47:48 - DEBUG    - plugin.py        - 276 - Trying to update a videoItem
+20080924 11:47:48 - DEBUG    - chn_rtl.py       - 175 - starting UpdateVideoItem for WTCC: zaterdag Imola (RTL 4,5&7)
+20080924 11:47:48 - INFO     - chn_rtl.py       - 194 - finishing UpdateVideoItem. Media url = ['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx']
+20080924 11:47:48 - DEBUG    - chn_class.py     - 952 - Going to cache http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg
+20080924 11:47:48 - DEBUG    - chn_class.py     - 960 - Caching url=http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg
+20080924 11:47:48 - DEBUG    - chn_class.py     - 973 - Downloading thumb. Filename=zo_wtcc_zaterdag_imola08.avi_plain.jpg
+20080924 11:47:48 - INFO     - uriopener.py     - 62  - Creating Downloader for url: http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg. And filename Q:\plugins\video\XOT-Uzg.v3\cache\zo_wtcc_zaterdag_imola08.avi_plain.jpg.
+20080924 11:47:48 - INFO     - uriopener.py     - 111 - Url http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.jpg downloaded succesfully.
+20080924 11:47:48 - DEBUG    - plugin.py        - 278 - mediaUrl=['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week38/zo_wtcc_zaterdag_imola08.avi_plain.xml/min.wvx']
+20080924 11:48:03 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:48:03 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:48:03 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:48:03 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', "?chn_rtl.py||processVideo|(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'WTCC:vrijdagOschersleben-http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml'\np4\nsS'thumbUrl'\np5\nS'http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg'\np6\nsS'description'\np7\nS'WTCC: vrijdag Oschersleben'\np8\nsS'parent'\np9\nNsS'mediaurl'\np10\n(lp11\nS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx'\np12\naS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx'\np13\nasS'url'\np14\nS'http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml'\np15\nsS'items'\np16\n(lp17\nsS'name'\np18\ng8\nsS'channels'\np19\n(lp20\nsS'downloaded'\np21\nI00\nsS'downloadable'\np22\nI00\nsS'complete'\np23\nI00\nsS'date'\np24\nS''\np25\nsS'icon'\np26\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlthumb.png'\np27\nsS'type'\np28\nS'video'\np29\nsS'thumb'\np30\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlimage.png'\np31\nsb. "]
+20080924 11:48:03 - DEBUG    - plugin.py        - 71  - ['chn_rtl.py', '', 'processVideo', "(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'WTCC:vrijdagOschersleben-http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml'\np4\nsS'thumbUrl'\np5\nS'http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg'\np6\nsS'description'\np7\nS'WTCC: vrijdag Oschersleben'\np8\nsS'parent'\np9\nNsS'mediaurl'\np10\n(lp11\nS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx'\np12\naS'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx'\np13\nasS'url'\np14\nS'http://www.rtl.nl/(vm/sport/rtl_gp/rtlgp/video/wtcc/)/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml'\np15\nsS'items'\np16\n(lp17\nsS'name'\np18\ng8\nsS'channels'\np19\n(lp20\nsS'downloaded'\np21\nI00\nsS'downloadable'\np22\nI00\nsS'complete'\np23\nI00\nsS'date'\np24\nS''\np25\nsS'icon'\np26\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlthumb.png'\np27\nsS'type'\np28\nS'video'\np29\nsS'thumb'\np30\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\rtl\\\\rtlimage.png'\np31\nsb. "]
+20080924 11:48:03 - INFO     - plugin.py        - 83  - Importing chn_rtl from Q:\plugins\video\XOT-Uzg.v3\channels\rtl
+20080924 11:48:04 - DEBUG    - plugin.py        - 85  - ['chn_rtl.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder)']
+20080924 11:48:04 - INFO     - plugin.py        - 87  - Only one channel present. Intialising it.
+20080924 11:48:04 - DEBUG    - chn_class.py     - 55  - No channelCode present
+20080924 11:48:04 - INFO     - plugin.py        - 103 - Loaded: RTL 4,5&7
+20080924 11:48:04 - INFO     - plugin.py        - 258 - Plugin::ProcessVideoItem starting
+20080924 11:48:04 - DEBUG    - plugin.py        - 272 - mediaUrl=['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx']
+20080924 11:48:04 - DEBUG    - plugin.py        - 276 - Trying to update a videoItem
+20080924 11:48:04 - DEBUG    - chn_rtl.py       - 175 - starting UpdateVideoItem for WTCC: vrijdag Oschersleben (RTL 4,5&7)
+20080924 11:48:04 - INFO     - chn_rtl.py       - 194 - finishing UpdateVideoItem. Media url = ['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx']
+20080924 11:48:04 - DEBUG    - chn_class.py     - 952 - Going to cache http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg
+20080924 11:48:04 - DEBUG    - chn_class.py     - 960 - Caching url=http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg
+20080924 11:48:04 - DEBUG    - chn_class.py     - 973 - Downloading thumb. Filename=vr_wtcc_vrijdag_oschersleben.avi_plain.jpg
+20080924 11:48:04 - INFO     - uriopener.py     - 62  - Creating Downloader for url: http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg. And filename Q:\plugins\video\XOT-Uzg.v3\cache\vr_wtcc_vrijdag_oschersleben.avi_plain.jpg.
+20080924 11:48:04 - INFO     - uriopener.py     - 111 - Url http://www.rtl.nl/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.jpg downloaded succesfully.
+20080924 11:48:04 - DEBUG    - plugin.py        - 278 - mediaUrl=['http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/max.wvx', 'http://www.rtl.nl/system/video/wvx/components/sport/grandprix/miMedia/2008/week35/vr_wtcc_vrijdag_oschersleben.avi_plain.xml/min.wvx']
+20080924 11:48:26 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:48:26 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:48:26 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:48:26 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '?chn_nossearch.py|nedsearch']
+20080924 11:48:26 - DEBUG    - plugin.py        - 71  - ['chn_nossearch.py', 'nedsearch']
+20080924 11:48:26 - INFO     - plugin.py        - 83  - Importing chn_nossearch from Q:\plugins\video\XOT-Uzg.v3\channels\nossearch
+20080924 11:48:27 - DEBUG    - plugin.py        - 85  - ['chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned1")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned2")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned3")', 'chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")']
+20080924 11:48:27 - DEBUG    - plugin.py        - 94  - caught: chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")
+20080924 11:48:27 - DEBUG    - chn_class.py     - 52  - ChannelCode present: nedsearch
+20080924 11:48:27 - INFO     - chn_nos.py       - 128 - Checking for Uitzendinggemist cookies.
+20080924 11:48:27 - INFO     - chn_nos.py       - 132 - No cookies found. Opening main site
+20080924 11:48:27 - DEBUG    - chn_nos.py       - 135 - Opening http://www.uitzendinggemist.nl for cookie UGSES
+20080924 11:48:27 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.uitzendinggemist.nl (already 1 threads)
+20080924 11:48:27 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:27 - INFO     - uriopener.py     - 423 - FileSize is unknown
+20080924 11:48:27 - INFO     - uriopener.py     - 198 - Url http://www.uitzendinggemist.nl was opened successfully
+20080924 11:48:27 - INFO     - plugin.py        - 103 - Loaded: Uitzendinggemist
+20080924 11:48:27 - INFO     - plugin.py        - 167 - Plugin::ParseMainList
+20080924 11:48:27 - DEBUG    - plugin.py        - 170 - Doing ParseMainlist
+20080924 11:48:27 - DEBUG    - plugin.py        - 177 - searchSite
+20080924 11:48:27 - DEBUG    - plugin.py        - 177 - newItems
+20080924 11:48:27 - DEBUG    - plugin.py        - 177 - popularItems
+20080924 11:48:27 - DEBUG    - plugin.py        - 177 - tipItems
+20080924 11:48:35 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:48:35 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:48:35 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:48:35 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '?chn_nossearch.py|nedsearch|popularItems ']
+20080924 11:48:35 - DEBUG    - plugin.py        - 71  - ['chn_nossearch.py', 'nedsearch', 'popularItems ']
+20080924 11:48:35 - INFO     - plugin.py        - 83  - Importing chn_nossearch from Q:\plugins\video\XOT-Uzg.v3\channels\nossearch
+20080924 11:48:36 - DEBUG    - plugin.py        - 85  - ['chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned1")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned2")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned3")', 'chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")']
+20080924 11:48:36 - DEBUG    - plugin.py        - 94  - caught: chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")
+20080924 11:48:36 - DEBUG    - chn_class.py     - 52  - ChannelCode present: nedsearch
+20080924 11:48:36 - INFO     - chn_nos.py       - 128 - Checking for Uitzendinggemist cookies.
+20080924 11:48:36 - INFO     - chn_nos.py       - 132 - No cookies found. Opening main site
+20080924 11:48:36 - DEBUG    - chn_nos.py       - 135 - Opening http://www.uitzendinggemist.nl for cookie UGSES
+20080924 11:48:36 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.uitzendinggemist.nl (already 1 threads)
+20080924 11:48:37 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:37 - INFO     - uriopener.py     - 423 - FileSize is unknown
+20080924 11:48:37 - INFO     - uriopener.py     - 198 - Url http://www.uitzendinggemist.nl was opened successfully
+20080924 11:48:37 - INFO     - plugin.py        - 103 - Loaded: Uitzendinggemist
+20080924 11:48:37 - INFO     - plugin.py        - 204 - Plugin::ProcessFolderList Doing ProcessFolderList
+20080924 11:48:37 - INFO     - chn_nossearch.py - 78  - starting ParseFolder for popularItems
+20080924 11:48:37 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.uitzendinggemist.nl/ (already 1 threads)
+20080924 11:48:37 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:37 - INFO     - uriopener.py     - 423 - FileSize is unknown
+20080924 11:48:37 - INFO     - uriopener.py     - 198 - Url http://www.uitzendinggemist.nl/ was opened successfully
+20080924 11:48:37 - DEBUG    - plugin.py        - 211 - ProcessFolderList returned 10 items
+20080924 11:48:37 - DEBUG    - plugin.py        - 216 - Adding: De Lama's () which is a video episodeItem and complete=False
+20080924 11:48:37 - DEBUG    - plugin.py        - 216 - Adding: Flikken Maastricht () which is a video episodeItem and complete=False
+20080924 11:48:37 - DEBUG    - plugin.py        - 216 - Adding: ONM () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: Spoorloos () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: Try before you die () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: ONM () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: SpangaS () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: Mooi! Weer De Leeuw () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: De Wereld Draait Door () which is a video episodeItem and complete=False
+20080924 11:48:38 - DEBUG    - plugin.py        - 216 - Adding: Op zoek naar Joseph () which is a video episodeItem and complete=False
+20080924 11:48:49 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:48:49 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:48:50 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:48:50 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', "?chn_nossearch.py|nedsearch|processVideo|(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'Trybeforeyoudie-?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942'\np4\nsS'thumbUrl'\np5\nS''\np6\nsS'description'\np7\ng6\nsS'parent'\np8\nNsS'mediaurl'\np9\ng6\nsS'url'\np10\nS'?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942'\np11\nsS'items'\np12\n(lp13\nsS'name'\np14\nS'Try before you die'\np15\nsS'channels'\np16\n(lp17\nsS'downloaded'\np18\nI00\nsS'downloadable'\np19\nI00\nsS'complete'\np20\nI00\nsS'date'\np21\nS'21-09-2008'\np22\nsS'icon'\np23\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\nossearch\\\\nosicon.png'\np24\nsS'type'\np25\nS'video'\np26\nsS'thumb'\np27\ng6\nsb. "]
+20080924 11:48:50 - DEBUG    - plugin.py        - 71  - ['chn_nossearch.py', 'nedsearch', 'processVideo', "(icommon\nclistItem\np0\n(dp1\nS'rating'\np2\nNsS'guid'\np3\nS'Trybeforeyoudie-?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942'\np4\nsS'thumbUrl'\np5\nS''\np6\nsS'description'\np7\ng6\nsS'parent'\np8\nNsS'mediaurl'\np9\ng6\nsS'url'\np10\nS'?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942'\np11\nsS'items'\np12\n(lp13\nsS'name'\np14\nS'Try before you die'\np15\nsS'channels'\np16\n(lp17\nsS'downloaded'\np18\nI00\nsS'downloadable'\np19\nI00\nsS'complete'\np20\nI00\nsS'date'\np21\nS'21-09-2008'\np22\nsS'icon'\np23\nS'Q:\\\\plugins\\\\video\\\\XOT-Uzg.v3\\\\channels\\\\nossearch\\\\nosicon.png'\np24\nsS'type'\np25\nS'video'\np26\nsS'thumb'\np27\ng6\nsb. "]
+20080924 11:48:50 - INFO     - plugin.py        - 83  - Importing chn_nossearch from Q:\plugins\video\XOT-Uzg.v3\channels\nossearch
+20080924 11:48:50 - DEBUG    - plugin.py        - 85  - ['chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned1")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned2")', 'chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned3")', 'chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")']
+20080924 11:48:50 - DEBUG    - plugin.py        - 94  - caught: chn_nossearch.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="nedsearch")
+20080924 11:48:50 - DEBUG    - chn_class.py     - 52  - ChannelCode present: nedsearch
+20080924 11:48:50 - INFO     - chn_nos.py       - 128 - Checking for Uitzendinggemist cookies.
+20080924 11:48:50 - INFO     - chn_nos.py       - 132 - No cookies found. Opening main site
+20080924 11:48:50 - DEBUG    - chn_nos.py       - 135 - Opening http://www.uitzendinggemist.nl for cookie UGSES
+20080924 11:48:50 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.uitzendinggemist.nl (already 1 threads)
+20080924 11:48:51 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:51 - INFO     - uriopener.py     - 423 - FileSize is unknown
+20080924 11:48:51 - INFO     - uriopener.py     - 198 - Url http://www.uitzendinggemist.nl was opened successfully
+20080924 11:48:51 - INFO     - plugin.py        - 103 - Loaded: Uitzendinggemist
+20080924 11:48:51 - INFO     - plugin.py        - 258 - Plugin::ProcessVideoItem starting
+20080924 11:48:51 - DEBUG    - plugin.py        - 272 - mediaUrl=
+20080924 11:48:51 - DEBUG    - plugin.py        - 276 - Trying to update a videoItem
+20080924 11:48:51 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://player.omroep.nl/?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942 (already 1 threads)
+20080924 11:48:51 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:51 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=3946)
+20080924 11:48:51 - INFO     - uriopener.py     - 198 - Url http://player.omroep.nl/?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942 was opened successfully
+20080924 11:48:51 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://player.omroep.nl/js/initialization.js.php?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942 (already 1 threads)
+20080924 11:48:51 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:51 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=5633)
+20080924 11:48:51 - INFO     - uriopener.py     - 198 - Url http://player.omroep.nl/js/initialization.js.php?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942 was opened successfully
+20080924 11:48:51 - INFO     - chn_nos.py       - 333 - starting UpdateVideoItem for ?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942
+20080924 11:48:51 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://player.omroep.nl/xml/metaplayer.xml.php?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942&md5=74ed01e916d7a98d353fd66a5f1172a5 (already 1 threads)
+20080924 11:48:51 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:51 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=6420)
+20080924 11:48:51 - INFO     - uriopener.py     - 198 - Url http://player.omroep.nl/xml/metaplayer.xml.php?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942&md5=74ed01e916d7a98d353fd66a5f1172a5 was opened successfully
+20080924 11:48:51 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://cgi.omroep.nl/cgi-bin/streams?/id/BNN/serie/POW_00183528/POW_00183531/bb.20080921.asf (already 1 threads)
+20080924 11:48:51 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:48:51 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=156)
+20080924 11:48:51 - INFO     - uriopener.py     - 198 - Url http://cgi.omroep.nl/cgi-bin/streams?/id/BNN/serie/POW_00183528/POW_00183531/bb.20080921.asf was opened successfully
+20080924 11:48:51 - INFO     - chn_nos.py       - 385 - finishing UpdateVideoItem for http://player.omroep.nl/xml/metaplayer.xml.php?aflID=7995638&md5=7a285ea5aa65f5704d60460612bf9942&md5=74ed01e916d7a98d353fd66a5f1172a5. Media URL =mms://cachemedia.omroep.nl/bongo01/0/id/BNN/serie/POW_00183528/POW_00183531/bb.20080921.asf
+20080924 11:48:51 - DEBUG    - plugin.py        - 278 - mediaUrl=mms://cachemedia.omroep.nl/bongo01/0/id/BNN/serie/POW_00183528/POW_00183531/bb.20080921.asf

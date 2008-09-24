@@ -36,7 +36,6 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.guid = "11A6D5FC-42F4-11DD-AD55-12FF55D89593"
         self.mainListUri = "http://www.pczapper.tv/pzc5/lfui/index.php?t=p&m=28304&pm=0"
         self.icon = "sbs6icon.png"
         self.iconLarge = "sbs6large.png"
@@ -56,8 +55,7 @@ class Channel(chn_class.Channel):
         self.userName = ""
         self.requiresLogon = False
         
-        self.episodeItemRegex = '<div class="thumb">\W+<a href="([^"]+)">\W+<img[^>]+alt="([^"]+)"/>'
-        #self.episodeItemRegex = '<div id="pcz_menublock_header">\s+<a href="([^"]+)">([^<]+)</a>'
+        self.episodeItemRegex = '<div id="pcz_menublock_header">\s+<a href="([^"]+)">([^<]+)</a>'
         self.videoItemRegex = '<table class="pcz_videolist_item" cellpadding="1" cellspacing="0">[^\.]+<img src="([^"]*)" class="pcz_videolist_img">[^:]+<a href="javascript:pcz_playvideo\((\d+), 0\)" style="font-weight:bold">([^<]*)</a>'
         self.folderItemRegex = ''  # used for the CreateFolderItem
         self.mediaUrlRegex = "pcz_video_url='http://[^?]+player.php\?url=([^\']+)"    # used for the UpdateVideoItem
@@ -68,8 +66,8 @@ class Channel(chn_class.Channel):
         self.programTitle = ""
         
         return True
- 
-    #==============================================================================
+ 	
+ 	#==============================================================================
     def CreateEpisodeItem(self, resultSet):
         """
         Accepts an arraylist of results. It returns an item. 
@@ -121,7 +119,7 @@ class Channel(chn_class.Channel):
                 _percentage += _percentagePerPage
                 _parsePB.update(_percentage, "Loading page %s" %(_page))
                 if _parsePB.iscanceled():
-                    break
+                	break
             _parsePB.close()
         
         return (data, _items)
@@ -173,4 +171,4 @@ class Channel(chn_class.Channel):
         # finish and return
         logFile.info('finishing ParseVideo for %s. MediaUrl=%s', item.url, item.mediaurl)
         return item
-    
+	

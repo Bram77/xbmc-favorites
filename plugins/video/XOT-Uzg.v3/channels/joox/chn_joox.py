@@ -43,7 +43,6 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self)
         
-        self.guid = "320E8790-42F4-11DD-9B2E-660356D89593"
         self.icon = "jooxthumb.png"
         self.iconLarge = "jooxlarge.png"
         self.noImage = "jooximage.png"

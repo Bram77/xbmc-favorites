@@ -51,13 +51,15 @@ class Channel(chn_class.Channel):
             
             self.noImage = "nosimage.png"
             self.baseUrl = "http://www.uitzendinggemist.nl"
+            self.baseUrl2 = "http://wmc.uitzendinggemist.nl"
             self.requiresLogon = False
             self.playerUrl = "http://player.omroep.nl/xml/metaplayer.xml.php"
-            self.maxXotVersion = "3.1.0"
+            self.maxXotVersion = "3.2.0"
             
             if self.channelCode == "ned1":
                 self.guid = "CD702550-42F3-11DD-80F9-8FF855D89593"
                 self.mainListUri = "http://www.uitzendinggemist.nl/index.php/selectie?searchitem=net_zender&net_zender=1&sort=datum"
+                #self.mainListUri = "http://wmc.uitzendinggemist.nl/xmlHTTP/searchZender.php?zenderID=1" 
                 self.icon = "1icon.png"
                 self.iconLarge = "1large.png"
                 self.noImage = "nosimage.png"
@@ -69,6 +71,7 @@ class Channel(chn_class.Channel):
             elif self.channelCode == "ned2":
                 self.guid = "C875C1B8-42F3-11DD-BBC9-E4F755D89593"
                 self.mainListUri = "http://www.uitzendinggemist.nl/index.php/selectie?searchitem=net_zender&net_zender=2&sort=datum"
+                #self.mainListUri = "http://wmc.uitzendinggemist.nl/xmlHTTP/searchZender.php?zenderID=2" 
                 self.icon = "2icon.png"
                 self.iconLarge = "2large.png"
                 self.noImage = "nosimage.png"
@@ -80,6 +83,7 @@ class Channel(chn_class.Channel):
             else:
                 self.guid = "D0BDAA2A-42F3-11DD-A8C0-D3F855D89593"
                 self.mainListUri = "http://www.uitzendinggemist.nl/index.php/selectie?searchitem=net_zender&net_zender=3&sort=datum"
+                #self.mainListUri = "http://wmc.uitzendinggemist.nl/xmlHTTP/searchZender.php?zenderID=3" 
                 self.icon = "3icon.png"
                 self.iconLarge = "3large.png"
                 self.noImage = "nosimage.png"
@@ -93,8 +97,8 @@ class Channel(chn_class.Channel):
             self.contextMenuItems.append(contextmenu.ContextMenuItem("Play using Mplayer", "CtMnPlayMplayer", itemTypes="video", completeStatus=True))
             self.contextMenuItems.append(contextmenu.ContextMenuItem("Play using DVDPlayer", "CtMnPlayDVDPlayer", itemTypes="video", completeStatus=True))
         
-            #self.episodeItemRegex = '<a class="title" href="(/index.php/serie\?serID=\d+&amp;md5=[0-9a-f]+)">([^<]+)</a>'
             self.episodeItemRegex = '<a class="title" href="(/index.php/serie\?serID=\d+&amp;md5=[0-9a-f]+)">([^<]+)</a></td>\W+<td[^>]+>([^<]+)'
+            #self.episodeItemRegex = '<span[^>]+name="([^"]+)"[^>]+>([^<]+)</span>' 
             self.videoItemRegex = '' 
             self.folderItemRegex = '' #not possible, to complex here. ProcessFolderList is used
             
@@ -122,11 +126,21 @@ class Channel(chn_class.Channel):
         
         #check for cookie:
         logFile.info("Checking for %s cookies.", self.channelName)
-        if uriHandler.CookieCheck('UGSES') and uriHandler.CookieCheck('CheckUGCookie'):
+        if uriHandler.CookieCheck('UGSES') and uriHandler.CookieCheck('CheckUGCookie'): # and uriHandler.CookieCheck('UGWMC'):
             logFile.info("Cookies found. Continuing")
         else:
             logFile.info("No cookies found. Opening main site")
-            _temp = uriHandler.Open(self.baseUrl)
+            
+            if not uriHandler.CookieCheck('UGSES') and not uriHandler.CookieCheck('CheckUGCookie'):
+                logFile.debug("Opening %s for cookie UGSES", self.baseUrl)
+                temp = uriHandler.Open(self.baseUrl)
+                
+            #if not uriHandler.CookieCheck('UGWMC'):
+            #    logFile.debug("Opening %s for cookie UGWMC", self.baseUrl2)
+            #    temp = uriHandler.Open(self.baseUrl2)
+                 
+            
+            
      
     #==============================================================================
     def ParseMainList(self):
@@ -142,11 +156,18 @@ class Channel(chn_class.Channel):
         
         #check for cookie:
         logFile.info("Checking for %s cookies.", self.channelName)
-        if uriHandler.CookieCheck('UGSES') and uriHandler.CookieCheck('CheckUGCookie'):
+        if uriHandler.CookieCheck('UGSES') and uriHandler.CookieCheck('CheckUGCookie'): # and uriHandler.CookieCheck('UGWMC'):
             logFile.info("Cookies found. Continuing")
         else:
             logFile.info("No cookies found. Opening main site")
-            temp = uriHandler.Open(self.baseUrl)
+            
+            if not uriHandler.CookieCheck('UGSES') and not uriHandler.CookieCheck('CheckUGCookie'):            
+                logFile.debug("Opening %s for cookie UGSES", self.baseUrl)
+                temp = uriHandler.Open(self.baseUrl)
+               
+            #if not uriHandler.CookieCheck('UGWMC'):
+            #    logFile.debug("Opening %s for cookie UGWMC", self.baseUrl2)
+            #    temp = uriHandler.Open(self.baseUrl2)
     
         #now start opening
         pb = xbmcgui.DialogProgress()
@@ -158,9 +179,13 @@ class Channel(chn_class.Channel):
             # find number of subpages and load them
             numPages = common.DoRegexFindAll("&amp;pgNum=(\d+)", data);
             numPages.sort()
-            numPages = int(numPages[-1])
-            if numPages > self.maxNumberOfFrontPages:
-                numPages = self.maxNumberOfFrontPages
+            
+            if len(numPages) > 0:
+                numPages = int(numPages[-1])
+                if numPages > self.maxNumberOfFrontPages:
+                    numPages = self.maxNumberOfFrontPages
+            else:
+                numPages = 1
             logFile.debug("Loading %s pages from the frontpage of uzg", numPages)
             
             # now loop through the pages
@@ -173,8 +198,11 @@ class Channel(chn_class.Channel):
                 resultItems = common.DoRegexFindAll(self.episodeItemRegex, data)
                 
                 for item in resultItems: 
+                    #tmp = common.clistItem(item[1], self.baseUrl + '/index.php/serie?' + common.StripAmp(item[0]))
                     tmp = common.clistItem(item[1], self.baseUrl + common.StripAmp(item[0]))
-                    tmp.date = item[2]
+                    if len(item) > 2:
+                        tmp.date = item[2]
+                        
                     tmp.icon = self.icon
                     items.append(tmp)
                 
@@ -188,6 +216,7 @@ class Channel(chn_class.Channel):
             
             pb.close()
         except:
+            logFile.error("Error parsing mainlist", exc_info=True)
             pb.close()
         
         self.mainListItems = items
@@ -232,7 +261,7 @@ class Channel(chn_class.Channel):
         title = common.DoRegexFindAll('<b class="btitle">([^<]+)</b>', data)
         title = title[-1]
             
-        results = common.DoRegexFindAll('<td height="40">(\d+-\d+-\d+)</td>\s+[^/]+/index.php/aflevering(\?aflID=\d+)&amp;md5=[0-9a-f]+', data)
+        results = common.DoRegexFindAll('<td height="40">(\d+-\d+-\d+)*</td>\s+[^/]+/index.php/aflevering(\?aflID=\d+)&amp;md5=[0-9a-f]+', data)
         for result in results:
             item = self.CreateEpisodeItem((result[0], result[1], title))
             items.append(item)

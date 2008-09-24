@@ -1,0 +1,8 @@
+20080924 11:46:53 - INFO     - uriopener.py     - 31  - UriHandler initialised
+20080924 11:46:54 - INFO     - common.py        - 122 - Setting Skin to: Default
+20080924 11:46:54 - INFO     - plugin.py        - 36  - *********** Starting XOT-Uzg (XOT-Uzg.v3) plugin version v3.1.0 ***********
+20080924 11:46:54 - DEBUG    - plugin.py        - 37  - ['plugin://video/XOT-Uzg.v3/', '1', '']
+20080924 11:46:54 - INFO     - uriopener.py     - 152 - Opening requested uri Async: http://www.rieter.net/uitzendinggemist/index.php?currentversion=3.1.0 (already 1 threads)
+20080924 11:46:54 - INFO     - uriopener.py     - 415 - Determining which Progessbar to use....
+20080924 11:46:54 - INFO     - uriopener.py     - 420 - FileSize is known (fileSize=1)
+20080924 11:46:54 - INFO     - uriopener.py     - 198 - Url http://www.rieter.net/uitzendinggemist/index.php?currentversion=3.1.0 was opened successfully
