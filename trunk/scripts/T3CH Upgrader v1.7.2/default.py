@@ -12,35 +12,12 @@
 #
 # Many Thanks to Team AMT for code used.
 #
-import sys, os
-import xbmc, xbmcgui
-
-# Script constants
-__scriptname__ = "T3CH Upgrader"
-__author__ = 'BigBellyBilly [BigBellyBilly@gmail.com]'
-__url__ = "http://code.google.com/p/xbmc-scripting/"
-__svn_url__ = "http://xbmc-scripting.googlecode.com/svn/trunk/T3CH%20Upgrader"
-__date__ = '29-09-2008'
-__version__ = "1.7.4"
-xbmc.output( __scriptname__ + " Version: " + __version__  + " Date: " + __date__)
-
-# Shared resources
-DIR_HOME = os.getcwd().replace( ";", "" )
-DIR_RESOURCES = os.path.join( DIR_HOME, "resources")
-DIR_LIB = os.path.join( DIR_RESOURCES, "lib")
-sys.path.append( DIR_RESOURCES )
-sys.path.append( DIR_LIB )
-
-# Load Language using xbmc builtin
-try:
-    # 'resources' now auto appended onto path
-    __language__ = xbmc.Language( DIR_HOME ).getLocalizedString
-except:
-	print str( sys.exc_info()[ 1 ] )
-	xbmcgui.Dialog().ok("xbmc.Language Error (Old XBMC Build)", "Script needs at least XBMC 'Atlantis' build to run.","Use script v1.7.2 instead.")
-
-from sgmllib import SGMLParser
+import sys
+import os
+import xbmc
+import xbmcgui
 import urllib
+from sgmllib import SGMLParser
 import traceback
 from string import lower, capwords
 from shutil import copytree, rmtree, copy
@@ -48,18 +25,36 @@ import filecmp
 import time
 import re
 import zipfile
+
+# Script constants
+__scriptname__ = "T3CH Upgrader"
+__author__ = 'BigBellyBilly [BigBellyBilly@gmail.com]'
+__url__ = "http://code.google.com/p/xbmc-scripting/"
+__svn_url__ = "http://xbmc-scripting.googlecode.com/svn/trunk/T3CH%20Upgrader"
+__date__ = '26-08-2008'
+__version__ = "1.7.2"
+xbmc.output( __scriptname__ + " Version: " + __version__  + " Date: " + __date__)
+
+# Shared resources
+DIR_HOME = os.path.join( os.getcwd().replace( ";", "" ) )
+DIR_RESOURCES = os.path.join( DIR_HOME, "resources")
+DIR_LIB = os.path.join( DIR_RESOURCES, "lib")
+sys.path.append( DIR_RESOURCES )
+sys.path.append( DIR_LIB )
+
+import language
+mylanguage = language.Language()
+__language__ = mylanguage.localized
 import update
 import zipstream
 import SFVCheck
 
 dialogProgress = xbmcgui.DialogProgress()
+
 EXIT_SCRIPT = ( 9, 10, 247, 275, 61467, )
 CANCEL_DIALOG = EXIT_SCRIPT + ( 216, 257, 61448, )
-#TEXTBOX_XML_FILENAME = "script-bbb-textbox.xml"	# old custom textbox skins, no longer supplied from v1.7.4 onwards
-TEXTBOX_XML_FILENAME = "DialogScriptInfo.xml"       # xbmc skin supplied textbox viewer
+TEXTBOX_XML_FILENAME = "script-bbb-textbox.xml"
 
-
-#############################################################################################################
 class Parser( SGMLParser ):
 	def reset( self ):
 		self.url = None
@@ -684,18 +679,13 @@ class Main:
 		xbmc.output("_hardcoded_includes()")
 		changed = False
 		# add if not already included
-		srcList = [ "skin\\", "screensavers\\", "scripts\\", "plugins\\video", "plugins\\pictures", \
+		srcList = [ "skin\\", "screensavers\\", "scripts\\", "plugins\\videos", "plugins\\pictures", \
 					"plugins\\music", "plugins\\programs", "system\\profiles.xml" ]
 		# ensure hardcoded in includes
 		for src in srcList:
 			if src not in self.includes:
 				self.includes.append(src)
 				changed = True
-		# change 'mispelt 'videos' to 'video'
-		try:
-			self.includes.remove("plugins\\videos")
-			xbmc.output("includes 'plugins\\videos' removed")
-		except: pass
 		return changed
 
 	######################################################################################
@@ -893,9 +883,8 @@ class Main:
 			if doc: break
 
 		if doc:
-			title = "T3CH " + __language__(415)
-			tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_HOME, "Default")
-			tbd.ask(title, doc)
+			tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_RESOURCES, "Default")
+			tbd.ask("T3CH Changelog", doc)
 			del tbd
 		else:
 			dialogOK( __language__( 0 ), __language__( 310 ))
@@ -910,8 +899,8 @@ class Main:
 			if doc: break
 
 		if doc:
-			tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_HOME, "Default")
-			tbd.ask("XBMC " + __language__(415), doc )	# XBMC changelog
+			tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_RESOURCES, "Default")
+			tbd.ask("XBMC Changelog", doc )
 			del tbd
 		else:
 			dialogOK( __language__( 0 ), __language__( 310 ))
@@ -923,10 +912,11 @@ class Main:
 			title = "%s: %s" % (__language__(0), __language__(414))
 
 			# determine language path
-			base_path, language = getLanguagePath()
+			base_path = mylanguage.get_base_path()
+			language = xbmc.getLanguage().lower()
 			fn = os.path.join( base_path, language, "readme.txt" )
 			if ( not fileExist( fn ) ):
-				fn = os.path.join( base_path, "English", "readme.txt" )
+				fn = os.path.join( base_path, "english", "readme.txt" )
 		else:
 			title = "%s: %s" % (__language__(0), __language__(415))
 			fn = os.path.join(DIR_RESOURCES, "changelog.txt")
@@ -934,11 +924,11 @@ class Main:
 		xbmc.output("fn=" + fn)
 		# read and display
 		if not fileExist(fn):
-			doc = "File is missing! " + fn
+			doc = "File is missing!"
 		else:
 			doc = file(fn).read()
 
-		tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_HOME, "Default")
+		tbd = TextBoxDialogXML(TEXTBOX_XML_FILENAME, DIR_RESOURCES, "Default")
 		tbd.ask(title, doc)
 		del tbd
 
@@ -1765,9 +1755,7 @@ class TextBoxDialogXML( xbmcgui.WindowXML ):
 		
 	def onInit( self ):
 		xbmc.output( "TextBoxDialogXML.onInit()" )
-		try:
-			self.getControl( 3 ).setLabel( self.title )		# may not have an ID assigned
-		except: pass
+		self.getControl( 3 ).setLabel( self.title )
 		self.getControl( 5 ).setText( self.text )
 
 	def onClick( self, controlId ):
@@ -1777,8 +1765,10 @@ class TextBoxDialogXML( xbmcgui.WindowXML ):
 		pass
 
 	def onAction( self, action ):
-		if action and (action.getButtonCode() in CANCEL_DIALOG or action.getId() in CANCEL_DIALOG):
-			self.close()
+#		print( "onAction(): actionID=%i buttonCode=%i " % ( action.getId(), action.getButtonCode()) )
+		if action:
+			if action.getButtonCode() in CANCEL_DIALOG or action.getId() in CANCEL_DIALOG:
+				self.close()
 
 	def ask(self, title, text ):
 		xbmc.output("TextBoxDialogXML().ask()")
@@ -1844,19 +1834,6 @@ def unzip(extract_path, filename, silent=False, msg=""):
 	xbmc.output("< unzip() success=" + str(success) + " installed_path=" + installed_path)
 	return success, installed_path
 
-##############################################################################################################    
-def getLanguagePath():
-	try:
-		base_path = os.path.join( os.getcwd().replace(';',''), 'resources', 'language' )
-		language = xbmc.getLanguage()
-		langPath = os.path.join( base_path, language )
-		if not os.path.exists(langPath):
-			xbmc.output("getLanguagePath() path not exist: " + langPath)
-			raise
-	except:
-		language = 'English'
-	xbmc.output("getLanguagePath() path=%s lang=%s" % ( base_path, language ))
-	return base_path, language
 
 #################################################################################################################
  # Script starts here
@@ -1873,19 +1850,15 @@ try:
 except:
 	runMode = RUNMODE_NORMAL
 
-try:
-	xbmc.output( "__language__ = %s" % __language__ )
-	Main(runMode)
-except:
-	print __scriptname__ + " Exception Main(): " + str( sys.exc_info()[ 1 ] )
+Main(runMode)
 
-xbmc.output(__scriptname__ + " script exit and housekeeping ...")
+xbmc.output("script exit and housekeeping")
 # clean up on exit
 moduleList = ['zipstream','SFVCheck']
 for m in moduleList:
 	try:
 		del sys.modules[m]
-		xbmc.output(__scriptname__ + " removed module: " + m)
+		xbmc.output("removed module: " + m)
 	except: pass
 
 # remove globals
