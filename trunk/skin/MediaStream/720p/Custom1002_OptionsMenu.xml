@@ -1,0 +1,11 @@
+<window id="1002">
+  <defaultcontrol>9009</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <type>dialog</type>
+
+  <controls>
+
+    <include>OptionsMenuUI</include>
+
+  </controls>
+</window>
