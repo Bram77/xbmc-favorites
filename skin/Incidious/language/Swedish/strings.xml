@@ -1,60 +1,53 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: blittan-->
+<!--Email: blittan@xbmc.org-->
+<!--Date of translation: 08/06/2008-->
+<!--$Revision$-->
 <strings>
-
-	<!-- Home -->	
-	<string id="31001">Emulators</string>
-	<string id="31002">Browse Your</string>
-	<string id="31003">Clips</string>
-	<string id="31004">Welcome</string>
-	<string id="31005">Thank you for selecting Insidious [COLOR DialogFocusText]-[/COLOR] Public Alpha 1.0</string>
-	<string id="31006">XBMC rev12746 or later is required.</string>
-	<string id="31007">Currently 720p is supported.</string>
-	<string id="31008">Enjoy!</string>
-	
-	<!-- Player -->
-	<string id="31014">Paused</string>
-	<string id="31015">View:</string>
-
-	<!-- Views -->
-	<string id="31016">Wrap</string>
-	<string id="31017">Flow</string>
-	<string id="31018">Wall</string>
-	
-	<!-- Weather -->
-	<string id="31020">Last</string>
-	<string id="31021">Current</string>
-
-	<!-- Settings -->
-	<string id="31500">Visible On Media Menu</string>
-	<string id="31501">Links to Library Albums</string>
-	<string id="31502">Links to Library Titles</string>
-	<string id="31503">Home Menu Animation</string>
-	<string id="31504">Reload Skin</string>
-	<string id="31505">Reset Skin Settings</string>
-	<string id="31506">Shortcut</string>
-	<string id="31507">Selection Images</string>
-	<string id="31508">Overlay Icons</string>
-
-	<string id="31510">General, Library, Player, Subtitles</string>
-	<string id="31511">General, Player, Files, Last.FM, CD Ripping, Karaoke</string>
-	<string id="31512">General, SlideShow</string>
-	<string id="31513">General, Files, XLink Kai</string>
-	<string id="31514">General</string>
-	<string id="31515">Network, Servers, Autodetection, SMB Client, UPnP Settings</string>
-	<string id="31516">Hardware, LCD, Autorun, Harddisk, Cache, Audio Hardware, Video Hardware, Master Lock</string>
-	<string id="31517">Look and Feel, Region, Screen, View Options, Screensaver</string>
-	<string id="31518">Enable Login Screen</string>
-	<string id="31519">General, Storage, Hard Disk, DVD-ROM, Network, Video, Hardware, About XBMC</string>
-	<string id="31520">Home, Backgrounds, Extras</string>
-
-	<string id="31530">Background Animation</string>
-	<string id="31531">Scroll Bars</string>
-	<string id="31532">Weather Radar</string>
-	<string id="31533">Weather Script Path</string>
-	<string id="31534">Set Day Background [COLOR WindowFocusText]05:00 - 17:00[/COLOR]</string>
-	<string id="31535">Set Night Background [COLOR WindowFocusText]17:00 - 05:00[/COLOR]</string>
-	<string id="31536">Reset Day Background</string>
-	<string id="31537">Reset Night Background</string>
-	<string id="31538">Set Login Background</string>
-	<string id="31539">Reset Login Background</string>
+  <string id="31001">Emulatorer</string>
+  <string id="31002">Bläddra i dina</string>
+  <string id="31003">Klipp</string>
+  <string id="31004">Välkommen</string>
+  <string id="31005">Tack för att du valt Insidious [COLOR DialogFocusText]-[/COLOR] Publik Alfa 1.0</string>
+  <string id="31006">XBMC rev12746 eller senare krävs.</string>
+  <string id="31007">För närvarande stödjs 720p</string>
+  <string id="31008">Åtnjut!</string>
+  <string id="31014">Pausad</string>
+  <string id="31015">Visa:</string>
+  <string id="31016">Wrap</string>
+  <string id="31017">Flöde</string>
+  <string id="31018">Vägg</string>
+  <string id="31020">Sista</string>
+  <string id="31021">Nuvarande</string>
+  <string id="31500">Synlig på mediamenyn</string>
+  <string id="31501">Länkar till biblioteksalbum</string>
+  <string id="31502">Länkar till bibliotekstitlar</string>
+  <string id="31503">Hem-menyanimation</string>
+  <string id="31504">Ladda om skal</string>
+  <string id="31505">Återställ skalinställningar</string>
+  <string id="31506">Genväg</string>
+  <string id="31507">Urvalsbilder</string>
+  <string id="31508">Överdragsikoner</string>
+  <string id="31510">Allmänt, Bibliotek, Spelare, Undertexter</string>
+  <string id="31511">Allmänt, Spelare, Filer, Last.FM, CD-rippning, Karaoke</string>
+  <string id="31512">Allmänt, Bildspel</string>
+  <string id="31513">Allmänt, Filer, XLink Kai</string>
+  <string id="31514">Allmänt</string>
+  <string id="31515">Nätverk, Servrar, Autodetektering, SMB klient, UPnP inställningar</string>
+  <string id="31516">Hårdvara, LCD, Autostart, Hårddisk, Buffert, Ljudhårdvara, Videohårdvara, Huvudlås</string>
+  <string id="31517">Utseende, Region, Skärm, Visningsalternativ, Skärmsläckare</string>
+  <string id="31518">Aktivera inloggningsskärm</string>
+  <string id="31519">Allmänt, Lagring, Hårddisk, DVD-ROM, Nätverk, Grafik, Hårdvara, Om XBMC</string>
+  <string id="31520">Hem, Bakgrunder, Extra</string>
+  <string id="31530">Bakgrundsanimering</string>
+  <string id="31531">Skrollhandtag</string>
+  <string id="31532">Väderradar</string>
+  <string id="31533">Väderskriptssökväg</string>
+  <string id="31534">Sätt dagbakgrund [COLOR WindowFocusText]05:00 - 17:00[/COLOR]</string>
+  <string id="31535">Sätt nattbakgrund [COLOR WindowFocusText]17:00 - 05:00[/COLOR]</string>
+  <string id="31536">Återställ dagbakgrund</string>
+  <string id="31537">Återställ nattbakgrund</string>
+  <string id="31538">Sätt inloggningsbakgrund</string>
+  <string id="31539">Återställ inloggningsbakgrund</string>
 </strings>
