@@ -18,6 +18,7 @@
 				<description>Title label</description>
 				<posx>102</posx>
 				<posy>42</posy>
+				<label>$LOCALIZE[SCRIPT0]</label>
 				<textcolor>TextcolorWhite</textcolor>
 				<shadowcolor>shadow-black</shadowcolor>
 				<align>left</align>
@@ -29,6 +30,7 @@
 				<posx>650</posx>
 				<posy>42</posy>
 				<align>right</align>
+				<label>$INFO[Container.Property(Category)]</label>
 				<textcolor>TextcolorWhite</textcolor>
 				<shadowcolor>shadow-black</shadowcolor>
 				<align>left</align>
@@ -71,6 +73,7 @@
 					<posy>35</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>$INFO[Container.Property(Shortcut1)]</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -87,6 +90,7 @@
 					<posy>70</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>$INFO[Container.Property(Shortcut2)]</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -103,6 +107,7 @@
 					<posy>105</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>$INFO[Container.Property(Shortcut3)]</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -119,6 +124,7 @@
 					<posy>140</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT103</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -135,6 +141,7 @@
 					<posy>175</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT104</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -151,6 +158,7 @@
 					<posy>210</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT105</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -167,6 +175,7 @@
 					<posy>245</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT106</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -174,7 +183,7 @@
 					<onleft>2070</onleft>
 					<onright>50</onright>
 					<onup>105</onup>
-					<ondown>170</ondown>
+					<ondown>175</ondown>
 					<onclick>-</onclick>
 				</control>
 				<control type="button" id="175">
@@ -183,7 +192,7 @@
 					<posy>280</posy>
 					<height>40</height>
 					<font>font13</font>
-					<label>Plot</label>
+					<label>SCRIPT156</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -194,6 +203,7 @@
 					<ondown>170</ondown>
 					<onclick>-</onclick>
 					<enable>Control.IsVisible(50)</enable>
+			                <visible>!IsEmpty(Container.Property(showinfo))</visible>
 				</control>
 				<control type="button" id="170">
 					<description>Cast button</description>
@@ -201,7 +211,7 @@
 					<posy>280</posy>
 					<height>40</height>
 					<font>font13</font>
-					<label>Cast</label>
+					<label>SCRIPT157</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -212,6 +222,7 @@
 					<ondown>107</ondown>
 					<onclick>-</onclick>
 					<enable>Control.IsVisible(50)</enable>
+			                <visible>IsEmpty(Container.Property(showinfo))</visible>
 				</control>
 				<control type="button" id="107">
 					<description>Settings button</description>
@@ -219,6 +230,7 @@
 					<posy>315</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT107</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -235,6 +247,7 @@
 					<posy>315</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT108</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -252,6 +265,7 @@
 					<posy>350</posy>
 					<height>40</height>
 					<font>font13</font>
+					<label>SCRIPT109</label>
 					<shadowcolor>shadow-grey</shadowcolor>
 					<align>left</align>
 					<texturefocus>button-focus.png</texturefocus>
@@ -649,7 +663,7 @@
 					<viewtype label="544">list</viewtype>
 					<scrolltime>200</scrolltime>
 					<pagecontrol>2070</pagecontrol>
-					<visible allowhiddenfocus="false">Control.IsVisible(175) + Control.IsVisible(50)</visible>
+					<visible allowhiddenfocus="false">Control.IsVisible(3000) + Control.IsVisible(175) + Control.IsVisible(50)</visible>
 					<itemlayout height="30">
 						<control type="image">
 							<width>315</width>
