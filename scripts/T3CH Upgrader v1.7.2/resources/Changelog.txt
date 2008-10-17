@@ -1,17 +1,5 @@
 T3CH Upgrader Changelog:
 ========================
-v1.7.4 13/10/2008
-  Fix: Script self updater module. (unfortunately this means you'll have to manually update script as v1.7.3 will hang during update)
-  Change: Removed all custom 'text viewer' skins, now uses existing one supplied with skins, which is intended for ScriptInfo - benefit is that more skins covered and reduces script size.
-  Change: Improved detection of old pre-Atlantis xbmc build and cleaner exit of script.
-v1.7.3 25/09/08
-  Fix: Plugin\Video folder not copied due to it looking for 'videos'
-  New: MediaStream skin (created by smuto)
-  New: Default 720p skin and PM3.HD
-  New: Dutch language strings.
-  Updated: Added 'autoscroll' to skins.
-  Change: For xbmc Atlantis; Uses Language builtin.
-  Change: For xbmc Atlantis; Skin XML path changed.
 v1.7.2 26/08/08
   Change: Delete, if exists, .cfg_new before file writting out new build path.
   Change: Copying of subfolders root checked before copytree.
