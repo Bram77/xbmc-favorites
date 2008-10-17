@@ -1,0 +1,36 @@
+<window id="501">
+  <defaultcontrol>50</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+    <include>Background</include>
+
+    <!-- -->
+    <include>List</include>
+    <include>MusicAlbums</include>
+    <include>MusicSongs</include>
+    <include>Coverflow</include>
+    <include>InfoList</include>
+    <include>PanelStream</include>
+    <!-- -->
+
+    <control type="group">
+      <include>TopOverlayTitlePos</include>
+
+      <include>TopOverlayFirstTitleAreaBG</include>
+
+      <control type="label">
+        <description>Music label</description>
+        <include>TopOverlayFirstTitleAreaText</include>
+        <label>$LOCALIZE[249]</label>
+      </control>
+    </control>
+
+    <include>Clock</include>
+    <include condition="!Skin.HasSetting(HideOptionsMenu)">OptionsMenu</include>
+    <include>MediaCount</include>
+    <include>MusicNowPlayingIndicators</include>
+
+  </controls>
+</window>
