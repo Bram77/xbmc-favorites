@@ -1,337 +1,80 @@
-import urllib,urllib2,re,sys,socket
-import xbmcplugin,xbmcgui
-import htmllib
+import urllib,urllib2,re,sys,socket,xbmcplugin,xbmcgui
 
-#THE BEST OF ITV & ITV CATCHUP Plugin - By The Voin u.k 2008.
-#This script will function no matter where you are in the world.
+def CATS():
+        addDir("ITV CATCH-UP  :  A -Z","http://www.itv.com/_data/xml/CatchUpData/CatchUp360/CatchUpMenu.xml",1,'http://itv-images.adbureau.net/itv/catch-up_Sponsor%20button_1x1_Apr08.jpg')
+        addDir("THE BEST OF ITV - CRIME","http://www.itv.com/ClassicTVshows/crime/default.html",4,'http://www.itv.com/img/470x113/TV-Classics-Crime-c7d9e02e-a48e-4e8d-8842-46250b5af367.jpg')
+        addDir("THE BEST OF ITV - PERIOD DRAMA","http://www.itv.com/ClassicTVshows/perioddrama/default.html",4,'http://www.itv.com/img/470x113/TV-Classics-Period-Drama-4a332b58-a8b0-44bc-a444-635b7d6358df.jpg')
+        addDir("THE BEST OF ITV - FAMILY DRAMA","http://www.itv.com/ClassicTVshows/familydrama/default.html",4,'http://www.itv.com/img/470x113/TV-Classics-Family-Drama-768a59ff-2ab2-432d-9d2f-ffe20cec0632.jpg')
+        addDir("THE BEST OF ITV - DOCUMENTARY","http://www.itv.com/ClassicTVshows/documentary/default.html",4,'http://www.itv.com/img/470x113/0891a94b-79ef-4649-8ccf-1ad33f2c7c93.jpg')
+        addDir("THE BEST OF ITV - COMEDY","http://www.itv.com/ClassicTVshows/comedy/default.html",4,'http://www.itv.com/img/470x113/TV-Classics-Comedy-8685d32f-eace-490b-8004-d1d44d4a8b9b.jpg')
+        addDir("THE BEST OF ITV - KIDS","http://www.itv.com/ClassicTVshows/kids/default.html",4,'http://www.itv.com/img/470x113/04741e4a-ba5e-48ee-ae32-50fe7bde69d1.jpg')
+        addDir("THE BEST OF ITV - SOAPS","http://www.itv.com/ClassicTVshows/soaps/default.html",4,'http://www.itv.com/img/470x113/66fb8a0f-db7d-4094-8dcc-119f2c669eaa.jpg')
+        addDir('ITV 1-4 LIVE STREAMS','http://minglefrogletpigletdog.com',6,'http://cdn-ll-73.viddler.com/e2/thumbnail_1_d6938e73.jpg')
 
+def STREAMS():
+        streams=[]
+        req = urllib2.Request('http://www.itv.com/_app/dynamic/AsxHandler.ashx?getkey=please HTTP/1.1')
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        key = urllib2.urlopen(req).read()
+        for channel in range(1,5):
+                req = urllib2.Request('http://www.itv.com/_app/dynamic/AsxHandler.ashx?key='+key+'&simid=sim'+str(channel)+'&itvsite=ITV&itvarea=SIMULCAST.SIM'+str(channel)+'&pageid=4567756521')
+                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                streaminfo = urllib2.urlopen(req).read()
+                stream=re.compile('<TITLE>(.+?)</TITLE><REF href="(.+?)" />').findall(streaminfo)
+                streams.append(stream[1])
+        for name,url in streams:
+                addLink(name,url)
 
-
-
-#[(Webpage,Name of Show)]
-def getShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<ProgrammeId>(.+?)</ProgrammeId>\r\n      <ProgrammeTitle>(.+?)</ProgrammeTitle>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestCrimeShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(a)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestPeriodShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestFamilyShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestDocumentaryShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestComedyShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestChildrensShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestSoapShows(url,name):
-        res=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('&amp;','&',a)
-        p=re.compile('<li><a href="(.+?)"><img src=".+?/.+?/.+?.jpg" alt=".+?"></a><h4><a href=".+?">(.+?)</a></h4>\r\n')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-
-def getEpisodes(url):
-        res=[]
-        f=urllib.urlopen("http://www.itv.com/_app/Dynamic/CatchUpData.ashx?ViewType=1&Filter="+url+"&moduleID=115107")
-        a=f.read()
-        f.close()
-        p=re.compile(r'<h3><a href=".+?.html?.+?=.+?&amp;Filter=(.+?)">(.+?)</a></h3>\r\n        <p class="date">.+?</p>\r\n        <p class="progDesc">.+?</p>\r\n')
-        match=p.findall(a)
-        for url,name in match:
-                res.append((url,name))
-        return res
-
-def getBestCrimeEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-
-def getBestPeriodEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-def getBestFamilyEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-def getBestDocumentaryEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-def getBestComedyEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-def getBestChildrensEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-
-def getBestSoapEps(url,name):
-        res=[]
-        res2=[]
-        f=urllib.urlopen(url)
-        a=f.read()
-        f.close()
-        code=re.sub('<br />',' ',a)
-        p=re.compile('<a class="nsat" title=".+?".+?href=".+?(.+?)&amp;G=.+?&amp;DF=.+?">.+?.+?.+?.+?.+?</a><br>(.+?)</li>\r\n')
-        p=re.compile('title=".+?".+?href=".+?vodcrid=(.+?)&amp;G=.+?">.+?</a><br>(.+?)</li>')
-        match=p.findall(code)
-        for url,name in match:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('<a class="playVideo" title="Play" href=".+?vodcrid=(.+?)&amp;DF=.+?"><img src=".+?/.+?/.+?.jpg" alt=".+?"><span>.+?</span></a><.+?>(.+?)</.+?>')
-        #p=re.compile('<a title="Play".+?href=".+?vodcrid=(.+?)&amp;DF=.+?">(.+?)</a><br></li>')#used for Miss marple
-        match1=p.findall(code)
-        for url,name in match1:
-                res.append((url,name))
-        #Get Another version
-        p=re.compile('title="Play".+?href=".+?vodcrid=(.+?)">.+?</a><br>(.+?)</li>')
-        match2=p.findall(code)
-        for url,name in match2:
-                res.append((url,name))
-        return res
-        
+def BESTOF(url):
+        req = urllib2.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req).read()
+        eps=re.compile('<li><a href="(.+?)"><img src=".+?" alt="(.+?)"></a><h4>').findall(response)
+        for url,name in eps:
+                addDir(name,url,5,'')
                 
-
-def getVideo(url):
-        res=[]
-        f=urllib.urlopen("http://www.itv.com/_app/video/GetMediaItem.ashx?vodcrid=crid://itv.com/"+url+"&bitrate=384&adparams=SITE=ITV/AREA=CATCHUP.VIDEO/SEG=CATCHUP.VIDEO%20HTTP/1.1")
-        b=f.read()
-        f.close()
-        p=re.compile(r'<LicencePlaylist>(.+?) HTTP/1.1</LicencePlaylist>')
-        match=p.findall(b)
-        for b in match:
-                code=re.sub('&amp;','&',b)
-                code2=code+"%20HTTP/1.1"
-                f=urllib.urlopen(code2)
-                a=f.read()
-                f.close()
-                p=re.compile(r'<Entry><ref href="(.+?)" /><param value="true" name="Prebuffer" /><PARAM NAME="PrgPartNumber" VALUE="(.+?)" />')
-                match=p.findall(a)
-                for url,name in match:
-                        res.append((url,name))
-                return res
+def BESTOFEPS(url):
+        req = urllib2.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req).read()
+        eps=re.compile('<a title="Play" href=".+?vodcrid=crid://itv.com/(.+?)&amp;DF=0">(.+?)</a><br>').findall(response)
+        for url,name in eps:
+                addDir(name,url,3,'')
         
+def SHOWS(url):
+        req = urllib2.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req).read()
+        code=re.sub('&amp;','&',response)
+        match=re.compile('<ProgrammeId>(.+?)</ProgrammeId>\r\n      <ProgrammeTitle>(.+?)</ProgrammeTitle>\r\n').findall(code)
+        for url,name in match:
+                addDir(name,url,2,'')
 
-def getBestItvVideos(url):
-        res=[]
-        f=urllib.urlopen("http://www.itv.com/_app/video/GetMediaItem.ashx?vodcrid="+url+"&bitrate=384&adparams=SITE=ITV/AREA=CATCHUP.VIDEO/SEG=CATCHUP.VIDEO%20HTTP/1.1")
-        b=f.read()
-        f.close()
-        p=re.compile(r'<LicencePlaylist>(.+?) HTTP/1.1</LicencePlaylist>')
-        match=p.findall(b)
+def EPS(url):
+        req = urllib2.Request("http://www.itv.com/_app/Dynamic/CatchUpData.ashx?ViewType=1&Filter="+url+"&moduleID=115107")
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req).read()
+        match=re.compile(r'<h3><a href=".+?.html?.+?=.+?&amp;Filter=(.+?)">(.+?)</a></h3>\r\n        <p class="date">.+?</p>\r\n        <p class="progDesc">.+?</p>\r\n').findall(response);i=0
+        for url,name in match:
+                i=i+1
+                addDir(name+"-Episode-"+str(i),url,3,'')
+
+def VIDEO(url):
+        req = urllib2.Request("http://www.itv.com/_app/video/GetMediaItem.ashx?vodcrid=crid://itv.com/"+url+"&bitrate=384&adparams=SITE=ITV/AREA=CATCHUP.VIDEO/SEG=CATCHUP.VIDEO%20HTTP/1.1")
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+        response = urllib2.urlopen(req).read()
+        match=re.compile(r'<LicencePlaylist>(.+?) HTTP/1.1</LicencePlaylist>').findall(response)
         for b in match:
                 code=re.sub('&amp;','&',b)
                 code2=code+"%20HTTP/1.1"
-                f=urllib.urlopen(code2)
-                a=f.read()
-                f.close()
-                p=re.compile(r'<Entry><ref href="(.+?)" /><param value="true" name="Prebuffer" /><PARAM NAME="PrgPartNumber" VALUE="(.+?)" />')
-                match=p.findall(a)
+                req = urllib2.Request(code2)
+                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+                response = urllib2.urlopen(req).read()
+                match=re.compile(r'<Entry><ref href="(.+?)" /><param value="true" name="Prebuffer" /><PARAM NAME="PrgPartNumber" VALUE="(.+?)" />').findall(response)
                 for url,name in match:
-                        res.append((url,name))
-                return res
-     
+                        addLink(name,url)
+                       
+
 def get_params():
         param=[]
         paramstring=sys.argv[2]
@@ -352,9 +95,6 @@ def get_params():
 
       
 def addLink(name,url):
-        #print name
-        #print url
-        #print "--"
         ok=True
         thumbnail_url = url.split( "thumbnailUrl=" )[ -1 ]
         liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=thumbnail_url)
@@ -362,126 +102,13 @@ def addLink(name,url):
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
         return ok
 
-def addDir(name,url,mode):
+def addDir(name,url,mode,iconimage):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         ok=True
-        liz=xbmcgui.ListItem(name)
+        liz=xbmcgui.ListItem(name,iconImage="DefaultVideo.png", thumbnailImage=iconimage)
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
-        
-def showCats():
-        cat=[("http://www.itv.com/_data/xml/CatchUpData/CatchUp360/CatchUpMenu.xml", "ITV CATCH-UP  :  A -Z")]
-        for url,name in cat:
-                addDir(name,url,1)
-                addDir("THE BEST OF ITV","http://www.itv.com/BestofITV/default.html",4)
-                
-def showShows(url,name):
-        shows=getShows(url,name)
-        for url,name in shows:
-                addDir(name,url,2)
-
-def showEpisodes(url):
-        Episodes=getEpisodes(url)
-        i=0
-        for url,name in Episodes:
-                i=i+1
-                addDir(name+"-Episode-"+str(i),url,3)
-   
-def showGetUrl(url):
-        check=getVideo(url)
-        for url,name in check:
-                addLink(name,url)
-
-def showGetBestofItvCats():
-        addDir("BEST OF CRIME DRAMA","http://www.itv.com/BestofITV/crime/default.html",5)
-        addDir("BEST OF PERIOD DRAMA","http://www.itv.com/BestofITV/perioddrama/default.html",6)
-        addDir("BEST OF FAMILY DRAMA","http://www.itv.com/BestofITV/familydrama/default.html",7)
-        addDir("BEST OF DOCUMENTARIES","http://www.itv.com/BestofITV/documentary/default.html",8)
-        addDir("BEST OF COMEDY","http://www.itv.com/BestofITV/comedy/default.html",9)
-        addDir("BEST OF CHILDREN'S TV","http://www.itv.com/BestofITV/kids/default.html",10)
-        addDir("BEST OF ITV SOAPS","http://www.itv.com/BestofITV/soaps/default.html",11)
-
-def showGetBestofItvCrimeShows(url,name):
-        Bestshows=getBestCrimeShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,12)
-
-def showGetBestofItvPeriodShows(url,name):
-        Bestshows=getBestPeriodShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,13)
-
-def showGetBestofItvFamilyShows(url,name):
-        Bestshows=getBestFamilyShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,14)
-
-def showGetBestofItvDocumentaryShows(url,name):
-        Bestshows=getBestDocumentaryShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,15)
-
-def showGetBestofItvComedyShows(url,name):
-        Bestshows=getBestComedyShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,16)
-
-def showGetBestofItvChildrensShows(url,name):
-        Bestshows=getBestChildrensShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,17)
-
-def showGetBestofItvSoapShows(url,name):
-        Bestshows=getBestSoapShows(url,name)
-        for url,name in Bestshows:
-                addDir(name,url,18)
-
-
-def showGetBestofItvCrimeEps(url,name):
-        Besteps=getBestCrimeEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvPeriodEps(url,name):
-        Besteps=getBestPeriodEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvFamilyEps(url,name):
-        Besteps=getBestFamilyEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvDocumentaryEps(url,name):
-        Besteps=getBestDocumentaryEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvComedyEps(url,name):
-        Besteps=getBestComedyEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvChildrensEps(url,name):
-        Besteps=getBestChildrensEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-
-def showGetBestofItvSoapEps(url,name):
-        Besteps=getBestSoapEps(url,name)
-        for url,name in Besteps:
-                addDir(name,url,19)
-                
-def showGetBestofItvVideos(url,name):
-        BestVids=getBestItvVideos(url)
-        for url,name in BestVids:
-                addLink(name,url)
-
-
-                
-        
-
 
 
 params=get_params()
@@ -503,66 +130,29 @@ except:
 print "Mode: "+str(mode)
 print "URL: "+str(url)
 print "Name: "+str(name)
+
 if mode==None or url==None or len(url)<1:
         print "categories"
-        showCats()
+        CATS()
 elif mode==1:
         print "index of : "+url
-        showShows(url,name)
+        SHOWS(url)
 elif mode==2:
         print "Getting Episodes: "+url
-        showEpisodes(url)
+        EPS(url)
 elif mode==3:
         print "Getting Videofiles: "+url
-        showGetUrl(url)
+        VIDEO(url)
 elif mode==4:
-        print "Get The Best of Itv: "+url
-        showGetBestofItvCats()
+        print "Getting Videofiles: "+url
+        BESTOF(url)
 elif mode==5:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvCrimeShows(url,name)
+        print "Getting Videofiles: "+url
+        BESTOFEPS(url)
 elif mode==6:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvPeriodShows(url,name)
-elif mode==7:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvFamilyShows(url,name)
-elif mode==8:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvDocumentaryShows(url,name)
-elif mode==9:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvComedyShows(url,name)
-elif mode==10:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvChildrensShows(url,name)
-elif mode==11:
-        print "Get Best Of Itv shows: "+url
-        showGetBestofItvSoapShows(url,name)
-elif mode==12:
-        print "Get Best Of Itv Crime Episodes: "+url
-        showGetBestofItvCrimeEps(url,name)
-elif mode==13:
-        print "Get Best Of Itv Period drama Videos: "+url
-        showGetBestofItvPeriodEps(url,name)
-elif mode==14:
-        print "Get Best Of Itv Family Drama: "+url
-        showGetBestofItvFamilyEps(url,name)
-elif mode==15:
-        print "Get Best Of Itv Documentaries Episodes: "+url
-        showGetBestofItvDocumentaryEps(url,name)
-elif mode==16:
-        print "Get Best Of Itv Comedy: "+url
-        showGetBestofItvComedyEps(url,name)
-elif mode==17:
-        print "Get Best Of Itv Children`s: "+url
-        showGetBestofItvChildrensEps(url,name)
-elif mode==18:
-        print "Get Best Of Itv Soaps: "+url
-        showGetBestofItvSoapEps(url,name)
-elif mode==19:
-        print "Get Best Of Itv VideoLinks: "+url
-        showGetBestofItvVideos(url,name)
+        print "Getting Videofiles: "+url
+        STREAMS()
+
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
