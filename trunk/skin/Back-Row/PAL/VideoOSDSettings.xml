@@ -2,7 +2,7 @@
 	<defaultcontrol>2</defaultcontrol>
 	<coordinates>
 	<system>1</system>
-	<origin x="150" y="125">true</origin>
+	<origin x="150" y="88">true</origin>
 	</coordinates>
 	<controls>
 
@@ -74,23 +74,25 @@
 
 	<control type="button" id="7">
 		<description>Default Button</description>
-		<posx>530</posx>
+		<posx>535</posx>
 		<posy>150</posy>
 		<height>31</height>
+		<width>290</width>
 		<font>font12</font>
 		<textoffsetx>12</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus>list-focus.png</texturefocus>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</control>
 
 	<control type="radiobutton" id="8">
 		<description>Default RadioButton</description>
-		<posx>530</posx>
+		<posx>535</posx>
 		<posy>150</posy>
 		<height>31</height>
+		<width>290</width>
 		<font>font12</font>
-		<texturefocus>list-focus.png</texturefocus>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textoffsetx>12</textoffsetx>
 		<aligny>center</aligny>
@@ -100,11 +102,11 @@
 
 	<control type="spincontrolex" id="9">
 		<description>Default SpinControlex</description>
-		<posx>530</posx>
+		<posx>535</posx>
 		<posy>150</posy>
 		<height>31</height>
-		<width>300</width>
-		<texturefocus>list-focus.png</texturefocus>
+		<width>290</width>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
@@ -121,11 +123,11 @@
 
 	<control type="sliderex" id="10">
 		<description>Default Slider</description>
-		<posx>530</posx>
+		<posx>535</posx>
 		<posy>150</posy>
 		<height>31</height>
-		<width>300</width>
-		<texturefocus>list-focus.png</texturefocus>
+		<width>290</width>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<sliderwidth>100</sliderwidth>
 		<sliderheight>20</sliderheight>

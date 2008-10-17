@@ -2,21 +2,33 @@
 	<id>120</id>
 	<defaultcontrol>213</defaultcontrol>
 	<type>dialog</type>
-	<animation effect="slide" start="0,600" end="0,0" acceleration="-1" time="300">WindowOpen</animation>
-	<animation effect="slide" start="0,0" end="0,600" acceleration="1" time="300">WindowClose</animation>	
 	<coordinates>
 	<system>1</system>
-	<origin x="0" y="155">true</origin>
+	<origin x="0" y="10">true</origin>
 	</coordinates>
 	<controls>
+
+<control>
+<description>Media Info Background Image</description>
+<type>image</type>
+<id>1</id>
+<posx>-10</posx>
+<posy>435</posy>
+<width>740</width>
+<height>131</height>
+<texture>OSD.png</texture>
+</control>
+
+
+
 
 	<control>
 		<description>Music lyrics Button</description>
 		<type>button</type>
 		<id>929</id>
-		<posx>140</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>195</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-music-focus.png</texturefocus>
 		<texturenofocus>osd-button-music-nofocus.png</texturenofocus>
@@ -28,7 +40,7 @@
 		<onright>928</onright>
 		<onup>928</onup>
 		<ondown>928</ondown>
-		
+		<aspectratio>Keep</aspectratio>		
 	</control>
 	
 
@@ -36,9 +48,9 @@
 		<description>Record Button</description>
 		<type>button</type>
 		<id>928</id>
-		<posx>140</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>195</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-rec-focus.png</texturefocus>
 		<texturenofocus>osd-button-rec-nofocus.png</texturenofocus>
@@ -51,15 +63,16 @@
 		<onup>928</onup>
 		<ondown>928</ondown>
 		<visible>Player.CanRecord</visible>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Random button</description>
 		<type>button</type>
 		<id>208</id>
-		<posx>180</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>225</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-random-focus.png</texturefocus>
 		<texturenofocus>osd-button-random-nofocus.png</texturenofocus>
@@ -71,15 +84,16 @@
 		<onright>918</onright>
 		<onup>208</onup>
 		<ondown>208</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Playlist buton</description>
 		<type>button</type>
 		<id>918</id>
-		<posx>220</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>255</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-list-focus.png</texturefocus>
 		<texturenofocus>osd-button-list-nofocus.png</texturenofocus>
@@ -91,15 +105,16 @@
 		<onright>210</onright>
 		<onup>918</onup>
 		<ondown>918</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Previous button</description>
 		<type>button</type>
 		<id>210</id>
-		<posx>260</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>285</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-previous-focus.png</texturefocus>
 		<texturenofocus>osd-button-previous-nofocus.png</texturenofocus>
@@ -111,15 +126,16 @@
 		<onright>211</onright>
 		<onup>210</onup>
 		<ondown>210</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Rewind button</description>
 		<type>button</type>
 		<id>211</id>
-		<posx>300</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>315</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-rewind-focus.png</texturefocus>
 		<texturenofocus>osd-button-rewind-nofocus.png</texturenofocus>
@@ -131,15 +147,16 @@
 		<onright>213</onright>
 		<onup>211</onup>
 		<ondown>211</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Play/Pause button</description>
 		<type>togglebutton</type>
 		<id>213</id>
-		<posx>340</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>345</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-pause-focus.png</texturefocus>
 		<texturenofocus>osd-button-pause-nofocus.png</texturenofocus>
@@ -155,15 +172,16 @@
 		<onup>213</onup>
 		<ondown>213</ondown>
 		<animation effect="fade" time="250" condition="!Player.Paused">VisibleChange</animation>
+	    <aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Forward button</description>
 		<type>button</type>
 		<id>214</id>
-		<posx>380</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>375</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-forward-focus.png</texturefocus>
 		<texturenofocus>osd-button-forward-nofocus.png</texturenofocus>
@@ -175,15 +193,16 @@
 		<onright>215</onright>
 		<onup>214</onup>
 		<ondown>214</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Next button</description>
 		<type>button</type>
 		<id>215</id>
-		<posx>420</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>405</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-next-focus.png</texturefocus>
 		<texturenofocus>osd-button-next-nofocus.png</texturenofocus>
@@ -195,15 +214,16 @@
 		<onright>216</onright>
 		<onup>215</onup>
 		<ondown>215</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	<control>
 		<description>Mute button</description>
 		<type>button</type>
 		<id>216</id>
-		<posx>460</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>435</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-mute-focus.png</texturefocus>
 		<texturenofocus>osd-button-mute-nofocus.png</texturenofocus>
@@ -215,6 +235,7 @@
 		<onright>500</onright>
 		<onup>216</onup>
 		<ondown>216</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 	
@@ -223,9 +244,9 @@
 		<description>Visualisation Select Button</description>
 		<type>button</type>
 		<id>500</id>
-		<posx>500</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>465</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-vis-focus.png</texturefocus>
 		<texturenofocus>osd-button-vis-nofocus.png</texturenofocus>
@@ -236,6 +257,7 @@
 		<onright>920</onright>
 		<onup>503</onup>
 		<ondown>503</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 
@@ -244,7 +266,7 @@
 			<description>Visualisation Selector</description>
 			<id>503</id>
 			<posx>260</posx>
-			<posy>230</posy>
+			<posy>210</posy>
 			<width>200</width>
 			<height>80</height>
 			<label>-</label>
@@ -257,15 +279,16 @@
 			<onright>500</onright>
 			<onup>500</onup>
 			<ondown>500</ondown>
+			<aspectratio>Keep</aspectratio>
 		</control>
 	
 	<control>
 		<description>Visualisation Settings Button</description>
 		<type>button</type>
 		<id>920</id>
-		<posx>540</posx>
-		<posy>350</posy>
-		<width>40</width>
+		<posx>495</posx>
+		<posy>440</posy>
+		<width>30</width>
 		<height>40</height>
 		<texturefocus>osd-button-info-focus.png</texturefocus>
 		<texturenofocus>osd-button-info-nofocus.png</texturenofocus>
@@ -277,8 +300,120 @@
 		<onright>929</onright>
 		<onup>920</onup>
 		<ondown>920</ondown>
+		<aspectratio>Keep</aspectratio>
 	</control>
 
 
+<controlgroup>
+<posx>-50</posx>
+<posy>10</posy>
+	<control>
+		<description>Cover Image</description>
+		<type>image</type>
+		<posx>65</posx>
+		<posy>455</posy>
+		<width>85</width>
+		<height>100</height>
+		<texture>case1.png</texture>
+		<include>media-infopanel-effect</include>
+		</control>
+	
+	<control>
+		<description>Cover Image</description>
+		<type>image</type>
+		<posx>76</posx>
+		<posy>462</posy>
+		<width>69</width>
+		<height>87</height>
+		<info>MusicPlayer.Cover</info>
+		<include>media-infopanel-effect</include>
+		</control>
+
+<control>
+		<description>Cover Image</description>
+		<type>image</type>
+		<posx>64</posx>
+		<posy>455</posy>
+		<width>85</width>
+		<height>100</height>
+		<texture>case2.png</texture>
+		<include>media-infopanel-effect</include>
+		</control>
+
+	<control>
+		<description>Artist Label</description>
+		<type>label</type>
+		<width>400</width>
+		<posx>157</posx>
+		<posy>468</posy>
+		<align>left</align>
+		<font>Heading-M</font>
+		<info>MusicPlayer.Artist</info>
+		<include>media-infopanel-effect</include>
+		</control>
+
+	<control>
+		<description>Title Label</description>
+		<type>label</type>
+		<width>400</width>
+		<posx>157</posx>
+		<posy>500</posy>
+		<align>left</align>
+		<font>fontKB</font>
+		<info>MusicPlayer.Title</info>
+		<include>media-infopanel-effect</include>
+		</control>
+
+	<control>
+		<description>Album Label</description>
+		<type>label</type>
+		<width>430</width>
+		<posx>157</posx>
+		<posy>528</posy>
+		<info>MusicPlayer.Album</info>
+		<align>left</align>
+		<font>fontKB</font>
+		<include>media-infopanel-effect</include>
+		</control>
+
+	
+	<control>
+		<description>Time Label</description>
+		<type>label</type>
+		<width>200</width>
+		<posx>660</posx>
+		<posy>468</posy>
+		<align>right</align>
+		<font>Heading-M</font>
+		<label>$INFO[System.Time]</label>
+		<include>media-infopanel-effect</include>
+		</control>
+
+		<control>
+		<description>Time Label</description>
+		<type>label</type>
+		<width>200</width>
+		<posx>660</posx>
+		<posy>500</posy>
+		<align>right</align>
+		<font>fontKB</font>
+		<label>$INFO[musicplayer.Time] / $INFO[musicplayer.Duration]</label>
+		<include>media-infopanel-effect</include>
+		</control>
+
+		<control>
+		<description>Playlist Label</description>
+		<type>label</type>
+		<width>200</width>
+		<posx>660</posx>
+		<posy>528</posy>
+		<align>right</align>
+		<font>fontKB</font>
+		<label>$LOCALIZE[554] $INFO[musicplayer.Playlistposition] / $INFO[musicplayer.Playlistlength]</label>
+		<include>media-infopanel-effect</include>
+		</control>
+
+
+</controlgroup>
 	</controls>
 </window>

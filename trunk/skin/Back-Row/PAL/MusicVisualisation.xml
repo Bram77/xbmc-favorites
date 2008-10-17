@@ -15,6 +15,10 @@
 	</control>
 
 	<!-- Codec & Viz Infos -->
+	
+	
+	
+	
 	<control>
 		<description>Preset Background Image</description>
 		<type>image</type>
@@ -79,27 +83,29 @@
 	</control>
 
 	<!-- Media Infos -->
-	<control>
-		<description>Media Info Background Image</description>
-		<type>image</type>
-		<posx>-10</posx>
-		<posy>450</posy>
-		<width>740</width>
-		<height>104</height>
-		<texture>osd_menu_bg.png</texture>
-		<include>media-infopanel-effect</include>
-		<visible>Player.ShowInfo</visible>
-	</control>
+<control>
+<description>Media Info Background Image</description>
+<type>image</type>
+<id>1</id>
+<posx>-10</posx>
+<posy>445</posy>
+<width>740</width>
+<height>131</height>
+<texture>OSD.png</texture>
+<visible>Player.ShowInfo + Player.HasAudio</visible>
+</control>
 
+	<controlgroup>
+<posx>-50</posx>
+<posy>20</posy>
 	<control>
 		<description>Cover Image</description>
 		<type>image</type>
-		<posx>55</posx>
-		<posy>450</posy>
-		<width>100</width>
-		<height>105</height>
+		<posx>65</posx>
+		<posy>455</posy>
+		<width>85</width>
+		<height>100</height>
 		<texture>case1.png</texture>
-		
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
 	</control>
@@ -107,12 +113,11 @@
 	<control>
 		<description>Cover Image</description>
 		<type>image</type>
-		<posx>66</posx>
-		<posy>457</posy>
-		<width>84</width>
-		<height>92</height>
+		<posx>76</posx>
+		<posy>462</posy>
+		<width>69</width>
+		<height>87</height>
 		<info>MusicPlayer.Cover</info>
-		
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
 	</control>
@@ -120,12 +125,11 @@
 <control>
 		<description>Cover Image</description>
 		<type>image</type>
-		<posx>54</posx>
-		<posy>450</posy>
-		<width>98</width>
-		<height>105</height>
+		<posx>64</posx>
+		<posy>455</posy>
+		<width>85</width>
+		<height>100</height>
 		<texture>case2.png</texture>
-		
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
 	</control>
@@ -135,109 +139,81 @@
 		<type>label</type>
 		<width>400</width>
 		<posx>157</posx>
-		<posy>458</posy>
+		<posy>468</posy>
 		<align>left</align>
-		<font>special12</font>
+		<font>Heading-M</font>
 		<info>MusicPlayer.Artist</info>
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+		</control>
 
 	<control>
 		<description>Title Label</description>
 		<type>label</type>
 		<width>400</width>
 		<posx>157</posx>
-		<posy>479</posy>
+		<posy>500</posy>
 		<align>left</align>
-		<font>special13</font>
+		<font>fontKB</font>
 		<info>MusicPlayer.Title</info>
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+		</control>
 
 	<control>
 		<description>Album Label</description>
 		<type>label</type>
 		<width>430</width>
 		<posx>157</posx>
-		<posy>507</posy>
+		<posy>528</posy>
 		<info>MusicPlayer.Album</info>
 		<align>left</align>
-		<font>font10</font>
+		<font>fontKB</font>
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+		</control>
 
+	
 	<control>
 		<description>Time Label</description>
 		<type>label</type>
-		<width>430</width>
-		<posx>157</posx>
-		<posy>528</posy>
-		<align>left</align>
-		<font>font10</font>
-		<label>$INFO[musicplayer.Time] / $INFO[MusicPlayer.TimeRemaining] / $INFO[musicplayer.Duration]</label>
+		<width>200</width>
+		<posx>660</posx>
+		<posy>468</posy>
+		<align>right</align>
+		<font>Heading-M</font>
+		<label>$INFO[System.Time]</label>
+		<include>media-infopanel-effect</include>
+		<visible>Player.ShowInfo</visible>
+		</control>
+
+		<control>
+		<description>Time Label</description>
+		<type>label</type>
+		<width>200</width>
+		<posx>660</posx>
+		<posy>500</posy>
+		<align>right</align>
+		<font>fontKB</font>
+		<label>$INFO[musicplayer.Time] / $INFO[musicplayer.Duration]</label>
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+		</control>
 
-	<control>
+		<control>
 		<description>Playlist Label</description>
 		<type>label</type>
 		<width>200</width>
 		<posx>660</posx>
 		<posy>528</posy>
 		<align>right</align>
-		<font>font10</font>
+		<font>fontKB</font>
 		<label>$LOCALIZE[554] $INFO[musicplayer.Playlistposition] / $INFO[musicplayer.Playlistlength]</label>
 		<include>media-infopanel-effect</include>
 		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+		</control>
 
-	<control>
-		<description>Time Label</description>
-		<type>label</type>
-		<width>200</width>
-		<posx>660</posx>
-		<posy>458</posy>
-		<align>right</align>
-		<font>special13</font>
-		<label>$INFO[System.Time]</label>
-		<include>media-infopanel-effect</include>
-		<visible>Player.ShowInfo</visible>
-	</control>
-
-	<control>
-		<description>Volume Label</description>
-		<type>label</type>
-		<width>200</width>
-		<posx>660</posx>
-		<posy>479</posy>
-		<align>right</align>
-		<font>special13</font>
-		<label>$INFO[Player.Volume]</label>
-		<include>media-infopanel-effect</include>
-		<visible>Player.ShowInfo</visible>
-	</control>
-
-	<control>
-		<description>Progressbar</description>
-		<type>progress</type>
-		<id>23</id>
-		<posx>157</posx>
-		<posy>548</posy>
-		<width>503</width>
-		<height>8</height>
-		<info>Player.Progress</info>
-		<texturebg>progress_back.png</texturebg>
-		<lefttexture>progress_left.png</lefttexture>
-		<midtexture>progress_mid-blue2.png</midtexture>
-		<righttexture>progress_right.png</righttexture>
-		<overlaytexture>progress_over.png</overlaytexture>
-		<include>media-infopanel-effect</include>
-		<visible>Player.ShowInfo + Player.HasAudio</visible>
-	</control>
+</controlgroup>
 
 	</controls>
 </window>

@@ -18,6 +18,7 @@
 
 
 
+
 <control type="multiimage">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -57,7 +58,6 @@
         <animation effect="fade" delay = "200" time="800">Hidden</animation>
 		</control>
 
-
 <control>
 		<description>Background</description>
 		<type>image</type>
@@ -96,7 +96,8 @@
 	<visible>!Skin.HasSetting(Background)</visible>
    </control>
 
-   <control type="image">
+
+ <control type="image">
 				<posx>0</posx>
 				<posy>6</posy>
 				<width>720</width>
@@ -105,23 +106,13 @@
 				</control>
 
 
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>40</width>
-    <height>40</height>
-    <texture>icon-settings.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
+
 
 
 
 <control>
 		<description>Description label</description>
-		<font>font18</font>
+		<font>Heading-M</font>
 	    <textcolor>white</textcolor>
 		<label>5</label>
 		<include>description</include>
@@ -133,12 +124,11 @@
 			<posy>11</posy>
 	        <align>center</align>
 	        <aligny>center</aligny>
-	       <font>font18</font>
+	        <font>special16</font>
 	        <textcolor>white</textcolor>
 			<width>720</width>
 			<height>42</height>
 			<label>5</label>
-			<visible>!Skin.HasSetting(menulabels)</visible>
 			<animation effect="fade" time="200">WindowOpen</animation>
 	        <animation effect="fade" time="200">WindowClose</animation>
 			</control>
@@ -157,7 +147,7 @@
 		<posy>80</posy>
 		<width>590</width>
 		<height>460</height>
-		<texture>OSD Background.png</texture>
+		<texture>black.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
         <animation effect="fade" time="200">WindowClose</animation> 
 	</control>
@@ -167,8 +157,8 @@
     <posx>65</posx>
     <posy>75</posy>
     <width>590</width>
-    <height>40</height>
-    <texture>list-focus.png</texture>
+    <height>38</height>
+    <texture>button-nofocus2.png</texture>
 	<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
    </control>
@@ -224,8 +214,8 @@
 		<description>Default Button</description>
 		<posx>530</posx>
 		<posy>200</posy>
-		<font>font18</font>
-		<texturefocus>list-focus.png</texturefocus>
+		<font>font64</font>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
@@ -235,8 +225,8 @@
 		<description>Default RadioButton</description>
 		<posx>530</posx>
 		<posy>200</posy>
-		<font>font18</font>
-		<texturefocus>list-focus.png</texturefocus>
+		<font>font64</font>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureRadiofocus>settings-check-box.png</textureRadiofocus>
 		<textureRadionofocus>settings-check-boxNF.png</textureRadionofocus>
@@ -250,13 +240,13 @@
 		<posx>530</posx>
 		<posy>200</posy>
 		<width>300</width>
-		<texturefocus>list-focus.png</texturefocus>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
 		<textureupFocus>scroll-up-focus.png</textureupFocus>
 		<texturedownFocus>scroll-down-focus.png</texturedownFocus>
-		<font>font18</font>
+		<font>font64</font>
 		<textcolor>white</textcolor>
 		<colordiffuse>white</colordiffuse>
 		<disabledcolor>60d0d0d0</disabledcolor>
@@ -272,13 +262,13 @@
 		<description>Default Category Button</description>
 		<posx>208</posx>
 		<posy>200</posy>
-		<height>27</height>
-		<width>140</width>
+		<height>30</height>
+		<width>138</width>
 		<label>224</label>
-		<font>font13</font>
+		<font>font18</font>
         <textcolor>white</textcolor>
 		<align>center</align>
-		<texturefocus>list-focus sub.png</texturefocus>
+		<texturefocus>input-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
@@ -294,7 +284,19 @@
 <animation effect="fade" time="200">WindowClose</animation> 
 	</control>
 
-<include>Music-Info4:3</include>
+	<control>
+		<description>Panel Image</description>
+		<type>image</type>
+		<posx>65</posx>
+		<posy>75</posy>
+		<width>590</width>
+		<height>465</height>
+		<texture>edge.png</texture>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="200">WindowClose</animation> 
+	</control>
+
+<include>Music-Info</include>
 
 	</controls>
 

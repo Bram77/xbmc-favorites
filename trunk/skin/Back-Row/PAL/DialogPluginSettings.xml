@@ -13,10 +13,10 @@
 		<posy>0</posy>
 		<width>720</width>
 		<height>576</height>
-		<texture>back-row.png</texture>
+		<texture>black.png</texture>
 		<aspectratio>stretch</aspectratio>
-		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
-		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
+		<animation effect="fade" time="2000">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
 	</control>
 	
 
@@ -24,21 +24,20 @@
 <control type="image">
 		<description>backgorund</description>
 		<posx>0</posx>
-		<posy>0</posy>
+		<posy>50</posy>
 		<width>720</width>
-		<height>576</height>
-		<texture>sub-background2.png</texture>
+		<height>496</height>
+		<texture>sub-background3.png</texture>
 		<aspectratio>stretch</aspectratio>
 		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
 		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
 	</control>
 
-
 		
 	<controlgroup>
 	<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
 	<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
-
+     <posy>50</posy>
 		<control type="label" id="20">
 			<description>dialog Heading</description>
 			<posx>75</posx>

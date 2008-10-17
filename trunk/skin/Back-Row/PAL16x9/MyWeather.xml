@@ -95,25 +95,15 @@
         <visible>Skin.HasSetting(Background)</visible>
 		</control>
 
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>30</width>
-    <height>40</height>
-    <texture>settings-weather-focus.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
+
 
 
 <control type="label">
-	<posx>60</posx>
+	<posx>20</posx>
 	<posy>30</posy>
 	<align>left</align>
 	<aligny>center</aligny>
-	<font>font18</font>
+	<font>Heading-M</font>
 	<textcolor>white</textcolor>
 	<visible>!Skin.HasSetting(menulabels)</visible>
 	<animation effect="fade" time="200">WindowOpen</animation>
@@ -125,9 +115,9 @@
 <posy>93</posy>
 <control type="image">
     <description>header</description>
-    <posx>67</posx>
-    <posy>25</posy>
-    <width>587</width>
+    <posx>115</posx>
+    <posy>60</posy>
+    <width>490</width>
     <height>40</height>
     <texture>button-nofocus.png</texture>
 	<animation effect="fade" time="200">WindowOpen</animation>
@@ -139,13 +129,13 @@
 	<controlgroup>
 	<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
-	<posy>93</posy>
+	<posy>129</posy>
 
 	<control>
 		<description>Refresh Button</description>
 		<type>button</type>
 		<id>2</id>
-		<posx>70</posx>
+		<posx>120</posx>
 	    <posy>30</posy>
 		<label>184</label>
 		<font>menubutton</font>
@@ -165,7 +155,7 @@
 		<description>Settings Button</description>
 		<type>button</type>
 		<id>4</id>
-		<posx>218</posx>
+		<posx>268</posx>
 	    <posy>30</posy>
 		<width>140</width>
 		<height>27</height>
@@ -184,11 +174,8 @@
 	</controlgroup>
 	
 	<controlgroup>
-     <posy>82</posy>
-
-	
-
-	
+     <posy>115</posy>
+     <posx>40</posx>
 	
 
 	<control>
@@ -241,7 +228,7 @@
 		<type>label</type>
 		<id>11</id>
 		<align>right</align>
-		<posx>620</posx>
+		<posx>560</posx>
 		<posy>85</posy>
 		<align>right</align>
 		<label>-</label>
@@ -333,8 +320,8 @@
 		<description>current weather icon</description>
 		<type>image</type>
 		<id>21</id>
-		<posx>500</posx>
-		<posy>140</posy>
+		<posx>320</posx>
+		<posy>90</posy>
 		<height>140</height>
 		<width>140</width>
 		<keepaspectratio>true</keepaspectratio>
@@ -349,8 +336,8 @@
 		<type>label</type>
 		<align>right</align>
 		<id>22</id>
-		<posx>520</posx>
-		<posy>130</posy>
+		<posx>560</posx>
+		<posy>150</posy>
 		<width>120</width>
 		<label>-</label>
 		<font>font10</font>
@@ -439,20 +426,20 @@
 </controlgroup>
 	
 <controlgroup>
-<posy>25</posy>
+<posy>15</posy>
 	<control>
 		<description>day 0 label</description>
 		<type>button</type>
 		<align>center</align>
 		<height>28</height>
-		<width>131</width>
+		<width>110</width>
 		<id>31</id>
-		<posx>71</posx>
+		<posx>119</posx>
 		<posy>340</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
-		<texturefocus>button-nofocus.png</texturefocus>
+		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<include>slideright</include>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -463,9 +450,9 @@
 		<description>day 0 Hi label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>120</width>
+		<width>110</width>
 		<id>32</id>
-		<posx>70</posx>
+		<posx>119</posx>
 		<posy>378</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -481,9 +468,9 @@
 		<description>day 0 low label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>120</width>
+		<width>110</width>
 		<id>33</id>
-		<posx>70</posx>
+		<posx>119</posx>
 		<posy>400</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -503,8 +490,8 @@
 		<aligny>top</aligny>
 		<width>110</width>
 		<wrapmultiline>true</wrapmultiline>
-		<posx>70</posx>
-		<posy>505</posy>
+		<posx>119</posx>
+		<posy>500</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
@@ -517,8 +504,8 @@
 		<description>day 0 icon</description>
 		<type>image</type>
 		<id>35</id>
-		<posx>95</posx>
-		<posy>435</posy>
+		<posx>142</posx>
+		<posy>425</posy>
 		<height>64</height>
 		<width>64</width>
 		<keepaspectratio>true</keepaspectratio>
@@ -533,14 +520,14 @@
 		<type>button</type>
 		<align>center</align>
 		<height>28</height>
-		<width>150</width>
+		<width>122</width>
 		<id>41</id>
-		<posx>209</posx>
+		<posx>235</posx>
 		<posy>340</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
-		<texturefocus>button-nofocus.png</texturefocus>
+		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<include>slideright</include>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -551,9 +538,9 @@
 		<description>day 1 Hi label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>120</width>
+		<width>122</width>
 		<id>42</id>
-		<posx>223</posx>
+		<posx>235</posx>
 		<posy>378</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -569,9 +556,9 @@
 		<description>day 1 low label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>120</width>
+		<width>122</width>
 		<id>43</id>
-		<posx>223</posx>
+		<posx>235</posx>
 		<posy>400</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -589,10 +576,10 @@
 		<id>44</id>
 		<align>center</align>
 		<aligny>top</aligny>
-		<width>110</width>
+		<width>122</width>
 		<wrapmultiline>true</wrapmultiline>
-		<posx>223</posx>
-		<posy>505</posy>
+		<posx>235</posx>
+		<posy>500</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
@@ -605,8 +592,8 @@
 		<description>day 1 icon</description>
 		<type>image</type>
 		<id>45</id>
-		<posx>248</posx>
-		<posy>435</posy>
+		<posx>264</posx>
+		<posy>425</posy>
 		<height>64</height>
 		<width>64</width>
 		<keepaspectratio>true</keepaspectratio>
@@ -621,14 +608,14 @@
 		<type>button</type>
 		<align>center</align>
 		<height>28</height>
-		<width>144</width>
+		<width>120</width>
 		<id>51</id>
 		<posx>365</posx>
 		<posy>340</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
-		<texturefocus>button-nofocus.png</texturefocus>
+		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<include>slideright</include>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -641,7 +628,7 @@
 		<align>center</align>
 		<width>120</width>
 		<id>52</id>
-		<posx>376</posx>
+		<posx>365</posx>
 		<posy>378</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -659,7 +646,7 @@
 		<align>center</align>
 		<width>120</width>
 		<id>53</id>
-		<posx>376</posx>
+		<posx>365</posx>
 		<posy>400</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -677,10 +664,10 @@
 		<id>54</id>
 		<align>center</align>
 		<aligny>top</aligny>
-		<width>110</width>
+		<width>120</width>
 		<wrapmultiline>true</wrapmultiline>
-		<posx>376</posx>
-		<posy>505</posy>
+		<posx>365</posx>
+		<posy>500</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
@@ -693,8 +680,8 @@
 		<description>day 2 icon</description>
 		<type>image</type>
 		<id>55</id>
-		<posx>401</posx>
-		<posy>435</posy>
+		<posx>393</posx>
+		<posy>425</posy>
 		<height>64</height>
 		<width>64</width>
 		<keepaspectratio>true</keepaspectratio>
@@ -709,14 +696,14 @@
 		<type>button</type>
 		<align>center</align>
 		<height>28</height>
-		<width>135</width>
+		<width>112</width>
 		<id>61</id>
-		<posx>515</posx>
+		<posx>490</posx>
 		<posy>340</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
-		<texturefocus>button-nofocus.png</texturefocus>
+		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<include>slideright</include>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -727,9 +714,9 @@
 		<description>day 3 Hi label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>110</width>
+		<width>112</width>
 		<id>62</id>
-		<posx>528</posx>
+		<posx>490</posx>
 		<posy>378</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -745,9 +732,9 @@
 		<description>day 3 low label</description>
 		<type>label</type>
 		<align>center</align>
-		<width>110</width>
+		<width>112</width>
 		<id>63</id>
-		<posx>528</posx>
+		<posx>490</posx>
 		<posy>400</posy>
 		<label>-</label>
 		<font>font10</font>
@@ -765,10 +752,10 @@
 		<id>64</id>
 		<align>center</align>
 		<aligny>top</aligny>
-		<width>110</width>
+		<width>112</width>
 		<wrapmultiline>true</wrapmultiline>
-		<posx>528</posx>
-		<posy>505</posy>
+		<posx>490</posx>
+		<posy>500</posy>
 		<label>-</label>
 		<font>font10</font>
 		<textoffsetx>-</textoffsetx>
@@ -781,8 +768,8 @@
 		<description>day 3 icon</description>
 		<type>image</type>
 		<id>65</id>
-		<posx>554</posx>
-		<posy>435</posy>
+		<posx>514</posx>
+		<posy>425</posy>
 		<height>64</height>
 		<width>64</width>
 		<keepaspectratio>true</keepaspectratio>

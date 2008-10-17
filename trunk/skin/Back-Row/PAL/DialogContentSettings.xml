@@ -1,10 +1,6 @@
 <window id="132">
 	<defaultcontrol>3</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<posx>161</posx>
-		<posy>132</posy>
-	</coordinates>
+	
 	<controls>
 		<control type="image" id="0">
 			<posx>-300</posx>
@@ -15,15 +11,26 @@
 			<animation effect="fade" time="2000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
-		<control type="image" id="1">
-			<description>background image</description>
-			<posx>-25</posx>
-			<posy>-11</posy>
-			<width>446</width>
-			<height>406</height>
-			<texture>keyboard-panel.png</texture>
-			
-		</control>
+		
+		<control type="image">
+		<description>backgorund</description>
+		<posx>0</posx>
+		<posy>50</posy>
+		<width>720</width>
+		<height>496</height>
+		<texture>sub-background3.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
+	</control>
+
+<controlgroup>
+<system>1</system>
+		<posx>161</posx>
+		<posy>132</posy>
+<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
+<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
+
 		<control type="image">
 			<description>scraper image</description>
 			<posx>10</posx>
@@ -233,5 +240,7 @@
 			<ondown>3</ondown>
 			
 		</control>
+
+		</controlgroup>
 	</controls>
 </window>

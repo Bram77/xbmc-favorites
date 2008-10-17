@@ -11,136 +11,170 @@
 
 
 <control>
-<description>Panel Image</description>
-<type>image</type>
-<posx>0</posx>
-<posy>30</posy>
-<width>720</width>
-<height>576</height>
-<texture>background2.png</texture>
-<visible>!Skin.HasSetting(Background)</visible>
-</control>
+		<description>Panel Image</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>background2.png</texture>
+		<visible>!Skin.HasSetting(Background)</visible>
+		</control>
 
-
-
-<control type="multiimage">
-<posx>0</posx>
-<posy>30</posy>
-<width>720</width>
-<height>576</height>
-<imagepath>Menus</imagepath>
-<info>Skin.String(CustomMenu)</info>
-<timeperimage>5000</timeperimage>
-<fadetime>2000</fadetime>
-<randomize>true</randomize>
-<visible>!Skin.HasSetting(CustomMenu)</visible>
-<visible>Skin.HasSetting(Background)</visible>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="300">WindowClose</animation>
-<animation effect="fade" time="200">Visible</animation>
-<animation effect="fade" delay = "200" time="800">Hidden</animation>
-</control>
 
 
 
 
 <control type="multiimage">
-<posx>0</posx>
-<posy>30</posy>
-<width>720</width>
-<height>576</height>
-<imagepath>-</imagepath>
-<info>Skin.String(CustomMenuFolder)</info>
-<timeperimage>5000</timeperimage>
-<fadetime>2000</fadetime>
-<randomize>true</randomize>
-<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
-<visible>Skin.HasSetting(Background)</visible>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="300">WindowClose</animation>
-<animation effect="fade" time="200">Visible</animation>
-<animation effect="fade" delay = "200" time="800">Hidden</animation>
-</control>
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>Menus</imagepath>
+		<info>Skin.String(CustomMenu)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenu)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+
+
+
+
+		<control type="multiimage">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>720</width>
+		<height>576</height>
+		<imagepath>-</imagepath>
+		<info>Skin.String(CustomMenuFolder)</info>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+        <randomize>true</randomize>
+		<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+		<visible>Skin.HasSetting(Background)</visible>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+        <animation effect="fade" time="200">Visible</animation>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation>
+		</control>
+
+<control>
+		<description>Background</description>
+		<type>image</type>
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>Movies.png</texture>
+		<animation effect="fade" time="1200">Windowopen</animation>
+		<visible>!Skin.HasSetting(Background)</visible>
+	    </control>
+
+
+
+<control type="image">
+    <description>Background image</description>
+    <posx>-80</posx>
+    <posy>30</posy>
+    <width>720</width>
+    <height>576</height>
+    <texture>Left Curtain.png</texture>
+    <animation effect="fade" time="300">WindowOpen</animation>
+	<animation effect="slide" end="-320,30" delay="0" time="700">Windowclose</animation>
+	<visible>!Skin.HasSetting(Background)</visible>
+   </control>
+
+<control type="image">
+    <description>Background image</description>
+    <posx>80</posx>
+    <posy>30</posy>
+    <width>720</width>
+    <height>576</height>
+    <texture>right Curtain.png</texture>
+    <animation effect="fade" time="700">WindowOpen</animation>
+	<animation effect="slide" end="720,30" delay="0" time="1400">Windowclose</animation>
+	<visible>!Skin.HasSetting(Background)</visible>
+   </control>
 
 
 <control>
 <description>Background</description>
 <type>image</type>
-<posx>0</posx>
-<posy>30</posy>
-<width>720</width>
-<height>576</height>
-<texture>Back-Row.png</texture>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation>
-<visible>!Skin.HasSetting(Background)</visible>
-</control>
-
-<control>
-<description>Background</description>
-<type>image</type>
-<posx>-10</posx>
+<posx>10</posx>
 <posy>100</posy>
-<width>740</width>
+<width>700</width>
 <height>455</height>
 <texture>black.png</texture>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
 
-
-
 <control>
 <description>Background</description>
 <type>image</type>
-<posx>-10</posx>
-<posy>95</posy>
-<width>740</width>
-<height>10</height>
-<texture>separatorosd.png</texture>
+<posx>10</posx>
+<posy>100</posy>
+<width>700</width>
+<height>455</height>
+<texture>edge.png</texture>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
-
-
-<control>
-<description>Background</description>
-<type>image</type>
-<posx>-10</posx>
-<posy>550</posy>
-<width>740</width>
-<height>10</height>
-<texture>separatorosd.png</texture>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation> 
-</control>
-
-
 
 <control type="image">
-<description>Logo</description>
-<posx>15</posx>
-<posy>40</posy>
-<width>30</width>
-<height>40</height>
-<texture>settings-more-focus.png</texture>
-<visible>!Skin.HasSetting(menulabels)</visible>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation>
-</control>
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>720</width>
+				<height>52</height>
+				<texture>homebutton-horizontal-nofocus.png</texture>
+				<animation effect="fade" time="200">WindowOpen</animation>
+                <animation effect="fade" time="200">WindowClose</animation>
+				</control>
+
+
+<control>
+		<description>Description label</description>
+		<font>Heading-M</font>
+	    <textcolor>white</textcolor>
+		<label>5</label>
+		<type>label</type>
+	    <posx>20</posx>
+	    <posy>57</posy>
+	    <width>600</width>
+	    <align>left</align>
+	    <aligny>center</aligny>
+	    <font>Heading-M</font>
+	    <textcolor>white</textcolor>
+	    <visible>!Skin.HasSetting(menulabels)</visible>
+	    <animation effect="fade" time="200">WindowOpen</animation>
+	    <animation effect="fade" time="200">WindowClose</animation>
+	</control>
+
+
 
 <control type="label">
-<posx>60</posx>
-<posy>70</posy>
-<align>left</align>
-<aligny>center</aligny>
-<font>font18</font>
-<textcolor>white</textcolor>
-<visible>!Skin.HasSetting(menulabels)</visible>
-<animation effect="fade" time="200">WindowOpen</animation>
-<animation effect="fade" time="200">WindowClose</animation>
-<label>20077</label>
+	<posx>0</posx>
+	<posy>38</posy>
+	<align>center</align>
+	<aligny>center</aligny>
+	<width>720</width>
+	<height>42</height>
+	<font>special16</font>
+	<textcolor>white</textcolor>
+	<visible>!Skin.HasSetting(menulabels)</visible>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+    <label>20077</label>
 </control>
+
+
+
 
 <controlgroup id="1">
 
@@ -148,6 +182,9 @@
 <posy>20</posy>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
+
+
+
 
 <control>
 <description>Background</description>
@@ -167,7 +204,7 @@
 <posx>50</posx>
 <posy>110</posy>
 <include>20000</include>
-<font>font13</font>
+<font>font64</font>
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
@@ -189,7 +226,7 @@
 <posx>50</posx>
 <posy>147</posy>
 <include>20040</include>
-<font>font13</font>
+<font>font64</font>
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
@@ -211,7 +248,7 @@
 <posx>50</posx>
 <posy>184</posy>
 <include>20060</include>
-<font>font13</font>
+<font>font64</font>
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
@@ -234,6 +271,7 @@
 <posy>221</posy>
 <label>1034</label>
 <align>left</align>
+<font>font64</font>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
 <textoffsetx>17</textoffsetx>
@@ -254,7 +292,7 @@
 <posx>50</posx>
 <posy>258</posy>
 <label>Wallpaper</label>
-<font>font13</font>
+<font>font64</font>
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
@@ -294,11 +332,11 @@
 <posx>211</posx>
 <posy>115</posy>
 <include>20005</include>
-<font>font13</font>
+<font>font64</font>
 <selected>Skin.HasSetting(weather)</selected>
 <onclick>Skin.ToggleSetting(weather)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -318,11 +356,11 @@
 <posx>211</posx>
 <posy>145</posy>
 <include>20006</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(rss)</selected>
 <onclick>Skin.ToggleSetting(rss)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -356,11 +394,11 @@
 <posx>211</posx>
 <posy>187</posy>
 <include>20016</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Settings)</onclick>
 <selected>!Skin.HasSetting(Settings)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -380,11 +418,11 @@
 <posx>211</posx>
 <posy>217</posy>
 <include>20013</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Programs)</onclick>
 <selected>!Skin.HasSetting(Programs)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -404,11 +442,11 @@
 <posx>211</posx>
 <posy>247</posy>
 <include>20015</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(tv-library)</onclick>
 <selected>!Skin.HasSetting(tv-library)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -428,11 +466,11 @@
 <posx>211</posx>
 <posy>277</posy>
 <include>200018</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Files)</onclick>
 <selected>Skin.HasSetting(Files)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -453,11 +491,11 @@
 <posx>211</posx>
 <posy>307</posy>
 <include>200017</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Scripts)</onclick>
 <selected>Skin.HasSetting(Scripts)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -480,11 +518,11 @@
 <posx>211</posx>
 <posy>337</posy>
 <include>200019</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Weather1)</onclick>
 <selected>Skin.HasSetting(Weather1)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -517,11 +555,11 @@
 <posx>211</posx>
 <posy>379</posy>
 <include>20014</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(movie-library)</onclick>
 <selected>Skin.HasSetting(movie-library)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -543,11 +581,11 @@
 <posx>211</posx>
 <posy>409</posy>
 <include>20018</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(AltHome)</onclick>
 <selected>Skin.HasSetting(AltHome)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -568,11 +606,11 @@
 <posx>211</posx>
 <posy>439</posy>
 <include>20017</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Wallpaper)</onclick>
 <selected>Skin.HasSetting(Wallpaper)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -594,11 +632,11 @@
 <posx>211</posx>
 <posy>469</posy>
 <include>20019</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Default Wallpaper)</onclick>
 <selected>Skin.HasSetting(Default Wallpaper)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -618,11 +656,11 @@
 <posx>211</posx>
 <posy>499</posy>
 <include>20032</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ToggleSetting(Mask Overlay)</onclick>
 <selected>Skin.HasSetting(Mask Overlay)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -650,17 +688,17 @@
 <posx>211</posx>
 <posy>115</posy>
 <include>20061</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(menulabels)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <onclick>Skin.ToggleSetting(menulabels)</onclick>
 <width>470</width>
 <height>30</height>
 <onleft>4</onleft>
 <onright>4</onright>
-<onup>606</onup>
+<onup>608</onup>
 <ondown>602</ondown>
 <include>slideright</include>
 <visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
@@ -675,11 +713,11 @@
 <posx>211</posx>
 <posy>152</posy>
 <include>20063</include>
-<font>font13</font>
+<font>font64</font>
 <onclick>Skin.ResetSettings</onclick>
 <onclick>XBMC.Notification(Back-Row Skin Setting,Settings back to Default),100</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -693,12 +731,12 @@
 
 <control type="radiobutton" id="603">
 <description>Scrollbar Toggle</description>
-<font>font13</font>
+<font>font64</font>
 <posx>211</posx>
 <posy>189</posy>
 <width>470</width>
 <height>30</height>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <label>Scroll Bar Toggle</label>
 <onclick>Skin.ToggleSetting(sbar)</onclick>
@@ -718,10 +756,10 @@
 <posx>211</posx>
 <posy>226</posy>
 <include>20065</include>
-<font>font13</font>
+<font>font64</font>
 <selected>Skin.HasSetting(Background)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <onclick>Skin.ToggleSetting(Background)</onclick>
 <width>470</width>
@@ -741,10 +779,10 @@
 <posx>211</posx>
 <posy>263</posy>
 <include>20067</include>
-<font>font13</font>
+<font>font64</font>
 <selected>Skin.HasSetting(Now Showing)</selected>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <onclick>Skin.ToggleSetting(Now Showing)</onclick>
 <width>470</width>
@@ -761,12 +799,12 @@
 <!-- Menu Options - DVD Case Animation toggle -->
 <control type="radiobutton" id="606">
 <description>DVD Case Animation toggle</description>
-<font>font13</font>
+<font>font64</font>
 <posx>211</posx>
 <posy>300</posy>
 <width>470</width>
 <height>30</height>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <include>20068</include>
 <align>left</align>
@@ -775,11 +813,54 @@
 <onleft>4</onleft>
 <onright>4</onright>
 <onup>605</onup>
-<ondown>600</ondown>
+<ondown>607</ondown>
 <include>slideright</include>
 <visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
 </control>
 
+<!-- Menu Options - TV Show Banner / Poster View toggle -->
+<control type="radiobutton" id="607">
+<description>TV Banner - Poster toggle</description>
+<font>font64</font>
+<posx>211</posx>
+<posy>337</posy>
+<width>470</width>
+<height>30</height>
+<texturefocus>input-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<label>31052</label>
+<align>left</align>
+<selected>!Skin.HasSetting(TV Poster)</selected>
+<onclick>Skin.ToggleSetting(TV Poster)</onclick>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>606</onup>
+<ondown>608</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
+
+<!-- Menu Options - File mode fanart toggle -->
+<control type="radiobutton" id="608">
+<description>File Mode fanart toggle</description>
+<font>font64</font>
+<posx>211</posx>
+<posy>374</posy>
+<width>470</width>
+<height>30</height>
+<texturefocus>input-focus.png</texturefocus>
+<texturenofocus>-</texturenofocus>
+<label>31053</label>
+<align>left</align>
+<selected>Skin.HasSetting(File mode fanart)</selected>
+<onclick>Skin.ToggleSetting(File mode fanart)</onclick>
+<onleft>4</onleft>
+<onright>4</onright>
+<onup>607</onup>
+<ondown>600</ondown>
+<include>slideright</include>
+<visible>Control.HasFocus(4) | ControlGroup(13).HasFocus()</visible>
+</control>
 
 
 <animation effect="fade" time="200">WindowOpen</animation>
@@ -799,11 +880,11 @@
 <posx>211</posx>
 <posy>115</posy>
 <include>20042</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(home-music-info)</selected>
 <onclick>Skin.ToggleSetting(home-music-info)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -823,11 +904,11 @@
 <posx>211</posx>
 <posy>152</posy>
 <include>20043</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(music-info)</selected>
 <onclick>Skin.ToggleSetting(music-info)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -847,11 +928,11 @@
 <posx>211</posx>
 <posy>189</posy>
 <include>20050</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(music-info2)</selected>
 <onclick>Skin.ToggleSetting(music-info2)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -871,11 +952,11 @@
 <posx>211</posx>
 <posy>226</posy>
 <include>20044</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(home-visualisation)</selected>
 <onclick>Skin.ToggleSetting(home-visualisation)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -907,11 +988,11 @@
 <posx>211</posx>
 <posy>265</posy>
 <include>20046</include>
-<font>font13</font>
+<font>font64</font>
 <selected>Skin.HasSetting(home-video-info)</selected>
 <onclick>Skin.ToggleSetting(home-video-info)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -931,11 +1012,11 @@
 <posx>211</posx>
 <posy>304</posy>
 <include>20047</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(video-info)</selected>
 <onclick>Skin.ToggleSetting(video-info)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -955,11 +1036,11 @@
 <posx>211</posx>
 <posy>343</posy>
 <include>20048</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(home-video-preview)</selected>
 <onclick>Skin.ToggleSetting(home-video-preview)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -979,12 +1060,12 @@
 <posx>211</posx>
 <posy>382</posy>
 <include>20049</include>
-<font>font13</font>
+<font>font64</font>
 <selected>!Skin.HasSetting(video-preview)</selected>
 <onclick>Skin.ToggleSetting(video-preview)</onclick>
 <onclick>!Skin.SetBool(video-info)</onclick>
 <align>left</align>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus></texturenofocus>
 <width>470</width>
 <height>30</height>
@@ -999,12 +1080,12 @@
 <!-- Media Options - Turn Watched/UnWatched Overlay On/Off -->
 <control type="radiobutton" id="6">
 <description>Watched/Unwatched Overlay Toggle</description>
-<font>font13</font>
+<font>font64</font>
 <posx>211</posx>
 <posy>421</posy>
 <width>470</width>
 <height>30</height>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <include>20132</include>
 <selected>Skin.HasSetting(menu-overlay)</selected>
@@ -1025,7 +1106,7 @@
 <posy>460</posy>
 <width>470</width>
 <height>30</height>
-<font>font13</font>
+<font>font64</font>
 <label>21398</label>
 <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
@@ -1033,7 +1114,7 @@
 <onright>3</onright>
 <onup>6</onup>
 <ondown>710</ondown>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <include>slideright</include>
 <visible>Control.HasFocus(3) | ControlGroup(12).HasFocus()</visible>
@@ -1045,7 +1126,7 @@
 <posy>499</posy>
 <width>470</width>
 <height>30</height>
-<font>font13</font>
+<font>font64</font>
 <label>15311</label>
 <label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
 <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,Q:\UserData\playlists\music\)</onclick>
@@ -1053,7 +1134,7 @@
 <onright>3</onright>
 <onup>709</onup>
 <ondown>701</ondown>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 <include>slideright</include>
@@ -1085,10 +1166,10 @@
 <onright>14</onright>
 <onup>47</onup>
 <ondown>41</ondown>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <textoffsetx>7</textoffsetx>
-<texturefocus>list-focus.png</texturefocus>
+<texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
 </control>
@@ -1162,7 +1243,7 @@
 <onright>49</onright>
 <onup>40</onup>
 <ondown>52</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1209,7 +1290,7 @@
 <onright>410</onright>
 <onup>51</onup>
 <ondown>53</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1237,7 +1318,7 @@
 <posx>240</posx>
 <posy>283</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1258,7 +1339,7 @@
 <onright>411</onright>
 <onup>52</onup>
 <ondown>54</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1287,7 +1368,7 @@
 <posy>320</posy>
 <width>150</width>
 <aligny>center</aligny>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <label>20078</label>
 <visible>!Skin.String(DialogSubMenu4Title)</visible>
@@ -1307,7 +1388,7 @@
 <onright>412</onright>
 <onup>53</onup>
 <ondown>55</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1335,7 +1416,7 @@
 <posx>240</posx>
 <posy>357</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1356,7 +1437,7 @@
 <onright>413</onright>
 <onup>54</onup>
 <ondown>56</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1384,7 +1465,7 @@
 <posx>240</posx>
 <posy>394</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1405,7 +1486,7 @@
 <onright>414</onright>
 <onup>55</onup>
 <ondown>57</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1433,7 +1514,7 @@
 <posx>240</posx>
 <posy>431</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1454,7 +1535,7 @@
 <onright>415</onright>
 <onup>56</onup>
 <ondown>58</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1482,7 +1563,7 @@
 <posx>240</posx>
 <posy>468</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1503,7 +1584,7 @@
 <onright>416</onright>
 <onup>57</onup>
 <ondown>51</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1556,7 +1637,7 @@
 <posx>458</posx>
 <posy>205</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1577,7 +1658,7 @@
 <onright>59</onright>
 <onup>40</onup>
 <ondown>60</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1605,7 +1686,7 @@
 <posx>458</posx>
 <posy>242</posy>
 <width>150</width>
-<font>font13</font>
+<font>font64</font>
 <color>white</color>
 <aligny>center</aligny>
 <label>20078</label>
@@ -1626,7 +1707,7 @@
 <onright>60</onright>
 <onup>59</onup>
 <ondown>61</ondown>
-<texturefocus border="5">list-focus.png</texturefocus>
+<texturefocus border="5">input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
 <visible>Skin.HasSetting(submenubuttons)</visible> 
 <visible>Control.HasFocus(14) | ControlGroup(9006).HasFocus() </visible>
@@ -1653,8 +1734,9 @@
 <posx>216</posx>
 <posy>119</posy>
 <height>420</height>
+<texturefocus>input-focus.png</texturefocus>
 <texturewidth>200</texturewidth>
-<font>font13</font>
+<font>font64</font>
 <itemgap>3</itemgap>
 <orientation>vertical</orientation>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1666,6 +1748,7 @@
 <altlabel>Reset Menu background image</altlabel>
 <onclick>Skin.SetImage(CustomMenu)</onclick>
 <altclick>Skin.Reset(CustomMenu)</altclick>
+<texturefocus>input-focus.png</texturefocus>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
@@ -1953,9 +2036,9 @@
 <info>Skin.String(CustomMenu)</info>
 <visible>Control.HasFocus(98)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -1968,9 +2051,9 @@
 <info>Skin.String(CustomMenuFolder)</info>
 <visible>Control.HasFocus(99)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -1981,9 +2064,9 @@
 <info>Skin.String(CustomMovies)</info>
 <visible>Control.HasFocus(100)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -1996,9 +2079,9 @@
 <info>Skin.String(CustomMoviesFolder)</info>
 <visible>Control.HasFocus(101)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2008,9 +2091,9 @@
 <info>Skin.String(CustomTV)</info>
 <visible>Control.HasFocus(102)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2023,9 +2106,9 @@
 <info>Skin.String(CustomTVFolder)</info>
 <visible>Control.HasFocus(103)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2036,9 +2119,9 @@
 <info>Skin.String(CustomPictures)</info>
 <visible>Control.HasFocus(104)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2051,9 +2134,9 @@
 <info>Skin.String(CustomPicturesFolder)</info>
 <visible>Control.HasFocus(105)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2064,9 +2147,9 @@
 <info>Skin.String(CustomMusic)</info>
 <visible>Control.HasFocus(106)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2079,9 +2162,9 @@
 <info>Skin.String(CustomMusicFolder)</info>
 <visible>Control.HasFocus(107)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2091,9 +2174,9 @@
 <info>Skin.String(CustomApps)</info>
 <visible>Control.HasFocus(108)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2106,9 +2189,9 @@
 <info>Skin.String(CustomAppsFolder)</info>
 <visible>Control.HasFocus(109)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2118,9 +2201,9 @@
 <info>Skin.String(CustomScripts)</info>
 <visible>Control.HasFocus(110)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2133,9 +2216,9 @@
 <info>Skin.String(CustomScriptsFolder)</info>
 <visible>Control.HasFocus(111)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2145,9 +2228,9 @@
 <info>Skin.String(CustomFiles)</info>
 <visible>Control.HasFocus(112)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2160,9 +2243,9 @@
 <info>Skin.String(CustomFilesFolder)</info>
 <visible>Control.HasFocus(113)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2172,9 +2255,9 @@
 <info>Skin.String(CustomWeather)</info>
 <visible>Control.HasFocus(114)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2187,9 +2270,9 @@
 <info>Skin.String(CustomWeatherFolder)</info>
 <visible>Control.HasFocus(115)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2199,9 +2282,9 @@
 <info>Skin.String(CustomSettings)</info>
 <visible>Control.HasFocus(116)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2214,9 +2297,9 @@
 <info>Skin.String(CustomSettingsFolder)</info>
 <visible>Control.HasFocus(117)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2226,9 +2309,9 @@
 <info>Skin.String(CustomSub)</info>
 <visible>Control.HasFocus(118)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2241,9 +2324,9 @@
 <info>Skin.String(CustomSubFolder)</info>
 <visible>Control.HasFocus(119)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2254,9 +2337,9 @@
 <info>Skin.String(Customdef)</info>
 <visible>Control.HasFocus(120)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>
@@ -2269,9 +2352,9 @@
 <info>Skin.String(CustomdefFolder)</info>
 <visible>Control.HasFocus(121)</visible>
 <posx>460</posx>
-<posy>125</posy>
+<posy>126</posy>
 <width>230</width>
-<height>200</height>
+<height>198</height>
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation>
 </control>

@@ -12,6 +12,10 @@
 		<height>576</height>
 		<texture>background2.png</texture>
 		<visible>!Skin.HasSetting(Background)</visible>
+		<visible>!Control.IsVisible(58)</visible>
+		<visible>!Control.IsVisible(53)</visible>
+		<visible>!Control.IsVisible(52)</visible>
+		<visible>!Control.IsVisible(55)</visible>
 		</control>
 
 
@@ -25,6 +29,10 @@
 		<height>576</height>
 		<texture>BlacknWhite.png</texture>
 		<visible>!Skin.HasSetting(Background)</visible>
+		<visible>!Control.IsVisible(58)</visible>
+		<visible>!Control.IsVisible(53)</visible>
+		<visible>!Control.IsVisible(52)</visible>
+		<visible>!Control.IsVisible(55)</visible>
 		<animation effect="fade" time="600">WindowOpen</animation>
 	    <animation effect="fade" time="200">WindowClose</animation> 
         </control>
@@ -40,6 +48,9 @@
 		<fadetime>2000</fadetime>
         <randomize>true</randomize>
 		<visible>!Control.IsVisible(58)</visible>
+		<visible>!Control.IsVisible(53)</visible>
+		<visible>!Control.IsVisible(52)</visible>
+		<visible>!Control.IsVisible(55)</visible>
 		<visible>!Skin.HasSetting(CustomMenu)</visible>
 		<visible>Skin.HasSetting(Background)</visible>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -62,6 +73,9 @@
 		<fadetime>2000</fadetime>
         <randomize>true</randomize>
 		<visible>!Control.IsVisible(58)</visible>
+		<visible>!Control.IsVisible(53)</visible>
+		<visible>!Control.IsVisible(52)</visible>
+		<visible>!Control.IsVisible(55)</visible>
 		<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
 		<visible>Skin.HasSetting(Background)</visible>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -87,7 +101,7 @@
 
 <include>DVD Case Wrap 1</include>
 
-<include>DVD Case Wrap 2</include>
+<include>DVD Case Wrap 3</include>
 
 <include>VideoLibWraplist</include>	
 
@@ -99,55 +113,12 @@
 
 <include>Library Root View</include>
 
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>30</width>
-    <height>40</height>
-    <texture>MyVideo.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<visible>container.content(movies)</visible>
-    <visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
-
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>30</width>
-    <height>40</height>
-    <texture>MyVideo1.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<visible>![container.content(movies)]</visible>
-    <visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
-
-
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>30</width>
-    <height>40</height>
-    <texture>TV1.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
-
-
 <control type="label">
-	<posx>60</posx>
+	<posx>20</posx>
 	<posy>30</posy>
 	<align>left</align>
 	<aligny>center</aligny>
-	<font>font18</font>
+	<font>Heading-M</font>
 	<textcolor>white</textcolor>
 	<visible>!Skin.HasSetting(menulabels)</visible>
 	<animation effect="fade" time="200">WindowOpen</animation>
@@ -158,11 +129,11 @@
     </control>
 
 	<control type="label">
-	<posx>60</posx>
+	<posx>20</posx>
 	<posy>30</posy>
 	<align>left</align>
 	<aligny>center</aligny>
-	<font>font18</font>
+	<font>Heading-M</font>
 	<textcolor>white</textcolor>
 	<visible>!Skin.HasSetting(menulabels)</visible>
 	<animation effect="fade" time="200">WindowOpen</animation>
@@ -173,11 +144,11 @@
 	</control>
 
 <control type="label">
-	<posx>60</posx>
+	<posx>20</posx>
 	<posy>30</posy>
 	<align>left</align>
 	<aligny>center</aligny>
-	<font>font18</font>
+	<font>Heading-M</font>
 	<textcolor>white</textcolor>
 	<visible>!Skin.HasSetting(menulabels)</visible>
 	<animation effect="fade" time="200">WindowOpen</animation>
@@ -197,6 +168,8 @@
 			<aspectratio align="right">keep</aspectratio>
             <info>Container.TVShowThumb</info>
             <visible>Control.IsVisible(50)| Control.isVisible(55) | !Control.isVisible(58)</visible>
+			<visible>!Container.Content(seasons)</visible>
+            <visible>IsEmpty(FanArt.Image)</visible>
 			<animation effect="fade" time="200">WindowOpen</animation>
 	    <animation effect="fade" time="200">WindowClose</animation> 
 		    </control>
@@ -234,9 +207,9 @@
 
    <control type="button" id="2">
     <description>View As Icons button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>185</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -253,9 +226,9 @@
 
    <control type="button" id="3">
     <description>Sort by button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>230</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -286,9 +259,9 @@
 
    <control type="radiobutton" id="5">
     <description>Library button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>275</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -307,9 +280,9 @@
 
    <control type="button" id="6">
     <description>Movie Trailers</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>320</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <label>Movie Trailers</label>
@@ -327,9 +300,9 @@
 
   <control type="button" id="9">
     <description>IMDB</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>365</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <textcolor>white</textcolor>
 	<label>IMDB</label>
@@ -346,9 +319,9 @@
 
 <control type="button" id="10">
     <description>Show Button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>410</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <textcolor>white</textcolor>
 	<label>IMDB</label>
@@ -365,9 +338,9 @@
 
 <control type="button" id="8">
     <description>Search Button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>455</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <textcolor>white</textcolor>
 	<label>137</label>
@@ -386,5 +359,8 @@
 
 
 	<include>Music-Info</include>
+
+<include>Alpha Scroll Label</include>
+
 	</controls>
 </window>
