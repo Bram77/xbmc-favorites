@@ -104,22 +104,23 @@
       <name>special14</name>
       <filename>Decker.ttf</filename>
       <shadow>ff000000</shadow>
-      <style>bold</style>
-	  <size>19</size>
+	   <style>bold</style>
+      <size>19</size>
     </font>
 
     <font>
       <name>special15</name>
-      <filename>broadw.ttf</filename>
+      <filename>RockoFLF.ttf</filename>
       <shadow>ff000000</shadow>
       <size>23</size>
     </font>
- <font>
+
+	 <font>
       <name>special16</name>
       <filename>Decker.ttf</filename>
       <shadow>ff000000</shadow>
 	  <style>bold</style>
-      <size>26</size>
+      <size>27</size>
     </font>
 
     <font>
@@ -130,9 +131,9 @@
       <size>15</size>
     </font>
 
-     <font>
+    <font>
       <name>Heading-M</name>
-      <filename>broadw.ttf</filename>
+      <filename>RockoFLF.ttf</filename>
       <size>18</size>
 	  <style>bold</style>
       <shadow>ff000000</shadow>
@@ -140,7 +141,7 @@
 
     <font>
       <name>Heading-S</name>
-      <filename>broadw.ttf</filename>
+      <filename>RockoFLF.ttf</filename>
       <size>18</size>
       <shadow>ff000000</shadow>
     </font>
@@ -148,13 +149,15 @@
  
  <font>
       <name>Heading-L</name>
-      <filename>broadw.ttf</filename>
+      <filename>RockoFLF.ttf</filename>
       <size>26</size>
 	  <style>bold</style>
       <shadow>ff000000</shadow>
     </font>
 
+
   </fontset>
+
 
 
 </fonts>

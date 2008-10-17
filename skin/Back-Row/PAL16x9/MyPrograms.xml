@@ -129,22 +129,11 @@
 	
 
 
-	<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>40</width>
-    <height>40</height>
-    <texture>MyGames.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	 <animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
-
+	
 	<control>
 		<description>Description label</description>
 		<label>0</label>
-		<font>font18</font>
+		<font>Heading-M</font>
 	<textcolor>white</textcolor>
 		<include>description</include>
 	</control>
@@ -176,9 +165,9 @@
 
    <control type="button" id="2">
     <description>View As Icons button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>185</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -189,16 +178,16 @@
     <texturenofocus>-</texturenofocus>
     <onleft>50</onleft>
     <onright>50</onright>
-    <onup>6</onup>
+    <onup>3</onup>
     <ondown>3</ondown>
     <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(57) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
    </control>
 
    <control type="button" id="3">
     <description>Sort by button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>230</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -209,46 +198,12 @@
     <onleft>50</onleft>
     <onright>4</onright>
     <onup>2</onup>
-    <ondown>6</ondown>
-    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(57) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
-   </control>
-
-   <control type="togglebutton" id="4">
-    <description>Sort asc</description>
-    <posx>420</posx>
-    <posy>245</posy>
-    <label>-</label>
-    <textcolor>white</textcolor>
-	<onleft>3</onleft>
-    <onright>50</onright>
-    <onup>2</onup>
-    <ondown>6</ondown>
-    <texturefocus>input-focus.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
-	<visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(57) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
-   </control>
-
-   <control type="button" id="6">
-    <description>online gaming button</description>
-    <posx>248</posx>
-    <posy>275</posy>
-    <width>209</width>
-    <height>45</height>
-    <font>font13</font>
-    <label>998</label>
-    <textcolor>white</textcolor>
-	<textoffsetx>10</textoffsetx>
-    <onclick>ActivateWindow(XLinkKai)</onclick>
-    <texturefocus>input-focus.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
-    <onleft>50</onleft>
-    <onright>50</onright>
-    <onup>3</onup>
     <ondown>2</ondown>
     <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(57) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
    </control>
 
-  </controlgroup>
+    </controlgroup>
 <include>Music-Info</include>
+<include>Alpha Scroll Label</include>
 	</controls>
 </window>

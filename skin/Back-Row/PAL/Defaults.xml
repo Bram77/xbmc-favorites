@@ -100,11 +100,11 @@
 	<texturedown>scroll-down.png</texturedown>
 	<textureupfocus>scroll-up-focus.png</textureupfocus>
 	<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-	<texturefocus>list-focus.png</texturefocus>
+	<texturefocus>input-focus.png</texturefocus>
 	<texturenofocus>list-nofocus.png</texturenofocus>
 	<image>icon-folder.png</image>
 	<keepaspectratio>true</keepaspectratio>
-	<textureheight>26</textureheight>
+	<textureheight>28</textureheight>
 	<font>font13</font>
 	<include>selectedcolor</include>
 	<textcolor>white</textcolor>

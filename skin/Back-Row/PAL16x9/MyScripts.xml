@@ -116,22 +116,10 @@
    
 	
 	
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>40</width>
-    <height>40</height>
-    <texture>defaultscriptbig.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation> 
-	 </control>
-
 	<control>
 		<description>Description label</description>
 		<label>247</label>
-       <font>font18</font>
+       <font>Heading-M</font>
 	<textcolor>white</textcolor>
 		<include>description</include>
 	</control>
@@ -163,9 +151,9 @@
 
    <control type="button" id="2">
     <description>View As Icons button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>185</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -183,9 +171,9 @@
 
    <control type="button" id="3">
     <description>Sort by button</description>
-    <posx>248</posx>
+    <posx>241</posx>
     <posy>230</posy>
-    <width>209</width>
+    <width>222</width>
     <height>45</height>
     <font>font13</font>
     <textcolor>white</textcolor>
@@ -217,6 +205,6 @@
   </controlgroup>
 
 <include>Music-Info</include>
-
+<include>Alpha Scroll Label</include>
 	</controls>
 </window>

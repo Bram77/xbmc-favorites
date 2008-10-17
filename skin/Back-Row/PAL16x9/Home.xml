@@ -673,24 +673,13 @@
 <width>720</width>
 <height>576</height>
 <texture>Dark Mask.png</texture>
+<colordiffuse>ABffffff</colordiffuse>
 <visible>!Skin.HasSetting(Mask Overlay)</visible>
 <visible>!Skin.HasSetting(Wallpaper)</visible>
 <visible>!Skin.HasSetting(Default Wallpaper)</visible>
-<animation effect="fade" time="2000">Windowclose</animation>
+<animation effect="fade" start="100" end="100" time="2000">Windowclose</animation>
 </control>
-<control>
-<description>Mask Overlay</description>
-<type>image</type>
-<posx>0</posx>
-<posy>0</posy>
-<width>720</width>
-<height>576</height>
-<texture>Dark Mask.png</texture>
-<visible>!Skin.HasSetting(Mask Overlay)</visible>
-<visible>!Skin.HasSetting(Wallpaper)</visible>
-<visible>!Skin.HasSetting(Default Wallpaper)</visible>
-<animation effect="fade" time="2000">Windowclose</animation>
-</control>
+
 
 
 <control>
@@ -701,9 +690,9 @@
 <width>720</width>
 <height>576</height>
 <texture>Dark Mask.png</texture>
+<colordiffuse>ABffffff</colordiffuse>
 <visible>!Skin.HasSetting(Mask Overlay)</visible>
 <visible>[Skin.HasSetting(Wallpaper)+!Skin.HasSetting(Default Wallpaper]</visible>
-<animation effect="fade" time="300">Windowclose</animation>
 </control>
 
 <control>
@@ -714,10 +703,10 @@
 <width>720</width>
 <height>576</height>
 <texture>Dark Mask.png</texture>
+<colordiffuse>ABffffff</colordiffuse>
 <visible>!Skin.HasSetting(Mask Overlay)</visible>
 <visible>Skin.HasSetting(Default Wallpaper)</visible>
 <visible>!Skin.HasSetting(Wallpaper)</visible>
-<animation effect="fade" time="300">Windowclose</animation>
 </control>
 
 
@@ -2292,23 +2281,9 @@
 
 <animation effect="fade" time="10">Windowclose</animation>
 
-
-
-<control type="image">
-<posx>-720</posx>
-<posy>180</posy>
-<width>720</width>
-<height>185</height>
-<texture>film44.png</texture>
-<visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
-<animation effect="slide" end="720,0" delay="50" time="300" condition="Control.HasFocus(11)">Conditional</animation>
-</control>
-
-
-
 <control type="wraplist" id="11">
 <posx>0</posx>
-<posy>185</posy>
+<posy>165</posy>
 <height>500</height>
 <width>720</width>
 <onup>157</onup>
@@ -2321,37 +2296,35 @@
 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 <scrolltime>200</scrolltime>
 
-
-
-
 <itemlayout width="144" height="600">
 
 <control type="image">
 <posx>0</posx>
-<posy>15</posy>
+<posy>20</posy>
 <width>144</width>
-<height>144</height>
-<texture>List background.png</texture>
+<height>208</height>
+<texture>1.png</texture>
 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 <animation effect="fade" time="10">Windowclose</animation>
 </control>
 
 <control type="image">
 <posx>0</posx>
-<posy>15</posy>
+<posy>170</posy>
 <width>144</width>
 <height>28</height>
 <texture>homebutton-horizontal-nofocus.png</texture>
 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 <animation effect="fade" time="10">Windowclose</animation>
-</control>			
+</control>		
+
 
 <control type="label">
 <posx>72</posx>
-<posy>0</posy>
+<posy>156</posy>
 <width>144</width>
-<height>59</height>
-<info>ListItem.Label</info>
+<height>55</height>
+<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 <align>center</align>
 <aligny>center</aligny>
 <font>Heading-M</font>
@@ -2359,14 +2332,16 @@
 </control>
 
 <control type="image">
-<posx>-28</posx>
-<posy>15</posy>
-<width>200</width>
-<height>200</height>
+<posx>5</posx>
+<posy>55</posy>
+<width>134</width>
+<height>112</height>
 <info>ListItem.actualIcon</info>
 <aspectratio>stretch</aspectratio>
-<colordiffuse>90ffffff</colordiffuse>
+<colordiffuse>99FFFFFF</colordiffuse>
+<animation effect="fade" time="10">Windowclose</animation>
 </control>
+
 
 
 
@@ -2374,59 +2349,62 @@
 
 <focusedlayout width="144" height="600">
 
-	
 <control type="image">
 <posx>0</posx>
-<posy>15</posy>
+<posy>20</posy>
 <width>144</width>
-<height>144</height>
-<texture>List background1.png</texture>
+<height>208</height>
+<texture>2.png</texture>
 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 <animation effect="fade" time="10">Windowclose</animation>
 </control>
 
 <control type="image">
 <posx>0</posx>
-<posy>15</posy>
-<width>144</width>
+<posy>170</posy>
+<width>139</width>
 <height>28</height>
 <texture>homebutton-horizontal-nofocus.png</texture>
 <visible allowhiddenfocus="true">Control.HasFocus(11)</visible>
 <animation effect="fade" time="10">Windowclose</animation>
-</control>			
+</control>		
+
 
 <control type="label">
 <posx>72</posx>
-<posy>0</posy>
+<posy>156</posy>
 <width>144</width>
-<height>59</height>
-<info>ListItem.Label</info>
+<height>54</height>
+<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 <align>center</align>
 <aligny>center</aligny>
 <font>Heading-M</font>
 <shadowcolor>00000000</shadowcolor>
+<animation effect="fade" time="10">Windowclose</animation>
 <textcolor>white</textcolor>
-
 </control>
-
 
 <control type="image">
-<posx>-28</posx>
-<posy>15</posy>
-<width>200</width>
-<height>200</height>
+<posx>5</posx>
+<posy>55</posy>
+<width>134</width>
+<height>112</height>
 <info>ListItem.actualIcon</info>
 <aspectratio>stretch</aspectratio>
-
+<animation effect="fade" time="10">Windowclose</animation>
 </control>
 
+
+
+
 </focusedlayout>
+
 
 <content>
 <item id="1">
 <label>5</label>
-<icon>settings.png</icon>
-<thumb>settings.png</thumb>
+<icon>My Settings.png</icon>
+<thumb>My Settings.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>XBMC.ActivateWindow(Settings)</onclick>
 <visible>!Skin.HasSetting(Settings)</visible>
@@ -2434,8 +2412,8 @@
 
 <item id="2">
 <label>342</label>
-<icon>videos.png</icon>
-<thumb>videos.png</thumb>
+<icon>cinema.png</icon>
+<thumb>cinema.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>Skin.SetBool(videomovies)</onclick>
 <onclick>Skin.Reset(videotv)</onclick>
@@ -2445,8 +2423,8 @@
 
 <item id="2">
 <label>342</label>
-<icon>videos.png</icon>
-<thumb>videos.png</thumb>
+<icon>cinema.png</icon>
+<thumb>cinema.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>Skin.SetBool(videomovies)</onclick>
 <onclick>Skin.Reset(videotv)</onclick>
@@ -2456,8 +2434,8 @@
 
 <item id="3">
 <label>20343</label>
-<icon>tv.png</icon>
-<thumb>tv.png</thumb>
+<icon>watch tv.png</icon>
+<thumb>watch tv.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>Skin.SetBool(videotv)</onclick>
 <onclick>Skin.Reset(videomovies)</onclick>
@@ -2468,8 +2446,8 @@
 
 <item id="3">
 <label>20343</label>
-<icon>tv.png</icon>
-<thumb>tv.png</thumb>
+<icon>watch tv.png</icon>
+<thumb>watch tv.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>Skin.SetBool(videotv)</onclick>
 <onclick>Skin.Reset(videomovies)</onclick>
@@ -2480,8 +2458,8 @@
 
 <item id="4">
 <label>2</label>
-<icon>music.png</icon>
-<thumb>music.png</thumb>
+<icon>Listen Music.png</icon>
+<thumb>Listen Music.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>XBMC.ActivateWindow(MyMusic)</onclick>
 
@@ -2491,16 +2469,16 @@
 <item id="5">
 
 <label>1</label>
-<icon>pictures.png</icon>
-<thumb>pictures.png</thumb>
+<icon>Photo Gallery.png</icon>
+<thumb>Photo Gallery.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>XBMC.ActivateWindow(MyPictures)</onclick>
 </item>
 
 <item id="6">
 <label>0</label>
-<icon>Programs.png</icon>
-<thumb>Programs.png</thumb>
+<icon>My Apps.png</icon>
+<thumb>My Apps.png</thumb>
 <onclick>SetFocus(21)</onclick>
 <onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
  <visible>!Skin.HasSetting(Programs)</visible>
@@ -2508,8 +2486,8 @@
 
 <item id="7">
 <label>247</label>
-<icon>Scripts.png</icon>
-<thumb>Scripts.png</thumb>
+<icon>My Scripts.png</icon>
+<thumb>My Scripts.png</thumb>
 <onclick>SetFocus(21)</onclick>
  <visible>Skin.HasSetting(Scripts)</visible>
 <onclick>XBMC.ActivateWindow(MyScripts)</onclick>
@@ -2517,8 +2495,8 @@
 		 
 <item id="8">
 <label>7</label>
-<icon>files.png</icon>
-<thumb>files.png</thumb>
+<icon>my files.png</icon>
+<thumb>my files.png</thumb>
 <onclick>SetFocus(21)</onclick>
  <visible>Skin.HasSetting(Files)</visible>
 <onclick>XBMC.ActivateWindow(Myfiles)</onclick>
@@ -2526,8 +2504,8 @@
 
 <item id="9">
 <label>8</label>
-<icon>weather1.png</icon>
-<thumb>weather1.png</thumb>
+<icon>The Weather.png</icon>
+<thumb>The Weather.png</thumb>
 <onclick>SetFocus(21)</onclick>
  <visible>Skin.HasSetting(Weather1)</visible>
 <onclick>XBMC.ActivateWindow(MyWeather)</onclick>

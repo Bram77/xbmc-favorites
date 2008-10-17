@@ -1,7 +1,7 @@
 <window>
 	<id>34</id>
 	<defaultcontrol>2</defaultcontrol>
-	<animation effect="fade" time="200">WindowClose</animation> 
+	
 	<allowoverlay>no</allowoverlay>
 	<controls>
 <control>
@@ -14,6 +14,8 @@
 		<texture>background2.png</texture>
 		<visible>!Skin.HasSetting(Background)</visible>
 		</control>
+
+
 
 
 
@@ -56,7 +58,6 @@
         <animation effect="fade" delay = "200" time="800">Hidden</animation>
 		</control>
 
-
 <control>
 		<description>Background</description>
 		<type>image</type>
@@ -64,18 +65,44 @@
 		<posy>0</posy>
 		<width>720</width>
 		<height>576</height>
-		<texture>Back-Row.png</texture>
-		<animation effect="fade" time="200">WindowOpen</animation>
-	    <animation effect="fade" time="200">WindowClose</animation>
+		<texture>Movies.png</texture>
+		<animation effect="fade" time="1200">Windowopen</animation>
 		<visible>!Skin.HasSetting(Background)</visible>
-        </control>
+	    </control>
 
+
+
+<control type="image">
+    <description>Background image</description>
+    <posx>-80</posx>
+    <posy>0</posy>
+    <width>720</width>
+    <height>576</height>
+    <texture>Left Curtain.png</texture>
+    <animation effect="fade" time="300">WindowOpen</animation>
+	<animation effect="slide" end="-320,0" delay="0" time="700">Windowclose</animation>
+	<visible>!Skin.HasSetting(Background)</visible>
+   </control>
+
+<control type="image">
+    <description>Background image</description>
+    <posx>80</posx>
+    <posy>0</posy>
+    <width>720</width>
+    <height>576</height>
+    <texture>right Curtain.png</texture>
+    <animation effect="fade" time="700">WindowOpen</animation>
+	<animation effect="slide" end="720,0" delay="0" time="1400">Windowclose</animation>
+	<visible>!Skin.HasSetting(Background)</visible>
+   </control>
+
+	
 <control>
 		<description>Background</description>
 		<type>image</type>
-		<posx>-10</posx>
+		<posx>10</posx>
 		<posy>90</posy>
-		<width>740</width>
+		<width>700</width>
 		<height>425</height>
 		<texture>black.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -85,38 +112,54 @@
 <control>
 		<description>Background</description>
 		<type>image</type>
-		<posx>-10</posx>
-		<posy>85</posy>
-		<width>740</width>
-		<height>10</height>
-		<texture>separatorosd.png</texture>
+		<posx>10</posx>
+		<posy>90</posy>
+		<width>700</width>
+		<height>425</height>
+		<texture>edge.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
 	    <animation effect="fade" time="200">WindowClose</animation> 
         </control>
 
+<control type="image">
+				<posx>0</posx>
+				<posy>6</posy>
+				<width>720</width>
+				<height>52</height>
+				<texture>homebutton-horizontal-nofocus.png</texture>
+				<animation effect="fade" time="200">WindowOpen</animation>
+                <animation effect="fade" time="200">WindowClose</animation>
+				</control>
+
+
+
+
+
 
 <control>
-		<description>Background</description>
-		<type>image</type>
-		<posx>-10</posx>
-		<posy>510</posy>
-		<width>740</width>
-		<height>10</height>
-		<texture>separatorosd.png</texture>
+		<description>Description label</description>
+		<font>Heading-M</font>
+	    <textcolor>white</textcolor>
+		<label>5</label>
+		<include>description</include>
 		<animation effect="fade" time="200">WindowOpen</animation>
-	    <animation effect="fade" time="200">WindowClose</animation> 
-        </control>	
+        <animation effect="fade" time="300">WindowClose</animation>
+	</control>
+
+
 
 	<control type="radiobutton" id="4">
 		<description>Enable Login Screen</description>
-		<posx>10</posx>
-		<posy>110</posy>
+		<posx>13</posx>
+		<posy>93</posy>
 		<height>30</height>
-		<width>150</width>
+		<width>110</width>
 		<label>20096</label>
-		<font>menubutton</font>
+		<font>font64</font>
 		<onup>2</onup>
 		<ondown>2</ondown>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
 		</control>
 
 
@@ -124,18 +167,22 @@
 		<description>Last Loaded</description>
 		<type>fadelabel</type>
 		<id>3</id>
-		<posx>210</posx>
+		<posx>115</posx>
 		<posy>525</posy>
 		<width>656</width>
 		<label>-</label>
-		<font>font13</font>
-		<textcolor>d0ffffff</textcolor>
+		<font>font64</font>
+		<textcolor>white</textcolor>
+		<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
 		</control>
 
 	<control type="list" id="2">
-		<posx>150</posx>
+	<animation effect="fade" time="200">WindowOpen</animation>
+        <animation effect="fade" time="300">WindowClose</animation>
+		<posx>15</posx>
 		<posy>160</posy>
-		<width>500</width>
+		<width>705</width>
 		<height>370</height>
 		<onleft>4</onleft>
 		<onright>90</onright>
@@ -143,10 +190,10 @@
 		<ondown>4</ondown>
 		<pagecontrol>90</pagecontrol>
 		<visible>!Window.IsActive(126)</visible>
-		<itemlayout height="27">
+		<itemlayout height="40">
 			<control type="image">
-				<posx>0</posx>
-				<posy>5</posy>
+				<posx>5</posx>
+				<posy>12</posy>
 				<width>16</width>
 				<height>16</height>
 				<info>ListItem.Icon</info>
@@ -154,21 +201,21 @@
 			</control>
 			<control type="label">
 				<posx>25</posx>
-				<posy>2</posy>
-				<width>400</width>
+				<posy>12</posy>
+				<width>245</width>
 				<height>16</height>
-				<font>font13</font>
-				<textcolor>FFcbcbcb</textcolor>
+				<font>font64</font>
+				<textcolor>white</textcolor>
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
-				<posx>480</posx>
-				<posy>2</posy>
-				<width>150</width>
+				<posx>280</posx>
+				<posy>12</posy>
+				<width>160</width>
 				<height>16</height>
-				<font>font13</font>
+				<font>font64</font>
 				<align>right</align>
-				<textcolor>90cbcbcb</textcolor>
+				<textcolor>white</textcolor>
 				<include>selectedcolor</include>
 				<info>ListItem.Label2</info>
 			</control>
@@ -177,75 +224,79 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>500</width>
+				<width>350</width>
 				<height>40</height>
-				<texture>list-focus.png</texture>
+				<texture>input-focus.png</texture>
 				<visible>Control.HasFocus(2)</visible>
 			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>500</width>
-				<height>40</height>
-				<texture>-</texture>
-				<visible>!Control.HasFocus(2)</visible>
-			</control>
+			
 			<control type="image">
 				<posx>5</posx>
-				<posy>3</posy>
-				<width>32</width>
-				<height>32</height>
+				<posy>12</posy>
+				<width>16</width>
+				<height>16</height>
 				<info>ListItem.Icon</info>
 				<texture>defaultfolderbig.png</texture>
 			</control>
 			<control type="label">
-				<posx>45</posx>
-				<posy>8</posy>
-				<width>370</width>
+				<posx>25</posx>
+				<posy>12</posy>
+				<width>245</width>
 				<height>16</height>
-				<font>font18</font>
+				<font>font64</font>
 				<textcolor>white</textcolor>
 				<scroll>true</scroll>
 				<info>ListItem.Label</info>
 			</control>
 			<control type="label">
-				<posx>460</posx>
-				<posy>8</posy>
-				<width>250</width>
+				<posx>280</posx>
+				<posy>12</posy>
+				<width>160</width>
 				<height>16</height>
-				<font>font18</font>
+				<font>font64</font>
 				<align>right</align>
-				<textcolor>90cbcbcb</textcolor>
+				<textcolor>white</textcolor>
 				<include>selectedcolor</include>
 				<info>ListItem.Label2</info>
 			</control>
+
+			<control type="image">
+<description>list item icon</description>
+<posx>380</posx>
+<posy>0</posy>
+<width>300</width>
+<height>300</height>
+<info>ListItem.Icon</info>
+<aspectratio>keep</aspectratio>
+<visible>Control.HasFocus(2)</visible>
+</control>
+
 		</focusedlayout>
+
+
+
 	</control>
-	
-<control type="image">
-    <description>Logo</description>
-    <posx>15</posx>
-    <posy>10</posy>
-    <width>40</width>
-    <height>40</height>
-    <texture>unknown-user.png</texture>
-    <visible>!Skin.HasSetting(menulabels)</visible>
-	<animation effect="fade" time="200">WindowOpen</animation>
-	<animation effect="fade" time="200">WindowClose</animation>
-	 </control>
+
+
+           
+
 
 <control type="label">
-	<posx>60</posx>
-	<posy>30</posy>
-	<align>left</align>
+	<posx>0</posx>
+	<posy>11</posy>
+	<align>center</align>
 	<aligny>center</aligny>
-	<font>special13</font>
+	<width>720</width>
+	<height>42</height>
+	<font>special16</font>
 	<textcolor>white</textcolor>
 	<visible>!Skin.HasSetting(menulabels)</visible>
 	<animation effect="fade" time="200">WindowOpen</animation>
 	<animation effect="fade" time="200">WindowClose</animation>
     <label>13200</label>
 </control>
-<include>Music-Info4:3</include>
+
+<include>Music-Info</include>
+
 	</controls>
 </window>

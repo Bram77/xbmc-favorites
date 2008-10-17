@@ -50,6 +50,7 @@
 					<font>font64</font>
 					<align>center</align>
                     <info>ListItem.Label</info>
+					<selectedcolor>white</selectedcolor>
 					</control>
 
 				
@@ -75,6 +76,7 @@
 					<align>center</align>
 					<include>listselectedcolor</include>
 					<info>ListItem.Label</info>
+					<selectedcolor>white</selectedcolor>
                   	</control>
 				
 			</focusedlayout>

@@ -83,7 +83,7 @@
 				<posy>120</posy>
 				<width>355</width>
 				<label>-</label>
-				<font>special13</font>
+				<font>Heading-M</font>
 				<scroll>true</scroll>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
@@ -92,8 +92,8 @@
 				<posx>330</posx>
 				<posy>153</posy>
 				<width>105</width>
-				<label>20339</label>
-				<font>font12</font>
+				<label>$LOCALIZE[20339]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -101,8 +101,8 @@
 				<posx>330</posx>
 				<posy>173</posy>
 				<width>105</width>
-				<label>20417</label>
-				<font>font12</font>
+				<label>$LOCALIZE[20417]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -110,8 +110,8 @@
 				<posx>330</posx>
 				<posy>193</posy>
 				<width>105</width>
-				<label>515</label>
-				<font>font12</font>
+				<label>$LOCALIZE[515]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -119,8 +119,8 @@
 				<posx>330</posx>
 				<posy>213</posy>
 				<width>105</width>
-				<label>562</label>
-				<font>font12</font>
+				<label>$LOCALIZE[562]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -128,8 +128,8 @@
 				<posx>330</posx>
 				<posy>233</posy>
 				<width>105</width>
-				<label>202</label>
-				<font>font12</font>
+				<label>$LOCALIZE[202]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -137,8 +137,8 @@
 				<posx>330</posx>
 				<posy>253</posy>
 				<width>105</width>
-				<label>203</label>
-				<font>font12</font>
+				<label>$LOCALIZE[203]:</label>
+				<font>fontKB</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 			<control type="label" id="1">
@@ -146,7 +146,7 @@
 				<posx>330</posx>
 				<posy>273</posy>
 				<width>105</width>
-				<label>563</label>
+				<label>$LOCALIZE[563]:</label>
 				<font>font12</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
@@ -155,7 +155,7 @@
 				<posx>330</posx>
 				<posy>293</posy>
 				<width>105</width>
-				<label>2050</label>
+				<label>$LOCALIZE[2050]:</label>
 				<font>font12</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
@@ -164,7 +164,7 @@
 				<posx>330</posx>
 				<posy>313</posy>
 				<width>105</width>
-				<label>20074</label>
+				<label>$LOCALIZE[20074]:</label>
 				<font>font12</font>
 				<visible>!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
@@ -172,7 +172,7 @@
 				<description>Director value</description>
 				<posx>440</posx>
 				<posy>153</posy>
-				<width>245</width>
+				<width>255</width>
 				<label>-</label>
 				<font>font12</font>
 				<scroll>true</scroll>
@@ -182,7 +182,7 @@
 				<description>Writing Credits value</description>
 				<posx>440</posx>
 				<posy>173</posy>
-				<width>245</width>
+				<width>255</width>
 				<label>-</label>
 				<font>font12</font>
 				<scroll>true</scroll>
@@ -212,7 +212,7 @@
 				<description>TagLine value</description>
 				<posx>440</posx>
 				<posy>233</posy>
-				<width>245</width>
+				<width>255</width>
 				<label>-</label>
 				<font>font12</font>
 				<scroll>true</scroll>
@@ -222,7 +222,7 @@
 				<description>PlotOutline value</description>
 				<posx>440</posx>
 				<posy>253</posy>
-				<width>245</width>
+				<width>255</width>
 				<label>-</label>
 				<font>font12</font>
 				<scroll>true</scroll>
@@ -252,7 +252,7 @@
 				<description>MPPA Rating value</description>
 				<posx>440</posx>
 				<posy>313</posy>
-				<width>245</width>
+				<width>255</width>
 				<label>-</label>
 				<font>font12</font>
 				<scroll>true</scroll>
@@ -261,10 +261,10 @@
 			
 			<control type="image" id="3">
 				<description>Cover image</description>
-				<posx>205</posx>
-				<posy>125</posy>
-				<width>101</width>
-				<height>199</height>
+				<posx>190</posx>
+				<posy>120</posy>
+				<width>130</width>
+				<height>210</height>
 				<info>Listitem.Icon</info>
 				<aspectratio>keep</aspectratio>
 				<align>center</align>
@@ -306,7 +306,11 @@
 				<visible>!control.isvisible(50) + !container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)</visible>
 			</control>
 		</control>
+		
+		
 		<control type="group">
+        <visible>container.content(tvshows)</visible>
+        <visible>!Skin.HasSetting(TV Poster)</visible>
 			<posx>0</posx>
 			<posy>-30</posy>
 			<control type="image" id="3">
@@ -338,7 +342,7 @@
 				<posy>225</posy>
 				<width>290</width>
 				<label>-</label>
-				<font>special14</font>
+				<font>Heading-M</font>
 				<scroll>true</scroll>
 				<visible>container.content(tvshows)</visible>
 			</control>
@@ -433,17 +437,151 @@
 			</control>
 				</control>
 
+<control type="group">
+        <visible>container.content(tvshows)</visible>
+        <visible>Skin.HasSetting(TV Poster)</visible>
+			<posx>0</posx>
+			<posy>-30</posy>
+			<control type="image" id="3">
+				<description>TV Show Poster image</description>
+				<posx>190</posx>
+				<posy>120</posy>
+				<width>130</width>
+				<height>210</height>
+				<info>Listitem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<align>center</align>
+				<visible>container.content(tvshows)</visible>
+			</control>
+
+
+			<control type="image" id="3">
+				<description>TV Show Poster image</description>
+				<posx>200</posx>
+				<posy>115</posy>
+				<width>120</width>
+				<height>210</height>
+				<info>Container.TVShowThumb</info>
+				<aspectratio>keep</aspectratio>
+				<visible>container.content(tvshows)</visible>
+			</control>
+
+
+				<control type="label" id="20">
+				<description>TV Show Title value</description>
+				<posx>330</posx>
+				<posy>120</posy>
+				<width>355</width>
+				<label>-</label>
+				<font>Heading-M</font>
+				<scroll>true</scroll>
+				<visible>container.content(tvshows)</visible>
+			</control>
+
+                
+
+			<control type="label" id="1">
+				<description>Episodes txt</description>
+				<posx>330</posx>
+				<posy>155</posy>
+				<width>90</width>
+				<label>$LOCALIZE[20360] :</label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Episodes Value</description>
+				<posx>430</posx>
+				<posy>155</posy>
+				<width>400</width>
+				<label>$INFO[listitem.episode] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>First Aired txt</description>
+				<posx>330</posx>
+				<posy>180</posy>
+				<width>90</width>
+				<label>$LOCALIZE[20416] :</label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="24">
+				<description>First Aired Value</description>
+				<posx>430</posx>
+				<posy>180</posy>
+				<width>400</width>
+				<label>-</label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Genre txt</description>
+				<posx>330</posx>
+				<posy>205</posy>
+				<width>90</width>
+				<label>$LOCALIZE[515] :</label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="23">
+				<description>Genre value</description>
+				<posx>430</posx>
+				<posy>205</posy>
+				<width>400</width>
+				<label></label>
+				<font>font13</font>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			
+			<control type="image" id="34">
+				<description>Actor image</description>
+				<posx>591</posx>
+				<posy>355</posy>
+				<width>94</width>
+				<height>164</height>
+				<texture>$INFO[Container(50).ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<align>center</align>
+				<visible>control.isvisible(50) + container.content(tvshows)</visible>
+			</control>
+			<control type="image">
+				<posx>18</posx>
+				<posy>337</posy>
+				<width>685</width>
+				<height>10</height>
+				<texture>separator.png</texture>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>20</posx>
+				<posy>350</posy>
+				<width>680</width>
+				<height>170</height>
+				<onleft>5</onleft>
+				<onright>50</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<align>justify</align>
+				<pagecontrol>90</pagecontrol>
+		        <autoscroll time="6000" delay="28000" repeat="15000"></autoscroll>
+				<visible>!control.isvisible(50) + container.content(tvshows)</visible>
+			</control>
+				</control>
+
 		<control type="group">
 			<posx>0</posx>
 			<posy>-30</posy>
 			<control type="image">
 				<description>Cover image</description>
-				<posx>555</posx>
-				<posy>110</posy>
-				<width>130</width>
-				<height>140</height>
+				<posx>470</posx>
+				<posy>130</posy>
+				<width>200</width>
+				<height>200</height>
 				<info>ListItem.Icon</info>
-				<aspectratio aligny="bottom">keep</aspectratio>
+				<aspectratio>keep</aspectratio>
 				<visible>container.content(episodes)</visible>
 			</control>
 
@@ -454,7 +592,7 @@
 				<posy>110</posy>
 				<width>330</width>
 				<info>ListItem.tvshowtitle</info>
-				<font>special13</font>
+				<font>Heading-M</font>
 				<scroll>true</scroll>
 				<visible>container.content(episodes)</visible>
 			</control>
@@ -464,7 +602,7 @@
 				<posy>140</posy>
 				<width>330</width>
 				<label>-</label>
-				<font>special13</font>
+				<font>Heading-S</font>
 				<scroll>true</scroll>
 				<visible>container.content(episodes)</visible>
 			</control>
@@ -645,7 +783,7 @@
 				<posy>110</posy>
 				<width>330</width>
 				<info>Listitem.Title</info>
-				<font>special13</font>
+				<font>Heading-M</font>
 				<scroll>true</scroll>
 				<visible>container.content(musicvideos)</visible>
 			</control>
@@ -826,9 +964,9 @@
 				<width>150</width>
 		        <height>35</height>
 				<label>206</label>
-				<onleft>50</onleft>
-				<onright>4</onright>
-				<onup>11</onup>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>12</onup>
 				<ondown>8</ondown>
 			</control>
 			<control type="button" id="8">
@@ -838,8 +976,8 @@
 				<width>150</width>
 		        <height>35</height>
 				<label>208</label>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>11</onleft>
+				<onright>11</onright>
 				<onup>5</onup>
 				<ondown>9</ondown>
 			</control>
@@ -850,8 +988,8 @@
 				<width>150</width>
 		        <height>35</height>
 				<label>13404</label>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>11</onleft>
+				<onright>11</onright>
 				<onup>8</onup>
 				<ondown>6</ondown>
 			</control>
@@ -862,8 +1000,8 @@
 				<width>150</width>
 		        <height>35</height>
 				<label>184</label>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>11</onleft>
+				<onright>11</onright>
 				<onup>9</onup>
 				<ondown>10</ondown>
 			</control>
@@ -874,8 +1012,8 @@
 				<width>150</width>
 		        <height>35</height>
 				<label>13405</label>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>11</onleft>
+				<onright>11</onright>
 				<onup>6</onup>
 				<ondown>12</ondown>
 			</control>
@@ -887,25 +1025,46 @@
 				<width>150</width>
 				<height>35</height>
 				<label>20413</label>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>11</onleft>
+				<onright>11</onright>
 				<onup>10</onup>
-				<ondown>11</ondown>
+				<ondown>50</ondown>
 				</control>
 
 
+
+            <control type="image" id ="11">
+				<description>Trailer</description>
+				<posx>540</posx>
+				<posy>113</posy>
+				<width>139</width>
+				<height>46</height>
+				<texture>keyboard-numeric-bg.png</texture>
+				<visible>!IsEmpty(ListItem.Trailer)</visible>
+			</control>
+
              <control type="button" id ="11">
 				<description>Trailer</description>
-				<posx>530</posx>
-				<posy>110</posy>
-				<width>150</width>
+				<posx>550</posx>
+				<posy>117</posy>
+				<width>130</width>
 				<height>35</height>
 				<label>20410</label>
 				<align>center</align>
-				<onleft>4</onleft>
-				<onright>4</onright>
+				<onleft>5</onleft>
+				<onright>5</onright>
 				<onup>12</onup>
 				<ondown>5</ondown>
+				<visible>!IsEmpty(ListItem.Trailer)</visible>
+			</control>
+
+			  <control type="image" id ="11">
+				<description>Trailer</description>
+				<posx>540</posx>
+				<posy>113</posy>
+				<width>139</width>
+				<height>46</height>
+				<texture>keyboard-numeric-bg1.png</texture>
 				<visible>!IsEmpty(ListItem.Trailer)</visible>
 			</control>
 
@@ -1012,7 +1171,7 @@
 				<onleft>4</onleft>
 				<onright>4</onright>
 				<onup>10</onup>
-				<ondown>5</ondown>
+				<ondown>50</ondown>
 				</control>
 
           

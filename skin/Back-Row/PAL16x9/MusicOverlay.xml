@@ -146,15 +146,6 @@
 		</control>
 
 
-	<control type="label">
-		<description>Play Time</description>
-		<posx>580</posx>
-		<posy>544</posy>
-		<font>font04</font>
-		<label>$LOCALIZE[142] $INFO[MusicPlayer.Time]  / $INFO[Player.TimeRemaining]</label>
-		</control>
-
-
 
 	<control type="label">
 		<description>Duration</description>
@@ -198,18 +189,167 @@
 
 
 
-	<control type="progress">
-		<description>Progressbar</description>
-		<posx>0</posx>
-		<posy>565</posy>
-		<width>720</width>
-		<height>8</height>
-		<info>Player.Progress</info>
-		<lefttexture></lefttexture>
-		<midtexture>progress_mid-blue.png</midtexture>
-		<righttexture></righttexture>
-		<overlaytexture>-</overlaytexture>
-	</control>
+	<control type="label">
+			<description>playing</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31038</label>
+			<textcolor>white</textcolor>
+			<visible>![Player.Paused | Player.Rewinding | Player.Forwarding]</visible>
+			</control>
+		<control type="label">
+			<description>paused</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31039</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Paused</visible>
+			</control>
+		<control type="label">
+			<description>rewind 2x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31040</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Rewinding2x</visible>
+			</control>
+		<control type="label">
+			<description>forward 2x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31041</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Forwarding2x</visible>
+			</control>
+		<control type="label">
+			<description>rewind 4x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31042</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Rewinding4x</visible>
+			</control>
+		<control type="label">
+			<description>forward 4x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31043</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Forwarding4x</visible>
+			</control>
+		<control type="label">
+			<description>rewind 8x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31044</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Rewinding8x</visible>
+			</control>
+		<control type="label">
+			<description>forward 8x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31045</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Forwarding8x</visible>
+			</control>
+		<control type="label">
+			<description>rewind 16x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31046</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Rewinding16x</visible>
+			</control>
+		<control type="label">
+			<description>forward 16x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31047</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Forwarding16x</visible>
+			</control>
+		<control type="label">
+			<description>rewind 32x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31048</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Rewinding32x</visible>
+			</control>
+		<control type="label">
+			<description>forward 32x</description>
+			<posx>670</posx>
+			<posy>545</posy>
+			<align>right</align>
+			<font>fontKB</font>
+			<label>31049</label>
+			<textcolor>white</textcolor>
+			<visible>Player.Forwarding32x</visible>
+			</control>
+
+		<!-- progressbar dialog -->
+
+
+<control>
+<description>Time Info Label</description>
+<type>label</type>
+<id>1</id>
+<width>720</width>
+<posx>50</posx>
+<posy>503</posy>
+<label>$INFO[VideoPlayer.Time]</label>
+<font>fontKB</font>
+</control>
+
+<control>
+<description>Time Info Label</description>
+<type>label</type>
+<id>1</id>
+<width>50</width>
+<posx>670</posx>
+<posy>503</posy>
+<align>right</align>
+<label>$INFO[VideoPlayer.Duration]</label>
+<font>fontKB</font>
+</control>
+
+		
+		<control type="progress" id="23">
+			<description>Progressbar</description>
+			<posx>-15</posx>
+			<posy>564</posy>
+			<width>760</width>
+			<height>22</height>
+			<info>Player.Progress</info>
+			<texturebg>Seekbar background.png</texturebg>
+			<lefttexture></lefttexture>
+			<midtexture>Seekbar progress.png</midtexture>
+			<righttexture></righttexture>
+			<overlaytexture>-</overlaytexture>
+			</control>
 </controlgroup>
 
 
