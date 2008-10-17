@@ -5,10 +5,10 @@
     <string id="30002">Search Duration LONG</string>
     <string id="24000">SEARCH SITE:</string>
     <string id="30004">Search only GOOGLE</string>
-    <string id="30005">Search only YOUTUBE</string>
+    <string id="30005">Search ony YOUTUBE</string>
     <string id="30006">Search only GUBA</string>
     <string id="30007">Search only YOUKU</string>
-    <string id="30008">Search only TUDOU</string>
+    <string id="30008">Search ony TUDOU</string>
     <string id="30009">Search only VEOH</string>
     <string id="300010">Search only MYSPACE</string> 
     <string id="300011">Search only DAILYMOTION</string> 
@@ -16,4 +16,5 @@
     <string id="25000">SET DOWNLOAD DIRECTORY:</string>
     <string id="30003">Allow file download</string>
     <string id="300013">Set Download Directory </string>
+
 </strings>
