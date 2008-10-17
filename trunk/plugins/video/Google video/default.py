@@ -118,164 +118,40 @@ def INDEX(name,url):
                 pass
         
 def VIDEO(name,url):
-        req = urllib2.Request(url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        response.close()
-        p=re.compile('<div class="original-text">\n<a href="(.+?)">')
-        match=p.findall(link)
-        for videolink in match:
-                pass
-                if videolink.find('broadcaster')>0:
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile('embed src="http://www.broadcaster.com/video/external/player.+?clip=(.+?)"')
-                        match=p.findall(link)
-                        addLink(match[0],"http://cache.broadcaster.com/peoplecaster/"+match[0]+"?.flv","")
-                        
-                if videolink.find('guba.com')>0:
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile('null, null, null,\r\n.+"(.+?)" ')
-                        match=p.findall(link)
-                        for guba in match:
-                                addLink("FLV Format",guba,"http://www.last100.com/wp-content/uploads/2007/09/guba_logo.png")
-                        #GET ORIGINAL FORMAT
-                        p=re.compile('\r\n <option value="(.+?)">(.+?)</option>')
-                        match=p.findall(link)
-                        for url2,name in match:
-                                addLink(name,url2,"http://www.last100.com/wp-content/uploads/2007/09/guba_logo.png")
-                if videolink.find('youtube.com')>0:
-                        code=re.sub('http://www.youtube.com/.+?v=','',videolink)
-                        code2=re.sub('&hl=en','',code)
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile('"t": "(.+?)"')
-                        match=p.findall(link)
-                        for youtube in match:
-                                linkage="http://www.youtube.com/get_video?video_id="+code2+"&t="+youtube
-                                addLink(name+"-YOUTUBE",linkage,"http://www.webtvwire.com/wp-content/uploads/2007/06/youtube.jpg")
-                              
-                if videolink.find('veoh.com')>0:
-                        res=[]
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        try:
-                                p=re.compile('<input type="hidden" name="ad_videoPermalink" value="(.+?)" id="ad_videoPermalink" />')
-                                match=p.findall(link)
-                                for veoh in match:
-                                        veohurl="http://127.0.0.1:64652/"+veoh+"?.avi"
-                                        res.append(veohurl)
-                                p=re.compile('<a href="http://www.veoh.com/videos/(.+?).?confirmed=1"')
-                                match=p.findall(link)
-                                for veoh in match:
-                                        veohurl="http://127.0.0.1:64652/"+veoh+"?.avi"
-                                        res.append(veohurl)
-                                for veoh2 in res:
-                                        addLink(name+"- VEOH AVI",veoh2,"http://www.seanborg.com/images/Veoh%20Logo.jpg")
-            
-                        except:
-                                pass
-                if videolink.find('tudou.com')>0:
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile('<div class="shareButton"><a href=".+?iid=(.+?)" target="_blank">')
-                        match=p.findall(link)
-                        for code in match:
-                                pass
-                        i=0
-                        url2="http://www.tudou.com/player/v2.php?id="+code
-                        req = urllib2.Request(url2)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile("<f w='.+?'>(.+?)</f>")
-                        match=p.findall(link)
-                        for linkage in match:
-                                i=i+1
-                                addLink(name+"- TUDOU-server "+str(i),linkage,"http://www.ojointernet.com/wp-content/uploads/tudou_logo.png")
-                if videolink.find('youku.com')>0:
-                        res=[]
-                        DECODE='http://clipnabber.com/gethint.php'
-                        data = "mode=1&url="+videolink
-                        req = urllib2.Request(DECODE,data)
-                        response = urllib2.urlopen(req)
-                        results = response.read()
-                        p=re.compile('<a href=(.+?)><strong>(.+?)</strong></a>&nbsp;&nbsp;&nbsp;')
-                        final=p.findall(results)
-                        for youku,name2 in final:
-                                res.append((youku,name2))
-                        for youku1,name3 in res:
-                                addLink(name3+"- YOUKU ( Play with DVD Player )",youku1,"http://www.21314.cn/images/logo_youku.gif")
-                if videolink.find('dailymotion.com')>0:
-                        req = urllib2.Request(videolink)
-                        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                        response = urllib2.urlopen(req)
-                        link=response.read()
-                        response.close()
-                        p=re.compile('url=rev=.+?&uid=.+?&lang=en&callback=.+?&preview=.+?&video=(.+?)%40%40spark')
-                        match=p.findall(link)
-                        decode=urllib.unquote(match[0])
-                        url2="http://www.dailymotion.com"+decode
-                        addLink(name+"- DAILYMOTION",url2,"")
-                if videolink.find('trilulilu.ro')>0:
-                        videolink=videolink+"voinage"
-                        p=re.compile('http://www.trilulilu.ro/(.+?)/(.+?)voinage')
-                        match=p.findall(videolink)
-                        for username,vid in match:
-                                url2="http://fs14.trilulilu.ro/stream.php?type=video&hash="+vid+"&username="+username+"&key="+" HTTP/1.1?.flv"
-                                addLink(name+"- TRILULILU",url2,"")
-                
-                        
-        else:
+        if url.find('youtube')>0:
                 req = urllib2.Request(url)
                 req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
                 response = urllib2.urlopen(req)
                 link=response.read()
-                response.close()
-                p=re.compile('right-click <a href="(.+?)">')
-                p=re.compile('.+?videoUrl.+?.+?.+?.+?(.+?)%26sigh')
+                response.close()        
+                p=re.compile('<img class="video-thumbnail" src=".+?/vi/(.+?)/.+?jpg"')
                 match=p.findall(link)
-                for url2 in match:
-                        GOOG=urllib.unquote(url2)
-                        addLink(name,GOOG,"")
-        if url.find('myspace.com')>0:
-                req = urllib2.Request(url)
+                bit=match[0]
+                req = urllib2.Request('http://www.youtube.com/watch?v='+bit)
                 req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
                 response = urllib2.urlopen(req)
                 link=response.read()
                 response.close()
-                p=re.compile('\n<div class="original-text">\n<a href="http://.+?myspace.com/index.+?fuseaction=.+?=(.+?)">Video in original context</a>\n')
-                myspace=p.findall(link)
-                pass
-                req = urllib2.Request("http://mediaservices.myspace.com/services/rss.ashx?type=video&mediaID="+myspace[0])
-                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
-                response = urllib2.urlopen(req)
-                link2=response.read()
-                response.close()
-                comp=re.compile('<media:content url="(.+?)"')
-                myspace2=comp.findall(link2)
-                if len(myspace2)>0:
-                        addLink(name+"- MYSPACE",myspace2[0],"")
-                else:
-                        addDir("MYSPACE HAVE DELETED THIS VIDEO","http://WWW.MYSPACE.COM",1,"")
+                p=re.compile('"t": "(.+?)"')
+                match=p.findall(link)
+                for youtube in match:
+                        linkage="http://www.youtube.com/get_video?video_id="+bit+"&t="+youtube
+                        high="http://www.youtube.com/get_video?video_id="+bit+"&t="+youtube+"&fmt=18"
+                        addLink(name+"-YOUTUBE",linkage,"http://www.webtvwire.com/wp-content/uploads/2007/06/youtube.jpg")
+                        addLink(name+"-YOUTUBE Hi-def",high,"http://www.webtvwire.com/wp-content/uploads/2007/06/youtube.jpg")
+        else:
+               req = urllib2.Request(url)
+               req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14')
+               response = urllib2.urlopen(req)
+               link=response.read()
+               response.close()
+               p=re.compile('right-click <a href="(.+?)">')
+               p=re.compile('.+?videoUrl.+?.+?.+?.+?(.+?)%26sigh')
+               match=p.findall(link)
+               for url2 in match:
+                       GOOG=urllib.unquote(url2)
+                       addLink(name,GOOG,"")
+        
        
                 
 def get_params():
