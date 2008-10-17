@@ -68,7 +68,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>4</posy>
-						<width>200</width>
+						<width>315</width>
 						<height>22</height>
 						<font>font13</font>
 						<align>left</align>
@@ -98,7 +98,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>4</posy>
-						<width>200</width>
+						<width>315</width>
 						<height>22</height>
 						<font>font13</font>
 						<align>left</align>
@@ -146,7 +146,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>4</posy>
-						<width>200</width>
+						<width>315</width>
 						<height>22</height>
 						<font>font13</font>
 						<align>left</align>
@@ -176,7 +176,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>4</posy>
-						<width>200</width>
+						<width>315</width>
 						<height>22</height>
 						<font>font13</font>
 						<align>left</align>
@@ -200,6 +200,14 @@
 				<textcolor>TextcolorBlack</textcolor>
 				<showonepage>false</showonepage>
 			</control>
+		</control>
+		<control type="textbox" id="505">
+			<posx>365</posx>
+			<posy>85</posy>
+			<width>315</width>
+			<height>160</height>
+			<font>font13</font>
+			<info>Container(503).ListItem.Label2</info>
 		</control>
 	</controls>
 </window>

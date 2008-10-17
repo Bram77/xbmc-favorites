@@ -202,13 +202,13 @@
 				<width>225</width>
 				<height>205</height>
 				<texture>middle-panel.png</texture>
-				<visible>!Skin.HasSetting(nodescriptions) + !ControlGroup(4).HasFocus() + !Control.HasFocus(11) + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
+				<visible>!Skin.HasSetting(nodescriptions) + !ControlGroup(4).HasFocus() +  !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
 			</control>
 			<control type="image">
 				<description>XBMC Logo</description>
-				<posx>392</posx>
+				<posx>404</posx>
 				<posy>83</posy>
-				<width>128</width>
+				<width>104</width>
 				<height>128</height>
 				<texture>xbmclive_homelogo.png</texture>
 				<visible>!Control.HasFocus(2)</visible>
@@ -231,83 +231,6 @@
 				<texture>divider.png</texture>
 				<visible>!Control.HasFocus(2)</visible>
 			</control>
-			<control type="image">
-				<description>Connect to kai Button Image Shadow</description>
-				<posx>100</posx>
-				<posy>267</posy>
-				<width>230</width>
-				<height>16</height>
-				<texture>button-shadow.png</texture>
-				<visible>!System.KaiConnected + Control.HasFocus(5) + !Control.HasFocus(2)</visible>
-				<animation effect="fade" time="250">Visible</animation>
-			</control>
-			<control type="image">
-				<description>Connect to kai Button Image</description>
-				<posx>100</posx>
-				<posy>196</posy>
-				<width>230</width>
-				<height>70</height>
-				<texture>big-button-focus.png</texture>
-				<visible>!System.KaiConnected + Control.HasFocus(5) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="button" id="5">
-				<description>Connect to kai button kai push button</description>
-				<include>Big-Home-Button-Commons</include>
-				<posx>105</posx>
-				<posy>200</posy>
-				<label>31022</label>
-				<texturefocus>icon-connecttokai.png</texturefocus>
-				<texturenofocus>icon-connecttokai.png</texturenofocus>
-				<onclick>ActivateWindow(XLinkKai,Arenas)</onclick>
-				<visible>!System.KaiConnected + !Control.HasFocus(2)</visible>
-				<onleft>5</onleft>
-				<onright>2</onright>
-				<onup>4</onup>
-				<ondown>6</ondown>
-			</control>
-			<control type="multiimage">
-				<description>Connect to kai Button Shine</description>
-				<posx>100</posx>
-				<posy>196</posy>
-				<width>230</width>
-				<height>70</height>
-				<include>Shine</include>
-				<visible>!System.KaiConnected + Control.HasFocus(5) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Button Seperator</description>
-				<posx>100</posx>
-				<posy>266</posy>
-				<width>230</width>
-				<height>2</height>
-				<texture>divider.png</texture>
-				<visible>!System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="label">
-				<description>Connect to kai description 1</description>
-				<posx>355</posx>
-				<posy>226</posy>
-				<width>256</width>
-				<height>15</height>
-				<label>31093</label>
-				<font>bold14</font>
-				<textcolor>TextcolorBlack</textcolor>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>!Skin.HasSetting(nodescriptions) + !Control.HasFocus(9) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="textbox">
-				<description>Connect to kai description MultiLine</description>
-				<posx>355</posx>
-				<posy>251</posy>
-				<width>180</width>
-				<height>200</height>
-				<pagecontrol>-</pagecontrol>
-				<label>31094</label>
-				<font>font12</font>
-				<textcolor>TextcolorBlack</textcolor>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>!Skin.HasSetting(nodescriptions) + !Control.HasFocus(9) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
-			</control>
 			<control type="label">
 				<description>XBMCLive Coming Soon description 1</description>
 				<posx>355</posx>
@@ -318,7 +241,7 @@
 				<font>bold14</font>
 				<textcolor>TextcolorBlack</textcolor>
 				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(9) + !Control.HasFocus(8) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(5) + !Control.HasFocus(8) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
 			</control>
 			<control type="textbox">
 				<description>XBMCLive Coming Soon MultiLine</description>
@@ -331,173 +254,17 @@
 				<font>font12</font>
 				<textcolor>TextcolorBlack</textcolor>
 				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(9) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
+				<visible>!Skin.HasSetting(nodescriptions) + Control.HasFocus(5) + !ControlGroup(4).HasFocus() + !Control.HasFocus(10) + !Control.HasFocus(2)</visible>
 			</control>
-			<control type="image">
-				<description>Messages Button Highlight Image Shadow</description>
-				<posx>100</posx>
-				<posy>233</posy>
-				<width>230</width>
-				<height>16</height>
-				<texture>button-shadow.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(6) + !Control.HasFocus(2)</visible>
-				<animation effect="fade" time="250">Visible</animation>
-			</control>
-			<control type="image">
-				<description>Messages Button Highlight Image</description>
-				<posx>100</posx>
-				<posy>196</posy>
-				<width>230</width>
-				<height>38</height>
-				<texture>big-button-focus.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(6) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="button" id="6">
-				<description>Messages Push Button</description>
-				<include>Home-Button-Commons</include>
-				<posx>110</posx>
-				<posy>200</posy>
-				<label>31020</label>
-				<onclick>ActivateWindow(XLinkKai,Chat)</onclick>
-				<texturefocus>icon-messages.png</texturefocus>
-				<texturenofocus>icon-messages.png</texturenofocus>
-				<onleft>6</onleft>
-				<onright>2</onright>
-				<onup>5</onup>
-				<ondown>7</ondown>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="multiimage">
-				<description>Messages Button Shine</description>
-				<posx>100</posx>
-				<posy>196</posy>
-				<width>230</width>
-				<height>38</height>
-				<include>Shine</include>
-				<visible>System.KaiConnected + Control.HasFocus(6) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Button Seperator</description>
-				<posx>100</posx>
-				<posy>234</posy>
-				<width>230</width>
-				<height>2</height>
-				<texture>divider.png</texture>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Friends Button Highlight Image Shadow</description>
-				<posx>100</posx>
-				<posy>273</posy>
-				<width>230</width>
-				<height>16</height>
-				<texture>button-shadow.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(7) + !Control.HasFocus(2)</visible>
-				<animation effect="fade" time="250">Visible</animation>
-			</control>
-			<control type="image">
-				<description>Friends Button Highlight Image</description>
-				<posx>100</posx>
-				<posy>236</posy>
-				<width>230</width>
-				<height>38</height>
-				<texture>big-button-focus.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(7) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="button" id="7">
-				<description>Friends Push Button</description>
-				<include>Home-Button-Commons</include>
-				<posx>110</posx>
-				<posy>240</posy>
-				<label>31021</label>
-				<onclick>ActivateWindow(XLinkKai,Buddies)</onclick>
-				<texturefocus>icon-Friends.png</texturefocus>
-				<texturenofocus>icon-Friends.png</texturenofocus>
-				<onleft>7</onleft>
-				<onright>2</onright>
-				<onup>6</onup>
-				<ondown>8</ondown>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="multiimage">
-				<description>Friends Button Shine</description>
-				<posx>100</posx>
-				<posy>236</posy>
-				<width>230</width>
-				<height>38</height>
-				<include>Shine</include>
-				<visible>System.KaiConnected + Control.HasFocus(7) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Button Seperator</description>
-				<posx>100</posx>
-				<posy>274</posy>
-				<width>230</width>
-				<height>2</height>
-				<texture>divider.png</texture>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Games Button Highlight Image Shadow</description>
-				<posx>100</posx>
-				<posy>313</posy>
-				<width>230</width>
-				<height>16</height>
-				<texture>button-shadow.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(8) + !Control.HasFocus(2)</visible>
-				<animation effect="fade" time="250">Visible</animation>
-			</control>
-			<control type="image">
-				<description>Games Button Highlight Image</description>
-				<posx>100</posx>
-				<posy>276</posy>
-				<width>230</width>
-				<height>38</height>
-				<texture>big-button-focus.png</texture>
-				<visible>System.KaiConnected + Control.HasFocus(8) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="button" id="8">
-				<description>Games Push Button</description>
-				<include>Home-Button-Commons</include>
-				<posx>110</posx>
-				<posy>280</posy>
-				<label>31002</label>
-				<onclick>ActivateWindow(XLinkKai,Games)</onclick>
-				<texturefocus>icon-Games.png</texturefocus>
-				<texturenofocus>icon-Games.png</texturenofocus>
-				<onleft>8</onleft>
-				<onright>2</onright>
-				<onup>7</onup>
-				<ondown>9</ondown>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="multiimage">
-				<description>Games Button Shine</description>
-				<posx>100</posx>
-				<posy>276</posy>
-				<width>230</width>
-				<height>38</height>
-				<include>Shine</include>
-				<visible>System.KaiConnected + Control.HasFocus(8) + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="image">
-				<description>Button Seperator</description>
-				<posx>100</posx>
-				<posy>314</posy>
-				<width>230</width>
-				<height>2</height>
-				<texture>divider.png</texture>
-				<visible>System.KaiConnected + !Control.HasFocus(2)</visible>
-			</control>
-			<control type="button" id="9">
+			<control type="button" id="5">
 				<description>XBMC Live Button</description>
-				<posx>90</posx>
-				<posy>324</posy>
+				<posx>95</posx>
+				<posy>200</posy>
 				<width>308</width>
 				<height>80</height>
 				<onleft>9</onleft>
 				<onright>2</onright>
-				<onup>8</onup>
+				<onup>4</onup>
 				<ondown>10</ondown>
 				<texturefocus>ad-button-FO.png</texturefocus>
 				<texturenofocus>ad-button-NF.png</texturenofocus>
@@ -510,9 +277,9 @@
 				<!-- End Fake Label Name for LCD displays dont touch -->
 			</control>
 			<control type="multiimage">
-				<description>XBMC Live Ad Animation</description>
-				<posx>100</posx>
-				<posy>324</posy>
+				<description>XBMC Live Ad Overlay Animation</description>
+				<posx>95</posx>
+				<posy>200</posy>
 				<width>308</width>
 				<height>80</height>
 				<imagepath>XBMCLive_Ad</imagepath>
@@ -530,7 +297,7 @@
 				<height>71</height>
 				<onleft>10</onleft>
 				<onright>2</onright>
-				<onup>9</onup>
+				<onup>5</onup>
 				<ondown>4</ondown>
 				<texturefocus>dvdtrayeject-focus.png</texturefocus>
 				<texturenofocus>dvdtrayeject-nofocus.png</texturenofocus>

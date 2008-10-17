@@ -104,7 +104,7 @@
 			<onleft>99</onleft>
 			<onright>99</onright>
 			<onup>14</onup>
-			<ondown>2</ondown>
+			<ondown>6</ondown>
 		</control>
 		<control type="image">
 			<description>Gamercard Pic default</description>
@@ -204,174 +204,6 @@
 			<texture>guide-panel1.png</texture>
 			<include>PlayerControlCommons</include>
 		</control>
-		<control type="label">
-			<description>Community label</description>
-			<posx>58</posx>
-			<posy>163</posy>
-			<label>31048</label>
-			<textcolor>TextcolorBlack</textcolor>
-			<font>font14</font>
-			<shadowcolor>shadow-grey</shadowcolor>
-			<visible>System.KaiConnected + ![Control.HasFocus(2) | Control.HasFocus(3) | Control.HasFocus(4) | Control.HasFocus(5)]</visible>
-			<include>PlayerControlCommons</include>
-		</control>
-		<control type="label">
-			<description>XBMC Live Not Connected label</description>
-			<posx>95</posx>
-			<posy>177</posy>
-			<label>31023</label>
-			<textcolor>TextcolorBlack</textcolor>
-			<font>font14</font>
-			<shadowcolor>shadow-grey</shadowcolor>
-			<visible>!System.KaiConnected</visible>
-			<include>PlayerControlCommons</include>
-		</control>
-		<control type="group">
-			<control type="button" id="2">
-				<description>Friends Button</description>
-				<posx>59</posx>
-				<posy>184</posy>
-				<width>66</width>
-				<height>43</height>
-				<texturefocus>guide-media-button-focus.png</texturefocus>
-				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<onleft>5</onleft>
-				<onright>3</onright>
-				<onup>99</onup>
-				<ondown>6</ondown>
-				<onclick>Dialog.Close(PlayerControls)</onclick>
-				<onclick>ActivateWindow(XLinkKai,Buddies)</onclick>
-				<visible>System.KaiConnected</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="image">
-				<description>Friends Button Icon</description>
-				<posx>64</posx>
-				<include>CommIconCommons</include>
-				<texture>icon-friends.png</texture>
-				<visible>System.KaiConnected</visible>
-			</control>
-			<control type="label">
-				<description>Friends label</description>
-				<posx>58</posx>
-				<posy>163</posy>
-				<label>31021</label>
-				<textcolor>TextcolorBlack</textcolor>
-				<font>font14</font>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>System.KaiConnected + Control.HasFocus(2)</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="button" id="3">
-				<description>Games Button</description>
-				<posx>125</posx>
-				<posy>184</posy>
-				<width>66</width>
-				<height>43</height>
-				<texturefocus>guide-media-button-focus.png</texturefocus>
-				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<onleft>2</onleft>
-				<onright>4</onright>
-				<onup>99</onup>
-				<ondown>6</ondown>
-				<onclick>Dialog.Close(PlayerControls)</onclick>
-				<onclick>ActivateWindow(XLinkKai,Games)</onclick>
-				<visible>System.KaiConnected</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="image">
-				<description>Games Button Icon</description>
-				<posx>133</posx>
-				<include>CommIconCommons</include>
-				<texture>icon-games.png</texture>
-				<visible>System.KaiConnected</visible>
-			</control>
-			<control type="label">
-				<description>Games label</description>
-				<posx>58</posx>
-				<posy>163</posy>
-				<label>31002</label>
-				<textcolor>TextcolorBlack</textcolor>
-				<font>font14</font>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>System.KaiConnected + Control.HasFocus(3)</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="button" id="4">
-				<description>Arenas Button</description>
-				<posx>191</posx>
-				<posy>184</posy>
-				<width>66</width>
-				<height>43</height>
-				<texturefocus>guide-media-button-focus.png</texturefocus>
-				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<onleft>3</onleft>
-				<onright>5</onright>
-				<onup>99</onup>
-				<ondown>6</ondown>
-				<onclick>Dialog.Close(PlayerControls)</onclick>
-				<onclick>ActivateWindow(XLinkKai,Arenas)</onclick>
-				<visible>System.KaiConnected</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="image">
-				<description>Arena Button Icon</description>
-				<posx>201</posx>
-				<include>CommIconCommons</include>
-				<texture>icon-arena.png</texture>
-				<visible>System.KaiConnected</visible>
-			</control>
-			<control type="label">
-				<description>Arenas label</description>
-				<posx>58</posx>
-				<posy>163</posy>
-				<label>15021</label>
-				<textcolor>TextcolorBlack</textcolor>
-				<font>font14</font>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>System.KaiConnected + Control.HasFocus(4)</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="button" id="5">
-				<description>Messages Button</description>
-				<posx>257</posx>
-				<posy>184</posy>
-				<width>66</width>
-				<height>43</height>
-				<texturefocus>guide-media-button-focus.png</texturefocus>
-				<texturenofocus>guide-media-button-nofocus.png</texturenofocus>
-				<pulseonselect>no</pulseonselect>
-				<onleft>4</onleft>
-				<onright>2</onright>
-				<onup>99</onup>
-				<ondown>6</ondown>
-				<onclick>Dialog.Close(PlayerControls)</onclick>
-				<onclick>ActivateWindow(XLinkKai,Chat)</onclick>
-				<visible>System.KaiConnected</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-			<control type="image">
-				<description>Messages Button Icon</description>
-				<posx>265</posx>
-				<include>CommIconCommons</include>
-				<texture>icon-messages.png</texture>
-				<visible>System.KaiConnected</visible>
-			</control>
-			<control type="label">
-				<description>Messages label</description>
-				<posx>58</posx>
-				<posy>163</posy>
-				<label>31020</label>
-				<textcolor>TextcolorBlack</textcolor>
-				<font>font14</font>
-				<shadowcolor>shadow-grey</shadowcolor>
-				<visible>System.KaiConnected + Control.HasFocus(5)</visible>
-				<include>PlayerControlCommons</include>
-			</control>
-		</control>
 		<control type="image">
 			<description>Divider</description>
 			<posx>45</posx>
@@ -405,7 +237,7 @@
 			<pulseonselect>no</pulseonselect>
 			<onleft>6</onleft>
 			<onright>6</onright>
-			<onup>2</onup>
+			<onup>99</onup>
 			<ondown>7</ondown>
 			<font>font14</font>
 			<label>31050</label>

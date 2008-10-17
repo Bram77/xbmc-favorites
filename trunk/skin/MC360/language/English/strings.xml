@@ -19,8 +19,8 @@
   <string id="31019">Login</string>
   <string id="31020">Messages</string>
   <string id="31021">Friends</string>
-  <string id="31022">Connect to Xlink Kai</string>
-  <string id="31023">Xlink KAI Not Connected</string>
+  <string id="31022">-</string>
+  <string id="31023">-</string>
   <string id="31024">Select</string>
   <string id="31025">File Explorer</string>
 
@@ -87,8 +87,8 @@
   <string id="31090">Video - Playlist</string>
   <string id="31091">Remove from Playlist</string>
   <string id="31092">Highlight Files</string>
-  <string id="31093">Xlink Kai: Evolution VII</string>
-  <string id="31094">Lets you connect with other console users around the world, and play online games for free.</string>
+  <string id="31093">-</string>
+  <string id="31094">-</string>
   <string id="31095">XBMC Live Place</string>
   <string id="31096">Download Themes from XBMC Black Market Themes site, Watch Internet Videos and Update XBMC.</string>
 
@@ -117,12 +117,12 @@
   <string id="31122">Configure Video settings, Including:[CR][CR]* Screen Calibration[CR]* Video filters[CR]* Post Processing[CR]* File Views</string>
   <string id="31123">Configure Audio settings, Including:[CR][CR]* Visualisations[CR]* Playlists[CR]* CD Ripping[CR]* Karaoke</string>
   <string id="31124">Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails</string>
-  <string id="31125">Set up your Programs and Xlink Kai settings, Including:[CR][CR]* Icon View[CR]* .xbe usage[CR]* Kai Login Details</string>
+  <string id="31125">Set up your Programs settings, Including:[CR][CR]* Icon View[CR]* .xbe usage</string>
   <string id="31126">Configure Network and sharing settings, Including:[CR][CR]* Gateway &amp; DNS[CR]* Samba File Sharing[CR]* XBMC Autodetect[CR]* FTP &amp; Web Server</string>
   <string id="31127">Choose Weather Display, Including:[CR][CR]* 3 Cities[CR]* Wind Speed[CR]* Temperature</string>
   <string id="31128">Important System Settings, Including:[CR][CR]* Auto Shutdown[CR]* Autorun[CR]* Fan Speed[CR]* Front LED[CR]* LCD</string>
   <string id="31129">Check Vital System Info, Including:[CR][CR]* Storage[CR]* Hardware[CR]* Network</string>
-  <string id="31130">View Xbox Media Center and Skin Credits.</string>
+  <string id="31130">View XBMC Media Center and Skin Credits.</string>
   <string id="31131">View MC360 and Team Blackbolt Skin Credits.</string>
   <string id="31132">Insert a Game, DVD, VCD, Audio CD, MP3 CD or Photo CD.</string>
   <string id="31133">Play: $INFO[System.DVDLabel]</string>
@@ -131,10 +131,10 @@
   <string id="31136">Reboot Xbox</string>
   <string id="31137">Press A to safely shutdown your Xbox console</string>
   <string id="31138">Perform a Cold Reboot on your Xbox console, any playing media will be stopped.</string>
-  <string id="31139">Restart Xbox Media Center, this will stop any media content from playing.</string>
+  <string id="31139">Restart XBMC Media Center, this will stop any media content from playing.</string>
   <string id="31140">Load the Dashboard that you selected in the system settings blade.</string>
   <string id="31141">Log off your profile and return to the login screen.</string>
-  <string id="31142">Enable or disable the Master Lock for each section of Xbox Media Center.</string>
+  <string id="31142">Enable or disable the Master Lock for each section of XBMC Media Center.</string>
 
   <string id="31159">Disable RSS Feeds</string>
   <string id="31160">Disable Description Text</string>
@@ -213,7 +213,7 @@
   <string id="31230">Your MC360 is up-to-date. Be sure to[CR]check for updates at a later time.</string>
   <string id="31231">Current Version: %s[CR]Available Version: %s</string>
   <string id="31232">Update Available</string>
-  <string id="31233">There is an Update Available for[CR]your MC360 skin. Please visit [CR]http://blackbolt.x-scene.com [CR][CR]Follow the installation instructions in the[CR]readme.txt file in the download .zip for[CR]proper installation to Xbox Media Center.[CR][CR]Current Version: %s[CR]Available Version: %s</string>
+  <string id="31233">There is an Update Available for[CR]your MC360 skin. Please visit [CR]http://blackbolt.x-scene.com [CR][CR]Follow the installation instructions in the[CR]readme.txt file in the download .zip for[CR]proper installation to XBMC Media Center.[CR][CR]Current Version: %s[CR]Available Version: %s</string>
   <!-- setwallpaperpacks -->
   <string id="31234">a directory with wallpaper pack</string>
   <string id="31235">pictures</string>
