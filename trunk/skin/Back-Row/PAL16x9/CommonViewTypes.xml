@@ -2088,7 +2088,7 @@
 <posx>0</posx>
 <posy>0</posy>
 <width>720</width>
-<height>520</height>
+<height>526</height>
 <texture>Back-Row.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
@@ -2100,9 +2100,9 @@
 <description>Background</description>
 <type>image</type>
 <posx>0</posx>
-<posy>520</posy>
+<posy>526</posy>
 <width>720</width>
-<height>56</height>
+<height>50</height>
 <texture>Background2.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
@@ -2114,9 +2114,9 @@
 <description>Background</description>
 <type>image</type>
 <posx>-20</posx>
-<posy>520</posy>
+<posy>526</posy>
 <width>750</width>
-<height>56</height>
+<height>50</height>
 <texture>keyboard-panel-overlay1.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
@@ -2242,7 +2242,7 @@
 <posx>0</posx>
 <posy>0</posy>
 <width>720</width>
-<height>520</height>
+<height>526</height>
 <texture>Back-Row.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
@@ -2254,9 +2254,9 @@
 <description>Background</description>
 <type>image</type>
 <posx>0</posx>
-<posy>520</posy>
+<posy>526</posy>
 <width>720</width>
-<height>56</height>
+<height>50</height>
 <texture>Background2.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
@@ -2268,9 +2268,9 @@
 <description>Background</description>
 <type>image</type>
 <posx>-20</posx>
-<posy>520</posy>
+<posy>526</posy>
 <width>750</width>
-<height>56</height>
+<height>50</height>
 <texture>keyboard-panel-overlay1.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
@@ -9466,10 +9466,10 @@
 </control>
 
 <control type="image">
-<posx>1</posx>
-<posy>3</posy>
-<width>76</width>
-<height>153</height>
+<posx>0</posx>
+<posy>4</posy>
+<width>78</width>
+<height>152</height>
 <info>ListItem.Thumb</info>
 <texture>defaultdvdposter.png</texture>
 <aspectratio aligny="bottom">stretch</aspectratio>
@@ -9478,7 +9478,7 @@
 <control type="image">
 <posx>0</posx>
 <posy>0</posy>
-<width>80</width>
+<width>79</width>
 <height>159</height>
 <texture>DVD3.png</texture>
 <aspectratio aligny="bottom">stretch</aspectratio>
@@ -9495,10 +9495,10 @@
 </control>
 
 <control type="image">
-<posx>1</posx>
-<posy>162</posy>
-<width>76</width>
-<height>153</height>
+<posx>0</posx>
+<posy>163</posy>
+<width>78</width>
+<height>152</height>
 <info>ListItem.Thumb</info>
 <aspectratio aligny="top">stretch</aspectratio>
 <texture flipy="true" diffuse="Thumb_Mask.png">defaultdvdposter.png</texture>
@@ -9526,20 +9526,20 @@
 <texture>DVD4.png</texture>
 <aspectratio aligny="bottom">stretch</aspectratio>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,-116.5,146,286" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,-76.5,124,246.45" time="400"/>
 </animation>
 </control>
 
 <control type="image">
-<posx>1</posx>
-<posy>3</posy>
-<width>76</width>
-<height>153</height>
+<posx>0</posx>
+<posy>4</posy>
+<width>78</width>
+<height>152</height>
 <info>ListItem.Thumb</info>
 <texture>defaultdvdposter.png</texture>
 <aspectratio aligny="bottom">stretch</aspectratio>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,-111,141.60,278" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,-70.3,120.9,235.6" time="400"/>
 </animation>
 </control>
 
@@ -9547,12 +9547,12 @@
 <control type="image">
 <posx>0</posx>
 <posy>0</posy>
-<width>80</width>
+<width>79</width>
 <height>159</height>
 <texture>DVD3.png</texture>
 <aspectratio aligny="bottom">stretch</aspectratio>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,-113,141.60,281" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,-76.5,122.45,246.45" time="400"/>
 </animation>
 </control>
 
@@ -9564,7 +9564,7 @@
 <aspectratio aligny="top">stretch</aspectratio>
 <texture flipy="true">background2..png</texture>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,166,146,286" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,169.95,124,246.45" time="400"/>
 </animation>
 </control>
 
@@ -9576,20 +9576,20 @@
 <aspectratio aligny="top">stretch</aspectratio>
 <texture flipy="true" diffuse="Thumb_Mask.png">DVD4.png</texture>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,166,146,286" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,169.95,124,246.45" time="400"/>
 </animation>
 </control>
 
 <control type="image">
-<posx>1</posx>
-<posy>162</posy>
-<width>76</width>
-<height>153</height>
+<posx>0</posx>
+<posy>163</posy>
+<width>78</width>
+<height>152</height>
 <info>ListItem.Thumb</info>
 <aspectratio aligny="top">stretch</aspectratio>
 <texture flipy="true" diffuse="Thumb_Mask.png">defaultdvdposter.png</texture>
 <animation type="Focus">
-<effect type="zoom" tween="cubic" end="-30.8,173.5,141.60,275" time="400"/>
+<effect type="zoom" tween="cubic" end="-19.8,176.15,120.9,235.6" time="400"/>
 </animation>
 </control>
 
