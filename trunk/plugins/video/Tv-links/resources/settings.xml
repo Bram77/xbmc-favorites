@@ -1,4 +1,0 @@
-<settings>
-   <setting id="CACHE LINKS:" type="text" label="20000" default=""/>
-   <setting id="Cache links : " type="bool" label="30000" default="false"/>
-</settings>
