@@ -64,11 +64,11 @@ class Channel(chn_class.Channel):
                 
         self.requiresLogon = False
         
-        self.episodeItemRegex = '<span class="title"><a  href="([^"]+)"[^>]+>([^<]+)</a></span>' # used for the ParseMainList
+        self.episodeItemRegex = '<div class="thumb">\W+<a[^>]+href="(/[^"]+)"[^>]*>\W+<img[^>]+alt="([^"]+)"/>' # used for the ParseMainList
         self.videoItemRegex = '<div class="item[^"]*">(\W+<div class="thumb"><[^<]+<img src="([^"]+)" [^>]+></a></div>)*[\W]+<div class="title"><a +href="([^"]+)" [^>]+><span>([^<]+)</span></a></div>[\W]+<div class="airtime"><[^<]+<span>([^<]+)</span></a></div>\W+()*<div class="text"><[^<]+<span>([^<]*)</span></a></div>'   # used for the CreateVideoItem 
-#        <div class="item[^"]*">(<div class="thumb"><[^<]+<img src="([^"]+)" [^>]+></a></div>)*[\W]+<div class="title"><a +href="([^"]+)" [^>]+><span>([^<]+)</span>[\w\W]{100,200}<span>([^<]+)</span>[\w\W]{100,200}<span>([^<]+)</span></a></div>
-#        self.folderItemRegex = '<a href="\.([^"]*/)(cat/)(\d+)"( style="color:\s*white;"\s*)*>([^>]+)</a><br'  # used for the CreateFolderItem
-        
+        self.pageNavigationRegex = '<a href="([^"]+)(\d+)"><span>\d+</span></a>' #self.pageNavigationIndicationRegex 
+        self.pageNavigationRegexIndex = 1
+                
         # decrepated. Using url based on ID now
         #self.mediaUrlRegex = '<param name="src" value="([^"]+)" />'    # used for the UpdateVideoItem
         
