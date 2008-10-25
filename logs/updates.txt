@@ -1,3 +1,5 @@
+  25-10-2008 :: [plugins][video]    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
+  25-10-2008 :: [scripts]	    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
   19-10-2008 :: [ALL CATAGRIES]     ~ IT'S BEEN WHILE.... ALL AVAILABLE UPDATES HAVE BEEN APPLIED, NEW STUFF ADDED AND OLD STUFF REMOVED. EXPECT WEEKLY UPDATES!
 
 
