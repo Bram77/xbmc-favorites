@@ -71,6 +71,10 @@ class Channel(chn_nos.Channel):
         tipItem.icon = self.icon
         items.append(tipItem)
         
+        topItem = common.clistItem("Top 50", "topItems")
+        topItem.icon = self.icon
+        items.append(topItem)
+        
         return items
     
     #==============================================================================
@@ -87,11 +91,40 @@ class Channel(chn_nos.Channel):
             elif url == "popularItems":
                 return self.PopularItems()
             elif url == "tipItems":
-                return self.TipItems()                            
+                return self.TipItems()
+            elif url == "topItems":
+                return self.TopItems()                            
             else:
                 return chn_nos.Channel.ProcessFolderList(self, url)
         except:
             logFile.error("Cannot process folderlist for special NOS links", exc_info=True)
+    
+    #============================================================================== 
+    def TopItems(self):
+        """
+            Gets the top 50 items
+        """
+        #check for cookie:
+        logFile.info("Checking for NOS cookies.")
+        if uriHandler.CookieCheck('UGSES') and uriHandler.CookieCheck('CheckUGCookie'):# and uriHandler.CookieCheck('quuid'):
+            logFile.info("Cookies found. Continuing")
+        else:
+            logFile.info("No cookies found. Opening main site")
+            temp = uriHandler.Open(self.baseUrl)
+    
+        items = []
+        data = uriHandler.Open("http://www.uitzendinggemist.nl/index.php/top50")
+        results = common.DoRegexFindAll('<td style=[^>]+><a href="/index.php/aflevering(\?aflID=\d+&amp;md5=[^"]+)">([^<]+)</a></td>\W+<td align="right">([^<]+)</td>', data)
+        logFile.debug("Adding %s top50 items", len(results))
+        
+        for result in results:
+            tmp = common.clistItem(result[1], common.StripAmp(result[0]))
+            tmp.icon = self.icon
+            tmp.date = result[2]
+            tmp.type = 'video'
+            items.append(tmp)
+        
+        return items
     
     #============================================================================== 
     def TipItems(self):

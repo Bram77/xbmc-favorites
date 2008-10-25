@@ -68,9 +68,11 @@ class Channel(chn_class.Channel):
         self.requiresLogon = False
         
         #self.episodeItemRegex = '<span class="title"><a  href="([^"]+)"[^>]+>([^<]+)</a></span>' # used for the ParseMainList
-        self.episodeItemRegex = '<div class="thumb">\W+<a href="([^"]+)">\W+<img[^>]+alt="([^"]+)"/>'
+        self.episodeItemRegex = '<div class="thumb">\W+<a[^>]+href="(/[^"]+)"[^>]*>\W+<img[^>]+alt="([^"]+)"/>'
         self.videoItemRegex = '<div class="item[^"]*">(\W+<div class="thumb"><[^<]+<img src="([^"]+)" [^>]+></a></div>)*[\W]+<div class="title"><a +href="([^"]+)" [^>]+><span>([^<]+)</span></a></div>[\W]+<div class="airtime"><[^<]+<span>([^<]+)</span></a></div>\W+()*<div class="text"><[^<]+<span>([^<]*)</span></a></div>'   # used for the CreateVideoItem 
-       
+        self.pageNavigationRegex = '<a href="([^"]+=)(\d+)"><span>\d+</span></a>' #self.pageNavigationIndicationRegex 
+        self.pageNavigationRegexIndex = 1
+        
         return True
       
     #==============================================================================
