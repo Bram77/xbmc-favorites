@@ -78,8 +78,13 @@ class Channel(chn_class.Channel):
         items = chn_class.Channel.ParseMainList(self)
         
         # get more items:
-        url = "http://data.rtl.nl/_rtl-internal/js/84232f404d62ea81f979e0792b696806.js"
-        data = uriHandler.Open(url, pb=True)
+        url1 = "http://www.rtl.nl/service/gemist/home/"
+        data1 = uriHandler.Open(url1, pb=True)         
+        url2 = common.DoRegexFindAll('<script type="text/javascript" language="JavaScript" src="([^"]+)"></script><div id="navigatie_container">', data1)
+        for url in url2:
+            javaUrl = url
+            pass
+        data = uriHandler.Open(javaUrl, pb=True)
         
         moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"][^"]+"\]', data)
         previousNumber = len(items)
