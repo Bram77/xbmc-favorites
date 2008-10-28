@@ -917,7 +917,7 @@
 <posy>0</posy>
 <width>720</width>
 <height>576</height>
-<texture>listview.png</texture>
+<texture>back-row1.png</texture>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(50)</visible>
 </control>
@@ -9985,7 +9985,7 @@
 <posy>0</posy>
 <width>720</width>
 <height>576</height>
-<texture>listview.png</texture>
+<texture>back-row1.png</texture>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(50)</visible>
 </control>
@@ -10287,7 +10287,7 @@
 <control type="image">
 <description>seperator</description>
 <posx>30</posx>
-<posy>475</posy>
+<posy>465</posy>
 <width>320</width>
 <height>10</height>
 <texture>separator.png</texture>
@@ -10644,47 +10644,6 @@
 <animation effect="zoom" end="100,94,179.5,265" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
 </control>
 
-<control type="image">
-<description>list item icon reflection</description>
-<posx>80</posx>
-<posy>462</posy>
-<width>250</width>
-<height>374</height>
-<texture>DVD4.png</texture>
-<texture flipy="true" diffuse="Thumb_Mask.png" />
-<aspectratio>stretch</aspectratio>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="40,4500,270,270" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
-</control>
-
-<control type="image">
-<description>list item icon reflection</description>
-<posx>81</posx>
-<posy>470</posy>
-<width>245</width>
-<height>360</height>
-<info>ListItem.Icon</info>
-<texture flipy="true" diffuse="Thumb_Mask.png" />
-<aspectratio>stretch</aspectratio>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="40,4500,270,270" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
-</control>
-
-<control type="image">
-<description>list item icon reflection</description>
-<posx>81</posx>
-<posy>470</posy>
-<width>248</width>
-<height>366</height>
-<texture>DVD3.png</texture>
-<texture flipy="true" diffuse="Thumb_Mask.png" />
-<aspectratio>stretch</aspectratio>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="40,4500,270,270" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
-</control>
 
 <control type="image">
 <posx>340</posx>
@@ -11003,64 +10962,51 @@
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
 
-<control>
-<description>Mask Overlay</description>
-<type>image</type>
+<control type="image">
+<texture>Fanart Mask1.png</texture>
+<visible>Control.IsVisible(58)</visible>
 <posx>0</posx>
 <posy>0</posy>
-<width>500</width>
-<height>440</height>
-<aspectratio>scale</aspectratio>
-<colordiffuse>ffffffff</colordiffuse>
-<texture>dark mask3.png</texture>
-<visible>!system.platform.xbox</visible>
-<visible>Control.IsVisible(58) + !Container.Content(movies)</visible>
-<animation effect="fade" time="200">Windowclose</animation>
+<width>550</width>
+<height>576</height>
+<animation effect="fade" time="200">WindowClose</animation>
+<visible>[Container.Content(episodes) | Container.Content(seasons)]</visible>
 </control>
 
-<control>
-<description>Mask Overlay</description>
-<type>image</type>
+<control type="image">
+<texture>Fanart Mask1.png</texture>
+<visible>Control.IsVisible(58)</visible>
 <posx>0</posx>
 <posy>0</posy>
-<width>500</width>
-<height>440</height>
-<texture>dark mask.png</texture>
-<colordiffuse>8aFFFFFF</colordiffuse>
-<visible>!system.platform.xbox</visible>
-<visible>Control.IsVisible(58) + !Container.Content(movies)</visible>
-<animation effect="fade" time="200">Windowclose</animation>
+<width>550</width>
+<height>566</height>
+<animation effect="fade" time="200">WindowClose</animation>
+<visible>Container.Content(movies)</visible>
 </control>
 
-<control>
-<description>Mask Overlay</description>
-<type>image</type>
+<control type="image">
+<texture>Fanart Mask1.png</texture>
+<visible>Control.IsVisible(58)</visible>
 <posx>0</posx>
 <posy>0</posy>
-<width>500</width>
-<height>440</height>
-<aspectratio>scale</aspectratio>
-<colordiffuse>ffffffff</colordiffuse>
-<texture>dark mask3.png</texture>
-<visible>!system.platform.xbox</visible>
-<visible>Control.IsVisible(58) + Container.Content(movies)</visible>
-<animation effect="fade" time="200">Windowclose</animation>
+<width>550</width>
+<height>566</height>
+<animation effect="fade" time="200">WindowClose</animation>
+<visible>Container.Content(TVShows)</visible>
+<visible>Skin.HasSetting(TV Poster)</visible>
 </control>
 
-<control>
-<description>Mask Overlay</description>
-<type>image</type>
+<control type="image">
+<texture>Fanart Mask1.png</texture>
+<visible>Control.IsVisible(58)</visible>
 <posx>0</posx>
 <posy>0</posy>
-<width>500</width>
-<height>440</height>
-<texture>dark mask.png</texture>
-<colordiffuse>8aFFFFFF</colordiffuse>
-<visible>!system.platform.xbox</visible>
-<visible>Control.IsVisible(58) + Container.Content(movies)</visible>
-<animation effect="fade" time="200">Windowclose</animation>
+<width>550</width>
+<height>576</height>
+<animation effect="fade" time="200">WindowClose</animation>
+<visible>Container.Content(TVShows)</visible>
+<visible>!Skin.HasSetting(TV Poster)</visible>
 </control>
-
 
 <control type="group">
 

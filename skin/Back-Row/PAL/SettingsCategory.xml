@@ -159,6 +159,7 @@
     <width>590</width>
     <height>38</height>
     <texture>button-nofocus2.png</texture>
+	<colordiffuse>99ffffff</colordiffuse>
 	<animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
    </control>

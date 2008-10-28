@@ -91,7 +91,7 @@
    <control type="label">
     <description>Album label</description>
     <posx>60</posx>
-    <posy>340</posy>
+    <posy>345</posy>
     <width>310</width>
     <height>200</height>
     <label>$INFO[ListItem.Album]</label>
@@ -104,7 +104,7 @@
    <control type="label">
     <description>Artist label</description>
     <posx>60</posx>
-    <posy>370</posy>
+    <posy>375</posy>
     <width>200</width>
     <height>200</height>
     <label>557</label>
@@ -118,7 +118,7 @@
    <control type="label">
     <description>Artist value</description>
     <posx>310</posx>
-    <posy>370</posy>
+    <posy>375</posy>
     <align>right</align>
 	<width>200</width>
     <height>200</height>
@@ -132,7 +132,7 @@
    <control type="label">
     <description>Genre label</description>
     <posx>60</posx>
-    <posy>390</posy>
+    <posy>395</posy>
     <width>200</width>
     <height>200</height>
     <label>515</label>
@@ -146,7 +146,7 @@
    <control type="label">
     <description>Genre value</description>
     <posx>310</posx>
-    <posy>390</posy>
+    <posy>395</posy>
 	<align>right</align>
     <width>200</width>
     <height>200</height>
@@ -160,7 +160,7 @@
    <control type="label">
     <description>Year label</description>
     <posx>60</posx>
-    <posy>410</posy>
+    <posy>415</posy>
     <width>200</width>
     <height>200</height>
     <label>562</label>
@@ -174,7 +174,7 @@
    <control type="label">
     <description>Year label</description>
     <posx>310</posx>
-    <posy>410</posy>
+    <posy>415</posy>
 	<align>right</align>
     <width>200</width>
     <height>200</height>

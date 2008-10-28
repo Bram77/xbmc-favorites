@@ -1029,5 +1029,6 @@
 <visible>!Container.Content(seasons) + !Container.Content(episodes)</visible>
 </control>
 </include>
+
 	
 </includes>    
