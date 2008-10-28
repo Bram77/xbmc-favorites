@@ -158,6 +158,7 @@
 		<font>font64</font>
 		<onup>2</onup>
 		<ondown>2</ondown>
+		<colordiffuse>99ffffff</colordiffuse>
 		<animation effect="fade" time="200">WindowOpen</animation>
         <animation effect="fade" time="300">WindowClose</animation>
 		</control>

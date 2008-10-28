@@ -139,6 +139,16 @@
 <posy>29</posy>
 <width>144</width>
 <height>190</height>
+<texture>3.png</texture>
+<visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>29</posy>
+<width>144</width>
+<height>190</height>
 <texture>1.png</texture>
 <visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
 <animation effect="fade" time="10">Windowclose</animation>
@@ -184,6 +194,16 @@
 </itemlayout>
 
 <focusedlayout width="144" height="600">
+
+<control type="image">
+<posx>0</posx>
+<posy>29</posy>
+<width>144</width>
+<height>190</height>
+<texture>3.png</texture>
+<visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
 
 <control type="image">
 <posx>0</posx>

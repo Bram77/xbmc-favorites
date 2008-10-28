@@ -208,6 +208,7 @@
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
+<colordiffuse>99ffffff</colordiffuse>
 <textoffsetx>17</textoffsetx>
 <aligny>center</aligny>
 <width>150</width>
@@ -230,6 +231,7 @@
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
+<colordiffuse>99ffffff</colordiffuse>
 <textoffsetx>17</textoffsetx>
 <aligny>center</aligny>
 <width>150</width>
@@ -252,6 +254,7 @@
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
+<colordiffuse>99ffffff</colordiffuse>
 <textoffsetx>17</textoffsetx>
 <aligny>center</aligny>
 <width>150</width>
@@ -274,6 +277,7 @@
 <font>font64</font>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
+<colordiffuse>99ffffff</colordiffuse>
 <textoffsetx>17</textoffsetx>
 <aligny>center</aligny>
 <width>150</width>
@@ -296,6 +300,7 @@
 <align>left</align>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
+<colordiffuse>99ffffff</colordiffuse>
 <textoffsetx>17</textoffsetx>
 <aligny>center</aligny>
 <width>150</width>
