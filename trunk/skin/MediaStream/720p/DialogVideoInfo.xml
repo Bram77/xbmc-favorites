@@ -173,9 +173,7 @@
                   </control>
                   <control type="label">
                     <description>Value</description>
-                    <info>ListItem.Path</info>
-                    <haspath>true</haspath>
-                    <include>MediaInfoWideValue</include>
+                    <include>VideoInfoFilePathValue</include>
                   </control>
                 </control>
               </control>
@@ -522,9 +520,7 @@
                           </control>
                           <control type="label">
                             <description>Value</description>
-                            <info>ListItem.Path</info>
-                            <haspath>true</haspath>
-                            <include>MediaInfoWideValue</include>
+                            <include>VideoInfoFilePathValue</include>
                           </control>
                         </control>
                       </control>

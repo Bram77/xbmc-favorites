@@ -518,7 +518,7 @@
     <control type="grouplist">
       <description>misc_values</description>
       <posx>145</posx>
-      <posy>450</posy>
+      <posy>420</posy>
       <height>200</height>
 
       <control type="label" id="50">
@@ -537,6 +537,12 @@
         <description>mplayer_dll_version</description>
         <include>SystemInfoLabels</include>
         <label>144</label>
+      </control>
+
+      <control type="label" id="53">
+        <description>skin version</description>
+        <include>SystemInfoLabels</include>
+        <include>Revision</include>
       </control>
     </control>
 

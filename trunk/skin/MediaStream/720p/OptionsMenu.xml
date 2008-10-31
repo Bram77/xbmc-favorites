@@ -27,7 +27,7 @@
         <width>64</width>
         <height>34</height>
         <texture>OMIndicRight.png</texture>
-        <visible>Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(56) | [[Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(59)] + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]] | [[Control.IsVisible(51) | Control.IsVisible(57)] + [Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary)]] | [Control.IsVisible(51) + Window.IsVisible(MyPictures)]</visible>
+        <visible>Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(56) | [[Control.IsVisible(54) | Control.IsVisible(57)] + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]] | [[Control.IsVisible(51) | Control.IsVisible(57)] + [Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary)]] | [Control.IsVisible(51) + Window.IsVisible(MyPictures)]</visible>
         <include>OptionsMenuFade</include>
       </control>
     </control>
@@ -189,7 +189,6 @@
           <include>VideoOSDSlideLeft</include>
         </control>
 
-<!--
         <control type="image">
           <description>Wall Stream Thumb</description>
           <include>OMViewLargeThumb</include>
@@ -197,7 +196,6 @@
           <visible>ControlGroup(9009).HasFocus() + Control.HasFocus(958)</visible>
           <include>VideoOSDSlideLeft</include>
         </control>
--->       
       </control>
     </control>
 
@@ -277,26 +275,26 @@
         <control type="image" id="9103">
           <description>TV Wide Thumb</description>
           <texture>ViewThumbTVWide.png</texture>
-          <visible>Control.IsVisible(59) + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]</visible>
+          <visible>Control.IsVisible(57) + Window.IsVisible(MyVideoLibrary) + Container.Content(tvshows)</visible>
           <include>OMViewThumb</include>
         </control>
         <control type="label" id="9103">
           <description>TV Wide view button</description>
           <label>$LOCALIZE[539]</label>
-          <visible>Control.IsVisible(59) + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]</visible>
+          <visible>Control.IsVisible(57) + Window.IsVisible(MyVideoLibrary) + Container.Content(tvshows)</visible>
           <include>OMViewLabelItem</include>
         </control>
 
         <control type="image" id="9104">
           <description>TV Seasons Thumb</description>
           <texture>ViewThumbSeasons.png</texture>
-          <visible>Control.IsVisible(57) + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]</visible>
+          <visible>Control.IsVisible(57) + Window.IsVisible(MyVideoLibrary) + Container.Content(seasons)</visible>
           <include>OMViewThumb</include>
         </control>
         <control type="label" id="9104">
           <description>TV Seasons view button</description>
           <label>$LOCALIZE[31703]</label>
-          <visible>Control.IsVisible(57) + [Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]</visible>
+          <visible>Control.IsVisible(57) + Window.IsVisible(MyVideoLibrary) + Container.Content(seasons)</visible>
           <include>OMViewLabelItem</include>
         </control>
 
@@ -404,7 +402,6 @@
           <include>OMViewLabelItem</include>
         </control>
 
-<!--
         <control type="image" id="9114">
           <description>Wall Stream Thumb</description>
           <texture>ViewThumbWallStream.png</texture>
@@ -417,7 +414,6 @@
           <visible>Control.IsVisible(53)</visible>
           <include>OMViewLabelItem</include>
         </control>
--->
       </control>
 
       <control type="grouplist" id="9011">
@@ -468,9 +464,9 @@
 
         <control type="button" id="925">
           <description>TV Wide view button</description>
-          <visible>!Control.IsVisible(59) + [Window.IsVisible(MyVideoLibrary) + Container.Content(tvshows)]</visible>
+          <visible>!Control.IsVisible(57) + [Window.IsVisible(MyVideoLibrary) + Container.Content(tvshows)]</visible>
           <label>$LOCALIZE[539]</label>
-          <onclick>Container.SetViewMode(59)</onclick>
+          <onclick>Container.SetViewMode(57)</onclick>
           <onclick>SetFocus(50)</onclick>
           <include>OMButtonItem</include>
         </control>
@@ -556,16 +552,15 @@
           <include>OMButtonItem</include>
         </control>
 
-<!--
         <control type="button" id="958">
           <description>Wall Stream view button</description>
-          <visible>!Control.IsVisible(53) + [!Window.IsVisible(MyPictures)]</visible>
+          <visible>!Control.IsVisible(53)</visible>
           <label>$LOCALIZE[31714]</label>
           <onclick>Container.SetViewMode(53)</onclick>
           <onclick>SetFocus(50)</onclick>
           <include>OMButtonItem</include>
         </control>
--->
+
 
 <!-- Setup Options -->
         <control type="label" id="1000">
@@ -735,7 +730,7 @@
   				<label>$LOCALIZE[31670]</label>
           <onclick>Skin.ToggleSetting(ShowFanartOnTVList)</onclick>
           <selected>Skin.HasSetting(ShowFanartOnTVList)</selected>
-          <visible>Control.IsVisible(59) + [Window.IsVisible(MyVideoLibrary)]</visible>
+          <visible>Control.IsVisible(57) + [Window.IsVisible(MyVideoLibrary) + Container.Content(tvshows)]</visible>
           <include>OMButtonItem</include>
         </control>
 

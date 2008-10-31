@@ -13,10 +13,12 @@
     <include>Coverflow</include>
     <include>InfoList</include>
     <include>PanelStream</include>
+    <include>WallStream</include>
     <!-- -->
 
     <control type="group">
       <include>TopOverlayTitlePos</include>
+      <visible>!Control.IsVisible(53) | !Container(53).Row(0)</visible>
 
       <include>TopOverlayFirstTitleAreaBG</include>
 
@@ -27,10 +29,14 @@
       </control>
     </control>
 
-    <include>Clock</include>
-    <include condition="!Skin.HasSetting(HideOptionsMenu)">OptionsMenu</include>
+    <control type="group">
+      <visible>!Control.IsVisible(53) | !Container(53).Row(0)</visible>
+      <include>Clock</include>
+      <include>MusicNowPlayingIndicators</include>
+    </control>
+
     <include>MediaCount</include>
-    <include>MusicNowPlayingIndicators</include>
+    <include condition="!Skin.HasSetting(HideOptionsMenu)">OptionsMenu</include>
 
   </controls>
 </window>

@@ -392,13 +392,18 @@
               <onclick>XBMC.ActivateWindow(501,Playlists)</onclick>
             </item>
             <item id="3">
+              <description>Music Videos</description>
+              <label> $LOCALIZE[20389] </label>
+              <onclick>XBMC.ActivateWindow(MyVideoLibrary,musicvideos,return)</onclick>
+            </item>
+            <item id="4">
               <description>Settings Button</description>
               <label> $LOCALIZE[31060] </label>
               <onclick>XBMC.ActivateWindow(15)</onclick>
             </item>
           </content>
         </control>
-  
+
         <control type="list" id="403">
           <description>Pictures Side Menu</description>
           <onup>403</onup>
@@ -1531,9 +1536,9 @@
         <width>1210</width>
         <font>MediumTitleCapsFont</font>
         <urlset>1</urlset>
-        <textcolor>Focused</textcolor>
-        <headlinecolor>Highlighted</headlinecolor>
-        <titlecolor>Focused</titlecolor>
+        <textcolor>Highlighted</textcolor>
+        <headlinecolor>Focused</headlinecolor>
+        <titlecolor>Highlighted</titlecolor>
         <animation effect="fade" time="700" delay="300">WindowOpen</animation>
         <animation effect="fade" time="100">WindowClose</animation>
       </control>
@@ -1541,6 +1546,14 @@
       <control type="group">
         <description>Fades for RSS text</description>
         <posy>4</posy>
+
+        <control type="image">
+          <description>Left hand fade for RSS</description>
+          <posx>30</posx>
+          <width>40</width>
+          <height>40</height>
+          <texture>BlackGradient.png</texture>
+        </control>
 
         <control type="image">
           <description>Right hand fade for RSS</description>

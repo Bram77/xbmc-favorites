@@ -4,6 +4,8 @@
   <include>DialogFade</include>
 
   <controls>
+    <include>DialogDarkFadeBG</include>
+
     <control type="group">
       <include>ProgressDialogCenterPos</include>
       <include>ProgressDialogBG</include>
