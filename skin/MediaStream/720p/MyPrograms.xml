@@ -8,6 +8,8 @@
     <include>List</include>
     <include>InfoList</include>
     <include>PanelStream</include>
+    <include>Coverflow</include>
+    <include>WallStream</include>
 
     <control type="group">
       <include>TopOverlayTitlePos</include>

@@ -148,6 +148,14 @@
           <include>GeneralSkinOption</include>
         </control>
 
+        <control type="radiobutton" id="221">
+          <description>Hide Info in Wall Stream view</description>
+          <label>$LOCALIZE[31692]</label>
+          <onclick>Skin.ToggleSetting(HideInfoInWallStream)</onclick>
+          <selected>Skin.HasSetting(HideInfoInWallStream)</selected>
+          <include>GeneralSkinOption</include>
+        </control>
+
         <control type="radiobutton" id="225">
           <description>Hide Fanart in Files Mode</description>
           <label>$LOCALIZE[31674] $LOCALIZE[31681]</label>

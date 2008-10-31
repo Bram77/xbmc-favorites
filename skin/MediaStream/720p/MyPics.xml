@@ -10,6 +10,8 @@
     <include>List</include>
     <include>Pictures</include>
     <include>ImageStream</include>
+    <include>WallStream</include>
+    <include>Coverflow</include>
     <!-- -->
 
     <control type="group">

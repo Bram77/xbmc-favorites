@@ -141,6 +141,7 @@
               <height>94</height>
               <aspectratio align="right">keep</aspectratio>
               <info>VideoPlayer.Cover</info>
+              <visible>!Skin.HasSetting(HidePlotInVideoOSD)</visible>
             </control>
 
             <control type="textbox" id="1">
@@ -149,6 +150,15 @@
               <height>86</height>
               <label>$INFO[VideoPlayer.Plot]</label>
               <visible>!Skin.HasSetting(HidePlotInVideoOSD)</visible>
+            </control>
+
+            <control type="image" id="1">
+              <posx>660</posx>
+              <width>100</width>
+              <height>94</height>
+              <aspectratio align="right">keep</aspectratio>
+              <info>VideoPlayer.Cover</info>
+              <visible>Skin.HasSetting(HidePlotInVideoOSD)</visible>
             </control>
           </control>
         </control>
@@ -190,6 +200,7 @@
               <height>94</height>
               <aspectratio align="right">keep</aspectratio>
               <info>VideoPlayer.Cover</info>
+              <visible>!Skin.HasSetting(HidePlotInVideoOSD)</visible>
             </control>
 
             <control type="textbox" id="1">
@@ -198,6 +209,15 @@
               <height>86</height>
               <label>$INFO[VideoPlayer.Plot]</label>
               <visible>!Skin.HasSetting(HidePlotInVideoOSD)</visible>
+            </control>
+
+            <control type="image" id="1">
+              <posx>596</posx>
+              <width>170</width>
+              <height>94</height>
+              <aspectratio align="right">keep</aspectratio>
+              <info>VideoPlayer.Cover</info>
+              <visible>Skin.HasSetting(HidePlotInVideoOSD)</visible>
             </control>
           </control>
         </control>

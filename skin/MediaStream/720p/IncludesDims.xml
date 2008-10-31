@@ -7,6 +7,23 @@
     <height>32</height>
   </include>
 
+  <include name="MediaCountPos">
+    <posx>1112</posx>
+    <posy>683</posy>
+  </include>
+
+  <include name="MediaCountBGDims">
+    <posx>1</posx>
+    <posy>1</posy>
+    <width>160</width>
+    <height>28</height>
+  </include>
+
+  <include name="MediaCountNumberPos">
+    <posx>134</posx>
+    <posy>1</posy>
+  </include>
+
   <include name="VolumeImageDims">
     <width>47</width>
     <height>47</height>
@@ -341,11 +358,11 @@
   </include>
 
   <include name="MoviesInfoStarRatingDims">
-    <posx>260</posx>
+    <posx>340</posx>
   </include>
 
   <include name="NonMoviesInfoStarRatingDims">
-    <posx>170</posx>
+    <posx>200</posx>
   </include>
 
   <include name="VideoInfoCastThumbDims">
@@ -781,6 +798,470 @@
     <font>MediumSmallTitleCapsFont</font>
   </include>
 
+<!-- Wall Stream -->
+  <constant name="WallStreamPosterWidth">160</constant>
+
+  <include name="WallStreamPosterSlideAnim">
+    <animation effect="slide" end="29,0" time="0" reversible="false" condition="Container.Column(0)">Conditional</animation>
+    <animation effect="slide" end="0,42" time="0" reversible="false" condition="Container.Row(0)">Conditional</animation>
+    <animation effect="slide" end="0,-11" time="0" reversible="false" condition="Container.Row(2)">Conditional</animation>
+    <animation effect="slide" end="-29,0" time="0" reversible="false" condition="Container.Column(7)">Conditional</animation>
+  </include>
+
+  <include name="WallStreamPosterFocusDims">
+    <posx>-8</posx>
+    <posy>-8</posy>
+    <width>176</width>
+    <height>246</height>
+  </include>
+
+  <include name="WallStreamPosterOverlayFocusDims">
+    <width>150</width>
+    <height>140</height>
+  </include>
+
+  <include name="WallStreamPosterZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-40,-54,240,338" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamPosterOverlayZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-32,-43,220,200" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamNonMusicFirstRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(0)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(1)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(2)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(3)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(4)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(5)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(6)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(7)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamNonMusicSecondRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(8)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(9)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(10)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(11)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(12)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(13)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(14)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(15)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamNonMusicThirdRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(16)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(17)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(18)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(19)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(20)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(21)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(22)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(23)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamInfo</include>
+    </control>
+  </include>
+
+  <constant name="WallStreamCoverWidth">160</constant>
+
+  <include name="WallStreamAlbumCoverSlideAnim">
+    <animation effect="slide" end="29,0" time="0" delay="100" reversible="false" condition="Container.Column(0)">Conditional</animation>
+    <animation effect="slide" end="0,29" time="0" delay="100" reversible="false" condition="Container.Row(0)">Conditional</animation>
+    <animation effect="slide" end="-29,0" time="0" delay="100" reversible="false" condition="Container.Column(7)">Conditional</animation>
+  </include>
+
+  <include name="WallStreamAlbumCoverFocusDims">
+    <posx>-8</posx>
+    <posy>-8</posy>
+    <width>176</width>
+    <height>176</height>
+  </include>
+
+  <include name="WallStreamAlbumOverlayFocusDims">
+    <width>120</width>
+    <height>120</height>
+  </include>
+
+  <include name="WallStreamAlbumCoverZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-40,-40,240,240" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamAlbumOverlayZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-30,-28,164,164" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamMusicFirstRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(0)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(1)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(2)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(3)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(4)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(5)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(6)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(7)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamMusicSecondRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(8)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(9)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(10)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(11)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(12)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(13)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(14)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(15)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamMusicThirdRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(16)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(17)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(18)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(19)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(20)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(21)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(22)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(23)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamMusicFourthRowInfo">
+    <control type="group">
+      <posx>211</posx>
+      <visible>Container(53).Position(24)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>342</posx>
+      <visible>Container(53).Position(25)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>502</posx>
+      <visible>Container(53).Position(26)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>662</posx>
+      <visible>Container(53).Position(27)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>94</posx>
+      <visible>Container(53).Position(28)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>255</posx>
+      <visible>Container(53).Position(29)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>414</posx>
+      <visible>Container(53).Position(30)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>549</posx>
+      <visible>Container(53).Position(31)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamMusicInfo</include>
+    </control>
+  </include>  
+
 <!-- Video Views -->
 <!-- =========== -->
   <include name="TopOverlayTitleAreaTextDims">
@@ -871,8 +1352,10 @@
   <constant name="TVWideInfoValueWidth">434</constant>
 
   <include name="TVWideStarRatingImgDims">
-    <posx>170</posx>
+    <posx>200</posx>
   </include>
+
+  <constant name="TVViewListWidth">640</constant>
 
   <include name="TVUnwatchedEpisodesDetailsDims">
     <posx>560</posx>
@@ -904,14 +1387,9 @@
     <width>260</width>
     <height>450</height>
   </include>
-  
-  <constant name="TVSeasonsListWidth">640</constant>
 
-  <include name="TVSeasonsListDims">
-    <posx>200</posx>
-    <posy>420</posy>
-    <width>TVSeasonsListWidth</width>
-    <height>168</height>
+  <include name="TVSeasonsListAnim">
+    <animation effect="slide" end="-446,198" time="0" condition="Container.Content(seasons)">Conditional</animation>
   </include>
 
   <include name="TVSeasonsItemBGDims">
@@ -1003,7 +1481,7 @@
   </include>
 
   <include name="TVEpisodesStarRatingDims">
-    <posx>170</posx>
+    <posx>200</posx>
   </include>
 
   <include name="TVEpsiodesWriterPos">

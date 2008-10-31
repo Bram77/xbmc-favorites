@@ -1,10 +1,42 @@
 History of Changes
 ==================
 
+v0.96 (30/10/2008)
+----- ------------
+
+Added: Wall Stream view for widescreen and 4x3 (currently works best with portrait posters and album covers)
+Added: Option to hide info area in Wall Stream view
+Added: Music Videos link to Home screen (in Music sub-menu)
+Added: Coverflow and Wall Stream view to Pictures and Programs screens
+Added: Alternative font sets (Alt Default, Alt Bigger and Alt Massive) which use the old default font
+Added: Fade on the left hand side of the RSS area (to mirror the fade that was already on the right)
+Added: Display of the skin version no. (and SVN revision) to the System Info screen
+Added: Chinese (Simple) translation
+
+Fixed: Missing background in Settings screens
+Fixed: Alignment and position of larger clock
+Fixed: Vertical alignment of text in Media Count
+Fixed: Height of buttons on Weather screen
+Fixed: Lining up of reflections in Coverflow for 4x3
+Fixed: Media Count label for 4x3
+
+Updated: Colour of text in the RSS feed (to make it easier to read)
+Updated: Version of included XBMC Lyrics script
+Updated: Removed the blue AM/PM from the clock (until we can sort out the alignment issues that happen with single digit hours)
+Updated: File Path in video info dialogs now auto scrolls
+Updated: Video OSD layout so thumb is shown on right if plot is hidden
+Updated: Font to work better with foreign chars (thanks to haken)
+Updated: Path for lyrics script so it should work better on all platforms
+Updated: Tidied up positioning of star rating image in video info dialogs, TV Wide view and Episodes view
+Updated: Darker fade behind Yes/No dialog to make it easier to read text in dialog
+Updated: Skinned the XBMC Lyrics UI to be more MediaStream-like
+Updated: Overlay for Media screens (default theme) to be slightly more transparent
+
+
 v0.95 (13/10/2008)
 ----- ------------
 
-Added: New default font that should (hopefully) be easier to read on-screen
+Added: New default font that should (hopefully) be easier to read on-screen (Special thanks to Sigalas for supplying this)
 Added: Coverflow view for videos (Movies, TV Shows, Seasons and Episodes)
 Added: Option to reduce height of lower overlay when viewing wide TV Show icons in Coverflow view (Lite theme only)
 Added: Watched/Unwatched overlay to Episode version of Media Preview view

@@ -1,5 +1,5 @@
 <includes>
-  <include name="TVWide">
+  <include name="TV">
     <control type="group">
       <include>TVWideVisible</include>
       <include>FanartOnTVProjectorScreen</include>
@@ -45,7 +45,7 @@
           <description>Show outline</description>
           <include>TVWidePlotDims</include>
           <info>ListItem.Plot</info>
-          <autoscroll>Control.HasFocus(59)</autoscroll>
+          <autoscroll>Control.HasFocus(57)</autoscroll>
         </control>
 
         <control type="group">
@@ -122,105 +122,6 @@
       </control>
     </control>
 
-    <control type="list" id="59">
-      <viewtype label="TV Wide">list</viewtype>
-      <posx>646</posx>
-      <posy>242</posy>
-      <width>640</width>
-      <height>378</height>
-      <pagecontrol>-</pagecontrol>
-      <scrolltime>200</scrolltime>
-      <onleft>Skin.ToggleSetting(HideNowPlayingMusicInfo)</onleft>
-      <onright>9009</onright>
-      <onup>59</onup>
-      <ondown>59</ondown>
-      <include>MediaViewFade</include>
-
-      <itemlayout width="640" height="42">
-        <control type="image">
-          <include>MediaItemBG</include>
-        </control>
-        <control type="label">
-          <include>MediaItemMainInfoNF</include>
-        </control>
-
-        <control type="label">
-          <include>TVTotalEpisodesDetailsNF</include>
-        </control>
-        <control type="label">
-          <include>TVUnwatchedEpisodesDetailsNF</include>
-        </control>
-        <control type="image">
-          <include>TVUnwatchedEpisodesDetailsImage</include>
-          <include>MediaItemNFFade</include>
-        </control>
-      </itemlayout>
-
-      <focusedlayout width="640" height="42">
-        <control type="image">
-          <include>MediaItemBG</include>
-        </control>
-        <control type="image">
-          <include>MediaItemFocusBG</include>
-        </control>
-        <control type="image">
-          <visible>!IsEmpty(ListItem.Episode)</visible>
-          <include>MediaItemDetailBG</include>
-        </control>
-        <control type="label">
-          <include>MediaItemMainInfoNF</include>
-          <include>MediaListItemFadeOut</include>
-        </control>
-        <control type="label">
-          <include>MediaItemMainInfoFO</include>
-          <include>MediaListItemFade</include>
-        </control>
-
-        <control type="label">
-          <include>TVTotalEpisodesDetailsNF</include>
-          <include>MediaListItemFadeOut</include>
-        </control>
-        <control type="label">
-          <include>TVTotalEpisodesDetailsFO</include>
-          <include>MediaListItemFade</include>
-        </control>
-        <control type="label">
-          <include>TVUnwatchedEpisodesDetailsNF</include>
-          <include>MediaListItemFadeOut</include>
-        </control>
-        <control type="label">
-          <include>TVUnwatchedEpisodesDetailsFO</include>
-          <include>MediaListItemFade</include>
-        </control>
-        <control type="image">
-          <include>TVUnwatchedEpisodesDetailsImage</include>
-          <include>MediaListItemFade</include>
-        </control>
-      </focusedlayout>
-    </control>
-
-    <control type="group">
-      <include>TVWideVisible</include>
-      <include>MediaViewFade</include>
-
-      <control type="image">
-        <description>TV Show List overlay</description>
-        <visible>![Container(59).Position(8)] + !Skin.HasTheme(lite)</visible>
-        <posx>636</posx>
-        <posy>550</posy>
-        <width>660</width>
-        <height>100</height>
-        <texture>BlackGradient2.png</texture>
-        <aspectratio>stretch</aspectratio>
-      </control>
-
-      <include>CommonSortLetters</include>
-    </control>
-  </include>
-
-
-
-  <include name="TVSeasons">
     <control type="group">
       <include>TVSeasonsVisible</include>
       <include>MediaViewBGOverlay</include>
@@ -290,105 +191,184 @@
       </control>
     </control>
 
-    <control type="group">
-      <include>TVSeasonsVisible</include>
+    <control type="list" id="57">
+      <viewtype label="TV">list</viewtype>
+      <posx>646</posx>
+      <posy>242</posy>
+      <width>TVViewListWidth</width>
+      <height>378</height>
+      <pagecontrol>-</pagecontrol>
+      <scrolltime>200</scrolltime>
+      <onleft>Skin.ToggleSetting(HideNowPlayingMusicInfo)</onleft>
+      <onright>9009</onright>
+      <onup>57</onup>
+      <ondown>57</ondown>
       <include>MediaViewFade</include>
-      <include>TVSeasonsFadeOutAnim</include>
+      <include>TVSeasonsListAnim</include>
 
-      <control type="list" id="57">
-        <viewtype label="Seasons">list</viewtype>
-        <include>TVSeasonsListDims</include>
-        <pagecontrol>-</pagecontrol>
-        <onup>57</onup>
-        <ondown>57</ondown>
-        <onleft>Skin.ToggleSetting(HideNowPlayingMusicInfo)</onleft>
-        <onright>9009</onright>
-        <orientation>vertical</orientation>
+      <itemlayout condition="Container.Content(tvshows)" width="TVViewListWidth" height="42">
+        <control type="image">
+          <include>MediaItemBG</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoNF</include>
+        </control>
 
-        <itemlayout width="TVSeasonsListWidth" height="42">
-          <control type="image">
-            <include>TVSeasonsItemBGDims</include>
-            <include>MediaItemBG</include>
-          </control>
-          <control type="label">
-            <include>MediaItemMainInfoNF</include>
-          </control>
+        <control type="label">
+          <include>TVTotalEpisodesDetailsNF</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsNF</include>
+        </control>
+        <control type="image">
+          <include>TVUnwatchedEpisodesDetailsImage</include>
+          <include>MediaItemNFFade</include>
+        </control>
+      </itemlayout>
 
-          <control type="label">
-            <include>TVTotalEpisodesDetailsNF</include>
-          </control>
-          <control type="label">
-            <include>TVUnwatchedEpisodesDetailsNF</include>
-          </control>
-          <control type="image">
-            <include>TVUnwatchedEpisodesDetailsImage</include>
-            <include>MediaItemNFFade</include>
-          </control>
-          <control type="label">
-            <include>TVWatchedEpisodesDetailsNF</include>
-          </control>
-          <control type="image">
-            <include>TVWatchedEpisodesDetailsImage</include>
-            <include>MediaItemNFFade</include>
-          </control>
-        </itemlayout>
+      <focusedlayout condition="Container.Content(tvshows)" width="TVViewListWidth" height="42">
+        <control type="image">
+          <include>MediaItemBG</include>
+        </control>
+        <control type="image">
+          <include>MediaItemFocusBG</include>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.Episode)</visible>
+          <include>MediaItemDetailBG</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoFO</include>
+          <include>MediaListItemFade</include>
+        </control>
 
-        <focusedlayout width="TVSeasonsListWidth" height="42">
-          <control type="image">
-            <include>TVSeasonsItemBGDims</include>
-            <include>MediaItemBG</include>
-          </control>
-          <control type="image">
-            <include>TVSeasonsItemFocusBGDims</include>
-            <include>MediaItemFocusBG</include>
-          </control>
-          <control type="image">
-            <visible>!IsEmpty(ListItem.Episode)</visible>
-            <include>TVSeasonsItemDetailBGDims</include>
-            <include>MediaItemDetailBG</include>
-          </control>
-          <control type="label">
-            <include>MediaItemMainInfoNF</include>
-            <include>MediaListItemFadeOut</include>
-          </control>
-          <control type="label">
-            <include>MediaItemMainInfoFO</include>
-            <include>MediaListItemFade</include>
-          </control>
-          <control type="label">
-            <include>TVTotalEpisodesDetailsNF</include>
-            <include>MediaListItemFadeOut</include>
-          </control>
-          <control type="label">
-            <include>TVTotalEpisodesDetailsFO</include>
-            <include>MediaListItemFade</include>
-          </control>
-          <control type="label">
-            <include>TVUnwatchedEpisodesDetailsNF</include>
-            <include>MediaListItemFadeOut</include>
-          </control>
-          <control type="label">
-            <include>TVUnwatchedEpisodesDetailsFO</include>
-            <include>MediaListItemFade</include>
-          </control>
-          <control type="image">
-            <include>TVUnwatchedEpisodesDetailsImage</include>
-            <include>MediaListItemFade</include>
-          </control>
-          <control type="label">
-            <include>TVWatchedEpisodesDetailsNF</include>
-            <include>MediaListItemFadeOut</include>
-          </control>
-          <control type="label">
-            <include>TVWatchedEpisodesDetailsFO</include>
-            <include>MediaListItemFade</include>
-          </control>
-          <control type="image">
-            <include>TVWatchedEpisodesDetailsImage</include>
-            <include>MediaListItemFade</include>
-          </control>
-        </focusedlayout>
+        <control type="label">
+          <include>TVTotalEpisodesDetailsNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>TVTotalEpisodesDetailsFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="image">
+          <include>TVUnwatchedEpisodesDetailsImage</include>
+          <include>MediaListItemFade</include>
+        </control>
+      </focusedlayout>
+
+      <itemlayout condition="Container.Content(seasons)" width="TVViewListWidth" height="42">
+        <control type="image">
+          <include>TVSeasonsItemBGDims</include>
+          <include>MediaItemBG</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoNF</include>
+        </control>
+
+        <control type="label">
+          <include>TVTotalEpisodesDetailsNF</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsNF</include>
+        </control>
+        <control type="image">
+          <include>TVUnwatchedEpisodesDetailsImage</include>
+          <include>MediaItemNFFade</include>
+        </control>
+        <control type="label">
+          <include>TVWatchedEpisodesDetailsNF</include>
+        </control>
+        <control type="image">
+          <include>TVWatchedEpisodesDetailsImage</include>
+          <include>MediaItemNFFade</include>
+        </control>
+      </itemlayout>
+
+      <focusedlayout condition="Container.Content(seasons)" width="TVViewListWidth" height="42">
+        <control type="image">
+          <include>TVSeasonsItemBGDims</include>
+          <include>MediaItemBG</include>
+        </control>
+        <control type="image">
+          <include>TVSeasonsItemFocusBGDims</include>
+          <include>MediaItemFocusBG</include>
+        </control>
+        <control type="image">
+          <visible>!IsEmpty(ListItem.Episode)</visible>
+          <include>TVSeasonsItemDetailBGDims</include>
+          <include>MediaItemDetailBG</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>MediaItemMainInfoFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="label">
+          <include>TVTotalEpisodesDetailsNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>TVTotalEpisodesDetailsFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>TVUnwatchedEpisodesDetailsFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="image">
+          <include>TVUnwatchedEpisodesDetailsImage</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="label">
+          <include>TVWatchedEpisodesDetailsNF</include>
+          <include>MediaListItemFadeOut</include>
+        </control>
+        <control type="label">
+          <include>TVWatchedEpisodesDetailsFO</include>
+          <include>MediaListItemFade</include>
+        </control>
+        <control type="image">
+          <include>TVWatchedEpisodesDetailsImage</include>
+          <include>MediaListItemFade</include>
+        </control>
+      </focusedlayout>
+    </control>
+
+    <control type="group">
+      <include>TVWideVisible</include>
+      <include>MediaViewFade</include>
+
+      <control type="image">
+        <description>TV Show List overlay</description>
+        <visible>![Container(57).Position(8)] + !Skin.HasTheme(lite)</visible>
+        <posx>636</posx>
+        <posy>550</posy>
+        <width>660</width>
+        <height>100</height>
+        <texture>BlackGradient2.png</texture>
+        <aspectratio>stretch</aspectratio>
       </control>
+
+      <include>CommonSortLetters</include>
     </control>
   </include>
 

@@ -80,12 +80,14 @@
   <string id="31117">Thumb</string> 
   <string id="31118">Fanart</string> 
   <string id="31119">Toelichting</string> 
-  <string id="31120">Sterwaardering</string>
-  <string id="31121">Filmdetails</string>
+  <string id="31120">Waardering</string>
+  <string id="31121">Film details</string>
   <string id="31122">Gelanceerd</string>
   <string id="31123">MPAA</string>
   <string id="31124">Afl.</string> 
-  <string id="31125">Theatertijden</string> 
+  <string id="31125">Theatertijden</string>
+  <string id="31126">TV Serie details</string>
+  <string id="31127">Aflevering details</string>
 
 <!--  Music  -->
   <string id="31220">Speelt nu</string>
@@ -154,6 +156,7 @@
 	<string id="31687">bij video weergave</string>
 	<string id="31688">bij muziek weergave</string>
 	<string id="31689">bij foto weergave</string>
+	<string id="31690">Verberg 'geen thumb' iconen</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>
@@ -173,7 +176,6 @@
   <string id="31715">Paneel weergave</string>
   <string id="31716">Coverflow</string>
   <string id="31717">opties menu</string>
-
 
 <!--  Credits  -->
   <string id="31800">Over</string>

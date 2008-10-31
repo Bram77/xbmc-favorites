@@ -652,7 +652,7 @@
         <onright>9009</onright>
         <orientation>vertical</orientation>
 
-        <itemlayout width="WallStreamPosterWidth" height="WallStreamPosterHeight">
+        <itemlayout condition="![Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]" width="WallStreamPosterWidth" height="WallStreamPosterHeight">
           <control type="image">
             <description>Poster</description>
             <colordiffuse>cc999999</colordiffuse>
@@ -660,42 +660,119 @@
           </control>
         </itemlayout>
 
-        <focusedlayout width="WallStreamPosterWidth" height="WallStreamPosterHeight">
+        <focusedlayout condition="![Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]" width="WallStreamPosterWidth" height="WallStreamPosterHeight">
           <control type="group">
-            <posx>-524</posx>
-            <visible>[Container(53).Column(4) | Container(53).Column(5) | Container(53).Column(6) | Container(53).Column(7)]</visible>
+            <include>WallStreamPosterSlideAnim</include>
 
             <control type="image">
-              <posy>-54</posy>
-              <width>524</width>
-              <height>330</height>
-              <texture>BlackTransparent.png</texture>
+              <description>Poster</description>
+              <include>WallStreamPosterFocusDims</include>
+              <include>WallStreamPoster</include>
               <bordertexture border="14">ThumbShadow2.png</bordertexture>
               <bordersize>8</bordersize>
-              <colordiffuse>99999999</colordiffuse>
-              <animation type="Focus">
-                <effect type="fade" start="0" end="100" time="300" delay="2000"/>
-              </animation>
-              <animation type="Unfocus">
-                <effect type="fade" start="100" end="0" time="200"/>
-              </animation>
+              <include>WallStreamPosterZoomAnim</include>
+            </control>
+            <control type="image">
+              <description>Glass Overlay</description>
+              <include>WallStreamPosterOverlayFocusDims</include>
+              <texture>GlassOverlay2.png</texture>
+              <include>WallStreamPosterOverlayZoomAnim</include>
+              <visible>!IsEmpty(ListItem.Thumb)</visible>
             </control>
           </control>
+        </focusedlayout>
 
+        <itemlayout condition="[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]" width="WallStreamCoverWidth" height="WallStreamCoverHeight">
           <control type="image">
             <description>Poster</description>
-            <posx>-8</posx>
-            <posy>-8</posy>
-            <width>176</width>
-            <height>246</height>
-            <include>WallStreamPoster</include>
-            <bordertexture border="14">ThumbShadow2.png</bordertexture>
-            <bordersize>8</bordersize>
-            <animation effect="zoom" tween="quadratic" start="0,0,176,246" end="-32,-46,240,338" time="300" delay="100">Focus</animation>
-            <animation effect="zoom" tween="quadratic" start="-32,-46,240,338" end="0,0,176,246" time="200">Unfocus</animation>
+            <colordiffuse>cc999999</colordiffuse>
+            <include>WallStreamAlbumCover</include>
           </control>
+        </itemlayout>
 
+        <focusedlayout condition="[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]" width="WallStreamCoverWidth" height="WallStreamCoverHeight">
+          <control type="group">
+            <include>WallStreamAlbumCoverSlideAnim</include>
+
+            <control type="image">
+              <description>Album Cover</description>
+              <include>WallStreamAlbumCoverFocusDims</include>
+              <include>WallStreamAlbumCover</include>
+              <bordertexture border="14">ThumbShadow2.png</bordertexture>
+              <bordersize>8</bordersize>
+              <include>WallStreamAlbumCoverZoomAnim</include>
+            </control>
+            <control type="image">
+              <description>Glass Overlay</description>
+              <include>WallStreamAlbumOverlayFocusDims</include>
+              <texture>GlassOverlay2.png</texture>
+              <include>WallStreamAlbumOverlayZoomAnim</include>
+              <visible>!IsEmpty(ListItem.Thumb)</visible>
+            </control>
+          </control>
         </focusedlayout>
+      </control>
+
+      <control type="group">
+        <visible>![Container(53).OnNext | Container(53).OnPrevious] + !Skin.HasSetting(HideInfoInWallStream)</visible>
+        <include>WallStreamFadeAnim</include>
+
+        <control type="group">
+          <description>1st Row (Non-Music)</description>
+          <visible>![Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>45</posy>
+
+          <include>WallStreamNonMusicFirstRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>2nd Row (Non-Music)</description>
+          <visible>![Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>233</posy>
+
+          <include>WallStreamNonMusicSecondRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>3rd Row (Non-Music)</description>
+          <posy>451</posy>
+          <visible>![Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+
+          <include>WallStreamNonMusicThirdRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>1st Row (Music)</description>
+          <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>45</posy>
+
+          <include>WallStreamMusicFirstRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>2nd Row (Music)</description>
+          <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>176</posy>
+
+          <include>WallStreamMusicSecondRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>3rd Row (Music)</description>
+          <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>336</posy>
+
+          <include>WallStreamMusicThirdRowInfo</include>
+        </control>
+
+        <control type="group">
+          <description>4th Row (Music)</description>
+          <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)]</visible>
+          <posy>496</posy>
+
+          <include>WallStreamMusicFourthRowInfo</include>
+        </control>
+
       </control>
 
     </control>
