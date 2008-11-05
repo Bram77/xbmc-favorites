@@ -1,6 +1,7 @@
 <window id="4">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<previouswindow>0</previouswindow>
 	
 	<controls>
 

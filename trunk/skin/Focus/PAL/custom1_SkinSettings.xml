@@ -462,9 +462,9 @@
 				<width>480</width>
 				<height>34</height>
 				<font>menu</font>
-				<label>$LOCALIZE[31935]</label>
-				<onclick>Skin.ToggleSetting(FanartNoPlot)</onclick>
-				<selected>Skin.HasSetting(FanartNoPlot)</selected>
+				<label>31067</label>
+				<onclick>Skin.ToggleSetting(fanartcolorEnable)</onclick>
+				<selected>Skin.HasSetting(fanartcolorEnable)</selected>
 				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
 			</control>
 			
@@ -472,32 +472,32 @@
 				<width>480</width>
 				<height>34</height>
 				<font>menu</font>
-				<label>31067</label>
-				<onclick>Skin.ToggleSetting(fanartcolorEnable)</onclick>
-				<selected>Skin.HasSetting(fanartcolorEnable)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
+				<label>$LOCALIZE[31940]</label>
+				<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
+				<selected>Skin.HasSetting(fanartcolorDarkBG)</selected>
+				<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
 			</control>
 			
 			<control type="radiobutton" id="404">
 				<width>480</width>
 				<height>34</height>
 				<font>menu</font>
-				<label>$LOCALIZE[31940]</label>
+				<label>$LOCALIZE[31941]</label>
 				<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
-				<selected>Skin.HasSetting(fanartcolorDarkBG)</selected>
-				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
+				<selected>!Skin.HasSetting(fanartcolorDarkBG)</selected>
+				<enable>!Skin.HasSetting(FanartViewEnable) + Skin.HasSetting(fanartcolorEnable)</enable>
 			</control>
-
+			
 			<control type="radiobutton" id="405">
 				<width>480</width>
 				<height>34</height>
 				<font>menu</font>
-				<label>$LOCALIZE[31941]</label>
-				<onclick>Skin.ToggleSetting(fanartcolorDarkBG)</onclick>
-				<selected>!Skin.HasSetting(fanartcolorDarkBG)</selected>
+				<label>$LOCALIZE[31935]</label>
+				<onclick>Skin.ToggleSetting(FanartNoPlot)</onclick>
+				<selected>Skin.HasSetting(FanartNoPlot)</selected>
 				<enable>!Skin.HasSetting(FanartViewEnable)</enable>
 			</control>
-			
+
 			<control type="radiobutton" id="406">
 				<width>480</width>
 				<height>34</height>
