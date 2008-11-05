@@ -1187,13 +1187,12 @@
 			</visible>
 			
 			<itemlayout height="184" width="108">
-	
+				
 				<control type="image">
 					<posx>0</posx>
 					<posy>5</posy>
 					<width>120</width>
 					<height>182</height>
-					<texture>DefaultMoviePoster.png</texture>
 					<info>ListItem.Thumb</info>
 					<bordertexture border="2">-</bordertexture>
 					<bordersize>6</bordersize>

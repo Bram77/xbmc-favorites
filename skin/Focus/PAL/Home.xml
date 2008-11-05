@@ -162,7 +162,18 @@
 		<include>home-menubar-startup</include>
 		<include>fadeinout</include>
 	</control>
-
+	
+	<control type="image">
+		<posx>600</posx>
+		<posy>10</posy>
+		<width>24</width>
+		<height>24</height>
+		<texture>muteicon.png</texture>
+		<visible>Player.Muted</visible>
+		<include>home-menubar</include>
+		<include>home-menubar-startup</include>
+		<include>fadeinout</include>
+	</control>
 
 <!--- SUBMENUS --------------------------------->	
 	<include>HomeVideoMenu</include>

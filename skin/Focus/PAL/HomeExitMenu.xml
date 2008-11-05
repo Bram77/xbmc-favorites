@@ -42,13 +42,14 @@
 	
 				<buttons>
 					<button id="1">
-						<label>482</label>
-						<onclick>XBMC.Credits</onclick>
+						<label>13005</label>
+						<onclick>XBMC.ShutDown()</onclick>
 					</button>
 					
 					<button id="2">
-						<label>20183</label>
-						<onclick>XBMC.ReloadSkin()</onclick>
+						<label>20126</label>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>system.logoff</onclick>
 					</button>
 					
 					<button id="3">
@@ -57,15 +58,18 @@
 					</button>
 					
 					<button id="4">
-						<label>20126</label>
-						<onclick>dialog.close(all,true)</onclick>
-						<onclick>system.logoff</onclick>
+						<label>482</label>
+						<onclick>XBMC.Credits</onclick>
 					</button>
 					
 					<button id="5">
-						<label>13005</label>
-						<onclick>XBMC.ShutDown()</onclick>
+						<label>20183</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
 					</button>
+
+					
+					
+					
 
 				</buttons>
 			</control>

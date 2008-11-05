@@ -1,7 +1,7 @@
 <window id="12">
 	<defaultcontrol>0</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<previouswindow>58</previouswindow>
+	<previouswindow>0</previouswindow>
 	
 	<controls>
 		<include>background</include>
