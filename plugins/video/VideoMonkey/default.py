@@ -23,7 +23,7 @@ resDir = os.path.join(rootDir, 'resources')
 imgDir = os.path.join(resDir, 'images')
 libDir = os.path.join(resDir, 'libs')
 sys.path.append(libDir)
-socket.setdefaulttimeout(20)
+#socket.setdefaulttimeout(20)
 
 urlopen = urllib2.urlopen
 cj = cookielib.LWPCookieJar()
