@@ -31,10 +31,10 @@ type=rss
 thumb=video.monkey.image|metacafe.png
 url=metacafe.com.cfg
 ########################################################
-name=Joox
-type=rss
-thumb=video.monkey.image|joox.png
-url=joox.net.cfg
+#name=Joox
+#type=rss
+#thumb=video.monkey.image|joox.png
+#url=joox.net.cfg
 ########################################################
 name=Myspass
 type=rss
