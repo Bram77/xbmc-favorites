@@ -1,3 +1,6 @@
+  06-11-2008 :: [scripts]    	    ~ Updated the "Navi-X" script to the latest SVN version
+  06-11-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
+  06-11-2008 :: [scripts]    	    ~ Updated the "T3CH Upgrader" script to the latest SVN version
   06-11-2008 :: [plugins][video]    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
   06-11-2008 :: [scripts]	    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
   05-11-2008 :: [skin]              ~ Updated the "Focus" skin to version ALpha 5b
@@ -7,7 +10,7 @@
   28-09-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
   25-10-2008 :: [plugins][video]    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
   25-10-2008 :: [scripts]	    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
-  19-10-2008 :: [ALL CATAGRIES]     ~ IT'S BEEN WHILE.... ALL AVAILABLE UPDATES HAVE BEEN APPLIED, NEW STUFF ADDED AND OLD STUFF REMOVED. EXPECT WEEKLY UPDATES!
+  19-10-2008 :: [ALL CATAGORIES]     ~ IT'S BEEN WHILE.... ALL AVAILABLE UPDATES HAVE BEEN APPLIED, NEW STUFF ADDED AND OLD STUFF REMOVED. EXPECT WEEKLY UPDATES!
 
 
 
