@@ -1,3 +1,4 @@
+  31-09-2008 :: [skin]              ~ Updated the "Focus" skin to version ALpha 5b
   25-10-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   31-09-2008 :: [skin]              ~ Updated the "MediaStream" skin to version 0.96
   31-09-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
