@@ -1,7 +1,7 @@
 from uriopener import UriHandler
 import uriopener
 import xbmc, xbmcgui
-import sys, re, urllib, os.path, math, urlparse
+import sys, re, urllib, os.path, math, urlparse, types
 #===============================================================================
 # Make global object available
 #===============================================================================
@@ -213,7 +213,11 @@ class Channel(chn_class.Channel):
         """
             retrieves the real Mediaurl
         """
-        if mediaurl.find(".asx") > 0:
+        # if it is a list, it was already processed. 
+        if type(mediaurl) is types.ListType or type(mediaurl) is types.TupleType:
+            return mediaurl
+        
+        elif mediaurl.find(".asx") > 0:
             logFile.debug("Parsing ASX")
             data = uriHandler.Open(mediaurl)
             results = common.DoRegexFindAll('<REF HREF\W*=\W*"([^"]+)"\W*/>', data)
