@@ -1,3 +1,4 @@
+  31-09-2008 :: [skin]              ~ Added the "Horizonz III" skin
   06-11-2008 :: [scripts]    	    ~ Updated the "Navi-X" script to the latest SVN version
   06-11-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   06-11-2008 :: [scripts]    	    ~ Updated the "T3CH Upgrader" script to the latest SVN version
