@@ -1,0 +1,117 @@
+<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+
+	<visible>[VideoPlayer.IsFullscreen] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<controls>
+	
+	<control type="group" id="213">
+		<posx>280</posx>
+		<posy>600</posy>
+			<animation effect="slide" start="0,400" end="0,0" time="500">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,400" time="0">Hidden</animation>
+		<visible>[Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + VideoPlayer.IsFullscreen + !Window.IsActive(123) + !Window.IsActive(124) + !Window.IsActive(125)</visible>
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>400</height>
+			<width>720</width>
+			<texture>vispanel2.png</texture>
+		</control>	
+		
+						<control type="label">
+			<description>Settings Label</description>
+			<posx>40</posx>
+			<posy>30</posy>
+			<width>420</width>
+            <include>scraperimdbtitle</include>
+			<label>Video Nav</label>
+		</control>
+		
+
+			<control type="image">
+				<posx>40</posx>
+				<posy>55</posy>
+				<width>110</width>
+				<height>4</height>
+				<texture>infoline.png</texture>
+			</control>
+		
+		<control type="label">
+			<posx>155</posx>
+			<posy>30</posy>
+			<align>left</align>
+			<label>Title:</label>
+			<include>scraperimdbtitle</include>
+		</control>
+		
+		<control type="label">
+			<posx>240</posx>
+			<posy>30</posy>
+			<width>440</width>
+			<align>left</align>
+			<label>$INFO[VideoPlayer.Title]</label>
+			<include>scraperimdb</include>
+		</control>
+		
+				<control type="label">
+			<posx>155</posx>
+			<posy>55</posy>
+			<align>left</align>
+			<label>Runtime:</label>
+			<include>scraperimdbtitle</include>
+		</control>
+		
+		<control type="label">
+			<posx>240</posx>
+			<posy>55</posy>
+			<width>400</width>
+			<align>left</align>
+			<label>$INFO[VideoPlayer.Duration]</label>
+			<include>scraperimdb</include>
+		</control>
+		
+				<control type="label">
+			<posx>680</posx>
+			<posy>55</posy>
+			<width>500</width>
+			<align>right</align>
+			<scroll>true</scroll>
+			<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+			<include>scraperimdb</include>
+			<visible>!Player.Paused</visible>
+		</control>
+		
+		<control type="label">
+			<posx>680</posx>
+			<posy>55</posy>
+			<width>520</width>
+			<align>right</align>
+			<label>$INFO[VideoPlayer.Time] (Paused)</label>
+			<include>scraperimdb</include>
+			<visible>Player.Paused</visible>
+		</control>
+				
+			
+					<control type="progress">
+				<description>Progressbar</description>
+				<posx>48</posx>
+				<posy>90</posy>
+				<width>625</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg>progress-back.png</texturebg>
+				<lefttexture>progress-left.png</lefttexture>
+				<midtexture>progress-mid.png</midtexture>
+				<righttexture>progress-right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+		
+		
+	</control>
+	
+
+	
+	</controls>
+</window>
