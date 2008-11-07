@@ -14,7 +14,7 @@ __author__ = "sfaxman"
 __url__ = "http://code.google.com/p/xbmc-addons/"
 __svn_url__ = "http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/"
 __credits__ = "sfaxman"
-__version__ = "1.2" # of this file
+__version__ = "1.4" # of this file
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -1157,7 +1157,8 @@ class Main:
                                 if source.quality == 'high' and source.url != '':
                                     self.videoExtension = '.' + source.extension
                                     return source.url
-                return match
+                if self.currentlist.ext_target_url == '':
+                    return match
             except:
                 traceback.print_exc(file = sys.stdout)
                 return ''
@@ -1363,6 +1364,7 @@ class Main:
             dia = xbmcgui.Dialog()
             if dia.yesno('', xbmc.getLocalizedString(30054)):
                 self.currentlist.removeItem(url)
+                xbmc.executebuiltin("Container.Refresh")
             return -2
         elif ext == 'videomonkey':
             result = self.playVideo(url)
@@ -1478,7 +1480,7 @@ class Main:
                 except:
                     pass
                 if result == 0:
-                    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+                    xbmcplugin.endOfDirectory(handle = int(sys.argv[1]), cacheToDisc = False)
             else:
                 params = sys.argv[2]
                 cleanedparams = params.replace('?', '')
