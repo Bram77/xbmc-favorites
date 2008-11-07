@@ -1,0 +1,118 @@
+-----------------------------------------------------------------------------------------------------
+Horizonz: An AEON Mod - VOLUME 3 (created by Gareth Denne aka XB2IRIS)
+-----------------------------------------------------------------------------------------------------
+- This is a MOD i.e. I did not create this skin
+- This is an ODE to the great AEON Classic skin created by DJH_
+- This MOD was created for my own personal use and preference
+- This MOD is to be used at your own risk
+-----------------------------------------------------------------------------------------------------
+Horizonz Updates (since Vol. 2)
+-----------------------------------------------------------------------------------------------------
+- Updated Home screen scroller, Home screen Time panel and RSS Feed panel appearance and position
+- Updated Now Playing panel to better suit the new look Home scroller
+- Updated Info view to be a slightly quicker version of the Showcase view with a different info panel
+- Updated Video OSD so for Navigation and Information purposes
+- Updated Movie  and TV Shows File Mode Showcase view for Smoother Navigation
+- Updated Shutdown Menu and sorted certain Time Panel inconsistencies out
+- Updated Disc Inserted panel to fit in better with the new look scroller and RSS Feed panels
+- Updated various Visibility issues across the board and corrected a few Panel issues
+- Added New Look and Animation effects to RSS Feed panel
+- Added New Now Playing frame to highlight the new panel
+- Added Now Playing panel to lower position Home Scroller
+- Added New Info panel to the Info view 
+- Added Option to have backdrop cycling in Info view and File Mode Showcase view
+- Added New Info panel to the Movies and TV Shows Wall view
+- Added New Dynamic Info panel to the Movies and TV Shows List and Poster Views
+- Added Thumbnail to Cast list on Video Info screen and fixed Actor Search dialog visibility issue 
+- Added Full screen Video OSD Info button support
+- Added Wider Full screen Settings Panel for better distribution of Dialogs
+- Added Scrolling Letter Offset for better Navigation through Scrolling views
+- Added New Shutdown Timer Menu with three pre-defined times (30, 60, 120 minutes)
+- Added Cancel Shutdown Time Function to Shutdown Timer Menu
+- Added Strings.xml label support for the Home Scroller and Section Heading labels
+- Added Stop Button to both Music and Video OSD panels
+- Added Rewind and Forward Buttons to Video OSD panel
+- Added New Default XB2IRIS Backdrop and Grey Showcase Backdrop
+- Added New MOD System tab to Core section
+- And more... (I think again)
+-----------------------------------------------------------------------------------------------------
+Horizonz Updates (since Vol. 1)
+-----------------------------------------------------------------------------------------------------
+- Updated certain Graphics which appeared fuzzy at higher resolutions
+- Updated Visualisation and Full Screen Video displays and OSD's
+- Updated certain Views which appeared un-aligned or inconsistent
+- Updated Player Controls panel position and size
+- Updated Info view Fanart transition for faster navigation
+- Added New Widecase view to TV Show section 
+- Added New Frames for Pictures, Artists, TV Show Episodes and TV Show Widecase
+- Added New Rss Panel for Home Scroller dark shade  
+- Added Showcase view to Movies and TV Shows File Mode
+- Added Showcase and Icon views to Music File Mode
+- Added Option to have backdrop cycling in Showcase view
+- Added Set Content Options menu and corrected a File Browser visibility issue
+- Added Hide Watched button in Movies and TV Shows sections
+- Added Visualisation selection button to Music OSD
+- Added Audio settings button to Video OSD
+- Added Debug Info window to Full screen Video display 
+- And more... (I think)
+-----------------------------------------------------------------------------------------------------
+AEON Updates (since Alpha 14C)
+-----------------------------------------------------------------------------------------------------
+- All graphics in AEON were given a glass polish
+- All graphics are now Optimized for XBOX use with minimal change in quality (XPR = Under 12MB)
+- All views updated to fit in with the new polished look
+- All black panel screens skinned and polished
+- Some Views updated to increase functionality and stability
+- Backdrop cycling times changed in all sections
+- A Few bugs were dealt with (and created, hahaha)
+- And more...
+----------------------------------------------------------------------------------------------------
+Added (since Alpha 14C)
+----------------------------------------------------------------------------------------------------
+- Optional Home Scroller shade i.e. Darker
+- More lightcrest effects e.g on Home Page
+- New fully functional Weather screen
+- New Visualisation OSD and OSD settings panels
+- Video OSD updated to similar state as the Visualisation OSD
+- Visualisation and Video Backdrop optionally displyed on Home page once again
+- New frames for all media types (Specific to media format or section)
+- Extended DEJAH's iconset to include system icons and more media specific icons
+- Profile Settings section, with Login screen and Logoff button (Caution!)
+- Master Lock settings Panel incorporated
+- Soundpack added to improve user experience
+- System Information now works
+- Scripts is fully functional
+- New Numeric Keyboard for Shutdown timer and Key Master Lock password protection
+- Error message panel system added
+- Song Information Panel added
+- And more...
+---------------------------------------------------------------------------------------------------
+Views (since Alpha 14C)
+---------------------------------------------------------------------------------------------------
+- New Showcase view added to Music, Games and Pictures sections
+- New Info view added to the Music section (Specific to different Sub-Sections e.g. Artists)
+- New Info view added to Movies and Tv Shows sections (similar to Showcase view, but more stable)
+- Updated Music Roller to fit in the Games Section
+- Updated Icon View to make better use of panel space (similar to Wall view)
+- Updated Wall View so Icons fit symmetrically avoiding Borders and bettering navigation
+- And more...
+---------------------------------------------------------------------------------------------------
+Not Updated or Bugs
+---------------------------------------------------------------------------------------------------
+- Clips, Adult, Comics, Arcade and Apps not edited and may not function properly (personal pref)
+- Random black screens do occur on the XBOX, but not very often (MEMORY issue)
+- Busy Dialog Isn't up to scratch and is in need of a Progress Bar
+- Watched/Unwatched Tags need to be added the Movie and TV Show Libaries
+- And hopefully not too much more...
+---------------------------------------------------------------------------------------------------
+Special Thanks
+---------------------------------------------------------------------------------------------------
+- DJH_ for the amazing SKIN and for giving me the rights to AEON CLASSIC (hahaha, jokes!)
+- SIX_STORM and DIGITALHIGH for suggestions and ideas for new features in Volume 3
+- RAND AL THOR for certain VIEW ideas, some skinning advice and a MOD which inspired this one
+- XBMC.01 for certain Optimized images and skinning advice and ideas
+- DJOKTAVE for sound pack and lack of permission ;)
+- HITCHER, SKUNKMONKEE, SPIFF and Others for being helpful at some or other point
+- ME for working my ass off on this MOD
+- And more (bad memory)...
+---------------------------------------------------------------------------------------------------

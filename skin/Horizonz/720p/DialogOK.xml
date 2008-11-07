@@ -1,0 +1,92 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>340</posx>
+		<posy>220</posy>
+		<width>600</width>
+		<height>300</height>
+		<texture>filemanback2.png</texture>
+	</control>
+	
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>340</posx>
+		<posy>220</posy>
+		<width>600</width>
+		<height>300</height>
+		<texture>filemanbackpolish.png</texture>
+	</control>
+	
+	<control type="label" id="2">
+		<description>dialog line 1</description>
+		<posx>325</posx>
+		<posy>300</posy>
+		<label>0</label>
+		<font>fruity17s</font>
+		<align>center</align>
+		<textcolor>FFffffff</textcolor>
+		<include>DialogInfo</include>
+	</control>
+
+	<control type="label" id="3">
+		<description>dialog line 2</description>
+		<posx>325</posx>
+		<posy>325</posy>
+		<label>0</label>
+		<font>fruity17s</font>
+		<align>center</align>
+		<textcolor>FFffffff</textcolor>
+		<include>DialogInfo</include>
+	</control>
+
+	<control type="label" id="4">
+		<description>dialog line 3</description>
+		<posx>325</posx>
+		<posy>350</posy>
+		<label>0</label>
+		<font>fruity17s</font>
+		<align>center</align>
+		<textcolor>FFffffff</textcolor>
+		<include>DialogInfo</include>
+	</control>
+
+	<control type="button" id="10">
+		<description>OK button</description>
+		<posx>570</posx>
+		<posy>410</posy>
+		<width>140</width>
+		<height>40</height>
+		<texturenofocus>contextbutton2.png</texturenofocus>
+		<texturefocus>contextbuttonpressed2.png</texturefocus>
+		<label>186</label>
+		<onleft>10</onleft>
+		<align>center</align>
+		<onright>10</onright>
+		<onup>10</onup>
+		<ondown>10</ondown>
+		<include>DialogInfo</include>
+	</control>
+	<include>Black-Special</include>
+	<include>Lines-Special</include>
+
+	<control type="label" id="1">
+		<description>Heading Label</description>
+		<posx>340</posx>
+		<posy>255</posy>
+		<width>600</width>
+		<height>16</height>
+		<align>center</align>
+		<label>0</label>
+		<font>fruity20</font>
+		<include>dialogheadingcolor</include>
+		<include>Zoom-ShutDownMenu</include>
+	</control>
+	<include>Black-Overlay</include>
+
+	</controls>
+</window>
