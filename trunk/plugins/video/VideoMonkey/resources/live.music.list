@@ -41,3 +41,8 @@ type=live
 thumb=video.monkey.image|mvtv_hit_station.png
 url=http://61.19.248.196/mvtv_3?WMContentBitrate=256000
 ########################################################
+name=The Voice TV (SE)
+type=live
+thumb=video.monkey.image|thevoice_tv.png
+url=mms://62.41.56.32/PUBLIC_SWE
+########################################################

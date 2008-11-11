@@ -28,6 +28,11 @@ type=rss
 thumb=video.monkey.image|nl.png
 url=live.nl.list
 ########################################################
+name=SE
+type=rss
+thumb=video.monkey.image|se.png
+url=live.se.list
+########################################################
 name=THA
 type=rss
 thumb=video.monkey.image|tha.png

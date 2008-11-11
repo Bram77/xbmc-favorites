@@ -1479,8 +1479,7 @@ class Main:
                     self.parseView('entry.list')
                 except:
                     pass
-                if result == 0:
-                    xbmcplugin.endOfDirectory(handle = int(sys.argv[1]), cacheToDisc = False)
+                xbmcplugin.endOfDirectory(handle = int(sys.argv[1]), cacheToDisc = False)
             else:
                 params = sys.argv[2]
                 cleanedparams = params.replace('?', '')
