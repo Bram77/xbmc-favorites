@@ -10,7 +10,7 @@
 	<controls>
 		<control type="image" id="1">
 			<description>Popup Music Scan Dialog Background</description>
-			<posx>185</posx>
+			<posx>165</posx>
 			<posy>15</posy>
 			<width>395</width>
 			<height>88</height>

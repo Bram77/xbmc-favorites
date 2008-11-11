@@ -3897,6 +3897,15 @@
 <posy>20</posy>
 <width>144</width>
 <height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
 <texture>1.png</texture>
 <animation effect="fade" time="10">Windowclose</animation>
 </control>
@@ -3927,6 +3936,15 @@
 </itemlayout>
 
 <focusedlayout width="144" height="600">
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
 
 <control type="image">
 <posx>0</posx>
@@ -4012,6 +4030,15 @@
 <posy>20</posy>
 <width>144</width>
 <height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
 <texture>1.png</texture>
 <animation effect="fade" time="10">Windowclose</animation>
 </control>
@@ -4043,6 +4070,15 @@
 </itemlayout>
 
 <focusedlayout width="144" height="600">
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
 
 <control type="image">
 <posx>0</posx>
@@ -4106,6 +4142,15 @@
 <posy>20</posy>
 <width>144</width>
 <height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
 <texture>1.png</texture>
 <animation effect="fade" time="10">Windowclose</animation>
 </control>
@@ -4135,6 +4180,15 @@
 </itemlayout>
 
 <focusedlayout width="144" height="600">
+
+<control type="image">
+<posx>0</posx>
+<posy>20</posy>
+<width>144</width>
+<height>208</height>
+<texture>3.png</texture>
+<animation effect="fade" time="10">Windowclose</animation>
+</control>
 
 <control type="image">
 <posx>0</posx>
@@ -9341,9 +9395,9 @@
 <height>260</height>
 <texture>black.png</texture>
 <visible>Control.HasFocus(53) + [!Container(53).OnNext + !Container(53).OnPrevious]</visible>
-<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-<animation effect="fade" start="0" end="100" time="200" delay="2500">Visible</animation>
-<animation effect="fade" start="0" end="100" time="200" delay="2500">WindowOpen</animation>
+<animation effect="fade" start="100" end="0" time="800">WindowClose</animation>
+<animation effect="fade" start="0" end="100" time="800" delay="1500">Visible</animation>
+<animation effect="fade" start="0" end="100" time="800" delay="1500">WindowOpen</animation>
 </control>
 
 <control type="image">
@@ -9418,13 +9472,13 @@
 <height>245</height>
 <visible>Control.HasFocus(53) + [Container.Content(movies) | Container.Content(tvshows)] + [!Container(53).OnNext + !Container(53).OnPrevious]</visible>
 <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-<animation effect="fade" start="0" end="100" time="200" delay="2500">Visible</animation>
-<animation effect="fade" start="0" end="100" time="200" delay="2500">WindowOpen</animation>
+<animation effect="slide" start="1065" end="0" time="800" delay="2500">WindowOpen</animation>
+<animation effect="slide" start="1065" end="0" time="800" delay="2500">Visible</animation>
 
 <control type="image">
 <posx>0</posx>
 <posy>0</posy>
-<width>373</width>
+<width>370</width>
 <height>245</height>
 <texture>List background.png</texture>
 </control>
@@ -9432,9 +9486,18 @@
 <control type="image">
 <posx>0</posx>
 <posy>0</posy>
-<width>373</width>
+<width>370</width>
 <height>245</height>
 <texture>List background.png</texture>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>247</posy>
+<width>370</width>
+<height>245</height>
+<texture flipy="true">List background.png</texture>
+<colordiffuse>bbffffff</colordiffuse>
 </control>
 
 <control type="label">
@@ -9514,6 +9577,8 @@
 <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
 <scroll>true</scroll>
 </control>
+
+
 </control>
 
 </include>
@@ -12862,7 +12927,16 @@
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
 
-
+<control type="image">
+<posx>190</posx>
+<posy>105</posy>
+<width>340</width>
+<height>386</height>
+<texture></texture>
+<visible>!Container.Content(Movies) + !Container.Content(episodes) + !Container.Content(TVshows) + !Container.Content(seasons) + !Container.Content(MusicVideos) + Control.HasFocus(51)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
 
 
 <control type="list" id="51">
@@ -12871,9 +12945,9 @@
 <visible>!Container.Content(Movies) + !Container.Content(episodes) + !Container.Content(TVshows) + !Container.Content(seasons) + !Container.Content(MusicVideos)</visible>
 <viewtype label="535">list</viewtype>
 <posx>100</posx>
-<posy>135</posy>
+<posy>165</posy>
 <width>520</width>
-<height>336</height>
+<height>306</height>
 <pagecontrol>90</pagecontrol>
 <onleft>2</onleft>
 <onright>90</onright>
@@ -12896,9 +12970,9 @@
 <focusedlayout height="40" width="520">
 
 <control type="image">
-<posx>95</posx>
+<posx>93</posx>
 <posy>0</posy>
-<width>330</width>
+<width>334</width>
 <height>40</height>
 <texture>input-focus.png</texture>
 <visible>Control.HasFocus(51)</visible>
