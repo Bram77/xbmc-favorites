@@ -1,0 +1,117 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<controls>
+	
+		<control type="fixedlist" id="52">
+			<posx>452</posx>
+			<posy>283</posy>
+			<width>360</width>
+			<height>500</height>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>52</onup>
+			<ondown>20</ondown>
+			<wraparound>yes</wraparound>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<include>fadeinout</include>
+			
+			<itemlayout height="130" width="120">
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio>scale</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="130"  width="120">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>120</height>
+					<aspectratio>keep</aspectratio>
+					<texture border="9">episode-main.png</texture>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,50" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,50" time="200"/>
+					</animation>
+				</control>
+				<control type="image">
+					<posx>4</posx>
+					<posy>4</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio>scale</aspectratio>
+					<info>ListItem.Icon</info>
+					<animation type="focus">
+						<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="20,50" time="400" delay="100"/>
+					</animation>
+					<animation type="unfocus">
+						<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="20,50" time="200"/>
+					</animation>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="label">
+			<description>user label</description>
+			<posy>433</posy>
+			<include>screenwidth</include>
+			<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+			<align>center</align>
+			<font>h3</font>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="label">
+			<description>last login label</description>
+			<posy>452</posy>
+			<include>screenwidth</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			<align>center</align>
+			<font>h3</font>
+			<textcolor>sublabel-text</textcolor>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="button" id="20">
+			<description>Power push button</description>
+			<posx>624</posx>
+			<posy>115r</posy>
+			<width>32</width>
+			<height>32</height>
+			<onclick>ActivateWindow(56)</onclick>
+			<texturefocus>shutdown-menubar-focus.png</texturefocus>
+			<texturenofocus>shutdown-menubar-nofocus.png</texturenofocus>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>52</onup>
+			<ondown>-</ondown>
+			<include>fadeinout</include>
+		</control>
+
+		<control type="label">
+			<description>time label</description>
+			<posy>75r</posy>
+			<include>screenwidth</include>
+			<label>[UPPERCASE]$INFO[System.Time]  	[COLOR=sublabel-text]$INFO[System.Date][/COLOR][/UPPERCASE]</label>
+			<align>center</align>
+			<font>h3</font>
+			<include>fadeinout</include>
+		</control>
+
+	</controls>
+</window>

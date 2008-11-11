@@ -1,0 +1,367 @@
+<window id="0">
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+
+		<include>background</include>
+
+		<control type="image" id="999">
+			<include>home-menubar-startup</include>
+			<include>screenwidth</include>
+			<height>84</height>
+			<texture>menubar.png</texture>
+			<include>home-menubar</include>
+		</control>
+	
+<!--- MAIN MENU ----------------------------------------------------------------------------------------------------------------------->	
+
+		<control type="group" id="9000">
+			<include>home-menubar-startup</include>
+			<include>home-menubar</include>
+			<posx>20</posx>
+	
+			<control type="button" id="1">
+				<width>120</width>
+				<label>3</label>
+				<onleft>6</onleft>
+				<onright>2</onright>
+				<onup>6</onup>
+				<ondown>1100</ondown>
+				<onclick>ActivateWindow(MyVideoFiles)</onclick>
+				<include>menubarButton</include>
+			</control>
+			<control type="button" id="2">
+				<label>2</label>
+				<posx>120</posx>
+				<width>120</width>
+				<height>44</height>
+				<onleft>1</onleft>
+				<onright>3</onright>
+				<onup>1</onup>
+				<ondown>1200</ondown>
+				<onclick>ActivateWindow(MyMusicFiles)</onclick>
+				<include>menubarButton</include>
+			</control>
+			<control type="button" id="3">
+				<label>31010</label>
+				<posx>240</posx>
+				<width>130</width>
+				<onleft>2</onleft>
+				<onright>4</onright>
+				<onup>1</onup>
+				<ondown>1300</ondown>
+				<onclick>ActivateWindow(MyPictures)</onclick>
+				<include>menubarButton</include>
+			</control>
+			<control type="button" id="4">
+				<label>31006</label>
+				<posx>370</posx>
+				<width>170</width>
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onup>1</onup>
+				<ondown>1400</ondown>
+				<onclick>ActivateWindow(Favourites)</onclick>
+				<include>menubarButton</include>
+			</control>
+			<control type="button" id="5">
+				<description>settings</description>
+				<label>5</label>
+				<posx>540</posx>
+				<width>140</width>
+				<onleft>4</onleft>
+				<onright>7</onright>
+				<onup>1</onup>
+				<ondown>1600</ondown>
+				<onclick>ActivateWindow(4)</onclick>
+				<include>menubarButton</include>
+			</control>
+			<control type="button" id="6">
+				<posx>1200</posx>
+				<posy>6</posy>
+				<width>32</width>
+				<height>32</height>
+				<onleft>7</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1800</ondown>
+				<texturenofocus>shutdown-menubar-nofocus.png</texturenofocus>
+				<texturefocus>shutdown-menubar-focus.png</texturefocus>
+				<aspectratio>keep</aspectratio>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>3</textoffsety>
+				<onclick>-</onclick>
+			</control>
+			<control type="button" id="7">
+				<posx>1170</posx>
+				<posy>11</posy>
+				<width>22</width>
+				<height>22</height>
+				<texturenofocus>disc-nofocus.png</texturenofocus>
+				<texturefocus>disc-focus.png</texturefocus>
+				<onclick>XBMC.PlayDVD</onclick>
+				<visible>System.HasMediadvd</visible>
+				<onleft>5</onleft>
+				<onright>6</onright>
+				<include>home-menubar</include>
+				<include>home-menubar-startup</include>
+				<include>fadeinout</include>
+			</control>
+			<control type="image">
+				<posx>1140</posx>
+				<posy>10</posy>
+				<width>24</width>
+				<height>24</height>
+				<texture>muteicon.png</texture>
+				<visible>Player.Muted</visible>
+				<include>home-menubar</include>
+				<include>home-menubar-startup</include>
+				<include>fadeinout</include>
+			</control>
+		</control>
+
+<!--- SUBMENUS ----------------------------------------------------------------------------------------------------------------------->	
+
+		<include>HomeVideoMenu</include>
+		<include>HomeMusicMenu</include>
+		<include>HomePicturesMenu</include>
+		<include>HomeAccessoriesMenu</include>
+		<include>HomeSettingsMenu</include>
+		<include>HomeExitMenu</include>
+
+
+<!--- DATE/TIME/WEATHER -------------------------------------------------------------------------------------------------------------->
+
+		<control type="group">
+			<posx>30</posx>
+			<posy>597</posy>
+			<include>fadeinout</include>
+			<include>home-start</include>
+			<animation effect="slide" time="800" start="-200,0" end="0,0" acceleration="-1.0" tween="Back" easing="Out" delay="800" condition="Window.Previous(startup)">WindowOpen</animation>
+			<animation effect="slide" time="0" start="0,0" end="-80,18" condition="Skin.HasSetting(homepageWeatherinfo)">Conditional</animation>
+	
+			<control type="image" id="700">
+				<posy>0</posy>
+				<width>74</width>
+				<height>74</height>
+				<aspectratio align="left">keep</aspectratio>
+				<info>Weather.Conditions</info>
+				<visible>Weather.IsFetched + !Skin.HasSetting(homepageDateTime) + !Skin.HasSetting(homepageWeatherinfo)</visible>
+				<include>fadeinout</include>
+			</control>
+			<control type="label" id="200">
+				<posx>85</posx>
+				<posy>2</posy>
+				<width>315</width>
+				<label>$INFO[System.Time]</label>
+				<font>h1</font>
+				<visible>!Skin.HasSetting(homepageDateTime)</visible>
+			</control>
+			<control type="label" id="200">
+				<posx>85</posx>
+				<posy>28</posy>
+				<width>315</width>
+				<label>[UPPERCASE][B]$INFO[System.Date][/B][/UPPERCASE]</label>
+				<textcolor>sublabel-text</textcolor>
+				<font>h3</font>
+				<visible>!Skin.HasSetting(homepageDateTime)</visible>
+			</control>
+			<control type="label" id="200">
+				<posx>85</posx>
+				<posy>46</posy>
+				<width>315</width>
+				<label>[UPPERCASE]$INFO[Weather.Temperature], $INFO[Weather.Conditions][/UPPERCASE]</label>
+				<textcolor>sublabel-text</textcolor>
+				<font>h3</font>
+				<visible>Weather.IsFetched + !Skin.HasSetting(homepageDateTime) + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			</control>
+		</control>
+
+										
+<!-- MUSIC INFO -------------------------------------------------------------------------------------------------------------------------->
+
+		<control type="group">
+			<posx>1055</posx>
+			<posy>410</posy>
+			<include>home-start</include>
+			<include>fadeinout</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" >WindowClose</animation>>
+	
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>200</height>
+				<width>200</width>
+				<texture border="9">selection-main.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>13</posy>
+				<height>174</height>
+				<width>174</width>
+				<info>MusicPlayer.Cover</info>
+				<aspectratio align="left">scale</aspectratio>
+			</control>
+			<control type="image">
+				<posx>9</posx>
+				<posy>9</posy>
+				<height>80</height>
+				<width>181</width>
+				<texture>poster-gloss.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>167</posy>
+				<width>160</width>
+				<height>18</height>
+				<info>MusicPlayer.Rating</info>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="label" id="200">
+				<posx>192</posx>
+				<posy>196</posy>
+				<width>900</width>
+				<label>[UPPERCASE][B]$INFO[MusicPlayer.Title][/B][/UPPERCASE]</label>
+				<textcolor>label-text</textcolor>
+				<align>right</align>
+				<font>h3</font>
+				<visible>Player.HasAudio</visible>
+			</control>	
+			<control type="label" id="200">
+				<posx>192</posx>
+				<posy>215</posy>
+				<width>900</width>
+				<label>[UPPERCASE][B]$INFO[MusicPlayer.Artist][/B][/UPPERCASE]</label>
+				<textcolor>sublabel-text</textcolor>
+				<align>right</align>
+				<font>h3</font>
+				<visible>Player.HasAudio</visible>
+			</control>	
+			<control type="label" id="200">
+				<include>home-start</include>
+				<posx>192</posx>
+				<posy>233</posy>
+				<width>900</width>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Album][/UPPERCASE]</label>
+				<textcolor>sublabel-text</textcolor>
+				<align>right</align>
+				<font>h3</font>
+				<visible>Player.HasAudio</visible>
+			</control>
+		</control>
+											
+
+<!-- VIDEO INFO -------------------------------------------------------------------------------------------------------------------------->
+
+		<control type="group">
+			<posx>834</posx>
+			<posy>465</posy>
+			<width>1000</width>
+			<include>home-start</include>
+			<include>fadeinout</include>
+			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="slide" time="500" start="600,0" end="0,0" acceleration="-1.1" delay="0" >WindowOpen</animation>
+			<animation effect="slide" time="500" start="0,0" end="600,0" acceleration="-1.3" delay="0" >WindowClose</animation>
+	
+			<control type="image">
+				<posx>143</posx>
+				<posy>0</posy>
+				<width>278</width>
+				<height>168</height>
+				<texture border="9">selection-main.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Player.HasVideo + Skin.HasSetting(backgroundVideo)</visible>
+			</control>
+			<control type="videowindow">
+				<description>Video Window</description>
+				<posx>157</posx>
+				<posy>14</posy>
+				<width>250</width>
+				<height>140</height>
+				<visible>Player.HasVideo + Skin.HasSetting(backgroundVideo)</visible>
+			</control>
+			<control type="image">
+				<posx>152</posx>
+				<posy>9</posy>
+				<width>260</width>
+				<height>80</height>
+				<texture>poster-gloss.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>Player.HasVideo + Skin.HasSetting(backgroundVideo)</visible>
+			</control>
+			<control type="label" id="200">
+				<posx>413</posx>
+				<posy>160</posy>
+				<width>500</width>
+				<label>[UPPERCASE][B]$INFO[VideoPlayer.Title][/B][/UPPERCASE]</label>
+				<align>right</align>
+				<font>h3</font>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label" id="200">
+				<posx>413</posx>
+				<posy>178</posy>
+				<width>500</width>
+				<label>[UPPERCASE][B]$INFO[VideoPlayer.TVShowTitle][/B][/UPPERCASE]</label>
+				<textcolor>sublabel-text</textcolor>
+				<align>right</align>
+				<font>h3</font>
+				<visible>Player.HasVideo</visible>
+			</control>			
+		</control>
+		<control type="fadelabel" id="200">
+			<posx>347</posx>
+			<posy>643</posy>
+			<width>900</width>
+			<label>[UPPERCASE][B]$INFO[VideoPlayer.Artist][/B][/UPPERCASE]</label>
+			<label>[UPPERCASE][B]$INFO[VideoPlayer.Album,][/B][/UPPERCASE]</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<font>h3</font>
+			<scrollout>no</scrollout>
+			<pauseatend>5000</pauseatend>
+			<visible>Player.HasVideo</visible>
+		</control>
+			
+
+
+<!-- RSS FEEDS -------------------------------------------------------------------------------------------------------------------------->
+
+		<control type="image">
+			<posx>0</posx>
+			<posy>682</posy>
+			<include>screenwidth</include>
+			<height>1</height>
+			<texture>separator.png</texture>
+			<animation effect="fade" start="0" end="100" time="600" condition="Window.Previous(startup)">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="350">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="250">WindowClose</animation>
+			<visible>!Skin.HasSetting(enableRSSFeed) + Window.IsActive(0) + !Window.IsActive(114)</visible>
+		</control>
+
+		<control type="rss" id="1">
+			<description>rss feed</description>
+			<posx>5</posx>
+			<posy>690</posy>
+			<width>1280</width>
+			<font>rss</font>
+			<urlset>1</urlset>
+			<textcolor>rss-title</textcolor>
+			<titlecolor>rss-title</titlecolor>
+			<headlinecolor>rss-headline</headlinecolor>
+			<highlightcolor>sublabel-text</highlightcolor>
+			<include>fadeinout</include>
+			<visible>!Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10112) | Window.IsActive(2004) | Window.IsActive(115) | Window.IsActive(114) | Window.IsActive(10133) | Window.IsActive(107)]</visible>
+			<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(112)">conditional</animation>
+		</control>
+	</controls>
+</window>

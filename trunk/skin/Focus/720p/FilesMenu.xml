@@ -1,0 +1,606 @@
+<includes>
+	<include name="FilesMenu">
+		<control type="group" id="9000">
+			<posx>20</posx>
+			<posy>76</posy>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<onright>50</onright>
+			<include>pageslide</include>
+			
+			<animation effect="slide" time="150" start="-190,0" end="0,0" acceleration="1.1">Visible</animation>
+			<animation effect="slide" time="150" start="0,0" end="-190,0" acceleration="1.1">Hidden</animation>
+
+			<control type="group">
+				<description>Slide Menu for Pictures</description>
+				<visible>Window.IsActive(2)</visible>
+
+				<include>pagemenuConstants</include>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<label>103</label>
+					<posx>0</posx>
+					<posy>35</posy>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>200</posx>
+					<posy>45</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				
+				<control type="button" id="6">
+					<description>SlideShow button</description>
+					<label>108</label>
+					<posx>0</posx>
+					<posy>70</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>7</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="7">
+					<description>recursive slideshow</description>
+					<label>361</label>
+					<posx>0</posx>
+					<posy>105</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>9</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="9">
+					<description>Randomize button</description>
+					<label>13319</label>
+					<posx>0</posx>
+					<posy>140</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>30</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posx>0</posx>
+					<posy>175</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>9</onup>
+					<ondown>31</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posx>0</posx>
+					<posy>210</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posx>0</posx>
+					<posy>245</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				
+			</control>
+
+			<control type="group">
+				<description>Slide Menu for Videos</description>
+				<visible>Window.IsActive(21) | Window.IsActive(22)| Window.IsActive(23)| Window.IsActive(24) | Window.IsActive(25)</visible>
+				
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<label>100</label>		
+					<onleft>50</onleft>
+					<onright>40</onright>
+					<onup>32</onup>
+					<ondown>3</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="40">
+					<description>previous viewtype</description>
+					<posx>182</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-down-focus.png</texturefocus>
+					<texturenofocus>scroll-down.png</texturenofocus>
+					<onclick>Container.PreviousViewMode</onclick>
+					<onleft>2</onleft>
+					<onright>41</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="button" id="41">
+					<description>next viewtype</description>
+					<posx>200</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<onclick>Container.NextViewMode</onclick>
+					<onleft>40</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+					
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+					<include>pagemenuButton</include>
+				</control>
+	
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>200</posx>
+					<posy>45</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+					
+				<control type="radiobutton" id="5">
+					<description>Library button</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+					<onclick>ReplaceWindow(myvideolibrary)</onclick>
+					<selected>Window.IsVisible(myvideolibrary)</selected>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>7</ondown>
+					<include>pagemenuButton</include>
+				</control>
+					
+				<control type="radiobutton" id="7">
+					<description>Stacking</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<label>14000</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>30</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>7</onup>
+					<ondown>31</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posx>0</posx>
+					<posy>175</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50	</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posx>0</posx>
+					<posy>245</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+			
+			</control>
+			
+			
+			<control type="group">
+				<description>Slide Menu for Music</description>
+				<visible>Window.IsActive(501) | Window.IsActive(502)</visible>
+				
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<label>100</label>		
+					<onleft>50</onleft>
+					<onright>40</onright>
+					<onup>32</onup>
+					<ondown>3</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="40">
+					<description>previous viewtype</description>
+					<posx>182</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-down-focus.png</texturefocus>
+					<texturenofocus>scroll-down.png</texturenofocus>
+					<onclick>Container.PreviousViewMode</onclick>
+					<onleft>2</onleft>
+					<onright>41</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="button" id="41">
+					<description>next viewtype</description>
+					<posx>200</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<onclick>Container.NextViewMode</onclick>
+					<onleft>40</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>200</posx>
+					<posy>45</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="radiobutton" id="5">
+					<description>Library button</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+					<onclick>ReplaceWindow(mymusiclibrary)</onclick>
+					<selected>Window.IsVisible(mymusiclibrary)</selected>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>30</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>5</onup>
+					<ondown>31</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50	</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posx>0</posx>
+					<posy>175</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Slide Menu for Scripts</description>
+				<visible>Window.IsActive(20)</visible>
+				
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<label>100</label>
+					<onleft>50</onleft>
+					<onright>40</onright>
+					<onup>32</onup>
+					<ondown>3</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="40">
+					<description>previous viewtype</description>
+					<posx>182</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-down-focus.png</texturefocus>
+					<texturenofocus>scroll-down.png</texturenofocus>
+					<onclick>Container.PreviousViewMode</onclick>
+					<onleft>2</onleft>
+					<onright>41</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="button" id="41">
+					<description>next viewtype</description>
+					<posx>200</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<onclick>Container.NextViewMode</onclick>
+					<onleft>40</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>200</posx>
+					<posy>45</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>7</onup>
+					<ondown>31</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50	</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Slide Menu for Programs</description>
+				<visible>Window.IsActive(1)</visible>
+				
+				<control type="button" id="2">
+					<description>View As Icons button</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<label>100</label>
+					<onleft>50</onleft>
+					<onright>40</onright>
+					<onup>32</onup>
+					<ondown>3</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				
+				<control type="button" id="40">
+					<description>previous viewtype</description>
+					<posx>182</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-down-focus.png</texturefocus>
+					<texturenofocus>scroll-down.png</texturenofocus>
+					<onclick>Container.PreviousViewMode</onclick>
+					<onleft>2</onleft>
+					<onright>41</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				<control type="button" id="41">
+					<description>next viewtype</description>
+					<posx>200</posx>
+					<posy>8</posy>
+					<height>15</height>
+					<width>15</width>
+					<label>-</label>
+					<texturefocus>scroll-up-focus.png</texturefocus>
+					<texturenofocus>scroll-up.png</texturenofocus>
+					<onclick>Container.NextViewMode</onclick>
+					<onleft>40</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+				</control>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>4</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>Sort asc</description>
+					<posx>200</posx>
+					<posy>45</posy>
+					<label>-</label>
+					<onleft>3</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posx>0</posx>
+					<posy>70</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>7</onup>
+					<ondown>31</ondown>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posx>0</posx>
+					<posy>105</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50	</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posx>0</posx>
+					<posy>140</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>2</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>pagemenuButton</include>
+				</control>
+				
+			</control>
+																	
+		</control>
+	</include>
+
+</includes>

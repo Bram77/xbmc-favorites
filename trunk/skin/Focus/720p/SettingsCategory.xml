@@ -1,0 +1,110 @@
+<window id="12">
+	<defaultcontrol>0</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<include>background</include>
+		<include>allscreens</include>
+
+		<control type="label">
+			<include>pageLabel</include>
+			<label>10507</label>
+			<visible>Window.IsActive(settings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31033</label>
+			<visible>Window.IsActive(appearancesettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31069</label>
+			<visible>Window.IsActive(videossettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31007</label>
+			<visible>Window.IsActive(programssettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31900</label>
+			<visible>Window.IsActive(musicsettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31901</label>
+			<visible>Window.IsActive(picturessettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31902</label>
+			<visible>Window.IsActive(networksettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31903</label>
+			<visible>Window.IsActive(weathersettings)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31904</label>
+			<visible>Window.IsActive(systemsettings)</visible>
+		</control>
+				
+		<control type="group">
+			<include>pageslide</include>
+		
+				<control type="grouplist" id="3">
+					<description>button area</description>
+					<posx>60</posx>
+					<posy>90</posy>
+					<width>220</width>
+					<height>410</height>
+					<itemgap>2</itemgap>
+					<onleft>5</onleft>
+					<onright>5</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
+				</control>
+
+				<control type="grouplist" id="5">
+					<description>control area</description>
+					<posx>310</posx>
+					<posy>90</posy>
+					<width>900</width>
+					<height>433</height>
+					<itemgap>2</itemgap>
+					<onleft>3</onleft>
+					<onright>3</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+				
+				<control type="button" id="7">
+					<description>Default Button</description>
+				</control>
+				
+				<control type="radiobutton" id="8">
+					<description>Default RadioButton</description>
+				</control>
+				
+				<control type="spincontrolex" id="9">
+					<description>Default SpinControlex</description>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				</control>
+				
+				<control type="button" id="10">
+					<description>Default Category Button</description>
+					<width>220</width>
+					<label>224</label>
+					<font>menu</font>
+					<textoffsetx>10</textoffsetx>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocus.png</texturenofocus>
+				</control>
+
+		</control>
+	</controls>
+</window>

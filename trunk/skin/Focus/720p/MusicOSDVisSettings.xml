@@ -1,0 +1,93 @@
+﻿<window id="121">
+	<defaultcontrol>2</defaultcontrol>
+	
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>50</posx>
+		<posy>270</posy>
+	</coordinates>
+	
+	<controls>
+		
+		<control type="group">
+			
+			<control type="image" id="1">
+				<include>dialogWindow</include>
+				<posy>-30</posy>
+				<width>472</width>
+				<height>410</height>
+			</control>
+		
+			<control type="label" id="2">
+				<description>Settings Label</description>
+				<width>420</width>
+				<align>left</align>
+				<label>-</label>
+				<font>h1D</font>
+				<textcolor>label-text</textcolor>
+			</control>
+			
+			<control type="label" id="3">
+				<description>No Settings Label</description>
+				<posy>40</posy>
+				<width>420</width>
+				<align>left</align>
+				<label>13390</label>
+				<font>h2D</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+
+			<!--<control type="spincontrol" id="60">
+				<description>Next page button</description>
+				<posx>371</posx>
+				<posy>8</posy>
+				<subtype>int</subtype>
+				<font>font12</font>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<ondown>2</ondown>
+			</control>-->
+			
+			<control type="image" id="5">
+				<description>control area</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>410</width>
+				<height>315</height>
+			</control>
+			
+			<control type="image" id="6">
+				<description>control gap</description>
+				<width>350</width>
+				<height>31</height>
+				<texture>-</texture>
+			</control>
+			
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+			</control>
+	
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+			</control>
+			
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<height>33</height>
+				<reverse>yes</reverse>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+				<spinwidth>15</spinwidth>
+				<spinheight>15</spinheight>
+			</control>
+		
+	</control>
+	</controls>
+</window>

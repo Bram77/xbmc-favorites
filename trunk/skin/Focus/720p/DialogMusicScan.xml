@@ -1,0 +1,100 @@
+<window id="112">
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>690</posy>
+	</coordinates>
+	
+	<controls>
+		
+		<control type="group">
+			<visible>![Window.IsActive(133) | Window.IsActive(2005) | Window.IsActive(2006) | Window.IsActive(115)]</visible>
+			<include>fadeinout</include>
+			
+			<control type="label">
+				<description>Caption Label</description>
+				<posx>30</posx>
+				<posy>0</posy>
+				<font>rss</font>
+				<label>[UPPERCASE]$LOCALIZE[505][/UPPERCASE]</label>
+				<align>left</align>
+				<width>400</width>
+				<textcolor>label-text</textcolor>
+			</control>
+			
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>1250</posx>
+				<posy>0</posy>
+				<width>650</width>
+				<haspath>yes</haspath>
+				<font>rss</font>
+				<textcolor>sublabel-text</textcolor>
+				<onleft>402</onleft>
+				<onright>402</onright>
+				<onup>402</onup>
+				<align>right</align>
+				<ondown>402</ondown>
+			</control>
+			
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>-5</posx>
+				<posy>36</posy>
+				<width>1300</width>
+				<height>3</height>
+				<texturebg>progressbar-background.png</texturebg>
+				<lefttexture>progress-left.png</lefttexture>
+				<midtexture>progress-middle.png</midtexture>
+				<righttexture>progress-right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+		</control>
+		
+		<control type="group">
+			<posx>0</posx>
+			<posy>516</posy>
+			<visible>Window.IsActive(133)</visible>
+			<include>fadeinout</include>
+			
+			<control type="label" id="401">
+				<description>Caption Label</description>
+				<posx>30</posx>
+				<posy>4</posy>
+				<font>h3</font>
+				<align>left</align>
+				<width>400</width>
+				<textcolor>label-text</textcolor>
+			</control>
+			
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>690</posx>
+				<posy>4</posy>
+				<width>400</width>
+				<haspath>yes</haspath>
+				<font>h3</font>
+				<textcolor>sublabel-text</textcolor>
+				<onleft>402</onleft>
+				<onright>402</onright>
+				<onup>402</onup>
+				<align>right</align>
+				<ondown>402</ondown>
+			</control>
+			
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>-5</posx>
+				<posy>56</posy>
+				<width>730</width>
+				<height>3</height>
+				<texturebg>progressbar-background.png</texturebg>
+				<lefttexture>progress-left.png</lefttexture>
+				<midtexture>progress-middle.png</midtexture>
+				<righttexture>progress-right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+		</control>
+	</controls>
+</window>

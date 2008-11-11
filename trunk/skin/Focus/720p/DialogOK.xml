@@ -1,0 +1,77 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>440</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+		
+		<control type="group">
+				
+			<control type="image">
+				<width>450</width>
+				<height>210</height>
+				<include>dialogWindow</include>
+			</control>
+		
+			<control type="label" id="1">
+				<description>dialog Heading</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>380</width>	
+				<label>-</label>
+				<align>center</align>
+				<font>h1D</font>
+			</control>
+		
+			<control type="label" id="2">
+				<description>dialog line 1</description>
+				<posx>0</posx>
+				<width>380</width>	
+				<align>center</align>
+				<posy>30</posy>
+				<label>-</label>
+				<font>h2</font>
+				<scroll>yes</scroll>
+			</control>
+			
+			<control type="label" id="3">
+				<description>dialog line 2</description>
+				<posx>0</posx>
+				<width>380</width>	
+				<align>center</align>
+				<posy>50</posy>
+				<label>-</label>
+				<font>h2</font>
+				<scroll>yes</scroll>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="4">
+				<description>dialog line 3</description>
+				<posx>0</posx>
+				<width>380</width>	
+				<align>center</align>
+				<posy>73</posy>
+				<label>-</label>
+				<font>h3</font>
+				<scroll>yes</scroll>
+			</control>
+			
+			<control type="button" id="10">
+				<description>Ok button</description>
+				<posx>140</posx>
+				<posy>120</posy>
+				<width>90</width>
+				<label>186</label>
+				<include>dialogConfirmButton</include>
+			</control>
+
+		</control>
+		
+	</controls>
+</window>

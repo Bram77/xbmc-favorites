@@ -1,0 +1,1279 @@
+<includes>
+	<include file="ViewsCommon.xml">-</include>
+	<include file="ViewsMusic.xml">-</include>
+	<include file="ViewsVideo.xml">-</include>
+	<include file="ViewsPictures.xml">-</include>
+	<include file="Defaults.xml">-</include>
+	<include file="References.xml">-</include>
+	<include file="3D_CoverView.xml">-</include>
+	<include file="3D_AlbumView.xml">-</include>
+	<include file="HomeMusicMenu.xml">-</include>
+	<include file="HomeVideoMenu.xml">-</include>
+	<include file="HomePicturesMenu.xml">-</include>
+	<include file="HomeAccessoriesMenu.xml">-</include>
+	<include file="HomeSettingsMenu.xml">-</include>
+	<include file="HomeExitMenu.xml">-</include>
+	<include file="LibraryVideoMenu.xml">-</include>
+	<include file="LibraryMusicMenu.xml">-</include>
+	<include file="LibraryPlaylistMenu.xml">-</include>
+	<include file="LibraryPlaylistMenu.xml">-</include>
+	<include file="FilesMenu.xml">-</include>
+	<include file="WeatherMenu.xml">-</include>
+	<include file="custom2.xml">-</include>
+	<include file="custom3.xml">-</include>
+	<include file="custom_SubMenuVideo.xml">-</include>
+
+<!-- ALL SCREEN INCLUDES --------------------------------------------------------------------->
+
+	<include name="allscreens">	
+		<control type="image" id="999">
+			<include>home-start-panel</include>
+			<include>home-menubar</include>
+			<include>screenwidth</include>
+			<height>84</height>
+			<texture>menubar.png</texture>
+		</control>
+		
+		<control type="label" id="200">
+			<description>Time and Date Label</description>
+			<posx>1260</posx>
+			<posy>6</posy>
+			<width>300</width>
+			<label>$INFO[System.Time]</label>
+			<textcolor>label-text</textcolor>
+			<align>right</align>
+			<font>date</font>
+			<include>home-menubar</include>
+		</control>
+		
+		<control type="image">
+			<posx>600</posx>
+			<posy>10</posy>
+			<width>24</width>
+			<height>24</height>
+			<texture>muteicon.png</texture>
+			<visible>Player.Muted</visible>
+			<include>home-menubar</include>
+			<include>home-menubar-startup</include>
+			<include>fadeinout</include>
+		</control>
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>682</posy>
+			<include>screenwidth</include>
+			<include>home-start</include>
+			<include>fadeinout</include>
+			<height>1</height>
+			<texture>separator.png</texture>
+			<visible>
+				Player.HasMedia
+				+ !Skin.HasSetting(overlay) 
+				+ ![Control.IsVisible(54) + Window.IsActive(25)]
+				+ ![Window.IsActive(28) | Window.IsActive(114)]
+				| Window.IsActive(500) + Skin.HasSetting(ASStatusEnable)
+			</visible>
+		</control>
+
+		<control type="fadelabel" id="200">
+			<posy>690</posy>
+			<include>home-start</include>
+			<include>screenwidth</include>
+			<label>$LOCALIZE[31078]</label>
+			<label>$LOCALIZE[31077]</label>
+			<align>center</align>
+			<font>rss</font>
+			<include>fadeinout</include>	
+			<scrollout>no</scrollout>
+			<pauseatend>8000</pauseatend>
+			<visible>
+				Player.HasAudio + !Skin.HasSetting(overlay) 
+				+ ![Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(500) | Window.IsActive(28) | Window.IsVisible(10133)] 
+				+ ![Control.IsVisible(54) + Window.IsActive(25)]
+			</visible>
+		</control>
+		
+		<control type="label" id="200">
+			<posy>690</posy>
+			<include>home-start</include>
+			<include>screenwidth</include>
+			<label>[UPPERCASE]$LOCALIZE[31079][/UPPERCASE]</label>
+			<align>center</align>
+			<font>rss</font>
+			<include>fadeinout</include>	
+			<visible>
+				Player.HasVideo + !Skin.HasSetting(overlay) 
+				+ ![Window.IsActive(107) | Window.IsActive(114) | Window.IsActive(2006) | Window.IsActive(136) | Window.IsActive(500) | Window.IsActive(28) | Window.IsVisible(10133)] 
+				+ ![Control.IsVisible(54) + Window.IsActive(25)]
+			</visible>
+		</control>
+
+	</include>
+	
+	<include name="itemcount">
+		<description>number of files label</description>
+		<posx>25</posx>
+		<posy>3</posy>
+		<font>objects</font>
+		<include>home-menubar</include>
+		<include>fadeinout</include>
+	</include>
+
+
+<!-- CONTROLS ------------------------------------------------------------------------->
+	
+	<include name="indicatorFirst">
+		<control type="image">
+			<width>72</width>
+			<height>72</height>
+			<texture border="2">indicatorScrolling.png</texture>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>5</posy>
+			<width>72</width>
+			<height>72</height>
+			<info>ListItem.SortLetter</info>
+			<font>scroller</font>
+			<align>center</align>
+		</control>
+	</include>
+	
+	<include name="keyboardButton">
+		<textoffset>3</textoffset>
+		<textoffsety>-2</textoffsety>
+		<font>keyboard</font>
+		<texturefocus border="2">key-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+		<focusedcolor>sublabel-text</focusedcolor>
+		<width>32</width>
+		<height>32</height>
+	</include>
+	
+	<include name="indicatorScrolling">
+		<include>fadeinout</include>
+		<control type="group">
+			<posx>590</posx>
+			<posy>46</posy>
+			<visible>Container.Scrolling + Skin.HasSetting(indicatorScrolling)</visible>		
+			<control type="image">
+				<width>100</width>
+				<height>52</height>
+				<texture border="1">indicatorScrolling.png</texture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>52</height>
+				<info>ListItem.SortLetter</info>
+				<font>scroller</font>
+				<align>center</align>
+			</control>
+		</control>
+	</include>
+
+	<include name="screentype">
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio align="keep">scale</aspectratio>
+		<posx>0</posx>
+		<posy>0</posy>
+	</include>
+	
+	<include name="screenwidth">
+		<width>1280</width>
+	</include>
+	
+	<include name="thumbBorder">
+		<bordertexture border="2">list-focus.png</bordertexture>
+		<bordersize>4</bordersize>
+	</include>
+	
+	<include name="categoryButton">
+		<height>34</height>
+		<width>220</width>
+		<font>menu</font>
+		<textcolor>button-text</textcolor>
+		<align>left</align>
+		<textoffsety>4</textoffsety>
+		<textoffsetx>10</textoffsetx>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus>list-nofocus.png</texturenofocus>
+	</include>
+	
+	<include name="menubarButton">
+		<height>44</height>
+		<texturefocus>menubar-selection.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>menubar</font>
+		<textcolor>button-text</textcolor>
+		<aligny>-</aligny>
+		<align>center</align>
+		<textoffsety>1</textoffsety>
+	</include>
+	
+	
+	<include name="dialogWindow">
+		<posx>-35</posx>
+		<posy>-25</posy>
+		<texture border="38">dialogpanel.png</texture>
+	</include>
+
+	<include name="dialogProgressWindowC">
+		<posx>460</posx>
+		<posy>120</posy>
+	</include>
+	<include name="dialogProgressWindow">
+		<posx>-35</posx>
+		<posy>-25</posy>
+		<texture border="38">dialogpanel.png</texture>
+		<align>center</align>
+		<width>400</width>
+		<height>228</height>
+	</include>
+	<include name="dialogProgress">
+		<posx>0</posx>
+		<width>330</width>
+	</include>
+	
+	<include name="dialogButton">	
+		<width>95</width>
+		<height>33</height>
+		<font>h2D</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+	</include>
+	
+	<include name="dialogInfoButton">	
+		<width>100</width>
+		<height>30</height>
+		<font>buttonD</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>2</textoffsety>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+	</include>
+	
+	<include name="dialogConfirmButton">	
+		<width>96</width>
+		<height>32</height>
+		<font>buttonD</font>
+		<align>center</align>
+		<textoffsety>3</textoffsety>
+		<texturenofocus border="3">buttonD.png</texturenofocus>
+		<texturefocus border="3">buttonD-focus.png</texturefocus>
+	</include>
+	
+	<include name="infoDialogSpin">	
+		<control type="spincontrol" id="70">
+			<description>Info Dialog Spincontrol</description>
+			<posx>1165</posx>
+			<posy>620</posy>
+			<width>15</width>
+			<height>15</height>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<subtype>page</subtype>
+			<font>h3</font>
+			<pulseonselect>yes</pulseonselect>
+			<textcolor>button-text</textcolor>
+			<onup>104</onup>
+			<ondown>901</ondown>
+			<onleft>70</onleft>
+			<onright>70</onright>
+			<visible>!Control.IsVisible(50) + Skin.HasSetting(tvshowPosters)</visible>
+		</control>
+	</include>
+	
+	<include name="infoDialogSpin2">	
+		<control type="spincontrol" id="70">
+			<description>Info Dialog Spincontrol</description>
+			<posx>990</posx>
+			<posy>630</posy>
+			<width>15</width>
+			<height>15</height>
+			<textureup>scroll-up.png</textureup>
+			<texturedown>scroll-down.png</texturedown>
+			<textureupfocus>scroll-up-focus.png</textureupfocus>
+			<texturedownfocus>scroll-down-focus.png</texturedownfocus>
+			<subtype>page</subtype>
+			<font>h3</font>
+			<pulseonselect>yes</pulseonselect>
+			<textcolor>button-text</textcolor>
+			<onup>104</onup>
+			<ondown>901</ondown>
+			<onleft>70</onleft>
+			<onright>70</onright>
+			<visible>!Control.IsVisible(50) + !Skin.HasSetting(tvshowPosters)</visible>
+		</control>
+	</include>
+	
+	<include name="pagemenuButton">
+		<width>225</width>
+		<height>33</height>
+		<font>menu</font>
+		<textoffsetx>10</textoffsetx>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>button-text</textcolor>
+		<texturefocus border="2">list-focus.png</texturefocus>
+		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<aligny>center</aligny>
+	</include>
+	
+	<include name="pagemenuConstants">
+		<control type="button" id="2">
+			<description>View As Icons button</description>
+			<label>100</label>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>225</width>
+			<height>33</height>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>		
+			<textoffsetx>10</textoffsetx>
+			<aligny>center</aligny>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocus.png</texturenofocus>
+			<onleft>50</onleft>
+			<onright>40</onright>
+			<onup>32</onup>
+			<ondown>3</ondown>
+		</control>
+		
+		<control type="button" id="40">
+			<description>previous viewtype</description>
+			<posx>182</posx>
+			<posy>8</posy>
+			<height>15</height>
+			<width>15</width>
+			<label>-</label>
+			<texturefocus>scroll-down-focus.png</texturefocus>
+			<texturenofocus>scroll-down.png</texturenofocus>
+			<onclick>Container.PreviousViewMode</onclick>
+			<onleft>2</onleft>
+			<onright>41</onright>
+			<onup>2</onup>
+			<ondown>3</ondown>
+		</control>
+		<control type="button" id="41">
+			<description>next viewtype</description>
+			<posx>200</posx>
+			<posy>8</posy>
+			<height>15</height>
+			<width>15</width>
+			<label>-</label>
+			<texturefocus>scroll-up-focus.png</texturefocus>
+			<texturenofocus>scroll-up.png</texturenofocus>
+			<onclick>Container.NextViewMode</onclick>
+			<onleft>40</onleft>
+			<onright>50</onright>
+			<onup>2</onup>
+			<ondown>3</ondown>
+		</control>
+
+	</include>
+	
+	<include name="pageLabel">	
+		<include>home-menubar</include>
+		<posx>0</posx>
+		<posy>2</posy>
+		<include>screenwidth</include>
+		<align>center</align>
+		<textcolor>label-text</textcolor>
+		<font>page</font>
+		<visible>!Window.IsActive(136)</visible>
+	</include>
+	
+	<include name="listIcon">	
+		<posx>840</posx>
+		<posy>164</posy>
+		<width>256</width>
+		<height>256</height>
+		<info>ListItem.Icon</info>
+		<aspectratio align="bottom">keep</aspectratio>
+		<visible>IsEmpty(ListItem.Thumb)</visible>
+		<include>pageslide</include>
+	</include>
+	
+	<include name="listIconRef">	
+		<posx>840</posx>
+		<posy>420</posy>
+		<width>256</width>
+		<height>256</height>
+		<info>ListItem.Icon</info>
+		<include>pageslide</include>
+		<aspectratio align="bottom">keep</aspectratio>
+		<visible>IsEmpty(ListItem.Thumb)</visible>
+		<texture flipy="true" diffuse="fade2.png">-</texture>
+	</include>
+	
+	<include name="listThumb">
+		<posx>660</posx>
+		<posy>75</posy>
+		<width>610</width>
+		<height>594</height>
+		<include>pageslide</include>
+		<info>ListItem.Thumb</info>
+		<aspectratio align="center">keep</aspectratio>
+	</include>
+	
+	<include name="listThumbRef">
+		<include>pageslide</include>
+		<info>ListItem.Thumb</info>
+		<aspectratio align="left">scale</aspectratio>
+		<texture flipy="true" diffuse="fade2.png">-</texture>
+	</include>
+	
+	<include name="listOverlay">	
+		<width>24</width>
+		<height>24</height>
+		<info>ListItem.Overlay</info>
+		<include>fadeinout</include>
+	</include>
+	
+	<include name="listHeadLabel">
+		<posx>650</posx>	
+		<width>290</width>
+		<scroll>true</scroll>
+		<font>h1</font>
+		<align>left</align>
+		<textcolor>label-text</textcolor>
+		<include>fadeinout</include>
+	</include>
+	
+	<include name="listSubLabel">
+		<posx>650</posx>
+		<width>400</width>
+		<scroll>true</scroll>
+		<font>h2</font>
+		<align>left</align>
+		<textcolor>sublabel-text</textcolor>
+		<include>fadeinout</include>
+	</include>
+
+	
+	<include name="slideHeadLabel">
+		<font>h1</font>
+		<textcolor>label-text</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="slideSubLabel">
+		<font>h2</font>
+		<textcolor>sublabel-text</textcolor>
+		<scroll>true</scroll>
+	</include>
+	
+	<include name="timeProgress">
+		<label>[B]$INFO[player.Time][/B][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR]</label>
+		<font>h3</font>
+		<scroll>true</scroll>
+	</include>
+	
+	
+
+
+<!-- GENERAL ANIMATIONS ------------------------------------------------------------------------->
+	
+	<include name="pageslide">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="350" />
+			<effect type="zoom" start="50" end="100" time="350" center="640,360" tween="Back" easing="Out"/>
+		</animation>
+		
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="150" />
+			<effect type="zoom" start="100" end="50" time="250" center="640,360" tween="Quadratic" easing="In" />
+		</animation>
+	</include>
+	
+	<include name="pageSlideBottom">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="200" />
+			<effect type="slide" start="0,200" end="0" time="250" tween="Back" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="150" />
+			<effect type="slide" start="0" end="0,200" time="150" tween="Quadratic" />
+		</animation>
+	</include>
+	
+	<include name="pageSlideBottomFrame">		
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="70" time="150" />
+			<effect type="slide" start="0,200" end="0" time="250" tween="Back" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="70" end="0" time="100" />
+			<effect type="slide" start="0" end="0,200" time="150" tween="Quadratic" />
+		</animation>
+	</include>
+	
+	<include name="pageSlideBottomIdle">
+		<animation effect="slide" start="0,0" end="0,200" time="250" reversible="true" tween="Quadratic" easing="In" condition="System.IdleTime(3)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="150" condition="System.IdleTime(3)">Conditional</animation>
+	</include>
+
+	<include name="ListScroll">
+    	<animation effect="slide" start="0,-33" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,33" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+
+  	
+  	<include name="BigListScroll">
+    	<animation effect="slide" start="0,-149" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,149" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+  	<include name="BigListScrollM">
+    	<animation effect="slide" start="0,-100" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,100" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+  	<include name="BigListScrollEP">
+    	<animation effect="slide" start="0,-149" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,149" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+  	<include name="WideIconScroll">
+    	<animation effect="slide" start="0,-68" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext + !Skin.HasSetting(SmoothScroll)">focus</animation>
+    	<animation effect="slide" start="0,68" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious + !Skin.HasSetting(SmoothScroll)">focus</animation>
+  	</include>
+  	
+	<include name="autoscroll-plot">
+		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>
+	</include>
+	
+	<include name="autoscroll-line">
+		<scrollspeed>20</scrollspeed>
+	</include>
+
+	<include name="fadeinout">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="100" end="0" time="250" />
+		</animation>
+	</include>
+	
+	<include name="fadeinout-osd">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="90" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="90" time="350" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="OSDcontrolSlide">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,70" end="0,0" time="150" />
+			<effect type="fade" start="0" end="80" time="150" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,70" time="150" />
+			<effect type="fade" start="70" end="0" time="150" />
+		</animation>
+	</include>
+
+	<include name="fadeinout-osd-info">
+		<animation type="Visible">
+			<effect type="slide" start="0,70" end="0" tween="Quadratic" easing="Out" time="150" />
+			<effect type="fade" start="0" end="100" time="100" tween="Quadratic" easing="Out" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,70" tween="Quadratic" easing="Out" time="100" />
+			<effect type="fade" start="100" end="0" tween="Quadratic" easing="Out" time="100" />
+		</animation>
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,70" end="0" tween="Quadratic" easing="Out" time="150" />
+			<effect type="fade" start="0" end="100" time="100" tween="Quadratic" easing="Out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,70" tween="Quadratic" easing="Out" time="100" />
+			<effect type="fade" start="100" end="0" tween="Quadratic" easing="Out" time="100" />
+		</animation>
+	</include>
+	
+	<include name="fadescreen">
+		<control type="image">
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>1300</width>
+			<height>740</height>
+			<texture>black.png</texture>
+			<visible>Window.IsActive(126)</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="90" time="350" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="90" end="0" time="200" />
+			</animation>
+		</control>
+	</include>
+	
+	<include name="fanartFrame">
+		<animation effect="fade" start="0" end="70" time="150" >WindowOpen</animation>
+		<animation effect="fade" start="0" end="70" time="150" >Visible</animation>
+		<animation effect="fade" start="70" end="0" time="150" >WindowClose</animation>
+		<animation effect="fade" start="70" end="0" time="0" >Hidden</animation>
+	</include>
+
+	<include name="fanartIdleFade">
+		<animation effect="fade" start="0" end="100" time="300" >Visible</animation>
+		<animation effect="fade" start="100" end="0" time="150" condition="![Window.IsActive(106) | Window.IsActive(103) | Window.IsActive(100)] +  !Container.Content(seasons)">Hidden</animation>
+	</include>
+	
+	<include name="fanartIdleSlide">
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="300" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="Slide" start="0,0" end="0,300" time="200" tween="Quadratic" condition="![Window.IsActive(106) | Window.IsActive(103) | Window.IsActive(100)]"/>
+			<effect type="fade" start="100" end="0" time="350" />
+		</animation>
+	</include>
+	
+	<include name="fanartIdleFocus">
+		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="50" condition="![Window.IsActive(106) | Window.IsActive(103) | Window.IsActive(100)]">Hidden</animation>
+	</include>
+	
+	<include name="movieFanartFocus">
+		<animation type="focus">
+			<effect type="zoom"  start="100,100" end="135,135" center="85,150" time="200" />
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" start="135,135" end="100,100" center="85,150" time="150" />
+		</animation>
+	</include>
+	
+	<include name="TVFanartFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="110,100" time="250" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="110,100" time="150" delay="100"/>
+		</animation>
+	</include>
+	
+	<!--<include name="FocusFrame">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="110,100" time="250" delay="50"/>
+			<effect type="fade" start="0" end="100" time="250" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="110,100" time="150" delay="100"/>
+			<effect type="fade" start="100" end="0" time="250" delay="50"/>
+		</animation>
+	</include>-->
+	
+	<include name="movieFanartFocusOverlay">
+		<animation effect="slide" start="0,0" end="20,0" delay="100" time="150">Focus</animation>
+	</include>
+	
+	<include name="movieSlideFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="Back" start="100,100" end="120,120" center="80,155" time="200"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="80,155" time="150"/>
+		</animation>
+	</include>
+	<include name="movieSlideFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="Back" start="100,100" end="120,120" center="80,155" time="200"/>
+			<effect type="fade" start="0" end="100" time="150"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="80,155" time="150"/>
+			<effect type="fade" start="100" end="0" time="150"/>
+		</animation>
+	</include>
+	
+	<include name="WideSlideFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" center="245,46" time="350" />
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" center="245,46" time="150"/>
+		</animation>
+	</include>
+	<include name="WideSlideFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" center="245,46" time="350" />
+			<effect type="fade" start="0" end="100" time="250"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" center="245,46" time="150"/>
+			<effect type="fade" start="100" end="0" time="150"/>
+		</animation>
+	</include>
+	
+	<include name="episodeSlideFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="130,90" time="400" delay="100"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="130,90" time="200"/>
+		</animation>
+	</include>
+	<include name="episodeSlideFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="130,90" time="400" delay="100"/>
+			<effect type="fade" start="0" end="100" time="400" delay="100" />
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="130,90" time="200"/>
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+
+	<include name="musicSlideFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="100,100" time="300" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="100,100" time="150"/>
+		</animation>
+	</include>
+	<include name="musicSlideFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" center="100,100" time="300" delay="50"/>
+			<effect type="fade" start="0" end="100" time="300" delay="50" />
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" center="100,100" time="150"/>
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+	
+	<include name="PictureSlideFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="110,100" time="250" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="110,100" time="150" delay="100"/>
+		</animation>
+	</include>
+	
+	<include name="moviePanelFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="110,110" center="90,126" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="110,110" end="100,100" center="90,126" time="100"/>
+		</animation>
+	</include>
+	<include name="moviePanelFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="110,110" center="90,126" time="200" delay="50"/>
+			<effect type="fade" start="0" end="100" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="110,110" end="100,100" center="90,126" time="100"/>
+			<effect type="fade" start="100" end="0" time="200" delay="50"/>
+		</animation>
+	</include>
+	
+	<include name="musicPanelFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="86,86" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="86,86" time="150"/>
+		</animation>
+	</include>
+	<include name="musicPanelFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="86,86" time="200" delay="50"/>
+			<effect type="fade" start="0" end="100" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="86,86" time="150"/>
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+	
+	<include name="picturePanelFocus">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="120,86" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="120,86" time="150"/>
+		</animation>
+	</include>
+	<include name="picturePanelFocusBorder">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="120,86" time="200" delay="50"/>
+			<effect type="fade" start="0" end="100" time="200" delay="50"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="120,86" time="150"/>
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+	
+	
+<!-- PAGE ANIMATIONS ------------------------------------------------------------------------->
+
+	<include name="viewsmenu">
+		<animation effect="slide" start="0" end="220" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" condition="ControlGroup(9000).HasFocus(0)" >Conditional</animation>
+		
+		<animation effect="slide" start="220" end="0" time="150" acceleration="1.1" tween="Quadratic" Easing="In" reversible="false" condition="!ControlGroup(9000).HasFocus(0)" >Conditional</animation>
+	</include>
+	
+	<include name="pagemenus">
+		<animation effect="slide" start="-190" end="0" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" >Visible</animation>
+		<animation effect="slide" start="0" end="-190" time="150" acceleration="1.1" tween="Quadratic" Easing="Out" reversible="false" >Hidden</animation>
+	</include>
+
+	<include name="viewsmenucontext">
+		<animation effect="slide" start="0" end="245" time="150" acceleration="1.1" reversible="false" condition="Window.IsActive(106)">Conditional</animation>
+		<animation effect="slide" start="245" end="0" time="150" acceleration="1.1" reversible="false" condition="!Window.IsActive(106)" >Conditional</animation>
+	</include>
+	
+	<include name="contextSelectFade">
+		<animation effect="fade" start="100" end="60" time="600" condition="Window.IsActive(106)">Conditional</animation>
+	</include>
+	
+	<include name="pagetransition">
+		<include>screentype</include>
+		<aspectratio>keep</aspectratio>
+		<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="50">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="50">WindowOpen</animation>
+		<animation effect="fade" start="100" end="85" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDim)" >Conditional</animation>
+		<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDimStrong)" >Conditional</animation>
+		<animation effect="fade" start="0" end="100" condition="!Window.Previous(startup)" time="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
+	</include>
+	
+	
+<!-- DIALOG ANIMATIONS ------------------------------------------------------------------------->
+
+	<include name="dialog-open">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="190,110" tween="back" time="250" />
+			<effect type="fade" start="0" end="90" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="190,110" time="150" />
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
+		<animation type="Visible">
+			<effect type="zoom" start="50" end="100" center="190,110" tween="back" time="250" />
+			<effect type="fade" start="0" end="90" time="400" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="zoom" start="100" end="50" center="190,110" time="150" />
+			<effect type="fade" start="90" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialogOpenMHS">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="190,110" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="0" center="190,110" tween="Quadratic" time="150" />
+			<effect type="fade" start="97" end="0" time="150" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-info">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="80" end="100" center="640,360" tween="back" time="250" />
+			<effect type="fade" start="0" end="100" time="250" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="80" center="640,360" tween="Quadratic" time="150" delay="100" />
+			<effect type="fade" start="100" end="0" time="150"  />
+		</animation>
+	</include>
+	
+	<include name="dialogOpenBM">
+		<animation type="WindowOpen">
+			<effect type="slide" start="-800" end="0" tween="Quadratic" time="350" />
+			<effect type="fade" start="0" end="75" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="-400" tween="Quadratic" time="150" />
+			<effect type="fade" start="75" end="0" time="150" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-fav">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="107,210" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="107,110" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-num">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="100,100" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="100,100" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-fs">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="97" center="auto" time="200" />
+			<effect type="fade" time="200" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="97" end="50" center="auto" time="200" />
+			<effect type="fade" time="200" />
+		</animation>
+	</include>
+	
+	<include name="dialog-open-kb">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="50" end="100" center="640,280" tween="back" time="250" />
+			<effect type="fade" start="0" end="97" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="50" center="640,280" time="150" />
+			<effect type="fade" start="97" end="0" time="200" />
+		</animation>
+	</include>
+
+	
+<!-- HOMESCREEN ANIMATIONS ------------------------------------------------------------------------->	
+	
+	<include name="home-submenu">
+		<animation type="Focus">
+			<effect type="slide" tween="back" easing="Out" start="0,-600" time="300" />
+			<effect type="fade" start="0" end="400" time="800"/>
+		</animation>
+		<animation type="UnFocus">
+			<effect type="slide" tween="back" easing="In" start="-600,0" time="300" />
+			<effect type="fade" start="400" end="0" time="800"/>
+		</animation>
+	</include>
+
+	<include name="home-start">
+		<animation effect="fade" start="0" end="300" condition="Window.Previous(startup)" time="400">WindowOpen</animation> 
+	</include>
+	
+	<include name="home-menubar">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,-100" end="0,0" tween="Quadratic" easing="In" condition="!Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="!Window.Previous(startup)" time="300" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,-100" tween="Quadratic"  condition="!Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="!Window.Previous(startup)" time="300" />
+		</animation>
+	</include>
+	
+	<include name="home-menubar-startup">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,-100" end="0,0" tween="Quadratic" easing="In" condition="Window.Previous(startup)" time="300" />
+			<effect type="fade" condition="Window.Previous(startup)" time="200" />
+		</animation>
+	</include>
+
+
+<!-- BACKGROUND IMAGES INCLUDES ------------------------------------------------------------------------->
+
+	<include name="background">
+				
+		<control type="visualisation">
+			<include>screentype</include>
+			<visible>!Window.IsActive(2005) + [![Container.Content(episodes) | Container.Content(seasons)] + Skin.HasSetting(backgroundVisuals)]</visible>
+		</control>
+		
+		<control type="videowindow">
+       		<include>screentype</include>
+       		<visible>!Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)</visible>
+	  	</control>
+		
+		<control type="largeimage">
+			<description>default background</description>
+			<texture diffuse="background-diffuse.png">background.bmp</texture>
+			<visible>
+				!Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(genericBackgroundEnable)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundHomeEnable) + Window.IsActive(0)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundVideoEnable) + Window.IsActive(25)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundMusicEnable) + Window.IsActive(502)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundPicturesEnable) + Window.IsActive(2)
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundSettingsEnable) + [Window.IsActive(4) | Window.IsActive(59) | Window.IsActive(10007) | Window.IsActive(10019) | Window.IsActive(10012) | Window.IsActive(10013) | Window.IsActive(10015) | Window.IsActive(10016) | Window.IsActive(10017) | Window.IsActive(10018) | Window.IsActive(10019)]
+				| !Skin.HasSetting(defaultBackgroundEnable) + !Skin.HasSetting(backgroundWeatherEnable) + [Window.IsActive(MyWeather) | Window.IsActive(weathersettings)]
+			</visible>
+			<aspectratio scalediffuse="false">scale</aspectratio>
+			<animation effect="fade" start="100" end="0" condition="!IsEmpty(listitem.property(fanart_image))" time="0">Hidden</animation>
+			<animation effect="fade" start="100" end="0" condition="!IsEmpty(Fanart.Image)" time="0">Hidden</animation>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
+			<animation effect="fade" start="100" end="65" time="0" condition="True">Conditional</animation>
+			<include>screentype</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>single background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(genericBackground)]</texture>
+			<visible>
+				Skin.HasSetting(defaultBackgroundEnable) + Skin.HasSetting(defaultBackgroundEnable)
+			</visible>
+			<animation effect="fade" start="100" end="65" time="150" condition="Skin.HasSetting(subMenuFade) + [ControlGroup(1100).HasFocus() | ControlGroup(1200).HasFocus() | ControlGroup(1800).HasFocus() | ControlGroup(1600).HasFocus() | ControlGroup(1400).HasFocus()]" >Conditional</animation>
+			<animation effect="fade" start="100" end="85" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDim)" >Conditional</animation>
+			<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(backgroundDimEnable) + Skin.HasSetting(backgroundDimStrong)" >Conditional</animation>
+			<animation effect="fade" start="0" end="800" condition="Window.Previous(startup)" time="1300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo  + !Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)">Conditional</animation>
+			<include>screentype</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>home background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundHome)]</texture>
+			<visible>
+				Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundHomeEnable) + Window.IsActive(0)
+			</visible>
+			<include>pagetransition</include>
+			<include>screentype</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>video background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundVideo)]</texture>
+			<visible>
+				Skin.HasSetting(genericBackgroundEnable) 
+				+ Skin.HasSetting(backgroundVideoEnable) 
+				+ [Window.IsActive(25) | Window.IsActive(MyVideoFiles) | Window.IsActive(28)]
+				+ ![Container.Content(episodes) | Container.Content(seasons) + Skin.HasSetting(FanartEnable)]
+			</visible>
+			<include>pagetransition</include>
+			<include>screentype</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>music background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundMusic)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundMusicEnable) + [Window.IsActive(502) | Window.IsActive(MyMusicFiles) | Window.IsActive(500)]</visible>
+			<include>pagetransition</include>
+		</control>
+
+		<control type="largeimage">
+			<description>pictures background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundPictures)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundPicturesEnable) + Window.IsActive(2)</visible>
+			<include>pagetransition</include>
+			<include>screentype</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>settings background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundSettings)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundSettingsEnable) + [Window.IsActive(4) | Window.IsActive(59) | Window.IsActive(10007) | Window.IsActive(10019) | Window.IsActive(10012) | Window.IsActive(10013) | Window.IsActive(10015) | Window.IsActive(10016) | Window.IsActive(10017) | Window.IsActive(10018) | Window.IsActive(10019) | Window.IsActive(filemanager)| Window.IsActive(20)]</visible>
+			<include>pagetransition</include>
+		</control>
+		
+		<control type="largeimage">
+			<description>weather background</description>
+			<texture diffuse="background-diffuse.png">$INFO[Skin.String(backgroundWeather)]</texture>
+			<visible>Skin.HasSetting(genericBackgroundEnable) + Skin.HasSetting(backgroundWeatherEnable) + [Window.IsActive(MyWeather) | Window.IsActive(weathersettings)]</visible>
+			<include>pagetransition</include>
+		</control>
+
+		<control type="image">
+			<description>Overlay When Video or Vis Is Playing</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>screentype</include>
+			<texture>black.png</texture>
+			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
+			<visible>
+				Player.HasVideo + !Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)
+				| Player.HasAudio + Visualisation.Enabled  + Skin.HasSetting(backgroundVisuals)
+			</visible>
+		</control>
+
+		<control type="largeimage">
+			<description>fanart image (tvshow viewtype)</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>screentype</include>
+			<texture>$INFO[FanArt.Image]</texture>
+			<visible>!IsEmpty(FanArt.Image) + Control.IsVisible(54) + !Skin.HasSetting(FanartViewEnable) + [Container.Content(episodes) | Container.Content(seasons)]</visible>
+			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+		</control>
+		
+		<control type="largeimage">
+			<description>fanart image (movies viewtype)</description>
+			<include>screentype</include>			
+			<texture>$INFO[listitem.property(fanart_image)]</texture>
+			<visible>System.IdleTime(1) + Control.IsVisible(54) + !Skin.HasSetting(MovieFanartViewEnable) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+			<animation effect="fade" start="0" end="100" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+		</control>
+		
+		<control type="largeimage">
+			<description>fanart overlay (movies viewtype)</description>
+			<texture>fanart-overlay.png</texture>
+			<visible>Control.IsVisible(54) + [Container.Content(movies)|Container.Content(tvshows)]</visible>
+			<include>screentype</include>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" reversible="true" time="150">WindowOpen</animation>
+		</control>
+
+		<control type="largeimage">
+			<description>tvshow fanart dim bg</description>
+			<include>screentype</include>
+			<texture>black.jpg</texture>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable) + !IsEmpty(Fanart.Image) + !Player.HasVideo</visible>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" reversible="true" time="150">WindowOpen</animation>
+		</control>
+
+		<control type="largeimage">
+			<description>TV Show Fanart (global)</description>
+			<include>screentype</include>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(FanartEnable)</visible>
+			<texture>listitem.property(fanart_image)</texture>
+			<animation effect="fade" start="100" end="0" time="0" condition="Player.HasVideo + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="0" condition="!Player.HasVideo  + !Skin.HasSetting(backgroundVideo)">Conditional</animation>
+			<animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(FanartDimLight) + Skin.HasSetting(FanartDim)">Conditional</animation>
+			<animation effect="fade" start="100" end="35" time="0" condition="Skin.HasSetting(FanartDimStrong) + Skin.HasSetting(FanartDim)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+		<control type="largeimage">
+			<description>movie fanart dim bg</description>
+			<include>screentype</include>
+			<texture>black.jpg</texture>
+			<visible>!Control.IsVisible(54) + Skin.HasSetting(MovieFanartEnable) + !IsEmpty(listitem.property(fanart_image)) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo</visible>
+			<animation effect="fade" start="0" end="100" time="150" >Visible</animation>
+			<animation effect="fade" end="0" time="150">Hidden</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+		<control type="largeimage">
+			<description>Movie Fanart (global)</description>
+			<include>screentype</include>
+			<visible>Skin.HasSetting(MovieFanartEnable) + [Container.Content(movies) | Container.Content(tvshows)] + ![Control.IsVisible(54) | Control.IsVisible(57)]</visible>
+			<texture diffuse="background-diffuse.png">$INFO[listitem.property(fanart_image)]</texture>
+			<animation effect="fade" start="0" end="100" time="150" >Visible</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">Hidden</animation>
+			<animation effect="fade" start="100" end="85" reversible="true" time="0" condition="Skin.HasSetting(MovieFanartDimLight)">Conditional</animation>
+			<animation effect="fade" start="100" end="65" reversible="true" time="0" condition="Skin.HasSetting(MovieFanartDimStrong)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" reversible="true" time="150">WindowClose</animation>
+		</control>
+
+	</include>
+
+
+<!-- FANART VIEW INCLUDES -------------------------------------------------------------------->
+
+	<include name="Fanart">
+		
+		<control type="image">
+			<description>fanart title</description>
+			<posx>10</posx>
+			<posy>352</posy>
+			<width>600</width>
+			<height>176</height>
+			<texture>fanart-titlebg.png</texture>
+			<include>fanartFrame</include>
+			<visible>Control.IsVisible(54) + Container.Content(episodes) + !Skin.HasSetting(EpisodeFanartNoPlot)</visible>
+		</control>
+		
+		<control type="image">
+			<description>fanart title</description>
+			<posx>345</posx>
+			<posy>352</posy>
+			<width>600</width>
+			<height>176</height>
+			<texture>fanart-titlebg.png</texture>
+			<include>fanartFrame</include>
+			<visible>Control.IsVisible(54) + Container.Content(episodes) + Skin.HasSetting(EpisodeFanartNoPlot) | Window.IsActive(2) + Control.IsVisible(52) + !System.IdleTime(3)</visible>
+		</control>
+		
+		<control type="image">
+			<description>fanart osd background</description>
+			<posx>-50</posx>
+			<posy>455</posy>
+			<width>1500</width>
+			<height>300</height>
+			<texture border="30">dialogpanel.png</texture>
+			<visible>
+				Control.IsVisible(54) + [Container.Content(movies) | Container.Content(seasons)]
+				| Control.IsVisible(54) + Container.Content(tvshows) + Skin.HasSetting(tvshowPosters)
+			</visible>
+			<include>pageSlideBottomFrame</include>
+		</control>
+		
+		<control type="image">
+			<description>fanart osd background</description>
+			<posx>-50</posx>
+			<posy>545</posy>
+			<width>1500</width>
+			<height>210</height>
+			<texture border="30">dialogpanel.png</texture>
+			<visible>Control.IsVisible(54) + Container.Content(tvshows) + !Skin.HasSetting(tvshowPosters)</visible>
+			<include>pageSlideBottomFrame</include>
+		</control>
+		
+		<control type="image">
+			<description>fanart osd background (episodes)</description>
+			<posx>-20</posx>
+			<posy>508</posy>
+			<width>1500</width>
+			<height>300</height>
+			<texture border="30">dialogpanel.png</texture>
+			<visible>Control.IsVisible(54) + Container.Content(episodes) + !Window.IsActive(101)</visible>
+			<include>pageSlideBottom</include>
+			<include>fanartFrame</include>
+		</control>
+		
+		<control type="image">
+			<description>pictures selected background</description>
+			<posx>-20</posx>
+			<posy>508</posy>
+			<width>1500</width>
+			<height>300</height>
+			<texture border="30">dialogpanel.png</texture>
+			<visible>Control.IsVisible(52) + Window.IsActive(2)</visible>
+			<include>fanartFrame</include>
+			<include>pageSlideBottomIdle</include>
+		</control>
+		
+	</include>		
+
+</includes>

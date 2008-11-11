@@ -1,0 +1,62 @@
+﻿<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+<!--- STARTUP PLAYLIST ---------------------------------->		
+
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="2000" end="100">Focus</animation>
+		</control>
+
+		
+		<control type="image">
+			<description>startup animation</description>
+			<posx>548</posx>
+			<posy>310</posy>
+			<width>185</width>
+			<height>43</height>
+			<texture>focusstartup.png</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" reversible="false" time="250" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" reversible="false" delay="200" time="300" />
+			</animation>
+		</control>
+		
+		<control type="image">
+			<description>startup animation</description>
+			<posx>548</posx>
+			<posy>355</posy>
+			<width>185</width>
+			<height>43</height>
+			<texture flipy="true" diffuse="fade.png">focusstartup.png</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" reversible="false" time="250" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" reversible="false" delay="200" time="300" />
+			</animation>
+		</control>
+		
+		<control type="label">
+			<description>welcome user</description>
+			<posy>380</posy>
+			<include>screenwidth</include>
+			<label>[COLOR=sublabel-text][UPPERCASE]$LOCALIZE[31937][/COLOR] $INFO[System.ProfileName][/UPPERCASE]</label>
+			<align>center</align>
+			<font>h3</font>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" reversible="false" time="250" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" reversible="false" delay="200" time="300" />
+			</animation>
+		</control>
+		
+	</controls>
+</window>

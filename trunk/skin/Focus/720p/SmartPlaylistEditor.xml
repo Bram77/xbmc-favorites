@@ -1,0 +1,276 @@
+<window id="129">
+	<defaultcontrol always="true">22</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>400</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(smartplaylistrule)</visible>
+
+			<control type="image" id="1">
+				<include>dialogWindow</include>
+				<posy>-28</posy>
+				<width>530</width>
+				<height>483</height>
+			</control>
+
+			<control type="label" id="2">
+				<description>Settings Label</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>485</width>
+				<align>left</align>
+				<font>h1D</font>
+				<label>21432</label>
+			</control>
+
+			<control type="spincontrolex" id="22">
+				<description>Set Playlist type</description>
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>460</width>
+				<height>33</height>
+				<label>467</label>
+				<onright>22</onright>
+				<onleft>22</onleft>
+				<onup>9001</onup>
+				<ondown>12</ondown>
+			</control>
+			
+			<control type="button" id="12">
+				<description>Name Button</description>
+				<posx>0</posx>
+				<posy>76</posy>
+				<width>460</width>
+				<height>33</height>
+				<font>h2D</font>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+				<label>-</label>
+				<align>left</align>
+				<onup>22</onup>
+				<onleft>12</onleft>
+				<onright>12</onright>
+				<ondown>10</ondown>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Name Label</description>
+				<posx>10</posx>
+				<posy>78</posy>
+				<width>160</width>
+				<font>h2D</font>
+				<label>21433</label>
+				<visible>!Control.HasFocus(12)</visible>
+			</control>
+			
+			<control type="label">
+				<description>rules label</description>
+				<posx>0</posx>
+				<posy>118</posy>
+				<width>720</width>
+				<align>left</align>
+				<font>h2D</font>
+				<label>[B]$LOCALIZE[21434][/B]</label>
+			</control>
+			
+			<control type="list" id="10">
+				<description>Rules List Control</description>
+				<posx>0</posx>
+				<posy>146</posy>
+				<width>340</width>
+				<height>141</height>
+				<onup>12</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>16</ondown>
+
+				<itemlayout width="800" height="35">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>33</height>
+						<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+					</control>
+
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>33</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<font>h2D</font>
+					</control>
+				</itemlayout>
+				<focusedlayout width="340" height="35">
+
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>33</height>
+						<texture border="2">list-nofocusD.png</texture>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>340</width>
+						<height>33</height>
+						<texture border="2">list-focus.png</texture>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>545</width>
+						<height>33</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<font>h2D</font>
+					</control>
+				</focusedlayout>
+			</control>
+
+			<control type="group" id="9000">
+				<control type="button" id="13">
+					<description>Add Rule Button</description>
+					<posx>350</posx>
+					<posy>146</posy>
+					<height>33</height>
+					<width>110</width>
+					<label>15019</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+					<onup>17</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>14</ondown>
+				</control>
+				<control type="button" id="14">
+					<description>Remove Rule Button</description>
+					<posx>350</posx>
+					<posy>182</posy>
+					<height>33</height>
+					<width>110</width>
+					<label>1210</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+					<onup>13</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>15</ondown>
+				</control>
+				<control type="button" id="15">
+					<description>Edit Rule Button</description>
+					<posx>350</posx>
+					<posy>218</posy>
+					<height>33</height>
+					<width>110</width>
+					<label>21435</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<texturefocus border="2">list-focus.png</texturefocus>
+					<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+					<onup>14</onup>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<ondown>16</ondown>
+				</control>
+			</control>
+
+			<control type="spincontrolex" id="16">
+				<posx>0</posx>
+				<posy>265</posy>
+				<width>460</width>
+				<label>21424</label>
+				<onright>16</onright>
+				<onleft>16</onleft>
+				<onup>10</onup>
+				<ondown>17</ondown>
+			</control>
+
+			<control type="spincontrolex" id="17">
+				<posx>0</posx>
+				<posy>301</posy>
+				<width>460</width>
+				<label>21427</label>
+				<onright>17</onright>
+				<onleft>17</onleft>
+				<onup>16</onup>
+				<ondown>18</ondown>
+			</control>
+
+			<control type="spincontrolex" id="18">
+				<posx>0</posx>
+				<posy>337</posy>
+				<width>340</width>
+				<label>21429</label>
+				<onright>19</onright>
+				<onleft>19</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+			</control>
+
+			<control type="togglebutton" id="19">
+				<posx>350</posx>
+				<posy>337</posy>
+				<width>110</width>
+				<height>33</height>
+				<font>h2D</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus border="2">list-focus.png</texturefocus>
+				<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+				<alttexturefocus border="2">list-focus.png</alttexturefocus>
+				<alttexturenofocus border="2">list-nofocusD.png</alttexturenofocus>
+				<label>21431</label>
+				<altlabel>21430</altlabel>
+				<onright>18</onright>
+				<onleft>18</onleft>
+				<onup>17</onup>
+				<ondown>9001</ondown>
+			</control>
+			
+			<control type="group" id="9001">
+				<posy>390</posy>
+				
+				<control type="button" id="20">
+					<description>Ok Button</description>
+					<posx>259</posx>
+					<label>186</label>
+					<align>center</align>
+					<onup>18</onup>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<ondown>22</ondown>
+					<include>dialogConfirmButton</include>
+				</control>
+				<control type="button" id="21">
+					<description>Cancel Button</description>
+					<posx>364</posx>
+					<label>222</label>
+					<align>center</align>
+					<onup>18</onup>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<ondown>22</ondown>
+					<include>dialogConfirmButton</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,162 @@
+<window id="28">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<include>background</include>
+		<include>allscreens</include>
+		
+		<control type="label">
+			<include>pageLabel</include>
+			<label>10522</label>
+		</control>
+		
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B]$INFO[Container.NumItems][/B] [LOWERCASE]$LOCALIZE[31944][/LOWERCASE]</label>
+		</control>
+		
+		<include>LibraryPlaylistMenu</include>
+		
+		<control type="group">
+			<description>page content</description>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>PlaylistView</include>
+			<include>AllViewCommonPageControls</include>
+	
+			<control type="group">
+				<include>fadeinout</include>
+				<posx>700</posx>
+				<posy>85</posy>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>307</height>
+					<texture border="9">episode-main.png</texture>
+					<visible>Player.HasVideo</visible>
+					<include>fadeinout</include>
+				</control>	
+		
+				<control type="videowindow">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>504</width>
+					<height>281</height>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="label">
+					<description>Playing Track</description>
+					<posx>5</posx>
+					<posy>320</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
+					<visible>Player.HasVideo + Control.IsVisible(50)</visible>
+					<align>left</align>
+					<font>h1</font>
+					<include>listHeadLabel</include>
+				</control>
+				
+				<control type="label">
+					<description>Playing Track Artist</description>
+					<posx>5</posx>
+					<posy>344</posy>
+					<width>530</width>
+					<label>[UPPERCASE][B]$INFO[VideoPlayer.Artist][/B][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				<control type="label">
+					<description>Playing Movie</description>
+					<posx>5</posx>
+					<posy>344</posy>
+					<width>530</width>
+					<label>[UPPERCASE][B]$INFO[VideoPlayer.Genre][/B][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50) + VideoPlayer.Content(movies)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				<control type="label">
+					<description>TV Show Title</description>
+					<posx>5</posx>
+					<posy>344</posy>
+					<width>530</width>
+					<label>[UPPERCASE][B]$INFO[VideoPlayer.TVShowTitle][/B][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				<control type="label">
+					<description>TV Show Title</description>
+					<posx>5</posx>
+					<posy>363</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$LOCALIZE[20373] $INFO[VideoPlayer.Season], $LOCALIZE[20359] $INFO[VideoPlayer.episode][/UPPERCASE]</label>
+					<visible>!IsEmpty(ListItem.episode) + Control.IsVisible(50)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				<control type="label">
+					<description>Playing Track Year</description>
+					<posx>5</posx>
+					<posy>383</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$INFO[VideoPlayer.Premiered][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50) + VideoPlayer.Content(episodes)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				
+				<control type="label">
+					<description>Playing Track Album</description>
+					<posx>5</posx>
+					<posy>363</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$INFO[VideoPlayer.Album][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				
+				<control type="label">
+					<description>Playing Track Year</description>
+					<posx>5</posx>
+					<posy>383</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$INFO[VideoPlayer.Year][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50) + !VideoPlayer.Content(episodes)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				
+				<control type="label">
+					<description>Playing Track Label</description>
+					<posx>5</posx>
+					<posy>403</posy>
+					<width>530</width>
+					<label>[UPPERCASE]$INFO[VideoPlayer.Studio][/UPPERCASE]</label>
+					<visible>Control.IsVisible(50)</visible>
+					<align>left</align>
+					<include>listSubLabel</include>
+				</control>
+				
+				<control type="label">
+					<description>Time Progress</description>
+					<font>h1</font>
+					<posx>5</posx>
+					<posy>460</posy>
+					<width>530</width>
+					<align>left</align>
+					<font>h1</font>
+					<label>$INFO[VideoPlayer.Time][COLOR=sublabel-text]$INFO[VideoPlayer.Duration,/][/COLOR]</label>
+					<visible>Player.HasVideo + Control.IsVisible(50)</visible>
+				</control>
+	
+				</control>
+		</control>	
+	</controls>
+</window>
