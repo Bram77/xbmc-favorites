@@ -67,7 +67,7 @@
 
           <control type="button" id="4">
             <description>Settings button</description>
-            <posx>132</posx>
+            <posx>172</posx>
             <label>5</label>
             <onclick>ActivateWindow(MyWeatherSettings)</onclick>
             <onleft>2</onleft>

@@ -47,6 +47,7 @@
   <string id="31043">Πρόγνωση</string>
   <string id="31044">Κατά</string>
   <string id="31045">Πρόσφατα Αναρτημένα</string>
+  <string id="31046">Διαδρομή για το 'Lyrics Script'</string>  
 
 <!--  Programs  -->
   <string id="31051">Παιχνίδια</string>
@@ -113,7 +114,7 @@
   <string id="31620">Μενού</string> 
   <string id="31621">Απόκρυψη της επιλογής</string> 
   <string id="31622">Ενεργό/ή</string> 
-  <string id="31623">Υπόβαθρο</string>
+  <string id="31623">- Υπόβαθρο</string>
   <string id="31624">Επιλογή</string>
   <string id="31625">Χρήση Προεπιλεγμένων</string>
   <string id="31650">Απόκρυψη Δεξιάς Λεπίδας</string>
@@ -125,7 +126,7 @@
   <string id="31656">Υπόβαθρα</string>
   <string id="31657">Εικόνα</string>
   <string id="31658">Φάκελος</string>
-  <string id="31659">Επαναφορά</string>
+  <string id="31659">Απομάκρυνση από</string>
   <string id="31660">Ενεργοποίηση Τροποποιημένου Παρασκηνίου στην Αρχική Οθόνη</string>
   <string id="31661">Διαφημιστικά Ταινιών από την Apple</string>
   <string id="31662">Απόκρυψη Ρολογιού</string>
@@ -156,8 +157,9 @@
   <string id="31687">κατά την προβολή Βίντεο</string>
   <string id="31688">κατά την προβολή Μουσικής</string>
   <string id="31689">κατά την προβολή Φωτογραφιών</string>
-  <string id="31690">Απόκρυψη των 'Χωρίς Μικρογραφία'</string> 
+  <string id="31690">Απόκρυψη κειμένου 'Χωρίς Μικρογραφία'</string> 
   <string id="31691">Μικρή Επικάλυψη κατά τη Ροή Εξωφύλλων στις Τηλεοπτικές Σειρές</string>
+  <string id="31692">Απόκρυψη Πληροφοριών κατά την προβολή Κυλιόμενες Αφίσες</string>
 
 <!--  Options Menu  -->
   <string id="31701">Διαμόρφωση</string>

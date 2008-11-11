@@ -21,7 +21,7 @@
 
   <include name="MediaCountNumberPos">
     <posx>134</posx>
-    <posy>1</posy>
+    <posy>-1</posy>
   </include>
 
   <include name="VolumeImageDims">
@@ -34,6 +34,8 @@
     <posy>12</posy>
     <width>90</width>
   </include>
+
+  <constant name="ContextMenuWidth">334</constant>
 
 <!-- Backgrounds -->
   <include name="FullScreenBGImageDims">
@@ -231,8 +233,8 @@
   </include>
 
   <include name="ProgressDialogCancelBtnDims">
-    <posx>395</posx>
-    <width>76</width>
+    <posx>370</posx>
+    <width>101</width>
   </include>
 
 <!-- Confirmation Dialogs -->
@@ -270,11 +272,11 @@
   <constant name="MediaSourceDialogButtonWidth">108</constant>
 
   <include name="MediaSourceBottomBtnsDims">
-    <posx>115</posx>
+    <posx>95</posx>
     <posy>232</posy>
   </include>
 
-  <constant name="MediaSourceSetContentBtnWidth">140</constant>
+  <constant name="MediaSourceSetContentBtnWidth">180</constant>
   
 <!-- Network Setup -->
   <include name="NetworkSetupBrowseBtnDims">
@@ -661,12 +663,12 @@
     <posy>50</posy>
   </include>
 
-  <include name="OMViewLargeThumb">
+  <include name="OMViewLargeThumbDims">
     <width>430</width>
     <height>235</height>
   </include>
 
-  <include name="OMViewThumb">
+  <include name="OMViewThumbDims">
     <width>202</width>
     <height>130</height>
   </include>
@@ -688,13 +690,13 @@
   <constant name="VideoOSDPlayerControlsSeparatorWidth">248</constant>
 
   <include name="VideoOSDBkmkBtnsGroupDims">
-    <posx>320</posx>
+    <posx>200</posx>
     <posy>212</posy>
     <height>30</height>
     <itemgap>20</itemgap>
   </include>
 
-  <constant name="VideoOSDBkmkBtnWidth">200</constant>
+  <constant name="VideoOSDBkmkBtnWidth">240</constant>
 
   <constant name="VideoOSDBkmkThumbAreaWidth">146</constant>
   <constant name="VideoOSDBkmkThumbImageWidth">134</constant>
@@ -828,7 +830,7 @@
     <animation effect="zoom" tween="quadratic" end="-32,-43,220,200" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
-  <include name="WallStreamNonMusicFirstRowInfo">
+  <include name="WallStreamGenericFirstRowInfo">
     <control type="group">
       <posx>211</posx>
       <visible>Container(53).Position(0)</visible>
@@ -886,7 +888,7 @@
     </control>
   </include>
 
-  <include name="WallStreamNonMusicSecondRowInfo">
+  <include name="WallStreamGenericSecondRowInfo">
     <control type="group">
       <posx>211</posx>
       <visible>Container(53).Position(8)</visible>
@@ -944,7 +946,7 @@
     </control>
   </include>
 
-  <include name="WallStreamNonMusicThirdRowInfo">
+  <include name="WallStreamGenericThirdRowInfo">
     <control type="group">
       <posx>211</posx>
       <visible>Container(53).Position(16)</visible>
@@ -1260,7 +1262,156 @@
       <include>WallStreamFadeAnim</include>
       <include>WallStreamMusicInfo</include>
     </control>
-  </include>  
+  </include>
+
+  <constant name="WallStreamEpThumbWidth">320</constant>
+
+  <include name="WallStreamEpThumbSlideAnim">
+    <animation effect="slide" end="32,0" time="0" delay="100" reversible="false" condition="Container.Column(0)">Conditional</animation>
+    <animation effect="slide" end="0,16" time="0" delay="100" reversible="false" condition="Container.Row(0)">Conditional</animation>
+    <animation effect="slide" end="-32,0" time="0" delay="100" reversible="false" condition="Container.Column(3)">Conditional</animation>
+    <animation effect="slide" end="0,-16" time="0" delay="100" reversible="false" condition="Container.Row(3)">Conditional</animation>
+  </include>
+
+  <include name="WallStreamEpThumbFocusDims">
+    <posx>-8</posx>
+    <posy>-8</posy>
+    <width>336</width>
+    <height>196</height>
+  </include>
+
+  <include name="WallStreamEpThumbOverlayFocusDims">
+    <width>240</width>
+    <height>135</height>
+  </include>
+
+  <include name="WallStreamEpThumbZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-40,-24,400,232" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamEpThumbOverlayZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-32,-14,288,155" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamEpisodesFirstRowInfo">
+    <control type="group">
+      <posx>376</posx>
+      <visible>Container(53).Position(0)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>664</posx>
+      <visible>Container(53).Position(1)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>92</posx>
+      <visible>Container(53).Position(2)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>382</posx>
+      <visible>Container(53).Position(3)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesSecondRowInfo">
+    <control type="group">
+      <posx>376</posx>
+      <visible>Container(53).Position(4)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>664</posx>
+      <visible>Container(53).Position(5)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>92</posx>
+      <visible>Container(53).Position(6)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>382</posx>
+      <visible>Container(53).Position(7)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesThirdRowInfo">
+    <control type="group">
+      <posx>376</posx>
+      <visible>Container(53).Position(8)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>664</posx>
+      <visible>Container(53).Position(9)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>92</posx>
+      <visible>Container(53).Position(10)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>382</posx>
+      <visible>Container(53).Position(11)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesFourthRowInfo">
+    <control type="group">
+      <posx>376</posx>
+      <visible>Container(53).Position(12)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>664</posx>
+      <visible>Container(53).Position(13)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>92</posx>
+      <visible>Container(53).Position(14)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>382</posx>
+      <visible>Container(53).Position(15)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
 
 <!-- Video Views -->
 <!-- =========== -->
@@ -1389,7 +1540,7 @@
   </include>
 
   <include name="TVSeasonsListAnim">
-    <animation effect="slide" end="-446,198" time="0" condition="Container.Content(seasons)">Conditional</animation>
+    <animation effect="slide" end="-446,90" time="0" condition="Container.Content(seasons)">Conditional</animation>
   </include>
 
   <include name="TVSeasonsItemBGDims">
@@ -1398,6 +1549,7 @@
 
   <include name="TVSeasonsItemFocusBGDims">
     <!-- Empty filler -->
+    <width>685</width>
   </include>
 
   <include name="TVSeasonsItemDetailBGDims">

@@ -172,6 +172,14 @@
           <include>GeneralSkinOption</include>
         </control>
 
+        <control type="radiobutton" id="231">
+          <description>Hide Thumbs in Options Menu</description>
+          <include>GeneralSkinOption</include>
+          <label>$LOCALIZE[31693]</label>
+          <onclick>Skin.ToggleSetting(HideOptionMenuThumbs)</onclick>
+          <selected>Skin.HasSetting(HideOptionMenuThumbs)</selected>
+        </control>
+
         <control type="radiobutton" id="235">
           <description>Hide Scrollbars on Media Screens</description>
           <label>$LOCALIZE[31664]</label>
@@ -478,6 +486,16 @@
           <label>$LOCALIZE[31686]</label>
           <onclick>Skin.ToggleSetting(ShowHorizMusicVis)</onclick>
           <selected>Skin.HasSetting(ShowHorizMusicVis)</selected>
+          <include>GeneralSkinOption</include>
+        </control>
+
+        <control type="togglebutton" id="281">
+          <description>Path to Lyrics Script</description>
+  				<label>$LOCALIZE[20141] $LOCALIZE[31046]</label>
+  				<altlabel>$LOCALIZE[31659] $LOCALIZE[31046]</altlabel>
+  				<onclick>Skin.SetFile(LyricsScriptPath)</onclick>
+  				<altclick>Skin.Reset(LyricsScriptPath)</altclick>
+  				<usealttexture>Skin.String(LyricsScriptPath)</usealttexture>
           <include>GeneralSkinOption</include>
         </control>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
@@ -71,21 +71,23 @@
   <string id="31075">RAFRAÎCHIR</string>
 
 <!--  Video  -->
-  <string id="31111">Films</string> 
-  <string id="31112">Series TV</string> 
-  <string id="31113">Vos Videos</string> 
-  <string id="31114">Épisode:</string> 
-  <string id="31115">N/A</string> 
-  <string id="31116">Titre du Film</string> 
-  <string id="31117">Vignette</string> 
-  <string id="31118">Fanart</string> 
-  <string id="31119">RÉSUMÉ</string> 
-  <string id="31120">Star Rating</string> 
-  <string id="31121">Détails du Film</string> 
+  <string id="31111">Films</string>
+  <string id="31112">Series TV</string>
+  <string id="31113">Vos Videos</string>
+  <string id="31114">Épisode:</string>
+  <string id="31115">N/A</string>
+  <string id="31116">Titre du Film</string>
+  <string id="31117">Vignette</string>
+  <string id="31118">Fanart</string>
+  <string id="31119">RÉSUMÉ</string>
+  <string id="31120">Star Rating</string>
+  <string id="31121">Détails du Film</string>
   <string id="31122">Sortie le</string>
   <string id="31123">MPAA</string>
-  <string id="31124">Eps.</string> 
-  <string id="31125">Theater Times</string> 
+  <string id="31124">Eps.</string>
+  <string id="31125">Theater Times</string>
+  <string id="31126">Détails Série TV</string>
+  <string id="31127">Détails Episode</string>
 
 <!--  Music  --> 
   <string id="31220">Lecture en cours</string>
@@ -96,21 +98,21 @@
   <string id="31225">Note</string>
   <string id="31226">Change</string>
   <string id="31227">Vos sélections</string>
-  <string id="31228">-</string>
+  <string id="31228">Parôles</string>
 
 <!--  Settings  --> 
-  <string id="31601">Apparence</string> 
-  <string id="31602">Réseau</string> 
-  <string id="31603">Skin</string> 
-  <string id="31604">GÉNÉRAL</string> 
-  <string id="31605">Accueil</string> 
-  <string id="31606">CHANGEZ VOS PARAMÈTRES POUR</string> 
-  <string id="31607">Actuel</string> 
-  <string id="31608">Source</string> 
-  <string id="31609">Dest</string> 
-  <string id="31620">Menu</string> 
-  <string id="31621">Désactiver</string> 
-  <string id="31622">Activer</string> 
+  <string id="31601">Apparence</string>
+  <string id="31602">Réseau</string>
+  <string id="31603">Skin</string>
+  <string id="31604">GÉNÉRAL</string>
+  <string id="31605">Accueil</string>
+  <string id="31606">CHANGEZ VOS PARAMÈTRES POUR</string>
+  <string id="31607">Actuel</string>
+  <string id="31608">Source</string>
+  <string id="31609">Dest</string>
+  <string id="31620">Menu</string>
+  <string id="31621">Désactiver</string>
+  <string id="31622">Activer</string>
   <string id="31623">: Arrière-plan</string>
   <string id="31624">Choisir</string>
   <string id="31625">Utiliser défaut</string>
@@ -118,7 +120,7 @@
   <string id="31651">Activer arrière-plans perso</string>
   <string id="31652">Activer</string>
   <string id="31653">Voir</string>
-  <string id="31654">Cacher le texte des vignettes dans la fenêtre fichier</string>
+  <string id="31654">Cacher le texte des vignettes sur la fenêtre fichier</string>
   <string id="31655">Afficher la vignette saison dans la vue Épisode</string>
   <string id="31656">ARRIÈRE-PLAN</string>
   <string id="31657">Image</string>
@@ -128,8 +130,8 @@
   <string id="31661">Apple Movie Trailers</string>
   <string id="31662">Cacher l'horloge</string>
   <string id="31663">Afficher le compteur de Media</string>
-  <string id="31664">Cacher la barre de défilement sur l'écran des médias</string>
-  <string id="31665">Cacher les icons vue/non vue</string>
+  <string id="31664">Cacher la barre de défilement sur l'écran Média</string>
+  <string id="31665">Cacher les icones vue/non vue</string>
   <string id="31666">Afficher la lame au milieu de l'écran</string>
   <string id="31667">MediaStream</string>
   <string id="31668">Afficher grande Horloge</string>
@@ -154,18 +156,21 @@
   <string id="31687">de la vue Video</string>
   <string id="31688">de la vue Musique</string>
   <string id="31689">de la vue Images</string>
+  <string id="31690">Cacher les icones No Thumb</string>
+  <string id="31691">Utiliser un Overlay légé pour le Coverflow Série TV</string>
+  <string id="31692">Cacher les infos dans la vue Wall Stream</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>
-  <string id="31702">Showcase</string> 
-  <string id="31703">Saisons</string> 
-  <string id="31704">Photo</string> 
-  <string id="31705">Convex</string> 
-  <string id="31706">Vignette Épisode</string> 
-  <string id="31707">Media Détails</string> 
-  <string id="31708">Media Liste</string> 
+  <string id="31702">Showcase</string>
+  <string id="31703">Saisons</string>
+  <string id="31704">Photo</string>
+  <string id="31705">Convex</string>
+  <string id="31706">Vignette Épisode</string>
+  <string id="31707">Media Détails</string>
+  <string id="31708">Media Liste</string>
   <string id="31709">Concave</string>
-  <string id="31710">Display</string> 
+  <string id="31710">Afficher</string>
   <string id="31711">Info Liste</string>
   <string id="31712">Diapositives</string>
   <string id="31713">Options</string>
@@ -173,7 +178,7 @@
   <string id="31715">Panneau</string>
   <string id="31716">Coverflow</string>
   <string id="31717">Menu Options</string>
-  
+
 <!--  Credits  -->
   <string id="31800">Credits</string>
   <string id="31801">Bienvenue sur</string>

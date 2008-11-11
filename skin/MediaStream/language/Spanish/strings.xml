@@ -8,7 +8,7 @@
 <string id="31006">Sistema</string>
 <string id="31007">On/Off</string>
 <string id="31008">Series</string>
-<string id="31011">Visionar tus</string>
+<string id="31011">Ver tus</string>
 <string id="31012">Escuchar tu</string>
 <string id="31013">Mirar tus</string>
 <string id="31014">Iniciar tus</string>
@@ -43,6 +43,7 @@
 <string id="31043">Consultar</string>
 <string id="31044">Por</string>
 <string id="31045">Recientemente Añadido</string>
+<string id="31046">Ubicación del Script de Letras</string>
 
 <!-- Programs -->
 <string id="31051">Juegos</string>
@@ -76,7 +77,7 @@
 <string id="31117">Miniatura</string>
 <string id="31118">Fanart</string>
 <string id="31119">Sinopsis</string>
-<string id="31120">Valoración</string>
+<string id="31120">Puntaje</string>
 <string id="31121">Detalles</string>
 <string id="31122">Emitido</string>
 <string id="31123">MPAA</string>
@@ -91,7 +92,7 @@
 <string id="31222">Pistas siguientes</string>
 <string id="31223">Click para letras</string>
 <string id="31224">Abrir el MENÚ de opciones</string>
-<string id="31225">Valoración</string>
+<string id="31225">Puntaje</string>
 <string id="31226">Cambiar</string>
 <string id="31227">Tu preselección</string>
 <string id="31228">-</string>
@@ -131,7 +132,7 @@
 <string id="31666">Mostrar hoja de opciones en el centro de la pantalla</string>
 <string id="31667">MediaStream</string>
 <string id="31668">Mostrar reloj grande</string>
-<string id="31669">Mostrar meteorología en el menú principal</string>
+<string id="31669">Mostrar el clima en el menú principal</string>
 <string id="31670">Mostrar fanart</string>
 <string id="31671">Ocultar argumento en el OSD de Video</string>
 <string id="31672">Ocultar información</string>

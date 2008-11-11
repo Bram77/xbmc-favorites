@@ -1,17 +1,54 @@
 History of Changes
 ==================
 
+v0.97 (10/11/2008)
+----- ------------
+
+Added: Episode Thumb version of Wall Stream view
+Added: Watched/Unwatched Episode counts to TV Show version of Media Preview
+Added: Option to change the path to the XBMC Lyrics script
+Added: Option to hide thumb images in Options Menu (reduces memory usage slightly)
+
+Fixed: Vertical position of list in Seasons view
+Fixed: Vertical alignment of text in buttons
+Fixed: Vertical aligment of Media Count number text for 4x3
+Fixed: Width of time labels in Video OSD (so that it works with large times in larger fonts)
+Fixed: Width of buttons in Media Source dialog so that it also fits with the larger fonts
+
+Updated: Widened Context menu for 4x3
+Updated: Widened buttons in Video OSD Bookmarks
+Updated: Moved text on Bigger Clock down slightly
+Updated: German, Spanish, Italian, Greek and French translations
+
+
+v0.96.5 (03/11/2008)
+------- ------------
+
+Added: Arial font set options (they do not look good but are there for those who need the extra foreign characters)
+
+Fixed: Lyrics script
+Fixed: Overlapping album and song titles when viewing songs in Coverflow view
+Fixed: Tidied up System Info screen to avoid overlapping text
+Fixed: Moved list up the screen on Seasons view to avoid bottom of list being off the screen
+
+Updated: Widened Cancel button in Progress dialog
+Updated: Widend Manual button in Selection dialog
+Updated: Removed focus highlight from top button in Set Content dialog (was mis-aligned)
+Updated: Dutch, Swedish, French and Greek translations
+
+
 v0.96 (30/10/2008)
 ----- ------------
 
 Added: Wall Stream view for widescreen and 4x3 (currently works best with portrait posters and album covers)
 Added: Option to hide info area in Wall Stream view
+Added: Chinese (Simple) translation
 Added: Music Videos link to Home screen (in Music sub-menu)
-Added: Coverflow and Wall Stream view to Pictures and Programs screens
+Added: Coverflow and Wall Stream view to Programs screen
+Added: Coverflow and Wall Stream view to Pictures screen
 Added: Alternative font sets (Alt Default, Alt Bigger and Alt Massive) which use the old default font
 Added: Fade on the left hand side of the RSS area (to mirror the fade that was already on the right)
 Added: Display of the skin version no. (and SVN revision) to the System Info screen
-Added: Chinese (Simple) translation
 
 Fixed: Missing background in Settings screens
 Fixed: Alignment and position of larger clock

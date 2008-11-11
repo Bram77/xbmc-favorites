@@ -21,7 +21,7 @@
 
   <include name="MediaCountNumberPos">
     <posx>214</posx>
-    <posy>1</posy>
+    <posy>-1</posy>
   </include>
 
   <include name="VolumeImageDims">
@@ -34,6 +34,8 @@
     <posy>12</posy>
     <width>120</width>
   </include>
+
+  <constant name="ContextMenuWidth">445</constant>
 
 <!-- Backgrounds -->
   <include name="FullScreenBGImageDims">
@@ -269,14 +271,14 @@
   <constant name="SelectionDialogShortTextWidth">712</constant>
 
   <constant name="MediaSourceLocationButtonsGroupPosX">708</constant>
-  <constant name="MediaSourceDialogButtonWidth">140</constant>
+  <constant name="MediaSourceDialogButtonWidth">170</constant>
 
   <include name="MediaSourceBottomBtnsDims">
-    <posx>185</posx>
+    <posx>120</posx>
     <posy>232</posy>
   </include>
 
-  <constant name="MediaSourceSetContentBtnWidth">192</constant>
+  <constant name="MediaSourceSetContentBtnWidth">272</constant>
 
 <!-- Network Setup -->
   <include name="NetworkSetupBrowseBtnDims">
@@ -673,12 +675,12 @@
     <posy>50</posy>
   </include>
 
-  <include name="OMViewLargeThumb">
+  <include name="OMViewLargeThumbDims">
     <width>574</width>
     <height>235</height>
   </include>
 
-  <include name="OMViewThumb">
+  <include name="OMViewThumbDims">
     <width>298</width>
     <height>130</height>
   </include>
@@ -840,7 +842,7 @@
     <animation effect="zoom" tween="quadratic" end="-42,-42,293,200" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
-  <include name="WallStreamNonMusicFirstRowInfo">
+  <include name="WallStreamGenericFirstRowInfo">
     <control type="group">
       <posx>276</posx>
       <visible>Container(53).Position(0)</visible>
@@ -884,7 +886,7 @@
     </control>
   </include>
 
-  <include name="WallStreamNonMusicSecondRowInfo">
+  <include name="WallStreamGenericSecondRowInfo">
     <control type="group">
       <posx>276</posx>
       <visible>Container(53).Position(6)</visible>
@@ -928,7 +930,7 @@
     </control>
   </include>
 
-  <include name="WallStreamNonMusicThirdRowInfo">
+  <include name="WallStreamGenericThirdRowInfo">
     <control type="group">
       <posx>276</posx>
       <visible>Container(53).Position(12)</visible>
@@ -1176,6 +1178,127 @@
     </control>
   </include>
 
+  <constant name="WallStreamEpThumbWidth">427</constant>
+
+  <include name="WallStreamEpThumbSlideAnim">
+    <animation effect="slide" end="32,0" time="0" delay="100" reversible="false" condition="Container.Column(0)">Conditional</animation>
+    <animation effect="slide" end="0,16" time="0" delay="100" reversible="false" condition="Container.Row(0)">Conditional</animation>
+    <animation effect="slide" end="-32,0" time="0" delay="100" reversible="false" condition="Container.Column(2)">Conditional</animation>
+    <animation effect="slide" end="0,-16" time="0" delay="100" reversible="false" condition="Container.Row(3)">Conditional</animation>
+  </include>
+
+  <include name="WallStreamEpThumbFocusDims">
+    <posx>-8</posx>
+    <posy>-8</posy>
+    <width>459</width>
+    <height>196</height>
+  </include>
+
+  <include name="WallStreamEpThumbOverlayFocusDims">
+    <width>320</width>
+    <height>135</height>
+  </include>
+
+  <include name="WallStreamEpThumbZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-40,-24,534,232" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamEpThumbOverlayZoomAnim">
+    <animation effect="zoom" tween="quadratic" end="-32,-14,368,155" time="300" delay="100" reversible="false">Focus</animation>
+  </include>
+
+  <include name="WallStreamEpisodesFirstRowInfo">
+    <control type="group">
+      <posx>510</posx>
+      <visible>Container(53).Position(0)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>760</posx>
+      <visible>Container(53).Position(1)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>274</posx>
+      <visible>Container(53).Position(2)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesSecondRowInfo">
+    <control type="group">
+      <posx>510</posx>
+      <visible>Container(53).Position(3)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>760</posx>
+      <visible>Container(53).Position(4)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>274</posx>
+      <visible>Container(53).Position(5)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesThirdRowInfo">
+    <control type="group">
+      <posx>510</posx>
+      <visible>Container(53).Position(6)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>760</posx>
+      <visible>Container(53).Position(7)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>274</posx>
+      <visible>Container(53).Position(28)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodesFourthRowInfo">
+    <control type="group">
+      <posx>510</posx>
+      <visible>Container(53).Position(9)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>760</posx>
+      <visible>Container(53).Position(10)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+
+    <control type="group">
+      <posx>274</posx>
+      <visible>Container(53).Position(11)</visible>
+      <include>WallStreamFadeAnim</include>
+      <include>WallStreamEpisodeInfo</include>
+    </control>
+  </include>
+
 <!-- Video Views -->
 <!-- =========== -->
   <include name="TopOverlayTitleAreaTextDims">
@@ -1304,7 +1427,7 @@
   </include>
 
   <include name="TVSeasonsListAnim">
-    <animation effect="slide" end="-516,198" time="0" condition="Container.Content(seasons)">Conditional</animation>
+    <animation effect="slide" end="-516,90" time="0" condition="Container.Content(seasons)">Conditional</animation>
   </include>
 
   <include name="TVSeasonsItemBGDims">
