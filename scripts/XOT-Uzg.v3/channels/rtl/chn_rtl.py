@@ -80,7 +80,8 @@ class Channel(chn_class.Channel):
         # get more items:
         url1 = "http://www.rtl.nl/service/gemist/home/"
         data1 = uriHandler.Open(url1, pb=True)         
-        url2 = common.DoRegexFindAll('<script type="text/javascript" language="JavaScript" src="([^"]+)"></script><div id="navigatie_container">', data1)
+        url2 = common.DoRegexFindAll('<script[^>]+src="([^"]+)"[^>]*></script><div id="navigatie_container">', data1)
+        #javaUrl = ""
         for url in url2:
             javaUrl = url
             pass
