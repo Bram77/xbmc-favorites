@@ -1,3 +1,4 @@
+  11-11-2008 :: [skin]              ~ Updated the "Focus" skin to version ALpha 6b
   07-11-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   07-11-2008 :: [skin]              ~ Added the "Horizonz III" skin
   06-11-2008 :: [scripts]    	    ~ Updated the "Navi-X" script to the latest SVN version
