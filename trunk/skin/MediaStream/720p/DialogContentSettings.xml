@@ -76,6 +76,7 @@
           <reverse>yes</reverse>
           <align>center</align>
           <pulseonselect>no</pulseonselect>
+          <texturefocus>-</texturefocus>
           <textureup>ArrowUpNF.png</textureup>
           <textureupfocus>ArrowUpFO.png</textureupfocus>
           <texturedown>ArrowDownNF.png</texturedown>

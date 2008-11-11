@@ -353,7 +353,7 @@
             <font>MediumSmallAltDefaultFont</font>
             <info>Player.Time</info>
             <textcolor>Unfocused</textcolor>
-            <width>100</width>
+            <width>300</width>
             <visible>!Player.Seeking</visible>
           </control>
     
@@ -362,7 +362,7 @@
             <font>MediumSmallAltDefaultFont</font>
             <textcolor>Unfocused</textcolor>
             <info>Player.SeekTime</info>
-            <width>100</width>
+            <width>300</width>
             <visible>Player.Seeking</visible>
           </control>
     
@@ -384,7 +384,7 @@
             <font>MediumSmallAltDefaultFont</font>
             <textcolor>Unfocused</textcolor>
             <align>right</align>
-            <width>100</width>
+            <width>300</width>
           </control>
         </control>
       </control>

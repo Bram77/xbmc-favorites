@@ -26,7 +26,7 @@
         </control>
 
         <control type="list" id="3">
-          <posx>26</posx>
+          <posx>18</posx>
           <width>470</width>
           <height>226</height>
           <onleft>61</onleft>
@@ -68,8 +68,8 @@
 
         <control type="button" id="5">
           <description>Manual Button</description>
-          <posx>500</posx>
-          <width>80</width>
+          <posx>488</posx>
+          <width>92</width>
           <label>$LOCALIZE[368]</label>
           <onleft>3</onleft>
           <include>DialogButton</include>

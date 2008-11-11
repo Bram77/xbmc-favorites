@@ -46,10 +46,15 @@
   </include>
 
   <include name="OMViewThumb">
-    <include>OMViewThumb</include>
+    <include>OMViewThumbDims</include>
     <aspectratio>keep</aspectratio>
     <bordertexture>Grey.png</bordertexture>
     <bordersize>1</bordersize>
+    <visible>!Skin.HasSetting(HideOptionMenuThumbs)</visible>
+  </include>
+
+  <include name="OMNoViewThumbSlide">
+    <animation effect="slide" time="0" start="0,0" end="0,-130" condition="Skin.HasSetting(HideOptionMenuThumbs)">Conditional</animation>
   </include>
 
   <include name="OMViewLabelItem">
@@ -70,7 +75,7 @@
   </include>
 
   <include name="OMViewLargeThumb">
-    <include>OMViewLargeThumb</include>
+    <include>OMViewLargeThumbDims</include>
     <aspectratio aligny="bottom">keep</aspectratio>
     <bordertexture border="14">ThumbShadow2.png</bordertexture>
     <bordersize>10</bordersize>
@@ -79,7 +84,7 @@
   <include name="OptionsMenuUI">
     <control type="group">
       <include>OptionsMenuUIDims</include>
-      <visible>ControlGroup(9009).HasFocus() + [Control.HasFocus(911) | Control.HasFocus(912) | Control.HasFocus(915) | Control.HasFocus(916) | Control.HasFocus(925) | Control.HasFocus(926) | Control.HasFocus(927) | Control.HasFocus(951) | Control.HasFocus(952)| Control.HasFocus(953)| Control.HasFocus(955) | Control.HasFocus(956) | Control.HasFocus(957) | Control.HasFocus(958)]</visible>
+      <visible>!Skin.HasSetting(HideOptionMenuThumbs) + ControlGroup(9009).HasFocus() + [Control.HasFocus(911) | Control.HasFocus(912) | Control.HasFocus(915) | Control.HasFocus(916) | Control.HasFocus(925) | Control.HasFocus(926) | Control.HasFocus(927) | Control.HasFocus(951) | Control.HasFocus(952)| Control.HasFocus(953)| Control.HasFocus(955) | Control.HasFocus(956) | Control.HasFocus(957) | Control.HasFocus(958)]</visible>
 
       <control type="group">
         <posy>12</posy>
@@ -132,7 +137,7 @@
           <visible>ControlGroup(9009).HasFocus() + Control.HasFocus(926)</visible>
           <include>VideoOSDSlideLeft</include>
         </control>
-  
+
         <control type="image">
           <description>TV Episodes Thumb</description>
           <include>OMViewLargeThumb</include>
@@ -140,7 +145,7 @@
           <visible>ControlGroup(9009).HasFocus() + Control.HasFocus(927)</visible>
           <include>VideoOSDSlideLeft</include>
         </control>
-  
+
         <control type="image">
           <description>Albums Thumb</description>
           <include>OMViewLargeThumb</include>
@@ -148,7 +153,7 @@
           <visible>ControlGroup(9009).HasFocus() + Control.HasFocus(951)</visible>
           <include>VideoOSDSlideLeft</include>
         </control>
-  
+
         <control type="image">
           <description>Songs Thumb</description>
           <include>OMViewLargeThumb</include>
@@ -232,6 +237,7 @@
       <control type="group" id="9010">
         <posy>36</posy>
         <width>OMTextWidth</width>
+        <include>OMNoViewThumbSlide</include>
 
         <control type="image" id="9100">
           <description>List Thumb</description>
@@ -423,7 +429,7 @@
         <orientation>vertical</orientation>
         <itemgap>2</itemgap>
         <onleft>50</onleft>
-
+        <include>OMNoViewThumbSlide</include>
 
 <!-- Possible View Options -->
         <control type="button" id="911">

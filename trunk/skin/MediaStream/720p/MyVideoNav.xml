@@ -20,7 +20,7 @@
 
     <control type="group">
       <include>TopOverlayTitlePos</include>
-      <visible>!Control.IsVisible(53) | !Container(53).Row(0)</visible>
+      <visible>![Control.IsVisible(53) + Container(53).Row(0)]</visible>
 
       <control type="group">
         <visible>Container.Content(episodes)</visible>
@@ -67,13 +67,13 @@
     </control>
 
     <control type="group">
-      <visible>!Control.IsVisible(53) | !Container(53).Row(0)</visible>
+      <visible>![Control.IsVisible(53) + Container(53).Row(0)]</visible>
       <include>Clock</include>
       <include>MusicNowPlayingIndicators</include>
     </control>
 
     <control type="group">
-      <visible>!Control.IsVisible(53) | ![Container(53).Position(22) | Container(53).Position(23)]</visible>
+      <visible>![!Container.Content(episodes) + Control.IsVisible(53) + [Container(53).Position(22) | Container(53).Position(23)]] + ![Container.Content(episodes) + Control.IsVisible(53) + [Container(53).Position(14) | Container(53).Position(15)]]</visible>
       <include>MediaCount</include>
     </control>
 

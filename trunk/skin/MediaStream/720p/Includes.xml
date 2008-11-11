@@ -66,7 +66,8 @@
     <include>DialogButtonFOTexture</include>
     <include>DialogButtonNFTexture</include>
     <font>DefaultCapsFont</font>
-    <aligny>center</aligny>
+    <aligny>top</aligny>
+    <textoffsety>3</textoffsety>
     <include>DialogTextColors</include>
   </include>
 
@@ -1514,7 +1515,7 @@
 
         <control type="group" id="1">
           <posx>52</posx>
-          <posy>0</posy>
+          <posy>1</posy>
 
           <control type="label" id="1">
             <font>LargeDefaultFont</font>
@@ -1610,9 +1611,11 @@
       <control type="label">
         <description>Item count</description>
         <include>MediaCountNumberPos</include>
+        <height>28</height>
         <font>MediumAltDefaultFont</font>
         <textcolor>Highlighted</textcolor>
         <align>right</align>
+        <aligny>center</aligny>
         <info>Container.NumItems</info>
       </control>
     </control>
@@ -2095,6 +2098,14 @@
     <include>WallStreamPoster</include>
   </include>
 
+  <constant name="WallStreamEpThumbHeight">180</constant>
+
+  <include name="WallStreamEpThumb">
+    <width>WallStreamEpThumbWidth</width>
+    <height>WallStreamEpThumbHeight</height>
+    <include>WallStreamPoster</include>
+  </include>
+
   <include name="WallStreamFadeAnim">
     <visible>![Container(53).OnNext | Container(53).OnPrevious]</visible>
     <animation type="Visible">
@@ -2295,6 +2306,85 @@
           <height>64</height>
           <info>ListItem.Property(description)</info>
           <visible>!Container.Content(songs)</visible>
+        </control>
+      </control>
+    </control>
+  </include>
+
+  <include name="WallStreamEpisodeInfo">
+    <control type="group">
+      <control type="image">
+        <description>Background</description>
+        <posy>-54</posy>
+        <width>524</width>
+        <height>232</height>
+        <texture>BlackTransparent.png</texture>
+        <bordertexture border="14">ThumbShadow2.png</bordertexture>
+        <bordersize>8</bordersize>
+        <colordiffuse>99999999</colordiffuse>
+        <include>WallStreamFadeAnim</include>
+      </control>
+
+      <control type="image">
+        <posx>6</posx>
+        <posy>-46</posy>
+        <width>512</width>
+        <height>43</height>
+        <texture>GlassTitleBar.png</texture>
+      </control>
+
+      <control type="group">
+        <posx>34</posx>
+        <posy>-24</posy>
+
+        <control type="label">
+          <description>Title</description>
+          <font>MediumTitleCapsFont</font>
+          <scroll>true</scroll>
+          <info>ListItem.Title</info>
+          <include>WallStreamInfoValue</include>
+        </control>
+
+        <control type="label">
+          <description>Season and Episode</description>
+          <posy>30</posy>
+          <font>MediumSmallTitleCapsFont</font>
+          <label>$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
+          <include>WallStreamInfoValue</include>
+        </control>
+
+        <control type="image">
+          <description>Star Rating</description>
+          <posx>258</posx>
+          <posy>32</posy>
+          <include>StarRatingImage</include>
+          <include>WallStreamFadeAnim</include>
+        </control>
+
+        <control type="image">
+          <description>Trailer Indicator</description>
+          <posx>424</posx>
+          <posy>30</posy>
+          <width>24</width>
+          <height>24</height>
+          <aspectratio>keep</aspectratio>
+          <texture>Trailer.png</texture>
+          <visible>!IsEmpty(ListItem.Trailer)</visible>
+        </control>
+
+        <control type="label">
+          <description>Airdate</description>
+          <posy>54</posy>
+          <info>ListItem.Date</info>
+          <include>WallStreamInfoValue</include>
+        </control>
+
+        <control type="textbox">
+          <description>Plot</description>
+          <posy>90</posy>
+          <width>458</width>
+          <height>84</height>
+          <info>ListItem.Plot</info>
         </control>
       </control>
     </control>
@@ -3643,11 +3733,24 @@
     <include>DialogButton</include>
   </include>
 
+  <include name="MusicVisLyricsDefaultOnClick">
+    <onclick>XBMC.RunScript(U:\skin\MediaStream\extras\XBMC Lyrics\default.py)</onclick>
+  </include>
+
+  <include name="MusicVisLyricsUserOnClick">
+    <onclick>XBMC.RunScript(LyricsScriptPath)</onclick>
+  </include>
+
+  <include name="MusicVisLyricsOnClick">
+    <include condition="!Skin.HasSetting(LyricsScriptPath)">MusicVisLyricsDefaultOnClick</include>
+    <include condition="Skin.HasSetting(LyricsScriptPath)">MusicVisLyricsUserOnClick</include>
+  </include>
+
   <include name="MusicVisLyricsButton">
     <posx>20</posx>
     <posy>564</posy>
     <label>31223</label>
-    <onclick>XBMC.RunScript(U:\skin\MediaStream\extras\XBMC Lyrics\default.py)</onclick>
+    <include>MusicVisLyricsOnClick</include>
     <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Control.HasFocus(503)</visible>
     <animation type="Visible" reversible="true" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Control.HasFocus(500)">
       <effect type="fade" time="1000" />
@@ -3672,7 +3775,7 @@
     <posy>675</posy>
     <label>31228</label>
     <onup>100</onup>
-    <onclick>XBMC.RunScript(U:\skin\MediaStream\extras\XBMC Lyrics\default.py)</onclick>
+    <include>MusicVisLyricsOnClick</include>
     <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Control.HasFocus(503)</visible>
     <include>MusicVisBottomButton</include>
   </include>
@@ -4235,17 +4338,18 @@
     <width>565</width>
   </include>
 
+  <include name="SystemInfoStaticLabel">
+    <height>22</height>
+    <font>SmallTitleCapsFont</font>
+    <textcolor>Highlighted</textcolor>
+    <include>SystemInfoLabels</include>
+  </include>
+
   <!-- Weather -->
   <include name="WeatherButton">
     <posy>24</posy>
-    <width>130</width>
-    <height>34</height>
-    <include>DialogButtonFOTexture</include>
-    <include>DialogButtonNFTexture</include>
-    <textcolor>Unfocused</textcolor>
-    <focusedcolor>Focused</focusedcolor>
-    <aligny>center</aligny>
-    <textoffsety>-6</textoffsety>
+    <width>170</width>
+    <include>DialogButton</include>
   </include>
 
   <constant name="WeatherDayHeight">120</constant>

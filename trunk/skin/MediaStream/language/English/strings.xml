@@ -47,6 +47,7 @@
   <string id="31043">Check the</string>
   <string id="31044">By</string>
   <string id="31045">Recently Added</string>
+  <string id="31046">Path to Lyrics Script</string>
 
 <!--  Programs  -->
   <string id="31051">Games</string>
@@ -159,6 +160,7 @@
 	<string id="31690">Hide No Thumb Icons</string>
 	<string id="31691">Use Low Overlay for TV Shows Coverflow</string>
 	<string id="31692">Hide Info in Wall Stream view</string>
+	<string id="31693">Hide Thumbs in Options Menu</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>

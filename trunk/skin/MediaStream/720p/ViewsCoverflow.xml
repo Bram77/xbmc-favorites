@@ -1100,6 +1100,7 @@
           <description>Album name</description>
           <info>ListItem.Album</info>
           <include>CoverflowMainLabel</include>
+          <visible>Container.Content(albums)</visible>
         </control>
         <control type="label">
           <description>Title</description>
@@ -1111,17 +1112,24 @@
           <description>Artist</description>
           <info>ListItem.Artist</info>
           <include>CoverflowDetailLabel</include>
+          <visible>Container.Content(albums)</visible>
+        </control>
+        <control type="label">
+          <description>Album and Artist</description>
+          <label>$INFO[ListItem.Album,, -] $INFO[ListItem.Artist]</label>
+          <include>CoverflowDetailLabel</include>
+          <visible>Container.Content(songs)</visible>
         </control>
         <control type="label">
           <description>Detail</description>
           <info>ListItem.Label2</info>
           <include>CoverflowDetailLabel</include>
-          <visible>IsEmpty(ListItem.Rating)</visible>
+          <visible>![Container.Content(albums) | Container.Content(songs)] + IsEmpty(ListItem.Rating)</visible>
         </control>
         <control type="image">
           <include>CoverflowDetailLabel</include>
           <include>StarRatingImage</include>
-          <visible>!IsEmpty(ListItem.Rating)</visible>
+          <visible>![Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Rating)</visible>
         </control>
       </control>
     </control>

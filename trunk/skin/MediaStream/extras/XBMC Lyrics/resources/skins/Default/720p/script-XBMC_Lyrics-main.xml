@@ -24,6 +24,15 @@
         <posx>30</posx>
         <posy>20</posy>
 
+  			<control type="label" id="200">
+  				<description>Scraper Label</description>
+  				<width>150</width>
+  				<posx>920</posx>
+  				<posy>5</posy>
+          <label>-</label>
+  				<align>right</align>
+  			</control>
+
         <!-- ** Required ** Do not change <id> or <type> -->
         <control type="textbox" id="100">
           <description>textarea</description>

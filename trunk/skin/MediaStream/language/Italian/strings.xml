@@ -47,6 +47,7 @@
   <string id="31043">Controlla</string>
   <string id="31044">Per</string>
   <string id="31045">Nuovi Arrivi</string>
+  <string id="31046">Percorso dello Script Lyrics</string
 
 <!--  Programs  -->
   <string id="31051">Giochi</string>
@@ -158,6 +159,7 @@
 	<string id="31689">nelle Immagini</string>
 	<string id="31690">Non Nascondere Icone</string>
 	<string id="31691">Utilizza Sovrapposizione Bassa in modo Coverflow per le Serie TV</string>
+  <string id="31692">Nascondi Info in Modo Muraglia</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>
@@ -181,7 +183,7 @@
 <!--  Credits  -->
   <string id="31800">Riconoscimenti</string>
   <string id="31801">Benvenuto a</string>
-  <string id="31802">i tuoi media.... a modo [COLOR Highlighted]tuo[/color]</string>
+  <string id="31802">i tuoi media.... a modo [COLOR Highlighted]tuo[/COLOR]</string>
   <string id="31803"></string>
   <string id="31804">MediaStream e' una nuova interfaccia per XBMC.  Creata dal neonato "Team RazorFish", questa nuova interfaccia vorrebbe unire la funzionalita' e la forma, raggruppando stile e sostanza.  Progettata ed ottimizzata per la generazione 'High-Def', questa interfaccia cerca di creare un'esperienza nuova ad una piattaforma gia' ben conosciuta.</string>
   <string id="31805">Nota</string>
