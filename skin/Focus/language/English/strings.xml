@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
 	
-<!--changed-->
+
 <string id="31000">
-[B]Skin developer: [/B]Jeroen[CR]
-
-[CR][B]Thanks:[/B] Team-XBMC, all plugin, script and skin developers and anyone contributing in whatever way to making xbmc so great. And YOU, for using Focus.[CR]
-[CR]Default wallpaper created by Adam Moore, used with permission. Visit elusive.deviantart.com for his portfolio.
-[CR]This skin uses icons from and icons based on the Tango! Desktop Project (http://tango.freedesktop.org) and Oxygen Icons (http://www.oxygen-icons.org/)
+[COLOR=sublabel-text][UPPERCASE]Skin developer: Jeroen[CR][CR][/UPPERCASE][/COLOR]
+[UPPERCASE][B]Thanks:[/B][/UPPERCASE] Team-XBMC, all plugin, script and skin developers and anyone contributing in whatever way to making XBMC so great. And YOU, for using Focus.[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] Special thanks to Jonathan Marshall, for his ever so fast and great help.[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] This skin uses icons from the Oxygen Icon Theme (www.oxygen-icons.org)[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] Default wallpaper created by Adam Moore, used with permission. Visit elusive.deviantart.com for his portfolio.[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] Questions or suggestions regarding Focus? Visit the Focus section on the official XBMC forum (www.xbmc.org/forum)[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] Compiled Focus builds are available on the google code page (http://code.google.com/p/xbmc-focus/)[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] Focus updates are also made available through the XBMC-Favorites Installer plugin. (http://code.google.com/p/xbmc-favorites/)[CR]
+[CR][COLOR=sublabel-text]✱[/COLOR] You can support development of XBMC by donating hardware or money to Team-XBMC. All donations are shared by the team and are utilizied for financing R+D (www.xbmc.org/contribute/donate)
 </string>
-<!--end changed-->
 
-<!--added-->
 <string id="31009">Big Thumbs</string>
-<string id="31014">Thumbnails</string>
+
 <string id="31932">No plot description available</string>
 <string id="31035">Enable Virtual Keyboard</string>
 <string id="31039">Fade out background while submenu is open</string>
@@ -29,12 +31,14 @@
 <string id="31938">Display Fanart In Video Info Screens</string>
 <string id="31940">Use Dark Accent Color</string>
 <string id="31941">Use Neutral Midtone Color</string>
-<!-- end added-->
+<string id="31942">No Plot Info in Slide View</string>
+<string id="31943">Shows</string>
+<string id="31944">Items</string>
+<string id="31945">Videos</string>
+<string id="31946">Songs</string>
+<string id="31947">No Plot Info in Fanart View</string>
+<string id="31948">No Plot Info in Fanart View (episodes)</string>
 
-<!--removed
-<string id="31918">Show Plot in TV Shows List View</string>
-<string id="31919">Show Plot in Episode List View (when idle)</string>
--->
 
 <string id="31001">
 Here are a couple of quick tips that are good for you to know:
@@ -49,14 +53,14 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 </string>
 
 
-
+<string id="31002">LastFM:</string>
 <string id="31003">Show LastFM Information in Music Playlist</string>
 <string id="31006">Accessories</string>
 <string id="31010">Pictures</string>	
 <string id="31011">Apple Movie Trailers</string>
 <string id="31012">Video Playlist</string>
 <string id="31013">Exit</string>
-
+<string id="31014">Thumbnails</string>
 <string id="31015">Info Settings</string>
 <string id="31016">Fanart</string>
 <string id="31017">Manage Profiles</string>	
@@ -89,8 +93,8 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 <string id="31906">Please Wait...</string>
 
 <string id="31908">Backgrounds</string>
-<string id="31909">Skin Credits</string>
-
+<string id="31909">About</string>
+<string id="31910">Shutdown System</string>
 <string id="31911">Shutdown in 30 min.</string>
 <string id="31912">Shutdown in 60 min.</string>
 <string id="31913">Shutdown in 120 min.</string>
@@ -136,7 +140,7 @@ Hit the OK button to start using Focus. This message will not reappear after tha
 
 <string id="31077">$INFO[MusicPlayer.offset(1).Title,[COLOR=sublabel-text]Next track: [/COLOR],]$INFO[MusicPlayer.offset(1).Artist, [COLOR=sublabel-text]by [/COLOR],]</string>
 <string id="31078">[COLOR=sublabel-text]Playing [/COLOR]$INFO[MusicPlayer.Title] [COLOR=sublabel-text]by [/COLOR]$INFO[MusicPlayer.Artist] [COLOR=sublabel-text]from the album [/COLOR]$INFO[MusicPlayer.Album]</string>
-<string id="31079">[COLOR=sublabel-text]Playing [/COLOR]$INFO[VideoPlayer.Title]</string>
+<string id="31079">[COLOR=sublabel-text]Playing [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]</string>
 <string id="31080">[COLOR=sublabel-text]Playing [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]from the TV show[/COLOR] $INFO[VideoPlayer.TVShowTitle]</string>
 <string id="31081">[COLOR=sublabel-text]Playing [/COLOR]$INFO[VideoPlayer.Title] [COLOR=sublabel-text]by [/COLOR]$INFO[VideoPlayer.Artist] [COLOR=sublabel-text]</string>
 <string id="31082">[COLOR=sublabel-text]Status: [/COLOR]$INFO[AudioScrobbler.ConnectState ] [COLOR=sublabel-text]Submit in: [/COLOR]$INFO[AudioScrobbler.SubmitState] [COLOR=sublabel-text]$INFO[AudioScrobbler.FilesCached][/COLOR]</string>

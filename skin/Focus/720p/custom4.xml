@@ -1,0 +1,60 @@
+<window id="56" type="dialog">
+	<defaultcontrol>720</defaultcontrol>
+	<include>dialog-open</include>
+	<coordinates>
+		<system>1</system>
+		<posx>528</posx>
+		<posy>440</posy>
+	</coordinates>
+	
+	<controls>
+		<control type="group">
+			<control type="image">
+				<posx>-27</posx>
+				<posy>-25</posy>
+				<width>278</width>
+				<height>188</height>
+				<include>dialogWindow</include>
+			</control>
+
+			<control type="grouplist" id="700">
+				<width>225</width>
+				<height>209</height>
+				<onleft>700</onleft>
+				<onright>700</onright>
+				<onup>700</onup>
+				<ondown>700</ondown>
+				<itemgap>2</itemgap>	
+				
+				<control type="button" id="720">
+					<label>$LOCALIZE[13009] XBMC</label>
+					<width>225</width>
+					<onclick>XBMC.Quit()</onclick>
+					<align>left</align>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="721">
+					<label>$LOCALIZE[13011]</label>
+					<width>225</width>
+					<onclick>XBMC.Suspend</onclick>
+					<align>left</align>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="722">
+					<label>$LOCALIZE[13010]</label>
+					<width>225</width>
+					<onclick>XBMC.Hibernate</onclick>
+					<align>left</align>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="723">
+					<label>$LOCALIZE[13005] $LOCALIZE[13000]</label>
+					<width>225</width>
+					<onclick>XBMC.Powerdown</onclick>
+					<align>left</align>
+					<include>dialogButton</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

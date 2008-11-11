@@ -1,0 +1,150 @@
+<window id="125">
+	<defaultcontrol>2</defaultcontrol>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>-10</posx>
+		<posy>415</posy>
+	</coordinates>
+	
+	<include>dialogOpenBM</include>
+	
+	<controls>
+		
+		<control type="group">	
+			<control type="image" id="1">
+				<description>background image</description>
+				<posx>-35</posx>
+				<posy>-5</posy>
+				<width>1500</width>
+				<height>285</height>
+				<texture border="38">dialogpanel.png</texture>
+			</control>
+		
+			<control type="wraplist" id="11">
+				<posx>-102</posx>
+				<posy>5</posy>
+				<width>1500</width>
+				<height>350</height>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<onup>999</onup>
+				<ondown>999</ondown>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+									
+				<itemlayout height="200" width="293">	
+				<control type="image">
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>292</width>
+					<height>165</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>12</posx>
+					<posy>177</posy>
+					<width>292</width>
+					<height>165</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio>scale</aspectratio>
+				</control>
+				
+				<control type="label">
+					<posx>25</posx>
+					<posy>140</posy>
+					<width>500</width>
+					<font>h1</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<selectedcolor>sublabel-text</selectedcolor> 
+				</control>
+				
+			</itemlayout>
+			
+			<focusedlayout height="300" width="293">
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>316</width>
+					<height>188</height>
+					<texture border="9">episode-main.png</texture>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<include>episodeSlideFocusBorder</include>
+				</control>
+
+				<control type="image">
+					<posx>12</posx>
+					<posy>12</posy>
+					<width>292</width>
+					<height>165</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+					<include>episodeSlideFocus</include>
+				</control>
+				<control type="image">
+					<posx>12</posx>
+					<posy>177</posy>
+					<width>292</width>
+					<height>165</height>
+					<info>ListItem.Thumb</info>
+					<texture flipy="true" diffuse="fade2.png" /> 
+					<aspectratio>scale</aspectratio>
+					<include>episodeSlideFocus</include>
+				</control>
+				
+				<control type="label">
+					<posx>25</posx>
+					<posy>140</posy>
+					<width>500</width>
+					<font>h1</font>
+					<align>left</align>
+					<textcolor>sublabel-text</textcolor>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<selectedcolor>sublabel-text</selectedcolor>
+					<include>episodeSlideFocus</include>
+				</control>
+
+				
+			</focusedlayout>	
+			
+			</control>
+
+			<control type="group" id="999">
+				<posx>462</posx>
+				<posy>215</posy>
+						
+				<control type="button" id="2">
+					<description>Create Bookmark button</description>
+					<posx>0</posx>
+					<width>180</width>
+					<label>294</label>
+					<onleft>4</onleft>
+					<onright>3</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<include>dialogConfirmButton</include>
+				</control>
+				<control type="button" id="3">
+					<description>Clear Bookmarks button</description>
+					<posx>190</posx>
+					<width>180</width>
+					<label>296</label>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<include>dialogConfirmButton</include>
+				</control>
+				
+			</control>
+		</control>
+	</controls>
+</window>

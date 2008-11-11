@@ -1,0 +1,218 @@
+<window id="2">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>Home</previouswindow>
+	
+	<controls>
+		<include>background</include>
+
+		<control type="image">
+			<texture>$INFO[ListItem.Thumb]</texture>
+			<visible>Control.IsVisible(52)</visible>
+			<aspectratio align="center">keep</aspectratio>
+			<posx>0</posx>
+		    <posy>0</posy>
+		    <width>1280</width>
+		    <height>720</height>
+		</control>
+		
+		<include>Fanart</include>
+	
+		<control type="group">
+			<description>page content</description>
+			<include>ListView</include>
+			<include>BigListP</include>
+			<include>PageControl</include>
+			<include>PictureThumbs</include>
+			<!--<include>PictureSlide</include>-->
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>fadeinout</include>
+			<include>AllViewCommonPageControls</include>
+
+	<control type="group">
+		<include>pageslide</include>
+		<control type="image">
+			<description>icon</description>
+			<visible>Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>listIcon</include>
+		</control>
+		<control type="image">
+			<description>icon</description>
+			<visible>Control.IsVisible(50) + IsEmpty(ListItem.Thumb)</visible>
+			<include>listIconRef</include>
+		</control>
+		
+	<!--- LIST VIEW -------------------------->		
+		<control type="group">
+			<posx>680</posx>
+			<posy>75</posy>
+			<visible>Control.IsVisible(50)</visible>
+			
+			<control type="image">
+				<description>icon</description>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<include>listIcon</include>
+			</control>
+			<control type="image">
+				<description>icon</description>
+				<visible>IsEmpty(ListItem.Thumb)</visible>
+				<include>listIconRef</include>
+			</control>
+				
+			<control type="image">
+				<description>thumb</description>
+				<width>550</width>
+				<height>415</height>
+				<info>ListItem.Thumb</info>
+				<aspectratio align="center">keep</aspectratio>
+				<bordertexture border="9">selection-focus.png</bordertexture>
+				<bordersize>13</bordersize>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+
+			<control type="label">
+				<posy>445</posy>
+				<width>550</width>
+				<align>center</align>
+				<font>h1</font>
+				<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posy>470</posy>
+				<width>550</width>
+				<align>center</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posy>492</posy>
+				<width>550</width>
+				<align>center</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+			</control>
+			<control type="label">
+				<posy>514</posy>
+				<width>550</width>
+				<align>center</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
+			</control>
+		</control>
+	</control>		
+			
+<!--- PICTURESLIDE -------------------------->		
+	
+	
+		<control type="group">
+			<include>pageSlideBottom</include>
+			<include>pageSlideBottomIdle</include>
+			
+			<control type="label">
+				<posx>0</posx>
+				<posy>452</posy>
+				<font>h1</font>
+				<align>center</align>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<include>screenwidth</include>
+				<visible>Control.IsVisible(52)</visible>
+			</control>
+			
+			<control type="label">
+				<posx>0</posx>
+				<posy>475</posy>
+				<height>34</height>
+				<font>h2</font>
+				<align>center</align>
+				<textcolor>sublabel-text</textcolor>
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+				<include>screenwidth</include>
+				<visible>Control.IsVisible(52)</visible>
+			</control>
+
+		</control>
+
+
+<!----- THUMBNAILS VIEW ----->
+		
+		<control type="label">
+			<posx>61</posx>
+			<posy>620</posy>
+			<height>34</height>
+			<font>h1</font>
+			<align>left</align>
+			<visible>Control.IsVisible(56)</visible>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<include>fadeinout</include>
+			<include>screenwidth</include>
+		</control>
+		
+		<control type="label">
+			<posx>61</posx>
+			<posy>645</posy>
+			<height>34</height>
+			<font>h2</font>
+			<align>left</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>Control.IsVisible(56)</visible>
+			<label>[UPPERCASE]$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ][/UPPERCASE]</label>
+			<include>fadeinout</include>
+			<include>screenwidth</include>
+		</control>
+		
+		<control type="label">
+			<posx>1210</posx>
+			<posy>620</posy>
+			<height>34</height>
+			<font>h2</font>
+			<align>right</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>Control.IsVisible(56)</visible>
+			<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+			<include>fadeinout</include>
+			<include>screenwidth</include>
+		</control>
+		
+		<control type="label">
+			<posx>1210</posx>
+			<posy>645</posy>
+			<height>34</height>
+			<font>h2</font>
+			<align>right</align>
+			<textcolor>sublabel-text</textcolor>
+			<visible>Control.IsVisible(56)</visible>
+			<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
+			<include>fadeinout</include>
+			<include>screenwidth</include>
+		</control>
+
+		
+		</control>
+		
+		<include>allscreens</include>
+		
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B]$INFO[Container.NumItems][/B] [LOWERCASE]$LOCALIZE[1][/LOWERCASE]</label>
+		</control>
+			
+		<control type="label">
+			<include>pageLabel</include>
+			<label>1</label>
+			<visible>IsEmpty(container.pluginname)</visible>
+		</control>
+		
+		<control type="label">
+			<include>pageLabel</include>
+			<info>Container.PluginName</info>
+			<visible>!IsEmpty(container.pluginname)</visible>
+		</control>	
+		
+		<include>FilesMenu</include>
+
+	</controls>
+</window>

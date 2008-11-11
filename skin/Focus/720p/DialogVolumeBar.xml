@@ -1,0 +1,43 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>1085</posx>
+		<posy>70</posy>
+	</coordinates>
+	
+	<controls>
+
+		<control type="group">
+			<include>fadeinout</include>
+			<control type="image" id="0">
+				<description>background image</description>
+				<posx>-30</posx>
+				<posy>-23</posy>
+				<width>225</width>
+				<height>65</height>
+				<texture border="28">keyboardPanel.png</texture>	
+			</control>
+			<control type="progress" id="1">
+				<description>progress control</description>
+				<posx>-4</posx>
+				<posy>3</posy>
+				<width>100</width>
+				<height>14</height>
+				<info>Player.Volume</info>
+				<visible>!Window.IsActive(113)</visible>
+			</control>
+			<control type="label"id="2">
+				<description>Volume Label</description>
+				<posx>110</posx>
+				<posy>-3</posy>
+				<font>h3</font>
+				<info>Player.Volume</info>
+				<width>80</width>
+				<textcolor>label-text</textcolor>
+				<!--<visible>!Window.IsActive(113)</visible>-->
+			</control>
+		</control>
+	</controls>
+</window>

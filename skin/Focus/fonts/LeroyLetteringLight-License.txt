@@ -14,10 +14,10 @@ Designer
 Character
 
 License
-A free and unrestircted license is hereby granted. This font is placed in the public domain.
+A free and unrestricted license is hereby granted. This font is placed in the public domain.
 
 Vendor
-Character (Herb)
+Character(Herb)
 
 Glyphs
 234

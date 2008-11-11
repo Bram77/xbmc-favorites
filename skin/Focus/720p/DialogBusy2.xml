@@ -1,0 +1,9 @@
+<window id="136">
+	<controls>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>31906</label>
+			<include>fadeinout</include>
+		</control>
+	</controls>
+</window>

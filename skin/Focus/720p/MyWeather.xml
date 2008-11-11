@@ -1,0 +1,546 @@
+<window id="2600">
+	<defaultcontrol always="true">3</defaultcontrol>
+
+	<controls>
+		<include>background</include>
+		<include>allscreens</include>
+		<include>musicoverlay</include>
+		
+		<control type="label">
+			<include>pageLabel</include>
+			<label>10508</label>
+		</control>
+		
+		<control type="group" id="9001">
+			<include>pageslide</include>
+			<posx>40</posx>
+			<posy>90</posy>
+				
+				<control type="spincontrolex" id="3">
+					<description>change location button</description>
+					<onleft>99</onleft>
+					<onright>99</onright>
+					<onup>4</onup>
+					<ondown>2</ondown>
+					<include>categoryButton</include>
+					<align>left</align>
+				</control>
+				<control type="button" id="2">
+					<description>Refresh button</description>
+					<posy>36</posy>
+					<label>103</label>
+					<onleft>99</onleft>
+					<onright>99</onright>
+					<onup>3</onup>
+					<ondown>4</ondown>
+					<include>categoryButton</include>
+				</control>
+				<control type="button" id="4">
+					<description>Settings button</description>
+					<posx>0</posx>
+					<posy>72</posy>
+					<label>5</label>
+					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>2</onup>
+					<ondown>3</ondown>
+					<include>categoryButton</include>
+				</control>
+			</control>
+			
+			<control type="image">
+				<posx>80</posx>
+				<posy>500</posy>
+				<width>128</width>
+				<height>128</height>
+				<texture>weather_channel_logo.png</texture>
+				<aspectratio>keep</aspectratio>
+				<include>fadeinout</include>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>595</posy>
+				<width>128</width>
+				<height>128</height>
+				<texture flipy="true" diffuse="fade.png" >weather_channel_logo.png</texture>
+				<aspectratio>keep</aspectratio>
+				<include>fadeinout</include>
+			</control>
+		
+		
+		<control type="group">
+			<include>pageslide</include>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+
+			<control type="group">
+				<posx>290</posx>
+				<posy>90</posy>
+				
+				<control type="image" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>440</width>
+					<height>550</height>
+					<texture>list-nofocus.png</texture>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="label" id="1">
+					<description>weather location label</description>
+					<posx>30</posx>
+					<posy>20</posy>
+					<width>1100</width>
+					<font>h1</font>
+					<label>[UPPERCASE]$INFO[Weather.Location][/UPPERCASE]</label>
+				</control>
+				
+				<control type="label" id="11">
+					<description>update time label</description>
+					<posx>30</posx>
+					<posy>45</posy>
+					<width>1100</width>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+
+				<control type="image" id="21">
+					<description>current weather icon</description>
+					<posx>290</posx>
+					<posy>85</posy>
+					<width>128</width>
+					<height>128</height>
+					<texture>-</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+
+				<control type="label" id="23">
+					<description>current temp Value</description>
+					<posx>30</posx>
+					<posy>95</posy>
+					<align>left</align>
+					<font>weather</font>
+				</control>
+				
+				<control type="label" id="22">
+					<description>current condition label</description>
+					<posx>50</posx>
+					<posy>160</posy>
+					<textcolor>sublabel-text</textcolor>
+					<font>h1</font>
+					<align>left</align>
+				</control>
+
+			</control>
+				
+			<control type="group">
+				<posx>430</posx>
+				<posy>360</posy>
+
+				<control type="label">
+					<description>current feels like label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<font>h2</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[402] :</label>
+				</control>
+				<control type="label">
+					<description>current dew label</description>
+					<posx>0</posx>
+					<posy>30</posy>
+					<font>h2</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[405] :</label>
+				</control>
+				<control type="label">
+					<description>current humidity label</description>
+					<posx>0</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[406] :</label>
+				</control>
+				<control type="label">
+					<description>current UV Index label</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<font>h2</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[403] :</label>
+				</control>
+				<control type="label">
+					<description>current Wind label</description>
+					<posx>0</posx>
+					<posy>120</posy>
+					<font>h2</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[404] :</label>
+				</control>
+				
+				<control type="label" id="24">
+					<description>current feels like Value</description>
+					<posx>20</posx>
+					<posy>0</posy>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+				</control>
+				<control type="label" id="27">
+					<description>current dew Value</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+				</control>
+				<control type="label" id="28">
+					<description>current humidity Value</description>
+					<posx>20</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+				</control>
+				<control type="label" id="25">
+					<description>current UV Index Value</description>
+					<posx>20</posx>
+					<posy>90</posy>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+				</control>
+				<control type="label" id="26">
+					<description>current Wind Value</description>
+					<posx>20</posx>
+					<posy>120</posy>
+					<font>h2</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>-</label>
+				</control>
+			</control>
+			
+			
+			<control type="group">
+				<description>day 0</description>
+				<posx>740</posx>
+				<posy>90</posy>
+				
+				<control type="image" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>470</width>
+					<height>130</height>
+					<texture>list-nofocus.png</texture>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="image" id="35">
+					<description>day icon</description>
+					<posx>360</posx>
+					<posy>20</posy>
+					<height>96</height>
+					<width>96</width>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				
+				<control type="label" id="31">
+					<description>Day label</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>420</width>
+					<font>h1</font>
+					<label>143</label>
+				</control>
+				
+				<control type="label" id="34">
+					<description>conditions label</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>400</width>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>high label</description>
+					<posx>80</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[393] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="32">
+					<description>high value</description>
+					<posx>110</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+				
+				<control type="label">
+					<description>low label</description>
+					<posx>80</posx>
+					<posy>85</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[391] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="33">
+					<description>low value</description>
+					<posx>110</posx>
+					<posy>85</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>day 1</description>
+				<posx>740</posx>
+				<posy>230</posy>
+				
+				<control type="image" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>470</width>
+					<height>130</height>
+					<texture>list-nofocus.png</texture>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="image" id="45">
+					<description>day icon</description>
+					<posx>360</posx>
+					<posy>20</posy>
+					<height>96</height>
+					<width>96</width>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				
+				<control type="label" id="41">
+					<description>Day label</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>420</width>
+					<font>h1</font>
+					<label>143</label>
+				</control>
+				
+				<control type="label" id="44">
+					<description>conditions label</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>400</width>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>high label</description>
+					<posx>80</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[393] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="42">
+					<description>high value</description>
+					<posx>110</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+				
+				<control type="label">
+					<description>low label</description>
+					<posx>80</posx>
+					<posy>85</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[391] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="43">
+					<description>low value</description>
+					<posx>110</posx>
+					<posy>85</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+				
+			</control>
+			
+			
+			<control type="group">
+				<description>day 2</description>
+				<posx>740</posx>
+				<posy>370</posy>
+				
+				<control type="image" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>470</width>
+					<height>130</height>
+					<texture>list-nofocus.png</texture>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="image" id="55">
+					<description>day icon</description>
+					<posx>360</posx>
+					<posy>20</posy>
+					<height>96</height>
+					<width>96</width>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				
+				<control type="label" id="51">
+					<description>Day label</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>420</width>
+					<font>h1</font>
+					<label>143</label>
+				</control>
+				
+				<control type="label" id="54">
+					<description>conditions label</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>400</width>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>high label</description>
+					<posx>80</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[393] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="52">
+					<description>high value</description>
+					<posx>110</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+				
+				<control type="label">
+					<description>low label</description>
+					<posx>80</posx>
+					<posy>85</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[391] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="53">
+					<description>low value</description>
+					<posx>110</posx>
+					<posy>85</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+
+			</control>
+			
+			<control type="group">
+				<description>day 3</description>
+				<posx>740</posx>
+				<posy>510</posy>
+
+				<control type="image" id="101">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>470</width>
+					<height>130</height>
+					<texture>list-nofocus.png</texture>
+					<include>fadeinout</include>
+				</control>
+				
+				<control type="image" id="65">
+					<description>day icon</description>
+					<posx>360</posx>
+					<posy>20</posy>
+					<height>96</height>
+					<width>96</width>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				
+				<control type="label" id="61">
+					<description>Day label</description>
+					<posx>20</posx>
+					<posy>5</posy>
+					<width>420</width>
+					<font>h1</font>
+					<label>143</label>
+				</control>
+				
+				<control type="label" id="64">
+					<description>conditions label</description>
+					<posx>20</posx>
+					<posy>30</posy>
+					<width>400</width>
+					<font>h2</font>
+					<textcolor>sublabel-text</textcolor>
+				</control>
+				
+				<control type="label">
+					<description>high label</description>
+					<posx>80</posx>
+					<posy>60</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[393] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="62">
+					<description>high value</description>
+					<posx>110</posx>
+					<posy>60</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+				
+				<control type="label">
+					<description>low label</description>
+					<posx>80</posx>
+					<posy>85</posy>
+					<font>h2</font>
+					<align>right</align>
+					<label>$LOCALIZE[391] :</label>
+					<visible>Weather.IsFetched</visible>
+				</control>
+				<control type="label" id="63">
+					<description>low value</description>
+					<posx>110</posx>
+					<posy>85</posy>
+					<label>-</label>
+					<font>h2</font>
+				</control>
+			</control>
+		</control>
+		
+		
+		
+	</controls>
+</window>

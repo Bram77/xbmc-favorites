@@ -6,21 +6,22 @@
 	<font>
 		<name>homemenu</name>
 		<filename>LeroyLetteringLightBeta01.ttf</filename>
-		<size>30</size>
+		<size>24</size>
 		<shadow>99000000</shadow>
 	</font>
 	
 	<font>
 		<name>rss</name>
-		<filename>DejaVuSansCondensed.ttf</filename>
-		<size>20</size>
+		<filename>ZegoeCapsBold.ttf</filename>
+		<size>16</size>
 		<shadow>FF000000</shadow>
 	</font>
 	
 	<font>
 		<name>menubar</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>29</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<style>bold</style>
+		<size>24</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
@@ -29,23 +30,24 @@
 	
 	<font>
 		<name>page</name>
-		<filename>DroidSans.ttf</filename>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<style>bold</style>
 		<shadow>FF000000</shadow>
-		<size>30</size>
+		<size>24</size>
 	</font>
 	
 	<font>
 		<name>date</name>
 		<filename>DroidSans-Bold.ttf</filename>
 		<shadow>ff000000</shadow>
-		<size>28</size>
+		<size>22</size>
 	</font>
 	
 	<font>
 		<name>objects</name>
-		<filename>DroidSans.ttf</filename>
+		<filename>DejaVuSansCondensed.ttf</filename>
 		<shadow>ff000000</shadow>
-		<size>28</size>
+		<size>22</size>
 	</font>
 	
 	
@@ -53,8 +55,8 @@
 	
 	<font>
 		<name>menu</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>21</size>
+		<filename>DroidSans.ttf</filename>
+		<size>18</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
@@ -67,52 +69,71 @@
 	
 	<font>
 		<name>description</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>20</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>18</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
 	<font>
 		<name>h1</name>
-		<filename>DejaVuSans-Bold.ttf</filename>
-		<shadow>FF000000</shadow>	
-		<size>26</size>
-	</font>
-	
-	<font>
-		<name>h2</name>
-		<filename>DejaVuSans.ttf</filename>
+		<filename>ZegoeCapsBold.ttf</filename>
+		<style>bold</style>
 		<shadow>FF000000</shadow>	
 		<size>24</size>
 	</font>
 	
 	<font>
-		<name>h3</name>
-		<filename>DejaVuSans.ttf</filename>
+		<name>h1X</name>
+		<filename>DroidSans.ttf</filename>
+		<style>bold</style>
+		<shadow>FF000000</shadow>	
+		<size>30</size>
+	</font>
+	
+	<font>
+		<name>h2</name>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<shadow>FF000000</shadow>	
 		<size>20</size>
+	</font>
+
+	
+	<font>
+		<name>h3</name>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>16</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
 	<font>
 		<name>h4</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>20</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>16</size>
 		<shadow>ff000000</shadow>
 	</font>
 	
 	<font>
 		<name>notice</name>
-		<filename>LeroyLetteringLightBeta01.ttf</filename>
-		<size>40</size>
+		<filename>ZegoeCapsBold.ttf</filename>
+		<size>30</size>
 		<shadow>99000000</shadow>
 		<aspect>1.1</aspect>
 	</font>
 	
 	<font>
 		<name>scroller</name>
-		<filename>DroidSans.ttf</filename>
-		<size>60</size>
+		<filename>ZegoeCapsBold.ttf</filename>
+		<size>45</size>
 		<shadow>ff000000</shadow>
+		<style>bold</style>
+	</font>
+	
+	<font>
+		<name>weather</name>
+		<filename>DejaVuSans.ttf</filename>
+		<size>50</size>
+		<shadow>ff000000</shadow>
+		<aspect>1.1</aspect>
 		<style>bold</style>
 	</font>
 	
@@ -124,25 +145,25 @@
 		<filename>DejaVuSansCondensed.ttf</filename>
 		<style>bold</style>
 		<shadow>FF000000</shadow>	
-		<size>26</size>
+		<size>22</size>
 	</font>
 	
 	<font>
 		<name>h2D</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>22</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>18</size>
 	</font>
 		
 	<font>
 		<name>h4D</name>
-		<filename>DejaVuSans.ttf</filename>
-		<size>20</size>
+		<filename>DejaVuSansCondensed.ttf</filename>
+		<size>16</size>
 	</font>
 
 	<font>
 		<name>buttonD</name>
 		<filename>DejaVuSans.ttf</filename>
-		<size>22</size>
+		<size>16</size>
 	</font>
 	
 	<font>
@@ -153,7 +174,7 @@
 	
 	<font>
 		<name>keyboard</name>
-		<filename>DejaVuSans.ttf</filename>
+		<filename>DejaVuSansCondensed.ttf</filename>
 		<size>20</size>
 	</font>
 

@@ -1,0 +1,111 @@
+<window id="123">
+	<defaultcontrol>2</defaultcontrol>
+	<include>dialog-open</include>
+	<coordinates>
+		<system>1</system>
+		<posx>50</posx>
+		<posy>270</posy>
+	</coordinates>
+
+	<controls>
+	
+		<control type="image" id="1">
+			<posx>-32</posx>
+			<posy>-25</posy>
+			<include>dialogWindow</include>
+			<width>472</width>
+			<height>410</height>
+		</control>
+		
+		<control type="label" id="2">
+			<description>Settings Label</description>
+			<width>420</width>
+			<align>left</align>
+			<font>h1D</font>
+		</control>
+
+		<control type="label" id="3">
+			<description>No Settings Label</description>
+			<posx>0</posx>
+			<posy>2</posy>
+			<width>420</width>
+			<align>left</align>
+			<label>13390</label>
+			<font>h1D</font>
+		</control>
+		
+		<control type="spincontrol" id="60">
+			<description>Next page button</description>
+			<posx>365</posx>
+			<posy>10</posy>
+			<subtype>page</subtype>
+			<font>h4</font>
+			<onleft>5</onleft>
+			<onright>28</onright>
+			<ondown>5</ondown>
+			<onup>28</onup>
+			<showonepage>false</showonepage>
+			<visible>false</visible>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posy>40</posy>
+			<width>410</width>
+			<height>315</height>
+			<itemgap>2</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>28</onleft>
+			<onright>60</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+		</control>
+		
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+		</control>
+		
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<height>33</height>
+			<reverse>yes</reverse>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+			<spinwidth>15</spinwidth>
+			<spinheight>15</spinheight>
+		</control>
+		
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+			<height>33</height>
+			<texturefocus border="2">list-focus.png</texturefocus>
+			<texturenofocus border="2">list-nofocusD.png</texturenofocus>
+			<sliderwidth>100</sliderwidth>
+			<sliderheight>20</sliderheight>
+			<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+			<textureslidernib>osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus>osd_slider_nibFO.png</textureslidernibfocus>
+			<font>menu</font>
+			<textcolor>button-text</textcolor>
+			<disabledcolor>disabled</disabledcolor>
+			<textoffsetx>10</textoffsetx>
+		</control>
+		
+		<control type="image" id="11">
+			<description>separator image</description>
+			<width>350</width>
+			<height>0</height>
+			<texture>separatorOSD.png</texture>
+			<visible>false</visible>
+		</control>
+		
+	</controls>
+</window>

@@ -1,0 +1,523 @@
+<window id="502">
+	<defaultcontrol always="true">50</defaultcontrol>
+	
+	<controls>
+		<include>background</include>
+		<include>allscreens</include>
+
+<!----- CONTENT START ----------------------------------------------------------------------------------------------------------------------->
+		
+		<control type="group">
+			<description>page content</description>
+			<include>viewsmenu</include>
+			<include>viewsmenucontext</include>
+			<include>pageslide</include>
+			<include>ListView</include>
+			<include>MusicSlide</include>
+			<include>AlbumCoverflow</include>
+			<include>BigListAU</include>
+			<!--<include>IconsAU</include>-->
+			<include>BigIconsAU</include>
+			<include>AllViewCommonPageControls</include>
+		
+
+<!----- LIST VIEW -------------------------------------------------------------------------------------------------------------------------->
+
+		<control type="group">
+			<include>pageslide</include>
+		
+		<!-- COMMON ---------------------->
+
+			<!--<control type="group">
+				<posx>680</posx>
+				<posy>234</posy>
+
+				<control type="image">
+					<description>icon</description>
+					<posx>147</posx>
+					<width>256</width>
+					<height>256</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="bottom">keep</aspectratio>
+					<visible>Control.IsVisible(50) + ![Container.Content(albums) | Container.Content(songs) | Container.Content(artists)]</visible>
+				</control>
+				<control type="image">
+					<description>icon reflect</description>
+					<posx>147</posx>
+					<posy>256</posy>
+					<width>256</width>
+					<height>256</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio align="bottom">keep</aspectratio>
+					<texture flipy="true" diffuse="fade2.png">-</texture>
+					<visible>Control.IsVisible(50) + ![Container.Content(albums) | Container.Content(songs) | Container.Content(artists)]</visible>
+				</control>
+			</control>-->
+
+
+			<!-- ALBUMS + SONGS---------------------->
+	
+				<control type="group">
+					<posx>680</posx>
+					<posy>75</posy>
+					<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(songs)]</visible>
+					
+					<control type="image">
+						<description>icon</description>
+						<posx>147</posx>
+						<posy>159</posy>
+						<width>256</width>
+						<height>256</height>
+						<info>ListItem.icon</info>
+						<aspectratio align="bottom">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>icon reflect</description>
+						<posx>147</posx>
+						<posy>415</posy>
+						<width>256</width>
+						<height>256</height>
+						<info>ListItem.icon</info>
+						<aspectratio align="bottom">keep</aspectratio>
+						<texture flipy="true" diffuse="fade2.png">-</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					
+					<control type="image">
+						<description>thumb</description>
+						<posx>85</posx>
+						<posy>20</posy>
+						<width>384</width>
+						<height>384</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio align="center">scale</aspectratio>
+					</control>
+					<control type="image">
+						<description>thumb reflect</description>
+						<posx>85</posx>
+						<posy>404</posy>
+						<width>384</width>
+						<height>384</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio align="center">keep</aspectratio>
+						<texture flipy="true" diffuse="fade2.png">-</texture>
+					</control>
+	
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h1</font>
+						<label>[UPPERCASE][B]$INFO[ListItem.Album][/B][/UPPERCASE]</label>
+						<visible>!Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h1</font>
+						<label>[UPPERCASE][B]$INFO[ListItem.Title][/B][/UPPERCASE]</label>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>470</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE][B]$INFO[ListItem.Artist][/B][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<posy>492</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+						<visible>!Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>492</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>514</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Rating Value</description>
+						<posx>195</posx>
+						<posy>545</posy>
+						<width>160</width>
+						<height>24</height>
+						<info>ListItem.Rating</info>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(songs) + !IsEmpty(ListItem.Rating)</visible>
+					</control>	
+				</control>
+		
+
+			<!-- ARTISTS --------------------->
+				<control type="group">
+					<include>listMusicInfo</include>
+					<visible>Control.IsVisible(50) + Container.Content(artists)</visible>
+	
+					<control type="image">
+						<description>ARTIST thumb</description>
+						<aspectratio align="bottom">keep</aspectratio>
+						<bordertexture border="9">selection-focus.png</bordertexture>
+						<bordersize>13</bordersize>
+						<include>listThumbAlt</include>
+					</control>
+					<control type="label">
+						<posy>420</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h1</font>
+						<label>[UPPERCASE][B]$INFO[ListItem.Artist][/B][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$LOCALIZE[21893] $INFO[ListItem.Property(Born)][/UPPERCASE]</label>
+						<visible>!IsEmpty(ListItem.Property(Born))</visible>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$LOCALIZE[21894] $INFO[ListItem.Property(Formed)][/UPPERCASE]</label>
+						<visible>!IsEmpty(ListItem.Property(Formed))</visible>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+	
+				</control>
+				
+			<!-- OTHER---------------------->
+
+				<control type="group">
+					<posx>680</posx>
+					<posy>75</posy>
+					<include>pageslide</include>
+					<visible>Control.IsVisible(50) + ![Container.Content(albums) | Container.Content(songs) | Container.Content(artists)]</visible>
+					
+					<control type="image">
+						<description>icon</description>
+						<posx>147</posx>
+						<posy>159</posy>
+						<width>256</width>
+						<height>256</height>
+						<info>ListItem.icon</info>
+						<aspectratio align="bottom">keep</aspectratio>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>icon reflect</description>
+						<posx>147</posx>
+						<posy>415</posy>
+						<width>256</width>
+						<height>256</height>
+						<info>ListItem.icon</info>
+						<aspectratio align="bottom">keep</aspectratio>
+						<texture flipy="true" diffuse="fade2.png">-</texture>
+						<visible>IsEmpty(ListItem.Thumb)</visible>
+					</control>
+
+					<control type="image">
+						<description>thumb</description>
+						<posx>85</posx>
+						<posy>20</posy>
+						<width>384</width>
+						<height>384</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio align="center">scale</aspectratio>
+					</control>
+					<control type="image">
+						<description>thumb reflect</description>
+						<posx>85</posx>
+						<posy>404</posy>
+						<width>384</width>
+						<height>384</height>
+						<info>ListItem.Thumb</info>
+						<aspectratio align="center">keep</aspectratio>
+						<texture flipy="true" diffuse="fade2.png">-</texture>
+					</control>
+
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h1</font>
+						<label>[UPPERCASE][B]$INFO[ListItem.Album][/B][/UPPERCASE]</label>
+						<visible>!Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>445</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h1</font>
+						<label>[UPPERCASE][B]$INFO[ListItem.Title][/B][/UPPERCASE]</label>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>470</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE][B]$INFO[ListItem.Artist][/B][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<posy>492</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+						<visible>!Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>492</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+						<visible>Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<posy>514</posy>
+						<width>550</width>
+						<align>center</align>
+						<font>h2</font>
+						<textcolor>sublabel-text</textcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+					</control>
+					<control type="image">
+						<description>Rating Value</description>
+						<posx>195</posx>
+						<posy>545</posy>
+						<width>160</width>
+						<height>24</height>
+						<info>ListItem.Rating</info>
+						<aspectratio align="center">keep</aspectratio>
+						<visible>Container.Content(songs) + !IsEmpty(ListItem.Rating)</visible>
+					</control>	
+				</control>
+			</control>
+	
+
+<!----- SLIDE VIEW -------------------------------------------------------------------------------------------------------------------------->
+	
+		<control type="group">
+
+			<control type="label">
+				<posx>170</posx>
+				<posy>150</posy>
+				<width>1000</width>
+				<label>[UPPERCASE][B]$INFO[ListItem.Album][/B][/UPPERCASE]</label>
+				<font>h1</font>
+				<textcolor>label-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+			<control type="label">
+				<posx>170</posx>
+				<posy>465</posy>
+				<width>1000</width>
+				<label>[UPPERCASE][B]$INFO[ListItem.Artist][/B][/UPPERCASE]</label>
+				<font>h1</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+			<control type="label">
+				<posx>170</posx>
+				<posy>490</posy>
+				<width>1000</width>
+				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+			<control type="label">
+				<posx>170</posx>
+				<posy>510</posy>
+				<width>1000</width>
+				<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+			<control type="label">
+				<posx>170</posx>
+				<posy>530</posy>
+				<width>1000</width>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Label)][/UPPERCASE]</label>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+			<control type="label">
+				<posx>170</posx>
+				<posy>550</posy>
+				<width>1000</width>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Type)][/UPPERCASE]</label>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+				<scroll>true</scroll>
+				<visible>Container.Content(albums) + Control.IsVisible(52)</visible>
+			</control>
+		</control>
+
+
+<!----- THUMBNAILS VIEW -------------------------------------------------------------------------------------------------------------------------->
+		
+			<control type="label">
+				<posx>64</posx>
+				<posy>595</posy>
+				<width>1000</width>
+				<height>34</height>
+				<font>h1</font>
+				<align>left</align>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+				<include>fadeinout</include>
+			</control>
+			<control type="label">
+				<posx>64</posx>
+				<posy>620</posy>
+				<height>34</height>
+				<font>h2</font>
+				<align>left</align>
+				<textcolor>sublabel-text</textcolor>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+				<include>fadeinout</include>
+				<include>screenwidth</include>
+			</control>
+			<control type="label">
+				<posx>64</posx>
+				<posy>640</posy>
+				<height>34</height>
+				<font>h2</font>
+				<align>left</align>
+				<textcolor>sublabel-text</textcolor>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+				<include>fadeinout</include>
+				<include>screenwidth</include>
+			</control>
+			<control type="label">
+				<posx>1210</posx>
+				<posy>620</posy>
+				<width>600</width>
+				<height>34</height>
+				<font>h2</font>
+				<align>right</align>
+				<textcolor>sublabel-text</textcolor>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+				<include>fadeinout</include>
+			</control>
+			<control type="label">
+				<posx>1210</posx>
+				<posy>640</posy>
+				<height>34</height>
+				<font>h2</font>
+				<align>right</align>
+				<textcolor>sublabel-text</textcolor>
+				<visible>Container.Content(albums) + Control.IsVisible(56)</visible>
+				<label>[UPPERCASE]$INFO[ListItem.Property(Label)][/UPPERCASE]</label>
+				<include>fadeinout</include>
+				<include>screenwidth</include>
+			</control>
+
+		</control>
+		
+		<control type="label" id="18">
+			<description>No Info Scanned Label</description>
+			<posx>190</posx>
+			<posy>200</posy>
+			<width>485</width>
+			<height>150</height>
+			<font>h2</font>
+			<label>-</label>
+			<align>center</align>
+			<aligny>center</aligny>
+		</control>
+		
+	<!----- PAGE LABELS -------------------------------------------------------------------------------------------------------------------------->
+
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B][B]$INFO[Container.NumItems][/B][/B] [LOWERCASE]$LOCALIZE[132][/LOWERCASE]</label>
+			<visible>Container.Content(albums)</visible>
+		</control>
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B]$INFO[Container.NumItems][/B] [LOWERCASE]$LOCALIZE[133][/LOWERCASE]</label>
+			<visible>Container.Content(artists)</visible>
+		</control>
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B]$INFO[Container.NumItems][/B] [LOWERCASE]$LOCALIZE[31946][/LOWERCASE]</label>
+			<visible>Container.Content(songs)</visible>
+		</control>
+		<control type="label">
+			<include>itemcount</include>
+			<label>[B]$INFO[Container.NumItems][/B] [LOWERCASE]$LOCALIZE[31944][/LOWERCASE]</label>
+			<visible>![Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]</visible>
+		</control>
+
+		<control type="label">
+			<include>pageLabel</include>
+			<label>$LOCALIZE[2] $LOCALIZE[14022] - $LOCALIZE[132]</label>
+			<visible>Container.Content(albums)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>$LOCALIZE[2] $LOCALIZE[14022] - $LOCALIZE[133]</label>
+			<visible>Container.Content(artists)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>$LOCALIZE[2] $LOCALIZE[14022] - $LOCALIZE[134]</label>
+			<visible>Container.Content(songs)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<label>$LOCALIZE[2] $LOCALIZE[14022]</label>
+			<visible>![container.content(albums) | container.content(artists) | container.content(songs)] + IsEmpty(Container.PluginName)</visible>
+		</control>
+		<control type="label">
+			<include>pageLabel</include>
+			<info>Container.PluginName</info>
+			<visible>!IsEmpty(container.pluginname) + ![container.content(albums) | container.content(artists) | container.content(songs)]</visible>
+		</control>
+		
+		<include>indicatorScrolling</include>
+		<include>LibraryMusicMenu</include>
+		<include>musicOverlay</include>
+		
+	</controls>
+</window>

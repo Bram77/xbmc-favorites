@@ -1,0 +1,114 @@
+<window id="2000">
+	<defaultcontrol>3</defaultcontrol>
+	
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>460</posx>
+		<posy>120</posy>
+	</coordinates>
+	
+	<controls>
+
+	<control type="group">
+		<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>
+		
+		<control type="image">
+			<width>408</width>
+			<height>390</height>
+			<include>dialogWindow</include>
+		</control>
+		
+		<control type="label" id="1">
+			<description>heading label</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>325</width>
+			<align>left</align>
+			<font>h1D</font>
+			<scroll>true</scroll>
+			<label>1023</label>
+		</control>
+
+		<control type="list" id="3">
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>340</width>
+			<height>252</height>
+			<onleft>5</onleft>
+			<onright>60</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<scrolltime>200</scrolltime>
+			
+			<itemlayout height="36">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>340</width>
+					<height>33</height>
+					<texture border="2">list-nofocusD.png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>320</width>
+					<height>28</height>
+					<font>h2D</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			
+			<focusedlayout height="36">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>340</width>
+					<height>33</height>
+					<texture border="2">list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>320</width>
+					<height>28</height>
+					<font>h2D</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		
+		<control type="label" id="2">
+			<description>Objects Label</description>
+			<posx>335</posx>
+			<posy>305</posy>
+			<width>100</width>
+			<label>-</label>
+			<textcolor>sublabel-text</textcolor>
+			<align>right</align>
+			<font>h2D</font>
+		</control>
+		
+		<control type="button" id="5">
+			<description>manual button</description>
+			<posx>0</posx>
+			<posy>300</posy>
+			<width>100</width>
+			<label>368</label>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<include>dialogConfirmButton</include>
+		</control>
+
+	</control>
+		
+	</controls>
+</window>

@@ -1,0 +1,56 @@
+﻿<window id="122">
+	<defaultcontrol>2</defaultcontrol>
+	<animation effect="fade" time="400">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	
+	<include>dialog-open</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>840</posx>
+		<posy>200</posy>
+	</coordinates>
+	
+	<controls>
+		
+		<control type="image" id="1">
+			<include>dialogWindow</include>
+			<posy>-30</posy>
+			<width>472</width>
+			<height>410</height>
+		</control>
+		
+		<control type="label" id="3">
+			<description>Presets Label</description>
+			<width>420</width>
+			<font>h1D</font>
+		</control>
+		
+		<control type="label" id="4">
+			<description>No Settings Label</description>
+			<posy>40</posy>
+			<width>420</width>
+			<align>left</align>
+			<label>13389</label>
+			<font>h2D</font>
+			<textcolor>sublabel-text</textcolor>
+		</control>
+		
+		<control type="listcontrol" id="2">
+			<description>Preset List</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>407</width>
+			<height>300</height>
+			<spinposx>371</spinposx>
+			<spinposy>390</spinposy>
+			<font>menu</font>
+			<textureheight>33</textureheight>
+			<onleft>2</onleft>
+			<onright>2</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+		</control>
+		
+	</controls>
+</window>

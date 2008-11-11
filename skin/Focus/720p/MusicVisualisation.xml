@@ -1,0 +1,190 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	
+	<controls>
+		
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>screentype</include>
+		</control>
+		
+		<control type="label" id="200">
+			<description>Time and Date Label</description>
+			<posx>1260</posx>
+			<posy>6</posy>
+			<width>415</width>
+			<label>$INFO[System.Time]</label>
+			<align>right</align>
+			<font>date</font>
+			<include>home-menubar</include>
+			<visible>Player.ShowInfo</visible>
+		</control>
+
+<!-- NOW PLAYING -->
+
+		<control type="group" id="1">
+			<posx>-30</posx>
+			<posy>575</posy>
+			<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<include>fadeinout-osd-info</include>
+			
+			<control type="image" id="1">
+				<posx>-30</posx>
+				<posy>0</posy>
+				<width>1400</width>
+				<height>170</height>
+				<texture border="30">dialogpanel.png</texture>
+				<animation effect="fade" start="0" end="70" time="250" delay="100">WindowOpen</animation>
+				<animation effect="fade" start="0" end="70" time="250" delay="100">Visible</animation>
+				<animation effect="fade" start="70" end="0" time="150" delay="0">WindowClose</animation>
+				<animation effect="fade" start="70" end="0" time="150" delay="0">Hidden</animation>
+				<visible>Player.ShowInfo</visible>
+			</control>
+			
+			<include>fadeinout-osd-info</include>
+			
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture diffuse="osd-thumbdiffuse.png">$INFO[MusicPlayer.Cover]</texture>
+				<aspectratio align="left">scale</aspectratio>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Title</description>
+				<posx>180</posx>
+				<posy>25</posy>
+				<width>1100</width>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
+				<align>left</align>
+				<font>h1</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Genre</description>
+				<posx>180</posx>
+				<posy>50</posy>
+				<width>1100</width>
+				<label>[UPPERCASE][B]$INFO[MusicPlayer.Artist][/B][/UPPERCASE]</label>
+				<align>left</align>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<posx>180</posx>
+				<posy>73</posy>
+				<width>1100</width>
+				<label>[UPPERCASE]$INFO[MusicPlayer.Album] ($INFO[MusicPlayer.Year])[/UPPERCASE]</label>
+				<align>left</align>
+				<scrollout>false</scrollout>
+				<pauseatend>4000</pauseatend>
+				<font>h2</font>
+				<textcolor>sublabel-text</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>time label</description>
+				<posx>180</posx>
+				<posy>110</posy>
+				<width>310</width>
+				<label>[UPPERCASE][B]$INFO[player.Time][COLOR=sublabel-text]$INFO[player.Duration, / ][/COLOR][/B][/UPPERCASE]</label>	
+				<align>left</align>
+				<font>h3</font>
+			</control>
+			
+			<control type="image">
+				<posx>1121</posx>
+				<posy>35</posy>
+				<width>160</width>
+				<height>18</height>
+				<info>MusicPlayer.Rating</info>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Player.HasAudio</visible>
+			</control>
+
+			<control type="label" id="1">
+				<description>Next Track</description>
+				<width>900</width>
+				<posx>1280</posx>
+				<posy>110</posy>
+				<label>[UPPERCASE]$LOCALIZE[31077][/UPPERCASE]</label>	
+				<align>right</align>
+				<font>h3</font>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Playlist Pos No</description>
+				<width>310</width>
+				<posx>1280</posx>
+				<posy>77</posy>
+				<label>[UPPERCASE]$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ][/UPPERCASE]</label>
+				<visible>!MusicPartyMode.Enabled</visible>
+				<align>right</align>
+				<textcolor>sublabel-text</textcolor>
+				<font>h3</font>
+			</control>
+	
+			<control type="label" id="1">
+				<description>PartyMode Enabled</description>
+				<posx>1280</posx>
+				<posy>77</posy>
+				<width>310</width>
+				<label>[UPPERCASE]$LOCALIZE[589][/UPPERCASE]</label>
+				<visible>MusicPartyMode.Enabled</visible>
+				<textcolor>sublabel-text</textcolor>
+				<align>right</align>
+				<font>h3</font>
+			</control>
+	
+		</control>
+		
+	
+	<!-- CODEC & VISUALISATION INFO -------------------------------->
+	
+		<control type="group" id="0">
+			<visible>Player.ShowCodec + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+			<include>fadeinout</include>
+			
+			<control type="image" id="0">
+				<description>media info background image</description>
+				<posy>-10</posy>
+				<include>screenwidth</include>
+				<height>107</height>
+				<texture flipy="true">black.png</texture>
+			</control>
+			
+			<control type="label" id="0">
+				<description>codec info</description>
+				<posx>20</posx>
+				<posy>10</posy>
+				<label>[B]$LOCALIZE[445]: [/B]$INFO[musicplayer.Codec,Codec: ,]$INFO[musicplayer.Bitrate, - Bitrate: ,kbps]$INFO[musicplayer.bitspersample, - Bits:,bit]$INFO[musicplayer.Samplerate, - Freq.: ,kHz]$INFO[musicplayer.Channels, - Channels: ]</label>
+				<font>menu</font>
+			</control>
+			
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>20</posx>
+				<posy>35</posy>
+				<label>[B]Visual: [/B]fps: $INFO[System.FPS] - $LOCALIZE[250] - $INFO[Visualisation.Name] - $LOCALIZE[20166]</label>
+				<font>menu</font>
+				<!--<visible>Visualisation.Locked</visible>-->
+			</control>
+			
+			<control type="label" id="0">
+				<description>Presets label</description>
+				<posx>20</posx>
+				<posy>60</posy>
+				<label>[B]$LOCALIZE[13388]: [/B]$INFO[Visualisation.Preset]</label>
+				<font>menu</font>
+			</control>
+
+		</control>
+	</controls>
+</window>
