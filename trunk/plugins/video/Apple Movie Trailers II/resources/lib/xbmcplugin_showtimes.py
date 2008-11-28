@@ -37,7 +37,7 @@ class GUI( xbmcgui.WindowXMLDialog ):
 
     def _parse_argv( self ):
         # call _Info() with our formatted argv to create the self.args object
-        exec "self.args = _Info(%s)" % ( unquote_plus( sys.argv[ 2 ][ 1 : ] ).replace( "&", ", " ), )
+        exec "self.args = _Info(%s)" % ( unquote_plus( sys.argv[ 2 ][ 1 : ].replace( "&", ", " ) ), )
 
     def _show_dialog( self ):
         self.getControl( 20 ).setLabel( self.args.title )
