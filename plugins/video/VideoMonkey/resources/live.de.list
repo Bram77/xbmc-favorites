@@ -1,77 +1,76 @@
 ﻿########################################################
 # DE live streams list
 ########################################################
-title=DE Live
 action=add
 ########################################################
 # Live streams
 ########################################################
-name=n-tv
+title=n-tv
 type=live
 thumb=video.monkey.image|ntv.png
 url=mms://stream.n-tv.de/ntvlive
 ########################################################
-name=GIGA
+title=GIGA
 type=live
 thumb=video.monkey.image|giga.png
 url=mms://stream.giga.de/GIGA
 ########################################################
-name=NDR
+title=NDR
 type=live
 thumb=video.monkey.image|ndr.png
 url=mms://213.254.239.66/ndrfernsehen$ndr_nds
 ########################################################
-name=3sat
+title=3sat
 type=live
 thumb=video.monkey.image|3sat.png
 url=mms://c36000-l.w.core.cdn.streamfarm.net/36000zdf/live/3546zdf/encoder.zdf.3sat_vh_16zu9.wmv
 ########################################################
-#name=Toon TV
+#title=Toon TV
 #type=live
 #thumb=video.monkey.image|toon_tv.png
 #url=mms://85.214.87.175/toon-tv
 ########################################################
-name=9live
+title=9live
 type=live
 thumb=video.monkey.image|9live.png
 url=mms://streamer12.streaming.szm.de/9live_wmt_mid
 ########################################################
-name=Streetclip
+title=Streetclip
 type=live
 thumb=video.monkey.image|streetclip.png
 url=mms://streetclip.tv:1234/
 ########################################################
-name=Germany TV Motosport
+title=Germany TV Motosport
 type=live
 thumb=video.monkey.image|germanytv_motorsport.png
 url=mms://195.122.130.135/speedup-tv_Motorsport-TV_10
 ########################################################
-name=Germany TV Tennis
+title=Germany TV Tennis
 type=live
 thumb=video.monkey.image|germanytv_tennis.png
 url=mms://195.122.130.135/speedup-tv_Tennis-TV_10
 ########################################################
-name=Bundesligen TV
+title=Bundesligen TV
 type=live
 thumb=video.monkey.image|bundesligen_tv.png
 url=mms://195.122.130.139/Bundesligen-TV
 ########################################################
-name=Plus TV
+title=Plus TV
 type=live
 thumb=video.monkey.image|plus_tv.png
 url=mms://195.122.130.133/ptv%20erfurt_standard_10
 ########################################################
-name=Campus TV
+title=Campus TV
 type=live
 thumb=video.monkey.image|campus_tv.png
 url=mms://webtv-bb.de/CampusTV
 ########################################################
-name=Wetterfernsehen
+title=Wetterfernsehen
 type=live
 thumb=video.monkey.image|Wetterfernsehen.png
 url=mms://wm-ipx-10.stream.tv1.de/3271wetterfernsehen.wmv?cid=59334&dummy=.wm
 ########################################################
-name=München TV
+title=München TV
 type=live
 thumb=video.monkey.image|muenchen.tv.png
 url=mms://d8019013969.w.glx.core006.cdn.streamfarm.net/11008bmt/live/3338s15muenchentv/300.wmv?cid=60919&dummy=.wmv

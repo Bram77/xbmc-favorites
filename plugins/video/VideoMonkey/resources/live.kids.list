@@ -1,17 +1,16 @@
 ﻿########################################################
 # live kids streams list
 ########################################################
-title=Kids Live
 action=add
 ########################################################
 # Live kids streams
 ########################################################
-name=OldCartoonTV (EN)
+title=OldCartoonTV (EN)
 type=live
 thumb=video.monkey.image|oldcartoons_tv.png
 url=mms://us.impek.com/oldcartoontv
 ########################################################
-name=Nickelodeon JR (NL)
+title=Nickelodeon JR (NL)
 type=live
 thumb=video.monkey.image|nickelodeon_jr.png
 url=mms://81.23.249.20/MTV_Low_003?.wma

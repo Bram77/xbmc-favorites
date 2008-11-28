@@ -14,7 +14,7 @@ __author__ = "sfaxman"
 __url__ = "http://code.google.com/p/xbmc-addons/"
 __svn_url__ = "http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/"
 __credits__ = "sfaxman"
-__version__ = "1.4" # of this file
+__version__ = "1.6" # of this file
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -352,8 +352,8 @@ def decode(s):
     try:
         dic=htmlentitydefs.name2codepoint
         for key in dic.keys():
-            entity='&' + key + ';'
-            s=s.replace(entity, unichr(dic[key]))
+            entity = '&' + key + ';'
+            s = s.replace(entity, unichr(dic[key]))
     except:
         traceback.print_exc(file = sys.stdout)
     return s
@@ -399,7 +399,7 @@ def smart_unicode(s):
             s = unicode(s, 'ISO-8859-1')
     return s
 
-def clean_name(s):
+def clean_title(s):
     if not s:
         return ''
     try:
@@ -419,11 +419,17 @@ def clean_url(s):
 
 class CListItem:
     def __init__(self):
-        self.name = ''
+        self.title = ''
         self.type = ''
-        self.thumb = os.path.join(imgDir, 'video.png')
         self.url = ''
-        # to-do: date, duration, size...
+        self.size = ''
+        self.length = ''
+        self.genre = ''
+        self.rating = ''
+        self.date = ''
+        self.related = ''
+        self.extra = ''
+        self.thumb = os.path.join(imgDir, 'video.png')
 
 class CSourceItem:
     def __init__(self):
@@ -432,14 +438,20 @@ class CSourceItem:
         self.quality = 'standard'
         self.url = ''
 
+class CVideoInfoItem:
+    def __init__(self):
+        self.id = ''
+        self.src = ''
+        self.rule = ''
+        self.build = '%s'
+
 class CVideoItem:
     def __init__(self):
-        self.url_img_title = ''
+        self.infos = ''
         self.order = ''
-        self.img = ''
-        self.img_build = '%s'
-        self.title = ''
+        self.info_list = []
         self.url_build = '%s'
+        self.thumb = os.path.join(imgDir, 'video.png')
 
 class CNextItem:
     def __init__(self):
@@ -449,7 +461,7 @@ class CNextItem:
 
 class CDirItem:
     def __init__(self):
-        self.name = ''
+        self.title = ''
         self.type = ''
         self.url = ''
         self.url_action = ''
@@ -463,7 +475,6 @@ class CDirItem:
 
 class CCurrentList:
     def __init__(self):
-        self.title = ''
         self.start_url = ''
         self.force_player = ''
         self.sort_method = 'label'
@@ -575,7 +586,7 @@ class CCurrentList:
         f.write('action=remove\n')
         f.write('########################################################\n')
         for item in self.list:
-            f.write('name=' + item.name + '\n')
+            f.write('title=' + item.title + '\n')
             f.write('type=' + item.type + '\n')
             f.write('thumb=' + item.thumb + '\n')
             f.write('url=' + item.url + '\n')
@@ -583,7 +594,7 @@ class CCurrentList:
         f.close()
         return
 
-    def loadCatcher(self, name):
+    def loadCatcher(self, title):
         f = codecs.open(os.path.join(resDir, 'catcher.list'), 'r', 'utf-8')
         data = f.read()
         data = data.replace('\r\n', '\n')
@@ -597,8 +608,8 @@ class CCurrentList:
                 if index != -1:
                     key = m[:index]
                     value = m[index+1:]
-                    if key == 'name':
-                        if name == value:
+                    if key == 'title':
+                        if title == value:
                             catcher_found = True
                     elif key == 'data' and catcher_found == True:
                         self.catcher_data = value
@@ -658,9 +669,7 @@ class CCurrentList:
                 if index != -1:
                     key = m[:index]
                     value = m[index+1:]
-                    if key == 'title':
-                        self.title = value
-                    elif key == 'start_url':
+                    if key == 'start_url':
                         self.start_url = value
                     elif key == 'force_player':
                         self.force_player = value
@@ -701,30 +710,39 @@ class CCurrentList:
                         index = value.find('|')
                         self.reference = value[:index]
                         self.content = value[index+1:]
-                    elif key == 'video_url_img_title':
+                    elif key == 'video_infos':
                         video_tmp = CVideoItem()
-                        video_tmp.url_img_title = value
+                        video_tmp.infos = value
                     elif key == 'video_order':
                         video_tmp.order = value
-                    elif key == 'video_img':
-                        video_tmp.img = value
-                    elif key == 'video_img_build':
-                        video_tmp.img_build = value
-                    elif key == 'video_title':
-                        video_tmp.title = value
+                    elif key == 'video_info_id':
+                        video_info_tmp = CVideoInfoItem()
+                        video_info_tmp.id = value
+                    elif key == 'video_info_from':
+                        video_info_tmp.src = value
+                    elif key == 'video_info':
+                        video_info_tmp.rule = value
+                    elif key == 'video_info_build':
+                        video_info_tmp.build = value
+                        video_tmp.info_list.append(video_info_tmp)
+                    elif key == 'video_thumb':
+                        video_tmp.thumb = value
+                        index = value.find('|')
+                        if value[:index] == 'video.monkey.image':
+                            video_tmp.thumb = os.path.join(imgDir, value[index+1:])
                     elif key == 'video_url_build':
                         video_tmp.url_build = value
                         self.video_list.append(video_tmp)
                     elif key == 'next_url':
                         next_tmp = CNextItem()
                         next_tmp.url = value
-                    elif key == 'next_url_build':
-                        next_tmp.url_build = value
                     elif key == 'next_thumb':
                         next_tmp.thumb = value
                         index = value.find('|')
                         if value[:index] == 'video.monkey.image':
                             next_tmp.thumb = os.path.join(imgDir, value[index+1:])
+                    elif key == 'next_url_build':
+                        next_tmp.url_build = value
                         self.next_list.append(next_tmp)
                     elif key == 'ext_target_url':
                         self.ext_target_url = value
@@ -755,20 +773,18 @@ class CCurrentList:
                         index = value.find('|')
                         if value[:index] == 'video.monkey.image':
                             self.search_thumb = os.path.join(imgDir, value[index+1:])
-                    elif key == 'dir_name':
+                    elif key == 'dir_title':
                         dir_tmp = CDirItem()
-                        dir_tmp.name = value
+                        dir_tmp.title = value
                         index = value.find('|')
                         if value[:index] == 'video.monkey.locale':
-                            dir_tmp.name = xbmc.getLocalizedString(int(value[index+1:]))
+                            dir_tmp.title = xbmc.getLocalizedString(int(value[index+1:]))
                     elif key == 'dir_url':
                         dir_tmp.url = value
                     elif key == 'dir_type':
                         dir_tmp.type = value
                     elif key == 'dir_url_action':
                         dir_tmp.url_action = value
-                    elif key == 'dir_url_build':
-                        dir_tmp.url_build = value
                     elif key == 'dir_curr_url':
                         dir_tmp.curr_url = value
                     elif key == 'dir_curr_img':
@@ -784,13 +800,15 @@ class CCurrentList:
                         index = value.find('|')
                         if value[:index] == 'video.monkey.image':
                             dir_tmp.thumb = os.path.join(imgDir, value[index+1:])
+                    elif key == 'dir_url_build':
+                        dir_tmp.url_build = value
                         self.dir_list.append(dir_tmp)
-                    elif key == 'name':
+                    elif key == 'title':
                         tmp = CListItem()
-                        tmp.name = value
+                        tmp.title = value
                         index = value.find('|')
                         if value[:index] == 'video.monkey.locale':
-                            tmp.name = ' ' + xbmc.getLocalizedString(int(value[index+1:])) + ' '
+                            tmp.title = ' ' + xbmc.getLocalizedString(int(value[index+1:])) + ' '
                     elif key == 'type':
                         tmp.type = value
                         if (recursive and tmp.type == 'once'):
@@ -808,12 +826,56 @@ class CCurrentList:
             result = self.loadRemote(self.start_url, False)
         if (self.search_url_build != '%s'):
             tmp = CListItem()
-            tmp.name = ' ' + xbmc.getLocalizedString(30102) + ' '
+            tmp.title = ' ' + xbmc.getLocalizedString(30102) + ' '
             tmp.type = 'rss'
             tmp.thumb = self.search_thumb
             tmp.url = filename + '|search'
             self.list.append(tmp)
         return 0
+
+    def urlFormatter(self, url, cfg_file): # Site specific url handling
+        return url
+
+    def thumbFormatter(self, thumb, cfg_file): # Site specific thumb handling
+        thumb = decode(unquote_safe(thumb)).replace(' ', '%20')
+        if (thumb == ''):
+            thumb = os.path.join(imgDir, 'video.png')
+        return thumb
+
+    def titleFormatter(self, title, cfg_file): # Site specific title handling
+        try:
+            title = clean_title(title)
+        except:
+            title = self.randomFilename(prefix = 'notitle_')
+        title = title.lstrip().rstrip()
+        if (len(title) == 0):
+            title = self.randomFilename(prefix = 'notitle_')
+        if cfg_file == 'arteplus7.cfg' or cfg_file == 'arteplus7.de.cfg'or cfg_file == 'arteplus7.fr.cfg': # arte+7
+            return title.replace('</index>', ' - ').replace('        <bigTitle>', '').replace('\n', '')
+        return title
+
+    def sizeFormatter(self, size, cfg_file): # Site specific size handling
+        return size
+
+    def lengthFormatter(self, length, cfg_file): # Site specific length handling
+        return length
+
+    def genreFormatter(self, genre, cfg_file): # Site specific genre handling
+        return genre
+
+    def ratingFormatter(self, rating, cfg_file): # Site specific rating handling
+        return rating
+
+    def dateFormatter(self, date, cfg_file): # Site specific date handling
+        return date
+
+    def belongingFormatter(self, belonging, cfg_file): # Site specific related handling
+        if belonging != '':
+            belonging = cfg_file + '|' + belonging
+        return belonging
+
+    def extraFormatter(self, extra, cfg_file): # Site specific extra handling
+        return extra
 
     def loadRemote(self, filename, recursive = True):
         try:
@@ -859,84 +921,183 @@ class CCurrentList:
         except IOError:
             traceback.print_exc(file = sys.stdout)
             return -1
-
         # Find video items
         for video in self.video_list:
-            if (video.url_img_title != ''):
-                revid = re.compile(video.url_img_title, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                for pot_url, pot_img, pot_name in revid.findall(data):
-                    if (video.order != ''):
-                        u_index = video.order.find('U')
-                        i_index = video.order.find('I')
-                        if (u_index == 0):
-                            url = pot_url
-                            if (i_index == 1):
-                                img = pot_img
-                                name = pot_name
-                            else:
-                                img = pot_name
-                                name = pot_img
-                        elif (u_index == 1):
-                            url = pot_img
-                            if (i_index == 0):
-                                img = pot_url
-                                name = pot_name
-                            else:
-                                img = pot_name
-                                name = pot_url
-                        else:
-                            url = pot_name
-                            if (i_index == 0):
-                                img = pot_url
-                                name = pot_img
-                            else:
-                                img = pot_img
-                                name = pot_url
-                    else:
-                        url = pot_url
-                        img = pot_img
-                        name = pot_name
-                    url = decode(url)
-                    img = decode(unquote_safe(img)).replace(' ', '%20')
-                    name = clean_name(name)
+            if (video.infos != ''):
+                revid = re.compile(video.infos, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                infos = ["", "", "", "", "", "", "", "", "", ""]
+                for infos[0], infos[1], infos[2], infos[3], infos[4], infos[5], infos[6], infos[7], infos[8], infos[9] in revid.findall(data):
                     tmp = CListItem()
                     tmp.type = 'video'
-                    img = video.img_build % (img)
-                    if (img == ''):
-                        img = os.path.join(imgDir, 'video.png')
-                    try:
-                        tmp.url = smart_unicode(self.cfg_name + '|' + (video.url_build % (url)))
-                    except:
-                        tmp.url = smart_unicode(self.cfg_name + '|' + (video.url_build % (smart_unicode(url))))
-                    if (video.img != ''):
+                    if (video.order != ''): # U:url, I:image, T:title, S:size, L:length (duration), G:genre, R:rating, D:date and E:extra
+                        if (video.order.find('U') != -1):
+                            tmp.url = infos[video.order.find('U')]
+                        else:
+                            tmp.url = ''
+                        if (video.order.find('I') != -1):
+                            tmp.thumb = infos[video.order.find('I')]
+                        else:
+                            tmp.thumb = ''
+                        if (video.order.find('T') != -1):
+                            tmp.title = infos[video.order.find('T')]
+                        else:
+                            tmp.title = ''
+                        if (video.order.find('S') != -1):
+                            tmp.size = infos[video.order.find('S')]
+                        else:
+                            tmp.size = ''
+                        if (video.order.find('L') != -1):
+                            tmp.length = infos[video.order.find('L')]
+                        else:
+                            tmp.length = ''
+                        if (video.order.find('G') != -1):
+                            tmp.genre = infos[video.order.find('G')]
+                        else:
+                            tmp.genre = ''
+                        if (video.order.find('R') != -1):
+                            tmp.rating = infos[video.order.find('R')]
+                        else:
+                            tmp.rating = ''
+                        if (video.order.find('D') != -1):
+                            tmp.date = infos[video.order.find('D')]
+                        else:
+                            tmp.date = ''
+                        if (video.order.find('B') != -1):
+                            tmp.related = infos[video.order.find('B')]
+                        else:
+                            tmp.related = ''
+                        if (video.order.find('E') != -1):
+                            tmp.extra = infos[video.order.find('E')]
+                        else:
+                            tmp.extra = ''
+                        for info in video.info_list:
+                            src = tmp.url
+                            if info.src == 'image':
+                                src = tmp.thumb
+                            elif info.src == 'title':
+                                src = tmp.title
+                            elif info.src == 'size':
+                                src = tmp.size
+                            elif info.src == 'length':
+                                src = tmp.length
+                            elif info.src == 'genre':
+                                src = tmp.genre
+                            elif info.src == 'rating':
+                                src = tmp.rating
+                            elif info.src == 'date':
+                                src = tmp.date
+                            elif info.src == 'belonging':
+                                src = tmp.related
+                            elif info.src == 'extra':
+                                src = tmp.extra
+                            if (info.rule != ''):
+                                try:
+                                    info_rule = info.rule % (src)
+                                except:
+                                    try:
+                                        info_rule = info.rule % (smart_unicode(src))
+                                    except:
+                                        info_rule = info.rule
+                                reinfo = re.compile(info_rule, re.IGNORECASE + re.DOTALL + re.MULTILINE)
+                                infosearch = reinfo.search(data)
+                                try:
+                                    info_value = infosearch.group(1)
+                                except:
+                                    info_value = ''
+                                if info.id == 'extra':
+                                    try:
+                                        tmp.extra = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.extra = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.extra = smart_unicode(info.build)
+                                elif info.id == 'belonging':
+                                    try:
+                                        tmp.related = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.related = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.related = smart_unicode(info.build)
+                                elif info.id == 'date':
+                                    try:
+                                        tmp.date = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.date = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.date = smart_unicode(info.build)
+                                elif info.id == 'rating':
+                                    try:
+                                        tmp.rating = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.rating = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.rating = smart_unicode(info.build)
+                                elif info.id == 'genre':
+                                    try:
+                                        tmp.genre = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.genre = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.genre = smart_unicode(info.build)
+                                elif info.id == 'length':
+                                    try:
+                                        tmp.length = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.length = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.length = smart_unicode(info.build)
+                                elif info.id == 'size':
+                                    try:
+                                        tmp.size = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.size = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.size = smart_unicode(info.build)
+                                elif info.id == 'title':
+                                    try:
+                                        tmp.title = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.title = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.title = smart_unicode(info.build)
+                                elif info.id == 'image':
+                                    try:
+                                        tmp.thumb = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.thumb = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.thumb = smart_unicode(info.build)
+                                elif info.id == 'url':
+                                    try:
+                                        tmp.url = smart_unicode(info.build % (info_value))
+                                    except:
+                                        try:
+                                            tmp.url = smart_unicode(info.build % (smart_unicode(info_value)))
+                                        except:
+                                            tmp.url = smart_unicode(info.build)
+                        tmp.extra = self.extraFormatter(tmp.extra, self.cfg_name)
+                        tmp.related = self.belongingFormatter(tmp.related, self.cfg_name)
+                        tmp.date = self.dateFormatter(tmp.date, self.cfg_name)
+                        tmp.rating = self.ratingFormatter(tmp.rating, self.cfg_name)
+                        tmp.genre = self.genreFormatter(tmp.genre, self.cfg_name)
+                        tmp.length = self.lengthFormatter(tmp.length, self.cfg_name)
+                        tmp.size = self.sizeFormatter(tmp.size, self.cfg_name)
+                        tmp.title = self.titleFormatter(tmp.title, self.cfg_name)
+                        tmp.thumb = self.thumbFormatter(tmp.thumb, self.cfg_name)
                         try:
-                            img_catcher = video.img % (url)
+                            tmp.url = smart_unicode(self.cfg_name + '|' + (video.url_build % (tmp.url)))
                         except:
-                            img_catcher = video.img
-                        reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                        imgsearch = reimg.search(data)
-                        try:
-                            img = video.img_build % (decode(unquote_safe(imgsearch.group(1))).replace(' ', '%20'))
-                        except:
-                            traceback.print_exc(file = sys.stdout)
-                            img = os.path.join(imgDir, 'video.png')
-                    tmp.thumb = img
-                    if (video.title != ''):
-                        try:
-                            title_catcher = video.title % (url)
-                        except:
-                            title_catcher = video.title
-                        retitle = re.compile(title_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                        titlesearch = retitle.search(data)
-                        try:
-                            name = clean_name(titlesearch.group(1))
-                        except:
-                            traceback.print_exc(file = sys.stdout)
-                            name = self.randomFilename(prefix = 'noname_')
-                    tmp.name = name.lstrip().rstrip()
-                    if (len(tmp.name) == 0):
-                        tmp.name = self.randomFilename(prefix = 'noname_')
-                    self.list.append(tmp)
+                            tmp.url = smart_unicode(self.cfg_name + '|' + (video.url_build % (smart_unicode(tmp.url))))
+                        self.list.append(tmp)
         # Find category items
         for dir in self.dir_list:
             oneFound = False
@@ -944,9 +1105,9 @@ class CCurrentList:
             f = None
             if (dir.url != ''):
                 recat = re.compile(dir.url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                for url, name in recat.findall(data):
+                for url, title in recat.findall(data):
                     url = decode(url)
-                    name = clean_name(name.lstrip().rstrip())
+                    title = clean_title(title.lstrip().rstrip())
                     if (dir.img != ''):
                         try:
                             img_catcher = dir.img % (url)
@@ -974,11 +1135,11 @@ class CCurrentList:
                         if dir.type.find('flat') != -1:
                             tmp = CListItem()
                             if dir.type.find('space') != -1:
-                                tmp.name = ' ' + name + ' '
+                                tmp.title = ' ' + title + ' '
                             else:
-                                tmp.name = name
-                            if (len(tmp.name) == 0):
-                                tmp.name = self.randomFilename(prefix = 'noname_')
+                                tmp.title = title
+                            if (len(tmp.title) == 0):
+                                tmp.title = self.randomFilename(prefix = 'notitle_')
                             tmp.type = 'rss'
                             tmp.thumb = dir.thumb
                             tmp.url = self.cfg_name + '|' + url
@@ -986,18 +1147,18 @@ class CCurrentList:
                         else:
                             if f == None:
                                 f = codecs.open(os.path.join(cacheDir, catfilename), 'w', 'utf-8')
-                            f.write('name= ' + smart_unicode(name) + ' \n')
+                            f.write('title= ' + smart_unicode(title) + ' \n')
                             f.write('type=rss\n')
                             f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
                             f.write('url=' + smart_unicode(self.cfg_name) + '|' + smart_unicode(url) + '\n')
                         oneFound = True
             if (dir.curr_url != ''):
                 recat = re.compile(dir.curr_url, re.IGNORECASE + re.DOTALL + re.MULTILINE)
-                for name in recat.findall(data):
-                    name = clean_name(name.lstrip().rstrip())
+                for title in recat.findall(data):
+                    title = clean_title(title.lstrip().rstrip())
                     if (dir.img != ''):
                         try:
-                            img_catcher = dir.curr_img % (name)
+                            img_catcher = dir.curr_img % (title)
                         except:
                             img_catcher = dir.curr_img
                         reimg = re.compile(img_catcher, re.IGNORECASE + re.DOTALL + re.MULTILINE)
@@ -1009,11 +1170,11 @@ class CCurrentList:
                     if dir.type.find('flat') != -1:
                         tmp = CListItem()
                         if dir.type.find('space') != -1:
-                            tmp.name = ' ' + name + ' '
+                            tmp.title = ' ' + title + ' '
                         else:
-                            tmp.name = name
-                        if (len(tmp.name) == 0):
-                            tmp.name = self.randomFilename(prefix = 'noname_')
+                            tmp.title = title
+                        if (len(tmp.title) == 0):
+                            tmp.title = self.randomFilename(prefix = 'notitle_')
                         tmp.type = 'rss'
                         tmp.thumb = dir.thumb
                         tmp.url = self.cfg_name + '|' + curr_url
@@ -1021,14 +1182,14 @@ class CCurrentList:
                     else:
                         if f == None:
                             f = codecs.open(os.path.join(cacheDir, catfilename), 'w', 'utf-8')
-                        f.write('name= ' + smart_unicode(name) + ' (' + xbmc.getLocalizedString(30106) +') \n')
+                        f.write('title= ' + smart_unicode(title) + ' (' + xbmc.getLocalizedString(30106) +') \n')
                         f.write('type=rss\n')
                         f.write('thumb=' + smart_unicode(dir.thumb) + '\n')
                         f.write('url=' + smart_unicode(self.cfg_name + '|' + curr_url) + '\n')
                     OneFound = True
             if (oneFound and (dir.type.find('flat') == -1)):
                 tmp = CListItem()
-                tmp.name = ' ' + dir.name + ' '
+                tmp.title = ' ' + dir.title + ' '
                 tmp.type = 'rss'
                 tmp.thumb = dir.thumb
                 tmp.url = catfilename
@@ -1044,7 +1205,7 @@ class CCurrentList:
                     url = decode(url)
                     if (not found):
                         tmp = CListItem()
-                        tmp.name = ' ' + xbmc.getLocalizedString(30103) + ' '
+                        tmp.title = ' ' + xbmc.getLocalizedString(30103) + ' '
                         tmp.type = 'rss'
                         tmp.thumb = next.thumb
                         try:
@@ -1063,6 +1224,10 @@ class Main:
         self.selectionList = []
         self.videoExtension = '.flv'
         self.currentlist = CCurrentList()
+        try:
+            self.date_format = xbmc.getRegion( "datelong" ).replace( "DDDD,", "" ).replace( "MMMM", "%B" ).replace( "D", "%d" ).replace( "YYYY", "%Y" ).strip()
+        except:
+            self.date_format = "%B %d, %Y"
 
     def getDirectLink(self, orig_url):
         if self.currentlist.target_extension != '':
@@ -1182,34 +1347,129 @@ class Main:
         else:
             return orig_url
 
-    def playVideo(self, url):
-        cfg_pos = url.find('|')
-        cfg_file = url[:cfg_pos]
-        self.currentlist.loadLocal(cfg_file, False)
-        sep_pos = url.rfind('|')
-        icon = url[sep_pos + 1:len(url) - 12]
-        url = url[cfg_pos+1:sep_pos]
-        sep_pos = url.rfind('|')
-        title = url[sep_pos + 1:]
-        vidURL = self.getDirectLink(url[:sep_pos])
-        if vidURL == '':
+    def codeVideoUrl(self, videoItem):
+        videoUrl = videoItem.url
+        if videoItem.thumb != '':
+            videoUrl = videoUrl + '|thumb:' + videoItem.thumb
+        if videoItem.title != '':
+            videoUrl = videoUrl + '|title:' + videoItem.title
+        if videoItem.size != '':
+            videoUrl = videoUrl + '|size:' + videoItem.size
+        if videoItem.length != '':
+            videoUrl = videoUrl + '|length:' + videoItem.length
+        if videoItem.genre != '':
+            videoUrl = videoUrl + '|genre:' + videoItem.genre
+        if videoItem.rating != '':
+            videoUrl = videoUrl + '|rating:' + videoItem.rating
+        if videoItem.date != '':
+            videoUrl = videoUrl + '|date:' + videoItem.date
+        if videoItem.related != '':
+            videoUrl = videoUrl + '|related:' + videoItem.related
+        if videoItem.extra != '':
+            videoUrl = videoUrl + '|extra:' + videoItem.extra
+        videoUrl = videoUrl + '.videomonkey'
+        return videoUrl
+
+    def decodeVideoUrl(self, videoUrl):
+        videoItem = CListItem()
+        videoItem.type = 'video'
+        videoItem.url = videoUrl[:videoUrl.find('|')]
+        if videoUrl.find('|thumb:') != -1:
+            start_pos = videoUrl.find('|thumb:')+7
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.thumb = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.thumb = videoUrl[start_pos:]
+        if videoUrl.find('|title:') != -1:
+            start_pos = videoUrl.find('|title:')+7
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.title = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.title = videoUrl[start_pos:]
+        if videoUrl.find('|size:') != -1:
+            start_pos = videoUrl.find('|size:')+6
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.size = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.size = videoUrl[start_pos:]
+        if videoUrl.find('|length:') != -1:
+            start_pos = videoUrl.find('|length:')+8
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.length = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.length = videoUrl[start_pos:]
+        if videoUrl.find('|genre:') != -1:
+            start_pos = videoUrl.find('|genre:')+7
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.genre = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.genre = videoUrl[start_pos:]
+        if videoUrl.find('|rating:') != -1:
+            start_pos = videoUrl.find('|rating:')+8
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.rating = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.rating = videoUrl[start_pos:]
+        if videoUrl.find('|date:') != -1:
+            start_pos = videoUrl.find('|date:')+6
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.date = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.date = videoUrl[start_pos:]
+        if videoUrl.find('|related:') != -1:
+            start_pos = videoUrl.find('|related:')+9
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.related = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.related = videoUrl[start_pos:]
+        if videoUrl.find('|extra:') != -1:
+            start_pos = videoUrl.find('|extra:')+7
+            end_pos = videoUrl[start_pos:].find('|')
+            if end_pos != -1:
+                videoItem.extra = videoUrl[start_pos:start_pos + end_pos]
+            else:
+                videoItem.extra = videoUrl[start_pos:]
+        return videoItem
+
+    #def playVideo(self, url):
+    def playVideo(self, videoItem):
+        if videoItem == None:
             return
-        vidURL = clean_url(self.siteSpecificUrlTarget(vidURL, cfg_file))
-        title = clean_url(self.siteSpecificName(title, cfg_file))
+        if videoItem.url == '':
+            return
+        icon = videoItem.thumb
         try:
             urllib.urlretrieve(icon, os.path.join(cacheDir, 'thumb.tbn'))
             icon = os.path.join(cacheDir, 'thumb.tbn')
         except:
             traceback.print_exc(file = sys.stdout)
             icon = os.path.join(imgDir, 'video.png')
-        flv_file = vidURL
-        listitem = xbmcgui.ListItem(title, title, icon, icon)
-        listitem.setInfo("video", {"Title":title})
+        flv_file = videoItem.url
+        listitem = xbmcgui.ListItem(videoItem.title, videoItem.title, icon, icon)
+        listitem.setInfo("video", {"Title":videoItem.title})
+        if len(videoItem.size) > 0:
+            listitem.setInfo(type = "Video", infoLabels = {"Size": videoItem.size})
+        if len(videoItem.length) > 0:
+            listitem.setInfo(type = "Video", infoLabels = {"Duration": videoItem.length})
+        if len(videoItem.genre) > 0:
+            listitem.setInfo(type = "Video", infoLabels = {"Genre": videoItem.genre})
+        if len(videoItem.rating) > 0:
+            listitem.setInfo(type = "Video", infoLabels = {"Rating": videoItem.rating})
+        if len(videoItem.date) > 0:
+            listitem.setInfo(type = "Video", infoLabels = {"Date": videoItem.date})
         if self.currentlist.video_action.find('nodownload') == -1:
             if (xbmcplugin.getSetting("download") == "true"):
                 self.pDialog = xbmcgui.DialogProgress()
                 self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
-                flv_file = self.downloadMovie(vidURL, title)
+                flv_file = self.downloadMovie(videoItem.url, videoItem.title)
                 self.pDialog.close()
                 if (flv_file == None):
                     dialog = xbmcgui.Dialog()
@@ -1219,7 +1479,7 @@ class Main:
                 if dia.yesno('', xbmc.getLocalizedString(30052)):
                     self.pDialog = xbmcgui.DialogProgress()
                     self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
-                    flv_file = self.downloadMovie(vidURL, title)
+                    flv_file = self.downloadMovie(videoItem.url, videoItem.title)
                     self.pDialog.close()
                     if (flv_file == None):
                         dialog = xbmcgui.Dialog()
@@ -1238,11 +1498,12 @@ class Main:
         if (flv_file != None and os.path.isfile(flv_file)):
             xbmc.Player(player_type).play(str(flv_file), listitem)
         else:
-            xbmc.Player(player_type).play(str(vidURL), listitem)
+            xbmc.Player(player_type).play(str(videoItem.url), listitem)
         xbmc.sleep(200)
 
     def downloadMovie(self, url, title):
         filepath = ''
+        title = repr(title)
         try:
             filepath = xbmc.translatePath(os.path.join(xbmcplugin.getSetting("download_Path"), title + self.videoExtension))
             urllib.urlretrieve(url, filepath, self._report_hook)
@@ -1271,32 +1532,14 @@ class Main:
         self.pDialog.update(percent, xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
         if (self.pDialog.iscanceled()):raise
 
-    def siteSpecificUrlTarget(self, url, cfg_file): # Site specific target url handling
+    def TargetFormatter(self, url, cfg_file): # Site specific target url handling
         if cfg_file == 'metacafe.com.cfg' or cfg_file == 'metacafe.adult.com.cfg': # Metacafe
             return url.replace('[', '%5B').replace(']', '%5D').replace(' ', '%20')
         elif cfg_file == 'myspass.de.cfg': # Myspass
             return unquote_safe(url)
         elif cfg_file == 'pornhub.com.cfg': # Pornhub
             return urllib.unquote(url)
-        elif cfg_file == 'joox.net.cfg': # Joox # thx voinage
-            if url.find('messagefromme') > 0:
-                url = "http://127.0.0.1:64653/streamplug/" + base64.urlsafe_b64encode(url) + '?.ogm'
-            elif url.find('fliqz') > 0:
-                url = url + "?.flv"
-            elif url.find('torrent') > 0:
-                url = url + "?.avi"
-            elif url.find('smallurl') > 0:
-                request = urllib2.Request(url)
-                opener = urllib2.build_opener()
-                f = opener.open(request)
-                vix = urllib.unquote(f.url)
-                url = vix + "?.avi"
-            elif url.find('megavideo') > 0:
-                url = url + "voinage.flv"
-            return url
-        elif cfg_file == 'tu.tv.cfg': # TUtv
-            return urllib.unquote(urllib.unquote(url))
-        if cfg_file == 'zdf.de.cfg': # ZDF mediathek
+        elif cfg_file == 'zdf.de.cfg': # ZDF mediathek
             request = urllib2.Request(url)
             opener = urllib2.build_opener()
             req = urllib2.Request(url)
@@ -1348,11 +1591,6 @@ class Main:
                 url=''
         return url
 
-    def siteSpecificName(self, name, cfg_file): # Site specific name handling
-        if cfg_file == 'arteplus7.cfg' or cfg_file == 'arteplus7.de.cfg'or cfg_file == 'arteplus7.fr.cfg': # arte+7
-            return name.replace('</index>', ' - ').replace('        <bigTitle>', '').replace('\n', '')
-        return name
-
     def parseView(self, url):
         ext = self.currentlist.getFileExtension(url)
         if ext == 'cfg' or ext == 'list':
@@ -1366,9 +1604,22 @@ class Main:
                 self.currentlist.removeItem(url)
                 xbmc.executebuiltin("Container.Refresh")
             return -2
-        elif ext == 'videomonkey':
-            result = self.playVideo(url)
-            return
+        elif ext == 'videomonkey' or ext == 'dwnldmonkey':
+            cfg_pos = url.find('|')
+            cfg_file = url[:cfg_pos]
+            self.currentlist.loadLocal(cfg_file, False)
+            videoItem = self.decodeVideoUrl(url[cfg_pos+1:len(url) - 12])
+            videoItem.url = self.getDirectLink(videoItem.url)
+            videoItem.url = clean_url(self.TargetFormatter(videoItem.url, cfg_file))
+            #title = clean_url(self.siteSpecifictitle(title, cfg_file))
+            if ext == 'videomonkey':
+                result = self.playVideo(videoItem)
+            else:
+                self.pDialog = xbmcgui.DialogProgress()
+                self.pDialog.create("VideoMonkey", xbmc.getLocalizedString(30050), xbmc.getLocalizedString(30051))
+                self.downloadMovie(videoItem.url, videoItem.title)
+                self.pDialog.close()
+            return -2
         else:
             result = self.currentlist.loadRemote(url)
 
@@ -1389,24 +1640,24 @@ class Main:
 
         if self.currentlist.video_action.find('play') != -1 and self.currentlist.videoCount() == 1:
             videoItem = self.currentlist.getVideo()
-            result = self.parseView(clean_url(videoItem.url) + '|' + videoItem.name + '|' + videoItem.thumb + '.videomonkey')
+            result = self.parseView(clean_url(videoItem.url) + '|' + videoItem.title + '|' + videoItem.thumb + '.videomonkey')
         else:
             for m in self.currentlist.list:
                 if (m.type == u'rss') or (m.type == u'adult_rss' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addDir(self.siteSpecificName(m.name, self.currentlist.cfg_name), clean_url(m.url), m.thumb, len(self.currentlist.list))
+                    self.addDir(m.title, clean_url(m.url), m.thumb, len(self.currentlist.list))
                 elif (m.type == u'live') or (m.type == u'adult_live' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addLink(m.name, m.url, m.thumb, len(self.currentlist.list))
+                    self.addLink(m.title, m.url, m.thumb, len(self.currentlist.list))
                 elif (m.type == u'video') or (m.type == u'adult_video' and xbmcplugin.getSetting("no_adult") == 'false'):
-                    self.addDir(self.siteSpecificName(m.name, self.currentlist.cfg_name), clean_url(m.url) + '|' + m.name + '|' + m.thumb + '.videomonkey', m.thumb, len(self.currentlist.list))
+                    self.addDir(m.title, self.codeVideoUrl(m), m.thumb, len(self.currentlist.list), m)
         return result
 
-    def addLink(self, name, url, icon = None, totalItems = None):
+    def addLink(self, title, url, icon = None, totalItems = None):
         u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
         if (icon == None or icon == ''):
-            liz = xbmcgui.ListItem(name)
+            liz = xbmcgui.ListItem(title)
         else:
-            liz = xbmcgui.ListItem(name, name, icon, icon)
-        liz.setInfo( type = "Video", infoLabels = {"Title":name})
+            liz = xbmcgui.ListItem(title, title, icon, icon)
+        liz.setInfo(type = "Video", infoLabels = {"Title":title})
         if self.currentlist.action.find('add') != -1:
             action = "XBMC.RunPlugin(%s.add)" % (u)
             try:
@@ -1424,12 +1675,24 @@ class Main:
         else:
             ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = url, listitem = liz, totalItems = totalItems)
 
-    def addDir(self, name, url, icon = None, totalItems = None):
+    def addDir(self, title, url, icon = None, totalItems = None, videoItem = None):
         u = sys.argv[0] + "?url=" + urllib.quote_plus(url)
         if (icon == None or icon == ''):
-            liz = xbmcgui.ListItem(name)
+            liz = xbmcgui.ListItem(title)
         else:
-            liz = xbmcgui.ListItem(name, name, icon, icon)
+            liz = xbmcgui.ListItem(title, title, icon, icon)
+        if videoItem != None and self.currentlist.video_action.find('nodownload') == -1:
+            action = "XBMC.RunPlugin(%s.dwnldmonkey)" % (u[:len(u)-12])
+            try:
+                liz.addContextMenuItems([(xbmc.getLocalizedString(30007), action)])
+            except:
+                pass
+        if videoItem != None and videoItem.related != '':
+            action = "XBMC.RunPlugin(%s)" % (sys.argv[0] + "?url=" + urllib.quote_plus(videoItem.related))
+            try:
+                liz.addContextMenuItems([(xbmc.getLocalizedString(30117), action)])
+            except:
+                pass
         if self.currentlist.action.find('add') != -1:
             action = "XBMC.RunPlugin(%s.add)" % (u)
             try:
@@ -1442,6 +1705,17 @@ class Main:
                 liz.addContextMenuItems([(xbmc.getLocalizedString(30011), action)])
             except:
                 pass
+        if videoItem != None:
+            if len(videoItem.size) > 0:
+                liz.setInfo(type = "Video", infoLabels = {"Size": videoItem.size})
+            if len(videoItem.length) > 0:
+                liz.setInfo(type = "Video", infoLabels = {"Duration": videoItem.length})
+            if len(videoItem.genre) > 0:
+                liz.setInfo(type = "Video", infoLabels = {"Genre": videoItem.genre})
+            if len(videoItem.rating) > 0:
+                liz.setInfo(type = "Video", infoLabels = {"Rating": videoItem.rating})
+            if len(videoItem.date) > 0:
+                liz.setInfo(type = "Video", infoLabels = {"Date": videoItem.date})
         if totalItems == None:
             ok = xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = u, listitem = liz, isFolder = True)
         else:

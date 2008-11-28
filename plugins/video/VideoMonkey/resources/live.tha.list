@@ -1,98 +1,97 @@
 ﻿########################################################
 # THA live streams list
 ########################################################
-title=THA Live
 action=add
 ########################################################
 # Live streams
 ########################################################
-#name=TV3
+#title=TV3
 #type=live
 #thumb=video.monkey.image|thaitv3.png
 #url=rtsp://203.113.9.83/encoder3
 ########################################################
-#name=TV5
+#title=TV5
 #type=live
 #thumb=video.monkey.image|thaitv5.png
 #url=mms://61.90.228.105/ch_5?WMcontentBitrate=256000
 ########################################################
-name=TV7
+title=TV7
 type=live
 thumb=video.monkey.image|thaitv7.png
 url=http://61.90.201.61/live?WMContentBitrate=256000
 ########################################################
-name=TV7 BBTV
+title=TV7 BBTV
 type=live
 thumb=video.monkey.image|thaitv7_bbtv.png
 url=http://61.90.201.61/live2?WMContentBitrate=256000
 ########################################################
-name=Modernine TV (TV9)
+title=Modernine TV (TV9)
 type=live
 thumb=video.monkey.image|thaitv9.png
 #url=mms://202.142.200.130/tv9?WMcontentBitrate=256000
 url=http://modernine.mcot.net/live/mcot_live512.asx
 ########################################################
-name=NBT (TV11)
+title=NBT (TV11)
 type=live
 thumb=video.monkey.image|thaitv11.png
 url=mms://mms.prd.go.th/prdtv11
 ########################################################
-#name=TPBS
+#title=TPBS
 #type=live
 #thumb=video.monkey.image|tpbs.png
 #url=rtsp://203.113.9.83/encoder7
 ########################################################
-name=Nation TV
+title=Nation TV
 type=live
 thumb=video.monkey.image|nationtv.png
 url=mms://202.60.199.44/Nation/nationchannel?WMContentBitrate=256000
 ########################################################
-name=MVtv MIC
+title=MVtv MIC
 type=live
 thumb=video.monkey.image|mvtv_mic.png
 url=http://61.19.248.196/mvtv_1?WMContentBitrate=256000
 ########################################################
-name=MVtv Variety
+title=MVtv Variety
 type=live
 thumb=video.monkey.image|mvtv_variety.png
 url=http://61.19.248.196/mvtv_2?WMContentBitrate=256000
 ########################################################
-name=MVtv Hit Station
+title=MVtv Hit Station
 type=live
 thumb=video.monkey.image|mvtv_hit_station.png
 url=http://61.19.248.196/mvtv_3?WMContentBitrate=256000
 ########################################################
-name=MVtv 5
+title=MVtv 5
 type=live
 thumb=video.monkey.image|mvtv_5.png
 url=http://61.19.248.196/mvtv_5?WMContentBitrate=256000
 ########################################################
-name=MVtv News
+title=MVtv News
 type=live
 thumb=video.monkey.image|mvtv_news.png
 url=mms://61.47.2.118/NTTV?WMContentBitrate=256000
 ########################################################
-name=MVtv Health+
+title=MVtv Health+
 type=live
 thumb=video.monkey.image|mvtv_health_plus.png
 url=http://tv.sanook.com/player/sanook/playlist.php?contentID=382033&kb=512
 ########################################################
-name=ASTV News1
+title=ASTV News1
 type=live
 thumb=video.monkey.image|astv_news1.png
 url=mms://tv.manager.co.th/videoclip/11News1/Footage/Kuanchai_290708.wmv
 ########################################################
-name=ASTV2 TOC
+title=ASTV2 TOC
 type=live
 thumb=video.monkey.image|astv_toc.png
 url=mms://broadcast.manager.co.th/toc
 ########################################################
-name=Faikham TV
+title=Faikham TV
 type=live
 thumb=video.monkey.image|faikham.png
 url=mms://media.ru.ac.th/Faikham_TV
 ########################################################
-name=DMC
+title=DMC
 type=live
 thumb=video.monkey.image|dmc.png
 url=http://203.146.251.191/vcont450k_4
