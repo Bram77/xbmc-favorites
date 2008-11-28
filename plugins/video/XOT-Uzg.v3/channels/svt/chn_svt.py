@@ -172,20 +172,19 @@ class Channel(chn_class.Channel):
         # retrieve the mediaurl
         data = uriHandler.Open(item.url, pb=False)
         
-        # first check for RAM
-        ramRegex = '<a href="([^"]+ram)">'
-        ramResults = common.DoRegexFindAll(ramRegex, data)
+        # them for RAM
+        asxRegex = '<a href="([^"]+asx)">'
+        asxResults = common.DoRegexFindAll(asxRegex, data)
+        if len(asxResults) > 0:
+            item.mediaurl = "%s%s" % ("http://www.svt.se", asxResults[0]) 
         
-        if len(ramResults) > 0:
-            item.mediaurl = "%s%s" % ("http://www.svt.se", ramResults[0]) 
-            
         else:
-            # them for ASX
-            asxRegex = '<a href="([^"]+asx)">'
-            asxResults = common.DoRegexFindAll(asxRegex, data)
-            if len(asxResults) > 0:
-                item.mediaurl = "%s%s" % ("http://www.svt.se", asxResults[0]) 
-            
+            # first check for ASX
+            ramRegex = '<a href="([^"]+ram)">'
+            ramResults = common.DoRegexFindAll(ramRegex, data)
+            if len(ramResults) > 0:
+                item.mediaurl = "%s%s" % ("http://www.svt.se", ramResults[0]) 
+                        
             else:
                 # then for FLV
                 flvRegex = 'so.addVariable\("pathflv"\W*,\W*"([^"]+)"\W*\)'
@@ -222,7 +221,7 @@ class Channel(chn_class.Channel):
             data = uriHandler.Open(mediaurl)
             results = common.DoRegexFindAll('<REF HREF\W*=\W*"([^"]+)"\W*/>', data)
             if len(results) > 0:
-                mediaurl = results[0]['href']
+                mediaurl = results[0]
             
         elif mediaurl.find(".ram") > 0:
             logFile.debug("Parsing RAM")

@@ -62,6 +62,7 @@ class Channel(xbmcgui.WindowXML):
         # set timer timeout for keyupdown
         self.timerTimeOut = 0.5
         self.videoUpdateLock = threading.Lock()
+        self.focusControlID = 0
         
         # initialise user defined variables
         self.InitialiseVariables()
@@ -306,6 +307,7 @@ class Channel(xbmcgui.WindowXML):
         onFocus(self, int controlID)
         This function has been implemented and works
         """
+        self.focusControlID = controlID
     
     #============================================================================== 
     def onClick(self, controlID):

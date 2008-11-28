@@ -52,6 +52,7 @@ class GUI(xbmcgui.WindowXML):
             self.selectedChannelIndex = 0
             self.listMode = ProgListModes.Normal#1 # 1=normal, 2=favorites 
             self.clicked = False
+            self.focusControlID = 0
             
             # create channel GUIs (channel classes are initiated)
             for channel in channelRegister:
@@ -110,16 +111,18 @@ class GUI(xbmcgui.WindowXML):
         try:
 #            if action.getId() == 0:
 #                return
-            
+#            logFile.debug("onAction")
             try:
                 controlID = self.getFocusId()
-                if not action.getId() in controls.ACTION_MOUSE_MOVEMENT:
-                    # if it was no mousemovement, reset the clicked
-                    logFile.debug("Resetting self.click")
-                    self.clicked = False
-                #logFile.debug("onAction: \nID=%s\nbuttonCode=%s\nfocus=%s", action.getId(), action.getButtonCode(),controlID)                    
+#                if not action.getId() in controls.ACTION_MOUSE_MOVEMENT:
+#                    # if it was no mousemovement, reset the clicked
+#                    logFile.debug("Resetting self.click")
+#                    self.clicked = False
+#                else:
+#                    logFile.debug("Clicked on control: %s while focusControlID = %s", controlID, self.focusControlID)
+#                #logFile.debug("onAction: \nID=%s\nbuttonCode=%s\nfocus=%s", action.getId(), action.getButtonCode(),controlID)                    
             except:
-                #logFile.debug("Unknown focusID for action ID: %s and ButtonCode: %s", action.getId(), action.getButtonCode())
+                logFile.debug("Unknown focusID for action ID: %s and ButtonCode: %s", action.getId(), action.getButtonCode())
                 return
             
             #===============================================================================
@@ -162,9 +165,9 @@ class GUI(xbmcgui.WindowXML):
                 # normally the onClick occurs and then the onAction
                 self.onSelect(controlID)
                 pass
-            elif (action.getId() in controls.ACTION_MOUSE_MOVEMENT) and self.clicked:
-                self.clicked = False
-                logFile.debug("An onAction for Mouse movement was caught after an onclick")
+            elif (action.getId() in controls.ACTION_MOUSE_MOVEMENT):# and self.clicked:
+                #self.clicked = False
+                logFile.debug("An onAction for Mouse movement was caught")
                 pass
             else:
                 if not action.getId() in controls.ACTION_MOUSE_MOVEMENT:
@@ -245,6 +248,7 @@ class GUI(xbmcgui.WindowXML):
         """
         try:
             logFile.debug("onFocus :: Control %s has focus now", controlID)
+            self.focusControlID = controlID
             pass
         except: 
             logFile.critical("Error handling onFocus on ControlID=%s", controlID, exc_info=True)
