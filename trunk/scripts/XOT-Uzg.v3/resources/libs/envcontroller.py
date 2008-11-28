@@ -7,13 +7,14 @@ class EnvController:
         """
         pass
     
-    def GetEnvironment(self):
+    def GetEnvironment(self, displayOnly = False):
         """
             Get the environment type of the current Python
         """
         #print "os.environ"
         #print platform.architecture()
         env = os.environ.get( "OS", "win32" )
+        #print env
         
         if env == "Linux":
             (bits, type) = platform.architecture()
@@ -29,4 +30,9 @@ class EnvController:
         elif env == "OS X":
             return "OS X"
         else: 
-            return "win32"
+            if displayOnly and not env == "win32":
+                print "Setting XOT Environment to %s" % env
+                return env
+            else:
+                print "Setting XOT Environment to Win32"
+                return "win32"

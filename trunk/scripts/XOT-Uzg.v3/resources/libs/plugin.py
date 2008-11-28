@@ -295,7 +295,7 @@ class XotPlugin:
                     logFile.debug("mediaurl is a string")
                     item = xbmcgui.ListItem(title, episodeItem.name, self.channelObject.icon, self.channelObject.iconLarge)
                     item.setInfo("video", {"date": episodeItem.date, "title": title, "PlotOutline": episodeItem.description})                
-                    ok = xbmcplugin.addDirectoryItem(int(self.handle), "%s " % (episodeItem.url), item)                        
+                    ok = xbmcplugin.addDirectoryItem(int(self.handle), "%s " % (episodeItem.mediaurl), item)                        
             else:
                 logFile.error("could not update videoItem")
             
