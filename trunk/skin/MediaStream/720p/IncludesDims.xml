@@ -21,7 +21,6 @@
 
   <include name="MediaCountNumberPos">
     <posx>134</posx>
-    <posy>-1</posy>
   </include>
 
   <include name="VolumeImageDims">
@@ -50,6 +49,10 @@
   </include>
 
 <!-- Music Now Playing -->
+  <include name="MusicNowPlayingHomeSlideAnim">
+    <animation effect="slide" start="0,0" end="770,0" time="0" condition="Window.IsActive(Home) + !Skin.HasSetting(ShowHomeNPOnLeft)">Conditional</animation>
+  </include>
+
   <include name="MusicOverlayNowPlayingDims">
     <posx>0</posx>
     <posy>74</posy>
@@ -59,7 +62,7 @@
     <posx>0</posx>
     <posy>-14</posy>
     <include>ProgressDialogBGDims</include>
-    <visible>!Window.IsActive(Home)</visible>
+    <visible>!Window.IsActive(Home) | [Window.IsActive(Home) + !Skin.HasSetting(ShowHomeNPOnLeft)]</visible>
   </include>
 
   <include name="MusicNowPlayingCoverDims">
@@ -74,7 +77,7 @@
   </include>
 
   <constant name="MusicNPTextWidth">352</constant>
-  <constant name="MusicNPHomeTextWidth">250</constant>
+  <constant name="MusicNPHomeLeftTextWidth">250</constant>
 
   <include name="MusicNextPrevTextDims">
     <posx>124</posx>
@@ -136,8 +139,8 @@
   </include>
   
   <include name="HomeWeatherSummaryPos">
-  	<posx>990</posx>
-		<posy>11</posy>
+    <posx>990</posx>
+    <posy>11</posy>
   </include>
 
   <include name="HomeWeatherSummaryBGDims">
@@ -149,11 +152,11 @@
 
   <constant name="HomeWeatherTextWidth">220</constant>
 
-	<include name="HomeWeatherSummaryImgDims">
-		<posx>226</posx>
-		<width>50</width>
-		<height>50</height>
-	</include>
+  <include name="HomeWeatherSummaryImgDims">
+    <posx>226</posx>
+    <width>50</width>
+    <height>50</height>
+  </include>
 
 <!-- Dialogs -->
 <!-- ======= -->
@@ -455,18 +458,18 @@
 
 <!-- Button Menu -->
   <include name="ButtonMenuOverlayDims">
-		<posy>90</posy>
-		<width>140</width>
-		<height>140</height>
+    <posy>90</posy>
+    <width>140</width>
+    <height>140</height>
   </include>
 
   <constant name="ButtonMenuButtonWidth">128</constant>
 
-	<include name="ButtonMenuButtonDims">
-		<posy>100</posy>
-		<width>ButtonMenuButtonWidth</width>
-		<height>128</height>
-	</include>
+  <include name="ButtonMenuButtonDims">
+    <posy>100</posy>
+    <width>ButtonMenuButtonWidth</width>
+    <height>128</height>
+  </include>
 
   <include name="ButtonMenuSleepArrowDims">
     <posx>598</posx>
@@ -682,8 +685,10 @@
     <posy>510</posy>
   </include>
 
+  <constant name="VideOSDControlButtonWidth">49</constant>
+
   <include name="VideOSDControlButtonDims">
-    <width>49</width>
+    <width>VideOSDControlButtonWidth</width>
     <height>49</height>
   </include>
 
@@ -1422,11 +1427,11 @@
 
   <include name="TopOverlayFirstTitleAreaBGDims">
     <posx>20</posx>
-    <width>415</width>
+    <width>380</width>
   </include>
 
   <include name="TopOverlayFirstTitleAreaTextDims">
-    <posx>414</posx>
+    <posx>380</posx>
     <width>352</width>
   </include>
 
@@ -1532,7 +1537,7 @@
     <height>462</height>
   </include>
 
-	<include name="TVSeasonsSeasonThumbRflctnDims">
+  <include name="TVSeasonsSeasonThumbRflctnDims">
     <posx>6</posx>
     <posy>457</posy>
     <width>260</width>
@@ -1596,21 +1601,21 @@
     <height>300</height>
   </include>
 
-	<include name="TVEpisodesSeasonEpThumbRflctnDims">
+  <include name="TVEpisodesSeasonEpThumbRflctnDims">
     <posx>0</posx>
     <posy>190</posy>
     <width>320</width>
     <height>168</height>
   </include>
 
-	<include name="TVEpisodesEpThumbDims">
+  <include name="TVEpisodesEpThumbDims">
     <posx>-8</posx>
     <posy>-8</posy>
     <width>370</width>
     <height>216</height>
   </include>
 
-	<include name="TVEpisodesNoThumbDims">
+  <include name="TVEpisodesNoThumbDims">
     <posy>84</posy>
     <width>164</width>
   </include>
@@ -1620,8 +1625,8 @@
     <posy>54</posy>
   </include>
 
-	<include name="TVEpisodesEpThumbRflctnDims">
-	  <posx>0</posx>
+  <include name="TVEpisodesEpThumbRflctnDims">
+    <posx>0</posx>
     <posy>200</posy>
     <width>354</width>
     <height>200</height>
@@ -1944,16 +1949,6 @@
     <include>CoverflowLeftShadowOverlayDims</include>
   </include>
 
-  <include name="CoverflowShadowOverlayVertDims">
-    <posy>217</posy>
-    <height>520</height>
-  </include>
-
-  <include name="CoverflowShadowOverlayLowVertDims">
-    <posy>417</posy>
-    <height>320</height>
-  </include>
-
 <!-- Music Vis -->
 <!-- ========= -->
   <include name="MusicVisSlideAnim">
@@ -1985,11 +1980,11 @@
   <include name="MusicVisBGDims">
     <posx>0</posx>
     <posy>0</posy>
-    <width>310</width>
+    <width>390</width>
     <height>720</height>
   </include>
 
-  <constant name="MusicVisLabelWidth">250</constant>
+  <constant name="MusicVisLabelWidth">330</constant>
 
   <include name="MusicVisAlbumCoverImgDims">
     <width>MusicVisLabelWidth</width>
@@ -2015,24 +2010,35 @@
 
   <constant name="MusicVisRatingXoffset">0</constant>
 
+  <include name="MusicVisVertButtonBGDims">
+    <posx>33</posx>
+    <width>256</width>
+    <height>32</height>
+  </include>
+
+  <include name="MusicVisLyricsLabelDims">
+    <posx>100</posx>
+    <posy>564</posy>
+  </include>
+
   <include name="MusicVisControlsDims">
-    <posx>47</posx>
+    <posx>8</posx>
     <posy>590</posy>
     <width>280</width>
     <height>MusicVisControlBtnHeight</height>
   </include>
 
+  <constant name="MusicVisControlBtnWidth">45</constant>
   <constant name="MusicVisControlBtnHeight">45</constant>
 
   <include name="MusicVisControlBtnDims">
-    <width>45</width>
+    <width>MusicVisControlBtnWidth</width>
     <height>MusicVisControlBtnHeight</height>
   </include>
 
   <include name="MusicVisExtraControlsDims">
-    <posx>72</posx>
-    <posy>627</posy>
-    <width>280</width>
+    <posx>29</posx>
+    <posy>630</posy>
     <height>40</height>
   </include>
 
@@ -2042,11 +2048,11 @@
   </include>
 
   <include name="MusicVisBottomOSDTextDims">
-    <width>500</width>
+    <width>460</width>
   </include>
 
   <include name="MusicVisHorizControlsDims">
-    <posx>700</posx>
+    <posx>650</posx>
     <posy>560</posy>
     <width>1280</width>
     <height>45</height>

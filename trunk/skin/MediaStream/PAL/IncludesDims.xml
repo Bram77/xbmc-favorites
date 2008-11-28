@@ -21,7 +21,6 @@
 
   <include name="MediaCountNumberPos">
     <posx>214</posx>
-    <posy>-1</posy>
   </include>
 
   <include name="VolumeImageDims">
@@ -76,7 +75,7 @@
   </include>
 
   <constant name="MusicNPTextWidth">486</constant>
-  <constant name="MusicNPHomeTextWidth">MusicNPTextWidth</constant>
+  <constant name="MusicNPHomeLeftTextWidth">MusicNPTextWidth</constant>
 
   <include name="MusicNextPrevTextDims">
     <posy>86</posy>
@@ -87,6 +86,10 @@
 
 <!-- Home screen -->
 <!-- =========== -->
+  <include name="MusicNowPlayingHomeSlideAnim">
+    <!-- Empty Filler -->
+  </include>
+
   <include name="HomeSubMenuBladeDims">
     <width>318</width>
     <height>720</height>
@@ -138,8 +141,8 @@
   </include>
 
   <include name="HomeWeatherSummaryPos">
-  	<posx>886</posx>
-		<posy>11</posy>
+    <posx>886</posx>
+    <posy>11</posy>
   </include>
 
   <include name="HomeWeatherSummaryBGDims">
@@ -151,11 +154,11 @@
 
   <constant name="HomeWeatherTextWidth">324</constant>
 
-	<include name="HomeWeatherSummaryImgDims">
-		<posx>330</posx>
-		<width>50</width>
-		<height>50</height>
-	</include>
+  <include name="HomeWeatherSummaryImgDims">
+    <posx>330</posx>
+    <width>50</width>
+    <height>50</height>
+  </include>
 
 <!-- Dialogs -->
 <!-- ======= -->
@@ -460,18 +463,18 @@
 
 <!-- Button Menu -->
   <include name="ButtonMenuOverlayDims">
-		<posy>90</posy>
-		<width>186</width>
-		<height>140</height>
+    <posy>90</posy>
+    <width>186</width>
+    <height>140</height>
   </include>
 
   <constant name="ButtonMenuButtonWidth">174</constant>
 
-	<include name="ButtonMenuButtonDims">
-		<posy>100</posy>
-		<width>ButtonMenuButtonWidth</width>
-		<height>128</height>
-	</include>
+  <include name="ButtonMenuButtonDims">
+    <posy>100</posy>
+    <width>ButtonMenuButtonWidth</width>
+    <height>128</height>
+  </include>
 
   <include name="ButtonMenuSleepArrowDims">
     <posx>621</posx>
@@ -694,8 +697,10 @@
     <posy>510</posy>
   </include>
 
+  <constant name="VideOSDControlButtonWidth">65</constant>
+
   <include name="VideOSDControlButtonDims">
-    <width>65</width>
+    <width>VideOSDControlButtonWidth</width>
     <height>49</height>
   </include>
 
@@ -1308,11 +1313,11 @@
 
   <include name="TopOverlayFirstTitleAreaBGDims">
     <posx>20</posx>
-    <width>553</width>
+    <width>519</width>
   </include>
   
   <include name="TopOverlayFirstTitleAreaTextDims">
-    <posx>552</posx>
+    <posx>518</posx>
     <width>469</width>
   </include>
 
@@ -1419,7 +1424,7 @@
     <height>347</height>
   </include>
 
-	<include name="TVSeasonsSeasonThumbRflctnDims">
+  <include name="TVSeasonsSeasonThumbRflctnDims">
     <posx>6</posx>
     <posy>342</posy>
     <width>260</width>
@@ -1482,21 +1487,21 @@
     <height>300</height>
   </include>
 
-	<include name="TVEpisodesSeasonEpThumbRflctnDims">
+  <include name="TVEpisodesSeasonEpThumbRflctnDims">
     <posx>0</posx>
     <posy>190</posy>
     <width>433</width>
     <height>168</height>
   </include>
 
-	<include name="TVEpisodesEpThumbDims">
+  <include name="TVEpisodesEpThumbDims">
     <posx>-8</posx>
     <posy>-8</posy>
     <width>370</width>
     <height>162</height>
   </include>
 
-	<include name="TVEpisodesNoThumbDims">
+  <include name="TVEpisodesNoThumbDims">
     <posy>63</posy>
     <width>164</width>
   </include>
@@ -1506,8 +1511,8 @@
     <posy>41</posy>
   </include>
 
-	<include name="TVEpisodesEpThumbRflctnDims">
-	  <posx>0</posx>
+  <include name="TVEpisodesEpThumbRflctnDims">
+    <posx>0</posx>
     <posy>146</posy>
     <width>354</width>
     <height>146</height>
@@ -1833,16 +1838,6 @@
     <include>CoverflowLeftShadowOverlayDims</include>
   </include>
 
-  <include name="CoverflowShadowOverlayVertDims">
-    <posy>217</posy>
-    <height>520</height>
-  </include>
-
-  <include name="CoverflowShadowOverlayLowVertDims">
-    <posy>417</posy>
-    <height>320</height>
-  </include>
-
 <!-- Music Vis -->
 <!-- ========= -->
   <include name="MusicVisSlideAnim">
@@ -1874,11 +1869,11 @@
   <include name="MusicVisBGDims">
     <posx>0</posx>
     <posy>0</posy>
-    <width>413</width>
+    <width>503</width>
     <height>720</height>
   </include>
 
-  <constant name="MusicVisLabelWidth">360</constant>
+  <constant name="MusicVisLabelWidth">450</constant>
 
   <include name="MusicVisAlbumCoverImgDims">
     <width>MusicVisLabelWidth</width>
@@ -1902,24 +1897,36 @@
     <width>MusicVisLabelWidth</width>
   </include>
   
-  <constant name="MusicVisRatingXoffset">108</constant>
+  <constant name="MusicVisRatingXoffset">118</constant>
+
+  <include name="MusicVisVertButtonBGDims">
+    <posx>-52</posx>
+    <width>341</width>
+    <height>32</height>
+  </include>
+
+  <include name="MusicVisLyricsLabelDims">
+    <posx>220</posx>
+    <posy>564</posy>
+  </include>
 
   <include name="MusicVisControlsDims">
-    <posx>47</posx>
+    <posx>0</posx>
     <posy>590</posy>
     <width>300</width>
     <height>MusicVisControlBtnHeight</height>
   </include>
 
+  <constant name="MusicVisControlBtnWidth">60</constant>
   <constant name="MusicVisControlBtnHeight">45</constant>
 
   <include name="MusicVisControlBtnDims">
-    <width>60</width>
+    <width>MusicVisControlBtnWidth</width>
     <height>MusicVisControlBtnHeight</height>
   </include>
 
   <include name="MusicVisExtraControlsDims">
-    <posx>87</posx>
+    <posx>37</posx>
     <posy>627</posy>
     <width>300</width>
     <height>40</height>

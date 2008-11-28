@@ -66,25 +66,18 @@
           <description>Number Of Files Value</description>
           <description>Item count</description>
           <posx>174</posx>
-          <posy>1</posy>
-          <font>MediumDefaultFont</font>
-          <textcolor>Highlighted</textcolor>
-          <align>right</align>
+          <include>MediaCountNumLabel</include>
           <visible>Control.HasFocus(50)</visible>
         </control>
         <control type="label" id="2160">
           <description>Category List Count Value</description>
           <description>number of files text label</description>
-          <description>Item count</description>
           <posx>174</posx>
-          <posy>1</posy>
-          <font>MediumDefaultFont</font>
-          <textcolor>Highlighted</textcolor>
-          <align>right</align>
+          <include>MediaCountNumLabel</include>
           <visible>Control.HasFocus(60)</visible>
         </control>
       </control>
-      
+
       <control type="label">
         <description>Theater Times Label Focused</description>
         <posx>1120</posx>

@@ -47,7 +47,7 @@
   <string id="31043">Controlla</string>
   <string id="31044">Per</string>
   <string id="31045">Nuovi Arrivi</string>
-  <string id="31046">Percorso dello Script Lyrics</string
+  <string id="31046">Percorso dello Script Lyrics</string>
 
 <!--  Programs  -->
   <string id="31051">Giochi</string>
@@ -160,6 +160,9 @@
 	<string id="31690">Non Nascondere Icone</string>
 	<string id="31691">Utilizza Sovrapposizione Bassa in modo Coverflow per le Serie TV</string>
   <string id="31692">Nascondi Info in Modo Muraglia</string>
+  <string id="31693">Nascondi Icone nel Menu Opzioni</string>
+  <string id="31694">Mostra Interfaccia di Riproduzione a Sinistra</string>
+  <string id="31695">Visualizza AM/PM nell'orologio</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>

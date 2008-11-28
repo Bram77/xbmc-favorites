@@ -1242,6 +1242,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomVideosBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeVideosBGVisible</include>
       </control>
     </control>
   </include>
@@ -1262,6 +1263,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomMoviesBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeMoviesBGVisible</include>
       </control>
     </control>
   </include>
@@ -1282,6 +1284,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomTVShowsBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeTVShowsBGVisible</include>
       </control>
     </control>
   </include>
@@ -1302,6 +1305,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomMusicBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeMusicBGVisible</include>
       </control>
     </control>
   </include>
@@ -1322,6 +1326,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomPicturesBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomePicturesBGVisible</include>
       </control>
     </control>
   </include>
@@ -1342,6 +1347,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomWeatherBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeWeatherBGVisible</include>
       </control>
     </control>
   </include>
@@ -1362,6 +1368,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomProgramsBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeProgramsBGVisible</include>
       </control>
     </control>
   </include>
@@ -1382,6 +1389,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomSystemBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeSystemBGVisible</include>
       </control>
     </control>
   </include>
@@ -1402,6 +1410,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomPowerBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomePowerBGVisible</include>
       </control>
     </control>
   </include>
@@ -1422,6 +1431,7 @@
       <control type="multiimage">
         <info>Skin.String(CustomDVDBGFolder)</info>
         <include>CustomBGMultiImage</include>
+        <include>HomeDVDBGVisible</include>
       </control>
     </control>
   </include>
@@ -1470,7 +1480,7 @@
     <info>System.Time(hh:mm xx)</info>
     <textcolor>Highlighted</textcolor>
     <include>ClockText</include>
-    <visible>false</visible>
+    <visible>Skin.HasSetting(ShowAMPMInClock)</visible>
   </include>
 
   <include name="ClockFGText">
@@ -1535,6 +1545,15 @@
     <posy>5</posy>
     <font>SmallTitleCapsFont</font>
     <textcolor>Unfocused</textcolor>
+  </include>
+  
+  <include name="MediaCountNumLabel">
+    <posy>-1</posy>
+    <height>28</height>
+    <font>MediumAltDefaultFont</font>
+    <textcolor>Highlighted</textcolor>
+    <align>right</align>
+    <aligny>center</aligny>
   </include>
 
   <include name="MediaCount">
@@ -1611,12 +1630,8 @@
       <control type="label">
         <description>Item count</description>
         <include>MediaCountNumberPos</include>
-        <height>28</height>
-        <font>MediumAltDefaultFont</font>
-        <textcolor>Highlighted</textcolor>
-        <align>right</align>
-        <aligny>center</aligny>
         <info>Container.NumItems</info>
+        <include>MediaCountNumLabel</include>
       </control>
     </control>
   </include>
@@ -2409,22 +2424,22 @@
     </control>
 
     <control type="image">
-      <description>Background Lower Overlay</description>
+      <description>Background Lower Overlay (Large)</description>
       <posy>216</posy>
       <width>1280</width>
       <height>504</height>
       <texture>Black.png</texture>
       <colordiffuse>ddcccccc</colordiffuse>
-      <visible>![Container.Content(tvshows) + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
+      <visible>![[Container.Content(tvshows) | Container.Content(episodes)] + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
     </control>
     <control type="image">
-      <description>Background Lower Overlay</description>
+      <description>Background Lower Overlay (Small)</description>
       <posy>416</posy>
       <width>1280</width>
       <height>304</height>
       <texture>Black.png</texture>
       <colordiffuse>ddcccccc</colordiffuse>
-      <visible>[Container.Content(tvshows) + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
+      <visible>[[Container.Content(tvshows) | Container.Content(episodes)] + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
     </control>
   </include>
 
@@ -2588,7 +2603,7 @@
     <posy>10</posy>
     <width>214</width>
     <height>24</height>
-    <texture>MediaItemDetailBG.png</texture>
+    <texture border="13,0,0,0">MediaItemDetailBG.png</texture>
     <include>MediaListItemSlide</include>
   </include>
 
@@ -2637,7 +2652,7 @@
   </include>
 
   <include name="MediaOverlayVisible">
-    <visible>![Window.IsVisible(MyVideoFiles) | Window.IsVisible(MyVideoLibrary)]</visible>
+    <visible>true</visible>
   </include>
 
   <!-- Video Views -->
@@ -2656,15 +2671,24 @@
   </include>
 
   <include name="TopOverlayTitlePos">
-    <posx>80</posx>
+    <posx>114</posx>
     <posy>5</posy>
     <include>TopOverlayFirstTitleSlide</include>
+  </include>
+
+  <include name="TVTitleBGImage">
+    <texture border="156,0,24,0">TVTitleBG.png</texture>
+  </include>
+
+  <include name="TVTitleBGImageLite">
+    <texture border="0,0,17,0">TVTitleBG.png</texture>
   </include>
 
   <include name="TopOverlayTitleAreaBG">
     <posy>5</posy>
     <height>36</height>
-    <texture border="156,0,24,0">TVTitleBG.png</texture>
+    <include condition="Skin.HasTheme(lite)">TVTitleBGImageLite</include>
+    <include condition="!Skin.HasTheme(lite)">TVTitleBGImage</include>
   </include>
 
   <include name="TopOverlayFirstTitleAreaBG">
@@ -3178,6 +3202,22 @@
     <include>CoverflowMainLabel</include>
   </include>
 
+  <include name="CoverflowSubDetailLabel">
+    <posy>674</posy>
+    <font>MediumSmallTitleCapsFont</font>
+    <include>CoverflowMainLabel</include>
+  </include>
+
+  <include name="CoverflowShadowOverlayVertDims">
+    <posy>217</posy>
+    <height>520</height>
+  </include>
+
+  <include name="CoverflowShadowOverlayLowVertDims">
+    <posy>417</posy>
+    <height>320</height>
+  </include>
+
   <include name="MusicSongsVisible">
     <visible>[Window.IsVisible(MyMusicFiles) | Window.IsVisible(MyMusicLibrary) | Window.IsVisible(MyMusicPlaylist)] + Control.IsVisible(57)</visible>
   </include>
@@ -3207,7 +3247,7 @@
     <width>560</width>
     <font>TitleCapsFont</font>
   </include>
-  
+
   <include name="MusicPlaylistEditorList">
     <posx>-60</posx>
     <posy>50</posy>
@@ -3236,6 +3276,11 @@
     <animation effect="slide" time="700" tween="circle" easing="out" start="700,0" end="0,0">WindowOpen</animation>
     <animation effect="slide" time="700" tween="circle" easing="in" start="0,0" end="700,0">Hidden</animation>
     <animation effect="slide" time="700" tween="circle" easing="in" start="0,0" end="700,0">WindowClose</animation>
+  </include>
+
+  <include name="VideoOSDSeekIcon">
+    <width>64</width>
+    <height>64</height>
   </include>
 
   <!-- Music OSD -->
@@ -3269,10 +3314,10 @@
   </include>
 
   <include name="MusicNowPlayingSlideLeft">
-    <animation effect="slide" time="700" tween="circle" easing="out" start="-600,0" end="0,0">Visible</animation>
-    <animation effect="slide" time="700" tween="circle" easing="out" start="-600,0" end="0,0">WindowOpen</animation>
-    <animation effect="slide" time="700" tween="circle" easing="out" start="0,0" end="-600,0">Hidden</animation>
-    <animation effect="slide" time="700" tween="circle" easing="out" start="0,0" end="-600,0">WindowClose</animation>
+    <animation effect="slide" time="700" tween="circle" easing="out" start="-1400,0" end="0,0">Visible</animation>
+    <animation effect="slide" time="700" tween="circle" easing="out" start="-1400,0" end="0,0">WindowOpen</animation>
+    <animation effect="slide" time="700" tween="circle" easing="out" start="0,0" end="-1400,0">Hidden</animation>
+    <animation effect="slide" time="700" tween="circle" easing="out" start="0,0" end="-1400,0">WindowClose</animation>
   </include>
 
   <include name="MusicOSDControlButton">
@@ -3349,98 +3394,98 @@
                 <control type="group">
                   <posx>MusicOSDButtonAreaWidth</posx>
 
-              		<control type="togglebutton" id="221">
-              		  <description>Random button</description>
-              		  <onleft>220</onleft>
-              		  <onright>222</onright>
-              			<texturefocus>OSDRandomOffFO.png</texturefocus>
-              			<texturenofocus>OSDRandomOffNF.png</texturenofocus>
-              			<usealttexture>Playlist.IsRandom</usealttexture>
-              			<alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
-              			<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
-              			<onclick>XBMC.PlayerControl(Random)</onclick>
+                  <control type="togglebutton" id="221">
+                    <description>Random button</description>
+                    <onleft>220</onleft>
+                    <onright>222</onright>
+                    <texturefocus>OSDRandomOffFO.png</texturefocus>
+                    <texturenofocus>OSDRandomOffNF.png</texturenofocus>
+                    <usealttexture>Playlist.IsRandom</usealttexture>
+                    <alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
+                    <alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
+                    <onclick>XBMC.PlayerControl(Random)</onclick>
                     <include>MusicOSDControlButton</include>
-              		</control>
+                  </control>
 
                   <control type="group">
                     <posx>MusicOSDButtonAreaWidth</posx>
 
-                		<control type="button" id="222">
-                		  <description>Repeat button</description>
-                		  <onleft>221</onleft>
-                		  <onright>208</onright>
-                			<texturefocus>-</texturefocus>
-                			<texturenofocus>-</texturenofocus>
-                			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+                    <control type="button" id="222">
+                      <description>Repeat button</description>
+                      <onleft>221</onleft>
+                      <onright>208</onright>
+                      <texturefocus>-</texturefocus>
+                      <texturenofocus>-</texturenofocus>
+                      <onclick>XBMC.PlayerControl(Repeat)</onclick>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatNF.png</texture>
-                			<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-                			<visible>!Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatNF.png</texture>
+                      <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                      <visible>!Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatFO.png</texture>
-                			<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-                			<visible>Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatFO.png</texture>
+                      <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                      <visible>Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatOneNF.png</texture>
-                			<visible>Playlist.IsRepeatOne</visible>
-                			<visible>!Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatOneNF.png</texture>
+                      <visible>Playlist.IsRepeatOne</visible>
+                      <visible>!Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatOneFO.png</texture>
-                			<visible>Playlist.IsRepeatOne</visible>
-                			<visible>Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatOneFO.png</texture>
+                      <visible>Playlist.IsRepeatOne</visible>
+                      <visible>Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatAllNF.png</texture>
-                			<visible>Playlist.IsRepeat</visible>
-                			<visible>!Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatAllNF.png</texture>
+                      <visible>Playlist.IsRepeat</visible>
+                      <visible>!Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
-                		<control type="image">
-                			<texture>OSDRepeatAllFO.png</texture>
-                			<visible>Playlist.IsRepeat</visible>
-                			<visible>Control.HasFocus(222)</visible>
+                    </control>
+                    <control type="image">
+                      <texture>OSDRepeatAllFO.png</texture>
+                      <visible>Playlist.IsRepeat</visible>
+                      <visible>Control.HasFocus(222)</visible>
                       <include>MusicOSDControlButton</include>
-                		</control>
+                    </control>
 
                     <control type="group">
                       <posx>MusicOSDButtonAreaWidth</posx>
   
-                  		<control type="image">
-                  			<description>No Record button</description>
-                  			<texture>OSDRecordOff.png</texture>
+                      <control type="image">
+                        <description>No Record button</description>
+                        <texture>OSDRecordOff.png</texture>
                         <include>MusicOSDControlButton</include>
-                  			<visible>!Player.CanRecord</visible>
-                  		</control>
-                  		<control type="button" id="208">
-                  			<description>Record button</description>
-                  			<onleft>222</onleft>
-                  			<onright>215</onright>
-                  			<texturefocus>OSDRecordFO.png</texturefocus>
-                  			<texturenofocus>OSDRecordNF.png</texturenofocus>
-                  			<onclick>XBMC.PlayerControl(Record)</onclick>
+                        <visible>!Player.CanRecord</visible>
+                      </control>
+                      <control type="button" id="208">
+                        <description>Record button</description>
+                        <onleft>222</onleft>
+                        <onright>215</onright>
+                        <texturefocus>OSDRecordFO.png</texturefocus>
+                        <texturenofocus>OSDRecordNF.png</texturenofocus>
+                        <onclick>XBMC.PlayerControl(Record)</onclick>
                         <include>MusicOSDControlButton</include>
-                  			<visible>Player.CanRecord</visible>
-                  		</control>
-                  		<control type="button" id="209">
-                  			<description>Record button 2</description>
-                  			<onleft>222</onleft>
-                  			<onright>215</onright>
-                  			<texturefocus>OSDRecord2.png</texturefocus>
-                  			<texturenofocus>-</texturenofocus>
-                  			<onclick>XBMC.PlayerControl(Record)</onclick>
+                        <visible>Player.CanRecord</visible>
+                      </control>
+                      <control type="button" id="209">
+                        <description>Record button 2</description>
+                        <onleft>222</onleft>
+                        <onright>215</onright>
+                        <texturefocus>OSDRecord2.png</texturefocus>
+                        <texturenofocus>-</texturenofocus>
+                        <onclick>XBMC.PlayerControl(Record)</onclick>
                         <include>MusicOSDControlButton</include>
-                  			<visible>Player.CanRecord</visible>
-                  		</control>
-  
+                        <visible>Player.CanRecord</visible>
+                      </control>
+
                     </control>
                   </control>
                 </control>
@@ -3456,15 +3501,15 @@
     <width>MusicNPTextWidth</width>
   </include>
 
-  <include name="MusicNPHomeText">
-    <width>MusicNPHomeTextWidth</width>
+  <include name="MusicNPHomeLeftText">
+    <width>MusicNPHomeLeftTextWidth</width>
   </include>
 
   <include name="MusicNowPlayingText">
     <include>MusicNowPlayingTextDims</include>
     <scroll>false</scroll>
-    <include condition="![Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre)]">MusicNPText</include>
-    <include condition="[Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre)]">MusicNPHomeText</include>
+    <include condition="![Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre) + Skin.HasSetting(ShowHomeNPOnLeft)]">MusicNPText</include>
+    <include condition="[Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre) + Skin.HasSetting(ShowHomeNPOnLeft)]">MusicNPHomeLeftText</include>
   </include>
 
   <include name="MusicNextPrevText">
@@ -3474,8 +3519,8 @@
   <include name="MusicNextPrevTrackInfo">
     <textcolor>Unfocused</textcolor>
     <scroll>false</scroll>
-    <include condition="![Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre)]">MusicNextPrevText</include>
-    <include condition="[Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre)]">MusicNPHomeText</include>
+    <include condition="![Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre) + Skin.HasSetting(ShowHomeNPOnLeft)]">MusicNextPrevText</include>
+    <include condition="[Window.IsActive(Home) + !Skin.HasSetting(HomeBladeCentre) + Skin.HasSetting(ShowHomeNPOnLeft)]">MusicNPHomeLeftText</include>
   </include>
   
   <include name="MusicNowPlayingDetails">
@@ -3506,7 +3551,8 @@
 
       <control type="label" id="0">
         <description>track title</description>
-        <posy>40</posy>
+        <posy>38</posy>
+        <aligny>bottom</aligny>
         <label>$INFO[MusicPlayer.Title]</label>
         <font>DefaultCapsFont</font>
         <include>MusicNowPlayingText</include>
@@ -3514,7 +3560,8 @@
 
       <control type="label" id="0">
         <description>time</description>
-        <posy>60</posy>
+        <posy>62</posy>
+        <aligny>top</aligny>
         <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
         <font>AltDefaultFont</font>
         <include>MusicNowPlayingText</include>
@@ -3555,11 +3602,12 @@
       <posy>0</posy>
       <visible>!Skin.HasSetting(HideNowPlayingMusicInfo) | Window.IsActive(PlayerControls)</visible>
       <include>MusicNowPlayingSlideLeft</include>
+      <include>MusicNowPlayingHomeSlideAnim</include>
 
       <control type="image">
         <description>Background</description>
         <include>MusicNowPlayingBGDims</include>
-      <include>DialogBGTexture</include>
+        <include>DialogBGTexture</include>
         <visible>Skin.HasTheme(lite)</visible>
       </control>
       <control type="image">
@@ -3733,8 +3781,17 @@
     <include>DialogButton</include>
   </include>
 
-  <include name="MusicVisLyricsDefaultOnClick">
+  <include name="MusicVisLyricsDefaultXboxOnClick">
+    <onclick>XBMC.RunScript(Q:\skin\MediaStream\extras\XBMC Lyrics\default.py)</onclick>
+  </include>
+
+  <include name="MusicVisLyricsDefaultNonXboxOnClick">
     <onclick>XBMC.RunScript(U:\skin\MediaStream\extras\XBMC Lyrics\default.py)</onclick>
+  </include>
+
+  <include name="MusicVisLyricsDefaultOnClick">
+    <include condition="System.Platform.Xbox">MusicVisLyricsDefaultXboxOnClick</include>
+    <include condition="!System.Platform.Xbox">MusicVisLyricsDefaultNonXboxOnClick</include>
   </include>
 
   <include name="MusicVisLyricsUserOnClick">
@@ -3747,8 +3804,7 @@
   </include>
 
   <include name="MusicVisLyricsButton">
-    <posx>20</posx>
-    <posy>564</posy>
+    <include>MusicVisLyricsLabelDims</include>
     <label>31223</label>
     <include>MusicVisLyricsOnClick</include>
     <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Control.HasFocus(503)</visible>
@@ -3813,228 +3869,488 @@
   </include>
 
   <include name="MusicVisControls">
-    <control type="grouplist" id="100">
-      <include>MusicVisControlsDims</include>
-      <itemgap>0</itemgap>
-      <onup>90</onup>
-      <ondown>200</ondown>
-      <orientation>horizontal</orientation>
-      <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Skin.HasSetting(ShowHorizMusicVis)</visible>
-      <include>MusicVisSlideAnim</include>
+    <control type="group">
+      <visible>!Skin.HasSetting(ShowHorizMusicVis)</visible>
 
-      <control type="button" id="2">
-        <description>skip_bwd</description>
-        <include>MusicVisControlBtnDims</include>
-        <texturefocus>OSDPrevTrackFO.png</texturefocus>
-        <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(previous)</onclick>
+      <control type="group" id="100">
+        <include>MusicVisControlsDims</include>
+        <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Skin.HasSetting(ShowHorizMusicVis)</visible>
+        <include>MusicVisSlideAnim</include>
+
+        <control type="button" id="101">
+          <description>skip_bwd</description>
+          <include>MusicVisControlBtnDims</include>
+          <onright>102</onright>
+          <onup>90</onup>
+          <ondown>200</ondown>
+          <texturefocus>OSDPrevTrackFO.png</texturefocus>
+          <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+          <onclick>xbmc.playercontrol(previous)</onclick>
+        </control>
+
+        <control type="group">
+          <posx>MusicVisControlBtnWidth</posx>
+
+          <control type="button" id="102">
+            <description>rewind</description>
+            <include>MusicVisControlBtnDims</include>
+            <onleft>101</onleft>
+            <onright>103</onright>
+            <onup>90</onup>
+            <ondown>200</ondown>
+            <texturefocus>OSDRewindFO.png</texturefocus>
+            <texturenofocus>OSDRewindNF.png</texturenofocus>
+            <onclick>xbmc.playercontrol(rewind)</onclick>
+          </control>
+
+          <control type="group">
+            <posx>MusicVisControlBtnWidth</posx>
+
+            <control type="togglebutton" id="103">
+              <description>play</description>
+              <include>MusicVisControlBtnDims</include>
+              <onleft>102</onleft>
+              <onright>104</onright>
+              <onup>90</onup>
+              <ondown>200</ondown>
+              <texturefocus>OSDPauseFO.png</texturefocus>
+              <texturenofocus>OSDPauseNF.png</texturenofocus>
+              <usealttexture>Player.Paused</usealttexture>
+              <alttexturefocus>OSDPlayFO.png</alttexturefocus>
+              <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+              <onclick>xbmc.playercontrol(play)</onclick>
+            </control>
+
+            <control type="group">
+              <posx>MusicVisControlBtnWidth</posx>
+
+              <control type="button" id="104">
+                <description>forward</description>
+                <include>MusicVisControlBtnDims</include>
+                <onleft>103</onleft>
+                <onright>105</onright>
+                <onup>90</onup>
+                <ondown>200</ondown>
+                <texturefocus>OSDForwardFO.png</texturefocus>
+                <texturenofocus>OSDForwardNF.png</texturenofocus>
+                <onclick>xbmc.playercontrol(forward)</onclick>
+              </control>
+
+              <control type="group">
+                <posx>MusicVisControlBtnWidth</posx>
+
+                <control type="button" id="105">
+                  <description>skip_fwd</description>
+                  <include>MusicVisControlBtnDims</include>
+                  <onleft>104</onleft>
+                  <onright>106</onright>
+                  <onup>90</onup>
+                  <ondown>200</ondown>
+                  <texturefocus>OSDNextTrackFO.png</texturefocus>
+                  <texturenofocus>OSDNextTrackNF.png</texturenofocus>
+                  <onclick>xbmc.playercontrol(next)</onclick>
+                </control>
+
+                <control type="group">
+                  <posx>MusicVisControlBtnWidth</posx>
+                  <posy>18</posy>
+
+                  <control type="togglebutton" id="106">
+                    <description>Random button</description>
+                    <include>MusicVisControlBtnDims</include>
+                    <onleft>105</onleft>
+                    <onright>107</onright>
+                    <onup>90</onup>
+                    <ondown>200</ondown>
+                    <texturefocus>OSDRandomOffFO.png</texturefocus>
+                    <texturenofocus>OSDRandomOffNF.png</texturenofocus>
+                    <usealttexture>Playlist.IsRandom</usealttexture>
+                    <alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
+                    <alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
+                    <onclick>XBMC.PlayerControl(Random)</onclick>
+                  </control>
+
+                  <control type="group">
+                    <posx>MusicVisControlBtnWidth</posx>
+
+                    <control type="button" id="107">
+                      <description>Repeat button</description>
+                      <include>MusicVisControlBtnDims</include>
+                      <onleft>106</onleft>
+                      <onright>108</onright>
+                      <onup>90</onup>
+                      <ondown>200</ondown>
+                      <texturefocus>-</texturefocus>
+                      <texturenofocus>-</texturenofocus>
+                      <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatNF.png</texture>
+                      <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                      <visible>!Control.HasFocus(107)</visible>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatFO.png</texture>
+                      <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                      <visible>Control.HasFocus(107)</visible>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatOneNF.png</texture>
+                      <visible>Playlist.IsRepeatOne</visible>
+                      <visible>!Control.HasFocus(107)</visible>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatOneFO.png</texture>
+                      <visible>Playlist.IsRepeatOne</visible>
+                      <visible>Control.HasFocus(107)</visible>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatAllNF.png</texture>
+                      <visible>Playlist.IsRepeat</visible>
+                      <visible>!Control.HasFocus(107)</visible>
+                    </control>
+                    <control type="image">
+                      <include>MusicVisControlBtnDims</include>
+                      <texture>OSDRepeatAllFO.png</texture>
+                      <visible>Playlist.IsRepeat</visible>
+                      <visible>Control.HasFocus(107)</visible>
+                    </control>
+
+                    <control type="group">
+                      <posx>VideOSDControlButtonWidth</posx>
+  
+                      <control type="image">
+                        <description>No Record button</description>
+                        <include>MusicVisControlBtnDims</include>
+                        <texture>OSDRecordOff.png</texture>
+                        <visible>!Player.CanRecord</visible>
+                      </control>
+                      <control type="button" id="108">
+                        <description>Record button</description>
+                        <include>MusicVisControlBtnDims</include>
+                        <onleft>107</onleft>
+                        <onup>90</onup>
+                        <ondown>200</ondown>
+                        <texturefocus>OSDRecordFO.png</texturefocus>
+                        <texturenofocus>OSDRecordNF.png</texturenofocus>
+                        <onclick>XBMC.PlayerControl(Record)</onclick>
+                        <visible>Player.CanRecord + !Player.Recording</visible>
+                      </control>
+                      <control type="button" id="109">
+                        <description>Record button 2</description>
+                        <include>MusicVisControlBtnDims</include>
+                        <onleft>107</onleft>
+                        <onup>90</onup>
+                        <ondown>200</ondown>
+                        <texturefocus>OSDRecord2.png</texturefocus>
+                        <texturenofocus>-</texturenofocus>
+                        <onclick>XBMC.PlayerControl(Record)</onclick>
+                        <visible>Player.CanRecord + Player.Recording</visible>
+                      </control>
+                    </control>
+                  </control>
+                </control>
+              </control>
+            </control>
+          </control>
+        </control>
       </control>
 
-      <control type="button" id="3">
-        <description>rewind</description>
-        <include>MusicVisControlBtnDims</include>
-        <texturefocus>OSDRewindFO.png</texturefocus>
-        <texturenofocus>OSDRewindNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(rewind)</onclick>
-      </control>
+      <control type="grouplist" id="200">
+        <include>MusicVisExtraControlsDims</include>
+        <itemgap>8</itemgap>
+        <onup>100</onup>
+        <orientation>horizontal</orientation>
+        <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Skin.HasSetting(ShowHorizMusicVis)</visible>
+        <include>MusicVisSlideAnim</include>
 
-      <control type="togglebutton" id="218">
-        <description>play</description>
-        <include>MusicVisControlBtnDims</include>
-        <texturefocus>OSDPauseFO.png</texturefocus>
-        <texturenofocus>OSDPauseNF.png</texturenofocus>
-        <usealttexture>Player.Paused</usealttexture>
-        <alttexturefocus>OSDPlayFO.png</alttexturefocus>
-        <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-        <onclick>xbmc.playercontrol(play)</onclick>
-      </control>
+        <control type="button" id="499">
+          <description>playlist Button</description>
+          <include>MusicVisExtraBtnDims</include>
+          <texturefocus>OSDPlaylistFO.png</texturefocus>
+          <texturenofocus>OSDPlaylistNF.png</texturenofocus>
+          <onclick>XBMC.ActivateWindow(500)</onclick>
+        </control>
 
-      <control type="button" id="5">
-        <description>forward</description>
-        <include>MusicVisControlBtnDims</include>
-        <texturefocus>OSDForwardFO.png</texturefocus>
-        <texturenofocus>OSDForwardNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(forward)</onclick>
-      </control>
+        <control type="button" id="500">
+          <description>Popup Vis Select Button</description>
+          <include>MusicVisExtraBtnDims</include>
+          <texturefocus>OSDVizFO.png</texturefocus>
+          <texturenofocus>OSDVizNF.png</texturenofocus>
+        </control>
 
-      <control type="button" id="6">
-        <description>skip_fwd</description>
-        <include>MusicVisControlBtnDims</include>
-        <texturefocus>OSDNextTrackFO.png</texturefocus>
-        <texturenofocus>OSDNextTrackNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(next)</onclick>
-      </control>
+        <control type="button" id="220">
+          <description>Popup Vis Preset List</description>
+          <include>MusicVisExtraBtnDims</include>
+          <texturefocus>OSDPreFO.png</texturefocus>
+          <texturenofocus>OSDPreNF.png</texturenofocus>
+          <onclick>XBMC.ActivateWindow(122)</onclick>
+        </control>
 
-<!--
-  		<control type="button" id="208">
-  			<description>REC button</description>
-        <include>MusicVisControlBtnDims</include>
-  			<texturefocus>OSDRecordFO.png</texturefocus>
-  			<texturenofocus>OSDRecordNF.png</texturenofocus>
-  			<onclick>XBMC.PlayerControl(Record)</onclick>
-  			<visible>Player.CanRecord</visible>
-  		</control>
-  		<control type="button" id="209">
-  			<description>REC button 2</description>
-        <include>MusicVisControlBtnDims</include>
-  			<texturefocus>OSDRecord2.png</texturefocus>
-  			<texturenofocus>-</texturenofocus>
-  			<onclick>XBMC.PlayerControl(Record)</onclick>
-  			<visible>Player.CanRecord</visible>
-  		</control>
--->
+        <control type="button" id="219">
+          <description>Popup Vis Settings</description>
+          <include>MusicVisExtraBtnDims</include>
+          <texturefocus>OSDPresetSettingsFO.png</texturefocus>
+          <texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+          <onclick>XBMC.ActivateWindow(121)</onclick>
+        </control>
+      </control>
     </control>
 
-    <control type="grouplist" id="200">
-      <include>MusicVisExtraControlsDims</include>
-      <itemgap>8</itemgap>
-      <onup>100</onup>
-      <ondown>90</ondown>
-      <orientation>horizontal</orientation>
-      <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Skin.HasSetting(ShowHorizMusicVis)</visible>
-      <include>MusicVisSlideAnim</include>
-
-      <control type="button" id="499">
-        <description>playlist Button</description>
-        <include>MusicVisExtraBtnDims</include>
-        <texturefocus>OSDPlaylistFO.png</texturefocus>
-        <texturenofocus>OSDPlaylistNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(500)</onclick>
-      </control>
-
-      <control type="button" id="500">
-        <description>Popup Vis Select Button</description>
-        <include>MusicVisExtraBtnDims</include>
-        <texturefocus>OSDVizFO.png</texturefocus>
-        <texturenofocus>OSDVizNF.png</texturenofocus>
-      </control>
-
-      <control type="button" id="220">
-        <description>Popup Vis Preset List</description>
-        <include>MusicVisExtraBtnDims</include>
-        <texturefocus>OSDPreFO.png</texturefocus>
-        <texturenofocus>OSDPreNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(122)</onclick>
-      </control>
-
-      <control type="button" id="219">
-        <description>Popup Vis Settings</description>
-        <include>MusicVisExtraBtnDims</include>
-        <texturefocus>OSDPresetSettingsFO.png</texturefocus>
-        <texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(121)</onclick>
-      </control>
-    </control>
-
-    <control type="grouplist" id="100">
+    <control type="group" id="100">
       <include>MusicVisHorizControlsDims</include>
-      <itemgap>0</itemgap>
-      <ondown>90</ondown>
-      <orientation>horizontal</orientation>
       <visible>!Window.IsVisible(script-XBMC_Lyrics-main.xml) + Skin.HasSetting(ShowHorizMusicVis) + !Control.HasFocus(503)</visible>
+      <defaultcontrol>3</defaultcontrol>
       <include>VideoOSDSlide</include>
 
-      <control type="button" id="2">
+      <control type="button" id="1">
         <description>skip_bwd</description>
+        <onleft>13</onleft>
+        <onright>2</onright>
+        <ondown>90</ondown>
         <texturefocus>OSDPrevTrackFO.png</texturefocus>
         <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
         <onclick>xbmc.playercontrol(previous)</onclick>
         <include>VideOSDControlButton</include>
       </control>
 
-      <control type="button" id="3">
-        <description>rewind</description>
-        <texturefocus>OSDRewindFO.png</texturefocus>
-        <texturenofocus>OSDRewindNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(rewind)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+      <control type="group">
+        <posx>VideOSDControlButtonWidth</posx>
 
-      <control type="togglebutton" id="218">
-        <description>play</description>
-        <texturefocus>OSDPauseFO.png</texturefocus>
-        <texturenofocus>OSDPauseNF.png</texturenofocus>
-        <usealttexture>Player.Paused</usealttexture>
-        <alttexturefocus>OSDPlayFO.png</alttexturefocus>
-        <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-        <onclick>xbmc.playercontrol(play)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+        <control type="button" id="2">
+          <description>rewind</description>
+          <onleft>1</onleft>
+          <onright>3</onright>
+          <ondown>90</ondown>
+          <texturefocus>OSDRewindFO.png</texturefocus>
+          <texturenofocus>OSDRewindNF.png</texturenofocus>
+          <onclick>xbmc.playercontrol(rewind)</onclick>
+          <include>VideOSDControlButton</include>
+        </control>
 
-      <control type="button" id="5">
-        <description>forward</description>
-        <texturefocus>OSDForwardFO.png</texturefocus>
-        <texturenofocus>OSDForwardNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(forward)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+        <control type="group">
+          <posx>VideOSDControlButtonWidth</posx>
 
-      <control type="button" id="6">
-        <description>skip_fwd</description>
-        <texturefocus>OSDNextTrackFO.png</texturefocus>
-        <texturenofocus>OSDNextTrackNF.png</texturenofocus>
-        <onclick>xbmc.playercontrol(next)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+          <control type="togglebutton" id="3">
+            <description>play</description>
+            <onleft>2</onleft>
+            <onright>4</onright>
+            <ondown>90</ondown>
+            <texturefocus>OSDPauseFO.png</texturefocus>
+            <texturenofocus>OSDPauseNF.png</texturenofocus>
+            <usealttexture>Player.Paused</usealttexture>
+            <alttexturefocus>OSDPlayFO.png</alttexturefocus>
+            <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+            <onclick>xbmc.playercontrol(play)</onclick>
+            <include>VideOSDControlButton</include>
+          </control>
 
-<!--
-  		<control type="button" id="208">
-  			<description>REC button</description>
-  			<texturefocus>OSDRecordFO.png</texturefocus>
-  			<texturenofocus>OSDRecordNF.png</texturenofocus>
-  			<onclick>XBMC.PlayerControl(Record)</onclick>
-  			<visible>Player.CanRecord</visible>
-        <include>VideOSDControlButton</include>
-  		</control>
-  		<control type="button" id="209">
-  			<description>REC button 2</description>
-  			<texturefocus>OSDRecord2.png</texturefocus>
-  			<texturenofocus>-</texturenofocus>
-  			<onclick>XBMC.PlayerControl(Record)</onclick>
-  			<visible>Player.CanRecord</visible>
-        <include>VideOSDControlButton</include>
-  		</control>
--->
+          <control type="group">
+            <posx>VideOSDControlButtonWidth</posx>
 
-      <control type="label" id="498">
-        <width>MusicVisBottomCtlsSepWidth</width>
-        <label></label>
-      </control>
+            <control type="button" id="4">
+              <description>forward</description>
+              <onleft>3</onleft>
+              <onright>5</onright>
+              <ondown>90</ondown>
+              <texturefocus>OSDForwardFO.png</texturefocus>
+              <texturenofocus>OSDForwardNF.png</texturenofocus>
+              <onclick>xbmc.playercontrol(forward)</onclick>
+              <include>VideOSDControlButton</include>
+            </control>
 
-      <control type="button" id="499">
-        <description>playlist Button</description>
-        <texturefocus>OSDPlaylistFO.png</texturefocus>
-        <texturenofocus>OSDPlaylistNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(500)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+            <control type="group">
+              <posx>VideOSDControlButtonWidth</posx>
 
-      <control type="button" id="500">
-        <description>Popup Vis Select Button</description>
-        <texturefocus>OSDVizFO.png</texturefocus>
-        <texturenofocus>OSDVizNF.png</texturenofocus>
-        <include>VideOSDControlButton</include>
-      </control>
+              <control type="button" id="5">
+                <description>skip_fwd</description>
+                <onleft>4</onleft>
+                <onright>6</onright>
+                <ondown>90</ondown>
+                <texturefocus>OSDNextTrackFO.png</texturefocus>
+                <texturenofocus>OSDNextTrackNF.png</texturenofocus>
+                <onclick>xbmc.playercontrol(next)</onclick>
+                <include>VideOSDControlButton</include>
+              </control>
 
-      <control type="button" id="220">
-        <description>Popup Vis Preset List</description>
-        <texturefocus>OSDPreFO.png</texturefocus>
-        <texturenofocus>OSDPreNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(122)</onclick>
-        <include>VideOSDControlButton</include>
-      </control>
+              <control type="group">
+                <posx>VideOSDControlButtonWidth</posx>
 
-      <control type="button" id="219">
-        <description>Popup Vis Settings</description>
-        <texturefocus>OSDPresetSettingsFO.png</texturefocus>
-        <texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
-        <onclick>XBMC.ActivateWindow(121)</onclick>
-        <include>VideOSDControlButton</include>
+                <control type="togglebutton" id="6">
+                  <description>Random button</description>
+                  <onleft>5</onleft>
+                  <onright>7</onright>
+                  <ondown>90</ondown>
+                  <texturefocus>OSDRandomOffFO.png</texturefocus>
+                  <texturenofocus>OSDRandomOffNF.png</texturenofocus>
+                  <usealttexture>Playlist.IsRandom</usealttexture>
+                  <alttexturefocus>OSDRandomOnFO.png</alttexturefocus>
+                  <alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
+                  <onclick>XBMC.PlayerControl(Random)</onclick>
+                  <include>VideOSDControlButton</include>
+                </control>
+
+                <control type="group">
+                  <posx>VideOSDControlButtonWidth</posx>
+
+                  <control type="button" id="7">
+                    <description>Repeat button</description>
+                    <onleft>6</onleft>
+                    <onright>8</onright>
+                    <ondown>90</ondown>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <onclick>XBMC.PlayerControl(Repeat)</onclick>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatNF.png</texture>
+                    <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                    <visible>!Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatFO.png</texture>
+                    <visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+                    <visible>Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatOneNF.png</texture>
+                    <visible>Playlist.IsRepeatOne</visible>
+                    <visible>!Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatOneFO.png</texture>
+                    <visible>Playlist.IsRepeatOne</visible>
+                    <visible>Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatAllNF.png</texture>
+                    <visible>Playlist.IsRepeat</visible>
+                    <visible>!Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+                  <control type="image">
+                    <texture>OSDRepeatAllFO.png</texture>
+                    <visible>Playlist.IsRepeat</visible>
+                    <visible>Control.HasFocus(7)</visible>
+                    <include>VideOSDControlButton</include>
+                  </control>
+
+                  <control type="group">
+                    <posx>VideOSDControlButtonWidth</posx>
+
+                    <control type="image">
+                      <description>No Record button</description>
+                      <texture>OSDRecordOff.png</texture>
+                      <include>VideOSDControlButton</include>
+                      <visible>!Player.CanRecord</visible>
+                    </control>
+                    <control type="button" id="8">
+                      <description>Record button</description>
+                      <onleft>7</onleft>
+                      <onright>10</onright>
+                      <ondown>90</ondown>
+                      <texturefocus>OSDRecordFO.png</texturefocus>
+                      <texturenofocus>OSDRecordNF.png</texturenofocus>
+                      <onclick>XBMC.PlayerControl(Record)</onclick>
+                      <include>VideOSDControlButton</include>
+                      <visible>Player.CanRecord + !Player.Recording</visible>
+                    </control>
+                    <control type="button" id="9">
+                      <description>Record button 2</description>
+                      <onleft>7</onleft>
+                      <onright>10</onright>
+                      <ondown>90</ondown>
+                      <texturefocus>OSDRecord2.png</texturefocus>
+                      <texturenofocus>-</texturenofocus>
+                      <onclick>XBMC.PlayerControl(Record)</onclick>
+                      <include>VideOSDControlButton</include>
+                      <visible>Player.CanRecord + Player.Recording</visible>
+                    </control>
+
+                    <control type="group">
+                      <posx>MusicVisBottomCtlsSepWidth</posx>
+
+                      <control type="button" id="10">
+                        <description>playlist Button</description>
+                        <onleft>9</onleft>
+                        <onright>11</onright>
+                        <ondown>90</ondown>
+                        <texturefocus>OSDPlaylistFO.png</texturefocus>
+                        <texturenofocus>OSDPlaylistNF.png</texturenofocus>
+                        <onclick>XBMC.ActivateWindow(500)</onclick>
+                        <include>VideOSDControlButton</include>
+                      </control>
+
+                      <control type="group">
+                        <posx>VideOSDControlButtonWidth</posx>
+
+                        <control type="button" id="11">
+                          <description>Popup Vis Select Button</description>
+                          <onleft>10</onleft>
+                          <onright>12</onright>
+                          <ondown>90</ondown>
+                          <texturefocus>OSDVizFO.png</texturefocus>
+                          <texturenofocus>OSDVizNF.png</texturenofocus>
+                          <include>VideOSDControlButton</include>
+                        </control>
+
+                        <control type="group">
+                          <posx>VideOSDControlButtonWidth</posx>
+
+                          <control type="button" id="12">
+                            <description>Popup Vis Preset List</description>
+                            <onleft>11</onleft>
+                            <onright>13</onright>
+                            <ondown>90</ondown>
+                            <texturefocus>OSDPreFO.png</texturefocus>
+                            <texturenofocus>OSDPreNF.png</texturenofocus>
+                            <onclick>XBMC.ActivateWindow(122)</onclick>
+                            <include>VideOSDControlButton</include>
+                          </control>
+
+                          <control type="group">
+                            <posx>VideOSDControlButtonWidth</posx>
+
+                            <control type="button" id="13">
+                              <description>Popup Vis Settings</description>
+                              <onleft>12</onleft>
+                              <onright>1</onright>
+                              <ondown>90</ondown>
+                              <texturefocus>OSDPresetSettingsFO.png</texturefocus>
+                              <texturenofocus>OSDPresetSettingsNF.png</texturenofocus>
+                              <onclick>XBMC.ActivateWindow(121)</onclick>
+                              <include>VideOSDControlButton</include>
+                            </control>
+                          </control>
+                        </control>
+                      </control>
+                    </control>
+                  </control>
+                </control>
+              </control>
+            </control>
+          </control>
+        </control>
       </control>
     </control>
   </include>
 
-  <constant name="MusicVisBottomCtlsSepWidth">120</constant>
+
+  <constant name="MusicVisBottomCtlsSepWidth">70</constant>
+
+
+
+
   <constant name="MusicVisBtmNextPrevWidth">465</constant>
 
   <constant name="VisPresetTextWidth">570</constant>
@@ -4165,7 +4481,7 @@
   </include>
 
   <include name="MenuItemNFTexture">
-		<texture border="128,4,155,4">MenuItemNF.png</texture>
+    <texture border="128,4,155,4">MenuItemNF.png</texture>
   </include>
 
   <include name="MenuItemNFTextureNF">
@@ -4173,7 +4489,7 @@
   </include>
 
   <include name="MenuItemNFTextureFO">
-		<texturefocus aspectratio="stretch" border="128,4,155,4">MenuItemNF.png</texturefocus>
+    <texturefocus aspectratio="stretch" border="128,4,155,4">MenuItemNF.png</texturefocus>
   </include>
 
   <include name="GeneralSkinOption">

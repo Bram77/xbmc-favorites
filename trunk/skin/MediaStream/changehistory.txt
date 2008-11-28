@@ -1,6 +1,31 @@
 History of Changes
 ==================
 
+v0.99 (21/11/2008)
+----- ------------
+
+Added: Music Now Playing on Home screen now sits on the right of the screen (more room)
+Added: Option to revert back to Music Now Playing on Home to be shown on the left
+Added: Option to display AM/PM in clock again (still problems when hour < 10 but it's your choice if you want to see it or not)
+Added: Repeat, Random and Record buttons to Music Visualisation screens
+Added: English (US) translation
+
+Fixed: Flashing of old custom folder background images on Home screen (thanks to timdog)
+Fixed: 1px error in positioning of fade on left hand side of RSS
+Fixed: Positioning of number part of media count label in AMT (needs testing)
+Fixed: Vertical positioning of title labels on Visualisation Preset List dialog (should work better with all fonts)
+Fixed: Displaying of Star Rating image (where applicable) in Coverflow view
+
+Updated: Reduced a few more textures for the lite theme to reduce memory usage
+Updated: Coverflow for Episodes to use lower overlay in lite theme and also shows more Episode specific info
+Updated: Default Path to Lyrics script on XBox is on Q:, all others are on U:
+Updated: Tidied up vertical positioning of labels on Music Now Playing UI (should work better with all fonts)
+Updated: Re-activated video preview for Videos/Movie/TV Shows etc (may overlap on some views but will work on most of them)
+Updated: Widened info area for Vertical Music Visualisation (so extra buttons fit)
+Updated: Dutch, Chinese (Simple), French, German, Greek, Spanish and Italian translations
+Updated: Small update to faq.txt
+
+
 v0.97 (10/11/2008)
 ----- ------------
 

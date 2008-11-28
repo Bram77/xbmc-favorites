@@ -212,6 +212,14 @@
           <include>GeneralSkinOption</include>
         </control>
 
+        <control type="radiobutton" id="251">
+          <description>Show AM/PM in clock</description>
+          <label>$LOCALIZE[31695]</label>
+          <onclick>Skin.ToggleSetting(ShowAMPMInClock)</onclick>
+          <selected>Skin.HasSetting(ShowAMPMInClock)</selected>
+          <include>GeneralSkinOption</include>
+        </control>
+
         <control type="radiobutton" id="255">
           <description>Show larger clock</description>
           <label>$LOCALIZE[31668]</label>
@@ -243,6 +251,14 @@
           <label>$LOCALIZE[31666]</label>
           <onclick>Skin.ToggleSetting(HomeBladeCentre)</onclick>
           <selected>Skin.HasSetting(HomeBladeCentre)</selected>
+        </control>
+
+        <control type="radiobutton" id="206">
+          <description>Show Now Playing UI on Left</description>
+          <include>GeneralSkinOption</include>
+          <label>$LOCALIZE[31694]</label>
+          <onclick>Skin.ToggleSetting(ShowHomeNPOnLeft)</onclick>
+          <selected>Skin.HasSetting(ShowHomeNPOnLeft)</selected>
         </control>
 
         <control type="radiobutton" id="210">
