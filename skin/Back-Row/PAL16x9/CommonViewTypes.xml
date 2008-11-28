@@ -45,6 +45,8 @@
 <width>15</width>
 <height>480</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -164,6 +166,8 @@
 <width>15</width>
 <height>480</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -281,6 +285,8 @@
 <width>15</width>
 <height>480</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -400,6 +406,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -539,6 +547,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -675,6 +685,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -776,6 +788,8 @@
 <width>15</width>
 <height>480</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -892,6 +906,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -910,14 +926,91 @@
 <!-- List -->
 <include name="listcontrol">
 
-<control type="image">
+<control type="image" description="Fanart Image">
 <posx>0</posx>
 <posy>0</posy>
 <width>720</width>
 <height>576</height>
+<aspectratio>scale</aspectratio>
 <texture>back-row1.png</texture>
+<visible>Container.Scrolling</visible>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<imagepath>Menus</imagepath>
+<texture>$INFO[Skin.String(CustomMenu)]</texture>
+<visible>Container.Scrolling</visible>
+<visible>!Skin.HasSetting(CustomMenu)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="multiimage" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<imagepath>-</imagepath>
+<aspectratio>scale</aspectratio>
+<info>Skin.String(CustomMenuFolder)</info>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<visible>Container.Scrolling</visible>
+<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation>
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="image">
+<description>background image</description>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>Back-Row1.png</texture>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+<control type="image">
+<description>background image</description>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+<control>
+<description>Mask Overlay</description>
+<type>image</type>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>dark mask.png</texture>
+<colordiffuse>8aFFFFFF</colordiffuse>
+<visible>!system.platform.xbox</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">Windowclose</animation>
 </control>
 
 <control type="list" id="50">
@@ -931,6 +1024,7 @@
 <onup>50</onup>
 <ondown>50</ondown>
 <pagecontrol>90</pagecontrol>
+
 <itemlayout height="29">
 <control type="image">
 <posx>5</posx>
@@ -942,15 +1036,17 @@
 </control>
 <control type="label">
 <posx>35</posx>
-<posy>2</posy>
-<width>285</width>
-<height>20</height>
+<posy>0</posy>
+<width>280</width>
+<height>29</height>
 <font>font18</font>
+<aligny>center</aligny>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <info>ListItem.Label</info>
 </control>
 </itemlayout>
+
 <focusedlayout height="40">
 
 <control type="image">
@@ -982,10 +1078,11 @@
 
 <control type="label">
 <posx>35</posx>
-<posy>8</posy>
-<width>285</width>
-<height>16</height>
-<font>font18</font>
+<posy>0</posy>
+<width>280</width>
+<height>40</height>
+<font>special14</font>
+<aligny>center</aligny>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <scroll>true</scroll>
@@ -1001,8 +1098,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1021,15 +1118,178 @@
 <!-- VID NAV List -->
 <include name="listcontrol2">
 
-<control type="image">
+<control type="image" description="Fanart Image">
 <posx>0</posx>
 <posy>0</posy>
 <width>720</width>
 <height>576</height>
+<aspectratio>scale</aspectratio>
 <texture>back-row1.png</texture>
 <visible>!Skin.HasSetting(Background)</visible>
-<visible>Control.IsVisible(50)</visible>
+<visible>Control.IsVisible(50) + IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
 </control>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<imagepath>Menus</imagepath>
+<texture>$INFO[Skin.String(CustomMenu)]</texture>
+<visible>!Skin.HasSetting(CustomMenu)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50) + IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+<control type="multiimage" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<imagepath>-</imagepath>
+<aspectratio>scale</aspectratio>
+<info>Skin.String(CustomMenuFolder)</info>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50) + IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+
+<control type="group">
+<visible>!system.platform.xbox</visible>
+<visible>!Container.OnNext + !Container.OnPrevious</visible>
+<animation effect="fade" start="0" end="100" time="400" delay="100">Visible</animation>
+
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>!Container.Content(seasons) + Control.IsVisible(50) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+</control>
+
+<control type="group">
+<visible>system.platform.xbox</visible>
+<visible>!Container.OnNext + !Container.OnPrevious</visible>
+<animation effect="fade" start="0" end="100" time="400" delay="100">Visible</animation>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>!Container.Scrolling</visible>
+<visible>!Container.Content(seasons) + Control.IsVisible(50) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+</control>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>back-row1.png</texture>
+<visible>Container.Scrolling</visible>
+<visible>!Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<imagepath>Menus</imagepath>
+<texture>$INFO[Skin.String(CustomMenu)]</texture>
+<visible>Container.Scrolling</visible>
+<visible>!Skin.HasSetting(CustomMenu)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="multiimage" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<imagepath>-</imagepath>
+<aspectratio>scale</aspectratio>
+<info>Skin.String(CustomMenuFolder)</info>
+<timeperimage>5000</timeperimage>
+<fadetime>2000</fadetime>
+<randomize>true</randomize>
+<visible>Container.Scrolling</visible>
+<visible>!Skin.HasSetting(CustomMenuFolder)</visible>
+<visible>Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation>
+<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+</control>
+
+<control type="image">
+<description>background image</description>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>Back-Row1.png</texture>
+<visible>[Container.Content(episodes) | Container.Content(seasons)] + IsEmpty(FanArt.Image) + Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+<control type="image">
+<description>background image</description>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[FanArt.Image]</texture>
+<visible>[Container.Content(episodes) | Container.Content(seasons)] + !IsEmpty(FanArt.Image) + Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+<control>
+<description>Mask Overlay</description>
+<type>image</type>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>dark mask.png</texture>
+<colordiffuse>8aFFFFFF</colordiffuse>
+<visible>!system.platform.xbox</visible>
+<visible>Control.IsVisible(50)</visible>
+<animation effect="fade" time="200">Windowclose</animation>
+</control>
+
 
 <control type="image">
 <posx>20</posx>
@@ -1048,7 +1308,6 @@
 <width>330</width>
 <height>445</height>
 <texture>list background.png</texture>
-<visible>Skin.HasSetting(Background)</visible>
 <visible>container.content(tvshows) | container.content(episodes) | container.content(seasons)</visible>
 <visible>Control.IsVisible(50)</visible>
 </control>
@@ -1059,7 +1318,6 @@
 <width>330</width>
 <height>445</height>
 <texture>list background.png</texture>
-<visible>Skin.HasSetting(Background)</visible>
 <visible>container.content(tvshows) | container.content(episodes) | container.content(seasons)</visible>
 <visible>Control.IsVisible(50)</visible>
 </control>
@@ -1098,12 +1356,14 @@
 <aspectratio>keep</aspectratio>
 <visible>!container.content(tvshows)</visible>
 </control>
+
 <control type="label">
 <posx>35</posx>
-<posy>2</posy>
-<width>285</width>
-<height>20</height>
+<posy>0</posy>
+<width>280</width>
+<height>29</height>
 <font>font18</font>
+<aligny>center</aligny>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <info>ListItem.Label</info>
@@ -1112,10 +1372,11 @@
 
 <control type="label">
 <posx>5</posx>
-<posy>2</posy>
+<posy>0</posy>
 <width>315</width>
-<height>20</height>
+<height>29</height>
 <font>font18</font>
+<aligny>center</aligny>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <info>ListItem.Label</info>
@@ -1155,29 +1416,31 @@
 
 <control type="label">
 <posx>35</posx>
-<posy>8</posy>
-<width>285</width>
-<height>16</height>
-<font>font18</font>
+<posy>0</posy>
+<width>280</width>
+<height>40</height>
+<font>special14</font>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <scroll>true</scroll>
 <scrolltime>100</scrolltime>
 <info>ListItem.Label</info>
+<aligny>center</aligny>
 <visible>!container.content(tvshows)</visible>
 </control>
 
 <control type="label">
 <posx>5</posx>
-<posy>8</posy>
+<posy>0</posy>
 <width>315</width>
-<height>16</height>
-<font>font18</font>
+<height>40</height>
+<font>special14</font>
 <textcolor>white</textcolor>
 <include>selectedcolor</include>
 <scroll>true</scroll>
 <scrolltime>100</scrolltime>
 <info>ListItem.Label</info>
+<aligny>center</aligny>
 <visible>container.content(tvshows)</visible>
 </control>
 
@@ -1190,8 +1453,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1218,96 +1481,11 @@
 <visible>!container.content(tvshows)</visible>
 <visible>!container.content(episodes)</visible>
 <visible>!container.content(seasons)</visible>
+<visible>!container.content(movies)</visible>
 <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
 </control>
 
-<control type="label">
-<description>Genre label</description>
-<posx>30</posx>
-<posy>400</posy>
-<width>250</width>
-<height>200</height>
-<label>515</label>
-<font>font11</font>
-<textcolor>white</textcolor>
-<align>left</align>
-<textcolor>FF9E9E9E</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
 
-<control type="label">
-<description>Genre value</description>
-<posx>350</posx>
-<align>right</align>
-<posy>400</posy>
-<width>250</width>
-<height>200</height>
-<label>$INFO[ListItem.Genre]</label>
-<scroll>true</scroll>
-<font>font11</font>
-<textcolor>white</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
-
-<control type="label">
-<description>Year label</description>
-<posx>30</posx>
-<posy>420</posy>
-<width>200</width>
-<height>200</height>
-<label>562</label>
-<font>font11</font>
-<textcolor>white</textcolor>
-<align>left</align>
-<textcolor>FF9E9E9E</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
-
-<control type="label">
-<description>Year value</description>
-<posx>350</posx>
-<align>right</align>
-<posy>420</posy>
-<width>200</width>
-<height>200</height>
-<label>$INFO[ListItem.Year]</label>
-<font>font11</font>
-<textcolor>white</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
-
-<control type="label">
-<description>Rating label</description>
-<posx>30</posx>
-<posy>440</posy>
-<width>200</width>
-<height>200</height>
-<label>563</label>
-<font>font11</font>
-<textcolor>white</textcolor>
-<align>left</align>
-<textcolor>FF9E9E9E</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
-
-<control type="label">
-<description>Rating value</description>
-<posx>350</posx>
-<align>right</align>
-<posy>440</posy>
-<width>200</width>
-<height>200</height>
-<label>$INFO[ListItem.Rating]</label>
-<font>font11</font>
-<textcolor>white</textcolor>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
 
 <control type="image">
 <description>seperator</description>
@@ -1319,19 +1497,10 @@
 <visible>!container.content(tvshows)</visible>
 <visible>!container.content(episodes)</visible>
 <visible>!container.content(seasons)</visible>
+<visible>!container.content(movies)</visible>
 <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
 </control>
 
-<control type="image">
-<description>seperator</description>
-<posx>30</posx>
-<posy>465</posy>
-<width>320</width>
-<height>10</height>
-<texture>separator.png</texture>
-<visible>container.content(movies)</visible>
-<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-</control>
 
 <control type="label">
 <description>list item label</description>
@@ -1676,20 +1845,19 @@
 <control type="image">
 <description>DVD Case</description>
 <posx>110</posx>
-<posy>90</posy>
+<posy>100</posy>
 <width>190</width>
 <height>374</height>
 <texture>DVD4.png</texture>
 <aspectratio>stretch</aspectratio>
 <visible>container.content(movies)</visible>
 <visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="121.5,90,137,270" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
 </control>
 
 <control type="image">
 <description>list item icon</description>
 <posx>111</posx>
-<posy>98</posy>
+<posy>108</posy>
 <width>185</width>
 <height>360</height>
 <info>ListItem.Thumb</info>
@@ -1697,33 +1865,30 @@
 <aspectratio>stretch</aspectratio>
 <visible>container.content(movies)</visible>
 <visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="122,94,134.5,262" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
 </control>
 
 <control type="image">
 <description>DVD Gloss</description>
 <posx>111</posx>
-<posy>98</posy>
+<posy>108</posy>
 <width>188</width>
 <height>366</height>
 <texture>dvd3.png</texture>
 <aspectratio>stretch</aspectratio>
 <visible>container.content(movies)</visible>
 <visible>Control.IsVisible(50)</visible>
-<animation effect="zoom" end="122,94,135.5,265" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
 </control>
 
 
 
 <control type="image">
 <posx>300</posx>
-<posy>450</posy>
+<posy>460</posy>
 <width>25</width>
 <height>25</height>
 <info>ListItem.Overlay</info>
 <visible>container.content(movies)</visible>
 <visible>Control.IsVisible(50) + Skin.HasSetting(menu-overlay)</visible>
-<animation effect="zoom" end="260,337,20,20" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
 </control>
 
 </include>
@@ -1866,8 +2031,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -2025,8 +2190,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -3209,13 +3374,15 @@
 </control>
 
 <control type="scrollbar" id="90">
-<posx>61</posx>
-<posy>500</posy>
-<width>598</width>
-<height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<posx>111</posx>
+<posy>495</posy>
+<width>498</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -3227,27 +3394,7 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>499</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)+!System.IdleTime(2)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
-<control type="image">
-<posx>659</posx>
-<posy>499</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)+!System.IdleTime(2)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <visible>Container.Content(Movies) | Container.Content(MusicVideos)</visible>
@@ -3529,13 +3676,15 @@
 </control>
 
 <control type="scrollbar" id="90">
-<posx>61</posx>
-<posy>480</posy>
-<width>598</width>
-<height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<posx>111</posx>
+<posy>475</posy>
+<width>498</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -3547,27 +3696,6 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(55)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
-
-<control type="image">
-<posx>659</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(55)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 </include>
 
@@ -3747,7 +3875,7 @@
 <control type="group">
 <visible>!system.platform.xbox</visible>
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 
 <control type="image" description="Fanart Image">
@@ -3767,7 +3895,7 @@
 <control type="group">
 <visible>system.platform.xbox</visible>
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 <control type="image" description="Fanart Image">
 <posx>0</posx>
@@ -3888,7 +4016,7 @@
 <viewtype>list</viewtype>
 <orientation>horizontal</orientation>
 <focusposition>2</focusposition>
-<scrolltime>200</scrolltime>
+<scrolltime>150</scrolltime>
 
 <itemlayout width="144" height="600">
 
@@ -3984,9 +4112,11 @@
 <posy>383</posy>
 <width>720</width>
 <height>10</height>
-<texturesliderbackground>black.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -4021,7 +4151,7 @@
 <viewtype>list</viewtype>
 <orientation>horizontal</orientation>
 <focusposition>2</focusposition>
-<scrolltime>200</scrolltime>
+<scrolltime>0</scrolltime>
 
 <itemlayout width="144" height="600">
 
@@ -4236,6 +4366,7 @@
 <colordiffuse>99ffffff</colordiffuse>
 <visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
 <visible>Control.IsVisible(55))</visible>
+<animation effect="fade" time="10">WindowClose</animation> 
 </control>
 
 <control type="image">
@@ -4246,6 +4377,7 @@
 <texture>plot panel.png</texture>
 <visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
 <visible>Control.IsVisible(55))</visible>
+<animation effect="fade" time="10">WindowClose</animation> 
 </control>
 
 <control type="label">
@@ -4262,7 +4394,7 @@
 <shadowcolor>shadow</shadowcolor>
 <visible>Control.IsVisible(55)</visible>
 <animation effect="fade" time="800">WindowOpen</animation>
-<animation effect="fade" time="800">WindowClose</animation> 
+<animation effect="fade" time="10">WindowClose</animation> 
 </control>
 
 <control type="textbox">
@@ -4280,7 +4412,7 @@
 <autoscroll time="4000" delay="5000" repeat="15000"></autoscroll>
 <visible>Control.IsVisible(55)</visible>
 <animation effect="fade" time="800">WindowOpen</animation>
-<animation effect="fade" time="800">WindowClose</animation> 
+<animation effect="fade" time="10">WindowClose</animation> 
 </control>
 
 <control type="image">
@@ -4291,7 +4423,7 @@
 <texture>keyboard-panel-overlay1.png</texture>
 <visible>Control.IsVisible(55)</visible>
 <animation effect="fade" time="800">WindowOpen</animation>
-<animation effect="fade" time="800">WindowClose</animation> 
+<animation effect="fade" time="10">WindowClose</animation> 
 </control>
 
 <animation effect="slide" time="600" start="0,576" end="0,0" acceleration="-1">WindowOpen</animation>
@@ -4356,9 +4488,11 @@
 <posy>403</posy>
 <width>720</width>
 <height>10</height>
-<texturesliderbackground>black.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -4368,6 +4502,7 @@
 <visible>Control.IsVisible(55)</visible>
 <visible>!Control.HasFocus(57)</visible>
 <visible>container.content(tvshows)</visible>
+<visible>Skin.HasSetting(sbar)</visible>
 </control>
 
 
@@ -5573,13 +5708,15 @@
 </control>
 
 <control type="scrollbar" id="90">
-<posx>61</posx>
-<posy>500</posy>
-<width>598</width>
-<height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<posx>111</posx>
+<posy>495</posy>
+<width>498</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -5591,27 +5728,6 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>499</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
-
-<control type="image">
-<posx>659</posx>
-<posy>499</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -6472,13 +6588,15 @@
 </control>
 
 <control type="scrollbar" id="90">
-<posx>61</posx>
-<posy>480</posy>
-<width>598</width>
-<height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<posx>111</posx>
+<posy>475</posy>
+<width>498</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -6490,27 +6608,6 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
-
-<control type="image">
-<posx>659</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -7377,13 +7474,15 @@
 </control>
 
 <control type="scrollbar" id="90">
-<posx>61</posx>
-<posy>480</posy>
-<width>598</width>
-<height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<posx>111</posx>
+<posy>475</posy>
+<width>498</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -7395,27 +7494,6 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
-
-<control type="image">
-<posx>659</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -9127,7 +9205,7 @@
 <control type="group">
 <visible>!system.platform.xbox</visible>
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 
 <control type="image" description="Fanart Image">
@@ -9631,8 +9709,7 @@
 
 <control type="group">
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<visible>Skin.HasSetting(File mode fanart)</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 <control type="image" description="Fanart Image">
 <posx>0</posx>
@@ -11236,7 +11313,7 @@
 <control type="group">
 <visible>!system.platform.xbox</visible>
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 
 <control type="image" description="Fanart Image">
@@ -11328,7 +11405,7 @@
 <control type="group">
 <visible>!system.platform.xbox</visible>
 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+<animation effect="fade" start="0" end="100" time="400" delay="200">Visible</animation>
 
 <control type="image" description="Fanart Image">
 <posx>0</posx>
@@ -11659,9 +11736,11 @@
 <posy>550</posy>
 <width>740</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>58</onup>

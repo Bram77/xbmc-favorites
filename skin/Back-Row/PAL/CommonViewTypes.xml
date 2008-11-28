@@ -45,9 +45,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar></texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -167,7 +167,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -284,7 +286,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -402,7 +406,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -540,7 +546,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -676,7 +684,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -778,7 +788,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -893,7 +905,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>51</onleft>
@@ -1002,9 +1016,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar></texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1157,9 +1171,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1312,9 +1326,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1466,9 +1480,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1621,9 +1635,9 @@
 <posy>95</posy>
 <width>15</width>
 <height>390</height>
-<texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar>-</texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbackground>Scrollbar_background.png</texturesliderbackground>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -1866,9 +1880,11 @@
 <posy>480</posy>
 <width>598</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -1880,27 +1896,7 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(55)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
-<control type="image">
-<posx>659</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(55)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="label">
 <posx>5</posx>
@@ -2928,9 +2924,11 @@
 <posy>460</posy>
 <width>598</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -2942,27 +2940,6 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>459</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)+!System.IdleTime(2)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
-
-<control type="image">
-<posx>659</posx>
-<posy>459</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)+!System.IdleTime(2)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
@@ -3280,9 +3257,11 @@
 <posy>383</posy>
 <width>720</width>
 <height>10</height>
-<texturesliderbackground>black.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -3616,9 +3595,11 @@
 <posy>403</posy>
 <width>720</width>
 <height>10</height>
-<texturesliderbackground>black.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>55</onup>
@@ -4811,9 +4792,11 @@
 <posy>480</posy>
 <width>598</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -4825,27 +4808,7 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
-<control type="image">
-<posx>659</posx>
-<posy>479</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -5708,9 +5671,11 @@
 <posy>470</posy>
 <width>598</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -5722,27 +5687,7 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>469</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
-<control type="image">
-<posx>659</posx>
-<posy>469</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -6619,9 +6564,11 @@
 <posy>470</posy>
 <width>598</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>54</onup>
@@ -6633,27 +6580,7 @@
 <visible>!Control.HasFocus(57)</visible>
 </control>
 
-<control type="image">
-<posx>55</posx>
-<posy>469</posy>
-<width>6</width>
-<height>11</height>
-<texture>left.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
-<control type="image">
-<posx>659</posx>
-<posy>469</posy>
-<width>6</width>
-<height>11</height>
-<texture>Right.png</texture>
-<visible>Skin.HasSetting(sbar)</visible>
-<visible>Control.IsVisible(54)</visible>
-<visible>!Control.HasFocus(57)</visible>
-</control>
 
 <control type="wraplist" id="54">
 <posx>-40</posx>
@@ -10152,8 +10079,8 @@
 <width>15</width>
 <height>390</height>
 <texturesliderbackground>scrollbar_background.png</texturesliderbackground>
-<texturesliderbar></texturesliderbar>
-<texturesliderbarfocus border="3"></texturesliderbarfocus>
+<texturesliderbar>scrollbar_background.png</texturesliderbar>
+<texturesliderbarfocus>scrollbar_background.png</texturesliderbarfocus>
 <textureslidernib>scrollbar_nib.png</textureslidernib>
 <textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
 <onleft>50</onleft>
@@ -11135,9 +11062,11 @@
 <posy>550</posy>
 <width>740</width>
 <height>10</height>
-<texturesliderbackground>input-focus.png</texturesliderbackground>
-<textureslidernib>scrollbar_nib.png</textureslidernib>
-<textureslidernibfocus>scrollbar_nib_focus.png</textureslidernibfocus>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
 <onleft>90</onleft>
 <onright>90</onright>
 <onup>58</onup>
