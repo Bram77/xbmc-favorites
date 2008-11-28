@@ -53,7 +53,7 @@ def HTMLEntityConverter(entity):
             return chr(int(entity.group(2)))
         else:
             #logFile.debug("%s: %s", entity.group(2), htmlentitydefs.entitydefs[entity.group(2)])
-            return htmlentitydefs.entitydefs[entity.group(2)]
+            return htmlentitydefs.entitydefs[entity.group(2).lower()]
     except:
         logFile.error("error converting HTMLEntities", exc_info=True)
         return '&%s%s;' % (entity.group(1),entity.group(2))
@@ -126,8 +126,7 @@ def DirectoryPrinter(dir):
     try:
         version = xbmc.getInfoLabel("system.buildversion")
         buildDate = xbmc.getInfoLabel("system.builddate")
-        env = envcontroller.EnvController().GetEnvironment()
-        #env = ( os.environ.get( "OS", "win32" ), "win32", )[ os.environ.get( "OS", "win32" ) == "xbox" ]
+        env = envcontroller.EnvController().GetEnvironment(True)
         logFile.debug("XBMC Information: \nVersion: XBMC %s\nEnvironment: %s\nBuildDate: %s)", version, env, buildDate)
         
         dirWalker = os.walk(dir)
