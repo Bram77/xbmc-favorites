@@ -35,6 +35,7 @@ sys.path.append(os.path.join(os.getcwd().replace(";",""),'resources','libs'))
 import envcontroller
 envController = envcontroller.EnvController()
 env = envController.GetEnvironment()
+#print env
 
 sys.path.append(os.path.join(os.getcwd().replace(";",""),'resources','libs', env))
         

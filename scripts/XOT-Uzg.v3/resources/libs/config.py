@@ -20,7 +20,7 @@ logFileNamePlugin = "uzgPlugin.log"
 
 xotDbFile = os.path.join(rootDir,"xot.db")
 
-version = "3.2.0b1"
+version = "3.2.0b2"
 updateUrl = "http://www.rieter.net/uitzendinggemist/index.php?currentversion="
 
 skinFolder = "" #get's set from default.py

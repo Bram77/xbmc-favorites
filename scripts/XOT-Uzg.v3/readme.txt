@@ -32,6 +32,18 @@ Direct contact can be done using the following e-mailadres:
 --------------------------------------------------------------------------------------------
  2. Changelog
 --------------------------------------------------------------------------------------------
+Changelog v3.2.0b2 - 2008-11-24 ****Needs at least XBMC revision R14899 ****
+* Updated: SVT.se
+* Fixed: mediaUrl error in Plugin
+* Fixed: Environment always showed Win32 even on xbox. Now it imports win32 but displays XBOX
+* Fixed: Icon had bad pixels
+* Changed: entity-converter did not work if entities had capitals
+* Fixed: Regex for NET5/SBS6 and Veronica (Again)
+* Added: NOS Top 50
+* Fixed: RTL now loads the additional programms better
+* Fixed: Regex for NET5/SBS6 and Veronica
+* Added: Paging to NET5/SBS6 and Veronica
+
 Changelog v3.2.0b1 - 2008-09-29 ****Needs at least XBMC revision R14899 ****
 * Added: Official southpark channel
 * Fixed: RTL Channel adjusted to new RTL Player
@@ -418,6 +430,12 @@ Basic idea and part of the scripting credits go to him or any other previous dev
  6. Donations
 --------------------------------------------------------------------------------------------
 The following persons have supported XOT by donating (the list is sorted chronologically): 
+- David Testas 
+- Stef Olde Scholtenhuis 
+- Gerhard ten Hove 
+- J.C. Frerichs 
+- Kenny Horbach 
+- Laurens De Graaff 
 - Stehpan van Rooij
 - Niels Walta
 - Rene Wieldraaijer
