@@ -1063,9 +1063,8 @@
       <control type="group">
         <description>Shadow Overlays</description>
 
-
         <control type="group">
-          <visible>![Container.Content(tvshows) + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
+          <visible>!Skin.HasTheme(lite) | ![[Container.Content(tvshows) | Container.Content(episodes)] + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
 
           <control type="image">
             <include>CoverflowLeftShadowOverlayDims</include>
@@ -1080,7 +1079,7 @@
         </control>
 
         <control type="group">
-          <visible>[Container.Content(tvshows) + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
+          <visible>Skin.HasTheme(lite) + [Container.Content(tvshows) + Skin.HasSetting(UseLowTVOverlay) + Control.IsVisible(55)]</visible>
 
           <control type="image">
             <include>CoverflowLeftShadowOverlayDims</include>
@@ -1103,9 +1102,16 @@
           <visible>Container.Content(albums)</visible>
         </control>
         <control type="label">
+          <description>Episode Name</description>
+          <info>ListItem.Title</info>
+          <include>CoverflowMainLabel</include>
+          <visible>Container.Content(episodes)</visible>
+        </control>
+        <control type="label">
           <description>Title</description>
           <info>ListItem.Label</info>
           <include>CoverflowMainLabel</include>
+          <visible>![Container.Content(albums) | Container.Content(episodes)]</visible>
         </control>
 
         <control type="label">
@@ -1121,15 +1127,27 @@
           <visible>Container.Content(songs)</visible>
         </control>
         <control type="label">
+          <description>Episode No.</description>
+          <label>$INFO[ListItem.Episode,$LOCALIZE[20359] ] $INFO[ListItem.Date,(,)]</label>
+          <include>CoverflowDetailLabel</include>
+          <visible>Container.Content(episodes)</visible>
+        </control>
+        <control type="label">
           <description>Detail</description>
           <info>ListItem.Label2</info>
           <include>CoverflowDetailLabel</include>
-          <visible>![Container.Content(albums) | Container.Content(songs)] + IsEmpty(ListItem.Rating)</visible>
+          <visible>![Container.Content(albums) | Container.Content(songs) | Container.Content(episodes)] + IsEmpty(ListItem.StarRating)</visible>
         </control>
         <control type="image">
           <include>CoverflowDetailLabel</include>
           <include>StarRatingImage</include>
-          <visible>![Container.Content(albums) | Container.Content(songs)] + !IsEmpty(ListItem.Rating)</visible>
+          <visible>![Container.Content(albums) | Container.Content(songs) | Container.Content(episodes)] + !IsEmpty(ListItem.StarRating)</visible>
+        </control>
+
+        <control type="image">
+          <include>CoverflowSubDetailLabel</include>
+          <include>StarRatingImage</include>
+          <visible>Container.Content(episodes)</visible>
         </control>
       </control>
     </control>

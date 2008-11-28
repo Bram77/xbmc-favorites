@@ -19,18 +19,21 @@
 
       <control type="group">
         <posx>-10</posx>
-        <posy>20</posy>
+        <posy>0</posy>
 
         <control type="label">
           <description>Current label</description>
+          <posy>14</posy>
           <width>VisPresetTextWidth</width>
+          <aligny>bottom</aligny>
           <label>$LOCALIZE[31607]</label>
           <font>MediumDefaultCapsFont</font>
         </control>
         <control type="label">
           <description>Visualisation label</description>
-          <posy>18</posy>
+          <posy>38</posy>
           <width>VisPresetTextWidth</width>
+          <aligny>top</aligny>
           <label>$LOCALIZE[250]</label>
           <font>TitleCapsFont</font>
         </control>
@@ -38,7 +41,7 @@
         <control type="label">
           <description>heading label</description>
           <posx>20</posx>
-          <posy>70</posy>
+          <posy>90</posy>
           <width>VisPresetTextWidth</width>
           <label>$INFO[Visualisation.Name]</label>
           <font>MediumDefaultCapsFont</font>
@@ -48,7 +51,7 @@
         <control type="label" id="4">
           <description>No presets label</description>
           <posx>20</posx>
-          <posy>120</posy>
+          <posy>140</posy>
           <width>VisPresetTextWidth</width>
           <label>13389</label>
           <align>center</align>
@@ -56,24 +59,25 @@
 
         <control type="label">
           <description>Change label</description>
-          <posy>120</posy>
+          <posy>134</posy>
           <width>VisPresetTextWidth</width>
+          <aligny>bottom</aligny>
           <label>$LOCALIZE[31226]</label>
           <font>MediumDefaultCapsFont</font>
           <visible>!Control.IsVisible(4)</visible>
         </control>
-
         <control type="label">
           <description>Presets label</description>
-          <posy>138</posy>
+          <posy>158</posy>
           <width>VisPresetTextWidth</width>
+          <aligny>top</aligny>
           <label>$LOCALIZE[31227]</label>
           <font>TitleCapsFont</font>
           <visible>!Control.IsVisible(4)</visible>
         </control>
 
         <control type="group">
-          <posy>200</posy>
+          <posy>220</posy>
           <visible>!Control.IsVisible(4)</visible>
 
           <control type="list" id="2">

@@ -1549,7 +1549,7 @@
 
         <control type="image">
           <description>Left hand fade for RSS</description>
-          <posx>30</posx>
+          <posx>29</posx>
           <width>40</width>
           <height>40</height>
           <texture>BlackGradient.png</texture>

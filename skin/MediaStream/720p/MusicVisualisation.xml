@@ -98,7 +98,7 @@
           <include>MusicVisLabelDims</include>
           <posy>280</posy>
           <info>MusicPlayer.Artist</info>
-          <align>left</align>
+          <align>center</align>
           <font>LargeTitleCapsFont</font>
           <scroll>true</scroll>
         </control>
@@ -107,7 +107,7 @@
           <include>MusicVisLabelDims</include>
           <posy>310</posy>
           <label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]]</label>
-          <align>left</align>
+          <align>center</align>
           <font>MediumSmallTitleCapsFont</font>
           <textcolor>Unfocused</textcolor>
           <scroll>true</scroll>
@@ -117,10 +117,11 @@
           <include>MusicVisLabelDims</include>
           <posy>325</posy>
           <label>$INFO[musicplayer.year]</label>
-          <align>left</align>
+          <align>center</align>
           <font>LargeDefaultFont</font>
           <scroll>true</scroll>
         </control>
+
         <control type="label" id="1">
           <description>Currently Playing label</description>
           <include>MusicVisLabelDims</include>
@@ -197,15 +198,16 @@
           <posx>MusicVisRatingXoffset</posx>
 
           <control type="group" id="1">
-            <posx>20</posx>
+            <posx>100</posx>
             <posy>560</posy>
 
             <control type="image" id="1">
               <description>Click For Options Arrow</description>
+              <include>MusicVisVertButtonBGDims</include>
               <posx>33</posx>
               <width>256</width>
               <height>32</height>
-              <texture>TVTitleBG.png</texture>
+              <texture border="0,0,17,0">TVTitleBG.png</texture>
             </control>
             <control type="image" id="1">
               <posx>240</posx>
@@ -222,42 +224,46 @@
             </control>
           </control>
 
-          <control type="label" id="1">
-            <description>Song Rating Label</description>
-            <width>200</width>
-            <posx>197</posx>
-            <posy>669</posy>
-            <align>right</align>
-            <label>31225</label>
-            <font>SmallTitleCapsFont</font>
-            <textcolor>Highlighted</textcolor>
-          </control>
-          <control type="image" id="1">
-            <description>Song Rating Image</description>
-            <height>15</height>
-            <width>80</width>
-            <posx>200</posx>
-            <posy>670</posy>
-            <info>Player.StarRating</info>
-          </control>
-          <control type="label" id="1">
-            <description>time label</description>
-            <width>250</width>
-            <posx>280</posx>
-            <posy>685</posy>
-            <label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, | ]</label>
-            <align>right</align>
-            <font>TitleCapsFont</font>
-          </control>
-          <control type="label" id="1">
-            <description>PartyMode Enabled</description>
-            <width>200</width>
-            <posx>680</posx>
-            <posy>85</posy>
-            <label>589</label>
-            <visible>MusicPartyMode.Enabled</visible>
-            <align>right</align>
-            <font>font10</font>
+          <control type="group" id="1">
+            <posx>80</posx>
+
+            <control type="label" id="1">
+              <description>Song Rating Label</description>
+              <width>200</width>
+              <posx>197</posx>
+              <posy>669</posy>
+              <align>right</align>
+              <label>31225</label>
+              <font>SmallTitleCapsFont</font>
+              <textcolor>Highlighted</textcolor>
+            </control>
+            <control type="image" id="1">
+              <description>Song Rating Image</description>
+              <height>15</height>
+              <width>80</width>
+              <posx>200</posx>
+              <posy>670</posy>
+              <info>Player.StarRating</info>
+            </control>
+            <control type="label" id="1">
+              <description>time label</description>
+              <width>250</width>
+              <posx>280</posx>
+              <posy>685</posy>
+              <label>$INFO[musicplayer.Time]$INFO[musicplayer.Duration, | ]</label>
+              <align>right</align>
+              <font>TitleCapsFont</font>
+            </control>
+            <control type="label" id="1">
+              <description>PartyMode Enabled</description>
+              <width>200</width>
+              <posx>680</posx>
+              <posy>85</posy>
+              <label>589</label>
+              <visible>MusicPartyMode.Enabled</visible>
+              <align>right</align>
+              <font>font10</font>
+            </control>
           </control>
         </control>
       </control>

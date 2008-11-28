@@ -264,6 +264,7 @@
           <control type="image" id="1">
             <description>2x FF image</description>
             <posx>21</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD2x.png</texture>
             <visible>Player.Forwarding2x</visible>
           </control>
@@ -271,6 +272,7 @@
           <control type="image" id="1">
             <description>4x FF image</description>
             <posx>33</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD4x.png</texture>
             <visible>Player.Forwarding4x</visible>
           </control>
@@ -278,6 +280,7 @@
           <control type="image" id="1">
             <description>8x FF image</description>
             <posx>45</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD8x.png</texture>
             <visible>Player.Forwarding8x</visible>
           </control>
@@ -285,6 +288,7 @@
           <control type="image" id="1">
             <description>16x FF image</description>
             <posx>57</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD16x.png</texture>
             <visible>Player.Forwarding16x</visible>
           </control>
@@ -292,6 +296,7 @@
           <control type="image" id="1">
             <description>32x FF image</description>
             <posx>69</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD32x.png</texture>
             <visible>Player.Forwarding32x</visible>
           </control>
@@ -299,6 +304,7 @@
           <control type="image" id="1">
             <description>2x REW image</description>
             <posx>69</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD2x.png</texture>
             <visible>Player.Rewinding2x</visible>
           </control>
@@ -306,6 +312,7 @@
           <control type="image" id="1">
             <description>4x REW image</description>
             <posx>57</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD4x.png</texture>
             <visible>Player.Rewinding4x</visible>
           </control>
@@ -313,6 +320,7 @@
           <control type="image" id="1">
             <description>8x REW image</description>
             <posx>45</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD8x.png</texture>
             <visible>Player.Rewinding8x</visible>
           </control>
@@ -320,6 +328,7 @@
           <control type="image" id="1">
             <description>16x REW image</description>
             <posx>33</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD16x.png</texture>
             <visible>Player.Rewinding16x</visible>
           </control>
@@ -327,6 +336,7 @@
           <control type="image" id="1">
             <description>32x REW image</description>
             <posx>21</posx>
+            <include>VideoOSDSeekIcon</include>
             <texture>OSD32x.png</texture>
             <visible>Player.Rewinding32x</visible>
           </control>

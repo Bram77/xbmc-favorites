@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!--Simplified Chinese Translated by Naco-->
+<!--Email: Naco520@gmail.com-->
+<!--Date of translation: 11/18/2008-->
 
  <strings>
   <string id="31000">浏览</string>
@@ -46,6 +48,7 @@
   <string id="31043">查看</string>
   <string id="31044">按</string>
   <string id="31045">最新添加</string>
+  <string id="31046">歌词脚本路径</string>
 
 <!--  Programs  -->
   <string id="31051">游戏</string>
@@ -80,7 +83,7 @@
   <string id="31118">桌面</string> 
   <string id="31119">摘要</string> 
   <string id="31120">评分</string>
-  <string id="31121">视频摘要</string>
+  <string id="31121">影片信息</string>
   <string id="31122">发行/上映</string>
   <string id="31123">分级</string>
   <string id="31124">集</string> 
@@ -141,11 +144,11 @@
 	<string id="31673">文件夹显示模式</string>
 	<string id="31674">隐藏桌面背景</string>
 	<string id="31675">在电影视图中</string>
-	<string id="31676">在媒体预览方式中</string>
+	<string id="31676">在“媒体预览”方式中</string>
 	<string id="31677">在电视节目列表中</string>
   <string id="31678">显示电视季缩图</string>
-  <string id="31679">以面板效果查看时隐藏详细资料</string>
-  <string id="31680">列表查看方式时隐藏略缩图</string>
+  <string id="31679">“面板效果”方式不显示详细资料</string>
+  <string id="31680">“列表”方式不显示封面</string>
 	<string id="31681">在文件模式中</string>
 	<string id="31682">以电视墙方式</string>
 	<string id="31683">在电视节目视图中</string>
@@ -155,8 +158,12 @@
 	<string id="31687">在视频视图中</string>
 	<string id="31688">在音乐视图中</string>
 	<string id="31689">在图片视图中</string>
-	<string id="31690">隐藏无略缩图的图标</string>
-	<string id="31691">用 Coverflow 方式浏览电视节目时 Use Low Overlay</string>
+	<string id="31690">无封面的项目不显示图标</string>
+	<string id="31691">用 Coverflow 方式浏览电视节目时使用 Low Overlay 模式</string>
+	<string id="31692">在“媒体预览”视图中隐藏影片详细资料</string>
+	<string id="31693">在选项菜单中隐藏略缩图</string>
+	<string id="31694">在左侧显示“正在播放”界面</string>
+	<string id="31695">以 AM/PM 的方式显示时钟</string>
 
 <!--  Options Menu  -->
   <string id="31701">设置</string>
@@ -169,7 +176,7 @@
   <string id="31708">媒体列表</string> 
   <string id="31709">凹面</string>
   <string id="31710">显示</string> 
-  <string id="31711">信息列表</string>
+  <string id="31711">详细信息列表</string>
   <string id="31712">图片流</string>
   <string id="31713">设置选项</string>
   <string id="31714">墙效果</string>

@@ -7,8 +7,8 @@
   <string id="31001">Video's</string>
   <string id="31002">Muziek</string>
   <string id="31003">Foto's</string>
-  <string id="31004">Programma's</string>
-  <string id="31005">Weerbericht</string>
+  <string id="31004">Software</string>
+  <string id="31005">Weer</string>
   <string id="31006">Systeem</string>
   <string id="31007">Aan/Uit</string>
   <string id="31008">TV series</string>
@@ -46,7 +46,8 @@
   <string id="31042">Afbeelding</string>
   <string id="31043">Raadpleeg</string>
   <string id="31044">Op</string>
-  <string id="31045">Recent toegevoegd</string> 
+  <string id="31045">Recent toegevoegd</string>
+  <string id="31046">Pad van songteksten script</string> 
 
 <!--  Programs  -->
   <string id="31051">Games</string>
@@ -159,6 +160,7 @@
 	<string id="31690">Verberg 'geen thumb' iconen</string>
 	<string id="31691">Gebruik lagere overlay bij TV series coverflow</string>
 	<string id="31692">Verberg info bij muur weergave</string>
+	<string id="31693">Verberg thumbs in opties menu</string>
 
 <!--  Options Menu  -->
   <string id="31701">Setup</string>
@@ -194,7 +196,7 @@
   <string id="31811">Opmerking: Dit bericht zal niet meer verschijnen, nadat je op "OK" hebt gedrukt</string>
 
 <!--  Profiles  -->
-  <string id="31900">Inloggen Als</string>
+  <string id="31900">Inloggen als</string>
   <string id="31901">Wijzig</string>
   <string id="31902">Profiel</string>
   <string id="31903">Profielnaam</string>
