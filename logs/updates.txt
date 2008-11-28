@@ -1,3 +1,12 @@
+  28-11-2008 :: [scripts]    	    ~ Updated the "T3CH Upgrader" script to the latest SVN version
+  28-11-2008 :: [scripts]    	    ~ Updated the "Apple Movie Trailers II" script to the latest SVN version
+  28-11-2008 :: [scripts]    	    ~ Updated the "XBMC Lyrics" script to the latest SVN version
+  28-11-2008 :: [scripts]    	    ~ Updated the "Navi-X" script to the latest SVN version
+  28-11-2008 :: [skin]              ~ Updated the "MediaStream" skin to version 0.99
+  28-11-2008 :: [plugins][video]    ~ Updated the XOT-Uzg v3 plugin to version 3.2 beta 2
+  28-11-2008 :: [scripts]    	    ~ Updated the XOT-Uzg v3 script to version 3.2 beta 2
+  28-11-2008 :: [skin]              ~ Updated the "Back-Row" skin to the latest SVN version
+  28-11-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   11-11-2008 :: [skin]              ~ Updated the "MediaStream" skin to version 0.96
   11-11-2008 :: [plugins][video]    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
   11-11-2008 :: [scripts]	    ~ Updated the XOT-Uzg v3 plugin with the latest channel updates
