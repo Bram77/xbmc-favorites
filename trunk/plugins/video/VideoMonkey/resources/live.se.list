@@ -1,17 +1,16 @@
 ﻿########################################################
 # SE live streams list
 ########################################################
-title=SE Live
 action=add
 ########################################################
 # Live streams
 ########################################################
-name=Dorotea TV
+title=Dorotea TV
 type=live
 thumb=video.monkey.image|dorotea_tv.png
 url=mms://dorotea.tv/live
 ########################################################
-name=The Voice TV
+title=The Voice TV
 type=live
 thumb=video.monkey.image|thevoice_tv.png
 url=mms://62.41.56.32/PUBLIC_SWE

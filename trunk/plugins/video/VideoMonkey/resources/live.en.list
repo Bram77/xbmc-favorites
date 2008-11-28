@@ -1,22 +1,21 @@
 ﻿########################################################
 # EN live streams list
 ########################################################
-title=EN Live
 action=add
 ########################################################
 # Live streams
 ########################################################
-name=OldCartoonTV
+title=OldCartoonTV
 type=live
 thumb=video.monkey.image|oldcartoons_tv.png
 url=mms://us.impek.com/oldcartoontv
 ########################################################
-name=Discovery Channel
+title=Discovery Channel
 type=live
 thumb=video.monkey.image|discovery_channel.png
 url=mms://tv1.lzu.edu.cn/discovery
 ########################################################
-name=Maxx-XS
+title=Maxx-XS
 type=live
 thumb=video.monkey.image|maxx_xs.png
 url=mms://62.204.69.103/home_channel

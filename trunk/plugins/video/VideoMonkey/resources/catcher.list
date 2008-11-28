@@ -1,7 +1,7 @@
 ﻿########################################################
 # VideoMonkey Catcher list
 ########################################################
-# name: str <- Start flag
+# title: str <- Start flag
 # data: *%s*
 # header str|str
 # url: *%s* or str
@@ -14,11 +14,11 @@
 ########################################################
 # Catcher sites
 ########################################################
-name=2video.de
+title=2video.de
 url=http://www.2video.de/index.php?dl=%s&action=download
 target=<div id=\"box\">[^<]*<h2>Download</h2>[^<]*<p><a href=\"([^\"]+)\" target=\"_blank\">
 ########################################################
-name=keepvid.com
+title=keepvid.com
 url=http://keepvid.com/?url=%s
 header=Referer|http://keepvid.com/
 source=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">[^<]+</a>[^<]+<em>\(video\.flv - Low Quality\)
@@ -29,17 +29,17 @@ source_extension=mp4
 source_quality=high
 target=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">
 ########################################################
-name=viloader.net
+title=viloader.net
 data=action=formDownload&url=%s&json=false
 header=Referer|http://www.viloader.net
 url=http://www.viloader.net/mybic_server.php
 target=unescape%28%22(http.+?\.flv)%22%29%3
 ########################################################
-name=grabit.to
+title=grabit.to
 url=http://www.grabit.to/index.php?txt_url=%s
 target=<h1>Der Downloadlink wurde erfolgreich gefunden\!</h1>[^<]+<p>Video: </p>[^<]+<p><strong><a href=\"([^\"]+)\">
 ########################################################
-name=clipnabber.com
+title=clipnabber.com
 data=mode=1&url=%s
 header=Referer|http://www.clipnabber.com
 url=http://clipnabber.com/gethint.php
@@ -51,20 +51,20 @@ source_extension=mp4
 source_quality=high
 target=<a href='([^']+)' *><strong>
 ########################################################
-name=porn2pc.com
+title=porn2pc.com
 data=url=%s&Submit=Downlod+video+with+Porn2PC
 header=Referer|http://porn2pc.com/
 url=http://porn2pc.com/post.php
 ext_target=<h2>([^<]+)</h2>
 target=<a href=\"([^\"]+)\"[^>]+><b>CLICK HERE TO DOWNLOAD MOVIE</b></a>
 ########################################################
-name=atrapavideo.com
+title=atrapavideo.com
 data=data[url]=%s
 header=Referer|http://www.atrapavideo.com/en/
 url=http://www.atrapavideo.com/video
 target=so.addVariable\('file','(.+?.flv)
 ########################################################
-name=degrab.de
+title=degrab.de
 url=http://www.degrab.de/?url=%s
 target=klicke bitte auf diesen Link: <a href=\"([^\"]+)\"
 ########################################################

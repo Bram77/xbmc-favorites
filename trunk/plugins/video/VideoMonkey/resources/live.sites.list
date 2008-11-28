@@ -1,28 +1,26 @@
 ﻿########################################################
 # VideoMonkey live streams list
 ########################################################
-title=Live Streams
-########################################################
 # Regions
 ########################################################
-name=video.monkey.locale|30112
+title=video.monkey.locale|30112
 type=once
 thumb=video.monkey.image|globe.png
 url=live.region.list
 ########################################################
 # Genres
 ########################################################
-name=video.monkey.locale|30114
+title=video.monkey.locale|30114
 type=once
 thumb=video.monkey.image|sport.png
 url=live.sport.list
 ########################################################
-name=video.monkey.locale|30115
+title=video.monkey.locale|30115
 type=once
 thumb=video.monkey.image|kids.png
 url=live.kids.list
 ########################################################
-name=video.monkey.locale|30116
+title=video.monkey.locale|30116
 type=once
 thumb=video.monkey.image|music.png
 url=live.music.list

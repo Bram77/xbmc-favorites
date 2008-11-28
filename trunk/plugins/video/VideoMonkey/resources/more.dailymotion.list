@@ -1,29 +1,27 @@
 ﻿########################################################
 # Dailymotion country specific sites
 ########################################################
-title=Dailymotion - Countries
-########################################################
-name=Dailymotion (EN)
+title=Dailymotion (EN)
 type=rss
 thumb=video.monkey.image|en.png
 url=dailymotion.en.cfg
 ########################################################
-name=Dailymotion (DE)
+title=Dailymotion (DE)
 type=rss
 thumb=video.monkey.image|de.png
 url=dailymotion.de.cfg
 ########################################################
-name=Dailymotion (FR)
+title=Dailymotion (FR)
 type=rss
 thumb=video.monkey.image|fr.png
 url=dailymotion.fr.cfg
 ########################################################
-name=Dailymotion (NL)
+title=Dailymotion (NL)
 type=rss
 thumb=video.monkey.image|nl.png
 url=dailymotion.nl.cfg
 ########################################################
-name=Dailymotion (SE)
+title=Dailymotion (SE)
 type=rss
 thumb=video.monkey.image|se.png
 url=dailymotion.se.cfg

@@ -1,29 +1,27 @@
 ﻿########################################################
 # Google Video country specific sites
 ########################################################
-title=GoogleVideo - Coutries
-########################################################
-name=GoogleVideo (EN)
+title=GoogleVideo (EN)
 type=rss
 thumb=video.monkey.image|en.png
 url=googlevideo.en.cfg
 ########################################################
-name=GoogleVideo (DE)
+title=GoogleVideo (DE)
 type=rss
 thumb=video.monkey.image|de.png
 url=googlevideo.de.cfg
 ########################################################
-name=GoogleVideo (FR)
+title=GoogleVideo (FR)
 type=rss
 thumb=video.monkey.image|fr.png
 url=googlevideo.fr.cfg
 ########################################################
-name=GoogleVideo (FI)
+title=GoogleVideo (FI)
 type=rss
 thumb=video.monkey.image|fi.png
 url=googlevideo.fi.cfg
 ########################################################
-name=GoogleVideo (NL)
+title=GoogleVideo (NL)
 type=rss
 thumb=video.monkey.image|nl.png
 url=googlevideo.nl.cfg

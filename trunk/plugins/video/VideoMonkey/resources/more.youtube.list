@@ -1,24 +1,22 @@
 ﻿########################################################
 # Youtube country specific sites
 ########################################################
-title=YouTube - Countries
-########################################################
-name=YouTube (EN)
+title=YouTube (EN)
 type=rss
 thumb=video.monkey.image|en.png
 url=youtube.en.cfg
 ########################################################
-name=YouTube (DE)
+title=YouTube (DE)
 type=rss
 thumb=video.monkey.image|de.png
 url=youtube.de.cfg
 ########################################################
-name=YouTube (FR)
+title=YouTube (FR)
 type=rss
 thumb=video.monkey.image|fr.png
 url=youtube.fr.cfg
 ########################################################
-name=YouTube (NL)
+title=YouTube (NL)
 type=rss
 thumb=video.monkey.image|nl.png
 url=youtube.nl.cfg

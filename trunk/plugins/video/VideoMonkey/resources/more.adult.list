@@ -1,48 +1,42 @@
 ﻿########################################################
 # VideoMonkey Plugin adult sites list
 ########################################################
-title=Adult Video Sites
 action=add
 ########################################################
 # Adult video sites
 ########################################################
-name=Pornhub
+title=Pornhub
 type=adult_rss
 thumb=video.monkey.image|pornhub.png
 url=pornhub.com.cfg
 ########################################################
-name=RedTube
+title=RedTube
 type=adult_rss
 thumb=video.monkey.image|redtube.png
 url=redtube.com.cfg
 ########################################################
-name=PornoTube
+title=PornoTube
 type=adult_rss
 thumb=video.monkey.image|pornotube.png
 url=pornotube.com.cfg
 ########################################################
-name=YouPorn
+title=YouPorn
 type=adult_rss
 thumb=video.monkey.image|youporn.png
 url=youporn.com.cfg
 ########################################################
-name=Shufuni
+title=Shufuni
 type=adult_rss
 thumb=video.monkey.image|shufuni.png
 url=shufuni.com.cfg
 ########################################################
-name=Boysfood
+title=Boysfood
 type=adult_rss
 thumb=video.monkey.image|boysfood.png
 url=boysfood.com.cfg
 ########################################################
-name=Metacafe
+title=Metacafe
 type=adult_rss
 thumb=video.monkey.image|metacafe.png
 url=metacafe.adult.com.cfg
-########################################################
-name=TUtv (INCOMPLETE)
-type=adult_rss
-thumb=video.monkey.image|tu_tv.png
-url=tu.tv.cfg
 ########################################################

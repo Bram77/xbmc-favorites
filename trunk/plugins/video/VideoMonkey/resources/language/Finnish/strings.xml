@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<strings>
-    <!--  4.8.2008 Finnish   -->
+<strings>    <!--  20.11.2008 Finnish   -->
     <string id="30000">VideoMonkey</string>
     <string id="30001">XBMC Media Center</string>
 
@@ -14,12 +13,21 @@
     <string id="30009">Kysy latauksesta ennen toistoa</string>
     <string id="30010">Lisää kirjanmerkki</string>
     <string id="30011">Poista kirjanmerkki</string>
+    <string id="30012">Videon kuvanlaatu (jos valittavissa)</string>
+    <string id="30013">Kysy</string>
+    <string id="30014">Matala</string>
+    <string id="30015">Normaali</string>
+    <string id="30016">Korkea</string>
 
     <string id="30050">Ladataan videota...</string>
     <string id="30051">Odota hetki...</string>
     <string id="30052">Haluatko ladata tämän videon?</string>
     <string id="30053">Videon lataus epäonnistui.[CR]Yritetään katsoa videota...</string>
     <string id="30054">Haluatko poistaa kirjanmerkin?</string>
+    <string id="30055">Monta videon lähdettä saatavilla. Valitse yksi:</string>
+    <string id="30056">Matatala laatu</string>
+    <string id="30057">Normaali laatu</string>
+    <string id="30058">Korkea laatu</string>
 
     <string id="30100">Kategoria</string>
     <string id="30101">Alikategoria</string>
@@ -38,4 +46,5 @@
     <string id="30114">Urheilu</string>
     <string id="30115">Lapsille</string>
     <string id="30116">Musiikki</string>
+    <string id="30117">Aiheeseen liittyvät videot</string>
 </strings>

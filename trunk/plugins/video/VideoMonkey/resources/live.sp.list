@@ -1,12 +1,11 @@
 ﻿########################################################
 # SP live streams list
 ########################################################
-title=SP Live
 action=add
 ########################################################
 # Live streams
 ########################################################
-name=Teleasturias
+title=Teleasturias
 type=live
 thumb=video.monkey.image|teleasturias.png
 url=mms://DWS28.dinaserver.com/directo
