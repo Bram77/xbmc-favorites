@@ -13,6 +13,7 @@ import time
 import re
 import urllib
 import datetime
+from xml.sax.saxutils import unescape
 
 class _Parser:
     """
@@ -44,7 +45,7 @@ class _Parser:
                 poster = re.findall( "<poster>(.*?)</poster>", movie )
                 preview = re.findall( "<preview>(.*?)</preview>", movie )
                 # info
-                title = unicode( re.findall( "<title>(.*?)</title>", info[ 0 ] )[ 0 ], encoding, "replace" )
+                title = unicode( unescape( re.findall( "<title>(.*?)</title>", info[ 0 ] )[ 0 ] ), encoding, "replace" )
                 runtime = re.findall( "<runtime>(.*?)</runtime>", info[ 0 ] )[ 0 ]
                 mpaa = re.findall( "<rating>(.*?)</rating>", info[ 0 ] )[ 0 ]
                 rating_index = 0
@@ -52,7 +53,7 @@ class _Parser:
                     rating_index = mpaa_ratings.index( mpaa )
                 if ( rating_index > self.settings[ "rating" ] ):
                     continue
-                studio = unicode( re.findall( "<studio>(.*?)</studio>", info[ 0 ] )[ 0 ], encoding, "replace" )
+                studio = unicode( unescape( re.findall( "<studio>(.*?)</studio>", info[ 0 ] )[ 0 ] ), encoding, "replace" )
                 postdate = ""
                 tmp_postdate = re.findall( "<postdate>(.*?)</postdate>", info[ 0 ] )[ 0 ]
                 if ( tmp_postdate ):
@@ -60,15 +61,15 @@ class _Parser:
                 releasedate = re.findall( "<releasedate>(.*?)</releasedate>", info[ 0 ] )[ 0 ]
                 if ( not releasedate ):
                     releasedate = ""
-                copyright = unicode( re.findall( "<copyright>(.*?)</copyright>", info[ 0 ] )[ 0 ], encoding, "replace" )
-                director = unicode( re.findall( "<director>(.*?)</director>", info[ 0 ] )[ 0 ], encoding, "replace" )
-                plot = unicode( re.findall( "<description>(.*?)</description>", info[ 0 ] )[ 0 ], encoding, "replace" )
+                copyright = unicode( unescape( re.findall( "<copyright>(.*?)</copyright>", info[ 0 ] )[ 0 ] ), encoding, "replace" )
+                director = unicode( unescape( re.findall( "<director>(.*?)</director>", info[ 0 ] )[ 0 ] ), encoding, "replace" )
+                plot = unicode( unescape( re.findall( "<description>(.*?)</description>", info[ 0 ] )[ 0 ] ), encoding, "replace" )
                 # actors
                 actors = []
                 if ( cast ):
                     actor_list = re.findall( "<name>(.*?)</name>", cast[ 0 ] )
                     for actor in actor_list:
-                        actors += [ unicode( actor, encoding, "replace" ) ]
+                        actors += [ unicode( unescape( actor ), encoding, "replace" ) ]
                 # genres
                 genres = []
                 if ( genre ):
