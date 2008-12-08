@@ -1,6 +1,20 @@
 History of Changes
 ==================
 
+v1.00 (01/12/2008)
+----- ------------
+
+Fixed: Width of text in the System Info screen
+Fixed: Positioning of the focus image for the vis settings button in the Music Visualisation screen
+Fixed: Aligning of the Now Playing UI on Home when shown on right of 4x3 screen
+Fixed: Width of Clock background when Large Clock is enabled
+
+Updated: Glass overlay image, to make it slightly stronger so that it works better with lighter images and dark images
+Updated: Parent Folder image to make it fit better with the rest of the skin
+Updated: Tidied up sub-menu animations on Home screen when moving between first and last items (made more consistent)
+Updated: Dutch, German and Chinese (Traditional) translations
+
+
 v0.99 (21/11/2008)
 ----- ------------
 

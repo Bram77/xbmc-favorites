@@ -310,8 +310,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(401).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(401).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(401).OnNext + Container(401).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(401).OnNext + !Container(401).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(401).OnPrevious + Container(401).Position(5)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(401).OnPrevious + !Container(401).Position(5)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -370,8 +372,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(402).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(402).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,116" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(402).OnNext + Container(402).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(402).OnNext + !Container(402).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-116" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(402).OnPrevious + Container(402).Position(3)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(402).OnPrevious + !Container(402).Position(3)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -420,8 +424,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(403).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(403).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,30" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(403).OnNext + Container(403).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(403).OnNext + !Container(403).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-73" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(403).OnPrevious + Container(403).Position(1)">focus</animation>
+              <animation effect="slide" start="0,30" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(403).OnPrevious + !Container(403).Position(1)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -460,8 +466,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(404).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(404).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,159" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(404).OnNext + Container(404).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(404).OnNext + !Container(404).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-159" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(404).OnPrevious + Container(404).Position(4)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(404).OnPrevious + !Container(404).Position(4)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -515,8 +523,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(405).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(405).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,30" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(405).OnNext + Container(405).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(405).OnNext + !Container(405).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-73" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(405).OnPrevious + Container(405).Position(1)">focus</animation>
+              <animation effect="slide" start="0,30" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(405).OnPrevious + !Container(405).Position(1)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -555,8 +565,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(406).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(406).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,245" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(406).OnNext + Container(406).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(406).OnNext + !Container(406).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-245" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(406).OnPrevious + Container(406).Position(6)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(406).OnPrevious + !Container(406).Position(6)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -604,7 +616,7 @@
             </item>
           </content>
         </control>
-  
+
         <control type="list" id="407">
           <description>Power Side Menu</description>
           <onup>407</onup>
@@ -621,8 +633,13 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(407).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,245" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnNext + Container(407).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnNext + !Container(407).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-159" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnPrevious + [Container(407).Position(4) + System.Platform.Xbox + !System.HasLoginScreen]">focus</animation>
+              <animation effect="slide" start="0,-202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnPrevious + [Container(407).Position(5) + System.Platform.Xbox + System.HasLoginScreen]">focus</animation>
+              <animation effect="slide" start="0,-202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnPrevious + [Container(407).Position(5) + !System.Platform.Xbox + !System.HasLoginScreen]">focus</animation>
+              <animation effect="slide" start="0,-245" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(407).OnPrevious + [Container(407).Position(6) + !System.Platform.Xbox + System.HasLoginScreen]">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(407).OnPrevious + ![[Container(407).Position(4) + System.Platform.Xbox + !System.HasLoginScreen] | [Container(407).Position(5) + System.Platform.Xbox + System.HasLoginScreen] | [Container(407).Position(5) + !System.Platform.Xbox + !System.HasLoginScreen] | [Container(407).Position(6) + !System.Platform.Xbox + System.HasLoginScreen]]">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -674,11 +691,11 @@
               <description>Logout Button</description>
               <label> $LOCALIZE[20126] </label>
               <onclick>System.LogOff</onclick>
-              <visible>system.hasloginscreen</visible>
+              <visible>System.HasLoginScreen</visible>
             </item>
           </content>
         </control>
-  
+
         <control type="list" id="408">
           <description>TV Shows Side Menu</description>
           <onup>408</onup>
@@ -695,8 +712,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(408).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(408).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(408).OnNext + Container(408).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(408).OnNext + !Container(408).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-202" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(408).OnPrevious + Container(408).Position(5)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(408).OnPrevious + !Container(408).Position(5)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>
@@ -762,8 +781,10 @@
             </control>
             <control type="image">
               <include>HomeSideMenuFOBGImage</include>
-              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(409).OnNext">focus</animation>
-              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(409).OnPrevious">focus</animation>
+              <animation effect="slide" start="0,288" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(409).OnNext + Container(409).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-43" end="0,0" time="400" reversible="false" tween="quadratic" easing="out" condition="Container(409).OnNext + !Container(409).Position(0)">focus</animation>
+              <animation effect="slide" start="0,-288" end="0,0" time="500" reversible="false" tween="quadratic" easing="out" condition="Container(409).OnPrevious + Container(409).Position(7)">focus</animation>
+              <animation effect="slide" start="0,43" end="0,0" time="400" reversible="false"  tween="quadratic" easing="out" condition="Container(409).OnPrevious + !Container(409).Position(7)">focus</animation>
             </control>
             <control type="label">
               <include>HomeSideMenuFOBGLabel</include>

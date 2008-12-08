@@ -36,7 +36,7 @@
           <control type="image">
             <description>Wide icon glass overlay</description>
             <include>TVWideIconOverlayDims</include>
-            <texture>GlassOverlay.png</texture>
+            <include>GlassTextureOverlay</include>
             <visible>!Skin.HasTheme(lite)</visible>
           </control>
         </control>
@@ -472,7 +472,7 @@
           <control type="image">
             <description>Episode Thumb glass overlay</description>
             <include>TVEpisodesSeasonEpThumbOverlayDims</include>
-            <texture>GlassOverlay.png</texture>
+            <include>GlassTextureOverlay</include>
             <visible>!Skin.HasTheme(lite)</visible>
           </control>
           <control type="image">
@@ -522,7 +522,7 @@
             <font>MediumTitleCapsFont</font>
             <include>NoThumbLabel</include>
           </control>
-  
+
           <control type="group">
             <description>Watched/Unwatched Overlay</description>
             <include>TVEpisodesWtchUnwtchOverlayDims</include>
@@ -841,11 +841,11 @@
               </control>
               <control type="image">
                 <description>Glass overlay</description>
-                <posx>-6</posx>
-                <posy>-8</posy>
+                <posx>0</posx>
+                <posy>0</posy>
                 <width>230</width>
                 <height>214</height>
-                <texture>GlassOverlay2.png</texture>
+                <include>GlassTextureOverlay2</include>
                 <colordiffuse>ffcccccc</colordiffuse>
               </control>
             </control>
@@ -1425,7 +1425,7 @@
               <posy>4</posy>
               <width>233</width>
               <height>192</height>
-              <texture>GlassOverlay2.png</texture>
+              <include>GlassTextureOverlay2</include>
               <include>ShowcaseFocusPosterOverlayAnim</include>
             </control>
             <control type="image">

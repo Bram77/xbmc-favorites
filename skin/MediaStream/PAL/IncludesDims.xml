@@ -7,6 +7,11 @@
     <height>32</height>
   </include>
 
+  <include name="LargeClockBGDims">
+    <width>220</width>
+    <height>37</height>
+  </include>
+
   <include name="MediaCountPos">
     <posx>1032</posx>
     <posy>683</posy>
@@ -87,7 +92,7 @@
 <!-- Home screen -->
 <!-- =========== -->
   <include name="MusicNowPlayingHomeSlideAnim">
-    <!-- Empty Filler -->
+    <animation effect="slide" start="0,0" end="596,0" time="0" condition="Window.IsActive(Home) + !Skin.HasSetting(ShowHomeNPOnLeft)">Conditional</animation>
   </include>
 
   <include name="HomeSubMenuBladeDims">
@@ -621,8 +626,10 @@
     <height>500</height>
   </include>
 
+  <constant name="SettingsCategoryBtnWidth">282</constant>
+
   <include name="SettingsCategoryButtonDims">
-    <width>282</width>
+    <width>SettingsCategoryBtnWidth</width>
     <height>43</height>
   </include>
 
@@ -844,7 +851,7 @@
   </include>
 
   <include name="WallStreamPosterOverlayZoomAnim">
-    <animation effect="zoom" tween="quadratic" end="-42,-42,293,200" time="300" delay="100" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="-45,-42,293,200" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
   <include name="WallStreamGenericFirstRowInfo">
@@ -1004,7 +1011,7 @@
   </include>
 
   <include name="WallStreamAlbumOverlayZoomAnim">
-    <animation effect="zoom" tween="quadratic" end="-58,-28,219,164" time="300" delay="100" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="-50,-28,219,164" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
   <include name="WallStreamMusicFirstRowInfo">
@@ -1380,8 +1387,8 @@
   </include>
 
   <include name="TVWideIconOverlayDims">
-    <posx>-2</posx>
-    <posy>3</posy>
+    <posx>3</posx>
+    <posy>8</posy>
     <width>180</width>
     <height>72</height>
   </include>
@@ -1474,8 +1481,8 @@
   </include>
 
   <include name="TVEpisodesSeasonEpThumbOverlayDims">
-    <posx>-3</posx>
-    <posy>18</posy>
+    <posx>0</posx>
+    <posy>23</posy>
     <width>219</width>
     <height>87</height>
   </include>
@@ -1722,7 +1729,7 @@
 
   <include name="MusicAlbumsCoverOverlayDims">
     <posx>150</posx>
-    <posy>3</posy>
+    <posy>4</posy>
     <width>40</width>
     <height>30</height>
   </include>
@@ -1732,7 +1739,7 @@
     <posy>30</posy>
     <width>40</width>
     <height>30</height>
-    <animation effect="zoom" tween="quadratic" end="66,6,80,60" time="MusicAlbumFocusZoomTime" delay="MusicAlbumFocusZoomDelay" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="66,8,80,60" time="MusicAlbumFocusZoomTime" delay="MusicAlbumFocusZoomDelay" reversible="false">Focus</animation>
   </include>
 
   <include name="MusicAlbumLargeCoverDims">
@@ -1767,8 +1774,8 @@
   </include>
 
   <include name="MusicSongsCoverOverlayDims">
-    <posx>-1</posx>
-    <posy>-7</posy>
+    <posx>1</posx>
+    <posy>1</posy>
     <width>170</width>
     <height>128</height>
   </include>
@@ -1823,8 +1830,8 @@
   </include>
 
   <include name="CoverflowGlassOverlayDims">
-    <posx>-67</posx>
-    <posy>-15</posy>
+    <posx>-59</posx>
+    <posy>1</posy>
     <width>310</width>
     <height>300</height>
   </include>
