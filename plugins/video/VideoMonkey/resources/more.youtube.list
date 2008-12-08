@@ -3,21 +3,21 @@
 ########################################################
 title=YouTube (EN)
 type=rss
-thumb=video.monkey.image|en.png
+icon=video.monkey.image|en.png
 url=youtube.en.cfg
 ########################################################
 title=YouTube (DE)
 type=rss
-thumb=video.monkey.image|de.png
+icon=video.monkey.image|de.png
 url=youtube.de.cfg
 ########################################################
 title=YouTube (FR)
 type=rss
-thumb=video.monkey.image|fr.png
+icon=video.monkey.image|fr.png
 url=youtube.fr.cfg
 ########################################################
 title=YouTube (NL)
 type=rss
-thumb=video.monkey.image|nl.png
+icon=video.monkey.image|nl.png
 url=youtube.nl.cfg
 ########################################################

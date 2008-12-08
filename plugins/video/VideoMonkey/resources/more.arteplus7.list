@@ -3,11 +3,11 @@
 ########################################################
 title=arte+7 (DE)
 type=rss
-thumb=video.monkey.image|de.png
+icon=video.monkey.image|de.png
 url=arteplus7.de.cfg
 ########################################################
 title=arte+7 (FR)
 type=rss
-thumb=video.monkey.image|fr.png
+icon=video.monkey.image|fr.png
 url=arteplus7.fr.cfg
 ########################################################

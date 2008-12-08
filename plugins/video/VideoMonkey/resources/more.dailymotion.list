@@ -3,26 +3,26 @@
 ########################################################
 title=Dailymotion (EN)
 type=rss
-thumb=video.monkey.image|en.png
+icon=video.monkey.image|en.png
 url=dailymotion.en.cfg
 ########################################################
 title=Dailymotion (DE)
 type=rss
-thumb=video.monkey.image|de.png
+icon=video.monkey.image|de.png
 url=dailymotion.de.cfg
 ########################################################
 title=Dailymotion (FR)
 type=rss
-thumb=video.monkey.image|fr.png
+icon=video.monkey.image|fr.png
 url=dailymotion.fr.cfg
 ########################################################
 title=Dailymotion (NL)
 type=rss
-thumb=video.monkey.image|nl.png
+icon=video.monkey.image|nl.png
 url=dailymotion.nl.cfg
 ########################################################
 title=Dailymotion (SE)
 type=rss
-thumb=video.monkey.image|se.png
+icon=video.monkey.image|se.png
 url=dailymotion.se.cfg
 ########################################################

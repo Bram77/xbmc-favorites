@@ -7,6 +7,6 @@ action=add
 ########################################################
 title=Teleasturias
 type=live
-thumb=video.monkey.image|teleasturias.png
+icon=video.monkey.image|teleasturias.png
 url=mms://DWS28.dinaserver.com/directo
 ########################################################

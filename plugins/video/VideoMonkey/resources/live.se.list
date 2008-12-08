@@ -7,11 +7,11 @@ action=add
 ########################################################
 title=Dorotea TV
 type=live
-thumb=video.monkey.image|dorotea_tv.png
+icon=video.monkey.image|dorotea_tv.png
 url=mms://dorotea.tv/live
 ########################################################
 title=The Voice TV
 type=live
-thumb=video.monkey.image|thevoice_tv.png
+icon=video.monkey.image|thevoice_tv.png
 url=mms://62.41.56.32/PUBLIC_SWE
 ########################################################

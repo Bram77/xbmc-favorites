@@ -5,27 +5,31 @@
 ########################################################
 title=  TV  
 type=rss
-thumb=video.monkey.image|tv.png
+genre=TV
+icon=video.monkey.image|tv.png
 url=tv.sites.list
 ########################################################
 # Live sites
 ########################################################
 title=  LIVE  
 type=rss
-thumb=video.monkey.image|station.png
+genre=LIVE
+icon=video.monkey.image|station.png
 url=live.sites.list
 ########################################################
 # More sites
 ########################################################
 title=video.monkey.locale|30104
 type=rss
-thumb=video.monkey.image|sites.png
+genre=VideoMonkey
+icon=video.monkey.image|sites.png
 url=more.sites.list
 ########################################################
 # More adult sites
 ########################################################
 title=video.monkey.locale|30104
 type=adult_rss
-thumb=video.monkey.image|erotic.png
+genre=VideoMonkey
+icon=video.monkey.image|erotic.png
 url=more.adult.list
 ########################################################

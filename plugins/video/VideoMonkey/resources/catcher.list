@@ -66,5 +66,5 @@ target=so.addVariable\('file','(.+?.flv)
 ########################################################
 title=degrab.de
 url=http://www.degrab.de/?url=%s
-target=klicke bitte auf diesen Link: <a href=\"([^\"]+)\"
+target=Klick auf den <a href=\"([^\"]+)\"
 ########################################################

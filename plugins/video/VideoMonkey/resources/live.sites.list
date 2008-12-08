@@ -5,23 +5,23 @@
 ########################################################
 title=video.monkey.locale|30112
 type=once
-thumb=video.monkey.image|globe.png
+icon=video.monkey.image|globe.png
 url=live.region.list
 ########################################################
 # Genres
 ########################################################
 title=video.monkey.locale|30114
 type=once
-thumb=video.monkey.image|sport.png
+icon=video.monkey.image|sport.png
 url=live.sport.list
 ########################################################
 title=video.monkey.locale|30115
 type=once
-thumb=video.monkey.image|kids.png
+icon=video.monkey.image|kids.png
 url=live.kids.list
 ########################################################
 title=video.monkey.locale|30116
 type=once
-thumb=video.monkey.image|music.png
+icon=video.monkey.image|music.png
 url=live.music.list
 ########################################################

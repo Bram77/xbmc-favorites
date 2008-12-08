@@ -7,41 +7,41 @@ action=add
 ########################################################
 title=Streetclip (DE)
 type=live
-thumb=video.monkey.image|streetclip.png
+icon=video.monkey.image|streetclip.png
 url=mms://streetclip.tv:1234/
 ########################################################
 title=MCM Top (FR)
 type=live
-thumb=video.monkey.image|mcm_top.png
+icon=video.monkey.image|mcm_top.png
 url=mms://vipmms9.yacast.net/mcm_top
 ########################################################
 title=NRJ Hits (FR)
 type=live
-thumb=video.monkey.image|nrj_hits.png
+icon=video.monkey.image|nrj_hits.png
 url=mms://vipnrj.yacast.net/nrj_tvhit
 ########################################################
 title=NRJ Dance (FR)
 type=live
-thumb=video.monkey.image|nrj_dance.png
+icon=video.monkey.image|nrj_dance.png
 url=mms://vipnrj.yacast.net/nrj_webtv02
 ########################################################
 title=NRJ Groove (FR)
 type=live
-thumb=video.monkey.image|nrj_groove.png
+icon=video.monkey.image|nrj_groove.png
 url=mms://vipnrj.yacast.net/nrj_webtv01
 ########################################################
 title=TMF NL (NL)
 type=live
-thumb=video.monkey.image|tmf_nl.png
+icon=video.monkey.image|tmf_nl.png
 url=mms://81.23.249.20/MTV_Low_006?.wma
 ########################################################
 title=MVtv Hit Station (THA)
 type=live
-thumb=video.monkey.image|mvtv_hit_station.png
+icon=video.monkey.image|mvtv_hit_station.png
 url=http://61.19.248.196/mvtv_3?WMContentBitrate=256000
 ########################################################
 title=The Voice TV (SE)
 type=live
-thumb=video.monkey.image|thevoice_tv.png
+icon=video.monkey.image|thevoice_tv.png
 url=mms://62.41.56.32/PUBLIC_SWE
 ########################################################
