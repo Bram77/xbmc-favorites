@@ -9951,15 +9951,6 @@
 </control>
 
 
-<control type="image">
-<posx>30</posx>
-<posy>90</posy>
-<width>320</width>
-<height>265</height>
-<texture>tveps.png</texture>
-<visible>container.content(episodes)</visible>
-<visible>Control.IsVisible(50)</visible>
-</control>
 
 <Controlgroup>
 <posy>0</posy>

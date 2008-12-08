@@ -91,156 +91,36 @@
 
 <include>CD Case Wrap2</include>
 
-   <control type="label">
-    <description>Album label</description>
-    <posx>60</posx>
-    <posy>345</posy>
-    <width>310</width>
-    <height>200</height>
-    <label>$INFO[ListItem.Album]</label>
-    <scroll>true</scroll>
-    <font>font12</font>
-    <textcolor>white</textcolor>
-	<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Artist label</description>
-    <posx>60</posx>
-    <posy>375</posy>
-    <width>200</width>
-    <height>200</height>
-    <label>557</label>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<alignx>right</alignx>
-    <textcolor>FF9E9E9E</textcolor>
-    <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Artist value</description>
-    <posx>310</posx>
-    <posy>375</posy>
-    <align>right</align>
-	<width>200</width>
-    <height>200</height>
-    <label>$INFO[ListItem.Artist]</label>
-    <scroll>true</scroll>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Genre label</description>
-    <posx>60</posx>
-    <posy>395</posy>
-    <width>200</width>
-    <height>200</height>
-    <label>515</label>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<alignx>right</alignx>
-    <textcolor>FF9E9E9E</textcolor>
-    <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Genre value</description>
-    <posx>310</posx>
-    <posy>395</posy>
-    <align>right</align>
-	<width>200</width>
-    <height>200</height>
-    <label>$INFO[ListItem.Genre]</label>
-    <scroll>true</scroll>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Year label</description>
-    <posx>60</posx>
-    <posy>415</posy>
-    <width>200</width>
-    <height>200</height>
-    <label>562</label>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<alignx>right</alignx>
-    <textcolor>FF9E9E9E</textcolor>
-    <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="label">
-    <description>Year label</description>
-    <posx>310</posx>
-    <posy>415</posy>
-	<align>right</align>
-    <width>200</width>
-    <height>200</height>
-    <label>$INFO[ListItem.Year]</label>
-    <font>font11</font>
-    <textcolor>white</textcolor>
-	<visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="image">
-    <description>seperator</description>
-    <posx>60</posx>
-    <posy>360</posy>
-    <width>250</width>
-    <height>10</height>
-    <texture>separator.png</texture>
-    <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   <control type="image">
-    <description>seperator</description>
-    <posx>60</posx>
-    <posy>445</posy>
-    <width>250</width>
-    <height>10</height>
-    <texture>separator.png</texture>
-    <visible>Control.IsVisible(50) + System.IdleTime(2)</visible>
-   </control>
-
-   
-
+ 
   <control type="image">
     <description>list item icon</description>
     <posx>45</posx>
-    <posy>90</posy>
+    <posy>105</posy>
     <width>295</width>
     <height>365</height>
     <texture>Case1.png</texture>
     <visible>Control.IsVisible(50)</visible>
-    <animation effect="zoom" end="90,80,200,240" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
-    </control>
+     </control>
    
    <control type="image">
     <description>list item icon</description>
     <posx>83</posx>
-    <posy>105</posy>
+    <posy>120</posy>
     <width>244</width>
     <height>333</height>
     <info>ListItem.Icon</info>
     <visible>Control.IsVisible(50)</visible>
-    <animation effect="zoom" end="115,90,165,218" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
-	</control>
+    </control>
 
 
  <control type="image">
     <description>list item icon</description>
     <posx>48</posx>
-    <posy>88</posy>
+    <posy>103</posy>
     <width>292</width>
     <height>367</height>
     <texture>Case2.png</texture>
     <visible>Control.IsVisible(50)</visible>
-    <animation effect="zoom" end="91,78,202,240" time="150" condition="Control.IsVisible(50) + System.IdleTime(2)">Conditional</animation>
     </control>
    
 

@@ -1323,15 +1323,7 @@
 </control>
 
 
-<control type="image">
-<posx>35</posx>
-<posy>90</posy>
-<width>310</width>
-<height>265</height>
-<texture>tveps.png</texture>
-<visible>container.content(episodes)</visible>
-<visible>Control.IsVisible(50)</visible>
-</control>
+
 
 <control type="list" id="50">
 <viewtype label="535">list</viewtype>
@@ -1827,7 +1819,7 @@
 <width>292</width>
 <height>234</height>
 <info>ListItem.Icon</info>
-<aspectratio>stretch</aspectratio>
+<aspectratio>keep</aspectratio>
 <visible>Control.IsVisible(50)</visible>
 <visible>container.content(episodes)</visible>
 </control>
@@ -4111,7 +4103,7 @@
 <posx>0</posx>
 <posy>383</posy>
 <width>720</width>
-<height>10</height>
+<height>20</height>
 <texturesliderbackground>Scroll-background.png</texturesliderbackground>
 <texturesliderbar>scroll-background.png</texturesliderbar>
 <texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
