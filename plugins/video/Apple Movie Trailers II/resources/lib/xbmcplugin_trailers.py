@@ -15,10 +15,14 @@ import urllib
 import datetime
 from xml.sax.saxutils import unescape
 
+from util import get_filesystem, get_legal_filepath
+
+
 class _Parser:
     """
         Parses an xml document for videos
     """
+
     def __init__( self, xmlSource, settings ):
         self.success = True
         self.settings = settings
@@ -84,6 +88,9 @@ class _Parser:
                     poster = location[ 0 ]
                 # trailer
                 trailer = re.findall( "<large[^>]*>(.*?)</large>", preview[ 0 ] )[ 0 ]
+                # replace with 1080p if quality == 1080p
+                if ( self.settings[ "quality" ] == "_1080p" ):
+                    trailer = trailer.replace( "a720p.", "h1080p." )
                 # size
                 size = long( re.findall( "filesize=\"([0-9]*)", preview[ 0 ] )[ 0 ] )
                 # add the item to our media list
@@ -117,16 +124,30 @@ class _Parser:
             listitem.setInfo( "video", { "Title": video[ "title" ], "Overlay": overlay, "Size": video[ "size" ], "Year": year, "Plot": video[ "plot" ], "PlotOutline": video[ "plot" ], "MPAA": video[ "mpaa" ], "Genre": video[ "genre" ], "Studio": video[ "studio" ], "Director": video[ "director" ], "Duration": video[ "runtime" ], "Cast": video[ "cast" ], "Date": video[ "postdate" ] } )
             # set release date property
             listitem.setProperty( "releasedate", release_date )
-            # TODO: remove this try/except block when branch is updated
-            try:
-                # set context menu items
-                action1 = "XBMC.RunPlugin(%s?Fetch_Showtimes=True&title=%s)" % ( sys.argv[ 0 ], urllib.quote_plus( repr( video[ "title" ] ) ), )
-                action2 = "XBMC.RunPlugin(%s?Download_Trailer=True)" % ( sys.argv[ 0 ], )
-                listitem.addContextMenuItems( [ ( xbmc.getLocalizedString( 30900 ), action1, ), ( xbmc.getLocalizedString( 30910 ), action2, ) ] )
-            except:
-                pass
+            # get filepath and tmp_filepath
+            tmp_path, filepath = get_legal_filepath( video[ "title" ], video[ "trailer" ], 2, self.settings[ "download_path" ], self.settings[ "use_title" ], self.settings[ "use_trailer" ] )
+            # set context menu items
+            items = [ ( xbmc.getLocalizedString( 30900 ), "XBMC.RunPlugin(%s?Fetch_Showtimes=True&title=%s)" % ( sys.argv[ 0 ], urllib.quote_plus( repr( video[ "title" ] ) ), ), ) ]
+            # check if trailer already exists if user specified
+            if ( self.settings[ "play_existing" ] and os.path.isfile( filepath.encode( "utf-8" ) ) ):
+                url = filepath
+                # just add play trailer if trailer exists and user preference to always play existing
+                items += [ ( xbmc.getLocalizedString( 30920 ), "XBMC.PlayMedia(%s)" % ( url ), ) ]
+            elif ( self.settings[ "play_mode" ] == 0 ):
+                url = video[ "trailer" ]
+                # we want both play and download if user preference is to stream
+                items += [ ( xbmc.getLocalizedString( 30910 ), "XBMC.RunPlugin(%s?Download_Trailer=True&trailer_url=%s)" % ( sys.argv[ 0 ], urllib.quote_plus( repr( video[ "trailer" ] ) ), ), ) ]
+                items += [ ( xbmc.getLocalizedString( 30920 ), "XBMC.PlayMedia(%s)" % ( url ), ) ]
+            else:
+                url = "%s?Download_Trailer=True&trailer_url=%s" % ( sys.argv[ 0 ], urllib.quote_plus( repr( video[ "trailer" ] ) ) )
+                # only add download if user prefernce is not stream
+                items += [ ( xbmc.getLocalizedString( 30910 ), "XBMC.RunPlugin(%s?Download_Trailer=True&trailer_url=%s)" % ( sys.argv[ 0 ], urllib.quote_plus( repr( video[ "trailer" ] ) ), ), ) ]
+            # add the movie information item
+            items += [ ( xbmc.getLocalizedString( 30930 ), "XBMC.Action(Info)", ) ]
+            # add items to listitem with replaceItems = True so only ours show
+            listitem.addContextMenuItems( items, replaceItems=True )
             # add the item to the media list
-            ok = xbmcplugin.addDirectoryItem( handle=int( sys.argv[ 1 ] ), url=video[ "trailer" ], listitem=listitem, isFolder=False, totalItems=total )
+            ok = xbmcplugin.addDirectoryItem( handle=int( sys.argv[ 1 ] ), url=url, listitem=listitem, isFolder=False, totalItems=total )
             # return
             return ok
         except:
@@ -139,8 +160,8 @@ class Main:
     BASE_CURRENT_URL = "http://www.apple.com/trailers/home/xml/current%s.xml"
 
     # base paths
-    BASE_DATA_PATH = xbmc.translatePath( os.path.join( "P:\\plugin_data", "video", sys.modules[ "__main__" ].__plugin__ ) )
-    BASE_CURRENT_SOURCE_PATH = xbmc.translatePath( os.path.join( "P:\\plugin_data", "video", sys.modules[ "__main__" ].__plugin__, "current%s.xml" ) )
+    BASE_DATA_PATH = os.path.join( xbmc.translatePath( "P:\\plugin_data" ), "video", sys.modules[ "__main__" ].__plugin__ )
+    BASE_CURRENT_SOURCE_PATH = os.path.join( xbmc.translatePath( "P:\\plugin_data" ), "video", sys.modules[ "__main__" ].__plugin__, "current%s.xml" )
 
     def __init__( self ):
         # get users preference
@@ -172,11 +193,17 @@ class Main:
 
     def _get_settings( self ):
         self.settings = {}
-        # TODO: enable 1080p in settings
         self.PluginCategory = ( xbmc.getLocalizedString( 30700 ), xbmc.getLocalizedString( 30701 ), xbmc.getLocalizedString( 30702 ), xbmc.getLocalizedString( 30703 ), )[ int( xbmcplugin.getSetting( "quality" ) ) ]
         self.settings[ "quality" ] = ( "", "_480p", "_720p", "_1080p", )[ int( xbmcplugin.getSetting( "quality" ) ) ]
         self.settings[ "poster" ] = ( xbmcplugin.getSetting( "poster" ) == "true" )
         self.settings[ "rating" ] = int( xbmcplugin.getSetting( "rating" ) )
+        self.settings[ "download_path" ] = xbmcplugin.getSetting( "download_path" )
+        self.settings[ "play_mode" ] = int( xbmcplugin.getSetting( "play_mode" ) )
+        if ( self.settings[ "play_mode" ] == 2 and self.settings[ "download_path" ] == "" ):
+            self.settings[ "play_mode" ] = 1
+        self.settings[ "use_title" ] = ( xbmcplugin.getSetting( "use_title" ) == "true" and self.settings[ "download_path" ] != "" )
+        self.settings[ "use_trailer" ] = ( xbmcplugin.getSetting( "use_trailer" ) == "true" and self.settings[ "use_title" ] == True and self.settings[ "download_path" ] != "" )
+        self.settings[ "play_existing" ] = ( xbmcplugin.getSetting( "play_existing" ) == "true" and self.settings[ "download_path" ] != "" )
         self.settings[ "fanart_image" ] = xbmcplugin.getSetting( "fanart_image" )
         self.settings[ "fanart_color1" ] = xbmcplugin.getSetting( "fanart_color1" )
         self.settings[ "fanart_color2" ] = xbmcplugin.getSetting( "fanart_color2" )
@@ -194,8 +221,8 @@ class Main:
         try:
             ok = True
             # set proper source
-            base_path = self.BASE_CURRENT_SOURCE_PATH % ( self.settings[ "quality" ], )
-            base_url = self.BASE_CURRENT_URL % ( self.settings[ "quality" ], )
+            base_path = self.BASE_CURRENT_SOURCE_PATH % ( self.settings[ "quality" ].replace( "_1080p", "_720p" ), )
+            base_url = self.BASE_CURRENT_URL % ( self.settings[ "quality" ].replace( "_1080p", "_720p" ), )
             # get the source files date if it exists
             try: date = os.path.getmtime( base_path )
             except: date = 0
@@ -227,7 +254,7 @@ class Main:
     def save_xml_source( self, xmlSource ):
         try:
             # set proper source
-            base_path = self.BASE_CURRENT_SOURCE_PATH % ( self.settings[ "quality" ], )
+            base_path = self.BASE_CURRENT_SOURCE_PATH % ( self.settings[ "quality" ].replace( "_1080p", "_720p" ), )
             # if the path to the source file does not exist create it
             if ( not os.path.isdir( self.BASE_DATA_PATH ) ):
                 os.makedirs( self.BASE_DATA_PATH )

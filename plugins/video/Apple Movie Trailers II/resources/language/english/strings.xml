@@ -8,9 +8,10 @@
     <string id="30004">1080p</string>
     <string id="30010">Use large poster</string>
     <string id="30020">MPAA rating limit for trailers</string>
-    <string id="30030">Download mode</string>
-    <string id="30031">Temporary</string>
-    <string id="30032">Save</string>
+    <string id="30030">Play mode</string>
+    <string id="30031">Stream</string>
+    <string id="30032">Download</string>
+    <string id="30033">Download &amp; Save</string>
     <string id="30040">- Save folder</string>
     <string id="30050">Zipcode/Post Code or City, State</string>
     <string id="30060">Showtimes scraper</string>
@@ -28,6 +29,8 @@
     <string id="30100">- Fanart color one (AARRGGBB)</string>
     <string id="30110">- Fanart color two (AARRGGBB)</string>
     <string id="30120">- Fanart color three (AARRGGBB)</string>
+    <string id="30130">- Always play saved trailers</string>
+    <string id="30140">- Add '-trailer' to saved trailers</string>
 
     <!-- messages -->
     <string id="30500">Downloading: %s</string>
@@ -49,5 +52,7 @@
 
     <!-- context menu labels -->
     <string id="30900">Theater Showtimes</string>
-    <string id="30910">Download Trailer</string>
+    <string id="30910">Download &amp; Play Trailer</string>
+    <string id="30920">Play Trailer</string>
+    <string id="30930">Movie Information</string>
 </strings>
