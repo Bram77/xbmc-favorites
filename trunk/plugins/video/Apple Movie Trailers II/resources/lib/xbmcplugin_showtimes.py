@@ -24,15 +24,15 @@ class GUI( xbmcgui.WindowXMLDialog ):
 
     def __init__( self, *args, **kwargs ):
         xbmcgui.WindowXMLDialog.__init__( self, *args, **kwargs )
-        xbmcgui.lock()
+        #xbmcgui.lock()
         self._parse_argv()
         self._get_settings()
         self._get_scraper()
+        #xbmcgui.unlock()
         self.doModal()
 
     def onInit( self ):
         self._show_dialog()
-        xbmcgui.unlock()
         self._get_showtimes()
 
     def _parse_argv( self ):
