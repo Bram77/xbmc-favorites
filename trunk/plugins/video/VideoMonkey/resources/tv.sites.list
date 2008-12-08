@@ -7,21 +7,21 @@ action=add
 ########################################################
 title=ZDF mediathek (DE)
 type=rss
-thumb=video.monkey.image|zdf_mediathek.png
+icon=video.monkey.image|zdf_mediathek.png
 url=zdf.de.cfg
 ########################################################
-#title=ARD mediathek (DE)
-#type=rss
-#thumb=video.monkey.image|ard_mediathek.png
-#url=ard.de.cfg
+# title=ARD mediathek (DE)
+# type=rss
+# icon=video.monkey.image|ard_mediathek.png
+# url=ard.de.cfg
 ########################################################
 title=arte+7
 type=rss
-thumb=video.monkey.image|arte_plus7.png
+icon=video.monkey.image|arte_plus7.png
 url=arteplus7.cfg
 ########################################################
 title=Alpha Centauri (DE)
 type=rss
-thumb=video.monkey.image|alpha_centauri.png
+icon=video.monkey.image|alpha_centauri.png
 url=alphacentauri.de.cfg
 ########################################################

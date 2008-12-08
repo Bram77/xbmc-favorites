@@ -7,16 +7,16 @@ action=add
 ########################################################
 title=TMF NL
 type=live
-thumb=video.monkey.image|tmf_nl.png
+icon=video.monkey.image|tmf_nl.png
 url=mms://81.23.249.20/MTV_Low_006?.wma
 ########################################################
 title=Maxx-XS
 type=live
-thumb=video.monkey.image|maxx_xs.png
+icon=video.monkey.image|maxx_xs.png
 url=mms://62.204.69.103/home_channel
 ########################################################
 title=Nickelodeon JR
 type=live
-thumb=video.monkey.image|nickelodeon_jr.png
+icon=video.monkey.image|nickelodeon_jr.png
 url=mms://81.23.249.20/MTV_Low_003?.wma
 ########################################################

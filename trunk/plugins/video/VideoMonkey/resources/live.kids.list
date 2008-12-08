@@ -7,11 +7,11 @@ action=add
 ########################################################
 title=OldCartoonTV (EN)
 type=live
-thumb=video.monkey.image|oldcartoons_tv.png
+icon=video.monkey.image|oldcartoons_tv.png
 url=mms://us.impek.com/oldcartoontv
 ########################################################
 title=Nickelodeon JR (NL)
 type=live
-thumb=video.monkey.image|nickelodeon_jr.png
+icon=video.monkey.image|nickelodeon_jr.png
 url=mms://81.23.249.20/MTV_Low_003?.wma
 ########################################################
