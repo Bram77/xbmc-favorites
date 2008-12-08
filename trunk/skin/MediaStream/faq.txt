@@ -6,7 +6,8 @@ Below you'll find a list of the most common questions along with some (hopefully
 
 Q) Where do I get the latest version of the skin?
 
-A) MediaStream comes with recent T3CH releases for the xbox and is also downloadable from our website at http://www.teamrazorfish.co.uk
+A) MediaStream comes with recent T3CH releases for the xbox and is also downloadable from our website at http://www.teamrazorfish.co.uk 
+   As of v1.00 the full source and textures of the skin are available in SVN from https://xboxmediacenter.svn.sourceforge.net/svnroot/xboxmediacenter/MediaStream
 
 
 Q) How do I install the skin?

@@ -1,6 +1,6 @@
-<!-- MediaStream skin revision: 1451 - built with build.bat version 1.0 -->
+<!-- MediaStream skin revision: 1881 - built with build.bat version 1.0 -->
 <includes>
   <include name="Revision">
-    <label>MediaStream v0.99 (21/11/2008), SVN - r1451</label>
+    <label>MediaStream v1.00 (Mon 12/08/2008), SVN - r1881</label>
   </include>
 </includes>

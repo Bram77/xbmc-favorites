@@ -7,6 +7,11 @@
     <height>32</height>
   </include>
 
+  <include name="LargeClockBGDims">
+    <width>176</width>
+    <height>37</height>
+  </include>
+
   <include name="MediaCountPos">
     <posx>1112</posx>
     <posy>683</posy>
@@ -576,23 +581,25 @@
     <height>400</height>
   </include>
 
+  <constant name="SettingsCatTextWidth">600</constant>
+
   <include name="SettingsCatBtnDims">
     <posx>0</posx>
     <posy>-10</posy>
-    <width>600</width>
+    <width>SettingsCatTextWidth</width>
     <height>43</height>
     <textoffsetx>45</textoffsetx>
   </include>
 
   <include name="SettingsCatRadioBtnDims">
-    <width>600</width>
+    <width>SettingsCatTextWidth</width>
     <height>43</height>
     <textoffsetx>45</textoffsetx>
     <radioposx>560</radioposx>
   </include>
 
   <include name="SettingsCatSpinCtlDims">
-    <width>600</width>
+    <width>SettingsCatTextWidth</width>
     <height>43</height>
     <textoffsetx>45</textoffsetx>
   </include>
@@ -616,8 +623,10 @@
     <height>500</height>
   </include>
 
+  <constant name="SettingsCategoryBtnWidth">218</constant>
+
   <include name="SettingsCategoryButtonDims">
-    <width>218</width>
+    <width>SettingsCategoryBtnWidth</width>
     <height>43</height>
   </include>
 
@@ -645,7 +654,7 @@
   <include name="CustomSettingsListDims">
     <posx>105</posx>
     <posy>65</posy>
-    <width>625</width>
+    <width>584</width>
     <height>400</height>
   </include>
 
@@ -832,7 +841,7 @@
   </include>
 
   <include name="WallStreamPosterOverlayZoomAnim">
-    <animation effect="zoom" tween="quadratic" end="-32,-43,220,200" time="300" delay="100" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="-28,-43,220,200" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
   <include name="WallStreamGenericFirstRowInfo">
@@ -1034,7 +1043,7 @@
   </include>
 
   <include name="WallStreamAlbumOverlayZoomAnim">
-    <animation effect="zoom" tween="quadratic" end="-30,-28,164,164" time="300" delay="100" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="-28,-29,164,164" time="300" delay="100" reversible="false">Focus</animation>
   </include>
 
   <include name="WallStreamMusicFirstRowInfo">
@@ -1493,8 +1502,8 @@
   </include>
 
   <include name="TVWideIconOverlayDims">
-    <posx>-2</posx>
-    <posy>5</posy>
+    <posx>3</posx>
+    <posy>11</posy>
     <width>180</width>
     <height>96</height>
   </include>
@@ -1588,8 +1597,8 @@
   </include>
 
   <include name="TVEpisodesSeasonEpThumbOverlayDims">
-    <posx>-3</posx>
-    <posy>18</posy>
+    <posx>0</posx>
+    <posy>22</posy>
     <width>164</width>
     <height>87</height>
   </include>
@@ -1833,18 +1842,18 @@
   </include>
 
   <include name="MusicAlbumsCoverOverlayDims">
-    <posx>155</posx>
-    <posy>3</posy>
+    <posx>156</posx>
+    <posy>5</posy>
     <width>30</width>
     <height>30</height>
   </include>
 
   <include name="MusicAlbumsFocusCoverOverlayDims">
-    <posx>155</posx>
-    <posy>30</posy>
+    <posx>156</posx>
+    <posy>33</posy>
     <width>30</width>
     <height>30</height>
-    <animation effect="zoom" tween="quadratic" end="106,6,60,60" time="MusicAlbumFocusZoomTime" delay="MusicAlbumFocusZoomDelay" reversible="false">Focus</animation>
+    <animation effect="zoom" tween="quadratic" end="107,9,60,60" time="MusicAlbumFocusZoomTime" delay="MusicAlbumFocusZoomDelay" reversible="false">Focus</animation>
   </include>
 
   <include name="MusicAlbumLargeCoverDims">
@@ -1878,8 +1887,8 @@
   </include>
 
   <include name="MusicSongsCoverOverlayDims">
-    <posx>-1</posx>
-    <posy>-7</posy>
+    <posx>1</posx>
+    <posy>1</posy>
     <width>170</width>
     <height>170</height>
   </include>
@@ -1934,8 +1943,8 @@
   </include>
 
   <include name="CoverflowGlassOverlayDims">
-    <posx>-3</posx>
-    <posy>-11</posy>
+    <posx>1</posx>
+    <posy>1</posy>
     <width>240</width>
     <height>240</height>
   </include>

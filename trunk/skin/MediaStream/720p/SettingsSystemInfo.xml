@@ -5,7 +5,6 @@
   <controls>
     <include>Background</include>
 
-
 <!-- Submenu blade / main menu -->
     <control type="group" id="302">
 			<include>SettingsSubBlade</include>
@@ -63,7 +62,6 @@
       </control>
     </control>
 
-
 <!-- Information area -->
     <include>SettingsTextArea</include>
 
@@ -90,7 +88,7 @@
 <!-- General Info -->
         <control type="grouplist">
           <description>General</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <visible>controlgroup(9000).hasfocus(100)</visible>
           <include>CustomSettingsList</include>
@@ -166,7 +164,7 @@
 <!-- Storage Info -->
         <control type="grouplist">
           <description>storage_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(101)</visible>
@@ -264,7 +262,7 @@
 <!-- Hard Disk Info -->
         <control type="grouplist">
           <description>harddisk_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(102)</visible>
@@ -327,7 +325,7 @@
 <!-- DVD Info -->
         <control type="grouplist">
           <description>dvd-rom_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(103)</visible>
@@ -360,7 +358,7 @@
 <!-- Network Info -->
         <control type="grouplist">
           <description>network_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(104)</visible>
@@ -423,7 +421,7 @@
 <!-- Video Info -->
         <control type="grouplist">
           <description>video_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(105)</visible>
@@ -455,7 +453,7 @@
 <!-- Hardware Info -->
         <control type="grouplist">
           <description>hardware_contents</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <height>500</height>
           <include>CustomSettingsList</include>
           <visible>controlgroup(9000).hasfocus(106)</visible>
@@ -524,7 +522,7 @@
 <!-- Misc Info -->
         <control type="grouplist">
           <description>misc_values</description>
-          <posx>145</posx>
+          <posx>SysInfoTextPosX</posx>
           <posy>484</posy>
           <height>200</height>
 
@@ -549,9 +547,9 @@
         </control>
 
         <control type="image">
-          <posx>140</posx>
+          <posx>SysInfoTextPosX</posx>
           <posy>480</posy>
-          <width>560</width>
+          <width>565</width>
           <height>200</height>
           <texture>BlackTransparent.png</texture>
           <colordiffuse>77666666</colordiffuse>
