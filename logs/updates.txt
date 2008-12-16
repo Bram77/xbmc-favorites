@@ -1,3 +1,4 @@
+  16-12-2008 :: [plugins][video]    ~ Updated the "NL TV" streams collection to the latest version
   16-12-2008 :: [plugins][video]    ~ Added the "NL TV" streams collection (Thanks tikkiew!)
   14-12-2008 :: [plugins][video]    ~ Updated the "VideoMonkey" plugin to the latest SVN version
   14-12-2008 :: [scripts]    	    ~ Updated the "T3CH Upgrader" script to the latest SVN version
