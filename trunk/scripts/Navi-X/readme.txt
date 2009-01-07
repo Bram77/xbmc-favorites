@@ -1,15 +1,11 @@
-Welcome to Navi-X v2.3
+Welcome to Navi-X v2.4
 
-Changelog (v2.3)
--Added new playlist "description=" element. Description can be multiple lines.
- The description shall be put in the header field above the playlist entries.
- Description shall start with text "description=".
- Description SHALL end with text "/description=". 
--Youtube parser: added Youtube playlists support.
--Youtube parser fix.
--Youtube long video name display.
--Improved caching for a better user experience.
--Apple movie trailer parser fix.
+Changelog (v2.4)
+-improved Shoutcast playlist loading.
+-improved PLX loading. Support both LF and CRLF.
+-Support new media type called 'plugin'. (plugin file needs to be a ZIP file).
+-Support description= field for every media item in PLX file.
+-Youtube fix.
 -Other minor improvements.
 
 Navi-X is tested using the T3CH build. If you are having problems

@@ -1,0 +1,67 @@
+﻿<window id="120">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="image">
+			<description>background</description>
+			<posx>7</posx>
+			<width>706</width>
+			<height>41</height>
+			<texture>white.png</texture>
+		</control>
+		<control type="label">
+			<posy>21</posy>
+			<posx>700</posx>
+			<align>right</align>
+			<include>dialog_file_name</include>
+			<include>2055</include>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>15</posx>
+			<posy></posy>
+			<width>706</width>
+			<height>25</height>
+			<itemgap>5</itemgap>
+			<orientation>horizontal</orientation>
+		<control type="button" id="2">
+			<description>skip_bwd</description>
+			<include>1017</include>
+			<onclick>xbmc.playercontrol(previous)</onclick>
+		</control>
+		<control type="button" id="3">
+			<description>rewind</description>
+			<include>1019</include>
+			<onclick>xbmc.playercontrol(rewind)</onclick>
+		</control>
+		<control type="button" id="4">
+			<description>play</description>
+			<include>1000</include>
+			<onclick>xbmc.playercontrol(play)</onclick>
+		</control>
+		<control type="button" id="5">
+			<description>forward</description>\
+			<include>1020</include>
+			<onclick>xbmc.playercontrol(forward)</onclick>
+		</control>
+		<control type="button" id="6">
+			<description>skip_fwd</description>\
+			<include>1018</include>
+			<onclick>xbmc.playercontrol(next)</onclick>
+		</control>
+		<control type="button" id="7">
+			<description>playlist</description>
+			<label>PLAYLIST</label>
+			<onclick>xbmc.activatewindow(500)</onclick>
+		</control>
+		<control type="button" id="8">
+			<description>Popup Vis Preset List</description>
+			<label>V PRESETS</label>
+			<onclick>XBMC.ActivateWindow(122)</onclick>
+		</control>
+		<control type="button" id="9">
+			<description>Popup Vis Settings</description>
+			<label>V SETTINGS</label>
+			<onclick>XBMC.ActivateWindow(121)</onclick>
+		</control>
+	</control>
+</controls>
+</window>

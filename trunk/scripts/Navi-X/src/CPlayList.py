@@ -108,7 +108,8 @@ class CPlayList:
         try:
             f = open(filename, 'r')
             data = f.read()
-            data = data.split('\n')
+#            data = data.split('\n')
+            data = data.splitlines()
             f.close()
         except IOError:
             return -2
@@ -126,6 +127,8 @@ class CPlayList:
         #parse playlist entries 
         counter = 0
         state = 0
+        tmp=''
+        
         for m in data:
             if state == 2: #parsing description field
                 index = m.find('/description')
@@ -134,6 +137,13 @@ class CPlayList:
                     state = 0
                 else:
                     self.description = self.description + "\n" + m
+            elif state == 3: #parsing description field
+                index = m.find('/description')
+                if index != -1:
+                    tmp.description = tmp.description + "\n" + m[:index]
+                    state = 1
+                else:
+                    tmp.description = tmp.description + "\n" + m
             elif m and m[0] != '#':
                 index = m.find('=')
                 if index != -1:
@@ -148,18 +158,18 @@ class CPlayList:
                         self.background=value
                     elif key == 'player' and state == 0:
                         self.player=value
-                    elif key == 'logo':
+                    elif key == 'logo' and state == 0:
                         self.logo=value
-                    elif key == 'title':
+                    elif key == 'title' and state == 0:
                             self.title=value
-                    elif key == 'description':
+                    elif key == 'description' and state == 0:
                             index = value.find('/description')
                             if index != -1:
                                 self.description=value[:index]
                             else:
                                 self.description=value
                                 state = 2 #description on more lines
-                    elif key == 'playmode':
+                    elif key == 'playmode' and state == 0:
                             self.playmode=value
                     elif key == 'type':
                         if state == 1:
@@ -187,13 +197,23 @@ class CPlayList:
                         tmp.player=value 
                     elif key == 'background':
                         tmp.background=value 
+                    elif key == 'description':
+                        self.description = ' ' #this will make the description field visible
+                        index = value.find('/description')
+                        if index != -1:
+                            tmp.description=value[:index]
+                        else:
+                            tmp.description=value
+                            state = 3 #description on more lines
+                        
                     
         if state == 1:
             self.list.append(tmp)
         
         #if no version ID is found then this is not a valid playlist.
-        if self.version == '-1':
-            return -2
+#the next lines to not work because they current playlist is already lost.
+#        if self.version == '-1':
+#            return -2
         
         return 0 #successful
         
@@ -255,6 +275,9 @@ class CPlayList:
                     if index != -1:
                         value = m[index+13:index2]
                         self.description = value
+                        index3 = m.find('<![CDATA[')
+                        if index3 != -1:
+                            self.description = self.description[9:-3]
                 
                 #fill the logo
                 index = m.find('<image>')
@@ -478,11 +501,12 @@ class CPlayList:
         try:
             f = open(filename, 'r')
             data = f.read()
-            if data.find('<!-- end vEntry -->') != -1:
-                entries = data.split('<!-- end vEntry -->')
-#                entries = data.split('class="vlentry"')
-            else:
-                entries = data.split('class="vDetailEntry"') #playlist
+            entries = data.split('<div class="video-entry">')
+#            if data.find('<!-- end vEntry -->') != -1:
+#                entries = data.split('<!-- end vEntry -->')
+##                entries = data.split('class="vlentry"')
+#            else:
+#                entries = data.split('class="vDetailEntry"') #playlist
 
             lines = data.split('\n')
             f.close()
@@ -511,7 +535,7 @@ class CPlayList:
         for m in entries:
             index1= m.find('class="vtitle marT5"')
             if index1 == -1:
-                index1= m.find('class="vllongTitle"')
+                index1= m.find('class="video-long-title"')
             if index1 == -1:
                 index1= m.find('class="vlshortTitle"')
             if index1 == -1:
@@ -590,18 +614,31 @@ class CPlayList:
             self.URL = mediaitem.URL
         
         loader = CFileLoader()
-        loader.load(self.URL, cacheDir + 'shoutcast.xml', proxy=proxy)
-        if loader.state != 0:
-            return -2
-        filename = loader.localfile
         
-        try:
-            f = open(filename, 'r')
-            data = f.read()
+        counter = 0
+        while counter < 5: #maximum 5 retries
+            loader.load(self.URL, cacheDir + 'shoutcast.xml', proxy=proxy)
+            if loader.state != 0:
+                return -2
+            filename = loader.localfile
+        
+            try:
+                f = open(filename, 'r')
+                data = f.read()
 
-            f.close()
-        except IOError:
-            return -2
+                f.close()
+            except IOError:
+                return -2
+        
+            if data.find('<?xml version="1.0"') != -1:
+                break #success
+                
+            #failed try again
+            counter = counter + 1
+            
+        if counter >= 5:
+            return -2 #failed
+
         
         #defaults
         self.version = plxVersion
@@ -868,6 +905,8 @@ class CPlayList:
         for i in range(len(self.list)):
             f.write('type=' + self.list[i].type + '\n')
             f.write('name=' + self.list[i].name + '\n')
+            if self.list[i].description != '':
+                f.write('description=' + self.list[i].description + '/description' + '\n')
             if self.list[i].thumb != 'default':
                 f.write('thumb=' + self.list[i].thumb + '\n')
             f.write('URL=' + self.list[i].URL + '\n')

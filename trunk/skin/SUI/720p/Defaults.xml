@@ -1,0 +1,123 @@
+<includes>
+	<default type="label">
+		<font>small</font>
+		<textcolor>normal</textcolor>
+		<scrollspeed>40</scrollspeed>
+	</default>
+	<default type="button">
+		<width>240</width>
+		<height>50</height>
+		<font>small</font>
+		<textcolor>normal</textcolor>
+		<focusedcolor>selected</focusedcolor>
+		<align>right</align>
+		<aligny>center</aligny>
+		<disabledcolor>fadetext</disabledcolor>
+	</default>
+	<default type="togglebutton">
+		<width>12</width>
+		<height>12</height>
+		<font>small</font>
+		<textcolor>dialog</textcolor>
+		<align>right</align>
+		<texturefocus>scroll_up_focus.png</texturefocus>
+		<texturenofocus>scroll_up.png</texturenofocus>
+		<alttexturefocus>scroll_down_focus.png</alttexturefocus>
+		<alttexturenofocus>scroll_down.png</alttexturenofocus>
+		<disabledcolor>fadetext</disabledcolor>
+	</default>
+	<default type="radiobutton">
+		<width>120</width>
+		<height>31</height>
+		<font>small</font>
+		<textcolor>normal</textcolor>
+		<focusedcolor>selected</focusedcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textureradiofocus>checkboxchecked.png</textureradiofocus>
+		<textureradionofocus>checkbox.png</textureradionofocus>
+		<textoffsetx>12</textoffsetx>
+		<disabledcolor>fadetext</disabledcolor>
+	</default>
+	<default type="textbox">
+		<width>220</width>
+		<height>190</height>
+		<font>small</font>
+		<textcolor>dialog</textcolor>
+		<spinwidth>18</spinwidth>
+		<spinheight>18</spinheight>
+		<spinposx>200</spinposx>
+		<spinposy>-20</spinposy>
+		<textureup>scroll_up.png</textureup>
+		<texturedown>scroll_down.png</texturedown>
+		<textureupfocus>scroll_up_focus.png</textureupfocus>
+		<texturedownfocus>scroll_down_focus.png</texturedownfocus>
+	</default>
+
+	<default type="spincontrol">
+		<align>center</align>
+		<width>15</width>
+		<height>15</height>
+		<align>center</align>
+		<font>small</font>
+		<textcolor>dialog</textcolor>
+		<textoffsetx>70</textoffsetx>
+		<texturefocus>button_overlay.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>scroll_up.png</textureup>
+		<texturedown>scroll_down.png</texturedown>
+		<textureupfocus>scroll_up_focus.png</textureupfocus>
+		<texturedownfocus>scroll_down_focus.png</texturedownfocus>
+		<reverse>yes</reverse>
+	</default>
+	<default type="spincontrolex">
+		<width>200</width>
+		<height>17</height>
+		<font>small</font>
+		<textcolor>normal</textcolor>
+		<focusedcolor>selected</focusedcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<textureup>scroll_up.png</textureup>
+		<texturedown>scroll_down.png</texturedown>
+		<textureupfocus>scroll_up_focus.png</textureupfocus>
+		<texturedownfocus>scroll_down_focus.png</texturedownfocus>
+		<reverse>yes</reverse>
+		<textoffsetx>12</textoffsetx>
+	</default>
+	<default type="listcontrol">
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>button_overlay.png</texturefocus>
+		<font>small</font>
+		<textcolor>dialog</textcolor>
+	</default>
+	<default type="progress">
+		<visible>true</visible>
+		<width>490</width>
+		<height>9</height>
+		<texturebg>progress_back.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>progress_mid.png</midtexture>
+		<righttexture>-</righttexture>
+	</default>
+	<default type="sliderex">
+		<description>default_slider</description>
+		<posx>530</posx>
+		<posy>150</posy>
+		<height>31</height>
+		<width>300</width>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<sliderwidth>100</sliderwidth>
+		<sliderheight>12</sliderheight>
+		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
+		<textureslidernib>osd_slider_nib_nf.png</textureslidernib>
+		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+		<font>small</font>
+		<textcolor>normal</textcolor>
+		<focusedcolor>selected</focusedcolor>
+		<textoffsetx>12</textoffsetx>
+	</default>
+</includes>

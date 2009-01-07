@@ -1,7 +1,7 @@
 ﻿########################################################
 # FR live streams list
 ########################################################
-action=add
+skill=add
 ########################################################
 # Live streams
 ########################################################
@@ -29,4 +29,24 @@ title=NRJ Groove
 type=live
 icon=video.monkey.image|nrj_groove.png
 url=mms://vipnrj.yacast.net/nrj_webtv01
+########################################################
+title=Orange SportInfo
+type=live
+icon=video.monkey.image|orange_sportinfo.png
+url=mms://livewm.orange.fr/live-multicanaux
+########################################################
+title=BFM TV
+type=live
+icon=video.monkey.image|bfm.png
+url=mms://vipmms9.yacast.net/bfm_bfmtv
+########################################################
+title=France 24
+type=live
+icon=video.monkey.image|france24.png
+url=mms://stream1.france24.yacast.net/f24_livefr
+########################################################
+title=Bloomberg TV
+type=live
+icon=video.monkey.image|bloomberg.png
+url=mms://a1807.l2489855499.c24898.n.lm.akamaistream.net/D/1807/24898/v0001/reflector:55499
 ########################################################

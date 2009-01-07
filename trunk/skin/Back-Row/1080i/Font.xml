@@ -65,6 +65,14 @@
       <size>47</size>
     </font>
 
+	<font>
+      <name>special17</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+	  <style>bold</style>
+      <size>36</size>
+    </font>
+
     <font>
       <name>font10</name>
       <filename>Decker.ttf</filename>
@@ -76,7 +84,7 @@
     <font>
       <name>font12</name>
       <filename>Decker.ttf</filename>
-      <size>27</size>
+      <size>25</size>
       <style>bold</style>
       <shadow>ff000000</shadow>
     </font>

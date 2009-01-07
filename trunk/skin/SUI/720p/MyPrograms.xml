@@ -1,0 +1,48 @@
+<window id="1">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="label">
+			<include>file_name</include>
+			<include>2024</include>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>0</posx>
+			<posy>545</posy>
+			<width>720</width>
+			<height>40</height>
+			<itemgap>5</itemgap>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>horizontal</orientation>
+			<control type="button" id="2">
+				<description>view</description>
+				<label>100</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="button" id="3">
+				<description>sort</description>
+				<label>103</label>
+				<textcolor>normal</textcolor>
+				<width>100</width>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>ascending</description>
+				<label>-</label>
+			</control>
+			<control type="button" id="98">
+				<description>gamesaves</description>
+				<label>20323</label>
+				<textcolor>normal</textcolor>
+				<onclick>ActivateWindow(35)</onclick>
+			</control>
+			<control type="button" id="99">
+				<description>online_gaming</description>
+				<label>998</label>
+				<textcolor>normal</textcolor>
+				<onclick>ActivateWindow(XLinkKai)</onclick>
+			</control>
+		</control>
+		<include>list</include>
+	</controls>
+</window>

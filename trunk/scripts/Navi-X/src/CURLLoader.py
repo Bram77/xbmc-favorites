@@ -99,30 +99,37 @@ class CURLLoader:
         pos = self.loc_url.find('&video_id=') #find last 'http' in the URL
         if pos != -1:
             pos2 = self.loc_url.find('&',pos+1) #find last 'http' in the URL
-            id = self.loc_url[pos+1:pos2]
+            id = self.loc_url[pos+10:pos2] #only the video ID
         
-        self.loc_url="http://www.navi-x.nl/youtube_flv.php?"+id
+        try:
+            oldtimeout=socket_getdefaulttimeout()
+            socket_setdefaulttimeout(url_open_timeout)
+
+            #retrieve the timestamp based on the video ID
+            self.f = urllib.urlopen("http://www.youtube.com/api2_rest?method=youtube.videos.get_video_token&video_id=" + id)
+            data=self.f.read()
+            
+            index1 = data.find('<t>')
+            index2 = data.find('</t>')
+            if (index1 != -1) and (index2 != -1):
+                t = data[index1+3:index2]
+                #t contains the timestamp now. Create the URL of the video file (high quality).
+                self.loc_url = "http://www.youtube.com/get_video.php?video_id=" + id + "&amp;t=" + t + "&amp;fmt=18"
+            else:
+                self.loc_url = ""
         
-#        Trace("na "+self.loc_url)
+        except IOError:
+            self.loc_url = "" #could not open URL
+            return -1 #fail
         
-        return 0
+        socket_setdefaulttimeout(oldtimeout)
+       
+#        Trace(self.loc_url)        
         
-#        t=''
-#        pos = self.loc_url.find('&t=') #find last 'http' in the URL
-#        if pos != -1:
-#            pos2 = self.loc_url.find('&',pos+1) #find last 'http' in the URL
-#            if pos2 != -1:
-#                t=self.loc_url[pos+1:pos2]
-#            else:
-#                t=self.loc_url[pos:]
-#        
-#        self.loc_url = 'http://www.youtube.com/get_video.php?'+id+'&'+t #flv file 
-#        #high resolution movies
-#        self.loc_url = 'http://www.youtube.com/get_video.php?'+id+'&'+t+'&fmt=18'  #flv file 
-#        
-#        Trace("na "+self.loc_url)
-#        
-#        return 0
+        if self.loc_url != "":
+            return 0 #success
+        else:
+            return -1 #failure
     
         
     ######################################################################

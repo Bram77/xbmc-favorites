@@ -14,6 +14,7 @@
 			<width>395</width>
 			<height>88</height>
 			<texture>Plot panel.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
 		</control>
 
     
@@ -88,6 +89,7 @@
 			<width>395</width>
 			<height>88</height>
 			<texture>keyboard-panel-overlay1.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
 		</control>
 
 	

@@ -1,0 +1,27 @@
+<window id="2004">
+	<defaultcontrol>5</defaultcontrol>
+	<controls>
+		<include>dialog_back</include>
+		<control type="label">
+			<include>dialog_file_name</include>
+			<include>2031</include>
+		</control>
+		<control type="label" id="1">
+			<description>scripts_output</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<label>262</label>
+		</control>
+		<control type="textbox" id="5">
+			<description>textarea</description>
+			<posx>200</posx>
+			<posy>10</posy>
+			<spinposy>0</spinposy>
+			<scroll>true</scroll>
+			<onleft>5</onleft>
+			<onright>50</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			</control>
+	</controls>
+</window>

@@ -124,6 +124,13 @@
       <size>34</size>
     </font>
 
+	<font>
+      <name>special17</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+	  <style>bold</style>
+      <size>26</size>
+    </font>
 
     <font>
       <name>fontBL</name>

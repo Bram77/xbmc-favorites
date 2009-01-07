@@ -176,18 +176,16 @@ class CFileLoader:
 
                     headers = f.info()
                     type = headers['Content-Type']
-                    
-#                    Trace(type)
+                    type = type.lower()
                     
                     if (content_type != '') and (type.find(content_type)  == -1):
                         #unexpected type
                         socket_setdefaulttimeout(oldtimeout)            
-                        self.state = -1 #failed
+                        self.state = -2 #failed
                         return
 
                     #open the destination file
                     file = open(localfile, "wb")
-                    #file.write(f.read(int(size_string)))
                     file.write(f.read())
                     file.close()          
                   
@@ -205,7 +203,8 @@ class CFileLoader:
             self.localfile = URL
             self.state = 0 #success
         else: #assuming relative (local) path
-            self.localfile = RootDir + '\\' + URL
+            self.localfile = RootDir + URL        
+#            self.localfile = RootDir + '\\' + URL
             self.state = 0 #success
 
 
@@ -216,7 +215,7 @@ class CFileLoader2:
     # Parameters : URL=source, localfile=destination
     # Return     : -
     ######################################################################
-    def load(self, URL, localfile, timout=url_open_timeout, proxy="CACHING"):
+    def load(self, URL, localfile, timeout=url_open_timeout, proxy="CACHING", content_type= ''):
         if (URL == '') or (localfile == ''):
             self.state = -1 #failed
             return
@@ -239,11 +238,21 @@ class CFileLoader2:
             if (not((proxy == "ENABLED") and (os.path.exists(localfile) == True))): 
                 try:
                     oldtimeout=socket_getdefaulttimeout()
-                    socket_setdefaulttimeout(timout)
+                    socket_setdefaulttimeout(timeout)
             
                     values = { 'User-Agent' : 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'}
-                    req = urllib2.Request(URL, None, values)
+                    #req = urllib2.Request(URL, None, values)
+                    req = urllib2.Request(URL)
                     f = urllib2.urlopen(req)
+                
+                    headers = f.info()
+                    type = headers['Content-Type']
+                    
+                    if (content_type != '') and (type.find(content_type)  == -1):
+                        #unexpected type
+                        socket_setdefaulttimeout(oldtimeout)            
+                        self.state = -1 #failed
+                        return
                 
                     #open the destination file
                     file = open(localfile, "wb")
@@ -253,8 +262,24 @@ class CFileLoader2:
                   
                 except IOError:
                     socket_setdefaulttimeout(oldtimeout)            
+
+#                    Trace("You have an IOError: ")
                     self.state = -1 #failed
                     return
+
+#                except urllib2.HTTPError:
+#                    socket_setdefaulttimeout(oldtimeout)
+#
+#                    Trace("There was an http error: ")
+#                    self.state = -1 #failed
+#                    return
+
+#                except urllib2.URLError, e:
+#                    socket_setdefaulttimeout(oldtimeout)
+#
+#                    Trace("There is a problem with the URL: " + str(e.reason))
+#                    self.state = -1 #failed
+#                    return
 
                 socket_setdefaulttimeout(oldtimeout)
                 

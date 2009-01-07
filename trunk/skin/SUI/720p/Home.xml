@@ -1,0 +1,533 @@
+<window id="0">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background.png</texture>
+			<aspectratio>keep</aspectratio>
+    			<colordiffuse>-</colordiffuse>
+		</control>
+		<control type="multiimage">
+			<description>Music Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>music-bg</imagepath>
+			<info>skin.string(music)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(1) | ControlGroup(301).HasFocus(0)</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>Videos Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>videos-bg</imagepath>
+			<info>skin.string(videos)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(2) | ControlGroup(302).HasFocus(0)</visible>
+			<animation effect="fade" start="100" end="0" time="500" condition="Control.HasFocus(3022) | Control.HasFocus(3023)">Conditional</animation>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>Movies Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>movies-bg</imagepath>
+			<info>skin.string(movies)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3021)</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>TV Shows Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>tvshows-bg</imagepath>
+			<info>skin.string(tvshows)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3022)</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>Music Videos Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>musicvideos-bg</imagepath>
+			<info>skin.string(musicvideos)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3023)</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>Pictures Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>pictures-bg</imagepath>
+			<info>skin.string(pictures)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3)</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+		</control>
+		<control type="multiimage">
+			<description>Progams Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>programs-bg</imagepath>
+			<info>skin.string(programs)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(4) | ControlGroup(303).HasFocus(0)</visible>
+			<animation effect="fade" start="100" end="0" time="500" condition="Control.HasFocus(3032) | Control.HasFocus(3033) | Control.HasFocus(3034)">Conditional</animation>
+			<include>backgroundfade</include>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		<control type="multiimage">
+			<description>Files Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>files-bg</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3041)</visible>
+			<include>backgroundfade</include>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		<control type="multiimage">
+			<description>Settings Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>settings-bg</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(5) | ControlGroup(304).HasFocus(0)</visible>
+			<animation effect="fade" start="100" end="0" time="500" condition="Control.HasFocus(3041) | Control.HasFocus(3042) | Control.HasFocus(3043)">Conditional</animation>
+			<aspectratio align="bottom">keep</aspectratio>
+			<include>backgroundfade</include>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		<control type="multiimage">
+			<description>Power Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>power-bg</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3043)</visible>
+			<include>backgroundfade</include>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		<control type="multiimage">
+			<description>Weather Context Background multimage</description>
+			<width>1050</width>
+			<height>590</height>
+			<imagepath>weather-bg</imagepath>
+			<info>skin.string(weather)</info>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>!Player.HasMedia</visible>
+			<visible>Control.HasFocus(3042)</visible>
+			<include>backgroundfade</include>
+			<aspectratio align="bottom">keep</aspectratio>
+		</control>
+		<control type="visualisation">
+			<width>1050</width>
+			<height>720</height>
+			<visible>Player.HasAudio</visible>
+			<animation effect="fade" time="250">VisibleChange</animation>
+		</control>
+		<control type="videowindow">
+			<description>video preview window</description>
+			<width>1050</width>
+			<height>590</height>
+			<visible>Player.HasVideo</visible>
+			<animation effect="fade" time="250">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>background image overlay</description>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backgroundoverlay.png</texture>
+			<aspectratio>keep</aspectratio>
+    			<colordiffuse>-</colordiffuse>
+		</control>
+		<control type="label">
+			<posx>150</posx>
+			<posy>620</posy>
+			<width>400</width>
+			<height>80</height>
+			<label>XBMC</label>
+			<align>Left</align>
+			<font>large</font>
+			<textcolor>fadetext</textcolor>
+			<visible>!Player.HasMedia</visible>
+			<animation effect="fade" time="250">WindowOpen</animation>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<animation effect="fade" time="250">VisibleChange</animation>
+		</control>
+		<control type="group" id="300">
+   			   <description>Main Menu Group Control</description>
+  			   <posx>890</posx>
+   			   <posy>185</posy>
+   			   <width>500</width>
+    			   <height>520</height>
+   			   <onup>300</onup>
+    			   <ondown>300</ondown>
+				<animation effect="slide" start="0,0" end="-370,0" time="200" condition="!ControlGroup(300).HasFocus(0)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="!ControlGroup(300).HasFocus(0)">Conditional</animation>
+			<control type="button" id="1">
+      				<description>Music Button</description>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3001</include>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(5)</onclick>
+      				<onup>5</onup>
+      				<ondown>2</ondown>
+      				<onleft>1</onleft>
+      				<onright>301</onright>
+			</control>
+			<control type="button" id="2">
+      				<description>Videos Button</description>
+     					<posy>65</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3000</include>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(6)</onclick>
+      				<onup>1</onup>
+      				<ondown>3</ondown>
+      				<onleft>2</onleft>
+      				<onright>3020</onright>
+			</control>
+			<control type="button" id="3">
+      				<description>Pictures Button</description>
+     					<posy>130</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3002</include>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(2)</onclick>
+      				<onup>2</onup>
+      				<ondown>4</ondown>
+      				<onleft>3</onleft>
+      				<onright>xbmc.activatewindow(2)</onright>
+			</control>
+			<control type="button" id="4">
+      				<description>Programs Button</description>
+     					<posy>195</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3003</include>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(1)</onclick>
+      				<onup>3</onup>
+      				<ondown>5</ondown>
+      				<onleft>4</onleft>
+      				<onright>3031</onright>
+			</control>
+			<control type="button" id="5">
+      				<description>System Button</description>
+     					<posy>260</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>system</label>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(settings)</onclick>
+      				<onup>4</onup>
+      				<ondown>1</ondown>
+      				<onleft>5</onleft>
+      				<onright>3040</onright>
+			</control>
+		</control>
+		<control type="group" id="301">
+   			   <description>Music Sub-menu</description>
+  			   <posx>890</posx>
+   			   <posy>185</posy>
+   			   <width>500</width>
+    			   <height>520</height>
+    			   <visible allowhiddenfocus="true">ControlGroup(301).HasFocus(0)</visible>
+   			   <onup>301</onup>
+    			   <ondown>301</ondown>
+    			   <onleft>300</onleft>
+			   <include>homemenuslide</include>
+			<control type="button" id="3011">
+      				<description>Music Library Button</description>
+     					<posy>0</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Library</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(musiclibrary)</onclick>
+      				<onup>3014</onup>
+      				<ondown>3012</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(musiclibrary)</onright>
+			</control>
+			<control type="button" id="3012">
+      				<description>Music Artists Button</description>
+     					<posy>65</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Artists</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(musiclibrary,artists)</onclick>
+      				<onup>3011</onup>
+      				<ondown>3013</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(musiclibrary,artists)</onright>
+			</control>
+			<control type="button" id="3013">
+      				<description>Music Albums Button</description>
+     					<posy>130</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Albums</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(musiclibrary,albums)</onclick>
+      				<onup>3012</onup>
+      				<ondown>3014</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(musiclibrary,albums)</onright>
+			</control>
+			<control type="button" id="3014">
+      				<description>Music Files Button</description>
+     					<posy>195</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Music Files</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(musicfiles)</onclick>
+      				<onup>3013</onup>
+      				<ondown>3011</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(musicfiles)</onright>
+			</control>
+		</control>
+		<control type="group" id="302">
+   			   <description>Videos Sub-menu</description>
+  			   <posx>890</posx>
+   			   <posy>185</posy>
+   			   <width>500</width>
+    			   <height>520</height>
+   			   <defaultcontrol>3021</defaultcontrol>
+    			   <visible allowhiddenfocus="true">ControlGroup(302).HasFocus(0)</visible>
+   			   <onup>302</onup>
+    			   <ondown>302</ondown>
+    			   <onleft>300</onleft>
+			   <include>homemenuslide</include>			
+			<control type="button" id="3020">
+      				<description>Videos Button</description>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3000</include>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(6)</onclick>
+      				<onup>3024</onup>
+      				<ondown>3021</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(6)</onright>
+			</control>
+			<control type="button" id="3021">
+      				<description>Movies Button</description>
+     					<posy>65</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Movies</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(videolibrary,movietitles)</onclick>
+      				<onup>3020</onup>
+      				<ondown>3022</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(videolibrary,movietitles)</onright>
+			</control>
+			<control type="button" id="3022">
+      				<description>TV Show Button</description>
+     					<posy>130</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>TV Shows</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(videolibrary,tvshowtitles)</onclick>
+      				<onup>3021</onup>
+      				<ondown>3023</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(videolibrary,tvshowtitles)</onright>
+			</control>
+			<control type="button" id="3023">
+      				<description>Music Videos Button</description>
+     					<posy>195</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Music Videos</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(videolibrary,musicvideotitles)</onclick>
+      				<onup>3022</onup>
+      				<ondown>3024</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(videolibrary,musicvideotitles)</onright>
+			</control>
+			<control type="button" id="3024">
+      				<description>Video Files Button</description>
+     					<posy>260</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Video Files</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(videofiles)</onclick>
+      				<onup>3023</onup>
+      				<ondown>3020</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(videofiles)</onright>
+			</control>
+		</control>
+		<control type="group" id="303">
+   			   <description>Programs Sub-menu</description>
+  			   <posx>890</posx>
+   			   <posy>185</posy>
+   			   <width>500</width>
+    			   <height>520</height>
+    			   <visible allowhiddenfocus="true">ControlGroup(303).HasFocus(0)</visible>
+   			   <onup>303</onup>
+    			   <ondown>303</ondown>
+    			   <onleft>300</onleft>
+			   <include>homemenuslide</include>
+			<control type="button" id="3031">
+      				<description></description>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Programs</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(programs)</onclick>
+      				<onup>3032</onup>
+      				<ondown>3032</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(programs)</onright>
+			</control>
+			<control type="button" id="3032">
+      				<description></description>
+     					<posy>65</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Scripts</label>
+      				<font>large</font>
+					<onclick>xbmc.activatewindow(scripts)</onclick>
+      				<onup>3031</onup>
+      				<ondown>3031</ondown>
+      				<onleft>300</onleft>
+      				<onright>xbmc.activatewindow(scripts)</onright>
+			</control>
+		</control>
+		<control type="group" id="304">
+   			   <description>System Submenu</description>
+  			   <posx>890</posx>
+   			   <posy>185</posy>
+   			   <width>500</width>
+    			   <height>520</height>
+   			   <defaultcontrol>11</defaultcontrol>
+    			   <visible allowhiddenfocus="true">ControlGroup(304).HasFocus(0)</visible>
+   			   <onup>301</onup>
+    			   <ondown>301</ondown>
+    			   <onleft>300</onleft>
+    			   <onright>300</onright>
+			   <include>homemenuslide</include>
+			<control type="button" id="3040">
+      				<description>Settings Button</description>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3008</include>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(settings)</onclick>
+      				<onup>3043</onup>
+      				<ondown>3041</ondown>
+      				<onleft>5</onleft>
+      				<onright>xbmc.activatewindow(settings)</onright>
+			</control>
+			<control type="button" id="3041">
+      				<description>Files Button</description>
+     					<posy>65</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<include>3007</include>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(3)</onclick>
+      				<onup>3040</onup>
+      				<ondown>3042</ondown>
+      				<onleft>5</onleft>
+      				<onright>xbmc.activatewindow(3)</onright>
+			</control>
+			<control type="button" id="3042">
+      				<description>Weather Button</description>
+     					<posy>130</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Weather</label>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(weather)</onclick>
+      				<onup>3041</onup>
+      				<ondown>3043</ondown>
+      				<onleft>5</onleft>
+      				<onright>xbmc.activatewindow(weather)</onright>
+			</control>
+			<control type="button" id="3043">
+      				<description>Power Button</description>
+     					<posy>195</posy>
+      				<width>300</width>
+      				<height>65</height>
+					<label>Power Menu</label>
+      				<font>large</font>
+      				<onclick>xbmc.activatewindow(shutdownmenu)</onclick>
+      				<onup>3042</onup>
+      				<ondown>3040</ondown>
+      				<onleft>5</onleft>
+      				<onright>xbmc.activatewindow(shutdownmenu)</onright>
+			</control>
+		</control>
+		<control type="image">
+			<description>Fade In/Out effect</description>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background.png</texture>
+    			<colordiffuse>-</colordiffuse>
+        		<animation effect="fade" time="200" start="100" end="0">WindowOpen</animation>
+        	 	<animation effect="fade" time="200" start="0" end="100">WindowClose</animation>
+		</control>
+	</controls>
+</window>

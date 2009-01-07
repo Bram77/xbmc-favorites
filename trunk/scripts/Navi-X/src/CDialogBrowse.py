@@ -18,6 +18,7 @@ import urllib2
 import re, random, string
 import xbmc, xbmcgui
 import re, os, time, datetime, traceback
+#import Image, ImageFile
 import shutil
 import zipfile
 from settings import *
@@ -28,12 +29,12 @@ except: Emulating = False
 RootDir = os.getcwd()
 if RootDir[-1]==';': RootDir=RootDir[0:-1]
 if RootDir[-1]!='\\': RootDir=RootDir+'\\'
-imageDir = RootDir + "\\images\\"
-cacheDir = RootDir + "\\cache\\"
-imageCacheDir = RootDir + "\\cache\\imageview\\"
+imageDir = RootDir + "images\\"
+cacheDir = RootDir + "cache\\"
+imageCacheDir = RootDir + "cache\\imageview\\"
 scriptDir = "Q:\\scripts\\"
 myDownloadsDir = RootDir + "My Downloads\\"
-initDir = RootDir + "\\init\\"
+initDir = RootDir + "init\\"
 
 ######################################################################
 # Description: Browse dialog class
