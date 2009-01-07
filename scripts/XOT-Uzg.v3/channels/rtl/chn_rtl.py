@@ -75,29 +75,37 @@ class Channel(chn_class.Channel):
     #==============================================================================
     def ParseMainList(self):
         # call the main list
+        items = []
+        if len(self.mainListItems) > 1:
+            return self.mainListItems
+        
         items = chn_class.Channel.ParseMainList(self)
         
         # get more items:
         url1 = "http://www.rtl.nl/service/gemist/home/"
         data1 = uriHandler.Open(url1, pb=True)         
         url2 = common.DoRegexFindAll('<script[^>]+src="([^"]+)"[^>]*></script><div id="navigatie_container">', data1)
-        #javaUrl = ""
+        
+        javaUrl = ""
         for url in url2:
             javaUrl = url
             pass
-        data = uriHandler.Open(javaUrl, pb=True)
         
-        moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"][^"]+"\]', data)
-        previousNumber = len(items)
-        number = 0
-        for item in moreItems:
-            #http://www.rtl.nl/system/video/menu/programma/helpmijnmanheefteenhobby/videomenu.xml
-            moreItem = common.clistItem(item[0], self.RtlFolderUri("/%s" % item[1], "videomenu.xml"))
-            moreItem.icon = self.folderIcon
-            moreItem.thumb = self.noImage
-            if items.count(moreItem) == 0:
-                number = number + 1
-                items.append(moreItem)
+        if javaUrl != "":
+            data = uriHandler.Open(javaUrl, pb=True)
+            
+            #moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"][^"]+"\]', data)
+            moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"]+"\]', data)
+            previousNumber = len(items)
+            number = 0
+            for item in moreItems:
+                #http://www.rtl.nl/system/video/menu/programma/helpmijnmanheefteenhobby/videomenu.xml
+                moreItem = common.clistItem(item[0], self.RtlFolderUri("/%s" % item[1], "videomenu.xml"))
+                moreItem.icon = self.folderIcon
+                moreItem.thumb = self.noImage
+                if items.count(moreItem) == 0:
+                    number = number + 1
+                    items.append(moreItem)
         
         logFile.debug("Added %s more RTL Items to the already existing %s", number, previousNumber)
         

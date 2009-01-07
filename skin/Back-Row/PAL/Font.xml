@@ -123,6 +123,14 @@
       <size>23</size>
     </font>
 
+	<font>
+      <name>special17</name>
+      <filename>Decker.ttf</filename>
+      <shadow>ff000000</shadow>
+	  <style>bold</style>
+      <size>23</size>
+    </font>
+
     <font>
       <name>fontBL</name>
       <filename>Decker.ttf</filename>

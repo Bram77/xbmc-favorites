@@ -1,0 +1,629 @@
+<window id="7">
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="label">
+			<include>2040</include>
+			<include>file_name</include>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>20</posx>
+			<posy>100</posy>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<itemgap>5</itemgap>
+		<control type="button" id="100">
+			<description>button</description>
+			<label>128</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="101">
+			<description>storage</description>
+			<label>13277</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="102">
+			<description>hdd</description>
+			<label>13275</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="103">
+			<description>dvd</description>
+			<label>13276</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="104">
+			<description>network</description>
+			<label>13279</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="105">
+			<description>video</description>
+			<label>13280</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="106">
+			<description>hardware</description>
+			<label>13281</label>
+			<textcolor>normal</textcolor>
+		</control>
+		</control>
+		<control type="group">
+			<description>contents</description>
+			<visible>controlgroup(9000).hasfocus(100)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20154</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.cpuusage]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar_diagram_cpu_usage</description>
+				<INFO>bar.cpuusage</INFO>
+				<posx>190</posx>
+				<posy>158</posy>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>173</posy>
+				<label>$LOCALIZE[139] $INFO[system.cputemperature]  -  $INFO[system.gputemperature]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>201</posy>
+				<label>$INFO[system.fanspeed]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>229</posy>
+				<label>$LOCALIZE[158] : $INFO[system.freememory]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>680</posx>
+				<posy>229</posy>
+				<align>right</align>
+				<label>$LOCALIZE[20161] : $INFO[system.memory(total)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar diagram free memory</description>
+				<info>bar.freememory</info>
+				<posx>190</posx>
+				<posy>257</posy>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posx>190</posx>
+				<posy>272</posy>
+				<label>$INFO[Network.IPAddress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posx>190</posx>
+				<posy>300</posy>
+				<label>$INFO[system.screenresolution]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posx>190</posx>
+				<posy>328</posy>
+				<label>$INFO[system.kernelversion]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posx>190</posx>
+				<posy>356</posy>
+				<label>$INFO[system.uptime]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posx>190</posx>
+				<posy>384</posy>
+				<label>$INFO[system.totaluptime]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>storage_contents</description>
+			<visible>controlgroup(9000).hasfocus(101)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20155</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.dvdtraystate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[system.freespace(c)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>680</posx>
+				<posy>158</posy>
+				<align>right</align>
+				<label>$INFO[system.totalspace(c)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar_free_space_c:</description>
+				<info>bar.freespace(c)</info>
+				<posx>190</posx>
+				<posy>184</posy>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>196</posy>
+				<label>$INFO[system.freespace(e)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>680</posx>
+				<posy>196</posy>
+				<align>right</align>
+				<label>$INFO[system.totalspace(e)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="progress">
+				<description>bar_free_space_e:</description>
+				<INFO>bar.freespace(e)</INFO>
+				<posx>190</posx>
+				<posy>222</posy>
+			</control>
+			<control type="group">
+				<visible>system.hasdrivef</visible>
+				<control type="label">
+					<description>5</description>
+					<posx>190</posx>
+					<posy>234</posy>
+					<label>$INFO[system.freespace(f)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>5</description>
+					<posx>680</posx>
+					<posy>234</posy>
+					<align>right</align>
+					<label>$INFO[system.totalspace(f)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar_free_space_f:</description>
+					<info>bar.freespace(f)</info>
+					<posx>190</posx>
+					<posy>260</posy>
+				</control>
+			</control>
+			<control type="group">
+				<visible>system.hasdriveg</visible>
+				<control type="label">
+					<description>6</description>
+					<posx>190</posx>
+					<posy>272</posy>
+					<label>$INFO[system.freespace(g)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>10</description>
+					<posx>680</posx>
+					<posy>272</posy>
+					<align>right</align>
+					<label>$INFO[system.totalspace(g)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar_free_space_g:</description>
+					<info>bar.freespace(g)</info>
+					<posx>190</posx>
+					<posy>298</posy>
+				</control>
+			</control>
+			<control type="group">
+				<control type="label">
+					<description>7</description>
+					<posx>190</posx>
+					<posy>310</posy>
+					<label>$INFO[system.freespace(x)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>8</description>
+					<posx>190</posx>
+					<posy>338</posy>
+					<label>$INFO[system.freespace(y)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>9</description>
+					<posx>190</posx>
+					<posy>366</posy>
+					<label>$INFO[system.freespace(z)]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>10</description>
+					<posx>190</posx>
+					<posy>394</posy>
+					<label>$INFO[system.freespace]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="label">
+					<description>10</description>
+					<posx>680</posx>
+					<posy>394</posy>
+					<align>right</align>
+					<label>$INFO[system.totalspace]</label>
+					<textcolor>normal</textcolor>
+				</control>
+				<control type="progress">
+					<description>bar Free Space Total</description>
+					<info>bar.freespace</info>
+					<posx>190</posx>
+					<posy>420</posy>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<description>harddisk_contents</description>
+			<visible>controlgroup(9000).hasfocus(102)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20156</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.hddINFOmodel]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[system.hddINFOserial]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>186</posy>
+				<label>$INFO[system.hddINFOfirmware]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>214</posy>
+				<label>$INFO[system.hddINFOpw]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posx>190</posx>
+				<posy>242</posy>
+				<label>$INFO[system.hddINFOlockstate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posx>190</posx>
+				<posy>270</posy>
+				<label>$INFO[system.hddlockkey]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posx>190</posx>
+				<posy>298</posy>
+				<label>$INFO[system.hddbootdate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posx>190</posx>
+				<posy>326</posy>
+				<label>$INFO[system.hddcyclecount]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posx>190</posx>
+				<posy>354</posy>
+				<label>$INFO[system.hddtemperature]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>dvd-rom_contents</description>
+			<visible>controlgroup(9000).hasfocus(103)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20157</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.dvdINFOmodel]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[system.dvdINFOfirmware]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>186</posy>
+				<label>$INFO[system.dvdzone]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>214</posy>
+				<label>$INFO[system.dvdtraystate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>network_contents</description>\
+			<visible>controlgroup(9000).hasfocus(104)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20158</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[network.isdhcp]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[network.linkstate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>186</posy>
+				<label>$INFO[network.macadress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>214</posy>
+				<label>$INFO[network.ipaddress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posx>190</posx>
+				<posy>242</posy>
+				<label>$INFO[network.subetadress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posx>190</posx>
+				<posy>270</posy>
+				<label>$INFO[network.gatewayadress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posx>190</posx>
+				<posy>298</posy>
+				<label>$INFO[network.dns1adress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posx>190</posx>
+				<posy>326</posy>
+				<label>$INFO[network.dns2adress]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posx>190</posx>
+				<posy>354</posy>
+				<label>$INFO[system.internetstate]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>video_contents</description>
+			<visible>controlgroup(9000).hasfocus(105)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20159</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.videoencoderINFO]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[system.screenresolution]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>186</posy>
+				<label>$INFO[system.avpackINFO]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>214</posy>
+				<label>$INFO[system.xberegion]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>hardware_contents</description>
+			<visible>controlgroup(9000).hasfocus(106)</visible>
+			<control type="label">
+				<description>section</description>
+				<posx>190</posx>
+				<posy>100</posy>
+				<label>20160</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>2</description>
+				<posx>190</posx>
+				<posy>130</posy>
+				<label>$INFO[system.xboxversion]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>3</description>
+				<posx>190</posx>
+				<posy>158</posy>
+				<label>$INFO[system.xboxserial]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>4</description>
+				<posx>190</posx>
+				<posy>186</posy>
+				<label>$INFO[system.cpufrequency]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>5</description>
+				<posx>190</posx>
+				<posy>214</posy>
+				<label>$INFO[system.modchip]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>6</description>
+				<posx>190</posx>
+				<posy>242</posy>
+				<label>$INFO[system.bios]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>7</description>
+				<posx>190</posx>
+				<posy>270</posy>
+				<label>$INFO[system.xboxproduceINFO]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>8</description>
+				<posx>190</posx>
+				<posy>298</posy>
+				<label>$INFO[system.controllerport(1)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>9</description>
+				<posx>190</posx>
+				<posy>326</posy>
+				<label>$INFO[system.controllerport(2)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>10</description>
+				<posx>190</posx>
+				<posy>354</posy>
+				<label>$INFO[system.controllerport(3)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label">
+				<description>11</description>
+				<posx>190</posx>
+				<posy>382</posy>
+				<label>$INFO[system.controllerport(4)]</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+		<control type="group">
+			<description>misc_values</description>
+			<control type="label" id="50">
+				<description>current_time</description>
+				<posx>190</posx>
+				<posy>445</posy>
+				<label>143</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label" id="52">
+				<description>xbmc_xbe_build_version</description>
+				<posx>190</posx>
+				<posy>470</posy>
+				<label>144</label>
+				<textcolor>normal</textcolor>
+			</control>
+			<control type="label" id="53">
+				<description>mplayer_dll_version</description>
+				<posx>190</posx>
+				<posy>495</posy>
+				<label>144</label>
+				<textcolor>normal</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

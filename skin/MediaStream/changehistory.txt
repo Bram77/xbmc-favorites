@@ -5,7 +5,7 @@ v1.00 (01/12/2008)
 ----- ------------
 
 Fixed: Width of text in the System Info screen
-Fixed: Positioning of the focus image for the vis settings button in the Music Visualisation screen
+Fixed: Positioning of the focus image for the visualisation settings button in the Music Visualisation screen
 Fixed: Aligning of the Now Playing UI on Home when shown on right of 4x3 screen
 Fixed: Width of Clock background when Large Clock is enabled
 

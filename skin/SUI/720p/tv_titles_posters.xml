@@ -1,0 +1,169 @@
+<includes>
+	<include name="tvposters">
+	<control type="group">
+			<visible>control.isvisible(54) + !system.idletime(4)</visible>
+			<include>contentpanel</include>
+			<include>contentpanellines</include>
+	</control>
+		<control type="image">
+			<description>Movie poster reflection</description>
+			<posx>25</posx>
+			<posy>558</posy>
+			<width>275</width>
+			<height>405</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="album-diffuse.png">defaultvideocover.png</texture>
+			<info>listitem.icon</info>
+			<aspectratio aligny="top">keep</aspectratio>
+			<visible>system.IdleTime(4) + Control.IsVisible(54)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="250">Visible</animation>
+			<animation effect="slide" start="0,-405" end="0,0" time="200" delay="250">Visible</animation>
+		</control>
+		<control type="wraplist" id="54">
+			<posx>0</posx>
+			<posy>128</posy>
+			<width>1280</width>
+			<height>467</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<visible>container.content(tvshows)</visible>
+    			<orientation>horizontal</orientation>
+     			<focusposition>0</focusposition>
+     			<viewtype label="TV Posters">wrap</viewtype>
+			<itemlayout height="467" width="288">
+				<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>275</width>
+					<height>405</height>
+					<texture fallback="defaultvideocover.png">$INFO[listitem.icon]</texture>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<animation effect="fade" start="100" end="0" time="200" condition="system.IdleTime(4)">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="467" width="288">
+				<control type="image">
+					<posx>22</posx>
+					<posx>22</posx>
+					<posy>22</posy>
+					<width>281</width>
+					<height>411</height>
+					<bordertexture>media-background-black.png</bordertexture>
+					<bordersize>3</bordersize>
+					<texture fallback="defaultvideocover.png">$INFO[listitem.icon]</texture>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<visible>![system.IdleTime(4) + control.isvisible(54)]</visible>
+			  	</control>	
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>25</posx>
+			<posy>153</posy>
+			<width>275</width>
+			<height>405</height>
+			<texture fallback="defaultvideocover.png">$INFO[listitem.icon]</texture>
+			<aspectratio aligny="bottom" align="right">stretch</aspectratio>
+			<visible>[system.IdleTime(3) + control.isvisible(54)]</visible>
+		</control>
+		<control type="image">
+			<description>righthand fade</description>
+			<posx>849</posx>
+			<posy>131</posy>
+			<width>461</width>
+			<height>461</height>
+			<aspectratio>stretch</aspectratio>
+			<visible>control.isvisible(54)</visible>
+			<texture>media-background-overlay.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="system.idletime(4)">conditional</animation>
+		</control>
+		<control type="image">
+			<posx>25</posx>
+			<posy>153</posy>
+			<width>275</width>
+			<height>405</height>
+			<texture fallback="defaultvideocover.png">$INFO[listitem.icon]</texture>
+			<aspectratio aligny="bottom" align="right">keep</aspectratio>
+			<visible>[system.IdleTime(3) + ControlGroup(9000).HasFocus(0) + control.isvisible(54)]</visible>
+		</control>
+		<control type="label">
+			<posx>300</posx>
+			<posy>565</posy>
+			<width>275</width>
+			<height>30</height>
+			<align>right</align>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.label][/LOWERCASE]</label>
+			<visible>control.isvisible(54)</visible>
+			<visible>![system.IdleTime(4)]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+		<control type="label">
+			<posx>300</posx>
+			<posy>600</posy>
+			<width>500</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<label>watched [B]$INFO[ListItem.Property(WatchedEpisodes)][/B] unwatched [B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+			<visible>control.isvisible(54)</visible>
+			<visible>![system.IdleTime(4)]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+	<control type="group">
+		<description> Idle Info Group</description>
+		<posx>315</posx>
+		<posy>425</posy>
+		<animation effect="fade" start="0" end="100" time="250" delay="460">Visible</animation>
+		<visible>[system.IdleTime(4) + Control.IsVisible(54)]</visible>
+			<control type="image">
+				<posx>-15</posx>
+				<posy>107</posy>
+				<width>815</width>
+				<height>3</height>
+				<texture>media-background-black.png</texture>
+			</control>
+			<control type="label">
+				<width>800</width>
+				<height>30</height>
+				<align>left</align>
+				<font>small</font>
+				<textcolor>selected</textcolor>
+				<info>listitem.year</info>
+			</control>
+			<control type="label">
+				<posy>25</posy>
+				<width>970</width>
+				<height>30</height>
+				<align>left</align>
+				<font>infolarge</font>
+				<scroll>true</scroll>
+				<textcolor>selected</textcolor>
+				<info>listitem.label</info>
+			</control>
+			<control type="label">
+				<posy>82</posy>
+				<width>538</width>
+				<height>30</height>
+				<textcolor>selected</textcolor>
+				<align>left</align>
+				<label>watched [B]$INFO[ListItem.Property(WatchedEpisodes)][/B] unwatched [B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+			</control>
+			<control type="textbox">
+				<posy>110</posy>
+				<width>800</width>
+				<height>182</height>
+				<align>justify</align>
+				<font>small</font>
+   				<pagecontrol>1</pagecontrol>
+     				<autoscroll delay="6000" time="2000" repeat="10000">control.hasfocus(54) + system.idletime(4)</autoscroll>
+      			<textcolor>normal</textcolor>
+				<label>$INFO[listitem.Plot][CR]</label>
+			</control>
+	</control>
+	</include>
+</includes>

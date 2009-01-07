@@ -76,7 +76,6 @@ class CPlayer(xbmc.Player):
             URL = playlist.list[first].URL
             xbmc.Player.play(self, URL)
         else:
-#            self.pls = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
         
             index = first
             urlopener = CURLLoader()
@@ -102,9 +101,6 @@ class CPlayer(xbmc.Player):
                 #no valid items found
                 return -1
                 
-            #start playing
-#            xbmc.Player.play(self, self.pls)
-            
         return 0
         
     def play_URL(self, URL):
@@ -119,22 +115,16 @@ class CPlayer(xbmc.Player):
             loader = CFileLoader() #file loader
             loader.load(URL, cacheDir + "playlist." + ext)
             if loader.state == 0: #success
-#                playlist = xbmc.PlayList(xbmc.PLAYLIST_MUSIC)
-#                playlist.clear()
-#                result = playlist.load(loader.localfile)
                 result = self.pls.load(loader.localfile)
                 if result == False:
                     return -1
-#                loc_url = playlist
         else:
             urlopener = CURLLoader()
             result = urlopener.urlopen(URL)
             if result != 0:
                 return -1
-#            loc_url = urlopener.loc_url
             self.pls.add(urlopener.loc_url)
 
-#        xbmc.Player.play(self, loc_url)
         xbmc.Player.play(self, self.pls)
         return 0
         

@@ -173,9 +173,10 @@ class Channel(chn_class.Channel):
         data = uriHandler.Open(item.url, pb=False)
         
         # them for RAM
-        asxRegex = '<a href="([^"]+asx)">'
+        asxRegex = '<a href="([^"]+asx)"'
         asxResults = common.DoRegexFindAll(asxRegex, data)
         if len(asxResults) > 0:
+            logFile.debug("Running ASX")
             item.mediaurl = "%s%s" % ("http://www.svt.se", asxResults[0]) 
         
         else:
@@ -183,6 +184,7 @@ class Channel(chn_class.Channel):
             ramRegex = '<a href="([^"]+ram)">'
             ramResults = common.DoRegexFindAll(ramRegex, data)
             if len(ramResults) > 0:
+                logFile.debug("Running RAM")
                 item.mediaurl = "%s%s" % ("http://www.svt.se", ramResults[0]) 
                         
             else:
@@ -190,7 +192,14 @@ class Channel(chn_class.Channel):
                 flvRegex = 'so.addVariable\("pathflv"\W*,\W*"([^"]+)"\W*\)'
                 flvResults = common.DoRegexFindAll(flvRegex, data)
                 if len(flvResults) > 0:
+                    logFile.debug("Running FLV")
                     item.mediaurl = flvResults[0]
+        
+        if item.mediaurl.startswith("rtmp"):
+            item.mediaurl = item.mediaurl.replace("_definst_","?slist=")
+            pass
+            #rtmp://fl1.c00928.cdn.qbrick.com/00928/?slist=/kluster/20090101/090102PASPARET_J53UJH
+            #rtmp://fl1.c00928.cdn.qbrick.com/00928/_definst_/kluster/20090101/090102PASPARET_J53UJH
         
         item.complete = True
         logFile.debug("Found mediaurl: %s", item.mediaurl)

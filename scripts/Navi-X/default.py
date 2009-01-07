@@ -1,7 +1,7 @@
 #############################################################################
 #
 # Navi-X Playlist browser
-# v2.3 by rodejo (rodejo16@gmail.com)
+# v2.4 by rodejo (rodejo16@gmail.com)
 #
 # -v1.01  (2007/04/01) first release
 # -v1.2   (2007/05/10)
@@ -29,6 +29,14 @@
 # -v2.1   (2008/08/08)
 # -v2.2   (2008/08/31)
 # -v2.3   (2008/10/18)
+# -v2.4   (2008/12/04)
+#
+# Changelog (v2.4)
+# -improved Shoutcast playlist loading.
+# -improved PLX loading. Support both LF and CRLF.
+# -Support new media type called 'plugin'. (plugin file needs to be a ZIP file).
+# -Support description= field for every media item in PLX file.
+# -Youtube fix.
 #
 # Changelog (v2.3)
 # -Added new playlist "description=" element.
@@ -84,6 +92,7 @@ from CDownLoader import *
 from CPlayer import *
 from CDialogBrowse import *
 from CTextView import *
+from CInstaller import *
 from skin import *
 
 try: Emulating = xbmcgui.Emulating
@@ -192,6 +201,9 @@ class MainWindow(xbmcgui.Window):
             #read the search history from the search.dat file
             self.onReadSearchHistory()
  
+            if self.home == home_URL_old:
+                self.home = home_URL
+ 
             #parse the home URL
             result = self.ParsePlaylist(URL=self.home)
             if result != 0: #failed
@@ -223,7 +235,8 @@ class MainWindow(xbmcgui.Window):
                             self.onSelectDownloads()
                         else:
                             pos = self.list.getSelectedPosition()
-                            self.SelectItem(self.playlist, pos)
+                            if pos >= 0:
+                                self.SelectItem(self.playlist, pos)
                     #home button
                     elif self.getFocus() == self.button_home:
                         self.pl_focus = self.playlist
@@ -267,6 +280,7 @@ class MainWindow(xbmcgui.Window):
                 self.listpos.setLabel(str(pos+1) + '/' + str(self.list.size()))
                 
                 self.UpdateThumb() #update thumb image
+                self.UpdateDescription() #update description field
             #end of function
              
     
@@ -354,6 +368,35 @@ class MainWindow(xbmcgui.Window):
                     self.user_logo.setVisible(0)
             
             self.state2_busy = 0
+                    
+        ######################################################################
+        # Description: Displays the logo or media item thumb on left side of
+        #              the screen.
+        # Parameters : -
+        # Return     : -
+        ######################################################################
+        def UpdateDescription(self):
+            if self.state2_busy != 0:
+                return
+        
+            self.state2_busy = 1
+
+            index = self.list.getSelectedPosition()
+            if index >= 0:
+                description = self.pl_focus.list[index].description
+            else:
+                description = ""
+                
+            #fill the main list description text box
+            if description == "":
+                description = self.pl_focus.description
+                
+            if description != '':
+                self.list2tb.reset()
+                self.list2tb.setText(description)
+                self.list2tb.setVisible(1)        
+        
+            self.state2_busy = 0                    
                     
         ######################################################################
         # Description: Parse playlist file. Playlist file can be a:
@@ -502,15 +545,15 @@ class MainWindow(xbmcgui.Window):
                     i=i+1
  
             #fill the main list description text box
-            if playlist.description != "":
-                self.list2tb.reset()
-                self.list2tb.setText(playlist.description)
+#            if playlist.description != "":
+#                self.list2tb.reset()
+#                self.list2tb.setText(playlist.description)
                 
             listcontrol.selectItem(start_index)
             self.loading.setVisible(0)
             listcontrol.setVisible(1)
-            if playlist.description != "":
-                self.list2tb.setVisible(1)
+#            if playlist.description != "":
+#                self.list2tb.setVisible(1)
             
             self.setFocus(listcontrol)
 
@@ -518,6 +561,8 @@ class MainWindow(xbmcgui.Window):
             self.listpos.setLabel(str(pos+1) + '/' + str(self.list.size()))
            
             self.UpdateThumb() #update thumb image
+           
+            self.UpdateDescription() #update description field
            
             self.state_busy = 0
             
@@ -543,6 +588,8 @@ class MainWindow(xbmcgui.Window):
                 return imageDir+'icon_search.png'
             elif type == 'directory':
                 return imageDir+'icon_playlist.png'
+            elif type[0:6] == 'plugin':
+                return imageDir+'icon_script.png'
                 
             return imageDir+'icon_'+str(type)+'.png'
                 
@@ -602,7 +649,8 @@ class MainWindow(xbmcgui.Window):
                     self.History.append(tmp)
                     self.history_count = self.history_count + 1
 
-            elif type == 'video' or type == 'audio':
+            elif type == 'video' or type == 'audio' or type == 'html':
+#these lines are used for debugging only
 #                self.onDownload()
 #                self.state_busy = 0
 #                self.selectBoxMainList()
@@ -637,14 +685,15 @@ class MainWindow(xbmcgui.Window):
                 self.viewImage(playlist, pos, 0, mediaitem.URL) #single file show
             elif type == 'text':
                 self.OpenTextFile(mediaitem=mediaitem)
-            elif type == 'script':
-                self.InstallScript(mediaitem.URL)
+            elif type == 'script' or type[0:6] == 'plugin':
+                self.InstallApp(mediaitem=mediaitem)
+#                self.InstallScript(mediaitem.URL)
             elif type == 'download':
                 self.onDownload()
             elif type == 'search_youtube' or type == 'search_shoutcast':
                 self.PlaylistSearch(mediaitem, append)
-            elif type == 'html':
-                #at this moment we do nothing with HTML files
+#            elif type == 'html':
+#                #at this moment we do nothing with HTML files
                 pass
             else:
                 dialog = xbmcgui.Dialog()
@@ -679,6 +728,9 @@ class MainWindow(xbmcgui.Window):
         ######################################################################
         def onPlayUsing(self):
             pos = self.list.getSelectedPosition()
+            if pos < 0: #invalid position
+                return
+                
             mediaitem = self.pl_focus.list[pos]
             URL = self.pl_focus.list[pos].URL
             autonext = False
@@ -849,30 +901,65 @@ class MainWindow(xbmcgui.Window):
             self.infotekst.setVisible(0)
             
         ######################################################################
-        # Description: Handles Installation of 1scripts
+        # Description: Handles Installation of Applications
         # Parameters : URL=URL to the script ZIP file.
         # Return     : -
         ######################################################################
-        def InstallScript(self, URL):            
+        def InstallApp( self, URL='', mediaitem=CMediaItem()):
             dialog = xbmcgui.Dialog()
-            if dialog.yesno("Message", "Install script?") == False:
-                return
+            if mediaitem.type == 'script':
+                if dialog.yesno("Message", "Install Script?") == False:
+                    return
+                installer = CInstaller()
+                result = installer.InstallScript(URL, mediaitem)
 
-            #download the script ZIP file
-            self.loader.load(URL, cacheDir + 'script.zip')
-            if self.loader.state != 0:
-                dialog.ok(" Script installer", "Script file could not be downloaded.")
-                return
-             
-            filename = self.loader.localfile
-
-            #todo display something on the screen while installing
-                
-            result = self.unzip_file_into_dir(filename, scriptDir)
-            if result == 0:
-                dialog.ok(" Script installer", "Installation successful.")
+            elif mediaitem.type[0:6] == 'plugin':
+                index=mediaitem.type.find(":")
+                if index != -1:
+                    type = mediaitem.type[index+1:] + " "
+                else:
+                    type = ''
+                if dialog.yesno("Message", "Install " + type + "Plugin?") == False:
+                    return
+                installer = CInstaller()
+                result = installer.InstallPlugin(URL, mediaitem)
             else:
-                dialog.ok(" Script installer", "Installation failed.")
+                result = -1 #failure
+             
+            if result == 0:
+                dialog.ok(" Installer", "Installation successful.")
+            elif result == -1:
+                dialog.ok(" Installer", "Installation aborted.")
+            elif result == -3:
+                dialog.ok(" Installer", "Invalid ZIP file.")
+            else:
+                dialog.ok(" Installer", "Installation failed.")
+                
+        ######################################################################
+        # Description: Handles Installation of a scripts
+        # Parameters : URL=URL to the script ZIP file.
+        # Return     : -
+        ######################################################################
+#        def InstallScript(self, URL):            
+#            dialog = xbmcgui.Dialog()
+#            if dialog.yesno("Message", "Install script?") == False:
+#                return
+#
+#            #download the script ZIP file
+#            self.loader.load(URL, cacheDir + 'script.zip')
+#            if self.loader.state != 0:
+#                dialog.ok(" Script installer", "Script file could not be downloaded.")
+#                return
+#             
+#            filename = self.loader.localfile
+#
+#            #todo display something on the screen while installing
+#                
+#            result = self.unzip_file_into_dir(filename, scriptDir)
+#            if result == 0:
+#                dialog.ok(" Script installer", "Installation successful.")
+#            else:
+#                dialog.ok(" Script installer", "Installation failed.")
 
         ######################################################################
         # Description: Handle selection of playlist search item (e.g. Youtube)
@@ -1130,16 +1217,17 @@ class MainWindow(xbmcgui.Window):
         def onSelectDownloads(self):
             if self.URL == downloads_file:
                 pos = self.list.getSelectedPosition()
-                if pos == 0:
-                    #Select the DL queue playlist.
-                    self.pl_focus = self.downloadqueue
-                    #fill and show the download queue
-                    self.ParsePlaylist(reload=False) #display download list
-                else:
-                    #Select the download list playlist.
-                    self.pl_focus = self.downloadslist
-                    #fill and show the downloads list
-                    self.ParsePlaylist(reload=False) #display download list
+                if pos >= 0:
+                    if pos == 0:
+                        #Select the DL queue playlist.
+                        self.pl_focus = self.downloadqueue
+                        #fill and show the download queue
+                        self.ParsePlaylist(reload=False) #display download list
+                    else:
+                        #Select the download list playlist.
+                        self.pl_focus = self.downloadslist
+                        #fill and show the downloads list
+                        self.ParsePlaylist(reload=False) #display download list
             elif self.URL == downloads_queue: #download queue
                 if self.downloadqueue.size() == 0:
                     #playlist is empty
@@ -1375,6 +1463,8 @@ class MainWindow(xbmcgui.Window):
                 else:
                     tmp.name = self.playlist.list[pos].name
                 tmp.thumb = self.playlist.list[pos].thumb
+                if tmp.thumb == 'default' and self.playlist.logo != 'none':
+                    tmp.thumb = self.playlist.logo
                 tmp.URL = self.playlist.list[pos].URL
                 tmp.player = self.playlist.list[pos].player
                 self.favoritelist.add(tmp)
@@ -1388,6 +1478,8 @@ class MainWindow(xbmcgui.Window):
                     tmp.name = keyboard.getText()
                 else:
                     tmp.name = self.playlist.title
+                if self.playlist.logo != 'none':
+                    tmp.thumb = self.playlist.logo
                 tmp.URL = self.URL
                 tmp.player = self.mediaitem.player
                 tmp.background = self.mediaitem.background
@@ -1412,7 +1504,6 @@ class MainWindow(xbmcgui.Window):
                 data = f.read()
                 data = data.split('\n')
                 home=data[0]
-#                if home != home_URL_old:
                 self.home=home
                 self.dwnlddir=data[1]
                 f.close()
@@ -1480,32 +1571,32 @@ class MainWindow(xbmcgui.Window):
         # Parameters : zip filename and destination directory
         # Return     : -
         ######################################################################                    
-        def unzip_file_into_dir(self, file, dir):
-            chk_confirmation = False
-            
-            if os.path.exists(dir) == False:
-                return -1
-            
-            zfobj = zipfile.ZipFile(file)
-            
-            for name in zfobj.namelist():
-                if name.endswith('/'):
-                    if os.path.exists(dir+name):
-                        #directory exists
-                        if chk_confirmation == False:
-                            dialog = xbmcgui.Dialog()
-                            if dialog.yesno("Message", "Directory " + name + " already exists, continue?") == False:
-                                return -1
-                            chk_confirmation = True
-                    else: 
-                        #create the directory
-                        os.mkdir(os.path.join(dir, name))
-                else:
-                    outfile = open(os.path.join(dir, name), 'wb')
-                    outfile.write(zfobj.read(name))
-                    outfile.close()
-                    
-            return 0 #succesful
+#        def unzip_file_into_dir(self, file, dir):
+#            chk_confirmation = False
+#            
+#            if os.path.exists(dir) == False:
+#                return -1
+#            
+#            zfobj = zipfile.ZipFile(file)
+#            
+#            for name in zfobj.namelist():
+#                if name.endswith('/'):
+#                    if os.path.exists(dir+name):
+#                        #directory exists
+#                        if chk_confirmation == False:
+#                            dialog = xbmcgui.Dialog()
+#                            if dialog.yesno("Message", "Directory " + name + " already exists, continue?") == False:
+#                                return -1
+#                            chk_confirmation = True
+#                    else: 
+#                        #create the directory
+#                        os.mkdir(os.path.join(dir, name))
+#                else:
+#                    outfile = open(os.path.join(dir, name), 'wb')
+#                    outfile.write(zfobj.read(name))
+#                    outfile.close()
+#                    
+#            return 0 #succesful
 
 
 win = MainWindow()

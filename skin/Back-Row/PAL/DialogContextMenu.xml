@@ -4,7 +4,7 @@
 	<include>dialog-effect</include>
 	<coordinates>
 	<system>1</system>
-	<origin x="235" y="130">true</origin>
+	<origin x="235" y="120">true</origin>
 	</coordinates>
 	<controls>
 
@@ -14,13 +14,25 @@
 		<description>Profile Background -3</description>
 		<type>image</type>
 		<id>1</id>
+		<posx>-235</posx>
+		<posy>-120</posy>
+		<width>720</width>
+		<height>576</height>
+		<texture>black.png</texture>
+	</control>
+	
+<control>
+		<description>Profile Background -3</description>
+		<type>image</type>
+		<id>1</id>
 		<posx>0</posx>
 		<posy>-53</posy>
 		<width>250</width>
 		<height>450</height>
-		<texture>context.png</texture>
+		<texture>List background.png</texture>
 	</control>
 
+	
 	<control>
 		<description>Heading Label</description>
 		<type>label</type>
@@ -43,7 +55,7 @@
 		<height>26</height>
 		<align>center</align>
 		<texturefocus>input-focus.png</texturefocus>
-		<texturenofocus>input-nofocus.png</texturenofocus>
+		<texturenofocus></texturenofocus>
 	</control>
 
 	

@@ -1,0 +1,109 @@
+<window id="34">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="label">
+			<include>file_name</include>
+			<include>2034</include>
+		</control>
+		<control type="group" id="9000">
+			<control type="radiobutton" id="4">
+				<description>enable_login_screen</description>
+				<posx>5</posx>
+				<posy>100</posy>
+				<width>130</width>
+				<textcolor>normal</textcolor>
+				<label>20096</label>
+				<onright>2</onright>
+				<onleft>2</onleft>
+			</control>
+		</control>
+		<control type="list" id="2">
+			<posx>190</posx>
+			<posy>100</posy>
+			<width>485</width>
+			<height>425</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>2</onup>
+			<ondown>2</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$localize[535] 2">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="27">
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>10</width>
+					<height>10</height>
+					<texture>unknown_user.png</texture>
+					<info>listitem.icon</info>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+					<posy>3</posy>
+					<width>440</width>
+					<height>22</height>
+					<textcolor>normal</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>listitem.label</info>
+				</control>
+				<control type="label">
+					<posx>475</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>22</height>
+					<textcolor>normal</textcolor>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>listitem.label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75">
+				<control type="image">
+					<width>485</width>
+					<height>75</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>button_overlay.png</texture>
+				</control>
+				<control type="image">
+					<posx>4</posx>
+					<posy>5</posy>
+					<width>66</width>
+					<height>65</height>
+					<texture>unknown_user.png</texture>
+					<info>listitem.icon</info>
+				</control>
+				<control type="image">
+					<posx>70</posx>
+					<posy>40</posy>
+					<width>28</width>
+					<height>28</height>
+					<info>listitem.overlay</info>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>7</posy>
+					<width>400</width>
+					<height>16</height>
+					<textcolor>normal</textcolor>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<info>listitem.label</info>
+				</control>
+				<control type="label">
+					<posx>475</posx>
+					<posy>56</posy>
+					<width>350</width>
+					<height>16</height>
+					<textcolor>normal</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					<info>listitem.label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+	</controls>
+</window>

@@ -42,11 +42,22 @@ initDir = RootDir + "\\init\\"
 #        self.URL = URL      #URL to playlist entry
 ######################################################################
 class CMediaItem:
-    def __init__(self, type='unknown', version=plxVersion, name='', thumb='default', URL='', DLloc='', player='default', background='default'):
+    def __init__(self, \
+                  type='unknown', \
+                  version=plxVersion, \
+                  name='', \
+                  description='', \
+                  thumb='default', \
+                  URL='', \
+                  DLloc='', \
+                  player='default', \
+                  background='default'):
         self.type = type    #(required) type (playlist, image, video, audio, text)
         self.version = version #(optional) playlist version
         self.name = name    #(required) name as displayed in list view
+        self.description = description    #(optional) description of this item
         self.thumb = thumb  #(optional) URL to thumb image or 'default'
+#        self.icon = thumb  #(optional) URL to icon image or 'default'
         self.URL = URL      #(required) URL to playlist entry
         self.DLloc = DLloc  #(optional) Download location
         self.player = player #(optional) player core to use for playback

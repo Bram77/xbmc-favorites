@@ -91,6 +91,8 @@
 
 <include>CD Case Wrap2</include>
 
+<include>3D_Cover_View</include>
+
  
   <control type="image">
     <description>list item icon</description>
@@ -293,7 +295,7 @@
     <texturenofocus>-</texturenofocus>
 	<onup>17</onup>
     <ondown>2</ondown>
-    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56)  Control.HasFocus(57) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
+    <visible allowhiddenfocus="true">![Window.Next(Home) | Control.HasFocus(50) | Control.HasFocus(51) | Control.HasFocus(52) | Control.HasFocus(53) | Control.HasFocus(54) | Control.HasFocus(55) | Control.HasFocus(23) | Control.HasFocus(24) | Control.HasFocus(56) | Control.HasFocus(57) | Control.HasFocus(58) | Control.HasFocus(59) | Control.HasFocus(90)]</visible>
    </control>
 
   </controlgroup>

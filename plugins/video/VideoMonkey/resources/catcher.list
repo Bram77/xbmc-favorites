@@ -2,69 +2,156 @@
 # VideoMonkey Catcher list
 ########################################################
 # title: str <- Start flag
+# target: RegEx <- Start flag
+# url: *%s*
 # data: *%s*
 # header str|str
-# url: *%s* or str
-# source: RegEx <- Start flag
-# source_extension: str
-# source_quality: low, standard or high <- End flag
+# limit: int
+# action: str
+# build: *%s*
 # ext_target: RegEx
-# extension: str (default: flv)
-# target: RegEx <- End flag
+# ext_url: *%s*
+# ext_data: *%s*
+# ext_header str|str
+# ext_limit: int
+# ext_action: str
+# ext_build: *%s*
+# extension: str (default = flv)
+# info: str
+# quality: low, standard, high or fallback <- End flag
 ########################################################
 # Catcher sites
 ########################################################
 title=2video.de
-url=http://www.2video.de/index.php?dl=%s&action=download
 target=<div id=\"box\">[^<]*<h2>Download</h2>[^<]*<p><a href=\"([^\"]+)\" target=\"_blank\">
-########################################################
-title=keepvid.com
-url=http://keepvid.com/?url=%s
-header=Referer|http://keepvid.com/
-source=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">[^<]+</a>[^<]+<em>\(video\.flv - Low Quality\)
-source_extension=flv
-source_quality=standard
-source=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">[^<]+</a>[^<]+<em>\(video\.mp4 - High Quality\)
-source_extension=mp4
-source_quality=high
-target=<a href=\"([^\"]+)\" class=\"link\" target=\"\_blank\">
-########################################################
-title=viloader.net
-data=action=formDownload&url=%s&json=false
-header=Referer|http://www.viloader.net
-url=http://www.viloader.net/mybic_server.php
-target=unescape%28%22(http.+?\.flv)%22%29%3
-########################################################
-title=grabit.to
-url=http://www.grabit.to/index.php?txt_url=%s
-target=<h1>Der Downloadlink wurde erfolgreich gefunden\!</h1>[^<]+<p>Video: </p>[^<]+<p><strong><a href=\"([^\"]+)\">
+url=http://www.2video.de/index.php?dl=%s&skill=download
+quality=standard
 ########################################################
 title=clipnabber.com
+target=<a href='([^']+)' *><strong>FLV
+url=http://clipnabber.com/gethint.php
 data=mode=1&url=%s
 header=Referer|http://www.clipnabber.com
-url=http://clipnabber.com/gethint.php
-source=<a href='([^']+)' *><strong>FLV
-source_extension=flv
-source_quality=standard
-source=<a href='([^']+)' *><strong>MP4
-source_extension=mp4
-source_quality=high
+extension=flv
+quality=standard
+target=<a href='([^']+)' *><strong>MP4
+extension=mp4
+quality=high
 target=<a href='([^']+)' *><strong>
-########################################################
-title=porn2pc.com
-data=url=%s&Submit=Downlod+video+with+Porn2PC
-header=Referer|http://porn2pc.com/
-url=http://porn2pc.com/post.php
-ext_target=<h2>([^<]+)</h2>
-target=<a href=\"([^\"]+)\"[^>]+><b>CLICK HERE TO DOWNLOAD MOVIE</b></a>
+quality=fallback
 ########################################################
 title=atrapavideo.com
+target=so.addVariable\('file','(.+?.flv)
+url=http://www.atrapavideo.com/video
 data=data[url]=%s
 header=Referer|http://www.atrapavideo.com/en/
-url=http://www.atrapavideo.com/video
-target=so.addVariable\('file','(.+?.flv)
+quality=standard
 ########################################################
 title=degrab.de
-url=http://www.degrab.de/?url=%s
 target=Klick auf den <a href=\"([^\"]+)\"
+url=http://www.degrab.de/?url=%s
+action=unquote
+quality=standard
+########################################################
+title=kcoolonline.com
+target=<a href='(.+?)'
+url=http://www.kcoolonline.com/index.php?url=%s
+quality=standard
+########################################################
+title=arte.tv
+target=availableFormats\[\d]\["format"] = "WMV";\n    availableFormats\[\d]\["quality"] = "MQ";\n    availableFormats\[\d]\["url"] = "(.+?)\?
+url=%s
+ext_target=HREF="(.*?)"
+ext_limit=500
+extension=wmv
+quality=standard
+target=availableFormats\[\d]\["format"] = "WMV";\n    availableFormats\[\d]\["quality"] = "HQ";\n    availableFormats\[\d]\["url"] = "(.+?)\?
+ext_target=HREF="(.*?)"
+ext_limit=500
+extension=wmv
+quality=high
+# FLV sources deactivated until rtmp support
+#target=availableFormats\[\d]\["format"] = "FLV";\n    availableFormats\[\d]\["quality"] = "MQ";\n    availableFormats\[\d]\["url"] = "(.+?)"
+#extension=flv
+#quality=standard
+#target=availableFormats\[\d]\["format"] = "FLV";\n    availableFormats\[\d]\["quality"] = "HQ";\n    availableFormats\[\d]\["url"] = "(.+?)"
+#extension=flv
+#quality=high
+########################################################
+title=ard.de
+target=player\.avaible_url\['microsoftmedia'\]\['1'\] *= *"([^"]+)"
+url=%s
+ext_target=HREF *= *"([^"]+)"
+extension=wmv
+quality=low
+target=player\.avaible_url\['microsoftmedia'\]\['2'\] *= *"([^"]+)"
+ext_target=HREF *= *"([^"]+)"
+extension=wmv
+quality=standard
+target=player\.avaible_url\['microsoftmedia'\]\['3'\] *= *"([^"]+)"
+ext_target=HREF *= *"([^"]+)"
+extension=wmv
+quality=high
+target=player\.avaible_url\['quicktime'\]\['1'\] *= *"([^"]+)"
+extension=mp4
+quality=low
+target=player\.avaible_url\['quicktime'\]\['2'\] *= *"([^"]+)"
+extension=mp4
+quality=standard
+target=player\.avaible_url\['quicktime'\]\['3'\] *= *"([^"]+)"
+extension=mp4
+quality=high
+target=player\.avaible_url\['realmedia'\]\['1'\] *= *"([^"]+)"
+extension=rm
+quality=low
+target=player\.avaible_url\['realmedia'\]\['2'\] *= *"([^"]+)"
+extension=rm
+quality=standard
+target=player\.avaible_url\['realmedia'\]\['3'\] *= *"([^"]+)"
+extension=rm
+quality=high
+target=player\.avaible_url\['flashmedia'\]\['1'\] *= *"([^"]+)"
+extension=flv
+quality=low
+target=player\.avaible_url\['flashmedia'\]\['2'\] *= *"([^"]+)"
+extension=flv
+quality=standard
+target=player\.avaible_url\['flashmedia'\]\['3'\] *= *"([^"]+)"
+extension=flv
+quality=high
+########################################################
+title=zdf.de
+target="assetUrl": *"([^"]+)"
+url=%s&bw=isdn&pp=wmp
+ext_target=href *= *"([^"]+)"
+info=Modem- oder ISDN-Verbindung
+extension=asf
+quality=low
+target="assetUrl": *"([^"]+)"
+url=%s&bw=dsl1000&pp=wmp
+ext_target=href *= *"([^"]+)"
+info=DSL- oder Breitband-Verbindung
+extension=asf
+quality=standard
+target="assetUrl": *"([^"]+)"
+url=%s&bw=dsl2000&pp=wmp
+ext_target=href *= *"([^"]+)"
+info=ab DSL-2000
+extension=asf
+quality=high
+########################################################
+title=alphacentauri.de
+target=player\.avaible\_url\['flashmedia'\]\['1'\] = "(http://[^"]+)";
+url=%s
+extension=flv
+quality=standard
+target=player\.avaible\_url\['flashmedia'\]\['2'\] = "(http://[^"]+)";
+extension=flv
+quality=high
+target=player\.avaible\_url\['microsoftmedia'\]\['1'\] = "(http://[^"]+)";
+extension=wmv
+quality=standard
+target=player\.avaible\_url\['microsoftmedia'\]\['2'\] = "(http://[^"]+)";
+extension=wmv
+quality=high
 ########################################################

@@ -24,10 +24,10 @@
 <control type="image">
 		<description>backgorund</description>
 		<posx>0</posx>
-		<posy>50</posy>
+		<posy>0</posy>
 		<width>720</width>
-		<height>496</height>
-		<texture>sub-background3.png</texture>
+		<height>576</height>
+		<texture>BlackGloss.png</texture>
 		<aspectratio>stretch</aspectratio>
 		<animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1">WindowOpen</animation>
 		<animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1">WindowClose</animation>
@@ -69,7 +69,7 @@
 			<font>font13</font>
 			<textcolor>white</textcolor>
 			<textoffsetx>7</textoffsetx>
-			<texturefocus>list-focus.png</texturefocus>
+			<texturefocus>input-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
 
@@ -79,7 +79,7 @@
 			<posy>150</posy>
 			<font>font13</font>
 			<textcolor>white</textcolor>
-			<texturefocus>list-focus.png</texturefocus>
+			<texturefocus>input-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textoffsetx>7</textoffsetx>
 			<textureradiofocus>settings-check-box.png</textureradiofocus>
@@ -91,7 +91,7 @@
 			<posx>530</posx>
 			<posy>150</posy>
 			<width>300</width>
-			<texturefocus>list-focus.png</texturefocus>
+			<texturefocus>input-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<textureup>scroll-up.png</textureup>
 			<texturedown>scroll-down.png</texturedown>

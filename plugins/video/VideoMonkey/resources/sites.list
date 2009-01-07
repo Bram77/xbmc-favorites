@@ -5,7 +5,8 @@
 ########################################################
 title=  TV  
 type=rss
-genre=TV
+genre=VideoMonkey
+director=VideoMonkey
 icon=video.monkey.image|tv.png
 url=tv.sites.list
 ########################################################
@@ -13,7 +14,8 @@ url=tv.sites.list
 ########################################################
 title=  LIVE  
 type=rss
-genre=LIVE
+genre=VideoMonkey
+director=VideoMonkey
 icon=video.monkey.image|station.png
 url=live.sites.list
 ########################################################
@@ -22,14 +24,7 @@ url=live.sites.list
 title=video.monkey.locale|30104
 type=rss
 genre=VideoMonkey
+director=VideoMonkey
 icon=video.monkey.image|sites.png
 url=more.sites.list
-########################################################
-# More adult sites
-########################################################
-title=video.monkey.locale|30104
-type=adult_rss
-genre=VideoMonkey
-icon=video.monkey.image|erotic.png
-url=more.adult.list
 ########################################################

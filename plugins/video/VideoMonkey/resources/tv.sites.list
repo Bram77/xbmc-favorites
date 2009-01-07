@@ -1,27 +1,31 @@
 ﻿########################################################
 # VideoMonkey Plugin tv sites list
 ########################################################
-action=add
+skill=add
 ########################################################
 # TV sites
 ########################################################
 title=ZDF mediathek (DE)
 type=rss
 icon=video.monkey.image|zdf_mediathek.png
+director=ZDF mediathek
 url=zdf.de.cfg
 ########################################################
-# title=ARD mediathek (DE)
-# type=rss
-# icon=video.monkey.image|ard_mediathek.png
-# url=ard.de.cfg
+title=ARD mediathek (DE)
+type=rss
+icon=video.monkey.image|ard_mediathek.png
+director=ARD mediathek
+url=ard.de.cfg
 ########################################################
 title=arte+7
 type=rss
 icon=video.monkey.image|arte_plus7.png
+director=arte+7
 url=arteplus7.cfg
 ########################################################
 title=Alpha Centauri (DE)
 type=rss
 icon=video.monkey.image|alpha_centauri.png
+director=Alpha Centauri
 url=alphacentauri.de.cfg
 ########################################################
