@@ -1,0 +1,226 @@
+<includes>
+<include name="episodes">
+		<control type="largeimage" id="13">
+			<description>TV Fanart</description>
+			<posx>-3</posx>
+			<posy>-3</posy>
+			<width>1286</width>
+			<height>726</height>
+			<visible>control.isvisible(52)</visible>
+			<info>Fanart.Image</info>
+			<visible>!Player.HasMedia</visible>
+			<animation effect="fade" time="800" delay="300">visible</animation>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="multiimage">
+			<description>Per Season Manual Fanart Multi-image</description>
+			<width>1280</width>
+			<height>720</height>
+			<imagepath>$INFO[listitem.path]fanart/</imagepath>
+			<timeperimage>20000</timeperimage>
+			<fadetime>2000</fadetime>
+      		<randomize>true</randomize>
+			<visible>control.isvisible(52) + !player.HasMedia</visible>
+			<aspectratio align="bottom">keep</aspectratio>
+			<animation effect="fade" time="300">visible</animation>
+		</control>
+		<control type="image">
+			<description>content panel</description>
+			<posx>0</posx>
+			<posy>190</posy>
+			<width>1280</width>
+			<height>530</height>
+			<visible>control.IsVisible(52)</visible>
+			<texture>media-background-small.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<posy>630</posy>
+			<width>1280</width>
+			<height>3</height>
+			<texture>media-background-black.png</texture>
+			<visible>!system.IdleTime(4) + Control.IsVisible(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<posy>633</posy>
+			<width>1280</width>
+			<height>107</height>
+			<texture>media-background-grey.png</texture>
+			<visible>!system.IdleTime(4) + Control.IsVisible(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<posx>33</posx>
+			<posy>708</posy>
+			<width>295</width>
+			<height>295</height>
+			<info>listitem.icon</info>
+			<texture flipy="true" diffuse="album-diffuse.png">defaultvideocover.png</texture>
+			<aspectratio aligny="top" align="right">keep</aspectratio>
+			<visible>system.IdleTime(4) + Control.IsVisible(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="640">Visible</animation>
+			<animation effect="zoom" start="100" end="135" time="0" delay="420" reversible="false" condition="system.IdleTime(4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-5,-50" time="200" delay="420" reversible="false" condition="system.IdleTime(4)">conditional</animation>
+		</control>	
+
+		<control type="image">
+			<description>Movie poster reflection</description>
+			<posx>26</posx>
+			<posy>641</posy>
+			<width>399</width>
+			<height>399</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="album-diffuse.png">defaultvideocover.png</texture>
+			<info>listitem.icon</info>
+			<aspectratio aligny="top" align="left">keep</aspectratio>
+			<visible>false</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="640" reversible="false">Visible</animation>
+			<animation effect="slide" start="0,-295" end="0,0" time="200" delay="640" reversible="false">Visible</animation>
+		</control>
+		<control type="fixedlist" id="52">
+			<posx>33</posx>
+			<posy>285</posy>
+			<width>1210</width>
+			<height>467</height>
+			<onleft>52</onleft>
+			<onright>52</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<visible>container.content(episodes)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">VisibleChange</animation>
+    			<orientation>horizontal</orientation>
+     			<focusposition>0</focusposition>
+     			<viewtype label="Episodes">wrap</viewtype>
+			<itemlayout height="305" width="305">
+				<control type="image">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>295</width>
+					<height>295</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<animation effect="fade" start="100" end="0" time="200" delay="420" condition="system.IdleTime(4)">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="305" width="305">
+				<control type="image">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>295</width>
+					<height>295</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<animation effect="zoom" start="100" end="135" time="200" delay="420" reversible="false" condition="system.IdleTime(4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="-5,-50" time="200" delay="420" reversible="false" condition="system.IdleTime(4)">conditional</animation>
+
+			  	</control>	
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>Chevron</description>
+			<posx>1244</posx>
+			<posy>572</posy>
+			<width>40</width>
+			<height>40</height>
+			<visible>control.IsVisible(52) + !system.idletime(4)</visible>
+			<texture>chevron-right.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>Chevron</description>
+			<posx>-4</posx>
+			<posy>572</posy>
+			<width>40</width>
+			<height>40</height>
+			<visible>control.IsVisible(52) + !system.idletime(4)</visible>
+			<texture>chevron-left.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="label">
+			<posx>328</posx>
+			<posy>607</posy>
+			<width>295</width>
+			<height>30</height>
+			<align>right</align>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.title][/LOWERCASE]</label>
+			<visible>control.IsVisible(52) + !system.idletime(4)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+		<control type="label">
+			<posx>328</posx>
+			<posy>640</posy>
+			<width>500</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<label>s[B]$INFO[listitem.season][/B]e[B]$INFO[listitem.episode][/B]</label>
+			<visible>control.IsVisible(52) + !system.idletime(4)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+		<control type="label">
+			<posx>1245</posx>
+			<posy>640</posy>
+			<width>810</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<scroll>true</scroll>
+			<font>infolarge</font>
+			<label>[LOWERCASE]$INFO[listitem.tvshowtitle][/LOWERCASE]</label>
+			<visible>control.IsVisible(52) + !system.idletime(4)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+	<control type="group">
+		<description>Idle Info Group</description>
+		<posx>440</posx>
+		<posy>485</posy>
+		<visible>system.IdleTime(4) + Control.IsVisible(52)</visible>
+		<animation effect="fade" start="0" end="100" time="250" delay="460">Visible</animation>
+		<control type="label">
+			<width>500</width>
+			<height>30</height>
+			<align>left</align>
+			<font>small</font>
+			<textcolor>selected</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.tvshowtitle] s[B]$INFO[listitem.season][/B]e[B]$INFO[listitem.episode][/B][/LOWERCASE]</label>
+		</control>
+		<control type="label">
+			<posy>22</posy>
+			<width>700</width>
+			<height>30</height>
+			<align>left</align>
+			<font>infolarge</font>
+			<scroll>true</scroll>
+			<textcolor>selected</textcolor>
+			<label>$INFO[listitem.title]</label>
+		</control>
+		<control type="image">
+			<posx>-15</posx>
+			<posy>80</posy>
+			<width>715</width>
+			<height>3</height>
+			<texture>media-background-black.png</texture>
+		</control>
+		<control type="textbox">
+			<posy>83</posy>
+			<width>700</width>
+			<height>144</height>
+			<textcolor>normal</textcolor>
+			<align>justify</align>
+			<label>$INFO[listitem.plot]</label>
+      		<pagecontrol>1</pagecontrol>
+     			<autoscroll delay="12000" time="2800" repeat="10000">Control.HasFocus(52) + ![Container(52).OnNext | Container(52).OnPrevious]</autoscroll>
+        		<wrapmultiline>true</wrapmultiline>
+		</control>
+	</control>
+</include>
+</includes>

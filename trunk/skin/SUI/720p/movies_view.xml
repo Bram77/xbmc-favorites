@@ -1,0 +1,146 @@
+<includes>
+	<include name="movies">
+	<control type="group">
+			<visible>control.isvisible(51) + !system.idletime(4)</visible>
+			<include>contentpanel</include>
+			<include>contentpanellines</include>
+	</control>
+		<control type="image">
+			<description>Movie poster reflection</description>
+			<posx>25</posx>
+			<posy>602</posy>
+			<width>358</width>
+			<height>528</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="album-diffuse.png">defaultvideocover.png</texture>
+			<info>listitem.icon</info>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<visible>system.IdleTime(4) + Control.IsVisible(51)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="250">Visible</animation>
+			<animation effect="slide" start="0,-405" end="0,0" time="200" delay="250">Visible</animation>
+		</control>
+		<control type="wraplist" id="51">
+			<posx>0</posx>
+			<posy>128</posy>
+			<width>1280</width>
+			<height>467</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<visible>container.content(movies)</visible>
+    			<orientation>horizontal</orientation>
+     			<focusposition>0</focusposition>
+     			<viewtype label="Movies">wrap</viewtype>
+			<itemlayout height="461" width="284">
+				<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>275</width>
+					<height>405</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom">stretch</aspectratio>	
+					<animation effect="fade" start="100" end="0" time="200" condition="system.IdleTime(4)">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="461" width="284">
+				<control type="image">
+					<posx>22</posx>
+					<posy>22</posy>
+					<width>281</width>
+					<height>411</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<bordertexture>media-background-black.png</bordertexture>
+					<bordersize>3</bordersize>
+					<animation effect="fade" start="100" end="0" time="200" condition="system.IdleTime(4)">conditional</animation>
+			  	</control>	
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>righthand fade</description>
+			<posx>849</posx>
+			<posy>131</posy>
+			<width>461</width>
+			<height>461</height>
+			<aspectratio align="right">stretch</aspectratio>
+			<visible>control.isvisible(51)</visible>
+			<texture>media-background-overlay.png</texture>
+			<animation effect="fade" start="100" end="0" time="200" condition="system.idletime(4)">conditional</animation>
+		</control>
+		<control type="image">
+			<posx>25</posx>
+			<posy>153</posy>
+			<width>275</width>
+			<height>405</height>
+			<texture fallback="defaultvideocover.png">$INFO[listitem.icon]</texture>
+			<aspectratio aligny="bottom" align="right">stretch</aspectratio>
+			<visible>[system.IdleTime(3) + control.isvisible(51)]</visible>
+			<animation effect="zoom" end="130" time="200"condition="system.idletime(4)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-60" time="200" condition="system.idletime(4)">conditional</animation>
+		</control>
+		<control type="label">
+			<posx>300</posx>
+			<posy>565</posy>
+			<width>240</width>
+			<height>30</height>
+			<align>right</align>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.title][/LOWERCASE]</label>
+			<visible>[control.isvisible(51) + !system.idletime(4)]</visible>
+			<visible>![container(51).OnPrevious | container(51).OnNext]</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="80">Visible</animation>
+		</control>
+	<control type="group">
+		<posx>397</posx>
+		<posy>458</posy>
+		<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+		<visible>system.IdleTime(4) + Control.IsVisible(51) + ![isempty(listitem.title)]</visible>
+		<control type="label">
+			<width>800</width>
+			<height>30</height>
+			<align>left</align>
+			<font>small</font>
+			<textcolor>selected</textcolor>
+			<info>listitem.year</info>
+		</control>
+		<control type="label">
+			<posy>22</posy>
+			<width>970</width>
+			<height>30</height>
+			<align>left</align>
+			<font>infolarge</font>
+			<scroll>true</scroll>
+			<textcolor>selected</textcolor>
+			<info>listitem.title</info>
+		</control>
+		<control type="image">
+			<posx>-14</posx>
+			<posy>81</posy>
+			<width>814</width>
+			<height>3</height>
+			<texture>media-background-black.png</texture>
+		</control>
+		<control type="label">
+			<posy>88</posy>
+			<width>800</width>
+			<height>100</height>
+			<align>justify</align>
+			<font>small</font>
+			<textcolor>normal</textcolor>
+			<label>$INFO[listitem.PlotOutline]</label>
+        		<wrapmultiline>true</wrapmultiline>
+		</control>
+		<control type="label">
+			<posy>179</posy>
+			<width>800</width>
+			<height>30</height>
+			<align>left</align>
+			<font>small</font>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.duration][/LOWERCASE]</label>
+		</control>
+	</control>
+	</include>
+</includes>

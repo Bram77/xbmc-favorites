@@ -1,0 +1,57 @@
+<window type="dialog" id="400">
+	<defaultcontrol always="true">400</defaultcontrol>
+	<controls>
+			<control type="image">
+				<description>background</description>
+				<posy>300</posy>
+				<width>490</width>
+				<height>50</height>
+				<texture>white.png</texture>
+			</control>
+			<control type="label">
+				<posy>300</posy>
+				<posx>480</posx>
+				<align>right</align>
+				<include>dialog_file_name</include>
+				<include>2037</include>
+			</control>
+			<control type="grouplist" id="1">
+				<posx>5</posx>
+				<posy>320</posy>
+				<width>500</width>
+				<height>30</height>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+			<control type="button" id="400">
+				<description>skip_bwd</description>
+				<include>1017</include>
+				<onclick>xbmc.playercontrol(previous)</onclick>
+			</control>
+			<control type="button" id="401">
+				<description>stop</description>
+				<include>1024</include>
+				<onclick>xbmc.playercontrol(stop)</onclick>
+			</control>
+			<control type="button" id="402">
+				<description>play</description>
+				<include>1000</include>
+				<onclick>xbmc.playercontrol(play)</onclick>
+			</control>
+			<control type="button" id="403">
+				<description>next</description>
+				<include>1018</include>
+				<onclick>xbmc.playercontrol(next)</onclick>
+			</control>
+			<control type="button" id="405">
+				<description>repeat</description>
+				<label>486</label>
+				<onclick>xbmc.playercontrol(repeat)</onclick>
+			</control>
+			<control type="button" id="404">
+				<description>random</description>
+				<label>590</label>
+				<onclick>xbmc.playercontrol(random)</onclick>
+			</control>
+		</control>
+	</controls>
+</window>
