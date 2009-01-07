@@ -1,0 +1,8 @@
+<sounds>
+  <windows>
+    <window>
+      <name>startup</name>
+      <activate>startup.wav</activate>
+    </window>
+  </windows>
+</sounds>

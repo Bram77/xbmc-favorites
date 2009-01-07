@@ -1,0 +1,125 @@
+<window type="buttonMenu" id="111">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<controls>
+		<control type="image">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<texture>dim.png</texture>
+			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+
+		<control type="image">
+			<posy>337</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>3</height>
+			<texture>media-background-black.png</texture>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posy>340</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>50</height>
+			<texture>media-background-whitelist.png</texture>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posy>391</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>3</height>
+			<texture>media-background-black.png</texture>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+		<control type="label">
+			<posx>1255</posx>
+			<posy>315</posy>
+			<width>300</width>
+			<height>30</height>
+			<font>title</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>selected</shadowcolor>
+			<align>right</align>
+			<label>power menu</label>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+		<control type="wraplist" id="10">
+			<posx>0</posx>
+			<posy>340</posy>
+			<width>1280</width>
+			<height>200</height>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+   			<focusposition>2</focusposition>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+    			<scrolltime>200</scrolltime>
+				<itemlayout height="50" width="330">
+					<control type="label">
+						<width>330</width>
+						<height>50</height>
+						<font>large</font>
+						<textcolor>normal</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="330">
+					<control type="label">
+						<width>330</width>
+						<height>50</height>
+						<font>large</font>
+						<textcolor>selected</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[listitem.label]</label>
+					</control>
+				</focusedlayout>
+			<content>
+				<item id="1">
+					<description>shutdown</description>
+					<label>shutdown</label>
+					<onclick>XBMC.Shutdown()</onclick>
+				</item>
+				<item id="2">
+					<description>quit</description>
+					<label>quit</label>
+					<onclick>XBMC.Quit()</onclick>
+				</item>
+				<item id="3">
+					<description>powerdown</description>
+					<label>powerdown</label>
+					<onclick>XBMC.Powerdown()</onclick>
+				</item>
+				<item id="4">
+					<description>suspend</description>
+					<label>suspend</label>
+					<onclick>XBMC.Suspend()</onclick>
+				</item>
+				<item id="5">
+					<description>Hibernate</description>
+					<label>hibernate</label>
+					<onclick>XBMC.Hibernate()</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="image">
+			<posy>340</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>50</height>
+			<texture>shutdown-fade.png</texture>
+			<animation effect="slide" start="0,-500" easing="out" time="200">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+		</control>
+	</controls>
+</window>

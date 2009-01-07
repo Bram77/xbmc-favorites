@@ -1,0 +1,152 @@
+<includes>
+	<include name="music_album_view">
+	<control type="group">
+			<visible>control.isvisible(52) + !system.idletime(4)</visible>
+			<include>contentpanel</include>
+			<include>contentpanellines</include>
+	</control>
+		<control type="image">
+			<description>Music AlbumArt reflection</description>
+			<posx>25</posx>
+			<posy>555</posy>
+			<width>405</width>
+			<height>405</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="album-diffuse.png">defaultvideocover.png</texture>
+			<info>listitem.icon</info>
+			<aspectratio aligny="top">stretch</aspectratio>
+			<visible>system.IdleTime(4) + Control.HasFocus(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="250">Visible</animation>
+			<animation effect="slide" start="0,-405" end="0,0" time="200" delay="250">Visible</animation>
+		</control>
+		<control type="wraplist" id="52">
+			<posx>25</posx>
+			<posy>128</posy>
+			<width>1245</width>
+			<height>467</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+    			<orientation>horizontal</orientation>
+     			<focusposition>0</focusposition>
+     			<viewtype label="notlist">wrap</viewtype>
+			<visible>container.content(albums)</visible>
+			<itemlayout height="467" width="415">
+				<control type="image">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>405</width>
+					<height>405</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<animation effect="fade" start="100" end="0" time="200" delay="220" condition="system.IdleTime(4)">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="467" width="415">
+				<control type="image">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>405</width>
+					<height>405</height>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+			  	</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>430</posx>
+			<posy>562</posy>
+			<width>405</width>
+			<height>30</height>
+
+			<font>small</font>
+			<align>right</align>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.album][/LOWERCASE]</label>
+			<visible>![system.IdleTime(4) + control.hasfocus(52)] + control.IsVisible(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="label">
+			<posx>440</posx>
+			<posy>480</posy>
+			<width>840</width>
+			<height>30</height>
+			<align>left</align>
+			<font>infolarge</font>
+			<scroll>true</scroll>
+			<scrollspeed>70</scrollspeed>
+			<visible>Control.IsVisible(52)</visible>
+			<visible>system.IdleTime(4) + Control.HasFocus(52)</visible>
+			<textcolor>selected</textcolor>
+			<info>listitem.album</info>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+		</control>
+		<control type="label">
+			<posx>435</posx>
+			<posy>455</posy>
+			<width>800</width>
+			<height>30</height>
+			<align>left</align>
+			<font>small</font>
+			<visible>Control.IsVisible(52)</visible>
+			<visible>system.IdleTime(4) + Control.HasFocus(52)</visible>
+			<textcolor>normal</textcolor>
+			<info>listitem.year</info>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+		</control>
+		<control type="label">
+			<posx>440</posx>
+			<posy>535</posy>
+			<width>800</width>
+			<height>100</height>
+			<align>full</align>
+			<font>small</font>
+			<visible>Control.IsVisible(52)</visible>
+			<visible>system.IdleTime(4) + Control.HasFocus(52)</visible>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]by $INFO[ListItem.artist][/LOWERCASE]</label>
+        		<wrapmultiline>true</wrapmultiline>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+		</control>
+		<control type="label">
+			<posx>1255</posx>
+			<posy>600</posy>
+			<width>1180</width>
+			<height>30</height>
+			<align>right</align>
+			<font>infolarge</font>
+			<textcolor>normal</textcolor>
+			<info>listitem.artist</info>
+			<visible>![system.IdleTime(4) + control.hasfocus(52)] + control.IsVisible(52)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">VisibleChange</animation>
+		</control>
+
+		<control type="textbox">
+			<posx>440</posx>
+			<posy>562</posy>
+			<width>800</width>
+			<height>158</height>
+			<align>full</align>
+			<font>small</font>
+			<visible>system.IdleTime(4) + Control.IsVisible(52)</visible>
+   			<pagecontrol>1</pagecontrol>
+     			<autoscroll delay="6000" time="2000" repeat="10000"></autoscroll>
+      		<textcolor>normal</textcolor>
+			<label>$INFO[listitem.property(description)]</label>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+		</control>
+		<control type="largeimage">
+			<description>righthand fade</description>
+			<posx>100</posx>
+			<posy>130</posy>
+			<width>1270</width>
+			<height>462</height>
+			<visible>![system.IdleTime(4) + control.hasfocus(52)] + control.IsVisible(52)</visible>
+			<texture>media-background-overlay.png</texture>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200" delay="220">Hidden</animation>
+		</control>
+	</include>
+</includes>

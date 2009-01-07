@@ -1,0 +1,59 @@
+<window id="2600">
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="label">
+			<include>file_name</include>
+			<include>2020</include>
+		</control>
+		<control type="grouplist" id="1">
+			<posx>10</posx>
+			<posy>10</posy>
+			<itemgap>5</itemgap>
+			<orientation>horizontal</orientation>
+		<control type="button" id="2">
+			<description>refresh</description>\
+			<label>184</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="button" id="4">
+			<description>settings</description>
+			<label>5</label>
+			<onclick>XBMC.ActivateWindow(myweathersettings)</onclick>
+			<textcolor>normal</textcolor>\
+		</control>
+		<control type="spincontrol" id="3">
+			<description>location_select</description>
+			<textcolor>normal</textcolor>
+		</control>
+		</control>
+		<control type="group">
+			<posx>25</posx>
+			<posy>50</posy>
+		<control type="label" id="223">
+			<description>current_temp_static</description>
+			<label>-</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="label" id="23">
+			<description>current_temp_value</description>
+			<posx>50</posx>
+			<label>-</label>
+			<textcolor>normal</textcolor>
+		</control>
+		<control type="image" id="35">
+			<description>day_0_icon</description>
+			<posy>30</posy>
+			<height>64</height>
+			<width>64</width>
+			<texture>-</texture>
+		</control>
+		<control type="label" id="31">
+			<description>day_0</description>
+			<posy>100</posy>
+			<label>-</label>
+			<textcolor>normal</textcolor>
+		</control>
+		</control>
+	</controls>
+</window>

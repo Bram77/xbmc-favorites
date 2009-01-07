@@ -1,0 +1,164 @@
+<includes>
+	<include name="tvbanners">
+	<control type="group">
+			<visible>control.isvisible(55)</visible>
+			<include>contentpanellist</include>
+			<include>contentpanellines</include>
+	</control>
+		<control type="wraplist" id="55">
+			<posx>580</posx>
+			<posy>131</posy>
+			<width>700</width>
+			<height>461</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<visible>container.content(tvshows)</visible>
+    			<focusposition>1</focusposition>
+			<viewtype label="Banners">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="115" width="510">
+				<control type="label">
+					<posx>465</posx>
+					<posy>55</posy>
+					<width>545</width>
+					<height>30</height>
+					<align>right</align>
+					<font>listlarge</font>
+					<textcolor>normal</textcolor>
+					<info>listitem.label</info>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>555</width>
+					<height>105</height>
+					<texture>defaultvideocover.png</texture>
+					<info>listitem.icon</info>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+			</itemlayout>
+			<focusedlayout height="115" width="510">
+				<control type="label">
+					<posx>465</posx>
+					<posy>55</posy>
+					<width>555</width>
+					<height>30</height>
+					<align>right</align>
+					<font>listlarge</font>
+					<textcolor>selected</textcolor>
+					<info>listitem.label</info>
+					<selectedcolor>selected</selectedcolor>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>555</width>
+					<height>105</height>
+					<texture>defaultvideocover.png</texture>
+					<info>listitem.icon</info>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>555</width>
+					<height>3</height>
+					<texture>media-background-line.png</texture>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>113</posy>
+					<width>555</width>
+					<height>3</height>
+					<texture>media-background-line.png</texture>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="textbox">
+			<posx>25</posx>
+			<posy>140</posy>
+			<width>500</width>
+			<height>440</height>
+			<textcolor>normal</textcolor>
+			<align>justify</align>
+			<label>[CR][CR][CR][CR][CR]$INFO[listitem.plot][CR][CR][CR]</label>
+			<visible>control.isVisible(55)</visible>
+			<include>listcontextinfo</include>
+      		<pagecontrol>1</pagecontrol>
+     			<autoscroll delay="8000" time="2500" repeat="10000">control.HasFocus(55)</autoscroll>
+        		<wrapmultiline>true</wrapmultiline>
+		</control>
+		<control type="image">
+			<description>List Fade</description>
+			<posx>0</posx>
+			<posy>131</posy>
+			<width>1280</width>
+			<height>461</height>
+			<visible>control.IsVisible(55)</visible>
+			<texture>list-fade.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>Chevron</description>
+			<posx>1140</posx>
+			<posy>140</posy>
+			<width>30</width>
+			<height>30</height>
+			<visible>control.IsVisible(55)</visible>
+			<texture>chevron.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>Chevron down</description>
+			<posx>1140</posx>
+			<posy>550</posy>
+			<width>30</width>
+			<height>30</height>
+			<visible>control.IsVisible(55)</visible>
+			<texture flipy="true">chevron.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="label">
+			<posx>525</posx>
+			<posy>564</posy>
+			<width>500</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<label>watched [B]$INFO[ListItem.Property(WatchedEpisodes)][/B] unwatched [B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+			<visible>control.isVisible(55)</visible>
+			<include>listcontextinfo</include>
+		</control>
+		<control type="label">
+			<posx>25</posx>
+			<posy>564</posy>
+			<width>100</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>left</align>
+			<label>$INFO[listitem.year]</label>
+			<visible>control.isVisible(55)</visible>
+			<include>listcontextinfo</include>
+		</control>
+		<control type="label">
+			<posx>1155</posx>
+			<posy>600</posy>
+			<width>1180</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<font>infolarge</font>
+			<label>[LOWERCASE]$INFO[listitem.tvshowtitle][/LOWERCASE]</label>
+			<visible>control.isVisible(55)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">VisibleChange</animation>
+		</control>
+	</include>
+</includes>
+

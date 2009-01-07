@@ -1,0 +1,15 @@
+<window id="136">
+	<controls>
+		<include>dialog_back</include>
+		<control type="label">
+			<include>dialog_file_name</include>
+			<include>2001</include>
+		</control>
+		<control type="label">
+			<description>busy</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<include>1003</include>
+		</control>
+	</controls>
+</window>

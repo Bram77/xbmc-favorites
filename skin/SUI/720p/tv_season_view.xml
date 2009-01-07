@@ -1,0 +1,124 @@
+<includes>
+	<include name="tvseasons">
+		<control type="largeimage">
+			<description>content panel</description>
+			<posx>0</posx>
+			<posy>128</posy>
+			<width>1280</width>
+			<height>467</height>
+			<visible>control.IsVisible(56)</visible>
+			<texture>media-background.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="fixedlist" id="56">
+			<posx>0</posx>
+			<posy>128</posy>
+			<width>1280</width>
+			<height>467</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<visible>container.content(seasons)</visible>
+    			<orientation>horizontal</orientation>
+     			<focusposition>0</focusposition>
+     			<viewtype label="TV Seasons">wrap</viewtype>
+			<itemlayout height="467" width="288">
+				<control type="image">
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>275</width>
+					<height>405</height>
+					<texture>defaultvideocover.png</texture>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<animation effect="fade" start="100" end="0" time="200" delay="420" condition="system.IdleTime(4) + control.HasFocus(54)">conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="467" width="288">
+				<control type="image">
+					<posx>22</posx>
+					<posx>22</posx>
+					<posy>22</posy>
+					<width>281</width>
+					<height>411</height>
+					<texture>defaultvideocover.png</texture>
+					<bordertexture>media-background-black.png</bordertexture>
+					<bordersize>3</bordersize>
+					<info>listitem.icon</info>
+					<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					<animation effect="fade" start="0" end="100" time="200" delay="220">VisibleChange</animation>
+			  	</control>	
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>300</posx>
+			<posy>565</posy>
+			<width>275</width>
+			<height>30</height>
+			<align>right</align>
+			<textcolor>normal</textcolor>
+			<label>[LOWERCASE]$INFO[listitem.label][/LOWERCASE]</label>
+			<visible>control.IsVisible(56)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+		</control>
+		<control type="label">
+			<posx>300</posx>
+			<posy>600</posy>
+			<width>500</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<label>watched [B]$INFO[ListItem.Property(WatchedEpisodes)][/B] unwatched [B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
+			<visible>control.IsVisible(56)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="220">Visible</animation>
+		</control>
+		<control type="label">
+			<posx>1155</posx>
+			<posy>600</posy>
+			<width>1180</width>
+			<height>30</height>
+			<textcolor>normal</textcolor>
+			<align>right</align>
+			<font>infolarge</font>
+			<label>[LOWERCASE]$INFO[listitem.tvshowtitle][/LOWERCASE]</label>
+			<visible>control.isVisible(56)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>righthand fade</description>
+			<posx>100</posx>
+			<posy>130</posy>
+			<width>1270</width>
+			<height>462</height>
+			<aspectratio>stretch</aspectratio>
+			<visible>control.IsVisible(56)</visible>
+			<texture>media-background-overlay.png</texture>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+		</control>
+		<control type="image">
+			<description>Chevron</description>
+			<posx>1244</posx>
+			<posy>527</posy>
+			<width>40</width>
+			<height>40</height>
+			<visible>control.IsVisible(56)</visible>
+			<texture>chevron-right.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+		<control type="image">
+			<description>Chevron</description>
+			<posx>-6</posx>
+			<posy>527</posy>
+			<width>40</width>
+			<height>40</height>
+			<visible>control.IsVisible(56)</visible>
+			<texture>chevron-left.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		</control>
+	</include>

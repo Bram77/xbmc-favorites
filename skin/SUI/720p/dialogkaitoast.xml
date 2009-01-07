@@ -1,0 +1,35 @@
+<window id="107">
+	<defaultcontrol>402</defaultcontrol>
+	<controls>
+		<include>dialog_back</include>
+		<control type="label">
+			<include>dialog_file_name</include>
+			<include>2004</include>
+		</control>
+		<control type="image" id="400">
+			<description>avatar</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>40</width>
+			<height>40</height>
+			<texture>buddy_online.png</texture>
+		</control>
+	<control type="button" id="401">
+		<description>caption</description>
+		<posx>70</posx>
+		<posy>10</posy>
+		<label>-</label>
+	</control>
+	<control type="button" id="402">
+		<description>description</description>
+		<posx>70</posx>
+		<posy>30</posy>
+		<label>-</label>
+		<onleft>402</onleft>
+		<align>center</align>
+		<onright>402</onright>
+		<onup>402</onup>
+		<ondown>402</ondown>
+	</control>
+	</controls>
+</window>
