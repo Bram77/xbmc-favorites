@@ -11,9 +11,9 @@ import socket, base64
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
-cacheDir = xbmc.translatePath(os.path.join(rootDir, 'cache'))
-resDir = xbmc.translatePath(os.path.join(rootDir, 'resources'))
-imgDir = xbmc.translatePath(os.path.join(resDir, 'images'))
+cacheDir = os.path.join(rootDir, 'cache')
+resDir = os.path.join(rootDir, 'resources')
+imgDir = os.path.join(resDir, 'images')
 #socket.setdefaulttimeout(20)
 
 urlopen = urllib2.urlopen
@@ -26,8 +26,8 @@ else:
     proxy_handler = None
 
 if cj != None:
-    if os.path.isfile(xbmc.translatePath(os.path.join(resDir, 'cookies.lwp'))):
-        cj.load(xbmc.translatePath(os.path.join(resDir, 'cookies.lwp')))
+    if os.path.isfile(os.path.join(resDir, 'cookies.lwp')):
+        cj.load(os.path.join(resDir, 'cookies.lwp'))
     if proxy_handler:
         opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj), proxy_handler)
     else:
@@ -39,6 +39,12 @@ else:
         opener = urllib2.build_opener()
 
 urllib2.install_opener(opener)
+
+if xbmcplugin.getSetting('enable_debug') == 'true':
+    enable_debug = True
+    xbmc.output('VideoMonkey debug logging enabled')
+else:
+    enable_debug = False
 
 entitydefs = {
     'AElig':    u'\u00C6', # latin capital letter AE = latin capital ligature AE, U+00C6 ISOlat1'
@@ -370,7 +376,8 @@ def decode(s):
             entity = '&' + key + ';'
             s = s.replace(entity, unichr(dic[key]))
     except:
-        traceback.print_exc(file = sys.stdout)
+        if enable_debug:
+            traceback.print_exc(file = sys.stdout)
     return s
 
 def unquote_safe(s): # unquote
@@ -380,7 +387,8 @@ def unquote_safe(s): # unquote
         for key, value in entitydefs2.iteritems():
             s = s.replace(value, key)
     except:
-        traceback.print_exc(file = sys.stdout)
+        if enable_debug:
+            traceback.print_exc(file = sys.stdout)
     return s;
 
 def quote_safe(s): # quote
@@ -390,7 +398,8 @@ def quote_safe(s): # quote
         for key, value in entitydefs2.iteritems():
             s = s.replace(key, value)
     except:
-        traceback.print_exc(file = sys.stdout)
+        if enable_debug:
+            traceback.print_exc(file = sys.stdout)
     return s;
 
 def smart_unicode(s):
@@ -420,7 +429,8 @@ def clean_safe(s):
     try:
         s = clean1(clean2(clean3(smart_unicode(s))))
     except:
-        traceback.print_exc(file = sys.stdout)
+        if enable_debug:
+            traceback.print_exc(file = sys.stdout)
     return s
 
 def first_clean_filename(s):
@@ -519,7 +529,7 @@ class CCurrentList:
         for attempt in range(attempts):
             filename = ''.join([random.choice(chars) for i in range(length)])
             filename = prefix + filename + suffix
-            if not os.path.exists(xbmc.translatePath(os.path.join(dir, filename))):
+            if not os.path.exists(os.path.join(dir, filename)):
                 return filename
 
     def videoCount(self):
@@ -577,7 +587,7 @@ class CCurrentList:
         return
 
     def saveList(self):
-        f = codecs.open(str(xbmc.translatePath(os.path.join(resDir, 'entry.list'))), 'w', 'utf-8')
+        f = codecs.open(str(os.path.join(resDir, 'entry.list')), 'w', 'utf-8')
         f.write('########################################################\n')
         f.write('# Added sites and live streams\n')
         f.write('########################################################\n')
@@ -600,29 +610,18 @@ class CCurrentList:
         firstInfo = True
         for info_name in item.infos_names:
             if info_idx != url_idx and item.infos_names[info_idx].find('.once') == -1:
-                info_value = urllib.quote(item.infos_values[info_idx])
+                #info_value = urllib.quote(item.infos_values[info_idx])
+                info_value = item.infos_values[info_idx]
                 if firstInfo:
                     firstInfo = False
-                    try:
-                        url = item.infos_names[info_idx] + ':' + info_value
-                    except:
-                        url = item.infos_names[info_idx] + ':' + smart_unicode(info_value)
+                    url = smart_unicode(item.infos_names[info_idx]) + ':' + smart_unicode(info_value)
                 else:
-                    try:
-                        url = url + '|' + item.infos_names[info_idx] + ':' + info_value
-                    except:
-                        url = url + '|' + item.infos_names[info_idx] + ':' + smart_unicode(info_value)
+                    url = smart_unicode(url) + '|' + smart_unicode(item.infos_names[info_idx]) + ':' + smart_unicode(info_value)
             info_idx = info_idx + 1
         if firstInfo:
-            try:
-                url = item.infos_names[url_idx] + ':' + item.infos_values[url_idx]
-            except:
-                url = item.infos_names[url_idx] + ':' + smart_unicode(item.infos_values[url_idx])
+            url = smart_unicode(item.infos_names[url_idx]) + ':' + smart_unicode(item.infos_values[url_idx])
         else:
-            try:
-                url = url + '|' + item.infos_names[url_idx] + ':' + item.infos_values[url_idx]
-            except:
-                url = url + '|' + item.infos_names[url_idx] + ':' + smart_unicode(item.infos_values[url_idx])
+            url = smart_unicode(url) + '|' + smart_unicode(item.infos_names[url_idx]) + ':' + smart_unicode(item.infos_values[url_idx])
         if len(suffix) > 0:
             url = url + '.' + suffix
         return url
@@ -640,7 +639,8 @@ class CCurrentList:
             sep_index = info_name_value.find(':')
             if sep_index != -1:
                 item.infos_names.append(info_name_value[:sep_index])
-                item.infos_values.append(clean_safe(urllib.unquote(info_name_value[sep_index+1:])))
+                #item.infos_values.append(clean_safe(urllib.unquote(info_name_value[sep_index+1:])))
+                item.infos_values.append(clean_safe(info_name_value[sep_index+1:]))
         try:
             type_idx = item.infos_names.index('type')
         except:
@@ -649,7 +649,7 @@ class CCurrentList:
         return item
 
     def loadCatcher(self, title):
-        f = codecs.open(str(xbmc.translatePath(os.path.join(resDir, 'catcher.list'))), 'r', 'utf-8')
+        f = codecs.open(str(os.path.join(resDir, 'catcher.list')), 'r', 'utf-8')
         data = f.read()
         data = data.replace('\r\n', '\n')
         data = data.split('\n')
@@ -715,29 +715,42 @@ class CCurrentList:
         return -1
 
     def loadLocal(self, filename, recursive = True, lItem = None, lCatcher = False):
-        #print(filename)
+        if enable_debug:
+            xbmc.output(str(filename))
         try:
-            f = codecs.open(str(xbmc.translatePath(os.path.join(resDir, filename))), 'r', 'utf-8')
+            f = codecs.open(str(os.path.join(resDir, filename)), 'r', 'utf-8')
             data = f.read()
             data = data.replace('\r\n', '\n')
             data = data.split('\n')
             f.close()
+            if enable_debug:
+                xbmc.output('Local file ' + str(os.path.join(resDir, filename)) + ' opened')
         except:
+            if enable_debug:
+                xbmc.output('File: ' + str(os.path.join(resDir, filename)) + ' not found')
             try:
-                f = codecs.open(str(xbmc.translatePath(os.path.join(cacheDir, filename))), 'r', 'utf-8')
+                f = codecs.open(str(os.path.join(cacheDir, filename)), 'r', 'utf-8')
                 data = f.read()
                 data = data.replace('\r\n', '\n')
                 data = data.split('\n')
                 f.close()
+                if enable_debug:
+                    xbmc.output('Local file ' + str(os.path.join(cacheDir, filename)) + ' opened')
             except:
+                if enable_debug:
+                    xbmc.output('File: ' + str(os.path.join(cacheDir, filename)) + ' not found')
                 try:
                     f = codecs.open(str(filename), 'r', 'utf-8')
                     data = f.read()
                     data = data.replace('\r\n', '\n')
                     data = data.split('\n')
                     f.close()
+                    if enable_debug:
+                        xbmc.output('Local file ' + str(filename) + ' opened')
                 except:
-                    #traceback.print_exc(file = sys.stdout)
+                    if enable_debug:
+                        xbmc.output('File: ' + str(filename) + ' not found')
+                        traceback.print_exc(file = sys.stdout)
                     return -1
 
         self.cfg = filename
@@ -759,7 +772,7 @@ class CCurrentList:
                     if value[:index] == 'video.monkey.locale':
                         value = ' ' + xbmc.getLocalizedString(int(value[index+1:])) + ' '
                     elif value[:index] == 'video.monkey.image':
-                        value = xbmc.translatePath(os.path.join(imgDir, value[index+1:]))
+                        value = os.path.join(imgDir, value[index+1:])
                     if key == 'start':
                         self.start = value
                     elif key == 'player':
@@ -771,7 +784,7 @@ class CCurrentList:
                         skill_file = filename[:filename.find('.')] + '.lnk'
                         if self.skill.find('redirect') != -1:
                             try:
-                                f = open(str(xbmc.translatePath(os.path.join(resDir, skill_file))), 'r')
+                                f = open(str(os.path.join(resDir, skill_file)), 'r')
                                 forward_cfg = f.read()
                                 f.close()
                                 if forward_cfg != self.cfg:
@@ -780,7 +793,7 @@ class CCurrentList:
                             except:
                                 pass
                         elif self.skill.find('store') != -1:
-                            f = open(str(xbmc.translatePath(os.path.join(resDir, skill_file))), 'w')
+                            f = open(str(os.path.join(resDir, skill_file)), 'w')
                             f.write(self.cfg)
                             f.close()
                     elif key == 'catcher':
@@ -788,10 +801,12 @@ class CCurrentList:
                             try:
                                 ret = self.loadCatcher(value)
                                 if ret != 0:
-                                    print('Error while loding catcher!')
+                                    if enable_debug:
+                                        xbmc.output('Error while loding catcher')
                                     return ret
                             except:
-                                traceback.print_exc(file = sys.stdout)
+                                if enable_debug:
+                                    traceback.print_exc(file = sys.stdout)
                                 return -1
                     elif key == 'header':
                         index = value.find('|')
@@ -876,14 +891,12 @@ class CCurrentList:
         elif info_name == 'icon':
             info_value = decode(unquote_safe(info_value))
             if info_value == '':
-                info_value = xbmc.translatePath(os.path.join(imgDir, 'video.png'))
-        elif info_name.find('context.') != -1:
-            if info_value != '':
-                info_value = cfg_file + '|' + info_value
+                info_value = os.path.join(imgDir, 'video.png')
         return clean_safe(info_value)
 
     def loadRemote(self, remote_url, recursive = True, lItem = None):
-        #print(remote_url)
+        if enable_debug:
+            xbmc.output(repr(remote_url))
         if lItem == None:
             lItem = self.decodeUrl(remote_url)
         try:
@@ -897,7 +910,7 @@ class CCurrentList:
                 try:
                     if lItem.infos_values[lItem.infos_names.index('type')] == u'search':
                         try:
-                            f = open(xbmc.translatePath(os.path.join(cacheDir, 'search')), 'r')
+                            f = open(os.path.join(cacheDir, 'search'), 'r')
                             curr_phrase = urllib.unquote_plus(f.read())
                             f.close()
                         except:
@@ -906,7 +919,7 @@ class CCurrentList:
                         if search_phrase == '':
                             return -1
                         xbmc.sleep(10)
-                        f = open(xbmc.translatePath(os.path.join(cacheDir, 'search')), 'w')
+                        f = open(os.path.join(cacheDir, 'search'), 'w')
                         f.write(search_phrase)
                         f.close()
                         curr_url = curr_url % (search_phrase)
@@ -918,21 +931,26 @@ class CCurrentList:
                 txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7'}
             else:
                 txheaders = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.14) Gecko/20080404 Firefox/2.0.0.14', 'Accept-Charset':'ISO-8859-1,utf-8;q=0.7,*;q=0.7', self.reference:self.content}
-            #f = open(xbmc.translatePath(os.path.join(cacheDir, 'page.html')), 'w')
-            #f.write('<Titel>'+ curr_url + '</Title>\n\n')
+            if enable_debug:
+                f = open(os.path.join(cacheDir, 'page.html'), 'w')
+                f.write('<Titel>'+ curr_url + '</Title>\n\n')
             req = Request(curr_url, None, txheaders)
             try:
                 handle = urlopen(req)
             except:
-                traceback.print_exc(file = sys.stdout)
+                if enable_debug:
+                    traceback.print_exc(file = sys.stdout)
                 return
             data = handle.read()
-            #cj.save(xbmc.translatePath(os.path.join(resDir, 'cookies.lwp')), ignore_discard=True)
-            cj.save(xbmc.translatePath(os.path.join(resDir, 'cookies.lwp')))
-            #f.write(data)
-            #f.close()
+            #cj.save(os.path.join(resDir, 'cookies.lwp'), ignore_discard=True)
+            cj.save(os.path.join(resDir, 'cookies.lwp'))
+            if enable_debug:
+                f.write(data)
+                f.close()
+                xbmc.output('Remote URL ' + str(curr_url) + ' opened')
         except IOError:
-            traceback.print_exc(file = sys.stdout)
+            if enable_debug:
+                traceback.print_exc(file = sys.stdout)
             return -1
 
         # Find list items
@@ -967,10 +985,7 @@ class CCurrentList:
                     try:
                         info_idx = tmp.infos_names.index(info.name)
                         if info.build.find('%s') != -1:
-                            try:
-                                tmp.infos_values[info_idx] = smart_unicode(info.build % tmp.infos_values[info_idx])
-                            except:
-                                tmp.infos_values[info_idx] = smart_unicode(info.build % smart_unicode(tmp.infos_values[info_idx]))
+                            tmp.infos_values[info_idx] = smart_unicode(info.build % smart_unicode(tmp.infos_values[info_idx]))
                         continue
                     except:
                         pass
@@ -978,27 +993,18 @@ class CCurrentList:
                         info_rule = info.rule
                         if info.rule.find('%s') != -1:
                             src = tmp.infos_values[tmp.infos_names.index(info.src)]
-                            try:
-                                info_rule = info.rule % (src)
-                            except:
-                                info_rule = info.rule % (smart_unicode(src))
+                            info_rule = info.rule % (smart_unicode(src))
                         infosearch = re.search(info_rule, data)
                         if infosearch:
                             info_value = infosearch.group(1).lstrip().rstrip()
                             if info.build.find('%s') != -1:
-                                try:
-                                    info_value = info.build % (info_value)
-                                except:
-                                    info_value = info.build % (smart_unicode(info_value))
+                                info_value = info.build % (smart_unicode(info_value))
                         elif info.default != '':
                             info_value = info.default
                     else:
                         if info.build.find('%s') != -1:
                             src = tmp.infos_values[tmp.infos_names.index(info.src)]
-                            try:
-                                info_value = info.build % (src)
-                            except:
-                                info_value = info.build % (smart_unicode(src))
+                            info_value = info.build % (smart_unicode(src))
                         else:
                             info_value = info.build
                     tmp.infos_names.append(info.name)
@@ -1007,16 +1013,10 @@ class CCurrentList:
                 for info_name in tmp.infos_names:
                     tmp.infos_values[info_idx] = self.infoFormatter(info_name, tmp.infos_values[info_idx], self.cfg)
                     if info_name.rfind('.append') != -1:
-                        try:
-                            tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])] = tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])] + tmp.infos_values[info_idx]
-                        except:
-                            tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])] = tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])] + smart_unicode(tmp.infos_values[info_idx])
+                        tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])] = smart_unicode(tmp.infos_values[tmp.infos_names.index(info_name[:info_name.rfind('.append')])]) + smart_unicode(tmp.infos_values[info_idx])
                     info_idx = info_idx + 1
                 info_idx = tmp.infos_names.index('url')
-                try:
-                    tmp.infos_values[info_idx] = smart_unicode(item_rule.url_build % (tmp.infos_values[info_idx]))
-                except:
-                    tmp.infos_values[info_idx] = smart_unicode(item_rule.url_build % (smart_unicode(tmp.infos_values[info_idx])))
+                tmp.infos_values[info_idx] = smart_unicode(item_rule.url_build % (smart_unicode(tmp.infos_values[info_idx])))
                 if item_rule.skill.find('append') != -1:
                     if curr_url[len(curr_url) - 1] == '?':
                         tmp.infos_values[info_idx] = curr_url + tmp.infos_values[info_idx]
@@ -1040,7 +1040,7 @@ class CCurrentList:
                     if item_rule.skill.find('directory') != -1:
                         one_found = True
                         if f == None:
-                            f = codecs.open(str(xbmc.translatePath(os.path.join(cacheDir, catfilename))), 'w', 'utf-8')
+                            f = codecs.open(str(os.path.join(cacheDir, catfilename)), 'w', 'utf-8')
                         try:
                             f.write('title=' + tmp.infos_values[tmp.infos_names.index('title')] + '\n')
                         except:
@@ -1080,7 +1080,7 @@ class CCurrentList:
                     if item_rule.skill.find('directory') != -1:
                         one_found = True
                         if f == None:
-                            f = codecs.open(str(xbmc.translatePath(os.path.join(cacheDir, catfilename))), 'w', 'utf-8')
+                            f = codecs.open(str(os.path.join(cacheDir, catfilename)), 'w', 'utf-8')
                         f.write('title=' + tmp.infos_values[tmp.infos_names.index('title')] + '\n')
                         for info_name in tmp.infos_names:
                             if info_name != 'url' and info_name != 'title':
@@ -1119,6 +1119,8 @@ class CCurrentList:
 
 class Main:
     def __init__(self):
+        if enable_debug:
+            xbmc.output('Initializing VideoMonkey')
         self.pDialog = None
         self.curr_file = ''
         self.urlList = []
@@ -1126,6 +1128,8 @@ class Main:
         self.selectionList = []
         self.videoExtension = '.flv'
         self.currentlist = CCurrentList()
+        if enable_debug:
+            xbmc.output('VideoMonkey initialized')
         self.run()
 
     def getDirectLink(self, orig_url):
@@ -1157,10 +1161,11 @@ class Main:
                         fc = response.read()
                     else:
                         fc = response.read(source.rule.limit)
-                #f = open(xbmc.translatePath(os.path.join(cacheDir, 'catcher.html')), 'w')
-                #f.write('<Titel>'+ orig_url + '</Title>\n\n')
-                #f.write(fc)
-                #f.close()
+                if enable_debug:
+                    f = open(os.path.join(cacheDir, 'catcher.html'), 'w')
+                    f.write('<Titel>'+ orig_url + '</Title>\n\n')
+                    f.write(fc)
+                    f.close()
             urlsearch = re.search(source.rule.target, fc)
             match = ''
             if urlsearch:
@@ -1196,10 +1201,11 @@ class Main:
                             ext_fc = ext_response.read()
                         else:
                             ext_fc = ext_response.read(source.ext_rule.limit)
-                    #f = open(xbmc.translatePath(os.path.join(cacheDir, 'ext_catcher.html')), 'w')
-                    #f.write('<Titel>'+ match + '</Title>\n\n')
-                    #f.write(ext_fc)
-                    #f.close()
+                    if enable_debug:
+                        f = open(os.path.join(cacheDir, 'ext_catcher.html'), 'w')
+                        f.write('<Titel>'+ match + '</Title>\n\n')
+                        f.write(ext_fc)
+                        f.close()
                     ext_urlsearch = re.search(source.ext_rule.target, ext_fc)
                     if ext_urlsearch:
                         match = ext_urlsearch.group(1).replace('\r\n', '').replace('\n', '').lstrip().rstrip()
@@ -1291,17 +1297,18 @@ class Main:
         try:
             icon = videoItem.infos_values[videoItem.infos_names.index('icon')]
         except:
-            icon = xbmc.translatePath(os.path.join(imgDir, 'video.png'))
+            icon = os.path.join(imgDir, 'video.png')
         try:
             title = videoItem.infos_values[videoItem.infos_names.index('title')]
         except:
             title = '...'
         try:
-            urllib.urlretrieve(icon, xbmc.translatePath(os.path.join(cacheDir, 'thumb.tbn')))
-            icon = xbmc.translatePath(os.path.join(cacheDir, 'thumb.tbn'))
+            urllib.urlretrieve(icon, os.path.join(cacheDir, 'thumb.tbn'))
+            icon = os.path.join(cacheDir, 'thumb.tbn')
         except:
-            traceback.print_exc(file = sys.stdout)
-            icon = xbmc.translatePath(os.path.join(imgDir, 'video.png'))
+            if enable_debug:
+                traceback.print_exc(file = sys.stdout)
+            icon = os.path.join(imgDir, 'video.png')
         flv_file = url
         listitem = xbmcgui.ListItem(title, title, icon, icon)
         listitem.setInfo('video', {'Title':title})
@@ -1341,49 +1348,65 @@ class Main:
             player_type = xbmc.PLAYER_CORE_DVDPLAYER
 
         if flv_file != None and os.path.isfile(flv_file):
+            if enable_debug:
+                xbmc.output('Play: ' + str(flv_file))
             xbmc.Player(player_type).play(str(flv_file), listitem)
         else:
+            if enable_debug:
+                xbmc.output('Play: ' + str(url))
             xbmc.Player(player_type).play(str(url), listitem)
         xbmc.sleep(200)
 
     def downloadMovie(self, url, title):
-        file_path = xbmc.translatePath(os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension))
+        if enable_debug:
+            xbmc.output('Trying to download video ' + str(url))
+        file_path = os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension)
         if os.path.isfile(file_path):
             file_path = self.currentlist.randomFilename(prefix = file_path[:file_path.rfind('.')] + '_', suffix = self.videoExtension)
         try:
             urllib.urlretrieve(url, file_path, self.video_report_hook)
+            if enable_debug:
+                xbmc.output('Video ' + str(url) + ' downloaded to ' + repr(file_path))
             return file_path
         except IOError:
             title = first_clean_filename(title)
-            file_path = xbmc.translatePath(os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension))
+            file_path = os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension)
             if os.path.isfile(file_path):
                 file_path = self.currentlist.randomFilename(prefix = file_path[:file_path.rfind('.')] + '_', suffix = self.videoExtension)
             try:
                 urllib.urlretrieve(url, file_path, self.video_report_hook)
+                if enable_debug:
+                    xbmc.output('Video ' + str(url) + ' downloaded to ' + repr(file_path))
                 return file_path
             except IOError:
                 title = second_clean_filename(title)
-                file_path = xbmc.translatePath(os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension))
+                file_path = os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension)
                 if os.path.isfile(file_path):
                     file_path = self.currentlist.randomFilename(prefix = file_path[:file_path.rfind('.')] + '_', suffix = self.videoExtension)
                 try:
                     urllib.urlretrieve(url, file_path, self.video_report_hook)
+                    if enable_debug:
+                        xbmc.output('Video ' + str(url) + ' downloaded to ' + repr(file_path))
                     return file_path
                 except IOError:
                     title = third_clean_filename(title)
-                    file_path = xbmc.translatePath(os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension))
+                    file_path = os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension)
                     if os.path.isfile(file_path):
                         file_path = self.currentlist.randomFilename(dir = xbmcplugin.getSetting('download_Path'), suffix = self.videoExtension)
                     try:
                         urllib.urlretrieve(url, file_path, self.video_report_hook)
+                        if enable_debug:
+                            xbmc.output('Video ' + str(url) + ' downloaded to ' + repr(file_path))
                         return file_path
                     except IOError:
                         title = self.currentlist.randomFilename()
-                        file_path = xbmc.translatePath(os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension))
+                        file_path = os.path.join(xbmcplugin.getSetting('download_Path'), title + self.videoExtension)
                         if os.path.isfile(file_path):
                             file_path = self.currentlist.randomFilename(prefix = file_path[:file_path.rfind('.')] + '_', suffix = self.videoExtension)
                         try:
                             urllib.urlretrieve(url, file_path, self.video_report_hook)
+                            if enable_debug:
+                                xbmc.output('Video ' + str(url) + ' downloaded to ' + repr(file_path))
                             return file_path
                         except:
                             pass
@@ -1400,7 +1423,8 @@ class Main:
             try:
                 os.remove(file_path)
             except:
-                traceback.print_exc(file = sys.stdout)
+                if enable_debug:
+                    traceback.print_exc(file = sys.stdout)
         return None
 
     def video_report_hook(self, count, blocksize, totalsize):
@@ -1431,9 +1455,14 @@ class Main:
             url = url[:len(url) - 12]
             lItem.infos_values[lItem.infos_names.index('url')] = url
             cfg_file = lItem.infos_values[lItem.infos_names.index('cfg')]
-            self.currentlist.loadLocal(cfg_file, False, lItem, True)
-            lItem.infos_values[lItem.infos_names.index('url')] = self.getDirectLink(lItem.infos_values[lItem.infos_names.index('url')])
+            if lItem.infos_values[lItem.infos_names.index('type')] == 'video':
+                self.currentlist.loadLocal(cfg_file, False, lItem, True)
+                lItem.infos_values[lItem.infos_names.index('url')] = self.getDirectLink(lItem.infos_values[lItem.infos_names.index('url')])
             lItem.infos_values[lItem.infos_names.index('url')] = self.TargetFormatter(lItem.infos_values[lItem.infos_names.index('url')], cfg_file)
+            try:
+                self.videoExtension = '.' + lItem.infos_values[lItem.infos_names.index('extension')]
+            except:
+                pass
             if ext == 'videomonkey':
                 result = self.playVideo(lItem)
             else:
@@ -1468,14 +1497,14 @@ class Main:
                 try:
                     m_type = m.infos_values[m.infos_names.index('type')]
                 except:
-                    m_type = u'rss'
+                    m_type = 'rss'
                 m_icon = m.infos_values[m.infos_names.index('icon')]
                 m_title = clean_safe(m.infos_values[m.infos_names.index('title')])
-                if m_type == u'rss' or m_type == u'search':
+                if m_type == 'rss' or m_type == 'search':
                     self.addListItem(m_title, self.currentlist.codeUrl(m), m_icon, len(self.currentlist.items), m)
-                elif m_type == u'video':
+                elif m_type.find('video') != -1:
                     self.addListItem(m_title, self.currentlist.codeUrl(m, 'videomonkey'), m_icon, len(self.currentlist.items), m)
-                elif m_type == u'live':
+                elif m_type == 'live':
                     self.addListItem(m_title, m_url, m_icon, len(self.currentlist.items), m, False)
         return result
 
@@ -1503,14 +1532,19 @@ class Main:
         for video_info_name in lItem.infos_names:
             if video_info_name.find('context.') != -1:
                 try:
-                    action = 'XBMC.RunPlugin(%s)' % (sys.argv[0] + '?url=' + lItem.infos_values[lItem.infos_names.index(video_info_name)])
+                    cItem = lItem
+                    cItem.infos_values[lItem.infos_names.index('url')] = lItem.infos_values[lItem.infos_names.index(video_info_name)]
+                    cItem.infos_values[lItem.infos_names.index('type')] = 'rss'
+                    action = 'XBMC.RunPlugin(%s)' % (sys.argv[0] + '?url=' + self.currentlist.codeUrl(cItem))
                     liz.addContextMenuItems([(video_info_name[video_info_name.find('.') + 1:], action)])
                 except:
                     pass
-            if video_info_name.find('.append') == -1 and video_info_name != 'url' and video_info_name != 'title' and video_info_name != 'icon' and video_info_name != 'type':
+            if video_info_name.find('.append') == -1 and video_info_name != 'url' and video_info_name != 'title' and video_info_name != 'icon' and video_info_name != 'type' and video_info_name != 'extension' and video_info_name.find('.tmp') == -1 and video_info_name.find('.append') == -1 and video_info_name.find('context.') == -1:
                 try:
                     if video_info_name.find('.int') != -1:
                         liz.setInfo(type = 'Video', infoLabels = {capitalize(video_info_name[:video_info_name.find('.int')]): int(lItem.infos_values[lItem.infos_names.index(video_info_name)])})
+                    elif video_info_name.find('.once') != -1:
+                        liz.setInfo(type = 'Video', infoLabels = {capitalize(video_info_name[:video_info_name.find('.once')]): lItem.infos_values[lItem.infos_names.index(video_info_name)]})
                     else:
                         liz.setInfo(type = 'Video', infoLabels = {capitalize(video_info_name): lItem.infos_values[lItem.infos_names.index(video_info_name)]})
                 except:
@@ -1522,49 +1556,87 @@ class Main:
     def purgeCache(self):
         for root, dirs, files in os.walk(cacheDir , topdown = False):
             for name in files:
-                os.remove(xbmc.translatePath(os.path.join(root, name)))
+                os.remove(os.path.join(root, name))
 
     def run(self):
+        if enable_debug:
+            xbmc.output('VideoMonkey running')
         try:
             self.handle = int(sys.argv[1])
             paramstring = sys.argv[2]
             if len(paramstring) <= 2:
+                if enable_debug:
+                    xbmc.output('Cache directory: ' + str(cacheDir))
+                    xbmc.output('Resource directory: ' + str(resDir))
+                    xbmc.output('Image directory: ' + str(imgDir))
                 if not os.path.exists(cacheDir):
+                    if enable_debug:
+                        xbmc.output('Creating cache directory ' + str(cacheDir))
                     os.mkdir(cacheDir)
+                    if enable_debug:
+                        xbmc.output('Cache directory created')
                 if not os.path.exists(xbmcplugin.getSetting('download_Path')):
                     try:
+                        if enable_debug:
+                            xbmc.output('Creating download directory ' + str(xbmcplugin.getSetting('download_Path')))
                         os.mkdir(xbmcplugin.getSetting('download_Path'))
+                        if enable_debug:
+                            xbmc.output('Download directory created')
                     except:
-                        traceback.print_exc(file = sys.stdout)
+                        if enable_debug:
+                            xbmc.output('Cannot create download directory')
+                            traceback.print_exc(file = sys.stdout)
+                if enable_debug:
+                    xbmc.output('Purging cache directory')
                 self.purgeCache()
-                result = self.parseView('sites.list')
-                del self.currentlist.items[:]
+                if enable_debug:
+                    xbmc.output('Cache directory purged')
+                if xbmcplugin.getSetting('custom_entry') == 'false':
+                    self.parseView('sites.list')
+                    del self.currentlist.items[:]
+                self.parseView('entry.list')
                 try:
-                    self.parseView('entry.list')
-                except:
-                    pass
-                try:
+                    if enable_debug:
+                        xbmc.output('Loading version from svn')
                     urllib.urlretrieve('http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/version', os.path.join(cacheDir, 'version'))
+                    if enable_debug:
+                        xbmc.output('Version loaded from svn')
                 except:
+                    if enable_debug:
+                        xbmc.output('Cannot load version from svn')
                     pass
                 try:
+                    if enable_debug:
+                        xbmc.output('Comparing versions')
                     if filecmp.cmp(os.path.join(rootDir, 'version'), os.path.join(cacheDir, 'version')) == 0:
+                        if enable_debug:
+                            xbmc.output('Adding update notification')
                         liz = xbmcgui.ListItem(xbmc.getLocalizedString(30059), xbmc.getLocalizedString(30059), os.path.join(imgDir, 'information.png'), os.path.join(imgDir, 'information.png'))
                         xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = sys.argv[0] + '?url=update', listitem = liz)
                 except:
+                    if enable_debug:
+                        xbmc.output('cannot compare versions or add notification item')
                     liz = xbmcgui.ListItem(xbmc.getLocalizedString(30059), xbmc.getLocalizedString(30059), os.path.join(imgDir, 'information.png'), os.path.join(imgDir, 'information.png'))
                     xbmcplugin.addDirectoryItem(handle = int(sys.argv[1]), url = sys.argv[0] + '?url=update', listitem = liz)
                 try:
+                    if enable_debug:
+                        xbmc.output('End of directory (cache disabled)')
                     xbmcplugin.endOfDirectory(handle = int(sys.argv[1]), cacheToDisc = False)
                 except:
+                    if enable_debug:
+                        xbmc.output('Cache disabling not suuported')
                     xbmcplugin.endOfDirectory(handle = int(sys.argv[1]))
             else:
                 params = sys.argv[2]
                 currentView = params[5:]
-                print(u' ==> ' + repr(currentView))
+                if enable_debug:
+                    xbmc.output(repr(currentView))
                 if self.parseView(currentView) == 0:
                     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+                    if enable_debug:
+                        xbmc.output('End of directory')
         except Exception, e:
-            traceback.print_exc(file = sys.stdout)
+            if enable_debug:
+                traceback.print_exc(file = sys.stdout)
             dialog = xbmcgui.Dialog()
             dialog.ok('VideoMonkey Error', 'Error running VideoMonkey.\n\nReason:\n' + str(e))

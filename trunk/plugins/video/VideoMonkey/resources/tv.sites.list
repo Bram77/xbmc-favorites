@@ -17,15 +17,27 @@ icon=video.monkey.image|ard_mediathek.png
 director=ARD mediathek
 url=ard.de.cfg
 ########################################################
-title=arte+7
+title=arte tv
 type=rss
-icon=video.monkey.image|arte_plus7.png
-director=arte+7
-url=arteplus7.cfg
+icon=video.monkey.image|arte.png
+director=arte
+url=arte.cfg
 ########################################################
-title=Alpha Centauri (DE)
+title=BR-online (DE)
 type=rss
-icon=video.monkey.image|alpha_centauri.png
-director=Alpha Centauri
-url=alphacentauri.de.cfg
+icon=video.monkey.image|br_alpha.png
+director=Bayerischer Rundfunk
+url=br.de.cfg
+########################################################
+title=Schweizer Fernsehen (SW)
+type=rss
+icon=video.monkey.image|sf_tv.png
+director=Schweizer Fernsehen
+url=sf.tv.cfg
+########################################################
+title=fxguide tv (EN)
+type=rss
+icon=video.monkey.image|fxguide.png
+director=fxguide
+url=fxguide.com.cfg
 ########################################################

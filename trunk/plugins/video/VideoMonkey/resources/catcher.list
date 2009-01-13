@@ -70,6 +70,27 @@ ext_target=HREF="(.*?)"
 ext_limit=500
 extension=wmv
 quality=high
+target=HREF *= *"([^"]+)"
+extension=wmv
+quality=standard
+target=var video_uri *= *'(mms[^']+)';
+extension=wmv
+quality=standard
+target=var video_uri *= *'(http.+?\.wmv)';
+ext_target=HREF *= *"([^"]+)"
+extension=wmv
+quality=standard
+target=var video_uri *= *'(http.+?\.asx)';
+ext_target=HREF *= *"([^"]+)"
+extension=wmv
+quality=standard
+target=var video_uri *= *'(http.+?\.rm)';
+ext_target=(rtsp.+?\.rm)
+extension=rm
+quality=standard
+target=var video_uri *= *'(http.+?\.flv)';
+extension=flv
+quality=standard
 # FLV sources deactivated until rtmp support
 #target=availableFormats\[\d]\["format"] = "FLV";\n    availableFormats\[\d]\["quality"] = "MQ";\n    availableFormats\[\d]\["url"] = "(.+?)"
 #extension=flv
@@ -140,7 +161,7 @@ info=ab DSL-2000
 extension=asf
 quality=high
 ########################################################
-title=alphacentauri.de
+title=br.de
 target=player\.avaible\_url\['flashmedia'\]\['1'\] = "(http://[^"]+)";
 url=%s
 extension=flv
