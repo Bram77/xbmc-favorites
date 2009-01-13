@@ -7,7 +7,7 @@ __author__ = 'sfaxman'
 __url__ = 'http://code.google.com/p/xbmc-addons/'
 __svn_url__ = 'http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoMonkey/'
 __credits__ = 'sfaxman'
-__version__ = '1.8'
+__version__ = '1.17'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -71,6 +71,6 @@ class Main:
         else:
             import videomonkey
             videomonkey.Main()
-            sys.modules.clear()
+            #sys.modules.clear()
 
 win = Main()

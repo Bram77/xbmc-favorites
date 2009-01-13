@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<strings>    <!--  20.11.2008 Finnish   -->
+<strings>    <!--  10.1.2009 Finnish   -->
     <string id="30000">VideoMonkey</string>
     <string id="30001">XBMC Media Center</string>
 
-    <string id="30002">Piilota aikuis-sisältö</string>
+    <string id="30002">Näytä vain minun kirjanmerkki</string>
     <string id="30003">Toistotapa</string>
     <string id="30004">Automaattinen</string>
     <string id="30005">MPlayer</string>
@@ -25,10 +25,10 @@
     <string id="30053">Videon lataus epäonnistui.[CR]Yritetään katsoa videota...</string>
     <string id="30054">Haluatko poistaa kirjanmerkin?</string>
     <string id="30055">Monta videon lähdettä saatavilla. Valitse yksi:</string>
-    <string id="30056">Matatala laatu</string>
+    <string id="30056">Matala laatu</string>
     <string id="30057">Normaali laatu</string>
     <string id="30058">Korkea laatu</string>
-    <string id="30059">Päivittää</string>
+    <string id="30059">Päivitä</string>
     <string id="30060">VideoMonkey on päivitetty onnistuneesti</string>
 
     <string id="30100">Kategoria</string>
@@ -41,8 +41,8 @@
     <string id="30107">Esittäjä</string>
     <string id="30108">Videot</string>
     <string id="30109">Lajittelu</string>
-    <string id="30110">Toive</string>
-    <string id="30111">Määritä</string>
+    <string id="30110">Ehdotus</string>
+    <string id="30111">Tarkenna</string>
     <string id="30112">Maa</string>
     <string id="30113">Ajan askellus</string>
     <string id="30114">Urheilu</string>
