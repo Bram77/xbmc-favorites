@@ -82,6 +82,12 @@ header=Cookie|age_check=1
 extension=flv
 quality=standard
 ########################################################
+title=tube8.com
+target=so.addVariable\('videoUrl','([^']+)'\)
+url=%s
+extension=flv
+quality=standard
+########################################################
 title=boysfood.com
 target=<a href="(http[^"]+)"[^>]+>.......Download this video
 url=%s
