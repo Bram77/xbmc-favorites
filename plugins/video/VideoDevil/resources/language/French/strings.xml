@@ -3,7 +3,7 @@
     <string id="30000">VideoDevil</string>
     <string id="30001">XBMC Media Center</string>
 
-    <string id="30002">Exclure le contenu adultaire</string>
+    <string id="30002">Désactiver la clause de non-responsabilité</string>
     <string id="30003">Type du lecteur</string>
     <string id="30004">Auto</string>
     <string id="30005">MPlayer</string>
@@ -30,12 +30,12 @@
     <string id="30058">Haute qualité</string>
     <string id="30059">Mise à jour</string>
     <string id="30060">VideoDevil a été mis à jour</string>
-    <string id="30061">WARNING :This plugin contains explicit adult material.</string>
-    <string id="30062">You may enter only if you are at least 18 years of age</string>
-    <string id="30063">or at least the legal age in the jurisdiction where</string>
-    <string id="30064">you reside or from which you access this content.</string>
-    <string id="30065">Exit</string>
-    <string id="30066">Enter</string>
+    <string id="30061">Attention :Ce plugin contient du matériel pour adultes</string>
+    <string id="30062">Vous pouvez entrer seulement si vous avez au moins 18 ans</string>
+    <string id="30063">ou l'âge minimal dans le lieu juridique où</string>
+    <string id="30064">vous habitez ou d'où vous avez accès à ce contenu.</string>
+    <string id="30065">Sortir</string>
+    <string id="30066">Entrer</string>
 
     <string id="30100">Catégories</string>
     <string id="30101">Sous-catégories</string>
