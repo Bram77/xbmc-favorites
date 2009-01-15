@@ -1,0 +1,20 @@
+Extra how to use sopcast
+
+Ok, how to get uk football streamed to your xbox. 
+You need sopcast installed and running on a pc on your home network. 
+You need a file on your xbox in a location where xbmc will see it. 
+The file is a text file - i've named mine sopcast.m3u. Contents of the file are;
+http://your pc ip address:8902/tv.asf 
+EXAMPLE your network ip 192.168.1.2
+become http://192.168.1.2:8902/tv.asf
+Edit it for your pc's ip address obviously .
+On the pc, find a stream to watch. 
+For UK football you should be able to find a sopcast stream from;
+httpwww.myp2p.euindex.phppart=sports or httpwww.engfootball.com.
+Once it's running on the PC, switch over to your xbox. 
+Load up xbmc (you have got it installed as the dashboard right) 
+and add a source which points to the folder containing the m3u file. Click the
+Click the sopcast.m3u and you're away. 
+
+update/edit how to use sopcast tutorial 
+original by Coastal from Coastal's Blog

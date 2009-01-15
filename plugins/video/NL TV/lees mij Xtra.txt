@@ -1,0 +1,46 @@
+		Extra:Sopcast
+
+sopcast is een programma die ik gebruik om voetbaluitzendingen te bekijken
+die op internet worden uitgezonden.
+echer kan ik dit niet direct op mijn xbox xbmc draaien
+en heb ik een pc voor nodig die gelang de wedstrijd dan ook aanstaat. 
+daarvoor moet je eerst sopcast op je pc installeren.
+let erop dat je niet een sopcast met virus erop download
+ik raad aan om via download.com sopcast te downloaden.
+
+dan kijk ik op http://www.myp2p.eu/ welke voetbalwedstijden live worden uitgezonden
+via sopcast.daar staat ook een link van sopcast stream.
+druk daarop en dan zal je de wedstijd op je pc scherm te voorschijn zien komen.
+open op xbmc de sopcast.m3u bestand als een tekst bestand
+te vinden in NL TV /Extra
+verander pc ip address naar jouw  ip bijv. 192.168.1.2
+http://your pc ip address:8902/tv.asf naar
+http://192.168.1.2:8902/tv.asf
+nu kan je op xbmc de podcast bestand afspelen.
+dit bestand ergens anders plaatsen dan Nl tv
+
+
+Aanrader Nederlandse forum over Voetbalstreaming 
+http://www.voetbalstreaming.cautela.nl/
+
+		Extra: tijdelijke streams
+
+hier staan streams die waarschijnlijke een kleine periode in een jaar
+worden uitgezonden en als de tijd daarvoor zal ik de url NL TV updaten.
+
+
+		Extra: voor Navi-x script
+
+Navi-x is een leuke scipt om onder andere youtube en podcast/vodcast
+te bekijken.ik heb zelf een verzameling van podcast gemaakt
+die te vinden is op Navi-X Media Portal/Navi-Xtra Media Portal/Dutch Podcast.
+ook heb ik ooit Dutch Internet Television erop gezet maar die houd ik niet bij.
+
++ Radio programma Nachtdienst
+dit vind ik zelf een leuke programma.
+In De Nachtdienst staan de persoonlijke verhalen van de luisteraars centraal. 
+Zo houdt het programma velen midden in de nacht aan de radio gekluisterd. Taboes zijn er niet:
+de verhalen mogen werkelijk overal over gaan. Sport, politiek, kunst, gezondheid, huishoudelijke beslommeringen, dieren en wat een mens nog meer kan verzinnen. 
+Nachtdienst is in NL TV\Extra\Navi-X te vinden 
+dit moet moet je in Q/scripts/.Dus de bestaande Navi-X overschrijven . 
+en Nachtdienst kan je beluisten en downloaden via Navi-x\My Playlists.
