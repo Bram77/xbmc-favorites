@@ -899,7 +899,6 @@
 					+ System.IdleTime(1) 
 					+ !Skin.HasSetting(movieFanartNoPlot)
 					+ ![ControlGroup(9000).HasFocus(0) | Window.IsActive(106)]
-					+ Skin.HasSetting(tvShowPosters)
 			</visible>
 			<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 			<include>screenwidth</include>
@@ -1034,12 +1033,12 @@
 			<ondown>5</ondown>
 			<spinposx>5000</spinposx>
 			<spinposy>5140</spinposy>
-			<visible>
-				!Skin.HasSetting(movieFanartNoPlot)
-				+ Control.IsVisible(54) + System.IdleTime(1)
-				+ [Container.Content(movies)|Container.Content(tvshows)] 
-				+ ![ControlGroup(9000).HasFocus(0) | Window.IsActive(106)]
-				+ Skin.HasSetting(tvShowPosters)
+			<visible>!ControlGroup(9000).HasFocus(0) 
+					+ [Container.Content(movies) | Container.Content(tvshows)]
+					+ Control.IsVisible(54) 
+					+ System.IdleTime(1) 
+					+ !Skin.HasSetting(movieFanartNoPlot)
+					+ ![ControlGroup(9000).HasFocus(0) | Window.IsActive(106)]
 			</visible>
 			<include>fanartFrame</include>
 			<include>autoscroll-plot</include>
