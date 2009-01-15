@@ -1,0 +1,8 @@
+NL tv contains Dutch tv streams.it actually isn't a plugin.
+should be added to the Video section as a location, 
+even though it's downloaded to the "plugins/video/" directory on your XBOX. 
+/description
+
+
+
+
