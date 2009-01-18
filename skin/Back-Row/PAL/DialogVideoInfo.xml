@@ -906,7 +906,7 @@
 				<description>Tracks/Review</description>
 				<posx>15</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 		        <height>35</height>
 				<label>206</label>
 				<onleft>11</onleft>
@@ -919,7 +919,7 @@
 				<description>Play</description>
 				<posx>130</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 		        <height>35</height>
 				<label>208</label>
 				<onleft>5</onleft>
@@ -932,7 +932,7 @@
 				<description>Resume</description>
 				<posx>245</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 		        <height>35</height>
 				<label>13404</label>
 				<onleft>8</onleft>
@@ -945,7 +945,7 @@
 				<description>Refresh</description>
 				<posx>360</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 		        <height>35</height>
 				<label>184</label>
 				<onleft>9</onleft>
@@ -958,7 +958,7 @@
 				<description>Get Thumb</description>
 				<posx>475</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 		        <height>35</height>
 				<label>13405</label>
 				<onleft>6</onleft>
@@ -970,9 +970,9 @@
 
 			<control type="button" id="12">
 				<description>Get FanArt</description>
-				<posx>580</posx>
+				<posx>590</posx>
 				<posy>470</posy>
-				<width>115</width>
+				<width>110</width>
 				<height>35</height>
 				<label>20413</label>
 				<onleft>10</onleft>
@@ -984,9 +984,9 @@
 
                <control type="button" id ="11">
 				<description>Trailer</description>
-				<posx>580</posx>
+				<posx>590</posx>
 				<posy>70</posy>
-				<width>115</width>
+				<width>110</width>
 				<height>35</height>
 				<label>20410</label>
 				<align>center</align>
@@ -1014,7 +1014,7 @@
 				<description>Tracks/Review</description>
 				<posx>10</posx>
 				<posy>470</posy>
-				<width>175</width>
+				<width>170</width>
 		        <height>35</height>
 				<label>206</label>
 				<onleft>12</onleft>
@@ -1028,7 +1028,7 @@
 				<description>Refresh</description>
 				<posx>185</posx>
 				<posy>470</posy>
-				<width>175</width>
+				<width>170</width>
 		        <height>35</height>
 				<label>184</label>
 				<onleft>5</onleft>
@@ -1042,7 +1042,7 @@
 				<description>Get Thumb</description>
 				<posx>360</posx>
 				<posy>470</posy>
-				<width>175</width>
+				<width>170</width>
 		        <height>35</height>
 				<label>13405</label>
 				<onleft>6</onleft>
@@ -1056,7 +1056,7 @@
 				<description>Get FanArt</description>
 				<posx>535</posx>
 				<posy>470</posy>
-				<width>175</width>
+				<width>170</width>
 				<height>35</height>
 				<label>20413</label>
 				<onleft>10</onleft>

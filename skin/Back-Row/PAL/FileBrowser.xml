@@ -146,7 +146,7 @@
 <id>413</id>
 <posx>30</posx>
 <posy>460</posy>
-<width>80</width>
+<width>100</width>
 <height>35</height>
 <align>center</align>
 <label>186</label>
@@ -165,9 +165,9 @@
 <description>Cancel button</description>
 <type>button</type>
 <id>414</id>
-<posx>110</posx>
+<posx>135</posx>
 <posy>460</posy>
-<width>80</width>
+<width>100</width>
 <height>35</height>
 <align>center</align>
 <label>222</label>
@@ -186,9 +186,9 @@
 <description>Create folder button</description>
 <type>button</type>
 <id>415</id>
-<posx>190</posx>
+<posx>240</posx>
 <posy>460</posy>
-<width>80</width>
+<width>100</width>
 <height>35</height>
 <align>center</align>
 <label>119</label>

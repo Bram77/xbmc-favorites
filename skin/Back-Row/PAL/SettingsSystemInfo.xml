@@ -25,7 +25,7 @@
 <posx>20</posx>
 <posy>470</posy>
 <width>680</width>
-<itemgap>0</itemgap>
+<itemgap>5</itemgap>
 <onup>9000</onup>
 <ondown>9000</ondown>
 <orientation>horizontal</orientation>
@@ -34,13 +34,13 @@
 <label>13278</label>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 <control type="button" id="94">
 <description>Button Storage</description>
 <label>13277</label>
-<width>135</width>
+<width>132</width>
 <align>center</align>
 <aligny>center</aligny>
 </control>
@@ -51,7 +51,7 @@
 <visible>System.Platform.Xbox</visible>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 <control type="button" id="93">
@@ -60,7 +60,7 @@
 <visible>System.Platform.Xbox</visible>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 <control type="button" id="96">
@@ -68,7 +68,7 @@
 <label>13279</label>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 <control type="button" id="97">
@@ -76,7 +76,7 @@
 <label>13280</label>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 <control type="button" id="98">
@@ -84,7 +84,7 @@
 <label>13281</label>
 <align>center</align>
 <aligny>center</aligny>
-<width>135</width>
+<width>132</width>
 </control>
 
 </control>

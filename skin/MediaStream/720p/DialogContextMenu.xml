@@ -4,6 +4,7 @@
     <system>1</system>
     <posx>0</posx>
     <posy>0</posy>
+    <origin x="100" y="100">true</origin>
   </coordinates>
 
   <controls>
