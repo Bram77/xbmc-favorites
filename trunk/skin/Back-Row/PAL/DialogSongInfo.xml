@@ -228,7 +228,7 @@
 			<description>Get Thumb button</description>
 			<posx>20</posx>
 			<posy>470</posy>
-			<width>170</width>
+			<width>165</width>
 		    <height>35</height>
 			<label>13405</label>
 			<font>font10</font>
@@ -246,7 +246,7 @@
 			<description>Album Info button</description>
 			<posx>190</posx>
 			<posy>470</posy>
-			<width>170</width>
+			<width>165</width>
 		    <height>35</height>
 			<label>10523</label>
 			<font>font10</font>
@@ -264,7 +264,7 @@
 			<description>Yes button</description>
 			<posx>360</posx>
 			<posy>470</posy>
-			<width>170</width>
+			<width>165</width>
 		    <height>35</height>
 			<label>186</label>
 			<font>font10</font>
@@ -281,7 +281,7 @@
 			<description>No button</description>
 			<posx>530</posx>
 			<posy>470</posy>
-			<width>170</width>
+			<width>165</width>
 		    <height>35</height>
 			<label>222</label>
 			<font>font10</font>

@@ -190,7 +190,7 @@
 <description>Tracks/Review</description>
 <posx>0</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>182</label>
 <onleft>10</onleft>
@@ -207,7 +207,7 @@
 <description>Refresh</description>
 <posx>225</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>184</label>
 <font>font13</font>
@@ -223,7 +223,7 @@
 <description>Get Thumb</description>
 <posx>450</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>13405</label>
 <font>font13</font>
@@ -529,7 +529,7 @@
 <description>Tracks/Review</description>
 <posx>0</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>182</label>
 <onleft>10</onleft>
@@ -546,7 +546,7 @@
 <description>Refresh</description>
 <posx>225</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>184</label>
 <font>font13</font>
@@ -562,7 +562,7 @@
 <description>Get Thumb</description>
 <posx>450</posx>
 <posy>470</posy>
-<width>225</width>
+<width>220</width>
 <height>35</height>
 <label>13405</label>
 <font>font13</font>

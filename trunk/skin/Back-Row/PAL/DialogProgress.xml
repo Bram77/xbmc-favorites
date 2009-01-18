@@ -68,6 +68,7 @@
 		<midtexture>progress_mid-blue2.png</midtexture>
 		<righttexture>progress_right.png</righttexture>
 		<overlaytexture></overlaytexture>
+		<colordiffuse>99ffffff</colordiffuse>
 	</control>
 
 

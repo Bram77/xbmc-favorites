@@ -23,6 +23,7 @@
 
 
 
+
 <control type="multiimage">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -62,40 +63,30 @@
         <animation effect="fade" delay = "200" time="800">Hidden</animation>
 		</control>
 
+
 <control>
 		<description>Background</description>
 		<type>image</type>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>720</width>
-		<height>388</height>
+		<height>395</height>
 		<texture>Back-Row.png</texture>
 		<animation effect="fade" time="200">WindowOpen</animation>
-		<visible>!Skin.HasSetting(Background)</visible>	    
+	    <visible>!Skin.HasSetting(Background)</visible>
         </control>
+
 
 <control>
 		<description>Panel Image</description>
 		<type>image</type>
-		<posx>0</posx>
-		<posy>388</posy>
-		<width>720</width>
-		<height>216</height>
-		<texture>background2.png</texture>
-        <animation effect="fade" time="200">WindowOpen</animation>
-	    
-        </control>
-
-		<control>
-		<description>Panel Image</description>
-		<type>image</type>
-		<posx>0</posx>
+		<posx>-30</posx>
 		<posy>358</posy>
-		<width>720</width>
+		<width>750</width>
 		<height>216</height>
 		<texture>chairs1.png</texture>
         <animation effect="fade" time="200">WindowOpen</animation>
-		<visible>!Skin.HasSetting(Background)</visible>	    
+	    <visible>!Skin.HasSetting(Background)</visible>
         </control>
 
 
@@ -103,8 +94,8 @@
 	
 	<control type="wraplist" id="52">
     <viewtype label="Big WrapList">bigwrap</viewtype>
-     <posx>2.5</posx>
-     <posy>67</posy>
+     <posx>0</posx>
+     <posy>93.5</posy>
      <width>720</width>
      <height>504</height>
      <onleft>90</onleft>
@@ -113,32 +104,32 @@
      <ondown>98</ondown>
      <focusposition>1</focusposition>
      <orientation>horizontal</orientation>
-     <itemlayout height="270" width="240">
+     <itemlayout height="270" width="180">
       
 	  <control type="image">
        <posx>10</posx>
-       <posy>90</posy>
-       <width>220</width>
-       <height>270</height>
+       <posy>170</posy>
+       <width>170</width>
+       <height>190</height>
        <info>ListItem.Icon</info>
-       <aspectratio aligny="bottom">keep</aspectratio>
+       <aspectratio aligny="bottom">stretch</aspectratio>
       </control>
      
-      
-          
+     
      </itemlayout>
      
-	 <focusedlayout height="270" width="240">
+	 <focusedlayout height="270" width="180">
       <control type="image">
        <posx>10</posx>
-       <posy>90</posy>
-       <width>220</width>
-       <height>270</height>
+       <posy>170</posy>
+       <width>170</width>
+       <height>190</height>
        <info>ListItem.Icon</info>
-       <aspectratio aligny="bottom">keep</aspectratio>
+       <aspectratio aligny="bottom">stretch</aspectratio>
        </control>
       
-            
+     
+      
      </focusedlayout>
    </control>
    <control type="label">
@@ -150,7 +141,7 @@
     <textcolor>white</textcolor>
     <align>center</align>
     <info>ListItem.Label</info>
-    <include>selectedcolor</include>
+     <textcolor>white</textcolor>
     <visible>Control.IsVisible(52)</visible>
     </control>
     
@@ -163,9 +154,9 @@
 		<height>16</height>
 		<font>special12</font>
 		<align>center</align>
-		<textcolor>white</textcolor>
+		 <textcolor>white</textcolor>
 		<info>ListItem.Label2</info>
-		<textcolor>white</textcolor>
+		 <textcolor>white</textcolor>
 		<visible>Control.IsVisible(52)</visible>
 	</control>
 
@@ -178,7 +169,7 @@
 		<width>420</width>
 		<!--<align>-</align>-->
 		<font>special13</font>
-		<textcolor>white</textcolor>
+		 <textcolor>white</textcolor>
 		<shadowcolor>shadow</shadowcolor>
 		<visible>!Window.IsActive(130) + !Window.IsActive(131)</visible>
 	</control>
@@ -190,7 +181,7 @@
 		<posx>660</posx>
 		<posy>520</posy>
 		<width>40</width>
-		<height>40</height>
+		<height>50</height>
 		<onclick>ActivateWindow(ShutdownMenu)</onclick>
 		<texturefocus>home-power-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -207,40 +198,40 @@
 	<control>
 		<description>Date</description>
 		<type>label</type>
-		<posx>600</posx>
+		<posx>620</posx>
 		<posy>35</posy>
-		<label>date</label>
+		<label>552</label>
 		<info>System.Date</info>
 		<align>right</align>
 		<aligny>center</aligny>
-		<font>special12</font>
-		<textcolor>white</textcolor>
+		<font>special13</font>
+		 <textcolor>white</textcolor>
 	    </control>
 
 	<control>
 		<description>Date and Time Suffix</description>
 		<type>label</type>
-		<posx>612</posx>
+		<posx>632</posx>
 		<posy>33</posy>
 		<label>|</label>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>special13</font>
-		<textcolor>white</textcolor>
-	   </control>
+		 <textcolor>white</textcolor>
+	      </control>
 
 	<control>
 		<description>Time</description>
  		<type>label</type>
-		<posx>630</posx>
+		<posx>650</posx>
 		<posy>35</posy>
-		<label>time</label>
+		<label>555</label>
 		<info>System.Time</info>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>special13</font>
+		<font>special13</font> 
 		<textcolor>white</textcolor>
-	    </control>
+	   	</control>
 
 
 	</controls>

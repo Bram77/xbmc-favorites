@@ -25,7 +25,9 @@
 		<id>5</id>
 		<posx>30</posx>
 		<posy>80</posy>
+		<width>115</width>
 		<label>368</label>
+		<align>center</align>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<onleft>3</onleft>
