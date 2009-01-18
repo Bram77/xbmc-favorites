@@ -7,7 +7,7 @@ __author__ = 'sfaxman'
 __url__ = 'http://code.google.com/p/xbmc-addons/'
 __svn_url__ = 'http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoDevil/'
 __credits__ = 'sfaxman'
-__version__ = '1.2'
+__version__ = '1.3'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
@@ -71,6 +71,6 @@ class Main:
         else:
             import videodevil
             videodevil.Main()
-            sys.modules.clear()
+            #sys.modules.clear()
 
 win = Main()
