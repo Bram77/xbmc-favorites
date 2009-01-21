@@ -1,0 +1,151 @@
+<window type="dialog" id="53">
+<defaultcontrol always="true">2002</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>208</posx>
+  <posy>153</posy>
+</coordinates>
+  
+<include>DefaultFade</include>
+  
+<controls>
+
+  <control type="group">
+    <include>OptionBack1-6</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>304</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label">
+      <description>Submenu Header Label</description>
+      <posx>35</posx>
+      <posy>0</posy>
+      <width>268</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[1034]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+
+    <control type="button" id="2002">
+      <description>Movies</description>
+      <posx>10</posx>
+      <posy>55</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[342]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2007</onup>
+      <ondown>2003</ondown>
+    </control>
+    <control type="button" id="2003">
+      <description>TV Shows</description>
+      <posx>10</posx>
+      <posy>90</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[20343]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2002</onup>
+      <ondown>2004</ondown>
+    </control>
+    <control type="button" id="2004">
+      <description>Music Videos</description>
+      <posx>10</posx>
+      <posy>125</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[20389]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>XBMC.ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2003</onup>
+      <ondown>2005</ondown>
+    </control>
+    <control type="button" id="2005">
+      <description>Clips</description>
+      <posx>10</posx>
+      <posy>160</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[31003]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>XBMC.ActivateWindow(24,Clips)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2004</onup>
+      <ondown>2006</ondown>
+    </control>
+    <control type="button" id="2006">
+      <description>Playlists</description>
+      <posx>10</posx>
+      <posy>195</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[136]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>XBMC.ActivateWindow(MyVideoLibrary,playlists)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2005</onup>
+      <ondown>2007</ondown>
+    </control>
+    <control type="button" id="2007">
+      <description>Video Files</description>
+      <posx>10</posx>
+      <posy>230</posy>
+      <width>284</width>
+      <align>left</align>
+      <textoffsetx>40</textoffsetx>
+      <label>$LOCALIZE[744]</label>
+      <font>18BdFont</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onclick>Dialog.Close(53)</onclick>
+      <onclick>ActivateWindow(videofiles)</onclick>
+      <onleft>-</onleft>
+      <onright>-</onright>
+      <onup>2006</onup>
+      <ondown>2002</ondown>
+    </control>
+  </control>
+  
+</controls>
+  
+</window>

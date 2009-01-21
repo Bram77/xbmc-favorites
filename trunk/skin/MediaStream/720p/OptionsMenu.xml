@@ -786,9 +786,17 @@
           <include>OMButtonItem</include>
         </control>
 
+        <control type="button" id="971">
+          <description>Sort by Rating button</description>
+          <visible>Container.Content(songs)</visible>
+          <label>563</label>
+          <onclick>Container.SetSortMethod(23)</onclick>
+          <include>OMButtonItem</include>
+        </control>
+
         <control type="button" id="972">
           <description>Sort by Rating button</description>
-          <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(songs)</visible>
+          <visible>Container.Content(movies) | Container.Content(episodes)</visible>
           <label>563</label>
           <onclick>Container.SetSortMethod(17)</onclick>
           <include>OMButtonItem</include>

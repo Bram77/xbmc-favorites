@@ -1,0 +1,462 @@
+<window id="29">
+  <defaultcontrol always="true">52</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+
+  <controls>
+
+    <include>Backgrounds</include>
+
+    <control type="group">
+      <include>DefaultFade</include>
+
+      <control type="image">
+        <posx>465</posx>
+        <posy>438</posy>
+        <width>256</width>
+        <height>128</height>
+        <aspectratio align="right">keep</aspectratio>
+        <texture>LogoNF.png</texture>
+        <include>DefaultFade</include>
+      </control>
+
+      <control type="label">
+        <description>Clock</description>
+        <posx>HomeClockposx</posx>
+        <posy>523</posy>
+        <width>150</width>
+        <height>30</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <scroll>false</scroll>
+        <info>System.Time(HH:MM)</info>
+        <font>26BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <include>DefaultFade</include>
+      </control>
+
+      <control type="list" id="52">
+        <description>Home Menu Buttons</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>720</width>
+        <height>576</height>
+        <onup>52</onup>
+        <ondown>52</ondown>
+        <onleft>ActivateWindow(111)</onleft>
+        <onright>ActivateWindow(111)</onright>
+        <orientation>vertical</orientation>
+        <scrolltime>0</scrolltime>
+        <itemgap>60</itemgap>
+        <itemlayout height="60" width="400">
+          <control type="label">
+          </control>
+        </itemlayout>
+        <focusedlayout height="60" width="400">
+          <control type="label">
+          </control>
+        </focusedlayout>
+      </control>
+
+      <control type="group" id="9002">
+        <posx>0</posx>
+        <posy>0</posy>
+        <visible>Control.IsVisible(52) + Container(52).OnPrevious + !Skin.HasSetting(HomeMenuAnimation)</visible>
+        <animation effect="fade" start="60" end="0" time="300" reversible="false">Hidden</animation>
+        <control type="group">
+          <visible>Container(52).OnPrevious</visible>
+          <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+          <animation effect="slide" end="5,119" time="300" reversible="false">Hidden</animation>
+          <control type="label">
+            <posx>HomeMenu1posx</posx>
+            <posy>-99</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>0</posx>
+            <posy>-99</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-2).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>10</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>10</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>90</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(0).Label </info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>90</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-0).Thumb</info>
+          </control>
+        </control>
+
+        <control type="group">
+          <visible>Container(52).OnPrevious</visible>
+          <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+          <animation effect="slide" end="-5,119" time="300" reversible="false">Hidden</animation>
+          <control type="label">
+            <posx>HomeMenu4posx</posx>
+            <posy>219</posy>
+            <width>500</width>
+            <height>120</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>15</posx>
+            <posy>219</posy>
+            <width>120</width>
+            <height>120</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>379</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>379</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(2).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>488</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(3).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>488</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(3).Thumb</info>
+          </control>
+        </control>
+      </control>
+      <control type="group" id="9003">
+        <posx>0</posx>
+        <posy>0</posy>
+        <visible>Control.IsVisible(52) + Container(52).OnNext + !Skin.HasSetting(HomeMenuAnimation)</visible>
+        <animation effect="fade" start="60" end="0" time="300" reversible="false">Hidden</animation>
+        <control type="group">
+          <visible>Container(52).OnNext</visible>
+          <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+          <animation effect="slide" end="-5,-119" time="300" reversible="false">Hidden</animation>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>10</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-3).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>10</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-3).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>90</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-2).Label </info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>90</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-2).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu4posx</posx>
+            <posy>219</posy>
+            <width>500</width>
+            <height>120</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>15</posx>
+            <posy>219</posy>
+            <width>120</width>
+            <height>120</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-1).Thumb</info>
+          </control>
+        </control>
+
+        <control type="group">
+          <visible>Container(52).OnNext</visible>
+          <animation effect="fade" start="0" end="60" time="0" reversible="false">Visible</animation>
+          <animation effect="slide" end="5,-119" time="300" reversible="false">Hidden</animation>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>379</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(0).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>379</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(0).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>488</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>488</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu1posx</posx>
+            <posy>597</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>0</posx>
+            <posy>597</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(2).Thumb</info>
+          </control>
+        </control>
+      </control>
+
+      <control type="group" id="9000">
+        <visible>Control.IsVisible(52) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+        <control type="group">
+          <animation effect="fade" time="300" start="0" end="60">WindowOpen</animation>
+          <animation effect="fade" time="300" start="60" end="0">WindowClose</animation>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>10</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>10</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-2).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>90</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(-1).Label </info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>90</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(-1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu3posx</posx>
+            <posy>379</posy>
+            <width>500</width>
+            <height>90</height>
+            <font>26BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(1).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>379</posy>
+            <width>90</width>
+            <height>90</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(1).Thumb</info>
+          </control>
+          <control type="label">
+            <posx>HomeMenu2posx</posx>
+            <posy>488</posy>
+            <width>500</width>
+            <height>60</height>
+            <font>22BdFont</font>
+            <textcolor>HomeTextColor</textcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <info>Container(52).ListItem(2).Label</info>
+          </control>
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>5</posx>
+            <posy>488</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(2).Thumb</info>
+          </control>
+        </control>
+      </control>
+
+      <control type="group" id="9005">
+        <visible>Control.IsVisible(52) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+        <animation effect="fade" delay="0" end="100" time="200" reversible="false">WindowOpen</animation>
+        <animation effect="fade" delay="0" end="0" time="200" reversible="false">WindowClose</animation>
+        <control type="group">
+          <control type="image">
+            <description>Selected Image</description>
+            <posx>10</posx>
+            <posy>200</posy>
+            <width>160</width>
+            <height>160</height>
+            <aspectratio align="left">keep</aspectratio>
+            <info>Container(52).ListItem(0).Thumb</info>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="9004">
+      <visible>Control.IsVisible(52) + !Control.IsVisible(9002) + !Control.IsVisible(9003)</visible>
+      <animation effect="fade" delay="0" end="100" time="200" reversible="false">WindowOpen</animation>
+      <animation effect="slide" tween="circle" delay="400" end="-600" time="600" reversible="false" condition="!Window.Next(Settings.xml) | !Window.Next(FileManager.xml)">WindowClose</animation>
+      <animation effect="fade" delay="0" end="0" time="200" reversible="false" condition="Window.Next(Settings.xml) | Window.Next(FileManager.xml)">Conditional</animation>
+      <control type="group">
+        <control type="label">
+          <posx>HomeMenu5posx</posx>
+          <posy>200</posy>
+          <width>500</width>
+          <height>160</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>50BdFont</font>
+          <textcolor>HomeTextColor</textcolor>
+          <info>Container(52).ListItem(0).Label</info>
+        </control>
+      </control>
+    </control>
+
+  </controls>
+</window>

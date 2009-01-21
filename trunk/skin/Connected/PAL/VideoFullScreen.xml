@@ -1,0 +1,70 @@
+<window id="2005">
+<defaultcontrol>-</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+	
+<controls>
+  
+		<!-- Codec Info -->
+		<control type="group">
+			<posx>20</posx>
+      <posy>15</posy>
+      <include>SlideFromTop</include>
+      <include>VideoFullScreenBack</include>
+  		<control type="label" id="10">
+  			<description>row 1 label</description>
+  			<posx>10</posx>
+  			<posy>25</posy>
+        <width>660</width>
+        <height>30</height>
+        <label>-</label>
+        <align>left</align>
+        <font>18BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>
+  		<control type="label" id="11">
+  			<description>row 2 label</description>
+  			<posx>10</posx>
+  			<posy>95</posy>
+        <width>660</width>
+        <height>30</height>
+        <label>-</label>
+        <align>left</align>
+        <font>18BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>
+  		<control type="label" id="12">
+  			<description>row 3 label</description>
+  			<posx>10</posx>
+  			<posy>165</posy>
+        <width>660</width>
+        <height>30</height>
+  			<label>-</label>
+        <align>left</align>
+        <font>18BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+        <scroll>false</scroll>
+        <wrapmultiline>true</wrapmultiline>
+  		</control>
+      
+      </control>
+
+		<!-- Buffering Dialog -->
+    <control type="label" id="24">
+      <description>Buffering Label</description>
+      <posx>210</posx>
+      <posy>520</posy>
+      <width>291</width>
+      <height>30</height>
+      <font>18BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <label>$LOCALIZE[15107]</label>
+      <align>center</align>
+      <aligny>center</aligny>
+    </control>
+  
+	</controls>
+</window>

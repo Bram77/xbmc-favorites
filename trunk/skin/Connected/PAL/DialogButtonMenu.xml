@@ -1,0 +1,208 @@
+<window type="dialog" id="111">
+<defaultcontrol always="true">3112</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<coordinates>
+	<system>1</system>
+  <origin x="208" y="188">[!System.HasLocks + !System.HasLoginScreen] | Window.IsVisible(29)</origin>
+  <origin x="208" y="170">[!System.HasLocks + System.HasLoginScreen] | [System.HasLocks + !System.HasLoginScreen] + !Window.IsVisible(29)</origin>
+  <origin x="208" y="153">[System.HasLocks + System.HasLoginScreen] + !Window.IsVisible(29) + !Control.IsVisible(3113)</origin>
+  <origin x="208" y="170">Control.IsVisible(3113)</origin>
+</coordinates>
+
+<include>ButtonMenuFade</include>
+  
+<controls>
+    
+		<control type="group">
+      <control type="group" id="1904">
+        <include>OptionBack1-4</include>
+        <visible>[!System.HasLocks + !System.HasLoginScreen] | Window.IsVisible(29) | Control.IsVisible(3113)</visible>
+      </control>
+      <control type="group" id="1905">
+        <include>OptionBack1-5</include>
+        <visible>[!System.HasLocks + System.HasLoginScreen] | [System.HasLocks + !System.HasLoginScreen] + !Window.IsVisible(29)</visible>
+      </control>
+      <control type="group" id="1906">
+        <include>OptionBack1-6</include>
+        <visible>[System.HasLocks + System.HasLoginScreen] + !Window.IsVisible(29) + !Control.IsVisible(3113)</visible>
+      </control>
+      <control type="image">
+        <description>Header Back</description>
+        <width>304</width>
+        <height>45</height>
+        <align>left</align>
+        <texture>ButtonNF.png</texture>
+      </control>
+			<control type="label">
+				<description>Shutdown Header Label</description>
+				<posx>35</posx>
+				<posy>0</posy>
+				<width>268</width>
+				<height>45</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13005] $LOCALIZE[31020]</label>
+				<font>22BdFont</font>
+				<textcolor>FocusedTextColor</textcolor>
+			</control>
+			
+			<control type="list" id="3112">
+				<description>Menu Buttons</description>
+				<posx>0</posx>
+				<posy>55</posy>
+        <width>284</width>
+				<height>210</height>
+				<onup>3112</onup>
+				<ondown>3112</ondown>
+        <onleft>-</onleft>
+        <onright>-</onright>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				<itemgap>0</itemgap>
+        <animation effect="fade" time="300" end="100">WindowOpen</animation>
+				<visible allowhiddenfocus="true">!Control.HasFocus(3113)</visible>
+				<itemlayout height="35" width="284">
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+            <width>284</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>18BdFont</font>
+						<textcolor>DefaultTextColor</textcolor>
+						<info>listitem.label</info>
+						<scroll>false</scroll>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="284">
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+            <width>284</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>18BdFont</font>
+						<textcolor>FocusedTextColor</textcolor>
+						<info>listitem.label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>MasterMode</description>
+						<label>$LOCALIZE[20046]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>xbmc.mastermode</onclick>
+						<visible>System.HasLocks + System.IsMaster</visible>
+					</item>
+					<item id="1">
+						<description>Enter MasterMode</description>
+						<label>$LOCALIZE[20045]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>xbmc.mastermode</onclick>
+						<visible>System.HasLocks + !System.IsMaster + !Window.IsVisible(29)</visible>
+					</item>
+					<item id="2">
+						<description>Log Off</description>
+						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>system.logoff</onclick>
+            <visible>System.HasLoginScreen + !Window.IsVisible(29)</visible>
+					</item>
+					<item id="3">
+						<description>Shutdown</description>
+						<label>$LOCALIZE[13005]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.ShutDown()</onclick>
+					</item>
+					<item id="3">
+						<description>Shutdown Timer</description>
+						<label>$LOCALIZE[20144]</label>
+						<onclick>SetFocus(3113)</onclick>
+					</item>
+					<item id="5">
+						<description>Reboot</description>
+						<label>$LOCALIZE[13313] XBMC</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.RestartApp()</onclick>
+					</item>
+          <item id="6">
+            <description>Restart</description>
+            <label>$LOCALIZE[13313] $LOCALIZE[13000]</label>
+            <onclick>Dialog.Close(111)</onclick>
+            <onclick>XBMC.Reset()</onclick>
+          </item>
+				</content>
+			</control>
+			<control type="list" id="3113">
+				<description>Shutdown Timer Menu</description>
+				<posx>0</posx>
+				<posy>55</posy>
+        <width>284</width>
+				<height>210</height>
+				<onup>3113</onup>
+				<ondown>3113</ondown>
+        <onleft>3112</onleft>
+        <onright>3112</onright>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				<itemgap>0</itemgap>
+				<include>DefaultFade</include>
+				<visible allowhiddenfocus="true">Control.HasFocus(3113)</visible>
+				<itemlayout height="35" width="284">
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+            <width>284</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>18BdFont</font>
+						<textcolor>DefaultTextColor</textcolor>
+						<info>listitem.label</info>
+						<scroll>false</scroll>
+					</control>
+				</itemlayout>
+				<focusedlayout height="35" width="284">
+					<control type="label">
+						<posx>50</posx>
+						<posy>0</posy>
+            <width>284</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>18BdFont</font>
+						<textcolor>FocusedTextColor</textcolor>
+						<info>listitem.label</info>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>30 minutes</description>
+						<label>$LOCALIZE[20147]</label>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+					</item>
+					<item id="2">
+						<description>60 minutes</description>
+						<label>$LOCALIZE[20148]</label>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+					</item>
+					<item id="3">
+						<description>120 minutes</description>
+						<label>$LOCALIZE[20149]</label>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+					</item>
+					<item id="4">
+						<description>Cancel Timer</description>
+						<label>$LOCALIZE[20151]</label>
+						<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+</controls>
+	
+</window>

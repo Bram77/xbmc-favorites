@@ -1,0 +1,614 @@
+<window id="2600">
+<defaultcontrol always="true">2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+
+<include>Backgrounds</include>
+  
+  <control type="group">
+    <include>DefaultFade</include>
+    <visible>Weather.IsFetched</visible>
+    <control type="image">
+      <description>Weather Window Image Day</description>
+      <posx>-15</posx>
+      <posy>510</posy>
+      <width>80</width>
+      <height>80</height>
+      <aspectratio align="left">keep</aspectratio>
+      <texture>HomeWeatherDay.png</texture>
+      <include>ContentImageFade</include>
+      <visible>System.Time(05:00,17:00)</visible>
+    </control>
+    <control type="image">
+      <description>Weather Window Image Night</description>
+      <posx>-15</posx>
+      <posy>510</posy>
+      <width>80</width>
+      <height>80</height>
+      <aspectratio align="left">keep</aspectratio>
+      <texture>HomeWeatherNight.png</texture>
+      <include>ContentImageFade</include>
+      <visible>System.Time(17:00,05:00)</visible>
+    </control>
+    <control type="label">
+      <description>Weather Window Title</description>
+      <posx>25</posx>
+      <posy>515</posy>
+      <width>1180</width>
+      <height>80</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[8]</label>
+      <scroll>true</scroll>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <include>DefaultFade</include>
+    </control>
+
+    <control type="group">
+      <posx>30</posx>
+      <posy>10</posy>
+      <!-- Current Day Info Labels -->
+      <control type="group">
+        <control type="label">
+          <description>Current Day Label</description>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>615</width>
+          <height>40</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31028]</label>
+          <scroll>true</scroll>
+          <font>40BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+
+        <control type="label">
+          <description>Current Condition Label</description>
+          <posx>0</posx>
+          <posy>45</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31029]</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Feels Like Label</description>
+          <posx>0</posx>
+          <posy>75</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[402]:</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>UV Index Label</description>
+          <posx>0</posx>
+          <posy>105</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[403]:</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Dew Label</description>
+          <posx>0</posx>
+          <posy>135</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[405]:</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Humidity Label</description>
+          <posx>0</posx>
+          <posy>165</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[406]:</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Wind Label</description>
+          <posx>0</posx>
+          <posy>195</posy>
+          <width>125</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[404]:</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+      </control>
+
+      <!-- Current Day Info Values -->
+      <control type="group">
+        <posx>135</posx>
+        <control type="label" id="22">
+          <description>Current Condiion Value</description>
+          <posx>0</posx>
+          <posy>45</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        <control type="label" id="24">
+          <description>Feels Like Value</description>
+          <posx>0</posx>
+          <posy>75</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        <control type="label" id="25">
+          <description>UV Index Value</description>
+          <posx>0</posx>
+          <posy>105</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        <control type="label" id="27">
+          <description>Dew Value</description>
+          <posx>0</posx>
+          <posy>135</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        <control type="label" id="28">
+          <description>Humidity Value</description>
+          <posx>0</posx>
+          <posy>165</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        <control type="label" id="26">
+          <description>Wind Value</description>
+          <posx>0</posx>
+          <posy>195</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+        </control>
+        
+        <control type="image" id="21">
+          <description>Current Condition Image</description>
+          <posx>390</posx>
+          <posy>50</posy>
+          <width>140</width>
+          <height>140</height>
+          <texture>-</texture>
+          <align>left</align>
+          <aspectratio>keep</aspectratio>
+        </control>
+        
+        <control type="spincontrol" id="3">
+          <description>Location Select</description>
+          <posx>490</posx>
+          <posy>200</posy>
+          <width>15</width>
+          <height>15</height>
+          <texturefocus>-</texturefocus>
+          <texturenofocus>-</texturenofocus>
+          <reverse>yes</reverse>
+          <font>-</font>
+          <onleft>2000</onleft>
+          <onright>2</onright>
+          <onup>2</onup>
+          <ondown>2</ondown>
+        </control>
+        <control type="label">
+          <description>Location Value</description>
+          <posx>480</posx>
+          <posy>195</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <label>$INFO[Weather.Location]</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>DefaultTextColor</textcolor>
+          <visible>!Control.HasFocus(3)</visible>
+        </control>
+        <control type="label">
+          <description>Location Value</description>
+          <posx>480</posx>
+          <posy>195</posy>
+          <width>520</width>
+          <height>30</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <label>$INFO[Weather.Location]</label>
+          <scroll>true</scroll>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <visible>Control.HasFocus(3)</visible>
+        </control>
+      </control>
+    </control>
+    
+    <control type="group">
+      <posy>240</posy>
+      <control type="group">
+        <control type="image">
+          <posx>20</posx>
+          <width>150</width>
+          <height>270</height>
+          <texture>WeatherBack.png</texture>
+          <aspectratio align="left">stretch</aspectratio>
+        </control>
+        <control type="label" id="31">
+          <description>Day 0 Day</description>
+          <posx>35</posx>
+          <posy>10</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>-</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="image" id="35">
+          <description>Day 0 Condition Image</description>
+          <posx>30</posx>
+          <posy>40</posy>
+          <width>130</width>
+          <height>130</height>
+          <texture>-</texture>
+          <align>left</align>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label">
+          <description>Day 0 Hi Label</description>
+          <posx>35</posx>
+          <posy>170</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31026] $INFO[Window(weather).Property(Day0.HighTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 0 Low Label</description>
+          <posx>35</posx>
+          <posy>200</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027] $INFO[Window(weather).Property(Day0.LowTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 0 Outlook Label</description>
+          <posx>35</posx>
+          <posy>230</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$INFO[Window(weather).Property(Day0.Outlook)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <scroll>true</scroll>
+        </control>
+      </control>
+      
+      <control type="group">
+        <posx>167</posx>
+        <control type="image">
+          <posx>30</posx>
+          <width>150</width>
+          <height>270</height>
+          <texture>WeatherBack.png</texture>
+          <aspectratio align="left">stretch</aspectratio>
+        </control>
+        <control type="label" id="41">
+          <description>Day 1 Day</description>
+          <posx>45</posx>
+          <posy>10</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>-</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="image" id="45">
+          <description>Day 1 Condition Image</description>
+          <posx>40</posx>
+          <posy>40</posy>
+          <width>130</width>
+          <height>130</height>
+          <texture>-</texture>
+          <align>left</align>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label">
+          <description>Day 1 Hi Label</description>
+          <posx>45</posx>
+          <posy>170</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31026] $INFO[Window(weather).Property(Day1.HighTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 1 Low Label</description>
+          <posx>45</posx>
+          <posy>200</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027] $INFO[Window(weather).Property(Day1.LowTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 1 Outlook Label</description>
+          <posx>45</posx>
+          <posy>230</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$INFO[Window(weather).Property(Day1.Outlook)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <scroll>true</scroll>
+        </control>
+      </control>
+      
+      <control type="group">
+        <posx>336</posx>
+        <control type="image">
+          <posx>37</posx>
+          <width>150</width>
+          <height>270</height>
+          <texture>WeatherBack.png</texture>
+          <aspectratio align="left">stretch</aspectratio>
+        </control>
+        <control type="label" id="51">
+          <description>Day 2 Day</description>
+          <posx>52</posx>
+          <posy>10</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>-</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="image" id="55">
+          <description>Day 2 Condition Image</description>
+          <posx>47</posx>
+          <posy>40</posy>
+          <width>130</width>
+          <height>130</height>
+          <texture>-</texture>
+          <align>left</align>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label">
+          <description>Day 2 Hi Label</description>
+          <posx>52</posx>
+          <posy>170</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31026] $INFO[Window(weather).Property(Day2.HighTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 2 Low Label</description>
+          <posx>52</posx>
+          <posy>200</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027] $INFO[Window(weather).Property(Day2.LowTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 2 Outlook Label</description>
+          <posx>52</posx>
+          <posy>230</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$INFO[Window(weather).Property(Day2.Outlook)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <scroll>true</scroll>
+        </control>
+      </control>
+
+      <control type="group">
+        <posx>510</posx>
+        <control type="image">
+          <posx>40</posx>
+          <width>150</width>
+          <height>270</height>
+          <texture>WeatherBack.png</texture>
+          <aspectratio align="left">stretch</aspectratio>
+        </control>
+        <control type="label" id="61">
+          <description>Day 3 Day</description>
+          <posx>55</posx>
+          <posy>10</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>-</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="image" id="65">
+          <description>Day 3 Condition Image</description>
+          <posx>50</posx>
+          <posy>40</posy>
+          <width>130</width>
+          <height>130</height>
+          <texture>-</texture>
+          <align>left</align>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="label">
+          <description>Day 3 Hi Label</description>
+          <posx>55</posx>
+          <posy>170</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31026] $INFO[Window(weather).Property(Day3.HighTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 3 Low Label</description>
+          <posx>55</posx>
+          <posy>200</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[31027] $INFO[Window(weather).Property(Day3.LowTemp)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+        </control>
+        <control type="label">
+          <description>Day 3 Outlook Label</description>
+          <posx>55</posx>
+          <posy>230</posy>
+          <width>120</width>
+          <height>30</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$INFO[Window(weather).Property(Day3.Outlook)]</label>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <scroll>true</scroll>
+        </control>
+      </control>
+    </control>
+    
+    <control type="group">
+      <posx>340</posx>
+      <posy>520</posy>
+      <control type="group">
+        <animation effect="slide" time="0" end="120,0" condition="!Skin.HasSetting(WeatherScriptEnable)">Conditional</animation>
+        <control type="button" id="2">
+          <description>Refresh button</description>
+          <posx>0</posx>
+          <width>110</width>
+          <height>45</height>
+          <label>-</label>
+          <font>20BdFont</font>
+          <onleft>2000</onleft>
+          <onright>4</onright>
+          <onup>3</onup>
+          <ondown>3</ondown>
+        </control>
+        <control type="button" id="4">
+          <description>Settings button</description>
+          <posx>120</posx>
+          <width>110</width>
+          <height>45</height>
+          <label>$LOCALIZE[5]</label>
+          <font>20BdFont</font>
+          <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+          <onleft>2</onleft>
+          <onright>2000</onright>
+          <onup>3</onup>
+          <ondown>3</ondown>
+        </control>
+        <control type="button" id="2000">
+          <description>Weather Script Button</description>
+          <posx>240</posx>
+          <width>110</width>
+          <height>45</height>
+          <label>$INFO[Skin.String(WeatherScript_Name)]</label>
+          <font>20BdFont</font>
+          <onclick>XBMC.RunScript($INFO[Skin.String(WeatherScript_Path)])</onclick>
+          <onleft>4</onleft>
+          <onright>2</onright>
+          <onup>3</onup>
+          <ondown>3</ondown>
+          <visible>Skin.HasSetting(WeatherScriptEnable)</visible>
+        </control>
+      </control>
+    </control>
+  </control>
+  
+  <include>NowPlaying</include>
+
+</controls>
+</window>

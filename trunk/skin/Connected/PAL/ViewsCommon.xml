@@ -1,0 +1,2110 @@
+<includes>
+	
+	<include name="CommonVerticalScrollBar">
+		<control type="scrollbar" id="60">
+				<description>Scroll Bar</description>
+				<posx>5</posx>
+				<posy>30</posy>
+				<width>32</width>
+				<height>480</height>
+				<texturesliderbackground>ScrollBarBack.png</texturesliderbackground>
+				<texturesliderbar>-</texturesliderbar>
+				<texturesliderbarfocus>-</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<orientation>vertical</orientation>
+				<showonepage>false</showonepage>
+				<onleft>51</onleft>
+				<onright>51</onright>
+				<onup>60</onup>
+				<ondown>60</ondown>
+      <visible>[Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows) + !Control.IsVisible(56)] + ![Control.IsVisible(55) + [Container.Content(episodes) | Container.Content(movies) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | [Skin.HasSetting(TVShowsPosters) + Container.Content(tvshows)]]]</visible>
+			<animation effect="fade" time="0" start="0" end="60">Visible</animation>
+			</control>
+		<control type="scrollbar" id="60">
+			<description>Scroll Bar</description>
+			<posx>5</posx>
+			<posy>30</posy>
+			<width>32</width>
+			<height>480</height>
+			<texturesliderbackground>ScrollBarBack.png</texturesliderbackground>
+			<texturesliderbar>-</texturesliderbar>
+			<texturesliderbarfocus>-</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<orientation>vertical</orientation>
+			<showonepage>false</showonepage>
+			<onleft>51</onleft>
+			<onright>51</onright>
+			<onup>60</onup>
+			<ondown>60</ondown>
+      <visible>[!Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows) + !Control.IsVisible(56)] + ![Control.IsVisible(55) + [Container.Content(episodes) | Container.Content(movies) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | [Skin.HasSetting(TVShowsPosters) + Container.Content(tvshows)]]]</visible>
+			<animation effect="fade" time="0" start="0" end="30">WindowOpen</animation>
+      <animation effect="fade" time="0" start="0" end="30">WindowClose</animation>
+		</control>
+	</include>
+  
+  <include name="CommonHorizontalScrollBar">
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>510</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <texturesliderbar>-</texturesliderbar>
+      <texturesliderbarfocus>-</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <showonepage>false</showonepage>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>[Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows)] + [Control.IsVisible(55) + [Container.Content(episodes) | Container.Content(movies) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | [Skin.HasSetting(TVShowsPosters) + Container.Content(tvshows)]]]</visible>
+      <animation effect="fade" time="0" start="0" end="60">Visible</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>510</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <texturesliderbar>-</texturesliderbar>
+      <texturesliderbarfocus>-</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <showonepage>false</showonepage>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>[!Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows)] + [Control.IsVisible(55) + [Container.Content(episodes) | Container.Content(movies) | Window.IsActive(2) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | [Skin.HasSetting(TVShowsPosters) + Container.Content(tvshows)]]]</visible>
+      <animation effect="fade" time="0" start="0" end="30">WindowOpen</animation>
+      <animation effect="fade" time="0" start="0" end="30">WindowClose</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>510</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <texturesliderbar>-</texturesliderbar>
+      <texturesliderbarfocus>-</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <showonepage>false</showonepage>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>[Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows)] + Control.IsVisible(56)</visible>
+      <animation effect="fade" time="0" start="0" end="60">Visible</animation>
+    </control>
+    <control type="scrollbar" id="60">
+      <description>Scroll Bar</description>
+      <posx>120</posx>
+      <posy>510</posy>
+      <width>480</width>
+      <height>32</height>
+      <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
+      <texturesliderbar>-</texturesliderbar>
+      <texturesliderbarfocus>-</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNibH.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNibH.png</textureslidernibfocus>
+      <orientation>horizontal</orientation>
+      <showonepage>false</showonepage>
+      <onleft>60</onleft>
+      <onright>60</onright>
+      <onup>51</onup>
+      <ondown>51</ondown>
+      <visible>[!Control.HasFocus(60) + !Skin.HasSetting(ScrollBarsWindows)] + Control.IsVisible(56)</visible>
+      <animation effect="fade" time="0" start="0" end="30">WindowOpen</animation>
+      <animation effect="fade" time="0" start="0" end="30">WindowClose</animation>
+    </control>
+  </include>
+  
+  <include name="CommonSortLetters">
+    <control type="group">
+      <Visible>!Skin.HasSetting(SortLabels)</Visible>
+      <control type="image">
+        <posx>660</posx>
+        <posy>10</posy>
+        <width>50</width>
+        <height>50</height>
+        <texture>SortLettersBack.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+        <visible>Container.Scrolling</visible>
+        <include>DefaultFade</include>
+      </control>
+      <control type="label">
+        <posx>660</posx>
+        <posy>8</posy>
+        <width>50</width>
+        <height>50</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.SortLetter]</label>
+        <font>28BdFont</font>
+        <textcolor>FocusedTextColor</textcolor>
+        <selectedcolor>FocusedTextColor</selectedcolor>
+        <visible>Container.Scrolling</visible>
+        <include>DefaultFade</include>
+      </control>
+    </control>
+  </include>
+	
+	<include name="List">
+		<control type="list" id="51">
+			<posx>40</posx>
+			<posy>20</posy>
+			<width>300</width>
+			<height>485</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<viewtype label="$LOCALIZE[535]">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="35" width="300">
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+          <width>280</width>
+					<height>35</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>20BdFont</font>
+					<textcolor>FocusedTextColor</textcolor>
+					<info>listitem.label</info>
+					<scroll>false</scroll>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.Title</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+			</itemlayout>
+			<focusedlayout height="35" width="300">
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>300</width>
+					<height>35</height>
+					<texture>ButtonBack.png</texture>
+					<aspectratio aligny="left">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+          <width>280</width>
+					<height>35</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>20BdFont</font>
+					<textcolor>FocusedTextColor</textcolor>
+					<selectedcolor>FocusedTextColor</selectedcolor>
+					<info>listitem.label</info>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>280</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>20BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <info>listitem.Title</info>
+        </control>
+			</focusedlayout>
+		</control>
+		
+		<control type="group">
+			<visible>Control.IsVisible(51) | [Control.IsVisible(55) + Container.Content(seasons)]</visible>
+			<control type="image">
+				<posx>350</posx>
+				<posy>50</posy>
+				<width>400</width>
+				<height>400</height>
+				<info>ListItem.Icon</info>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<animation effect="rotatey" center="1280" start="0" end="10" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>350</posx>
+				<posy>450</posy>
+				<width>400</width>
+				<height>400</height>
+				<info>ListItem.Icon</info>
+        <aspectratio align="center" aligny="top">keep</aspectratio>
+				<texture flipy="true" diffuse="DiffuseMirror.png" />
+				<animation effect="rotatey" center="1280" start="0" end="10" time="0" condition="true">Conditional</animation>
+			</control>
+      <control type="image">
+        <posx>525</posx>
+        <posy>455</posy>
+        <width>40</width>
+        <height>40</height>
+        <info>ListItem.Overlay</info>
+        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+        <animation effect="rotatey" center="1280" start="0" end="10" time="0" condition="true">Conditional</animation>
+        <visible>!Container.Content(seasons) + !Skin.HasSetting(OverlayIcons)</visible>
+      </control>
+		</control>
+    <include>CommonVerticalScrollBar</include>
+    <include>CommonHorizontalScrollBar</include>
+	</include>
+
+	<include name="BigList">
+		<control type="list" id="52">
+			<posx>40</posx>
+			<posy>40</posy>
+			<width>650</width>
+			<height>470</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<viewtype label="$LOCALIZE[537]">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="95" width="660">
+        <control type="image">
+          <posx>0</posx>
+          <posy>5</posy>
+          <width>80</width>
+          <height>80</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="middle">keep</aspectratio>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+        <control type="image">
+          <posx>85</posx>
+          <posy>60</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="left">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.label]</label>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.label] [COLOR=FocusedTextColor]$INFO[ListItem.Year][/COLOR]</label>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>![container.content(songs) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <label>$INFO[listitem.title] [COLOR=FocusedTextColor]$INFO[ListItem.Year][/COLOR]</label>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>container.content(tvshows) | container.content(seasons) | container.content(episodes) | container.content(songs)</visible>
+        </control>
+
+        <control type="group">
+          <visible>Window.IsVisible(videofiles) | Window.IsVisible(musicfiles)</visible>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[570]: $INFO[ListItem.Date]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21802]: $INFO[ListItem.Size]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(pictures)</visible>
+          <control type="label">
+            <description>Resolution Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21805]: $INFO[ListItem.PictureResolution]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.PictureResolution)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(programs) | Window.IsVisible(scripts) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist)</visible>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.Size]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[552]: $INFO[ListItem.Date]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(movies)</visible>
+          <control type="label">
+            <description>Duration Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[2050]: $INFO[ListItem.Duration]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Duration)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Duration Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(seasons)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.Episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(episodes)</visible>
+          <control type="label">
+            <description>Season Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20373]: $INFO[ListItem.Season]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Season)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Episode Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20359]: $INFO[ListItem.Episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(albums) | container.content(musicvideos)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(songs)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Album Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[558]: $INFO[ListItem.Album]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Album) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(artists)</visible>
+          <control type="label">
+            <description>Style Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[176]: $INFO[ListItem.Property(style)]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Property(style))</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(tvshows)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.episode]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.episode)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+            <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          </control>
+        </control>
+			</itemlayout>
+			<focusedlayout height="95" width="660">
+        <control type="image">
+          <posx>0</posx>
+          <posy>5</posy>
+          <width>80</width>
+          <height>80</height>
+          <info>ListItem.Icon</info>
+          <aspectratio align="center" aligny="middle">keep</aspectratio>
+        </control>
+        <control type="image">
+          <posx>85</posx>
+          <posy>60</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="left">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <scroll>true</scroll>
+          <label>$INFO[listitem.label] [COLOR=FocusedTextColor]$INFO[ListItem.Year][/COLOR]</label>
+          <visible>![container.content(songs) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]</visible>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <label>$INFO[listitem.label] [COLOR=FocusedTextColor]$INFO[ListItem.Year][/COLOR]</label>
+          <scroll>true</scroll>
+          <visible>IsEmpty(ListItem.Title)</visible>
+        </control>
+        <control type="label">
+          <posx>85</posx>
+          <posy>0</posy>
+          <width>660</width>
+          <height>35</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>28BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <selectedcolor>FocusedTextColor</selectedcolor>
+          <scroll>true</scroll>
+          <label>$INFO[listitem.title] [COLOR=FocusedTextColor]$INFO[ListItem.Year][/COLOR]</label>
+          <visible>container.content(tvshows) | container.content(seasons) | container.content(episodes) | container.content(songs)</visible>
+        </control>
+        
+        <control type="group">
+          <visible>Window.IsVisible(videofiles) | Window.IsVisible(musicfiles)</visible>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[570]: $INFO[ListItem.Date]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date)</visible>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21802]: $INFO[ListItem.Size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(pictures)</visible>
+          <control type="label">
+            <description>Resolution Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[21805]: $INFO[ListItem.PictureResolution]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.PictureResolution)</visible>
+          </control>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Size) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>Window.IsVisible(programs) | Window.IsVisible(scripts) | Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist)</visible>
+          <control type="label">
+            <description>Size Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[553]: $INFO[ListItem.size]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.size)</visible>
+          </control>
+          <control type="label">
+            <description>Date Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[552]: $INFO[ListItem.Date]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Date) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(movies)</visible>
+          <control type="label">
+            <description>Duration Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[2050]: $INFO[ListItem.Duration]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Duration)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(seasons)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.Episode]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(episodes)</visible>
+          <control type="label">
+            <description>Season Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20373]: $INFO[ListItem.Season]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Season)</visible>
+          </control>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20359]: $INFO[ListItem.Episode]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Episode) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(albums) | container.content(musicvideos)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(songs)</visible>
+          <control type="label">
+            <description>Artist Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[557]: $INFO[ListItem.artist]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.artist)</visible>
+          </control>
+          <control type="label">
+            <description>Album Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[558]: $INFO[ListItem.Album]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Album) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(artists)</visible>
+          <control type="label">
+            <description>Style Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[176]: $INFO[ListItem.Property(style)]</label>
+            <scroll>true</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Property(style))</visible>
+          </control>
+        </control>
+        <control type="group">
+          <visible>container.content(tvshows)</visible>
+          <control type="label">
+            <description>Episodes Value</description>
+            <posx>85</posx>
+            <posy>30</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[20360]: $INFO[ListItem.episode]</label>
+            <scroll>true</scroll>
+            <scrollout>false</scrollout>
+            <pauseatend>2000</pauseatend>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.episode)</visible>
+          </control>
+          <control type="label">
+            <description>Genre Value</description>
+            <posx>85</posx>
+            <posy>55</posy>
+            <width>660</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$LOCALIZE[515]: $INFO[ListItem.genre]</label>
+            <scroll>false</scroll>
+            <font>20BdFont</font>
+            <textcolor>FocusedTextColor</textcolor>
+            <visible>!IsEmpty(ListItem.Genre) + Skin.HasSetting(OverlayIcons)</visible>
+          </control>
+        </control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<include name="Icons">
+		<control type="panel" id="53">
+			<posx>45</posx>
+			<posy>50</posy>
+			<width>720</width>
+			<height>460</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[536]">icon</viewtype>
+			<orientation>vertical</orientation>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout width="160" height="160">
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+				</control>
+        <control type="image">
+          <posx>125</posx>
+          <posy>85</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="right">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>105</posy>
+					<width>150</width>
+					<height>25</height>
+					<texture>ButtonBack2.png</texture>
+					<colordiffuse>ShadowTextColor</colordiffuse>
+					<aspectratio aligny="left">stretch</aspectratio>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>105</posy>
+					<width>140</width>
+					<height>20</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>22BdFont</font>
+					<textcolor>FocusedTextColor</textcolor>
+					<info>listitem.label</info>
+					<scroll>false</scroll>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>75</posx>
+          <posy>105</posy>
+          <width>140</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.Title</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+			</itemlayout>
+			<focusedlayout width="160" height="160">
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>120</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="left">keep</aspectratio>
+				</control>
+        <control type="image">
+          <posx>125</posx>
+          <posy>85</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="right">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+        </control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>105</posy>
+					<width>150</width>
+					<height>25</height>
+					<texture>ButtonBack2.png</texture>
+					<aspectratio aligny="left">stretch</aspectratio>
+				</control>
+				<control type="label">
+					<posx>75</posx>
+					<posy>105</posy>
+					<width>140</width>
+					<height>20</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>22BdFont</font>
+					<textcolor>DisabledTextColor</textcolor>
+					<selectedcolor>DisabledTextColor</selectedcolor>
+					<info>listitem.label</info>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>75</posx>
+          <posy>105</posy>
+          <width>140</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>22BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.Title</info>
+        </control>
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="Wide">
+		<control type="panel" id="54">
+			<posx>45</posx>
+			<posy>40</posy>
+			<width>720</width>
+			<height>470</height>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="$LOCALIZE[31021]">icon</viewtype>
+			<orientation>vertical</orientation>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout width="320" height="120">
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>310</width>
+					<height>120</height>
+					<info>ListItem.Icon</info>
+					<aspectratio align="center" aligny="middle">keep</aspectratio>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+				</control>
+        <control type="image">
+          <posx>295</posx>
+          <posy>87</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="right" aligny="middle">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>85</posy>
+					<width>320</width>
+					<height>25</height>
+					<texture>ButtonBack2.png</texture>
+					<colordiffuse>ShadowTextColor</colordiffuse>
+					<aspectratio align="center" aligny="middle">stretch</aspectratio>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>160</posx>
+					<posy>85</posy>
+					<width>315</width>
+					<height>20</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>22BdFont</font>
+					<textcolor>FocusedTextColor</textcolor>
+					<info>listitem.label</info>
+					<scroll>false</scroll>
+					<animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>160</posx>
+          <posy>85</posy>
+          <width>315</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>22BdFont</font>
+          <textcolor>FocusedTextColor</textcolor>
+          <info>listitem.title</info>
+          <scroll>false</scroll>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+			</itemlayout>
+			<focusedlayout width="320" height="120">
+				<control type="image">
+					<posx>5</posx>
+					<posy>0</posy>
+					<width>310</width>
+					<height>120</height>
+					<info>ListItem.Icon</info>
+					<aspectratio align="center" aligny="middle">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>85</posy>
+					<width>320</width>
+					<height>25</height>
+					<texture>ButtonBack2.png</texture>
+					<aspectratio align="center" aligny="middle">stretch</aspectratio>
+				</control>
+        <control type="image">
+          <posx>295</posx>
+          <posy>87</posy>
+          <width>20</width>
+          <height>20</height>
+          <info>ListItem.Overlay</info>
+          <aspectratio align="right" aligny="middle">keep</aspectratio>
+          <visible>!Skin.HasSetting(OverlayIcons)</visible>
+        </control>
+				<control type="label">
+					<posx>160</posx>
+					<posy>85</posy>
+					<width>315</width>
+					<height>20</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>22BdFont</font>
+					<textcolor>DisabledTextColor</textcolor>
+					<selectedcolor>DisabledTextColor</selectedcolor>
+					<info>listitem.label</info>
+          <visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+        <control type="label">
+          <posx>160</posx>
+          <posy>85</posy>
+          <width>315</width>
+          <height>20</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>22BdFont</font>
+          <textcolor>DisabledTextColor</textcolor>
+          <selectedcolor>DisabledTextColor</selectedcolor>
+          <info>listitem.Title</info>
+        </control>
+			</focusedlayout>
+		</control>
+	</include>
+
+  <include name="Tilted">
+    <control type="wraplist" id="56">
+      <posx>0</posx>
+      <posy>160</posy>
+      <width>160</width>
+      <height>160</height>
+      <onleft>56</onleft>
+      <onright>56</onright>
+      <onup>9000</onup>
+      <ondown>60</ondown>
+      <pagecontrol>60</pagecontrol>
+      <orientation>horizontal</orientation>
+      <focusposition>1</focusposition>
+      <scrolltime>200</scrolltime>
+      <viewtype label="$LOCALIZE[31023]">icon</viewtype>
+      <itemlayout height="160" width="160">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>160</width>
+          <height>160</height>
+          <info>-</info>
+          <aspectratio aligny="center">keep</aspectratio>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+        </control>
+      </itemlayout>
+      <focusedlayout height="160" width="160">
+        <control type="image">
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>160</width>
+          <height>160</height>
+          <info>-</info>
+          <aspectratio aligny="center">keep</aspectratio>
+        </control>
+      </focusedlayout>
+    </control>
+    
+    <control type="group" id="3001">
+      <posx>0</posx>
+      <posy>0</posy>
+      <visible>Control.IsVisible(56) + Container.OnNext</visible>
+      <animation effect="rotatey" center="0" start="0" end="-30" time="0" condition="true">Conditional</animation>
+      <animation effect="slide" end="-160,0" time="200" reversible="false">Hidden</animation>
+      <control type="group">
+        <control type="group">
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-10).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1280</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>160</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(0).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1280</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>320</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(10).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(11).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(12).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(13).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1280</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(14).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="3002">
+      <posx>0</posx>
+      <posy>0</posy>
+      <visible>Control.IsVisible(56) + Container.OnPrevious</visible>
+      <animation effect="rotatey" center="0" start="0" end="-30" time="0" condition="true">Conditional</animation>
+      <animation effect="slide" end="160,0" time="200" reversible="false">Hidden</animation>
+      <control type="group">
+        <control type="group">
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>-160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>160</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>-160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(0).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>320</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>-160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(10).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(11).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(12).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(13).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(14).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(15).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+      </control>
+    </control>
+ 
+    <control type="group" id="3000">
+      <posx>0</posx>
+      <posy>0</posy>
+      <control type="group">
+        <visible>Control.IsVisible(56) + !Control.IsVisible(3001)  + !Control.IsVisible(3002)</visible>
+        <animation effect="rotatey" center="0" start="0" end="-30" time="0" condition="true">Conditional</animation>
+        <control type="group">
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>160</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(-1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(1).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(2).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(3).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(4).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(5).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(6).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+        <control type="group">
+          <posy>320</posy>
+          <animation effect="fade" time="0" start="0" end="50" condition="true">Conditional</animation>
+          <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(7).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(8).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>320</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(9).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>480</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(10).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>640</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(11).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>800</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(12).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>960</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(13).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+          <control type="image">
+            <posx>1120</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(14).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="group" id="3004">
+      <posy>160</posy>
+      <control type="group">
+        <visible>Control.IsVisible(56) + !Control.IsVisible(3001)  + !Control.IsVisible(3002)</visible>
+        <animation effect="rotatey" center="0" start="0" end="-30" time="0" condition="true">Conditional</animation>
+        <control type="group">
+          <control type="image">
+            <posx>160</posx>
+            <posy>0</posy>
+            <width>160</width>
+            <height>160</height>
+            <info>Container.ListItem(0).thumb</info>
+            <texture>defaultFolderBackBig.png</texture>
+            <aspectratio aligny="center">keep</aspectratio>
+          </control>
+        </control>
+      </control>
+    </control>
+
+    <control type="image">
+      <posx>620</posx>
+      <posy>5</posy>
+      <width>40</width>
+      <height>40</height>
+      <info>ListItem.Overlay</info>
+      <aspectratio align="right">keep</aspectratio>
+      <visible>Control.HasFocus(56) + !Skin.HasSetting(OverlayIcons)</visible>
+    </control>
+    
+    <control type="label">
+      <posx>20</posx>
+      <posy>455</posy>
+      <width>680</width>
+      <height>80</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <font>22BdFont</font>
+      <scroll>true</scroll>
+      <textcolor>FocusedTextColor</textcolor>
+      <selectedcolor>FocusedTextColor</selectedcolor>
+      <label>$INFO[listitem.label]</label>
+      <visible>Control.HasFocus(56)</visible>
+      <visible>IsEmpty(ListItem.Title)</visible>
+    </control>
+    
+    <control type="label">
+      <posx>20</posx>
+      <posy>455</posy>
+      <width>680</width>
+      <height>80</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <font>20BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+      <selectedcolor>FocusedTextColor</selectedcolor>
+      <label>$INFO[listitem.Title]</label>
+      <visible>Control.HasFocus(56)</visible>
+    </control>
+
+  </include>
+</includes>
