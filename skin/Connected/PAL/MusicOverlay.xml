@@ -1,0 +1,18 @@
+<window id="2004">
+<defaultcontrol>2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+
+<controls>
+
+  <control type="visualisation">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>720</width>
+    <height>576</height>
+    <visible>Window.IsVisible(2006)</visible>
+    <include>DefaultFade</include>
+  </control>
+
+</controls>
+	
+</window>

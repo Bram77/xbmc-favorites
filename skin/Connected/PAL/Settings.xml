@@ -1,0 +1,299 @@
+<window id="4">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+<controls>
+  
+<include>Backgrounds</include>
+  
+  <control type="group">
+    <posx>20</posx>
+    <posy>65</posy>
+    <include>SettingsFade</include>
+    <include>SettingsBack</include>
+    <control type="image">
+      <description>Header Back</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>680</width>
+      <height>45</height>
+      <align>left</align>
+      <texture>ButtonNF.png</texture>
+    </control>
+    <control type="label" id="1000">
+      <description>Settings Header Label</description>
+      <posx>10</posx>
+      <posy>0</posy>
+      <width>660</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$LOCALIZE[5] $LOCALIZE[10507]</label>
+      <font>22BdFont</font>
+      <textcolor>FocusedTextColor</textcolor>
+    </control>
+    <control type="image">
+      <posx>425</posx>
+      <posy>325</posy>
+      <width>256</width>
+      <height>128</height>
+      <aspectratio align="right">keep</aspectratio>
+      <texture>LogoFo.png</texture>
+      <include>DefaultFade</include>
+    </control>
+
+    <control type="group" id="9000">
+      <posx>10</posx>
+      <control type="button" id="2002">
+        <description>Videos</description>
+        <posy>55</posy>
+        <width>140</width>
+        <label>$LOCALIZE[3]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(MyVideosSettings)</onclick>
+        <onup>2012</onup>
+        <ondown>2003</ondown>
+      </control>
+      <control type="button" id="2003">
+        <description>Music</description>
+        <posy>90</posy>
+        <width>140</width>
+        <label>$LOCALIZE[2]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(MyMusicSettings)</onclick>
+        <onup>2002</onup>
+        <ondown>2004</ondown>
+      </control>
+      <control type="button" id="2004">
+        <description>Photos</description>
+        <posy>125</posy>
+        <width>140</width>
+        <label>$LOCALIZE[31000]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(MyPicturesSettings)</onclick>
+        <onup>2003</onup>
+        <ondown>2005</ondown>
+      </control>
+      <control type="button" id="2005">
+        <description>Services</description>
+        <posy>160</posy>
+        <width>140</width>
+        <label>$LOCALIZE[31001]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(MyProgramsSettings)</onclick>
+        <onup>2004</onup>
+        <ondown>2006</ondown>
+      </control>
+      <control type="button" id="2006">
+        <description>Weather</description>
+        <posy>195</posy>
+        <width>140</width>
+        <label>$LOCALIZE[8]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(MyWeatherSettings)</onclick>
+        <onup>2005</onup>
+        <ondown>2007</ondown>
+      </control>
+      <control type="button" id="2007">
+        <description>Network</description>
+        <posy>230</posy>
+        <width>140</width>
+        <label>$LOCALIZE[705]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(NetworkSettings)</onclick>
+        <onup>2006</onup>
+        <ondown>2008</ondown>
+      </control>
+      <control type="button" id="2008">
+        <description>System</description>
+        <posy>265</posy>
+        <width>140</width>
+        <label>$LOCALIZE[13000]</label>
+        <font>18BdFont</font>
+        <pulseonselect>false</pulseonselect>
+        <onclick>ActivateWindow(SystemSettings)</onclick>
+        <onup>2007</onup>
+        <ondown>2009</ondown>
+      </control>
+      <control type="button" id="2009">
+        <description>Appearance</description>
+        <posy>300</posy>
+        <width>140</width>
+        <label>$LOCALIZE[480]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(AppearanceSettings)</onclick>
+        <onup>2008</onup>
+        <ondown>2010</ondown>
+      </control>
+      <control type="button" id="2010">
+        <description>Profiles</description>
+        <posy>335</posy>
+        <width>140</width>
+        <label>$LOCALIZE[13200]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(34)</onclick>
+        <onup>2009</onup>
+        <ondown>2011</ondown>
+      </control>
+      <control type="button" id="2011">
+        <description>System Info</description>
+        <posy>370</posy>
+        <width>140</width>
+        <label>$LOCALIZE[130]</label>
+        <font>18BdFont</font>
+        <pulseonselect>false</pulseonselect>
+        <onclick>ActivateWindow(7)</onclick>
+        <onup>2010</onup>
+        <ondown>2012</ondown>
+      </control>
+      <control type="button" id="2012">
+        <description>Skin Settings</description>
+        <posy>405</posy>
+        <width>140</width>
+        <label>$LOCALIZE[20077]</label>
+        <font>18BdFont</font>
+        <onclick>ActivateWindow(51)</onclick>
+        <onup>2011</onup>
+        <ondown>2002</ondown>
+      </control>
+    </control>
+    
+    <control type="group">
+    <posx>160</posx>
+    <control type="label">
+      <description>Videos</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31540]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2002)</visible>
+    </control>
+    <control type="label">
+      <description>Music</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31541]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <ondown>2004</ondown>
+      <visible>Control.HasFocus(2003)</visible>
+    </control>
+    <control type="label">
+      <description>Photos</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31542]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2004)</visible>
+    </control>
+    <control type="label">
+      <description>Services</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31543]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2005)</visible>
+    </control>
+    <control type="label">
+      <description>Weather</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31544]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2006)</visible>
+    </control>
+    <control type="label">
+      <description>Network</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31545]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2007)</visible>
+    </control>
+    <control type="label">
+      <description>System</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31546]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2008)</visible>
+    </control>
+    <control type="label">
+      <description>Appearance</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31547]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2009)</visible>
+    </control>
+    <control type="label">
+      <description>Profiles</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31548]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2010)</visible>
+    </control>
+    <control type="label">
+      <description>System Info</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31549]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2011)</visible>
+    </control>
+    <control type="label">
+      <description>Skin Settings</description>
+      <posy>55</posy>
+      <width>510</width>
+      <height>300</height>
+      <align>left</align>
+      <aligny>top</aligny>
+      <label>$LOCALIZE[31550]</label>
+      <font>18BdFont</font>
+      <textcolor>DefaultTextColor</textcolor>
+      <visible>Control.HasFocus(2012)</visible>
+    </control>
+    </control>
+  </control>
+
+</controls>
+</window>

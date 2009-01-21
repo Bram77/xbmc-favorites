@@ -1,0 +1,6 @@
+<window type="dialog" id="142">
+ <defaultcontrol always="true">1</defaultcontrol>
+	<controls>
+      <include>NowPlaying</include>
+	</controls>
+</window>

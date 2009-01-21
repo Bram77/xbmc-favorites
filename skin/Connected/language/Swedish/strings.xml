@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: blittan-->
+<!--Email: blittan@xbmc.org-->
+<!--Date of translation: 01/20/2009-->
+<!--$Revision$-->
+<strings>
+  <string id="31000">Foton</string>
+  <string id="31001">Tjänster</string>
+  <string id="31002">Instick</string>
+  <string id="31003">Klipp</string>
+  <string id="31004">Emulatorer</string>
+  <string id="31005">Säsonger</string>
+  <string id="31010">Välkommen</string>
+  <string id="31011">Tack för att du valde [COLOR=FocusedTextColor]XBMC Connected[/COLOR].[CR]Senaste XBMC versionen är alltid att rekommendera.</string>
+  <string id="31012">Försäkra dig om att gå till skalinställningar under inställningar.[CR]Inställningar kan visas genom att trycka höger på hemsidan.</string>
+  <string id="31013">XBMC Connected</string>
+  <string id="31020">Valmöjligheter</string>
+  <string id="31021">Bred</string>
+  <string id="31022">Fankonst</string>
+  <string id="31023">Lutad</string>
+  <string id="31024">Laddade profil</string>
+  <string id="31025">Profilinställningar</string>
+  <string id="31026">H:</string>
+  <string id="31027">L:</string>
+  <string id="31028">Nuvarande förhållanden</string>
+  <string id="31029">Utsikt:</string>
+  <string id="31030">Pausad</string>
+  <string id="31031">Spolar tillbaka</string>
+  <string id="31032">Spolar framåt</string>
+  <string id="31033">Spelar</string>
+  <string id="31040">Hoppa bakåt</string>
+  <string id="31041">Bakåt</string>
+  <string id="31042">Stopp</string>
+  <string id="31043">Paus</string>
+  <string id="31044">Framåt</string>
+  <string id="31045">Hoppa framåt</string>
+  <string id="31046">Spela</string>
+  <string id="31047">Volym avstängd</string>
+  <string id="31501">Bakgrunder</string>
+  <string id="31502">Aktivera</string>
+  <string id="31503">Hemmenysanimation</string>
+  <string id="31504">Ladda om skal</string>
+  <string id="31505">Återställ skalinställningar</string>
+  <string id="31506">Ange fankonst sökväg:</string>
+  <string id="31507">Urvalsikoner</string>
+  <string id="31508">Urvalsbilder</string>
+  <string id="31509">Överläggsikoner</string>
+  <string id="31510">Visa</string>
+  <string id="31511">Sorteringsetiketter</string>
+  <string id="31512">Affischer</string>
+  <string id="31513">Infotext i</string>
+  <string id="31514">Tillstånd</string>
+  <string id="31515">Helbildsbakgrund i</string>
+  <string id="31516">Hel bakgrundsvideo</string>
+  <string id="31517">Hel bakgrundsvisualisering</string>
+  <string id="31518">Tid i Nu spelas info</string>
+  <string id="31519">I stödda visningar</string>
+  <string id="31520">Skrollhandtag i dialoger</string>
+  <string id="31521">Skrollhandtag i fönster</string>
+  <string id="31522">Väderskript</string>
+  <string id="31523">Ange skriptsökväg:</string>
+  <string id="31524">Egen bakgrund</string>
+  <string id="31525">Återställ bakgrund till</string>
+  <string id="31526">Extra</string>
+  <string id="31527">Ange skriptetikett:</string>
+  <string id="31528">Sätt bildmapp för Filmer:</string>
+  <string id="31529">Sätt bildmapp för Musik:</string>
+  <string id="31530">Sätt bildmapp för Foton:</string>
+  <string id="31540">Konfigurera videoinställningar, som t.ex:[CR][CR]- Filstapling[CR]- Biblioteksinställningar[CR]- Skärmkalibrering[CR]- Spelarval[CR]- Undertextsformat</string>
+  <string id="31541">Konfigurera ljudinställningar, som t.ex:[CR][CR]- Visualiseringar[CR]- Biblioteksval[CR]- Spelarval[CR]- Last.FM[CR]- CD Rippning[CR]- Karaoke</string>
+  <string id="31542">Konfigurera fotoval, som t.ex:[CR][CR]- Filval[CR]- Bildspel</string>
+  <string id="31543">Konfigurera tjänstinställningar, som t.ex:[CR][CR]- Videolägen[CR]- Hjälpprogramsval</string>
+  <string id="31544">Konfigurera Väderinställningar, som t.ex:[CR][CR]- Städer[CR]- Regioner[CR]- Postnummer</string>
+  <string id="31545">Konfigurera, som t.ex:[CR][CR]- IP Adress &amp; HTTP Proxy[CR]- FTP &amp; Webbserver inställningar[CR]- Autodetektera system[CR]- SMB klient [CR]- uPnP inställningar</string>
+  <string id="31546">Konfigurera systeminställningar, som t.ex:[CR][CR]- Debugloggning[CR]- LEDfärger[CR]- LCDinställningar[CR]- Autostart[CR]- Hårddiskshantering[CR]- Buffertminne[CR]- Video &amp; ljudhårdvara[CR]- Huvudlås</string>
+  <string id="31547">Konfigurara Skärminställningar, som t.ex:[CR][CR]- Skalval[CR]- RSS val[CR]- Regionsval[CR]- Datum &amp; Tid[CR]- Skärmupplösning[CR]- Skärmsläckarval</string>
+  <string id="31548">Konfigurera Användarprofiler, som t.ex:[CR][CR]- Skapa profiler[CR]- Ta bort profiler[CR]- Användarinställningar[CR]- Profillås</string>
+  <string id="31549">Visa systeminformation, som t.ex:[CR][CR]- Lagring[CR]- Hårdvara[CR]- Nätverk[CR]- Video[CR]- Om XBMC</string>
+  <string id="31550">Konfigurera skalinställningar, som t.ex:[CR][CR]- Hemval[CR]- Mediavisningsinställningar[CR]- Bakgrundsval[CR]- Visa/Dölj skrollhandtag[CR]- Återställ skalinställningar</string>
+</strings>
