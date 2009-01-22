@@ -37,7 +37,6 @@ class Channel(chn_class.Channel):
         chn_class.Channel.InitialiseVariables(self)
         
         self.guid = "15D92364-42F4-11DD-AF9B-7BFF55D89593"
-        #self.mainListUri = "http://www.rtl.nl//system/video/menu/videomenu.xml"
         self.mainListUri = "http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/videomenu.xml"
         self.baseUrl = "http://www.rtl.nl"
         self.icon = "rtlthumb.png"
@@ -56,8 +55,7 @@ class Channel(chn_class.Channel):
         self.episodeItemRegex = '<li class="folder" rel="([^"]+)videomenu.xml">([^<]+)</li>'
         self.videoItemRegex = '<li class="video" (thumb="([^"]+)" ){0,1}(thumb_id="([^"]+)" )(ctime="([^"]+)" ){0,1}rel="([^"]*/)([^"]+)" (link="([^"]+)"){0,1}>([^<]+)</li>' 
         self.folderItemRegex = '<li class="folder" rel="([^"]*/)([^"]+)">([^<]+)</li>'
-        #self.mediaUrlRegex = '<item target="web">[^<]*<file>([^>]*)</file>\W*<description>[^>]*>\W*<bandwidth>(\d+)</bandwidth>'
-        self.mediaUrlRegex = '<item>\W*<file>\W*([^>]*)\W*</file>\W*<bandwidth>(\d+)</bandwidth>'
+        self.mediaUrlRegex = "file:'([^']+_)(\d+)(K[^']+.wmv)'"
         
         self.contextMenuItems = []
         self.contextMenuItems.append(contextmenu.ContextMenuItem("Play lowest bitrate stream", "CtMnPlayLow", itemTypes="video", completeStatus=True))            
@@ -68,7 +66,7 @@ class Channel(chn_class.Channel):
         self.PreProcessRegex = '<ul title="([^"]*)" rel="([^"]*)videomenu.xml"'
         self.progTitle = ""
         self.videoMenu = ""
-        self.parseWvx = True
+        #self.parseWvx = True
 
         return True
     
@@ -94,12 +92,10 @@ class Channel(chn_class.Channel):
         if javaUrl != "":
             data = uriHandler.Open(javaUrl, pb=True)
             
-            #moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"][^"]+"\]', data)
             moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"]+"\]', data)
             previousNumber = len(items)
             number = 0
             for item in moreItems:
-                #http://www.rtl.nl/system/video/menu/programma/helpmijnmanheefteenhobby/videomenu.xml
                 moreItem = common.clistItem(item[0], self.RtlFolderUri("/%s" % item[1], "videomenu.xml"))
                 moreItem.icon = self.folderIcon
                 moreItem.thumb = self.noImage
@@ -109,19 +105,6 @@ class Channel(chn_class.Channel):
         
         logFile.debug("Added %s more RTL Items to the already existing %s", number, previousNumber)
         
-        # then add GTST
-        #gtstItem = common.clistItem('Goede Tijden, Slechte Tijden (Oud)', 'http://www.rtl.nl/(vm=/service/miMedia/rtl_gemist.xml/)/system/video/menu/soaps/gtst/videomenu.xml', 'folder')
-        #gtstItem.icon = self.folderIcon
-        #gtstItem.thumb = self.noImage
-        #if items.count(gtstItem) == 0:
-        #    items.append(gtstItem)
-        
-        #gtstItem = common.clistItem('Goede Tijden, Slechte Tijden', 'http://www.rtl.nl/system/video/menu/soaps/gtst/videomenu.xml', 'folder')
-        #gtstItem.icon = self.folderIcon
-        #gtstItem.thumb = self.noImage
-        #if items.count(gtstItem) == 0:
-        #    items.append(gtstItem)
-            
         rockNationItem = common.clistItem('Rock Nation','http://www.rtl.nl/system/video/menu/reality/rocknation/videomenu.xml', 'folder')
         rockNationItem.icon = self.folderIcon
         rockNationItem.thumb = self.noImage
@@ -139,7 +122,6 @@ class Channel(chn_class.Channel):
         """
         Accepts an arraylist of results. It returns an item. 
         """
-        #logFile.info('starting CreateEpisodeItem for %s', self.channelName)
         item = common.clistItem(resultSet[1], "http://www.rtl.nl/(vm="+ resultSet[0] + ")/system/video/menu" + resultSet[0] + "videomenu.xml")
         item.icon = self.folderIcon
         return item
@@ -199,13 +181,15 @@ class Channel(chn_class.Channel):
         item.thumb = self.noImage
         item.thumbUrl = urlparse.urljoin(self.baseUrl, resultSet[1])
         item.type = 'video'
+        item.mediaurl = []
         
-        if resultSet[9] != '':
-            item.mediaurl = []
-            item.mediaurl.append(urlparse.urljoin(self.baseUrl, resultSet[9]))
-            item.mediaurl.append(item.mediaurl[0].replace("max.wvx","min.wvx"))
-        else:
-            logFile.error('CreateVideo: No mediaUrl was found.')
+        # as of 21-01-2009 this does not work anymore
+#        if resultSet[9] != '':
+#            item.mediaurl = []
+#            item.mediaurl.append(urlparse.urljoin(self.baseUrl, resultSet[9]))
+#            item.mediaurl.append(item.mediaurl[0].replace("max.wvx","min.wvx"))
+#        else:
+#            logFile.error('CreateVideo: No mediaUrl was found.')
 
         if resultSet[5] != '':
             logFile.debug('ctime=%s (%s)', resultSet[5], time.ctime(int(resultSet[5])))
@@ -233,7 +217,7 @@ class Channel(chn_class.Channel):
     
                 mediaUrls = []
                 for match in matches:
-                    mediaUrls.append(match[0])
+                    mediaUrls.append("%s%s%s" % match)
             
                 logFile.debug("Sorted Matches: %s", mediaUrls)                
                 item.mediaurl = mediaUrls
@@ -274,15 +258,15 @@ class Channel(chn_class.Channel):
                 logFile.debug("Starting playback of the low bitrate mediaUrl (%s)", dummy.mediaurl)
             
             # parse it
-            if self.parseWvx:
-                dummy = self.ParseWvx(dummy)
+            #if self.parseWvx:
+            #    dummy = self.ParseWvx(dummy)
                 
             # play it
             chn_class.Channel.PlayVideoItem(self, dummy, player)            
         else:
             logFile.debug("Starting playback of the only available mediaUrl (%s)", item.mediaurl)
-            if self.parseWvx:
-                dummy = self.ParseWvx(dummy)
+            #if self.parseWvx:
+            #    dummy = self.ParseWvx(dummy)
             
             chn_class.Channel.PlayVideoItem(self, item, player)
             
@@ -295,18 +279,18 @@ class Channel(chn_class.Channel):
     def RtlVideoUri(self, videoMenu, videoURL):
         return 'http://www.rtl.nl/(vm'+ videoMenu + ')' + videoURL
     
-    #===============================================================================    
-    def ParseWvx(self, item):
-        #Parse the playlist
-        logFile.debug('Starting parsing of WXV')
-        data = uriHandler.Open(item.mediaurl, pb=False)
-        urls = common.DoRegexFindAll('<REF HREF="([^"]+)"\W*/>', data)
-        # create a new empty holder for urls.....
-        newUrls = []
-        for url in urls:
-            logFile.debug('Appending %s as mediaUrl', url)
-            newUrls.append(url)
-            # ...but only assign them to the mediaurl property if there where results
-            item.mediaurl = newUrls
-        return item
+#    #===============================================================================    
+#    def ParseWvx(self, item):
+#        #Parse the playlist
+#        logFile.debug('Starting parsing of WXV')
+#        data = uriHandler.Open(item.mediaurl, pb=False)
+#        urls = common.DoRegexFindAll('<REF HREF="([^"]+)"\W*/>', data)
+#        # create a new empty holder for urls.....
+#        newUrls = []
+#        for url in urls:
+#            logFile.debug('Appending %s as mediaUrl', url)
+#            newUrls.append(url)
+#            # ...but only assign them to the mediaurl property if there where results
+#            item.mediaurl = newUrls
+#        return item
     
