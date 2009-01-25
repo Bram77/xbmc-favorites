@@ -1,4 +1,14 @@
 #===============================================================================
+# LICENSE XOT-Framework - CC BY-NC-ND
+#===============================================================================
+# This work is licenced under the Creative Commons 
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# San Francisco, California 94105, USA.
+#===============================================================================
+
+#===============================================================================
 # Import the default modules
 #===============================================================================
 from logging import thread
@@ -694,9 +704,8 @@ class Channel(xbmcgui.WindowXML):
             for video in videos:
                 videoItems.append(self.CreateVideoItem(video))
         
-        # sort by name (don't do it, because of date. Could be re-written
-        # to do so
-        # videoItems.sort(lambda x, y: cmp(x.name,y.name))
+        # sort 
+        #videoItems.sort()
         
         # now process page navigation if a pageNavigationIndication is present
         if not self.pageNavigationRegex == '':

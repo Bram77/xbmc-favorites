@@ -57,7 +57,7 @@ class Channel(chn_class.Channel):
         
         self.contextMenuItems = []
 #        self.contextMenuItems.append(contextmenu.ContextMenuItem("Update Item", "CtMnUpdateItem", itemTypes="video", completeStatus=None))            
-#        self.contextMenuItems.append(contextmenu.ContextMenuItem("Download Item", "CtMnDownloadItem", itemTypes="video", completeStatus=True))
+        self.contextMenuItems.append(contextmenu.ContextMenuItem("Initialise", "CtMnInit", itemTypes="video", completeStatus=True))
         self.contextMenuItems.append(contextmenu.ContextMenuItem("Play using Mplayer", "CtMnPlayMplayer", itemTypes="video", completeStatus=True))
         self.contextMenuItems.append(contextmenu.ContextMenuItem("Play using DVDPlayer", "CtMnPlayDVDPlayer", itemTypes="video", completeStatus=True))
                 
@@ -87,6 +87,13 @@ class Channel(chn_class.Channel):
     def CtMnPlayDVDPlayer(self, selectedIndex):
         item = self.listItems[selectedIndex]
         self.PlayVideoItem(item,"dvdplayer")    
+    
+    def CtMnInit(self, selectedIndex):
+        logFile.debug("Intializing from menu")
+        #item = self.listItems[selectedIndex]
+        #logFile.debug("URL = %s", item.url)
+        url = "http://www.southparkstudios.com/stats/register.php/videos/147434"
+        uriHandler.Open(url)
     
     #==============================================================================
     def CreateEpisodeItem(self, resultSet):

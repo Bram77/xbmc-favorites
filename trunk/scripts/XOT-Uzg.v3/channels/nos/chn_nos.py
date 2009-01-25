@@ -30,6 +30,9 @@ register.channelRegister.append('chn_nos.Channel("uzg-channelwindow.xml", config
 
 #register.channelButtonRegister.append(103)
 register.channelRegister.append('chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="ned3")')
+
+register.channelRegister.append('chn_nos.Channel("uzg-channelwindow.xml", config.rootDir, config.skinFolder, channelCode="zapp")')
+
         
 #===============================================================================
 # main Channel Class
@@ -80,7 +83,7 @@ class Channel(chn_class.Channel):
                 self.moduleName = "chn_nos.py"
                 self.sortOrder = 2
                 
-            else:
+            elif self.channelCode == "ned3":
                 self.guid = "D0BDAA2A-42F3-11DD-A8C0-D3F855D89593"
                 self.mainListUri = "http://www.uitzendinggemist.nl/index.php/selectie?searchitem=net_zender&net_zender=3&sort=datum"
                 #self.mainListUri = "http://wmc.uitzendinggemist.nl/xmlHTTP/searchZender.php?zenderID=3" 
@@ -91,7 +94,17 @@ class Channel(chn_class.Channel):
                 self.channelDescription = "Uitzendingen van de publieke zender Nederland 3"
                 self.moduleName = "chn_nos.py"
                 self.sortOrder = 3
-    
+            
+            else: 
+                self.guid = "99fa1469-0a95-413e-b1a7-3f9b0506a67b"                                   
+                self.mainListUri = "http://www.uitzendinggemist.nl/index.php/selectie?searchitem=omroep&omroep=47&sort=datum"
+                self.icon = "zappicon.png"
+                self.iconLarge = "zapplarge.png"
+                self.noImage = "nosimage.png"
+                self.channelName = "Z@PP"
+                self.channelDescription = "Uitzendingen van Z@PP"
+                self.moduleName = "chn_nos.py"
+                #self.sortOrder = 3
     
             self.contextMenuItems = []
             self.contextMenuItems.append(contextmenu.ContextMenuItem("Play using Mplayer", "CtMnPlayMplayer", itemTypes="video", completeStatus=True))
