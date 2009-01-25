@@ -1,4 +1,4 @@
-Extra how to use sopcast
+		Extra how to use sopcast
 
 Ok, how to get uk football streamed to your xbox. 
 You need sopcast installed and running on a pc on your home network. 
@@ -18,3 +18,5 @@ Click the sopcast.m3u and you're away.
 
 update/edit how to use sopcast tutorial 
 original by Coastal from Coastal's Blog
+
+	

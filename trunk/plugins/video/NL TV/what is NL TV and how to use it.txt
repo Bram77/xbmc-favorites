@@ -1,8 +1,9 @@
 NL tv contains Dutch tv streams.it actually isn't a plugin.
 should be added to the Video section as a location, 
 even though it's downloaded to the "plugins/video/" directory on your XBOX. 
-/description
+/description.please delete earlier version before updating.
 
-
-
++ instruction (how to use sopcast.txt) + and for the Dutch how to use sopcast 
+and nachtdienst for Navi-X script in (lees mij Xtra.txt) 
+read the 2 above as a text file
 

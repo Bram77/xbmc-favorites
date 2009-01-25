@@ -12,12 +12,13 @@ dan kijk ik op http://www.myp2p.eu/ welke voetbalwedstijden live worden uitgezon
 via sopcast.daar staat ook een link van sopcast stream.
 druk daarop en dan zal je de wedstijd op je pc scherm te voorschijn zien komen.
 open op xbmc de sopcast.m3u bestand als een tekst bestand
-te vinden in NL TV /Extra
+te vinden in NL TV/Xtra
 verander pc ip address naar jouw  ip bijv. 192.168.1.2
 http://your pc ip address:8902/tv.asf naar
 http://192.168.1.2:8902/tv.asf
-nu kan je op xbmc de podcast bestand afspelen.
-dit bestand ergens anders plaatsen dan Nl tv
+dit bestand bij voorkeur ergens ander plaatsen dan
+NL TV/Xtra in verband met overschrijven
+nu kan je op xbmc de sopcast.m3u bestand afspelen.
 
 
 Aanrader Nederlandse forum over Voetbalstreaming 
@@ -25,7 +26,7 @@ http://www.voetbalstreaming.cautela.nl/
 
 		Extra: tijdelijke streams
 
-hier staan streams die waarschijnlijke een kleine periode in een jaar
+hier staan streams die waarschijnlijk een kleine periode in een jaar
 worden uitgezonden en als de tijd daarvoor zal ik de url NL TV updaten.
 
 
