@@ -1,3 +1,14 @@
+		Contact mij
+
+als een link dood is of een nieuwe streams toevoegen
+of andere suggesties 
+e-Mail tikkiebreed1@live.com
+of op de XBMC Community Forum, username:tikkiew
+link http://xbmc.org/forum/ 
+
+Ingmar van NL TV extra addon
+kan je contact met me opnemen?
+
 		Gebruiksaanwijzing NL TV
 
 verlopig NL TV plugin altijd te vinden in caterogie plugin video.
@@ -15,9 +26,25 @@ ook download NL TV verkrijgbaar op plugin Favourites Installer
 misschien ook in navi-x in de toekomst
 
 
+		Ziggo TV bekijken,
 
-		Contact mij
-
-als een link dood is of een nieuwe streams toevoegen
-of andere suggesties e-Mail tikkiebreed1@live.com
+kan mits je een internet verbinding van ziggo hebt
+		Ziggo streams
+"mms://83.80.17.52/casema wmstream-12" - Nederland 1
+"mms://83.80.17.52/casema wmstream-13" - Nederland 2
+"mms://83.80.17.52/casema wmstream-14" - Nederland 3
+"mms://83.80.17.52/casema wmstream-02" - SBS 6
+"mms://83.80.17.52/casema wmstream-04" - Veronica / Jetix
+"mms://83.80.17.52/casema wmstream-07" - RTL 8
+"mms://83.80.17.52/casema wmstream-01" - Net 5
+"mms://83.80.17.52/casema wmstream-09" - BRT1
+"mms://83.80.17.52/casema wmstream-10" - BRT2
+"mms://83.80.17.52/casema wmstream-15" - Nickelodion
+"mms://83.80.17.52/casema wmstream-06" - Discovery
+"mms://83.80.17.52/casema wmstream-05" - Animal Planet
+"mms://83.80.17.52/casema wmstream-16" - Travel Channel
+"mms://83.80.17.52/casema wmstream-03" - TMF
+"mms://83.80.17.52/casema wmstream-08" - MTV
+"mms://83.80.17.52/casema wmstream-11" - TV Oranje
+"mms://83.80.17.52/casema wmstream-17" - Etalagekanaal
 
