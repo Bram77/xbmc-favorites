@@ -1,3 +1,13 @@
+#===============================================================================
+# LICENSE XOT-Framework - CC BY-NC-ND
+#===============================================================================
+# This work is licenced under the Creative Commons 
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# San Francisco, California 94105, USA.
+#===============================================================================
+
 import xbmc, xbmcgui
 import urlparse, re, sys, os
 from urlparse import urlparse
@@ -51,8 +61,6 @@ class GUI(xbmcgui.WindowXML):
             self.activeChannelGUI = None
             self.selectedChannelIndex = 0
             self.listMode = ProgListModes.Normal#1 # 1=normal, 2=favorites 
-            self.clicked = False
-            self.focusControlID = 0
             
             # create channel GUIs (channel classes are initiated)
             for channel in channelRegister:
@@ -109,18 +117,9 @@ class GUI(xbmcgui.WindowXML):
     #===============================================================================
     def onAction(self, action):
         try:
-#            if action.getId() == 0:
-#                return
-#            logFile.debug("onAction")
+            # get the FocusID
             try:
                 controlID = self.getFocusId()
-#                if not action.getId() in controls.ACTION_MOUSE_MOVEMENT:
-#                    # if it was no mousemovement, reset the clicked
-#                    logFile.debug("Resetting self.click")
-#                    self.clicked = False
-#                else:
-#                    logFile.debug("Clicked on control: %s while focusControlID = %s", controlID, self.focusControlID)
-#                #logFile.debug("onAction: \nID=%s\nbuttonCode=%s\nfocus=%s", action.getId(), action.getButtonCode(),controlID)                    
             except:
                 logFile.debug("Unknown focusID for action ID: %s and ButtonCode: %s", action.getId(), action.getButtonCode())
                 return
@@ -158,17 +157,13 @@ class GUI(xbmcgui.WindowXML):
             #===============================================================================
             # Handle onClicks
             #===============================================================================
-            elif action == controls.ACTION_SELECT_ITEM:
-                logFile.debug("Progwindow :: Performing a SelectItem")
-                # handle the onClicks. Because we use a WrapList the onClick also triggers
-                # an onAction, causing some problems. That is why we handle onclicks here now.
-                # normally the onClick occurs and then the onAction
-                self.onSelect(controlID)
-                pass
-            elif (action.getId() in controls.ACTION_MOUSE_MOVEMENT):# and self.clicked:
-                #self.clicked = False
-                logFile.debug("An onAction for Mouse movement was caught")
-                pass
+            #elif action == controls.ACTION_SELECT_ITEM:
+            #    logFile.debug("Progwindow :: Performing a SelectItem")
+            #    # handle the onClicks. Because we use a WrapList the onClick also triggers
+            #    # an onAction, causing some problems. That is why we handle onclicks here now.
+            #    # normally the onClick occurs and then the onAction
+            #    #self.onSelect(controlID)
+            
             else:
                 if not action.getId() in controls.ACTION_MOUSE_MOVEMENT:
                     logFile.critical("OnAction::unknow action (id=%s). Do not know what to do", action.getId())            
@@ -232,11 +227,8 @@ class GUI(xbmcgui.WindowXML):
     #===============================================================================
     def onClick(self, controlID):
         try:
-            logFile.debug("onClick ControlID=%s", controlID)
-            # Not used because of bug in wraplist
-            self.clicked = True
-            #self.onSelect(controlID)
-            pass
+            logFile.debug("Progwindow :: onClick ControlID=%s", controlID)
+            self.onSelect(controlID)
         except:
             logFile.critical("Error handling onClick on controlID=%s", controlID, exc_info=True)
             
@@ -247,8 +239,7 @@ class GUI(xbmcgui.WindowXML):
             This function has been implemented and works
         """
         try:
-            logFile.debug("onFocus :: Control %s has focus now", controlID)
-            self.focusControlID = controlID
+            #logFile.debug("onFocus :: Control %s has focus now", controlID)
             pass
         except: 
             logFile.critical("Error handling onFocus on ControlID=%s", controlID, exc_info=True)
@@ -367,7 +358,7 @@ class GUI(xbmcgui.WindowXML):
             logFile.debug("Hiding Channels")
             self.getControl(controls.CH_LIST_WRAPPER).setVisible(False)
             self.getControl(controls.PR_LIST_WRAPPER).setVisible(True)
-            self.setFocusId(controls.PR_LIST)        
+            self.setFocusId(controls.PR_LIST)
         return
     
     #============================================================================== 

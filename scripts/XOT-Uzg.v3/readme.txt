@@ -2,6 +2,7 @@
  Uitzendinggemist v3.x.x                                                                   
 --------------------------------------------------------------------------------------------
  Contents
+ 0. License
  1. Introduction
  2. Changelog
  3. Skinning
@@ -11,6 +12,25 @@
  5. Acknowledgements
  6. Donations
 --------------------------------------------------------------------------------------------
+ 
+--------------------------------------------------------------------------------------------
+ 0. License
+--------------------------------------------------------------------------------------------
+The XOT-Framework is licensed under the Creative Commons Attribution-Non-Commercial-No 
+Derivative Works 3.0 Unported License. To view a copy of this licence, visit 
+http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to Creative Commons, 
+171 Second Street, Suite 300, San Francisco, California 94105, USA. Files that belong to 
+the XOT-Framework have a disclaimer stating that they are licensed under the Creative 
+Commons Attribution-Non-Commercial-No Derivative Works 3.0 Unported License.
+
+All channels, skins and config.py (further called XOT Additions) are free software: 
+you can redistribute it and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of the License, or (at your 
+option) any later version. XOT Additions are distributed in the hope that it will be 
+useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more 
+details. You should have received a copy of the GNU General Public License along with 
+XOT Additions. If not, see <http://www.gnu.org/licenses/>.
  
 --------------------------------------------------------------------------------------------
  1. Introduction
@@ -32,7 +52,15 @@ Direct contact can be done using the following e-mailadres:
 --------------------------------------------------------------------------------------------
  2. Changelog
 --------------------------------------------------------------------------------------------
-Changelog v3.2.0b2 - 2008-11-24 ****Needs at least XBMC revision R14899 ****
+* Changelog v3.2.0b3 - 2009-01-23 **** Needs at least XBMC revision R17016 ****
+* Added: MediaStream skin (thanks to Poeier from tweakers.net)
+* Fixed: RTL channel
+* Added: better sorting of items (date still needs some tweaking)
+* Added: Mouseclick support (Requires Rev 17016)
+* Added: Z@PP Channel
+* Fixed: SVT Channel
+
+Changelog v3.2.0b2 - 2008-11-24 **** Needs at least XBMC revision R14899 ****
 * Updated: SVT.se
 * Fixed: mediaUrl error in Plugin
 * Fixed: Environment always showed Win32 even on xbox. Now it imports win32 but displays XBOX
@@ -423,8 +451,7 @@ the COMPLETE uzg.log logfile so I can see what the problem is.
 --------------------------------------------------------------------------------------------
  5. Acknowledgement
 --------------------------------------------------------------------------------------------
-Uitzendinggemist v2.0 is a continuation of a script by BaKMaN (http://xbox.readrss.com). 
-Basic idea and part of the scripting credits go to him or any other previous developer. 
+The first idea for XOT-Uzg came from a script by by BaKMaN (http://xbox.readrss.com). 
 
 --------------------------------------------------------------------------------------------
  6. Donations

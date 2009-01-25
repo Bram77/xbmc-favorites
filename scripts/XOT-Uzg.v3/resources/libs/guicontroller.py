@@ -1,4 +1,14 @@
 #===============================================================================
+# LICENSE XOT-Framework - CC BY-NC-ND
+#===============================================================================
+# This work is licenced under the Creative Commons 
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# San Francisco, California 94105, USA.
+#===============================================================================
+
+#===============================================================================
 # Import the default modules
 #===============================================================================
 import xbmc, xbmcgui 
@@ -153,7 +163,7 @@ class GuiController:
             if not value == None:
                 self.window.getControl(controls.EP_RATING + value).setVisible(True)
         except:
-            logFile.info("ShowRating :: Non-Existing Control - controls.EP_RATING")
+            logFile.info("ShowRating :: Non-Existing Control - controls.EP_RATING", exc_info=True)
             pass
     
     #============================================================================== 

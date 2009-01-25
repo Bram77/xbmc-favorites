@@ -1,29 +1,11 @@
-# -*- coding: cp1252 -*-
 #===============================================================================
-# UitzendingGemist v2.0
-# 
-# Continuation of a script by BaKMaN ((http://xbox.readrss.com). Basic idea and part of the scripting credits go to him. 
-# This version is now working with the current verion of www.uitzendinggemist.nl. 
-# 
-# Here is the changelog v1.2 to v2.0
-# - fixed: now again working with www.uitzendinggemist.nl
-# - fixed: working ASF streams
-# - added: support for multiple episodes of a programm
-# - changed: split window-class into to parts: program-window and episode-window
-# - added: new background
-# - changed: layout
-# - fixed: display most recent programms, instead of the first in alphabetical ranking
-# 
-# Know limitations:
-# - due to the listing on www.uitzendinggemist.nl not all programms are listed. Just the most recent ones.
-# 
-# History:
-# *** Uitzendinggemist*** version 1.0 by BaKMaN
-# - Born out of Dutchstream, more working streams though.
-# - Many high quality streams (500k+) from www.omroep.nl
-# - Shows which are broadcasted on Dutch TV station Nederland 1, 2 and 3
-# - including Kopspijkers, Radar, Kassa, Nova, Zembla, many, many more...
-# - 29-10-2006 v1.2 Cookie handling added, streams working again.# Based on many scripts; lots came from the gamespotplus script by jsd
+# LICENSE XOT-Framework - CC BY-NC-ND
+#===============================================================================
+# This work is licenced under the Creative Commons 
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# San Francisco, California 94105, USA.
 #===============================================================================
 
 import os.path

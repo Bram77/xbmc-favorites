@@ -1,3 +1,13 @@
+#===============================================================================
+# LICENSE XOT-Framework - CC BY-NC-ND
+#===============================================================================
+# This work is licenced under the Creative Commons 
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
+# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# San Francisco, California 94105, USA.
+#===============================================================================
+
 import os, re, string, sys, time
 from string import *
 import htmlentitydefs
@@ -40,6 +50,31 @@ class clistItem:
     
     def __ne__(self, item):
         return not self.Equals(item)
+    
+    def __cmp__(self, other):
+        logFile.debug("Comparing")
+        if self.type == "video" and other.type == "video":
+            if self.date == "" and other.date == "":
+                # no date, so us the name
+                return cmp(self.name, other.name)
+            
+            elif self.date == "" and not other.date =="":
+                # the other one has a date
+                return 1
+            elif other.date == "" and not self.date == "":
+                return -1                 
+            else:
+                if self.date == other.date:
+                    # check for date and then name
+                    return cmp(self.name, other.name)
+                else:
+                    return 0
+                    
+        elif self.type == "folder" and other.type == "folder":
+            # folders only: just use the name
+            return cmp(self.name, other.name)
+        else:
+            return 0
         
     def Equals(self, item):
         return self.guid == item.guid

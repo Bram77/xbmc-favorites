@@ -51,16 +51,15 @@ class Channel(chn_class.Channel):
         self.maxXotVersion = "3.2.0"
         self.onUpDownUpdateEnabled = False
         
-        self.mainListUri = ""
+        self.mainListUri = "http://www.kanalenkiezer.nl"
         self.baseUrl = "http://www.kanalenkiezer.nl"
         self.playerUrl = ""
         
         self.requiresLogon = False
         
-        #self.episodeItemRegex = '<tr id="d-(\d+)"><td width="25" class="num">\d+</td><td class="title" id="m-(\d+)"><h2>([^<]+)</h2>'  # used for the ParseMainList
-        self.episodeItemRegex = '<tr[^>]+id="d-(\d+)"><td width="25" class="num">\d+</td><td class="title" id="m-(\d+)"><a [^>]+>([^<]+)</a>'  # used for the ParseMainList
-        self.videoItemRegex = '([^*|]+)\*([^*|]+)\*([^*|]+)\*([^*|]+)\*([^*|]+)\*(\d+)'   # used for the CreateVideoItem 
-        self.folderItemRegex = '<h1>([^<]+)</h1>'  # used for the CreateFolderItem
+        self.episodeItemRegex = '<a[^>]+id[^>]+href="(/tv/[^"]+)"[^>]*>([^<]+)</a>'  # used for the ParseMainList
+        self.videoItemRegex = '<tr><td><a[^>]+href="(/tv/[^"]+)"[^>]*>([^<]+)</a></td><td>([^<]+)[^=]+<div class="star(\d+)">'   # used for the CreateVideoItem 
+        self.folderItemRegex = ''  # used for the CreateFolderItem
         #232|Adventure Free TV|http://www.adventurefree.tv/unicast_mov/AFTVAdventureH264500.mov|0|mov|http://www.adventurefree.tv/|#|
         self.mediaUrlRegex = '\d+\|[^|]+\|([^|]+)\|[^|]+\|[^|]+\|[^|]+\|[^|]+'    # used for the UpdateVideoItem
         
@@ -79,117 +78,161 @@ class Channel(chn_class.Channel):
         self.CreateCategories()
             
     #==============================================================================
-    def CreateCategories(self):
-        del self.descriptionListKK[:]
-        del self.channelCategories[:]
-    
-        #===============================================================================
-        # first get the descriptions and then add them in the list while parsing. 
-        #===============================================================================
-        _data = uriHandler.Open('http://www.kanalenkiezer.nl/cache/indexDESC.txt')
-        _descriptions = common.DoRegexFindAll(self.descriptionRegex, _data)
-        count = 0
-        for _description in _descriptions:
-            logFile.debug("adding description %s:%s", count, _description)
-            self.descriptionListKK.append(_description)
-            count = count + 1
-                    
-        #===============================================================================
-        # now get the html and fill the items
-        #===============================================================================
-        _data = uriHandler.Open(self.baseUrl)
-    
-        #now split data on the categories and get the channels
-        _split = re.split(self.folderItemRegex, _data)
-        
-        #result will be: first part, then value inbetween () then value, then value inbetween () etc...
-        _i = 0
-        for _value in _split:
-            #logFile.debug("%s:", _value)
-            if _i%2 ==0 and _i > 0:
-                # add channel to category
-                _channels = common.DoRegexFindAll(self.episodeItemRegex, _split[_i])
-                for _channel in _channels:
-                    _tmp = self.channelCategories.pop()
-                    
-                    #create custom listitem here, with url, description and name, add that to _tmp.channels
-                    url = "http://www.kanalenkiezer.nl/ajax/getSTREAM.php?id=%s&db=1" % (_channel[1])
-                    logFile.debug("Adding channel: %s (id=%s, desc=%s) to %s", _channel[2],_channel[1], _channel[0], _tmp.name)
-                    logFile.debug("Url = %s", url)
-                    logFile.debug("Desc=%s", self.descriptionListKK[int(_channel[0])])
-                    item = common.clistItem(_channel[2], url)
-                    item.description = self.descriptionListKK[int(_channel[0])]
-                    item.icon = self.icon
-                    item.thumb = self.noImage;
-                    item.type = 'video'
-                    
-                    _tmp.channels.append(item)
-                    _tmp.icon = self.icon
-                    self.channelCategories.append(_tmp)
-            elif _i%2 == 1:
-                # add a new category and store position in urlfield
-                logFile.debug("Adding %s as item #%s", _split[_i], (_i-1)/2)
-                _tmp = common.clistItem(_split[_i], (_i-1)/2)
-                _tmp.icon = self.icon
-                self.channelCategories.append(_tmp)
-                
-            _i += 1
-    
-        self.channelCategories.pop() #remove erotic because of popups        
-        return
-    
-    #==============================================================================
-    def ParseMainList(self):
-        """ 
-        accepts an url and returns an list with items of type CListItem
-        Items have a name and url. This is used for the filling of the progwindow
+    def CreateEpisodeItem(self, resultSet):
         """
-        logFile.info('Parsing kanalenkiezer')
-        items = []
-        
-        if len(self.channelCategories) < 1:
-            logFile.debug("ParseMainList::Creating Categories")
-            self.CreateCategories()
+        Accepts an arraylist of results. It returns an item. 
+        """
+        #logFile.info('starting CreateEpisodeItem for %s', self.channelName)
+        item = common.clistItem(resultSet[1], "http://www.kanalenkiezer.nl%s" % (resultSet[0],))
+        item.icon = self.icon
+        item.complete = True
+        return item
     
-        # copy the object in order to sort the items
-        items = copy.copy(self.channelCategories)
-        # because lists are downloaded according to date (else some programs will be missing), a sort on name is performed.
-        items.sort(lambda x, y: cmp(x.name,y.name))
-                
+    #============================================================================= 
+    def CreateVideoItem(self, resultSet):
+        """
+        Accepts an arraylist of results. It returns an item. 
+        """
+        item = common.clistItem(resultSet[1],"http://www.kanalenkiezer.nl%s" % (resultSet[0],))
+        item.description = resultSet[2]
+        item.icon = self.icon
+        item.rating = int(resultSet[3])
+        item.complete = True
+        item.type = "video"
+        return item
+    
+    #============================================================================= 
+    def ProcessFolderList(self, url):
+        """
+            Only added for sorting
+        """
+        items = chn_class.Channel.ProcessFolderList(self, url)
+        items.sort();
         return items
     
-    #==============================================================================
-    def ProcessFolderList(self, url):
-        """ NOT USER EDITABLE
-        Accepts an URL and returns a list of items with at least name & url set
-        Each item can be filled using the ParseFolderItem and ParseVideoItem 
-        Methodes
+    #============================================================================= 
+    def UpdateVideoItem(self, item):
         """
-        _items = []
-        logFile.info("Opening caterogy %s with name %s", url, self.channelCategories[int(url)].name)
-                
-        return self.channelCategories[int(url)].channels
-
-    #===============================================================================
-    def PlayVideoItem(self, item, player="defaultplayer"):
-        try:
-            if item.complete == False:
-                item = chn_class.Channel.UpdateVideoItem(self, item)
-            
-            # Check if perhaps a http page is requested:
-            # in order to do a uriHandler.Open it must be HTTP!!!
-            _stream = item.mediaurl
-            if _stream.find('http:')>=0:
-                logFile.info('Checking %s for Content-Type (First Time)', _stream)
-                (_strmHeader, _realUrl) = uriHandler.Header(_stream)
-                logFile.debug('Content-Type: '+ _strmHeader)
-                
-                # start figuring out what type it is....and handle them
-                if _strmHeader.find("video/x-ms-asf")>=0:
-                    item.mediaurl = self.ParseAsxAsf(item.mediaurl)
-                
-            logFile.info('Opening stream in player %s', item.mediaurl)
-            # pass on to main channel class
-            chn_class.Channel.PlayVideoItem(self, item, player)
-        except:
-            logFile.critical("Cannot playback URL: %s", item.mediaurl)
+        Accepts an item. It returns an updated item. 
+        """
+        logFile.debug('starting UpdateVideoItem for %s (%s)',item.name, self.channelName)
+        
+        item.mediaurl = ""
+        item.thumb = ""
+        item.complete = True
+        return item
+#    #==============================================================================
+#    def CreateCategories(self):
+#        del self.descriptionListKK[:]
+#        del self.channelCategories[:]
+#    
+#        #===============================================================================
+#        # first get the descriptions and then add them in the list while parsing. 
+#        #===============================================================================
+#        _data = uriHandler.Open('http://www.kanalenkiezer.nl/cache/indexDESC.txt')
+#        _descriptions = common.DoRegexFindAll(self.descriptionRegex, _data)
+#        count = 0
+#        for _description in _descriptions:
+#            logFile.debug("adding description %s:%s", count, _description)
+#            self.descriptionListKK.append(_description)
+#            count = count + 1
+#                    
+#        #===============================================================================
+#        # now get the html and fill the items
+#        #===============================================================================
+#        _data = uriHandler.Open(self.baseUrl)
+#    
+#        #now split data on the categories and get the channels
+#        _split = re.split(self.folderItemRegex, _data)
+#        
+#        #result will be: first part, then value inbetween () then value, then value inbetween () etc...
+#        _i = 0
+#        for _value in _split:
+#            #logFile.debug("%s:", _value)
+#            if _i%2 ==0 and _i > 0:
+#                # add channel to category
+#                _channels = common.DoRegexFindAll(self.episodeItemRegex, _split[_i])
+#                for _channel in _channels:
+#                    _tmp = self.channelCategories.pop()
+#                    
+#                    #create custom listitem here, with url, description and name, add that to _tmp.channels
+#                    url = "http://www.kanalenkiezer.nl/ajax/getSTREAM.php?id=%s&db=1" % (_channel[1])
+#                    logFile.debug("Adding channel: %s (id=%s, desc=%s) to %s", _channel[2],_channel[1], _channel[0], _tmp.name)
+#                    logFile.debug("Url = %s", url)
+#                    logFile.debug("Desc=%s", self.descriptionListKK[int(_channel[0])])
+#                    item = common.clistItem(_channel[2], url)
+#                    item.description = self.descriptionListKK[int(_channel[0])]
+#                    item.icon = self.icon
+#                    item.thumb = self.noImage;
+#                    item.type = 'video'
+#                    
+#                    _tmp.channels.append(item)
+#                    _tmp.icon = self.icon
+#                    self.channelCategories.append(_tmp)
+#            elif _i%2 == 1:
+#                # add a new category and store position in urlfield
+#                logFile.debug("Adding %s as item #%s", _split[_i], (_i-1)/2)
+#                _tmp = common.clistItem(_split[_i], (_i-1)/2)
+#                _tmp.icon = self.icon
+#                self.channelCategories.append(_tmp)
+#                
+#            _i += 1
+#    
+#        self.channelCategories.pop() #remove erotic because of popups        
+#        return
+#    
+#    #==============================================================================
+#    def ParseMainList(self):
+#        """ 
+#        accepts an url and returns an list with items of type CListItem
+#        Items have a name and url. This is used for the filling of the progwindow
+#        """
+#        logFile.info('Parsing kanalenkiezer')
+#        items = []
+#        
+#        if len(self.channelCategories) < 1:
+#            logFile.debug("ParseMainList::Creating Categories")
+#            self.CreateCategories()
+#    
+#        # copy the object in order to sort the items
+#        items = copy.copy(self.channelCategories)
+#        # because lists are downloaded according to date (else some programs will be missing), a sort on name is performed.
+#        items.sort(lambda x, y: cmp(x.name,y.name))
+#                
+#        return items
+#    
+#    #==============================================================================
+#    def ProcessFolderList(self, url):
+#        """ NOT USER EDITABLE
+#        Accepts an URL and returns a list of items with at least name & url set
+#        Each item can be filled using the ParseFolderItem and ParseVideoItem 
+#        Methodes
+#        """
+#        _items = []
+#        logFile.info("Opening caterogy %s with name %s", url, self.channelCategories[int(url)].name)
+#                
+#        return self.channelCategories[int(url)].channels
+#
+#    #===============================================================================
+#    def PlayVideoItem(self, item, player="defaultplayer"):
+#        try:
+#            if item.complete == False:
+#                item = chn_class.Channel.UpdateVideoItem(self, item)
+#            
+#            # Check if perhaps a http page is requested:
+#            # in order to do a uriHandler.Open it must be HTTP!!!
+#            _stream = item.mediaurl
+#            if _stream.find('http:')>=0:
+#                logFile.info('Checking %s for Content-Type (First Time)', _stream)
+#                (_strmHeader, _realUrl) = uriHandler.Header(_stream)
+#                logFile.debug('Content-Type: '+ _strmHeader)
+#                
+#                # start figuring out what type it is....and handle them
+#                if _strmHeader.find("video/x-ms-asf")>=0:
+#                    item.mediaurl = self.ParseAsxAsf(item.mediaurl)
+#                
+#            logFile.info('Opening stream in player %s', item.mediaurl)
+#            # pass on to main channel class
+#            chn_class.Channel.PlayVideoItem(self, item, player)
+#        except:
+#            logFile.critical("Cannot playback URL: %s", item.mediaurl)
