@@ -17,7 +17,7 @@ icon=video.monkey.image|ard_mediathek.png
 director=ARD mediathek
 url=ard.de.cfg
 ########################################################
-title=arte tv
+title=arte tv (DE/FR)
 type=rss
 icon=video.monkey.image|arte.png
 director=arte
@@ -52,4 +52,10 @@ type=rss
 icon=video.monkey.image|cc2.png
 director=Computer:club²
 url=cc2.de.cfg
+########################################################
+title=3sat (DE)
+type=rss
+icon=video.monkey.image|3sat_mediathek.png
+director=3sat mediathek
+url=3sat.de.cfg
 ########################################################
