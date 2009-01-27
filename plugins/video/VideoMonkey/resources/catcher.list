@@ -141,6 +141,13 @@ target=player\.avaible_url\['flashmedia'\]\['3'\] *= *"([^"]+)"
 extension=flv
 quality=high
 ########################################################
+title=3sat.de
+target=<param name="url" value="([^"]+)"
+url=%s
+ext_target=href *= *"([^"]+)"
+extension=wmv
+quality=high
+########################################################
 title=zdf.de
 target="assetUrl": *"([^"]+)"
 url=%s&bw=isdn&pp=wmp
