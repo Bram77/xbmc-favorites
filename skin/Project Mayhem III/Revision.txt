@@ -1,0 +1,4 @@
+01/20/09 added Music Fanart to Artist and Album
+01/28/09 updated skin code to latest build as of 01/27/09. edited DialogVideoInfo.xml so the Get Fanart button would now appear in all locations that it appears in PM3HD
+
+PrimusZa1
