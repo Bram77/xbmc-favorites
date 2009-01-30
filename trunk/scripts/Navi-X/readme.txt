@@ -1,12 +1,23 @@
-Welcome to Navi-X v2.4
+Welcome to Navi-X v2.5
 
-Changelog (v2.4)
--improved Shoutcast playlist loading.
--improved PLX loading. Support both LF and CRLF.
--Support new media type called 'plugin'. (plugin file needs to be a ZIP file).
--Support description= field for every media item in PLX file.
--Youtube fix.
--Other minor improvements.
+Changelog:
+
+1. Background download support. Download media files while browsing  and watching other media. 
+Files are automatically added to the download queue. You can resume your downloads the next 
+time you start Navi-X by using the options in  the download queue menu.
+
+2. Multi threading suppport for better performance and stability. E.g. thumbnail images 
+are now downloaded and processed from a separate thread. 
+
+3. New playlist item attribute called 'date'. This attribute indicates the release or 
+update date of the specific item. When this attribute is set Navi-X will automatically
+mark the item as new. This feature will make it a lot easier to find new content.
+
+4. RSS feeds improvements. Navi-X now allows you to read your favorite News feeds.
+
+5. Solved other minor problems.
+
+Enjoy.
 
 Navi-X is tested using the T3CH build. If you are having problems
 and are using a different XBMC then please let me know. Thanks.

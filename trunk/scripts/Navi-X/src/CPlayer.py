@@ -112,7 +112,7 @@ class CPlayer(xbmc.Player):
     
         ext = getFileExtension(URL)
         if ext == 'pls' or ext == 'm3u':
-            loader = CFileLoader() #file loader
+            loader = CFileLoader2() #file loader
             loader.load(URL, cacheDir + "playlist." + ext)
             if loader.state == 0: #success
                 result = self.pls.load(loader.localfile)

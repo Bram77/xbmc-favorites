@@ -47,6 +47,7 @@ class CMediaItem:
                   version=plxVersion, \
                   name='', \
                   description='', \
+                  date='', \
                   thumb='default', \
                   URL='', \
                   DLloc='', \
@@ -56,6 +57,7 @@ class CMediaItem:
         self.version = version #(optional) playlist version
         self.name = name    #(required) name as displayed in list view
         self.description = description    #(optional) description of this item
+        self.date = date    #(optional) release date of this item (yyyy-mm-dd)
         self.thumb = thumb  #(optional) URL to thumb image or 'default'
 #        self.icon = thumb  #(optional) URL to icon image or 'default'
         self.URL = URL      #(required) URL to playlist entry
@@ -108,7 +110,8 @@ def socket_getdefaulttimeout():
 # Return     : -
 ######################################################################
 def socket_setdefaulttimeout(url_open_timeout):
-    socket.setdefaulttimeout(url_open_timeout)
+    if platform == "xbox":
+        socket.setdefaulttimeout(url_open_timeout)
         
 ######################################################################
 # Description: Trace function for debugging
@@ -119,5 +122,27 @@ def Trace(string):
     f = open(RootDir + "trace.txt", "a")
     f.write(string + '\n')
     f.close()
-        
+      
+######################################################################
+# Description: Retrieve the platform Navi-X is running on.
+# Parameters : -
+# Return     : string containing the platform.
+######################################################################  
+def get_system_platform():
+    platform = "unknown"
+    if xbmc.getCondVisibility( "system.platform.linux" ):
+        platform = "linux"
+    elif xbmc.getCondVisibility( "system.platform.xbox" ):
+        platform = "xbox"
+    elif xbmc.getCondVisibility( "system.platform.windows" ):
+        platform = "windows"
+    elif xbmc.getCondVisibility( "system.platform.osx" ):
+        platform = "osx"
+#    Trace("Platform: %s"%platform)
+    return platform
+     
+     
+#retrieve the platform.
+platform = get_system_platform()
+
  

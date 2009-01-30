@@ -53,15 +53,20 @@ def load_skin(window):
     window.logo = xbmcgui.ControlImage(620,20,80,80, imageDir + "logo.png")
     window.addControl(window.logo)
 
-    #user logo below the buttons
+    #user logo above the buttons
     window.user_logo = xbmcgui.ControlImage(32,120,210,172, imageDir + "logo.png")
     window.addControl(window.user_logo)
     window.user_logo.setVisible(0)
             
-    #user thumb below the buttons (overlaps with the user logo)
+    #user thumb above the buttons (overlaps with the user logo)
     window.user_thumb = xbmcgui.ControlImage(32,120,210,172, imageDir + "logo.png")
     window.addControl(window.user_thumb)
     window.user_thumb.setVisible(0)
+    
+    #downloading state at the bottom of screen
+    window.download_logo = xbmcgui.ControlImage(40,480,30,30, imageDir + "icon_download.png")
+    window.addControl(window.download_logo)
+    window.download_logo.setVisible(0)
     
     #URL label at top-center position
     window.urllbl = xbmcgui.ControlLabel(40,80,350,40, "", "font14")
@@ -72,9 +77,14 @@ def load_skin(window):
     window.addControl(window.version)      
     
     #"Loading..." text at down-left side
-    window.infotekst = xbmcgui.ControlLabel(80,500,250,30, "Loading...")
+    window.infotekst = xbmcgui.ControlLabel(60,520,250,30, "Loading...")
     window.addControl(window.infotekst)
     window.infotekst.setVisible(0)
+    
+    #"Download progress information..." text at down-left side
+    window.dlinfotekst = xbmcgui.ControlLabel(80,490,250,30, "")
+    window.addControl(window.dlinfotekst)
+    window.dlinfotekst.setVisible(0)
 
     #"Please wait..." text displayed on top of the main list
     window.loading = xbmcgui.ControlLabel(280, 130, 250, 30, "Please wait...")

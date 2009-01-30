@@ -7,8 +7,7 @@
 #############################################################################
 #
 # CDownloader:
-# This class handles file downloads using a progress bar. It handles
-# download of a single file or download of all files in a queue playlist.
+# This class handles file downloads in a background task.
 #############################################################################
 
 from string import *
@@ -20,6 +19,7 @@ import xbmc, xbmcgui
 import re, os, time, datetime, traceback
 import shutil
 import zipfile
+import threading
 from settings import *
 from CPlayList import *
 from CDialogBrowse import *
@@ -50,14 +50,46 @@ class myURLOpener(urllib.FancyURLopener):
     def http_error_206(self, url, fp, errcode, errmsg, headers, data=None):
         pass
 
-
 ######################################################################
 # Description: File downloader including progress bar. 
 ######################################################################
-class CDownLoader:
-    def __init__(self, playlist_src, playlist_dst):
-        self.playlist_src = playlist_src
-        self.playlist_dst = playlist_dst
+class CDownLoader(threading.Thread):
+    def __init__(self, *args, **kwargs):
+        if (kwargs.has_key('window')): 
+            self.MainWindow = kwargs['window']
+        if (kwargs.has_key('playlist_src')): 
+            self.playlist_src = kwargs['playlist_src']  
+        if (kwargs.has_key('playlist_dst')): 
+            self.playlist_dst = kwargs['playlist_dst']       
+       
+        threading.Thread.__init__(self)    
+
+        self.setDaemon(True) #make a deamon thread   
+        
+        self.killed = False #not killed
+        self.running = False #at startup downloader is not running
+        self.shutdown = False #shutdown after download
+
+    def run(self):
+        while self.killed == False:
+            time.sleep(1.0) #delay 1 second
+            #check if there are files in the download queue.
+            while (self.killed == False) and (self.running == True) and (self.playlist_src.size() > 0):
+                #there are files to be downloaded.
+                self.download_queue()
+    
+    def download_start(self, shutdown = False):
+        self.shutdown = shutdown
+        self.running = True
+    
+    def download_stop(self):
+        self.running = False
+             
+    def kill(self):
+        self.killed = True
+    
+#    def notify(self):
+#        self.event.set()
         
     ######################################################################
     # Description: Downloads a URL to local disk
@@ -113,7 +145,7 @@ class CDownLoader:
                     ext = loc_url[pos:] #the file extension
                 else:
                     ext = ""
-        
+               
         #For the local file name we use the playlist item 'name' field.
         #But this string may contain invalid characters. Therefore
         #we strip these invalid characters. We also limit the file
@@ -181,7 +213,10 @@ class CDownLoader:
         counter = 0
         size = self.playlist_src.size()
         
-        while self.state != -2 and index < self.playlist_src.size():
+        self.MainWindow.download_logo.setVisible(1)
+        self.MainWindow.dlinfotekst.setVisible(1)
+        
+        while (self.state != -2) and (index < self.playlist_src.size()) and (self.killed == False) and (self.running == True):
             header = str(counter+1) + " of " + str(size)
             self.download_file(self.playlist_src.list[0], shutdown, header) #download single file
             
@@ -193,6 +228,17 @@ class CDownLoader:
                 index = index + 1
             
             counter = counter + 1
+            
+            #Display the updated Queue playlist
+            if (self.MainWindow.pl_focus == self.MainWindow.downloadqueue) or \
+               (self.MainWindow.pl_focus == self.MainWindow.downloadslist):
+                self.MainWindow.ParsePlaylist(reload=False) #display download list
+               
+        if (self.shutdown == True) and (self.killed == False) and (self.running == True):
+            xbmc.shutdown() #shutdown the X-box
+        
+        self.MainWindow.dlinfotekst.setVisible(0)        
+        self.MainWindow.download_logo.setVisible(0)
 
     ######################################################################
     # Description: Downloads a URL to local disk
@@ -227,9 +273,11 @@ class CDownLoader:
             if os.path.exists(localfile):
                 file = open(localfile,"ab")
                 existSize = os.path.getsize(localfile)
+                               
                 #If the file exists, then only download the remainder
-                myUrlclass.addheader("User-Agent","Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)")
-                myUrlclass.addheader("Range","bytes=%s-" % existSize)
+                myUrlclass.addheader("User-Agent","Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)")                            
+                myUrlclass.addheader("Range","bytes=%s-" % existSize)                             
+
             else:
                 #open the destination file
                 file = open(localfile, "wb")
@@ -238,6 +286,7 @@ class CDownLoader:
             #If the file exists, but we already have the whole thing, don't download again
             size_string = f.headers['Content-Length']
             size = int(size_string) #The remaining bytes
+            
 #todo: size may be existsize if file is downloaded exactly 50%            
             if (size > 0) and (size != existSize):
                 if shutdown == True:
@@ -245,35 +294,42 @@ class CDownLoader:
                 else:
                     string = "Downloading " + header
 
-                dialog = xbmcgui.DialogProgress()
-                dialog.create(string, entry.name)
+#                dialog = xbmcgui.DialogProgress()
+#                dialog.create(string, entry.name)
                 
                 bytes = existSize #bytes downloaded already
                 size = size + existSize
                 size_MB = float(size) / (1024 * 1024)
 
                 #download in chunks of 100kBytes
-                while bytes < size:
+                while (bytes < size) and (self.killed == False) and (self.running == True):
                     chunk = 100 * 1024
                     if (bytes + chunk) > size:
                         chunk = size-bytes #remainder
                     file.write(f.read(chunk))
                     bytes = bytes + chunk
             
-                    if(dialog.iscanceled()):
-                        self.state = -2 #cancel download
-                        break
+#                    if(dialog.iscanceled()):
+#                        self.state = -2 #cancel download
+#                        break
                 
                     percent = 100 * bytes / size
                     done = float(bytes) / (1024 * 1024)
-                    line2 = '%.1f MB of %.1f MB copied.' % (done, size_MB)
-                    dialog.update(percent, entry.name, line2)
+                    #line2 = '%.1f MB of %.1f MB copied.' % (done, size_MB)
+                    line2 = '%.1f MB - %d ' % (size_MB, percent) + '%'
+#                    dialog.update(percent, entry.name, line2)
                 
-                dialog.close()
-                f.close()                
+                    self.MainWindow.dlinfotekst.setLabel(line2)
+                
+#                dialog.close()
+                f.close()
+
+                if (self.killed == True) or (self.running == False):
+                    self.state = -1 #failed to download the file
+                
             
         except IOError:
-            dialog.close()
+#            dialog.close()
             f.close()            
             self.state = -1 #failed to download the file
 
