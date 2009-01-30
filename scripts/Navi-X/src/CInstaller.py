@@ -108,13 +108,17 @@ class CInstaller(xbmcgui.Window):
         chk_confirmation = False
 
         if os.path.exists(dir) == False:
-            os.mkdir(dir) #create the directory
+            try:
+                os.makedirs(dir) #create the directory
+            except IOError:
+                return -1 #failure
             
         zfobj = zipfile.ZipFile(file)
 
         for name in zfobj.namelist():
             index = name.rfind('/')
             if index != -1:
+                #entry contains path
                 if os.path.exists(dir+name[:index+1]):
                     #directory exists
                     if chk_confirmation == False:
@@ -122,15 +126,21 @@ class CInstaller(xbmcgui.Window):
                         if dialog.yesno("Installer", "Directory " + dir+name[:index] + " already exists, continue?") == False:
                             return -1
                 else:
-                    #create the directory
-                    os.mkdir(os.path.join(dir, name[:index+1]))
+                    #directory does not exist. Create it.
+                    try:
+                        #create the directory structure
+                        os.makedirs(os.path.join(dir, name[:index+1]))
+                    except IOError:
+                        return -1 #failure
+                    
             if not name.endswith('/'):
+                #entry contains a filename
                 try:
                     outfile = open(os.path.join(dir, name), 'wb')
                     outfile.write(zfobj.read(name))
                     outfile.close()
                 except IOError:
-                    pass #continue
+                    pass #There was a problem. Continue...
                  
             chk_confirmation = True
         return 0 #succesful

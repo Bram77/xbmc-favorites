@@ -77,10 +77,9 @@ class CTextView(xbmcgui.Window):
     #              URL(optional)=link to media file;
     # Return     : -
     ######################################################################
-    def OpenDocument(self, URL='', mediaitem=CMediaItem()):
-        if  URL != '':
+    def OpenDocument(self, URL='', mediaitem=0):
+        if mediaitem == 0:
             mediaitem=CMediaItem()
-            mediaitem.URL = URL
         
         #from here we use the mediaitem object
         loader = CFileLoader()
@@ -91,8 +90,11 @@ class CTextView(xbmcgui.Window):
             if loader.state == 0: #if this fails we still continue
                 self.bg.setImage(loader.localfile)
         
+        if URL == '':
+            URL = mediaitem.URL
+        
         #now load the text file
-        loader.load(mediaitem.URL, cacheDir + 'document.txt')
+        loader.load(URL, cacheDir + 'document.txt')
         if loader.state == 0:
             #open the local file
             try:            

@@ -187,6 +187,8 @@ class CPlayList:
                         tmp.version=value
                     elif key == 'name':
                         tmp.name=value
+                    elif key == 'date':
+                        tmp.date=value    
                     elif key == 'thumb':
                         tmp.thumb=value
                     elif key == 'URL':
@@ -198,7 +200,7 @@ class CPlayList:
                     elif key == 'background':
                         tmp.background=value 
                     elif key == 'description':
-                        self.description = ' ' #this will make the description field visible
+                        #self.description = ' ' #this will make the description field visible
                         index = value.find('/description')
                         if index != -1:
                             tmp.description=value[:index]
@@ -240,7 +242,7 @@ class CPlayList:
         try:
             f = open(filename, 'r')
             data = f.read()
-            data = data.split('<item>')
+            data = data.split('<item')
             f.close()
         except IOError:
             return -2
@@ -272,10 +274,10 @@ class CPlayList:
                 index = m.find('<description>')
                 if index != -1:
                     index2 = m.find('</description>')
-                    if index != -1:
+                    if index2 != -1:
                         value = m[index+13:index2]
                         self.description = value
-                        index3 = m.find('<![CDATA[')
+                        index3 = self.description.find('<![CDATA[')
                         if index3 != -1:
                             self.description = self.description[9:-3]
                 
@@ -328,6 +330,26 @@ class CPlayList:
                             else:
                                 value = m[index2+1:index3]
                             tmp.name = tmp.name + value
+                                             
+                #get the description.
+                index1 = m.find('<content:encoded>')
+                index = m.find('<description>')
+                if index1 != -1:
+                    index2 = m.find('</content:encoded>')
+                    if index2 != -1:
+                        value = m[index1+17:index2]
+                        tmp.description = value
+                        index3 = tmp.description.find('<![CDATA[')
+                        if index3 != -1:
+                            tmp.description = tmp.description[9:-3]
+                elif index != -1:
+                    index2 = m.find('</description>')
+                    if index2 != -1:
+                        value = m[index+13:index2]
+                        tmp.description = value
+                        index3 = tmp.description.find('<![CDATA[')
+                        if index3 != -1:
+                            tmp.description = tmp.description[9:-3]
 
                 #get the thumb
                 index = m.find('<media:thumbnail')
