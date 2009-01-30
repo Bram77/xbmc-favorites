@@ -144,7 +144,12 @@ quality=high
 title=3sat.de
 target=<param name="url" value="([^"]+)"
 url=%s
-ext_target=href *= *"([^"]+)"
+ext_target=href *= *"([^r][^"]+)"
+extension=wmv
+quality=high
+target=<param name="url" value="([^"]+)"
+ext_target=href *= *"rtsp([^"]+)"
+ext_build=http%s
 extension=wmv
 quality=high
 ########################################################

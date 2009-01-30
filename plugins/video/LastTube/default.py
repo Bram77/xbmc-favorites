@@ -127,17 +127,17 @@ if ( __name__ == "__main__" ):
         return ok
 
     def showCats():
-        addDir("1. "+dUser+"'s Top Artists","blah",1,"")
-        addDir("2. Search by Last.FM User","blah",2,"")
-        addDir("3. Search for Similar Artists","blah",3,"")
-        addDir("4. Search by Tag","blah",4,"")
+        addDir("1. "+dUser+xbmc.getLocalizedString(30000),"blah",1,"")
+        addDir("2. "+xbmc.getLocalizedString(30001),"blah",2,"")
+        addDir("3. "+xbmc.getLocalizedString(30002),"blah",3,"")
+        addDir("4. "+xbmc.getLocalizedString(30003),"blah",4,"")
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
     def showCatsNoUser():
-        addDir("1. Search by Last.FM User","blah",2,"")
-        addDir("2. Search for Similar Artists","blah",3,"")
-        addDir("3. Search by Tag","blah",4,"")
+        addDir("1. "+xbmc.getLocalizedString(30001),"blah",2,"")
+        addDir("2. "+xbmc.getLocalizedString(30002),"blah",3,"")
+        addDir("3. "+xbmc.getLocalizedString(30003),"blah",4,"")
         xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 
@@ -184,8 +184,8 @@ if ( __name__ == "__main__" ):
     elif mode==1:
         startPlayback(dUser,mode)
     elif mode==2:
-        search('Search by Last.FM User',mode)
+        search(xbmc.getLocalizedString(30001),mode)
     elif mode==3:
-        search('Search for Similar Artists',mode)
+        search(xbmc.getLocalizedString(30002),mode)
     elif mode==4:
-        search('Search by Tag',mode)
+        search(xbmc.getLocalizedString(30003),mode)
