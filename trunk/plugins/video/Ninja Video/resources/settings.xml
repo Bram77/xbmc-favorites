@@ -1,5 +1,0 @@
-<settings>
-   <setting id="Options:" type="text" label="20000" default=""/>
-   <setting id="Download Flv" type="bool" label="30000" default="false"/>
-      
-</settings>
