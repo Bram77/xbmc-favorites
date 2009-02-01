@@ -53,7 +53,7 @@ class Channel(chn_class.Channel):
         self.sortOrder = 5
         
         self.episodeItemRegex = '<li class="folder" rel="([^"]+)videomenu.xml">([^<]+)</li>'
-        self.videoItemRegex = '<li class="video" (thumb="([^"]+)" ){0,1}(thumb_id="([^"]+)" )(ctime="([^"]+)" ){0,1}rel="([^"]*/)([^"]+)" (link="([^"]+)"){0,1}>([^<]+)</li>' 
+        self.videoItemRegex = '<li class="video" (thumb="([^"]+)" ){0,1}(thumb_id="([^"]+)" ){0,1}(ctime="([^"]+)" ){0,1}rel="([^"]*/)([^"]+)" (link="([^"]+)"){0,1}>([^<]+)</li>' 
         self.folderItemRegex = '<li class="folder" rel="([^"]*/)([^"]+)">([^<]+)</li>'
         self.mediaUrlRegex = "file:'([^']+_)(\d+)(K[^']+.wmv)'"
         
@@ -92,11 +92,17 @@ class Channel(chn_class.Channel):
         if javaUrl != "":
             data = uriHandler.Open(javaUrl, pb=True)
             
-            moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","[^"]+"\]', data)
+            moreItems = common.DoRegexFindAll('\["([^"]+)","([^"]+)","[^"]+","([^"]+)"\]', data)
+            #                                        0          1                2
             previousNumber = len(items)
             number = 0
             for item in moreItems:
-                moreItem = common.clistItem(item[0], self.RtlFolderUri("/%s" % item[1], "videomenu.xml"))
+                # check if item2 is present, if so, use that one.
+                if item[2] != "" and item[2].endswith("index_video.xml"):
+                    url = urlparse.urljoin(self.baseUrl, item[2])
+                else:
+                    url = self.RtlFolderUri("/%s" % item[1], "videomenu.xml")
+                moreItem = common.clistItem(item[0], url)
                 moreItem.icon = self.folderIcon
                 moreItem.thumb = self.noImage
                 if items.count(moreItem) == 0:
@@ -104,12 +110,6 @@ class Channel(chn_class.Channel):
                     items.append(moreItem)
         
         logFile.debug("Added %s more RTL Items to the already existing %s", number, previousNumber)
-        
-        rockNationItem = common.clistItem('Rock Nation','http://www.rtl.nl/system/video/menu/reality/rocknation/videomenu.xml', 'folder')
-        rockNationItem.icon = self.folderIcon
-        rockNationItem.thumb = self.noImage
-        if items.count(rockNationItem) == 0:
-            items.append(rockNationItem)
         
         # sort by name
         if self.episodeSort:
@@ -133,6 +133,14 @@ class Channel(chn_class.Channel):
         processed. Allows setting of parameters (like title etc). No return value!
         """
         _items = []
+        
+        # For this channel there are 2 different options for URLs: the real videomenu.xml (that will result in items)
+        # or video_menu.xml (xhtml) that holds the real url to videomenu.xml
+        if data.startswith('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">'):
+            videomenuUrls = []
+            videomenuUrls = common.DoRegexFindAll("prefix\W+'([^']+)'\W+[^']+location[^']+'([^']+)'", data)
+            if len(videomenuUrls) > 0:
+                data = uriHandler.Open("%s%s%s" % (self.baseUrl, videomenuUrls[0][0], videomenuUrls[0][1]), pb=True)
         
         if len(self.folderHistory)==1:
             # The first folder to be processed
@@ -226,7 +234,8 @@ class Channel(chn_class.Channel):
         
         logFile.info('finishing UpdateVideoItem. Media url = %s', item.mediaurl)
         
-        item.thumb = self.CacheThumb(item.thumbUrl)
+        if item.thumbUrl != "":
+            item.thumb = self.CacheThumb(item.thumbUrl)
         item.complete = True
         return item
     
