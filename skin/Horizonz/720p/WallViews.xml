@@ -221,7 +221,7 @@
 			      <posy>58</posy>
 			      <width>215</width>
 			      <height>204</height>
-			      <texture>gamewallframe2.png</texture>
+			      <texture>musicwallframe2.png</texture>
 				  <visible>Window.IsVisible(1)</visible>
 			      <animation type="focus" reversible="false">
 				<effect type="zoom" start="57,58,215,204" end="0,0,327,323" time="200" />
@@ -433,6 +433,21 @@
              <animation effect="slide" end="-77,0" reversible="false" time="0" condition="Container.Column(7)">Conditional</animation>
              <animation effect="slide" end="0,-57" reversible="false" time="0" condition="Container.Row(2)">Conditional</animation>
 		      </control>
+			  
+			            <control type="image">
+            <description>Watched/Unwatched Overlay</description>
+             <posx>18</posx>
+            <posy>376</posy>
+            <width>32</width>
+            <height>32</height>
+            <info>ListItem.Overlay</info>
+            <visible>!Skin.HasSetting(hidewatched) + !Control.IsVisible(899)</visible>
+    			      <animation effect="zoom" start="45,330,22,22" end="18,376,32,32" reversible="false" time="100">Focus</animation>
+                         <animation effect="slide" end="70,0" reversible="false" time="0" condition="Container.Column(0)">Conditional</animation>
+             <animation effect="slide" end="0,62" reversible="false" time="0" condition="Container.Row(0)">Conditional</animation>
+             <animation effect="slide" end="-77,0" reversible="false" time="0" condition="Container.Column(7)">Conditional</animation>
+             <animation effect="slide" end="0,-57" reversible="false" time="0" condition="Container.Row(2)">Conditional</animation>
+          </control>
 			  
 			  		      <control type="image">
 			      <posx>77</posx>

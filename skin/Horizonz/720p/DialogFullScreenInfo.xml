@@ -19,28 +19,28 @@
 		
 		
 		<control type="image">
-			<posx>79</posx>
+			<posx>73</posx>
 			<posy>45</posy>
-			<height>292</height>
-			<width>225</width>
+			<height>250</height>
+			<width>181</width>
 			<info>VideoPlayer.Cover</info>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		
 		<control type="image">
-			<posx>79</posx>
-			<posy>55</posy>
-			<height>252</height>
-			<width>225</width>
+			<posx>73</posx>
+			<posy>45</posy>
+			<height>250</height>
+			<width>181</width>
 			<info>VideoPlayer.Cover</info>
 			<visible>!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)</visible>
 		</control>
 		
 		<control type="image">
-			<posx>79</posx>
-			<posy>55</posy>
-			<height>202</height>
-			<width>270</width>
+			<posx>62</posx>
+			<posy>60</posy>
+			<height>192</height>
+			<width>287</width>
 			<info>VideoPlayer.Cover</info>
 			<visible>VideoPlayer.Content(episodes)</visible>
 		</control>
@@ -48,93 +48,28 @@
 		<control type="image">
 			<posx>43</posx>
 			<posy>21</posy>
-			<height>336</height>
-			<width>296</width>
+			<height>300</height>
+			<width>240</width>
 			<texture>Videos_BigFrame2.png</texture>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		
 		<control type="image">
 			<posx>43</posx>
-			<posy>35</posy>
-			<height>296</height>
-			<width>296</width>
+			<posy>21</posy>
+			<height>300</height>
+			<width>240</width>
 			<texture>Videos_BigFrame2.png</texture>
 			<visible>!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)</visible>
 		</control>
 		
 				<control type="image">
-			<posx>43</posx>
+			<posx>28</posx>
 			<posy>35</posy>
 			<height>246</height>
-			<width>346</width>
-			<texture>Videos_BigFrame2.png</texture>
+			<width>341</width>
+			<texture>fsepisodeframe2.png</texture>
 			<visible>VideoPlayer.Content(episodes)</visible>
-		</control>
-		
-		<control type="image">
-			<description>Panel</description>
-			<posx>79</posx>
-			<posy>267</posy>
-			<height>232</height>
-			<width>270</width>
-			<colordiffuse>afFFFFFF</colordiffuse>
-   		    <texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[VideoPlayer.Cover]</texture>
-			<visible>VideoPlayer.Content(episodes)</visible>
-		</control>
-		
-				<control type="image">
-			<description>Panel</description>
-			<posx>79</posx>
-			<posy>345</posy>
-			<height>232</height>
-			<width>225</width>
-			<colordiffuse>afFFFFFF</colordiffuse>
-   		    <texture flipy="true" diffuse="Thumb_Mask4.png">$INFO[VideoPlayer.Cover]</texture>
-			<visible>VideoPlayer.Content(movies)</visible>
-		</control>
-		
-		<control type="image">
-			<description>Panel</description>
-			<posx>79</posx>
-			<posy>315</posy>
-			<height>232</height>
-			<width>225</width>
-			<colordiffuse>afFFFFFF</colordiffuse>
-   		    <texture flipy="true" diffuse="Thumb_Mask5.png">VideoPlayer.Cover</texture>
-			<visible>!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)</visible>
-		</control>
-		
-		
-		<control type="image">
-			<description>Panel</description>
-			<posx>43</posx>
-			<posy>248</posy>
-			<height>241</height>
-			<width>346</width>
-   		    <texture flipy="true" diffuse="Thumb_Mask5.png">Videos_BigFrame2.png</texture>
-			<visible>VideoPlayer.Content(episodes)</visible>
-		</control>
-		
-		<control type="image">
-			<description>Panel</description>
-			<posx>43</posx>
-			<posy>325</posy>
-			<height>241</height>
-			<width>300</width>
-   		    <texture flipy="true" diffuse="Thumb_Mask5.png">Videos_BigFrame2.png</texture>
-			<visible>VideoPlayer.Content(movies)</visible>
-		</control>
-		
-			
-		<control type="image">
-			<description>Panel</description>
-			<posx>43</posx>
-			<posy>300</posy>
-			<height>241</height>
-			<width>295</width>
-   		    <texture flipy="true" diffuse="Thumb_Mask5.png">Videos_BigFrame2.png</texture>
-			<visible>!VideoPlayer.Content(movies) + !VideoPlayer.Content(episodes)</visible>
 		</control>
 		
 		
@@ -359,6 +294,48 @@
 
 		
 		</control>
+		
+				<control type="label">
+					<posx>48</posx>
+			<posy>325</posy>
+			<width>300</width>
+			<label>Progress:</label>
+			<include>scraperimdbtitle</include>
+		</control>
+		
+		<control type="label">
+			<posx>680</posx>
+			<posy>325</posy>
+			<align>right</align>
+			<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+			<include>scraperimdb</include>
+			<visible>!Player.Paused</visible>
+		</control>
+		
+		<control type="label">
+			<posx>680</posx>
+			<posy>325</posy>
+			<align>right</align>
+			<label>$INFO[MusicPlayer.Time] (Paused)</label>
+			<include>scraperimdb</include>
+			<visible>Player.Paused</visible>
+		</control>
+		
+		<control type="progress">
+				<description>Progressbar</description>
+				<posx>78</posx>
+				<posy>357</posy>
+				<width>575</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg>progress-back.png</texturebg>
+				<lefttexture>progress-left.png</lefttexture>
+				<midtexture>progress-mid.png</midtexture>
+				<righttexture>progress-right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+		
 	</control>
 	</controls>
 </window>

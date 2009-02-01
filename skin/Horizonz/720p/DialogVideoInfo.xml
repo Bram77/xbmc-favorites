@@ -49,7 +49,19 @@
 			<texture>$INFO[listitem.thumb]</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>common-fade</include>
-			<visible>!container.content(episodes) + !container.content(musicvideos)</visible>
+			<visible>[container.content(movies) + !container.content(episodes) + !container.content(musicvideos)] | [[container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(wideicon)]</visible>
+		</control>
+				<control type="image">
+			<description>Cover image</description>
+			<posx>80</posx>
+			<posy>283</posy>
+			<width>384</width>
+			<height>90</height>
+			<texture>$INFO[listitem.thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+						<animation effect="rotate" center="auto" end="-90" time="0" condition="true">Conditional</animation>
+			<visible>!container.content(episodes) + !container.content(musicvideos) + [[container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(wideicon)]</visible>
 		</control>
 		<control type="image">
 			<description>Cover image</description>
@@ -61,7 +73,7 @@
 			<texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[listitem.thumb]</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>common-fade</include>
-			<visible>!container.content(episodes) + !container.content(musicvideos)</visible>
+			<visible>[container.content(movies) + !container.content(episodes) + !container.content(musicvideos)] | [[container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(wideicon)]</visible>
 		</control>
 		<control type="image">
 			<description>Cover image</description>
@@ -72,7 +84,19 @@
 			<texture>$INFO[container.tvshowthumb]</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>common-fade</include>
-			<visible>container.content(episodes)</visible>
+			<visible>container.content(episodes) + !Skin.HasSetting(wideicon)</visible>
+		</control>
+				<control type="image">
+			<description>Cover image</description>
+			<posx>80</posx>
+			<posy>283</posy>
+			<width>384</width>
+			<height>90</height>
+			<texture>$INFO[container.tvshowthumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+			<animation effect="rotate" center="auto" end="-90" time="0" condition="true">Conditional</animation>
+			<visible>container.content(episodes) + Skin.HasSetting(wideicon)</visible>
 		</control>
 		<control type="image">
 			<description>Cover image</description>
@@ -84,7 +108,7 @@
 			<texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[container.tvshowthumb]</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>common-fade</include>
-			<visible>container.content(episodes)</visible>
+			<visible>container.content(episodes) + !Skin.HasSetting(wideicon)</visible>
 		</control>
 	
 	<control type="grouplist" id="9000">

@@ -595,7 +595,7 @@
 				<posx>370</posx>
 				<posy>85</posy>
 				<width>750</width>
-				<label>Aeon System</label>
+				<label>Horizonz System</label>
 				<include>scraperimdbheader</include>
 				<scroll>true</scroll>
 			</control>
@@ -611,7 +611,7 @@
 				<posx>370</posx>
 				<posy>140</posy>
 				<width>200</width>
-				<label>Aeon Version:</label>
+				<label>Horizonz Version:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 			<control type="label">
@@ -619,7 +619,7 @@
 				<posx>370</posx>
 				<posy>166</posy>
 				<width>200</width>
-				<label>Mods Installed:</label>
+				<label>Release Date:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 			<control type="label">
@@ -676,7 +676,7 @@
 				<posx>370</posx>
 				<posy>348</posy>
 				<width>200</width>
-				<label>Aeon Assistant:</label>
+				<label>Home Scroller Shade:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 			<control type="label">
@@ -700,7 +700,7 @@
 				<posx>590</posx>
 				<posy>140</posy>
 				<width>455</width>
-				<label>ALPHA 14</label>
+				<label>Volume IV</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 			</control>
@@ -709,7 +709,7 @@
 				<posx>590</posx>
 				<posy>166</posy>
 				<width>455</width>
-				<label fallback="416">Horizonz</label>
+				<label fallback="416">Dec  25 2008</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -825,7 +825,7 @@
 				<posx>590</posx>
 				<posy>296</posy>
 				<width>455</width>
-				<label>Bottom</label>
+				<label>Lower</label>
 				<include>scraperimdb</include>
 				<visible>Skin.HasSetting(drophome)</visible>
 			</control>
@@ -861,18 +861,18 @@
 				<posx>590</posx>
 				<posy>348</posy>
 				<width>455</width>
-				<label>Coming Soon</label>
+				<label>Darker Shade</label>
 				<include>scraperimdb</include>
-				<visible>Skin.HasSetting(tutorials)</visible>
+				<visible>Skin.HasSetting(darkhome)</visible>
 			</control>
 			<control type="label">
 				<description>MAC value</description>
 				<posx>590</posx>
 				<posy>348</posy>
 				<width>455</width>
-				<label>Coming Soon</label>
+				<label>Default Shade</label>
 				<include>scraperimdb</include>
-				<visible>!Skin.HasSetting(tutorials)</visible>
+				<visible>!Skin.HasSetting(darkhome)</visible>
 			</control>
 			<control type="label">
 				<description>DVD value</description>
@@ -965,7 +965,7 @@
 				<posx>370</posx>
 				<posy>85</posy>
 				<width>750</width>
-				<label>MOD System</label>
+				<label>Creators Zone</label>
 				<include>scraperimdbheader</include>
 				<scroll>true</scroll>
 			</control>
@@ -981,7 +981,7 @@
 				<posx>370</posx>
 				<posy>140</posy>
 				<width>200</width>
-				<label>MOD Installed:</label>
+				<label>My Alias:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 			<control type="label">
@@ -989,7 +989,7 @@
 				<posx>370</posx>
 				<posy>166</posy>
 				<width>200</width>
-				<label>MOD Version:</label>
+				<label>My Name:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 			<control type="label">
@@ -997,16 +997,16 @@
 				<posx>370</posx>
 				<posy>192</posy>
 				<width>200</width>
-				<label>MOD Date:</label>
+				<label>My Contact:</label>
 				<include>scraperimdbtitle</include>
 			</control>
 
 			<control type="label">
 				<description>Uptime txt</description>
 				<posx>370</posx>
-				<posy>244</posy>
+				<posy>218</posy>
 				<width>200</width>
-				<label>Creator:</label>
+				<label>My Location:</label>
 				<include>scraperimdbtitle</include>
 				<scroll>false</scroll>
 			</control>
@@ -1015,40 +1015,16 @@
 				<posx>370</posx>
 				<posy>270</posy>
 				<width>200</width>
-				<label>Creator Alias:</label>
-				<include>scraperimdbtitle</include>
-			</control>
-			<control type="label">
-				<description>Online txt</description>
-				<posx>370</posx>
-				<posy>296</posy>
-				<width>200</width>
-				<label>Creator Email:</label>
-				<include>scraperimdbtitle</include>
-			</control>
-			<control type="label">
-				<description>Online txt</description>
-				<posx>370</posx>
-				<posy>322</posy>
-				<width>200</width>
-				<label>Creator Location:</label>
-				<include>scraperimdbtitle</include>
-			</control>
-
-			<control type="label">
-				<description>Optical txt</description>
-				<posx>370</posx>
-				<posy>374</posy>
-				<width>200</width>
 				<label>Special Thanks:</label>
 				<include>scraperimdbtitle</include>
 			</control>
+
 			<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
 				<posy>140</posy>
 				<width>455</width>
-				<label fallback="416">Horizonz</label>
+				<label fallback="416">XB2IRIS</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1058,7 +1034,7 @@
 				<posx>590</posx>
 				<posy>166</posy>
 				<width>455</width>
-				<label fallback="416">Volume III</label>
+				<label fallback="416">Gary Petersen</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1068,7 +1044,7 @@
 				<posx>590</posx>
 				<posy>192</posy>
 				<width>455</width>
-				<label fallback="416">15 October 2008</label>
+				<label fallback="416">ThroughTheIris25@Hotmail.com</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1077,9 +1053,9 @@
 									<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
-				<posy>244</posy>
+				<posy>218</posy>
 				<width>455</width>
-				<label fallback="416">Gareth Denne</label>
+				<label fallback="416">Cape Town, South Africa</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1089,7 +1065,7 @@
 				<posx>590</posx>
 				<posy>270</posy>
 				<width>455</width>
-				<label fallback="416">XB2IRIS</label>
+				<label fallback="416">DJH_ (For Creating AEON)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1099,7 +1075,7 @@
 				<posx>590</posx>
 				<posy>296</posy>
 				<width>455</width>
-				<label fallback="416">throughtheiris25@hotmail.com</label>
+				<label fallback="416">Rand Al Thor (For the Original AEON Mod and Advice)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1109,7 +1085,7 @@
 				<posx>590</posx>
 				<posy>322</posy>
 				<width>455</width>
-				<label fallback="416">London, United Kingdom</label>
+				<label fallback="416">Six_Storm, DigitalHigh, Livin (For Tips and Ideas)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1117,9 +1093,9 @@
 			<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
-				<posy>374</posy>
+				<posy>348</posy>
 				<width>455</width>
-				<label fallback="416">DJH_</label>
+				<label fallback="416">DJOktave (For AEON Soundpack)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1127,9 +1103,9 @@
 						<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
-				<posy>400</posy>
+				<posy>374</posy>
 				<width>455</width>
-				<label fallback="416">Rand Al Thor</label>
+				<label fallback="416">Tension113 (For Section Editing and Lower RSS Panel)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1137,9 +1113,9 @@
 									<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
-				<posy>426</posy>
+				<posy>400</posy>
 				<width>455</width>
-				<label fallback="416">xbmc.01</label>
+				<label fallback="416">Takagen (For Trainer Settings Support)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1147,9 +1123,20 @@
 												<control type="label">
 				<description>Temp value</description>
 				<posx>590</posx>
+				<posy>426</posy>
+				<width>455</width>
+				<label fallback="416">Chipy (For Watched/Unwatched Overlays and Counts)</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			
+															<control type="label">
+				<description>Temp value</description>
+				<posx>590</posx>
 				<posy>452</posy>
 				<width>455</width>
-				<label fallback="416">six_storm</label>
+				<label fallback="416">JMarshall, Skunkmonkee, Jezz_X (For Tech Help)</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 				<visible>!Control.IsVisible(50)</visible>
@@ -1175,13 +1162,13 @@
 		</control>
 
 		<control type="button" id="9">
-		<label>TV Calibration</label>
+		<label>Donation Place</label>
 		<include>contextformatbrowser</include>
 		<onclick>XBMC.ActivateWindow(678)</onclick>
 		</control>
 
 		<control type="button" id="6">
-		<label>MOD System</label>
+		<label>Creators Zone</label>
 		<include>contextformatbrowser</include>
 		<onclick>Skin.Reset(aeoninfo)</onclick>
 		<onclick>Skin.Reset(xbmcinfo)</onclick>
@@ -1189,7 +1176,7 @@
 		</control>
 
 		<control type="button" id="10">
-		<label>Aeon System</label>
+		<label>Horizonz System</label>
 		<include>contextformatbrowser</include>
 		<onclick>Skin.Reset(xbmcinfo)</onclick>
 		<onclick>Skin.Reset(modinfo)</onclick>

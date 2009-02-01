@@ -2,43 +2,45 @@
 	<defaultcontrol>12</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>110</posx>
-		<posy>100</posy>
+		<posx>370</posx>
+		<posy>150</posy>
 	</coordinates>
-	<include>dialogeffect</include>
+	<include>common-fade</include>
 	<controls>
-		<control type="image" id="0">
-			<posx>-110</posx>
-			<posy>-100</posy>
-			<width>720</width>
-			<height>576</height>
+	
+			<control type="image">
+			<description>background top image</description>
+			<posx>-370</posx>
+			<posy>-150</posy>
+			<width>1280</width>
+			<height>720</height>
 			<texture>black.png</texture>
-			<animation effect="fade" time="2000">WindowOpen</animation>
-		</control>
+			<colordiffuse>c3FFFFFF</colordiffuse>
+			<include>context-fade</include>
+				</control>
+	
 		<control type="image" id="0">
-			<description>background image</description>
-			<posx>-15</posx>
-			<posy>-15</posy>
-			<width>520</width>
-			<height>440</height>
-			<texture>dialog-panel2.png</texture>
+			<posx>-65</posx>
+			<posy>-70</posy>
+			<width>620</width>
+			<height>560</height>
+			<texture>selectback2.png</texture>
 		</control>
-		<control type="label">
+
+		<control type="label" id="6789">
 			<description>heading label</description>
-			<posx>20</posx>
-			<posy>-2</posy>
+			<posx>10</posx>
+			<posy>-15</posy>
 			<width>420</width>
-			<align>left</align>
-			<font>special13</font>
+			<include>scraperimdbheader</include>
 			<label>21432</label>
-			<textcolor>DDced8da</textcolor>
 		</control>
 		<control type="label" id="0">
 			<description>Name Label</description>
 			<posx>10</posx>
 			<posy>30</posy>
 			<width>420</width>
-			<font>font12</font>
+			<include>scraperimdbtitle</include>
 			<label>21433</label>
 		</control>
 		<control type="button" id="12">
@@ -47,7 +49,7 @@
 			<posy>55</posy>
 			<width>480</width>
 			<height>32</height>
-			<font>font12</font>
+			<include>scraperimdb</include>
 			<textoffsetx>12</textoffsetx>
 			<textwidth>380</textwidth>
 			<aligny>center</aligny>
@@ -65,7 +67,7 @@
 			<posy>95</posy>
 			<width>420</width>
 			<align>left</align>
-			<font>font12</font>
+			<include>scraperimdbtitle</include>
 			<label>21434</label>
 		</control>
 		<control type="list" id="10">
@@ -94,7 +96,7 @@
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 					<include>listselectedcolor</include>
-					<font>font12</font>
+					<include>scraperimdb</include>
 				</control>
 			</itemlayout>
 			<focusedlayout width="370" height="34">
@@ -121,8 +123,7 @@
 					<height>32</height>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
-					<include>listselectedcolor</include>
-					<font>font12</font>
+					<include>scraperimdb</include>
 				</control>
 			</focusedlayout>
 		</control>
@@ -133,7 +134,7 @@
 				<posy>120</posy>
 				<height>32</height>
 				<width>100</width>
-				<font>font12</font>
+				<include>scraperimdb</include>
 				<textoffsetx>12</textoffsetx>
 				<label>15019</label>
 				<align>center</align>
@@ -151,7 +152,7 @@
 				<posy>154</posy>
 				<height>32</height>
 				<width>100</width>
-				<font>font12</font>
+				<include>scraperimdb</include>
 				<textoffsetx>12</textoffsetx>
 				<label>1210</label>
 				<align>center</align>
@@ -169,7 +170,7 @@
 				<posy>188</posy>
 				<height>32</height>
 				<width>100</width>
-				<font>font12</font>
+				<include>scraperimdb</include>
 				<textoffsetx>12</textoffsetx>
 				<label>21435</label>
 				<align>center</align>
@@ -188,7 +189,7 @@
 			<posy>230</posy>
 			<width>480</width>
 			<label>21424</label>
-			<font>font12</font>
+			<include>scraperimdb</include>
 			<texturefocus border="3">input-focus.png</texturefocus>
 			<texturenofocus  border="3">input-nofocus.png</texturenofocus>
 			<onright>16</onright>
@@ -202,7 +203,7 @@
 			<posy>270</posy>
 			<width>480</width>
 			<label>21427</label>
-			<font>font12</font>
+			<include>scraperimdb</include>
 			<texturefocus border="3">input-focus.png</texturefocus>
 			<texturenofocus  border="3">input-nofocus.png</texturenofocus>
 			<onright>17</onright>
@@ -216,7 +217,7 @@
 			<posy>310</posy>
 			<width>350</width>
 			<label>21429</label>
-			<font>font12</font>
+			<include>scraperimdb</include>
 			<texturefocus border="3">input-focus.png</texturefocus>
 			<texturenofocus  border="3">input-nofocus.png</texturenofocus>
 			<onright>19</onright>
@@ -230,7 +231,7 @@
 			<posy>310</posy>
 			<width>120</width>
 			<height>32</height>
-			<font>font12</font>
+			<include>scraperimdb</include>
 			<textoffsetx>8</textoffsetx>
 			<aligny>center</aligny>
 			<texturefocus border="3">input-focus.png</texturefocus>
@@ -247,16 +248,17 @@
 		
 		<control type="button" id="20">
 			<description>Ok Button</description>
-			<posx>290</posx>
-			<posy>355</posy>
-			<width>90</width>
-			<height>32</height>
-			<font>font12</font>
-			<textoffsetx>12</textoffsetx>
+			<posx>-36</posx>
+			<posy>410</posy>
+			<width>285</width>
+			<height>44</height>
+			<font>fruity17s</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<texturenofocus>keyboard-btn-backspace.png</texturenofocus>
-			<texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
+					<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+			<texturefocus>contextbuttonshortpressed.png</texturefocus>
+			<texturenofocus>contextbuttonshort.png</texturenofocus>
 			<label>186</label>
 			<onup>18</onup>
 			<onleft>21</onleft>
@@ -265,21 +267,30 @@
 		</control>
 		<control type="button" id="21">
 			<description>Cancel Button</description>
-			<posx>390</posx>
-			<posy>355</posy>
-			<width>90</width>
-			<height>32</height>
-			<font>font12</font>
-			<textoffsetx>12</textoffsetx>
+			<posx>242</posx>
+			<posy>410</posy>
+			<width>285</width>
+			<height>44</height>
+			<font>fruity17s</font>
 			<align>center</align>
 			<aligny>center</aligny>
-			<texturenofocus>keyboard-btn-backspace.png</texturenofocus>
-			<texturefocus>keyboard-btn-backspace-focus.png</texturefocus>
+					<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+			<texturefocus>contextbuttonshortpressed.png</texturefocus>
+			<texturenofocus>contextbuttonshort.png</texturenofocus>
 			<label>222</label>
 			<onup>18</onup>
 			<onleft>20</onleft>
 			<onright>20</onright>
 			<ondown>12</ondown>
+		</control>
+		
+				<control type="image" id="0">
+			<posx>-65</posx>
+			<posy>-70</posy>
+			<width>620</width>
+			<height>560</height>
+			<texture>selectbackpolish.png</texture>
 		</control>
 	</controls>
 </window>

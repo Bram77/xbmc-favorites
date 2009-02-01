@@ -44,7 +44,7 @@
 				<height>68</height>
 				<font>menufontacensfocus</font>
 				<include>scrollerlabel</include>
-				<textcolor>FF7d7d7d</textcolor>
+				<textcolor>FFcbcbcb</textcolor>
 				<visible>!Skin.HasSetting(darkhome)</visible>
 				<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(3) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)">Conditional</animation>
 			</control>
@@ -296,7 +296,7 @@
 			</item>
 			<item id="8">
 				<description>Settings</description>
-				<label>AEON</label>
+				<label>HORIZONZ</label>
 				<onclick>XBMC.ActivateWindow(56)</onclick>
 			</item>
 		</content>

@@ -61,6 +61,7 @@
     <height>720</height>
 	<info>ListItem.FileNameAndPath</info>
 	<visible>Control.IsVisible(54)</visible>
+	<aspectratio aligny="center">scale</aspectratio>
 	 <animation effect="fade" start="0" end="100" time="800" delay="200">Visible</animation>
         <animation effect="fade" start="0" end="0" time="0">Hidden</animation>
 	</control>
@@ -93,6 +94,7 @@
 	<include>common-fade-quick</include>
 
 	<include>mediaglass</include>
+			<include>ScrollOffsetLabel</include>
 	<include>Window-Files2</include>
 
 	<control type="label">
@@ -188,7 +190,6 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<include>time</include>
-		<include>ScrollOffsetLabel</include>
 	</control>
 
 	</controls>
