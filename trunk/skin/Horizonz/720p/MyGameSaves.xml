@@ -24,8 +24,8 @@
 	<include>common-fade-quick</include>
 
 	<include>mediaglasslib</include>
+			<include>ScrollOffsetLabel</include>
 	<include>Window-Files2</include>
-	<include>tutorial</include>
 
 	<control type="label">
 

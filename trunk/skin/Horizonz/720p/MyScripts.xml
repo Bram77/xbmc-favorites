@@ -16,6 +16,7 @@
 	</control>
 
 	<include>mediaglass</include>
+			<include>ScrollOffsetLabel</include>
 	<include>Window-Files2</include>
 
 	<control type="label">
@@ -51,7 +52,6 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<include>time</include>
-		<include>ScrollOffsetLabel</include>
 	</controls>
 
 </window>

@@ -70,7 +70,7 @@
 	<include>backpreview</include>
 
 	<control type="label">
-		<label>AEON</label>
+		<label>HORIZONZ</label>
 		<include>settingstitle</include>
 		<include>settingstitleacens</include>
 		<visible>Window.IsActive(56) + !Skin.HasSetting(darkhome)</visible>
@@ -80,7 +80,7 @@
 	</control>
 	
 	<control type="label">
-		<label>AEON</label>
+		<label>HORIZONZ</label>
 		<include>settingstitle2</include>
 		<include>settingstitleacens</include>
 		<visible>Window.IsActive(56) + Skin.HasSetting(darkhome)</visible>
@@ -198,7 +198,7 @@
 	<control type="radiobutton" id="101">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Time and date panel</label>
+		<label>Time And Date Panel</label>
 		<onclick>Skin.ToggleSetting(timepanel)</onclick>
 		<onclick>Skin.Reset(weatherpanel)</onclick>
 		<selected>!Skin.HasSetting(timepanel)</selected>
@@ -207,7 +207,7 @@
 	<control type="radiobutton" id="102">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Time, date and weather panel</label>
+		<label>Time, Date And Weather Panel</label>
 		<onclick>Skin.ToggleSetting(weatherpanel)</onclick>
 		<onclick>Skin.SetBool(timepanel)</onclick>
 		<selected>Skin.HasSetting(weatherpanel)</selected>
@@ -216,7 +216,7 @@
 	<control type="radiobutton" id="103">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Fullscreen media backdrop during playback</label>
+		<label>Fullscreen Media Backdrop</label>
 		<onclick>Skin.ToggleSetting(Visualisation)</onclick>
 		<selected>Skin.HasSetting(Visualisation)</selected>
 	</control>
@@ -224,7 +224,7 @@
 	<control type="radiobutton" id="105">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Now playing media panel</label>
+		<label>Now Playing Media Panel</label>
 		<onclick>Skin.ToggleSetting(mediapanel)</onclick>
 		<selected>!Skin.HasSetting(mediapanel)</selected>
 	</control>
@@ -232,7 +232,7 @@
 	<control type="radiobutton" id="106">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Vignette visual effect</label>
+		<label>Vignette Visual Effect</label>
 		<onclick>Skin.ToggleSetting(vignettehome)</onclick>
 		<selected>Skin.HasSetting(vignettehome)</selected>	
 	</control>
@@ -240,7 +240,7 @@
 	<control type="radiobutton" id="107">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Lower Home scroller position (WIP - disables RSS and Now Playing)</label>
+		<label>Lower Home Scroller Position</label>
 		<onclick>Skin.ToggleSetting(drophome)</onclick>
 		<selected>Skin.HasSetting(drophome)</selected>	
 	</control>
@@ -248,11 +248,20 @@
 	<control type="radiobutton" id="108">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Alternate Home scroller shade</label>
+		<label>Alternate Home Scroller Shade</label>
 		<onclick>Skin.ToggleSetting(darkhome)</onclick>
 		<selected>Skin.HasSetting(darkhome)</selected>	
 	</control>
+	
+		<control type="radiobutton" id="109">
+		<width>1156</width>
+		<include>customsettingsbutton</include>
+		<label>Use Original Time Panel</label>
+		<onclick>Skin.ToggleSetting(oldtime)</onclick>
+		<selected>Skin.HasSetting(oldtime)</selected>	
+	</control>
 
+	
 	</control>
 
 	<control type="grouplist" id="3">
@@ -309,7 +318,7 @@
 
 	<control type="radiobutton" id="207">
 		<include>customsettingsbutton</include>
-		<label>Arcade (Emulation)</label>
+		<label>Arcade</label>
 		<onclick>Skin.ToggleSetting(arcade)</onclick>
 		<selected>Skin.HasSetting(arcade)</selected>
 	</control>
@@ -428,8 +437,8 @@
 
 	<control type="togglebutton" id="400">
 		<include>customsettingsbutton</include>
-		<label>Set Movies background image</label>
-		<altlabel>Reset Movies background image</altlabel>
+		<label>Set Movies Backdrop Image</label>
+		<altlabel>Reset Movies Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomMovies)</onclick>
 		<altclick>Skin.Reset(CustomMovies)</altclick>
 	</control>
@@ -441,15 +450,15 @@
 		<onclick>Skin.Reset(CustomMovies)</onclick>
 		<altclick>Skin.Reset(CustomMoviesFolder)</altclick>
 		<altclick>Skin.Reset(CustomMoviesFoldOn)</altclick>
-		<label>Set Movies background folder</label>
-		<altlabel>Clear Movies background folder</altlabel>
+		<label>Set Movies Backdrop Folder</label>
+		<altlabel>Clear Movies Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomMoviesFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="402">
 		<include>customsettingsbutton</include>
-		<label>Set TV Shows background image</label>
-		<altlabel>Reset TV Shows background image</altlabel>
+		<label>Set TV Shows Backdrop Image</label>
+		<altlabel>Reset TV Shows Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomTV)</onclick>
 		<altclick>Skin.Reset(CustomTV)</altclick>
 	</control>
@@ -461,15 +470,15 @@
 		<onclick>Skin.Reset(CustomTV)</onclick>
 		<altclick>Skin.Reset(CustomTVFolder)</altclick>
 		<altclick>Skin.Reset(CustomTVFoldOn)</altclick>
-		<label>Set TV Shows background folder</label>
-		<altlabel>Clear TV Shows background folder</altlabel>
+		<label>Set TV Shows Backdrop Folder</label>
+		<altlabel>Clear TV Shows Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomTVFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="404">
 		<include>customsettingsbutton</include>
-		<label>Set Clips background image</label>
-		<altlabel>Reset Clips background image</altlabel>
+		<label>Set Clips Backdrop Image</label>
+		<altlabel>Reset Clips Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomClips)</onclick>
 		<altclick>Skin.Reset(CustomClips)</altclick>
 	</control>
@@ -481,15 +490,15 @@
 		<onclick>Skin.Reset(CustomClips)</onclick>
 		<altclick>Skin.Reset(CustomClipsFolder)</altclick>
 		<altclick>Skin.Reset(CustomClipsFoldOn)</altclick>
-		<label>Set Clips background folder</label>
-		<altlabel>Clear Clips background folder</altlabel>
+		<label>Set Clips Backdrop Folder</label>
+		<altlabel>Clear Clips Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomClipsFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="406">
 		<include>customsettingsbutton</include>
-		<label>Set Pictures background image</label>
-		<altlabel>Reset Pictures background image</altlabel>
+		<label>Set Pictures Backdrop Image</label>
+		<altlabel>Reset Pictures Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomPictures)</onclick>
 		<altclick>Skin.Reset(CustomPictures)</altclick>
 	</control>
@@ -501,15 +510,15 @@
 		<onclick>Skin.Reset(CustomPictures)</onclick>
 		<altclick>Skin.Reset(CustomPicturesFolder)</altclick>
 		<altclick>Skin.Reset(CustomPicturesFoldOn)</altclick>
-		<label>Set Pictures background folder</label>
-		<altlabel>Clear Pictures background folder</altlabel>
+		<label>Set Pictures Backdrop Folder</label>
+		<altlabel>Clear Pictures Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="408">
 		<include>customsettingsbutton</include>
-		<label>Set Music background image</label>
-		<altlabel>Reset Music background image</altlabel>
+		<label>Set Music Backdrop Image</label>
+		<altlabel>Reset Music Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomMusic)</onclick>
 		<altclick>Skin.Reset(CustomMusic)</altclick>
 	</control>
@@ -521,15 +530,15 @@
 		<onclick>Skin.Reset(CustomMusic)</onclick>
 		<altclick>Skin.Reset(CustomMusicFolder)</altclick>
 		<altclick>Skin.Reset(CustomMusicFoldOn)</altclick>
-		<label>Set Music background folder</label>
-		<altlabel>Clear Music background folder</altlabel>
+		<label>Set Music Backdrop Folder</label>
+		<altlabel>Clear Music Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="410">
 		<include>customsettingsbutton</include>
-		<label>Set Games background image</label>
-		<altlabel>Reset Games background image</altlabel>
+		<label>Set Games Backdrop Image</label>
+		<altlabel>Reset Games Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomGames)</onclick>
 		<altclick>Skin.Reset(CustomGames)</altclick>
 	</control>
@@ -541,15 +550,15 @@
 		<onclick>Skin.Reset(CustomGames)</onclick>
 		<altclick>Skin.Reset(CustomGamesFolder)</altclick>
 		<altclick>Skin.Reset(CustomGamesFoldOn)</altclick>
-		<label>Set Games background folder</label>
-		<altlabel>Clear Games background folder</altlabel>
+		<label>Set Games Backdrop Folder</label>
+		<altlabel>Clear Games Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomGamesFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="412">
 		<include>customsettingsbutton</include>
-		<label>Set Arcade background image</label>
-		<altlabel>Reset Arcade background image</altlabel>
+		<label>Set Arcade Backdrop Image</label>
+		<altlabel>Reset Arcade Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomArcade)</onclick>
 		<altclick>Skin.Reset(CustomArcade)</altclick>
 	</control>
@@ -561,15 +570,15 @@
 		<onclick>Skin.Reset(CustomArcade)</onclick>
 		<altclick>Skin.Reset(CustomArcadeFolder)</altclick>
 		<altclick>Skin.Reset(CustomArcadeFoldOn)</altclick>
-		<label>Set Arcade background folder</label>
-		<altlabel>Clear Arcade background folder</altlabel>
+		<label>Set Arcade Backdrop Folder</label>
+		<altlabel>Clear Arcade Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomArcadeFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="414">
 		<include>customsettingsbutton</include>
-		<label>Set Apps background image</label>
-		<altlabel>Reset Apps background image</altlabel>
+		<label>Set Apps Backdrop Image</label>
+		<altlabel>Reset Apps Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomApps)</onclick>
 		<altclick>Skin.Reset(CustomApps)</altclick>
 	</control>
@@ -581,15 +590,15 @@
 		<onclick>Skin.Reset(CustomApps)</onclick>
 		<altclick>Skin.Reset(CustomAppsFolder)</altclick>
 		<altclick>Skin.Reset(CustomAppsFoldOn)</altclick>
-		<label>Set Apps background folder</label>
-		<altlabel>Clear Apps background folder</altlabel>
+		<label>Set Apps Backdrop Folder</label>
+		<altlabel>Clear Apps Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomAppsFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="418">
 		<include>customsettingsbutton</include>
-		<label>Set Settings background image</label>
-		<altlabel>Reset Settings background image</altlabel>
+		<label>Set Settings Backdrop Image</label>
+		<altlabel>Reset Settings Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomSettings)</onclick>
 		<altclick>Skin.Reset(CustomSettings)</altclick>
 	</control>
@@ -601,15 +610,15 @@
 		<onclick>Skin.Reset(CustomSettings)</onclick>
 		<altclick>Skin.Reset(CustomSettingsFolder)</altclick>
 		<altclick>Skin.Reset(CustomSettingsFoldOn)</altclick>
-		<label>Set Settings background folder</label>
-		<altlabel>Clear Settings background folder</altlabel>
+		<label>Set Settings Backdrop Folder</label>
+		<altlabel>Clear Settings Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomSettingsFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="420">
 		<include>customsettingsbutton</include>
-		<label>Set Scripts background image</label>
-		<altlabel>Reset Scripts background image</altlabel>
+		<label>Set Scripts Backdrop Image</label>
+		<altlabel>Reset Scripts Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomScripts)</onclick>
 		<altclick>Skin.Reset(CustomScripts)</altclick>
 	</control>
@@ -621,15 +630,15 @@
 		<onclick>Skin.Reset(CustomScripts)</onclick>
 		<altclick>Skin.Reset(CustomScriptsFolder)</altclick>
 		<altclick>Skin.Reset(CustomScriptsFoldOn)</altclick>
-		<label>Set Scripts background folder</label>
-		<altlabel>Clear Scripts background folder</altlabel>
+		<label>Set Scripts Backdrop Folder</label>
+		<altlabel>Clear Scripts Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomScriptsFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="422">
 		<include>customsettingsbutton</include>
-		<label>Set Adult background image</label>
-		<altlabel>Reset Adult background image</altlabel>
+		<label>Set Adult Backdrop Image</label>
+		<altlabel>Reset Adult Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomAdult)</onclick>
 		<altclick>Skin.Reset(CustomAdult)</altclick>
 	</control>
@@ -641,15 +650,15 @@
 		<onclick>Skin.Reset(CustomAdult)</onclick>
 		<altclick>Skin.Reset(CustomAdultFolder)</altclick>
 		<altclick>Skin.Reset(CustomAdultFoldOn)</altclick>
-		<label>Set Adult background folder</label>
-		<altlabel>Clear Adult background folder</altlabel>
+		<label>Set Adult Backdrop Folder</label>
+		<altlabel>Clear Adult Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomAdultFolder)</usealttexture>
 	</control>
 
 	<control type="togglebutton" id="424">
 		<include>customsettingsbutton</include>
-		<label>Set Weather background image</label>
-		<altlabel>Reset Weather background image</altlabel>
+		<label>Set Weather Backdrop Image</label>
+		<altlabel>Reset Weather Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomWeather)</onclick>
 		<altclick>Skin.Reset(CustomWeather)</altclick>
 	</control>
@@ -661,15 +670,15 @@
 		<onclick>Skin.Reset(CustomWeather)</onclick>
 		<altclick>Skin.Reset(CustomWeatherFolder)</altclick>
 		<altclick>Skin.Reset(CustomWeatherFoldOn)</altclick>
-		<label>Set Weather background folder</label>
-		<altlabel>Clear Weather background folder</altlabel>
+		<label>Set Weather Backdrop Folder</label>
+		<altlabel>Clear Weather Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomWeatherFolder)</usealttexture>
 	</control>
 	
 	<control type="togglebutton" id="426">
 		<include>customsettingsbutton</include>
-		<label>Set Comics background image</label>
-		<altlabel>Reset Comics background image</altlabel>
+		<label>Set Comics Backdrop Image</label>
+		<altlabel>Reset Comics Backdrop Image</altlabel>
 		<onclick>Skin.SetImage(CustomComics)</onclick>
 		<altclick>Skin.Reset(CustomComics)</altclick>
 	</control>
@@ -681,8 +690,8 @@
 		<onclick>Skin.Reset(CustomComics)</onclick>
 		<altclick>Skin.Reset(CustomComicsFolder)</altclick>
 		<altclick>Skin.Reset(CustomComicsFoldOn)</altclick>
-		<label>Set Comics background folder</label>
-		<altlabel>Clear Comics background folder</altlabel>
+		<label>Set Comics Backdrop Folder</label>
+		<altlabel>Clear Comics Backdrop Folder</altlabel>
 		<usealttexture>Skin.String(CustomComicsFolder)</usealttexture>
 	</control>
 
@@ -702,7 +711,7 @@
 	<control type="radiobutton" id="502">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Contextual artwork for Movies and TV (must be locally stored: filename-fanart.jpg)</label>
+		<label>Contextual Fanart In Movies And TV Shows Sections (For Showcase And Info Views)</label>
 		<onclick>Skin.ToggleSetting(listitemfanart)</onclick>
 		<selected>!Skin.HasSetting(listitemfanart)</selected>	
 	</control>
@@ -710,7 +719,7 @@
 	<control type="radiobutton" id="503">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Contextual artwork for Seasons / Episodes (note: set content source to TVDB.com)</label>
+		<label>Contextual Fanart In TV Show Seasons And Episodes Sections (For Showcase And Info Views)</label>
 		<onclick>Skin.ToggleSetting(fanart)</onclick>
 		<selected>!Skin.HasSetting(fanart)</selected>	
 	</control>
@@ -718,7 +727,7 @@
 	<control type="radiobutton" id="505">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Disable plot/show info scrolling (applies to List, Poster, Showcase, Wall and Info views)</label>
+		<label>Disable Plot Info Scrolling (For List, Poster, Showcase, Wall And Info Views)</label>
 		<onclick>Skin.ToggleSetting(disablescroll)</onclick>
 		<selected>!Skin.HasSetting(disablescroll)</selected>	
 	</control>
@@ -726,7 +735,7 @@
 	<control type="radiobutton" id="506">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Disable backdrop cycling (applies to Showcase and Info views)</label>
+		<label>Disable Backdrop Rotation (For Showcase And Info views)</label>
 		<onclick>Skin.ToggleSetting(disablebackdrop)</onclick>
 		<selected>!Skin.HasSetting(disablebackdrop)</selected>	
 	</control>
@@ -734,7 +743,7 @@
 		<control type="radiobutton" id="507">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Media information panel (applies to Wall view)</label>
+		<label>Media Info Panel (For Wall View)</label>
 		<onclick>Skin.ToggleSetting(wallinformation)</onclick>
 		<selected>!Skin.HasSetting(wallinformation)</selected>	
 	</control>
@@ -742,9 +751,37 @@
 	<control type="radiobutton" id="508">
 		<width>1156</width>
 		<include>customsettingsbutton</include>
-		<label>Dynamic media information panel (applies to List and Poster views)</label>
+		<label>Dynamic Media Info Panel (For List And Poster Views)</label>
 		<onclick>Skin.ToggleSetting(listinformation)</onclick>
 		<selected>Skin.HasSetting(listinformation)</selected>	
+	</control>
+	
+	<control type="radiobutton" id="509">
+		<width>1156</width>
+		<include>customsettingsbutton</include>
+		<label>Use Poster Icons In TV Shows Section (For All Views)</label>
+		<onclick>Skin.ToggleSetting(postericon)</onclick>
+		<onclick>Skin.Reset(walltvlib)</onclick>
+		<onclick>Skin.Reset(wideicon)</onclick>
+		<selected>!Skin.HasSetting(postericon)</selected>	
+	</control>
+	
+	<control type="radiobutton" id="510">
+		<width>1156</width>
+		<include>customsettingsbutton</include>
+		<label>Use Wide Icons In TV Shows Section (For All Views Except Wall View)</label>
+		<onclick>Skin.ToggleSetting(wideicon)</onclick>
+		<onclick>Skin.SetBool(walltvlib)</onclick>
+		<onclick>Skin.SetBool(postericon)</onclick>
+		<selected>Skin.HasSetting(wideicon)</selected>	
+	</control>
+	
+	<control type="radiobutton" id="511">
+		<width>1156</width>
+		<include>customsettingsbutton</include>
+		<label>Hide Watched/Unwatched Overlays (For All Views in Movies and TV Shows Sections)</label>
+		<onclick>Skin.ToggleSetting(hidewatched)</onclick>
+		<selected>Skin.HasSetting(hidewatched)</selected>	
 	</control>
 	
 	
@@ -763,7 +800,7 @@
 		<control type="radiobutton" id="601">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Force Xbox mode (improves performance on Xbox)</label>
+			<label>Force Xbox Mode (For XBOX)</label>
 			<onclick>Skin.ToggleSetting(lowerres)</onclick>
 			<onclick>Skin.Reset(eeemode)</onclick>
 			<selected>Skin.HasSetting(lowerres)</selected>	
@@ -772,7 +809,7 @@
 		<control type="radiobutton" id="603">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Vignette visual effect for fullscreen views (e.g. PhotoWall)</label>
+			<label>Vignette Visual Effect (For Wall, Showcase And Info Views)</label>
 			<onclick>Skin.ToggleSetting(vignette)</onclick>
 			<selected>Skin.HasSetting(vignette)</selected>	
 		</control>
@@ -780,22 +817,39 @@
 		<control type="radiobutton" id="604">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Light crest special effects</label>
+			<label>Light Crest Special Effects (For Home Screen, Poster And Showcase Views)</label>
 			<onclick>Skin.ToggleSetting(nosfx)</onclick>
 			<selected>!Skin.HasSetting(nosfx)</selected>	
 		</control>
 		
-		<control type="button" id="605">
+				<control type="radiobutton" id="605">
+					<width>1156</width>
+					<label>Enable Startup Playlist (For Music Playlist Playback After Startup)</label>
+					<include>customsettingsbutton</include>
+					<onclick>Skin.ToggleSetting(startplay)</onclick>
+					<selected>Skin.HasSetting(startplay)</selected>
+				</control>
+				
+				<control type="button" id="606">
+					<width>1156</width>
+					<label>Specify Startup Playlist (For M3U Playlist Playback At Startup)</label>
+					<include>customsettingsbutton</include>
+					<label2>$INFO[Skin.String(startuplocation)]</label2>
+					<onclick>Skin.SetFile(startuplocation,.m3u,Q:\UserData\playlists\music\)</onclick>
+					<enable>Skin.HasSetting(startplay)</enable>
+				</control>
+		
+		<control type="button" id="607">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Reset all settings to default (recommended for Home menu troubleshooting)</label>
+			<label>Reset All Settings To Default</label>
 			<include>resetsettings</include>
 		</control>
 
-		<control type="button" id="606">
+		<control type="button" id="608">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Reset all settings to default except custom paths</label>
+			<label>Reset All Settings To Default Except Custom Paths</label>
 			<include>keepusersettings</include>
 		</control>
 
@@ -804,6 +858,7 @@
 	<include>homepolish</include>
 	<include>contextback</include>
 	<include>timehome</include>
+	<include>timeold</include>
 	
 	</controls>
 </window>

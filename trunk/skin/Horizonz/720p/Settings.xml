@@ -27,7 +27,7 @@
 		<height>300</height>
 		<align>center</align>
 		<font>acens30</font>
-		<label>WELCOME TO HORIZONZ: VOLUME III</label>
+		<label>WELCOME TO HORIZONZ: VOLUME IV</label>
 	</control>
 	
 	<control type="label">
@@ -38,7 +38,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>fruity21</font>
-		<label>Your XBMC Build is Dated $INFO[System.BuildDate]&#10;This Mod is Dated Oct 15 2008&#10;&#10;- Press "BACK" to Continue (All Settings are KEPT)&#10;- Press "SELECT" to Reset (Settings LOST - Backdrops REMAIN)</label>
+		<label>Your XBMC Build is Dated $INFO[System.BuildDate]&#10;This Mod is Dated Nov 30 2008&#10;&#10;- Press "BACK" to Continue (All Settings are KEPT)&#10;- Press "SELECT" to Reset (Settings LOST - Backdrops REMAIN)</label>
 
 	</control>
 		

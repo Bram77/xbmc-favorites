@@ -22,9 +22,8 @@
 
 	<control type="group">
 	<include>mediaglasslib</include>
-	<include>Window-Files</include>
-	<include>musicpanel</include>
-	<include>musicpaneltext</include>
+			<include>ScrollOffsetLabel</include>
+	<include>Window-Files2</include>
 	<posx>0</posx>
 	<posy>0</posy>
 	<width>1280</width>
@@ -174,6 +173,5 @@
 	</control>
 	<include>contextback</include>
 	<include>time</include>
-		<include>ScrollOffsetLabel</include>
 	</controls>
 </window>

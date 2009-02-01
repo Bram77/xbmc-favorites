@@ -20,6 +20,13 @@
 		<size>21</size>
 	</font>
 	
+		<font>
+		<name>fruity23</name>
+		<filename>fruitylight.ttf</filename>
+		<size>23</size>
+				<style>bold</style>
+	</font>
+	
 	<font>
 		<name>fruity19</name>
 		<filename>fruitylight.ttf</filename>

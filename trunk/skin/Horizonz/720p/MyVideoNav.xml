@@ -55,7 +55,7 @@
 		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0">VisibleChange</animation>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
-		<visible>[Container.Content(tvshows) | Container.Content(movies)] + [Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(59)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image)) + Control.IsVisible(84) + !Control.IsVisible(86)</visible>
+		<visible>[Container.Content(tvshows) | Container.Content(movies)] + [Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(59)] + [!Container(57).OnNext + !Container(57).OnPrevious] + [!Container(53).OnNext + !Container(53).OnPrevious] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image)) + Control.IsVisible(84) + !Control.IsVisible(86)</visible>
 	</control>
 	
 	<control type="image">
@@ -67,7 +67,7 @@
 		<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="0">VisibleChange</animation>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
-		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(55) + !Skin.HasSetting(listitemfanart) + Control.IsVisible(899)</visible>
+		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes)] + Control.IsVisible(55) + [!Container(55).OnNext + !Container(55).OnPrevious] + !Skin.HasSetting(listitemfanart) + Control.IsVisible(899)</visible>
 	</control>
 	
 	<control type="image" id="345">
@@ -80,6 +80,7 @@
 		<texture>$INFO[Fanart.Image]</texture>
 		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(fanart)</visible>
 	</control>
+
 
 
 	<control type="image">
@@ -110,6 +111,9 @@
 		<height>720</height>
 		<include>common-fade-quick</include>
 		<include>mediaglass</include>
+		
+						<include>ScrollOffsetLabel</include>
+	<include>Window-Files2</include>
 		
 		<control type="label">
 			<include>wallmenu-slide</include>
@@ -178,7 +182,7 @@
 
 		</control>
 	
-		<include>Window-Files2</include>
+
 		<include>contextselected</include>
 	
 		<control type="label">
@@ -198,7 +202,6 @@
 	<include>contextback</include>	
 	<include>nowplayingpopup</include>
 	<include>time</include>
-	<include>ScrollOffsetLabel</include>
 	
 </controls>	
 </window>

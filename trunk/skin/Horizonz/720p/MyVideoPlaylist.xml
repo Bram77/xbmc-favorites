@@ -89,8 +89,8 @@
 
 	<control type="group">
 	<include>mediaglass</include>
-	<include>musicpanel</include>
-	<include>musicpaneltext</include>
+			<include>ScrollOffsetLabel</include>
+	<include>Window-Files2</include>
 	<posx>0</posx>
 	<posy>0</posy>
 	<width>1280</width>
@@ -133,7 +133,7 @@
 		</control>
 	</control>
 
-	<include>Window-Files2</include>
+
 	<include>Viewtype_List</include>
 	
 	</control>
@@ -141,6 +141,5 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<include>time</include>
-		<include>ScrollOffsetLabel</include>
 	</controls>
 </window>

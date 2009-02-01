@@ -116,6 +116,8 @@
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 	</control>
 
+
+	
 	<control type="image">
 		<include>mediabackgroundfolder</include>
 		<animation effect="fade" start="0" end="100" time="200" delay="1000">VisibleChange</animation>
@@ -139,6 +141,9 @@
 	<include>common-fade-quick</include>
 	<include>mediaglass</include>
 
+					<include>ScrollOffsetLabel</include>
+	<include>Window-Files2</include>
+	
 	<control type="label">
 		<include>wallmenu-slide</include>
 		<label>31006</label>
@@ -260,7 +265,7 @@
 		</control>
 	</control>
 
-	<include>Window-Files</include>
+
 	
 	<include>Viewtype_List</include>
 	<include>Viewtype_Poster</include>
@@ -271,6 +276,5 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<include>time</include>
-		<include>ScrollOffsetLabel</include>
 	</controls>
 </window>

@@ -105,7 +105,7 @@
 	<posy>158</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
 </control>
@@ -115,7 +115,7 @@
 	<posy>158</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
 </control>
@@ -126,17 +126,7 @@
 	<height>199</height>
 	<width>229</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>1001</posx>
-	<posy>148</posy>
-	<height>199</height>
-	<width>229</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
 </control>
 
@@ -145,7 +135,7 @@
 	<posy>158</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -156,7 +146,7 @@
 	<posy>158</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -168,17 +158,7 @@
 	<height>199</height>
 	<width>229</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>1001</posx>
-	<posy>148</posy>
-	<height>199</height>
-	<width>229</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
 </control>
 
@@ -187,7 +167,7 @@
 	<posy>175</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -198,7 +178,7 @@
 	<posy>175</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -210,26 +190,16 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" start="983,164,267,224" end="967,190,290,253" time="200">Hidden</animation>
 </control>
 
 <control type="image" id="3000">
-	<posx>983</posx>
-	<posy>160</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
-	<animation effect="zoom" start="983,160,267,224" end="967,190,290,253" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
 	<posx>1019</posx>
 	<posy>349</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1035,393,183,175" time="200">Hidden</animation>
 	<animation effect="fade" start="0" end="20" time="200" condition="true">Conditional</animation>
 	<info>Container.Listitem(3).Thumb</info>
@@ -241,7 +211,7 @@
 	<posy>349</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="1035,393,183,175" time="200">Hidden</animation>
 	<animation effect="fade" start="0" end="20" time="200" condition="true">Conditional</animation>
 	<info>Container.Listitem(3).Thumb</info>
@@ -254,17 +224,7 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="1003,383,226,199" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>983</posx>
-	<posy>338</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" end="1003,383,226,199" time="200">Hidden</animation>
 </control>
 
@@ -273,7 +233,7 @@
 	<posy>298</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -284,7 +244,7 @@
 	<posy>298</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -296,17 +256,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>967</posx>
-	<posy>285</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
 </control>
 
@@ -315,7 +265,7 @@
 	<posy>235</posy>
 	<width>258</width>
 	<height>251</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
 	<animation effect="fade" start="50" end="80" time="200" condition="true">Conditional</animation>
 	<info>Container.Listitem(1).Thumb</info>
@@ -327,7 +277,7 @@
 	<posy>235</posy>
 	<width>258</width>
 	<height>251</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
 	<animation effect="fade" start="50" end="80" time="200" condition="true">Conditional</animation>
 	<info>Container.Listitem(1).Thumb</info>
@@ -340,17 +290,7 @@
 	<height>280</height>
 	<width>322</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>951</posx>
-	<posy>224</posy>
-	<height>280</height>
-	<width>322</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
 </control>
 
@@ -359,7 +299,7 @@
 	<posy>201</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(files)</visible>
 	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -370,7 +310,7 @@
 	<posy>201</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(files)</visible>
 	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -382,17 +322,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3000">
-	<posx>967</posx>
-	<posy>190</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnPrevious + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
 	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
 </control>
 
@@ -405,7 +335,7 @@
 	<posy>175</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1035,158,183,175" time="200">Hidden</animation>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -416,7 +346,7 @@
 	<posy>175</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="1035,158,183,175" time="200">Hidden</animation>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -428,17 +358,7 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" start="983,164,267,224" end="1001,148,229,199" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>983</posx>
-	<posy>164</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" start="983,164,267,224" end="1001,148,229,199" time="200">Hidden</animation>
 </control>
 
@@ -447,7 +367,7 @@
 	<posy>201</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -458,7 +378,7 @@
 	<posy>201</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -470,17 +390,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>967</posx>
-	<posy>190</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
 </control>
 
@@ -489,7 +399,7 @@
 	<posy>235</posy>
 	<width>258</width>
 	<height>251</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -500,7 +410,7 @@
 	<posy>235</posy>
 	<width>258</width>
 	<height>251</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -512,17 +422,7 @@
 	<height>280</height>
 	<width>322</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="967,190,290,253" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>951</posx>
-	<posy>224</posy>
-	<height>280</height>
-	<width>322</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" end="967,190,290,253" time="200">Hidden</animation>
 </control>
 
@@ -531,7 +431,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
 	<info>Container.Listitem(3).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -542,7 +442,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
 	<info>Container.Listitem(3).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -554,17 +454,7 @@
 	<height>199</height>
 	<width>226</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>1003</posx>
-	<posy>383</posy>
-	<height>199</height>
-	<width>226</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
 </control>
 
@@ -573,7 +463,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -584,7 +474,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -596,17 +486,7 @@
 	<height>199</height>
 	<width>226</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>1003</posx>
-	<posy>383</posy>
-	<height>199</height>
-	<width>226</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
 </control>
 
@@ -615,7 +495,7 @@
 	<posy>349</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(1).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -626,7 +506,7 @@
 	<posy>349</posy>
 	<width>219</width>
 	<height>199</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
 	<info>Container.Listitem(1).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -638,17 +518,7 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>983</posx>
-	<posy>338</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
 </control>
 
@@ -657,7 +527,7 @@
 	<posy>298</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(files)</visible>
 	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
@@ -668,7 +538,7 @@
 	<posy>298</posy>
 	<width>235</width>
 	<height>224</height>
-	<visible>Control.IsVisible(50) + Container.OnNext + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(files)</visible>
 	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
@@ -680,17 +550,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + !Container.Content(artists)</visible>
-	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
-</control>
-
-<control type="image" id="3001">
-	<posx>967</posx>
-	<posy>285</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + Container.OnNext + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
 	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
 </control>
 
@@ -703,7 +563,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 	<info>Container.Listitem(3).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
 </control>
@@ -713,7 +573,7 @@
 	<posy>393</posy>
 	<width>183</width>
 	<height>175</height>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 	<info>Container.Listitem(3).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
 </control>
@@ -724,16 +584,7 @@
 	<height>199</height>
 	<width>226</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>1003</posx>
-	<posy>383</posy>
-	<height>199</height>
-	<width>226</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -743,7 +594,7 @@
 	<height>175</height>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -753,7 +604,7 @@
 	<height>175</height>
 	<info>Container.Listitem(-3).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -762,16 +613,7 @@
 	<height>199</height>
 	<width>229</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>1001</posx>
-	<posy>148</posy>
-	<height>199</height>
-	<width>229</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -781,7 +623,7 @@
 	<height>199</height>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -791,7 +633,7 @@
 	<height>199</height>
 	<info>Container.Listitem(2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -800,16 +642,7 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>983</posx>
-	<posy>338</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -819,7 +652,7 @@
 	<height>199</height>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -829,7 +662,7 @@
 	<height>199</height>
 	<info>Container.Listitem(-2).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -838,16 +671,7 @@
 	<height>224</height>
 	<width>267</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>983</posx>
-	<posy>164</posy>
-	<height>224</height>
-	<width>267</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -857,7 +681,7 @@
 	<height>224</height>
 	<info>Container.Listitem(1).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -867,7 +691,7 @@
 	<height>224</height>
 	<info>Container.Listitem(1).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -876,16 +700,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>967</posx>
-	<posy>285</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 	
 <control type="image" id="3002">
@@ -895,7 +710,7 @@
 	<height>224</height>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -905,7 +720,7 @@
 	<height>224</height>
 	<info>Container.Listitem(-1).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -914,16 +729,7 @@
 	<height>253</height>
 	<width>290</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>967</posx>
-	<posy>190</posy>
-	<height>253</height>
-	<width>290</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -933,7 +739,7 @@
 	<height>251</height>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonmusic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(500) | Window.IsVisible(502)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(files)</visible>
 </control>
 
 <control type="image" id="3002">
@@ -943,7 +749,7 @@
 	<height>251</height>
 	<info>Container.Listitem(0).Thumb</info>
 	<texture>defaulticonfolder.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + [Window.IsVisible(501) | Container.Content(files)]</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(files)</visible>
 </control>
 
 <control type="image">
@@ -952,16 +758,7 @@
 	<height>280</height>
 	<width>322</width>
 	<texture>case2.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + !Container.Content(artists)</visible>
-</control>
-
-<control type="image">
-	<posx>951</posx>
-	<posy>219</posy>
-	<height>288</height>
-	<width>322</width>
-	<texture>casepic.png</texture>
-	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000) + Container.Content(artists)</visible>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
 </control>
 
 #------------------------------------------------------------------------------------------------
