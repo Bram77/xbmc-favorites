@@ -128,7 +128,7 @@
 			<description>Review</description>
 			<posx>0</posx>
 			<posy>255</posy>
-      <width>660</width>
+      <width>625</width>
 			<height>190</height>
 			<spinposx>500</spinposx>
 			<spinposy>-30</spinposy>
@@ -189,7 +189,7 @@
       <description>Cast</description>
       <posx>0</posx>
       <posy>255</posy>
-      <width>625</width>
+      <width>630</width>
       <height>170</height>
       <onup>50</onup>
       <ondown>50</ondown>
@@ -198,9 +198,9 @@
       <orientation>vertical</orientation>
       <pagecontrol>60</pagecontrol>
       <scrolltime>200</scrolltime>
-      <itemlayout width="625" height="35">
+      <itemlayout width="630" height="35">
         <control type="image">
-          <width>625</width>
+          <width>630</width>
           <height>30</height>
           <texture>ButtonInputNF.png</texture>
           <aspectratio aligny="middle">stretch</aspectratio>
@@ -208,8 +208,8 @@
         <control type="label">
           <posx>5</posx>
           <posy>0</posy>
-          <width>615</width>
-          <height>25</height>
+          <width>620</width>
+          <height>30</height>
           <align>left</align>
           <aligny>center</aligny>
           <label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label] - $INFO[ListItem.Duration]</label>
@@ -218,16 +218,16 @@
           <scroll>no</scroll>
         </control>
       </itemlayout>
-      <focusedlayout width="625" height="35">
+      <focusedlayout width="630" height="35">
         <control type="image">
-          <width>625</width>
+          <width>630</width>
           <height>30</height>
           <texture>ButtonInputNF.png</texture>
           <aspectratio aligny="middle">stretch</aspectratio>
           <visible>!Control.HasFocus(50)</visible>
         </control>
         <control type="image">
-          <width>625</width>
+          <width>630</width>
           <height>30</height>
           <texture>ButtonInputFo.png</texture>
           <aspectratio aligny="middle">stretch</aspectratio>
@@ -236,7 +236,7 @@
         <control type="label">
           <posx>5</posx>
           <posy>0</posy>
-          <width>615</width>
+          <width>620</width>
           <height>30</height>
           <align>left</align>
           <aligny>center</aligny>
@@ -249,7 +249,7 @@
         <control type="label">
           <posx>5</posx>
           <posy>0</posy>
-          <width>615</width>
+          <width>620</width>
           <height>30</height>
           <align>left</align>
           <aligny>center</aligny>
@@ -267,7 +267,7 @@
       <posx>485</posx>
       <posy>50</posy>
       <width>175</width>
-      <height>260</height>
+      <height>175</height>
       <texture>$INFO[ListItem.Icon]</texture>
       <aspectratio align="center" aligny="top">keep</aspectratio>
       <bordertexture border="14">ButtonNF.png</bordertexture>
@@ -794,7 +794,7 @@
 			<texturefocus>ButtonFo.png</texturefocus>
 			<texturenofocus>ButtonNF.png</texturenofocus>
 			<pulseonselect>false</pulseonselect>
-			<onleft>10</onleft>
+			<onleft>12</onleft>
 			<onright>6</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
@@ -816,7 +816,7 @@
       <texturefocus>ButtonFo.png</texturefocus>
       <texturenofocus>ButtonNF.png</texturenofocus>
       <pulseonselect>false</pulseonselect>
-      <onleft>10</onleft>
+      <onleft>12</onleft>
       <onright>6</onright>
       <onup>50</onup>
       <ondown>50</ondown>
@@ -824,48 +824,70 @@
     </control>
     <control type="group">
       <animation effect="slide" start="0,0" end="30,0" time="0" condition="container.content(artists)">conditional</animation>
-		<control type="button" id="6">
-			<description>Refresh button</description>
-			<posx>90</posx>
-			<posy>0</posy>
-			<width>80</width>
-			<height>45</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>$LOCALIZE[184]</label>
-			<font>18BdFont</font>
-			<textcolor>DefaultTextColor</textcolor>
-			<focusedcolor>FocusedTextColor</focusedcolor>
-			<disabledcolor>DisabledTextColor</disabledcolor>
-			<texturefocus>ButtonFo.png</texturefocus>
-			<texturenofocus>ButtonNF.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
-			<onleft>5</onleft>
-			<onright>10</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-		</control>
-		<control type="button" id="10">
-			<description>Thumb button</description>
-			<posx>180</posx>
-			<posy>0</posy>
-			<width>100</width>
-			<height>45</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>$LOCALIZE[13405]</label>
-			<font>18BdFont</font>
-			<textcolor>DefaultTextColor</textcolor>
-			<focusedcolor>FocusedTextColor</focusedcolor>
-			<disabledcolor>DisabledTextColor</disabledcolor>
-			<texturefocus>ButtonFo.png</texturefocus>
-			<texturenofocus>ButtonNF.png</texturenofocus>
-			<pulseonselect>false</pulseonselect>
-			<onleft>6</onleft>
-			<onright>5</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-		</control>
+		  <control type="button" id="6">
+			  <description>Refresh button</description>
+			  <posx>90</posx>
+			  <posy>0</posy>
+			  <width>80</width>
+			  <height>45</height>
+			  <align>center</align>
+			  <aligny>center</aligny>
+			  <label>$LOCALIZE[184]</label>
+			  <font>18BdFont</font>
+			  <textcolor>DefaultTextColor</textcolor>
+			  <focusedcolor>FocusedTextColor</focusedcolor>
+			  <disabledcolor>DisabledTextColor</disabledcolor>
+			  <texturefocus>ButtonFo.png</texturefocus>
+			  <texturenofocus>ButtonNF.png</texturenofocus>
+			  <pulseonselect>false</pulseonselect>
+			  <onleft>5</onleft>
+			  <onright>10</onright>
+			  <onup>50</onup>
+			  <ondown>50</ondown>
+		  </control>
+		  <control type="button" id="10">
+			  <description>Thumb button</description>
+			  <posx>180</posx>
+			  <posy>0</posy>
+			  <width>100</width>
+			  <height>45</height>
+			  <align>center</align>
+			  <aligny>center</aligny>
+			  <label>$LOCALIZE[13405]</label>
+			  <font>18BdFont</font>
+			  <textcolor>DefaultTextColor</textcolor>
+			  <focusedcolor>FocusedTextColor</focusedcolor>
+			  <disabledcolor>DisabledTextColor</disabledcolor>
+			  <texturefocus>ButtonFo.png</texturefocus>
+			  <texturenofocus>ButtonNF.png</texturenofocus>
+			  <pulseonselect>false</pulseonselect>
+			  <onleft>6</onleft>
+			  <onright>12</onright>
+			  <onup>50</onup>
+			  <ondown>50</ondown>
+		  </control>
+      <control type="button" id="12">
+        <description>Fanart button</description>
+        <posx>290</posx>
+        <posy>0</posy>
+        <width>100</width>
+        <height>45</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[20413]</label>
+        <font>18BdFont</font>
+        <textcolor>DefaultTextColor</textcolor>
+        <focusedcolor>FocusedTextColor</focusedcolor>
+        <disabledcolor>DisabledTextColor</disabledcolor>
+        <texturefocus>ButtonFo.png</texturefocus>
+        <texturenofocus>ButtonNF.png</texturenofocus>
+        <pulseonselect>false</pulseonselect>
+        <visible>Container.Content(artists)</visible>
+        <onleft>10</onleft>
+        <onright>5</onright>
+        <onup>50</onup>
+        <ondown>50</ondown>
+      </control>
     </control>
 	</control>
 	
