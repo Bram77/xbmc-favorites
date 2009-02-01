@@ -126,7 +126,7 @@
 			<description>Comments</description>
 			<posx>0</posx>
 			<posy>255</posy>
-      <width>660</width>
+      <width>630</width>
 			<height>190</height>
 			<spinposx>500</spinposx>
 			<spinposy>-30</spinposy>
@@ -145,9 +145,9 @@
     <control type="image" id="3">
       <description>Media icon</description>
       <posx>485</posx>
-      <posy>55</posy>
-      <width>165</width>
-      <height>165</height>
+      <posy>50</posy>
+      <width>175</width>
+      <height>175</height>
       <texture>$INFO[ListItem.Icon]</texture>
       <aspectratio align="center" aligny="top">keep</aspectratio>
       <bordertexture border="14">ButtonNF.png</bordertexture>
