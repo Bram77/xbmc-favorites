@@ -203,6 +203,19 @@
     </control>
   </include>
 
+  <include name="MediaScanBackSmall">
+    <control type="group">
+      <control type="image">
+        <posx>-10</posx>
+        <posy>-10</posy>
+        <width>240</width>
+        <height>54</height>
+        <texture>MediaScanBackSmall.png</texture>
+        <aspectratio align="left">stretch</aspectratio>
+      </control>
+    </control>
+  </include>
+
   <include name="NowPlayingBack">
     <control type="group">
       <control type="image">
@@ -509,7 +522,7 @@
     <!-- Videos -->
     <control type="group">
       <posx>350</posx>
-      <posy>525</posy>
+      <posy>520</posy>
       <include>DefaultFade</include>
       <visible>Player.HasVideo + !Window.IsActive(2005) + !Window.IsActive(0)</visible>
       <control type="label" id="0">
@@ -538,7 +551,7 @@
       <control type="progress" id="0">
         <description>Progressbar</description>
         <posx>0</posx>
-        <posy>27</posy>
+        <posy>35</posy>
         <width>180</width>
         <info>Player.Progress</info>
       </control>
@@ -547,7 +560,7 @@
     <!-- Music -->
     <control type="group">
       <posx>350</posx>
-      <posy>525</posy>
+      <posy>520</posy>
       <include>DefaultFade</include>
       <visible>Player.HasAudio + !Window.IsActive(2006) + !Window.IsActive(0)</visible>
       <control type="label" id="0">
@@ -580,7 +593,7 @@
       <control type="progress" id="0">
         <description>Progressbar</description>
         <posx>0</posx>
-        <posy>27</posy>
+        <posy>35</posy>
         <width>180</width>
         <info>Player.Progress</info>
       </control>

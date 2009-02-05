@@ -48,7 +48,7 @@
     <control type="scrollbar" id="60">
       <description>Scroll Bar</description>
       <posx>120</posx>
-      <posy>510</posy>
+      <posy>505</posy>
       <width>480</width>
       <height>32</height>
       <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
@@ -68,7 +68,7 @@
     <control type="scrollbar" id="60">
       <description>Scroll Bar</description>
       <posx>120</posx>
-      <posy>510</posy>
+      <posy>505</posy>
       <width>480</width>
       <height>32</height>
       <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
@@ -89,7 +89,7 @@
     <control type="scrollbar" id="60">
       <description>Scroll Bar</description>
       <posx>120</posx>
-      <posy>510</posy>
+      <posy>505</posy>
       <width>480</width>
       <height>32</height>
       <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
@@ -109,7 +109,7 @@
     <control type="scrollbar" id="60">
       <description>Scroll Bar</description>
       <posx>120</posx>
-      <posy>510</posy>
+      <posy>505</posy>
       <width>480</width>
       <height>32</height>
       <texturesliderbackground>ScrollBarBackH.png</texturesliderbackground>
