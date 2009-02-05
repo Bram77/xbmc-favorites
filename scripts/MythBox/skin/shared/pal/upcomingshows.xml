@@ -1,0 +1,83 @@
+<window>
+    <id>6</id>
+    <defaultgroup>main</defaultgroup>
+
+#include vars.xml
+
+    <list_h>(listnotes_h)</list_h>
+    <detail_x>(list_x)</detail_x>
+    <detail_y>(list_y)+(list_h)+(list_dh)</detail_y>
+    <detail_w>(data_w)</detail_w>
+    <detail_h>(detailnotes_h)</detail_h>
+
+#include listdetailnvrs.xml
+#include freevars.xml
+
+    <controls>
+#include bgctls.xml
+#include titlectls.xml
+        <control>
+#include titleattrs.xml
+            <label>4</label>
+        </control>
+
+        <control>
+            <description>View by button</description>
+            <id>view_by</id>
+            <type>button</type>
+            <posX>(menu_up_x)</posX>
+            <posY>(menu_up_y)+0*((menubtn_h)+(menubtn_dh))</posY>
+            <offsetX>(btn_off_x)</offsetX>
+            <offsetY>(btn_off_y)</offsetY>
+            <alignment>(btn_align)</alignment>
+            <width>(menubtn_w)</width>
+            <height>(menubtn_h)</height>
+            <font>(menubtn_font)</font>
+            <group>main</group>
+            <onup>refresh</onup>
+            <ondown>refresh</ondown>
+            <onleft>show_list</onleft>
+            <onright>show_list</onright>
+            <texturefocus>button_focus.png</texturefocus>
+            <texturenofocus>button_nofocus.png</texturenofocus>
+        </control>
+        <control>
+            <description>Refresh button</description>
+            <id>refresh</id>
+            <type>button</type>
+            <posX>(menu_up_x)</posX>
+            <posY>(menu_up_y)+1*((menubtn_h)+(menubtn_dh))</posY>
+            <offsetX>(btn_off_x)</offsetX>
+            <offsetY>(btn_off_y)</offsetY>
+            <alignment>(btn_align)</alignment>
+            <width>(menubtn_w)</width>
+            <height>(menubtn_h)</height>
+            <font>(menubtn_font)</font>
+            <label>53</label>
+            <group>main</group>
+            <onup>view_by</onup>
+            <ondown>view_by</ondown>
+            <onleft>show_list</onleft>
+            <onright>show_list</onright>
+            <texturefocus>button_focus.png</texturefocus>
+            <texturenofocus>button_nofocus.png</texturenofocus>
+        </control>
+        <control>
+            <description>Recorded Shows list</description>
+            <id>show_list</id>
+            <type>listcontrol</type>
+            <posX>(list_x)</posX>
+            <posY>(list_y)</posY>
+            <width>(list_w)</width>
+            <height>(list_h)</height>
+            <itemheight>(listitem_h)</itemheight>
+            <default>yes</default>
+            <font>(list_font)</font>
+            <group>main</group>
+            <onleft>view_by</onleft>
+            <onright>view_by</onright>
+        </control>
+#include listdetailnctls.xml
+#include freectls.xml
+    </controls>
+</window>

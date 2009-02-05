@@ -1,0 +1,181 @@
+What is MythBox?
+================
+MythBox is a MythTV frontend for XBMC. 
+
+It runs as a XBMC script (not a plugin) and has the following major features:
+- watch livetv
+- watch recordings (w/ comm skip)
+- schedule recordings 
+
+
+History
+================
+MythBox was forked from xbmc-mythtv (http://xbmc-mythtv.sourceforge.net) 
+and heavily modified to bring MythTV protocol support up to date, 
+add new features, and make MythTV a pleasure to use in XBMC (obviously, not there yet).
+Many thanks to all the developers whose time and effort went into the original 
+xbmc-mythtv project!
+
+
+Requirements
+================
+  
+  All Platforms
+  --------------
+  - MythTV backend 0.21 or 0.22 (trunk)
+  - MythTV recordings directory accessible via the local filesystem
+    (nfs, samba, whatever you prefer). Not an issue if you're running
+    XBMC on your MythTV backend machine. 
+
+  Linux
+  -------------
+  - XBMC Atlantis 8.10 or later running on 32bit Linux, preferably Ubuntu. 
+  - ffmpeg installed (sudo apt-get install ffmpeg)
+  - python bindings for mysql (sudo apt-get install python-mysqldb)
+
+  Windows
+  ------------
+  - XBMC post-Atlantis 8.10 build running on 32bit Windows XP/Vista
+    You can get a recent SVN build from  http://ocs.nl/xbmc/
+  - ffmpeg - recent Win32 builds can be downloaded from
+    http://oss.netfarm.it/mplayer-win32.php 
+  
+  Mac OSX
+  ------------
+  TBD
+  
+Installation
+================
+  Linux
+  ------
+  1. Download mythbox.tar.gz to a directory of your choosing
+  2. cd ~/.xbmc/scripts
+  3. tar xzvf /path/to/downloaded/file/mythbox.tar.gz
+  4. Launch XBMC
+  5. Click on Scripts -> MythBox
+  6. You'll be sent straight to the Settings screen. 
+  7. Click on Test Settings until everything is OK
+  8. Save Settings and goto Previous Menu 
+
+  Windows XP
+  ----------
+  1. Download and extract mythbox.tar.gz to c:\Program Files\XBMC\scripts
+  2. Launch XBMC
+  3. Click on Scripts -> MythBox
+  4. You'll be sent straight to the Settings screen. 
+  5. Click on Test Settings until everything is OK
+  6. Save Settings and goto Previous Menu 
+  
+  Mac OSX
+  ----------
+  TBD
+  
+First Milestone -  
+===============
+
+    GOAL
+    ----------------
+    - Get most of the core functionality working.
+    - Watching livetv
+    - Watching recording + commercial skipping
+    - Scheduling recordings  
+    - Defer complete overhaul of the GUI to future releases.
+    - Usable enough to replace mythtv frontend for most tasks
+    - Solicit feedback for changes/new features/etc.
+    
+    DONE
+    ----------------
+    - Recordings resume where you left off (mythtv bookmarks feature)
+    - Replace logging subsystem. Mythbox specific logging goes to mythbox.log. 
+    - Commercial skipping (can be off a little if xbmc does not play video at framerate specified in mpeg file)
+    - Support for commercial skipping via EDL skip files (broken in xbmc - TODO: Add issue # from trac)
+    - MySQL 4.1+ client support
+    - Switch over to the mysql python client that uses the native libmysql shared lib
+    - 12 hour AM/PM time format for TV guide headers
+    - Get LiveTV working
+    - move generated images/thumbs to script_data/<scriptname>/images/thumbs
+    - Remove mythtv_statusport, mythtv_startpage, mythtv_recplayer, mythtv_recordlive, mythtv_recordlength settings
+    - Move settings.xml to userdata/script_data/<script_name> directory
+    - Recording details screen thumbnail now respects image aspect ratio
+    - Support for multiple recording directories (maps to MythTV recording groups)
+    - Enable unit tests to be run w/o hardcoded config info (util.OnDemandConfig)
+    - Remove use of singletons (singleton.py)
+    - fix livetv/recorded tv player callback issue - induced GC so callbacks get unregistered
+    - Added support for MythTV 0.22 (SVN trunk) - set <mythtv_version_override> in settings.xml
+    - Fresh install works w/o an existing settings.xml
+    - get a decect icon
+    - TV Guide usable
+    - LiveTV progress dialog
+    
+    TODO
+    --------------
+    - Fix scheduling recordings from TV guide 
+    - move tv channel icon thumbs to script_data/<scriptname>/images/channels - remove from svn
+    - fix pyxcoder parsing failures on nuppelvids
+    - Get settings via myth protocol instead of db
+    - maybe..Samba support (so MythTV recordings dir doesn't have to be accessible via filesystem)
+    - Get rid of settings for mythbackend hostname and port. These values can be queried from the settings tables
+      as MasterServerIP and MasterServerPort
+    - Would be cool to have an RSS feed of the latest MythTV news using RSS Feed control
+      http://xbmc.org/wiki/?title=Controls#Available_controls
+    - Would be cool to have playing video (mini version) on all screens if player is playing
+      http://xbmc.org/wiki/?title=Controls#Available_controls  
+    - Configurable 'Confirm on Delete'
+
+
+Future plans
+=============
+- Complete re-write of UI to use WindowXML (skinners/gfx help needed)
+- Verify works on Windows
+- Verify works on MacOSX
+- Standalone python bindings for MythTV
+- TV show fanart scraper
+- MythTV RSS feeds
+
+
+Development Changes
+=====================
+- Unit tests rule (real time saver - especially for a dynamic language)
+- Dependency injection/IOC where possible
+- Mocking support (mockito rocks!)
+- Improve pydocs
+- Re-orged/renamed lot of stuff to follow AMT structure
+
+
+What if it doesn't work?
+==========================
+Grab the log file (~/mythbox.log) 
+and open up a defect @ http://code.google.com/p/mythbox/issues/list.
+
+A description of your setup and steps to reproduce are
+essential. 
+
+My ability to fix things depends in a large
+part on your ability to provide as much information as 
+possible to isolate and reproduce the problem :-)
+
+Additional nuggets of goodness:
+- Tweak log levels in ~/.xbmc/scripts/MythBox/mythbox_log.ini
+- Tweak settings manually in ~/.xbmc/userdata/script_data/MythBox/settings.xml
+
+
+When is the next release coming out?
+====================================
+Subscribe to this RSS Feed and you'll be the first to know...
+
+  http://code.google.com/feeds/p/mythbox/downloads/basic  
+
+
+Contact Info
+==========================
+Email: analogue@yahoo.com - Please put MythBox in the subject line.
+
+
+Acknowledgements
+==================
+Thanks to the folks at www.iconshock.com for the TV icon.
+
+
+Enjoy!
+
+1/3/2009

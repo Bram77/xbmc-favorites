@@ -1,0 +1,10 @@
+<window>
+    <id>41</id>
+    <defaultgroup>default</defaultgroup>
+
+#include vars.xml
+#include popupvars.xml
+    <controls>
+#include popupctls.xml
+    </controls>
+</window>
