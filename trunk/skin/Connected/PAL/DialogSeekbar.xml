@@ -1,8 +1,7 @@
 <window id="115">
 <defaultcontrol>1</defaultcontrol>
 <allowoverlay>no</allowoverlay>
-
-<include>SlideFromRight</include>
+  
 <visible>!Window.IsVisible(3) + !Window.IsVisible(121) + !Window.IsVisible(122) + !Window.IsActive(123) + !Window.IsActive(124) + !Window.IsActive(125)</visible>
 <visible>Player.Seeking | Player.DisplayAfterSeek | Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD) | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 
@@ -12,6 +11,7 @@
     <posx>395</posx>
     <posy>15</posy>
     <include>OptionBack1-2</include>
+    <include>SlideFromRight</include>
     <control type="image">
       <description>Header Back</description>
       <posx>0</posx>
@@ -123,6 +123,7 @@
     <description>Seek Status</description>
     <posx>690</posx>
     <posy>15</posy>
+    <include>SlideFromRight</include>
     <control type="label" id="1">
       <description>2x Forward Label</description>
       <posx>0</posx>

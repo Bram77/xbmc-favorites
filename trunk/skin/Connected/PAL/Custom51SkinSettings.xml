@@ -670,8 +670,16 @@
         <selected>!Skin.HasSetting(SortLabels)</selected>
         <onclick>Skin.ToggleSetting(SortLabels)</onclick>
       </control>
+      <control type="radiobutton" id="98">
+        <description>Small Scan Dialogs</description>
+        <width>490</width>
+        <label>$LOCALIZE[31502] $LOCALIZE[31531]</label>
+        <font>18BdFont</font>
+        <selected>Skin.HasSetting(SmallScan)</selected>
+        <onclick>Skin.ToggleSetting(SmallScan)</onclick>
+      </control>
       
-      <control type="image" id="98">
+      <control type="image" id="99">
         <description>separator image</description>
         <height>30</height>
         <width>490</width>
@@ -681,7 +689,7 @@
         <texture>-</texture>
       </control>
       
-      <control type="button" id="99">
+      <control type="button" id="100">
         <description>Reload Skin</description>
         <width>490</width>
         <align>left</align>
@@ -693,7 +701,7 @@
         <pulseonselect>false</pulseonselect>
         <onclick>xbmc.ReloadSkin()</onclick>
       </control>
-      <control type="button" id="100">
+      <control type="button" id="101">
         <description>Reset Settings</description>
         <width>490</width>
         <align>left</align>

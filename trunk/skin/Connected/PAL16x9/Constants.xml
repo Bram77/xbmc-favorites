@@ -7,8 +7,6 @@
   <constant name="HomeMenu5posx">135</constant>
   
   <constant name="HomeClockposx">520</constant>
-
-  <constant name="DialogScanposx">625</constant>
   
   <constant name="StarRatingposx">-70</constant>
   <constant name="RatingLabelposx">80</constant>
