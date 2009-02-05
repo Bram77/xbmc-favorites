@@ -1,0 +1,108 @@
+<includes>
+	<!-- Start home includes -->
+	<include name="10000"><label>Xtv</label></include>
+	<include name="10001"><label>Video</label></include>
+	<include name="10002"><label>Programs</label></include>
+	<include name="10003"><label>Music</label></include>
+	<include name="10004"><label>Photos</label></include>
+	<include name="10005"><label>Weather</label></include>
+	<include name="10006"><label>Files</label></include>
+	<include name="10007"><label>Scripts</label></include>
+	<include name="10008"><label>Settings</label></include>
+	<include name="10009"><label>Play Disc</label></include>
+	<include name="10010"><label>TV</label></include>
+	<!-- End home includes -->
+	<!-- Start video includes -->
+	<include name="10101"><label>AllVideos</label></include>
+	<include name="10102"><label>Movie Trailers</label></include>
+	<include name="10103"><label>Video Playlist</label></include>
+	<include name="10104"><label>Movie Information</label></include>
+	<!-- End video includes -->
+	<!-- Start programs includes -->
+	<include name="10201"><label>Gamesaves</label></include>
+	<!-- End programs includes -->
+	<!-- Start music includes -->
+	<include name="10301"><label>CDDB</label></include>
+	<include name="10302"><label>Music Playlist</label></include>
+	<!-- End music includes -->
+	<!-- Start system includes -->
+	<include name="10501"><label>System</label></include>
+	<include name="10502"><label>File Manager</label></include>
+	<include name="10503"><label>Scripts</label></include>
+	<include name="10504"><label>Gamesaves</label></include>
+	<include name="10505"><label>Profiles</label></include>
+	<include name="10506"><label>Skin Settings</label></include>
+	<include name="10507"><label>About xTV</label></include>
+	<include name="10508"><label>Power Menu</label></include>
+	<include name="10509"><label>System Info</label></include>
+	<include name="105091"><label>Information</label></include>
+	<include name="105092"><label>Download Themes</label></include>
+	<!-- End system includes -->
+	<!-- Begin skin settings includes -->
+	<include name="10510"><label>Use Scrollbar</label></include>
+	<include name="10511"><label>Use Media Overlays</label></include>
+	<include name="10512"><label>Use Watched State Overlays</label></include>
+	<include name="10513"><label>Use Now Playing Screens</label></include>
+	<include name="10514"><label>Change Font Color</label></include>
+	<include name="10515"><label>Now Playing Style Visuals</label></include>
+	<include name="10516"><label>Choose Custom Background</label></include>
+	<include name="10517"><label>Reset Custom Background</label></include>
+	<include name="10518"><label>Media Behind Background</label></include>
+	<include name="10519"><label>Movies Button Links to Library</label></include>
+	<include name="10520"><label>Use Startup Playlist</label></include>
+	<include name="10521"><label>Choose Playlist</label></include>
+	<include name="10522"><label>TV Shows In Home Menu</label></include>
+	<include name="10523"><label>YouTube In Home Menu</label></include>
+	<include name="10524"><label>Weather In Home Menu</label></include>
+	<include name="10525"><label>Home Window</label></include>
+	<include name="10526"><label>Background</label></include>
+	<include name="10527"><label>General</label></include>
+	<include name="10528"><label>Tilt List View Icons</label></include>
+	<!-- End skin settings includes -->
+	<!-- Start progress includes -->
+	<include name="settings"><label>Settings</label></include>
+	<include name="video"><label>Video</label></include>
+	<include name="audio"><label>Audio</label></include>
+	<include name="book"><label>Bookmarks</label></include>
+	<include name="lyrics"><label>Lyrics</label></include>
+	<include name="preset"><label>Presets</label></include>
+	<include name="vis-settings"><label>Visuals</label></include>
+	<include name="playlist"><label>Playlist</label></include>
+	<include name="stop"><label>Stop</label></include>
+	<include name="pause"><label>Pause</label></include>
+	<include name="play"><label>Play</label></include>
+	<include name="paused"><label>Paused</label></include>
+	<include name="playing"><label>Playing</label></include>
+	<include name="dvd"><label>DVD Menu</label></include>
+	<include name="record"><label>Record</label></include>
+	<include name="record2"><label>Recording</label></include>
+	<include name="skipback"><label>|-Skip</label></include>
+	<include name="skipfwd"><label>Skip-|</label></include>
+	<include name="rewind"><label>Rewind</label></include>
+	<include name="rewind2x"><label>Rewind-2x</label></include>
+	<include name="rewind4x"><label>Rewind-4x</label></include>
+	<include name="rewind8x"><label>Rewind-8x</label></include>
+	<include name="rewind16x"><label>Rewind-16x</label></include>
+	<include name="rewind32x"><label>Rewind-32x</label></include>
+	<include name="forward"><label>Forward</label></include>
+	<include name="forward2x"><label>Forward-2x</label></include>
+	<include name="forward4x"><label>Forward-4x</label></include>
+	<include name="forward8x"><label>Forward-8x</label></include>
+	<include name="forward16x"><label>Forward-16x</label></include>
+	<include name="forward32x"><label>Forward-32x</label></include>
+	<include name="rating"><label>Rating</label></include>
+	<include name="songinfo"><label>Song Info</label></include>
+	<!-- End progress includes -->
+	<!-- Begin weather includes -->
+	<include name="high"><label>High</label></include>
+	<include name="low"><label>Low</label></include>
+	<!-- End weather includes -->
+	<!-- Begin Misc. includes -->
+	<include name="mute"><label>Muted</label></include>
+	<include name="fav"><label>Favorites</label></include>
+	<!-- End Misc. includes -->
+	<!-- DO NOT EDIT BEYOND THIS LINE DO NOT EDIT BEYOND THIS LINE -->
+	<!-- Idle Timeout -->
+	<include name="timeout"><visible>System.IdleTime(30)</visible></include>
+	<!-- Now Playing Screen Idle Timeout -->
+</includes>

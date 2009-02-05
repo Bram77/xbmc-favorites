@@ -1,0 +1,23 @@
+<control>
+    <description>free space label</description>
+    <id>free_space_lbl</id>
+    <type>label</type>
+    <posX>(freetitle_x)</posX>
+    <posY>(freetitle_y)</posY>
+    <width>(free_w)</width>
+    <height>(free_h)</height>
+    <font>(label_font)</font>
+    <label>76</label>
+    <textcolor>0xaa8888aa</textcolor>
+</control>
+<control>
+    <description>free space</description>
+    <id>free_space</id>
+    <type>label</type>
+    <posX>(free_x)</posX>
+    <posY>(free_y)</posY>
+    <width>(free_w)</width>
+    <height>(free_h)</height>
+    <font>(detail_font)</font>
+    <textcolor>0xffddddff</textcolor>
+</control>

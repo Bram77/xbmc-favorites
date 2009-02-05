@@ -1,0 +1,9 @@
+01/12/2009 - MythBox SVN 682
+============================
+ - Split out README instructions for Windows/Linux requirements and installation
+ - Windows now requires XBMC SVN Trunk
+ - Added 64bit _mysql.so to libs
+ - ffmpeg executable added to Settings -> Paths
+ - Launching ffmpeg on Windows is problematic because python doesn't have 
+   a console w/ attached stdin to pass to child process. Comm skipping and
+   bookmarking won't work on windows until resolved.

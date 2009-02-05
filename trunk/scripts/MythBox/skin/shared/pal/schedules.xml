@@ -1,0 +1,53 @@
+<window>
+    <id>4</id>
+    <defaultgroup>main</defaultgroup>
+
+#include vars.xml
+
+    <!-- override list height since no detail area is present -->
+    <list_h>(data_h)</list_h>
+
+    <controls>
+#include bgctls.xml
+#include titlectls.xml
+        <control>
+#include titleattrs.xml
+            <label>110</label>
+        </control>
+        <control>
+            <description>Refresh button</description>
+            <id>refresh</id>
+            <type>button</type>
+            <posX>(menu_up_x)</posX>
+            <posY>(menu_up_y)+0*((menubtn_h)+(menubtn_dh))</posY>
+            <offsetX>(btn_off_x)</offsetX>
+            <offsetY>(btn_off_y)</offsetY>
+            <alignment>(btn_align)</alignment>
+            <width>(menubtn_w)</width>
+            <height>(menubtn_h)</height>
+            <font>font13</font>
+            <label>53</label>
+            <group>main</group>
+            <onup>refresh</onup>
+            <ondown>refresh</ondown>
+            <onleft>schedule_list</onleft>
+            <onright>schedule_list</onright>
+            <texturefocus>button_focus.png</texturefocus>
+            <texturenofocus>button_nofocus.png</texturenofocus>
+        </control>
+        <control>
+            <description>Recording Schedules List</description>
+            <id>schedule_list</id>
+            <type>listcontrol</type>
+            <posX>(list_x)</posX>
+            <posY>(list_y)</posY>
+            <width>(list_w)</width>
+            <height>(list_h)</height>
+            <itemheight>(listitem_h)</itemheight>
+            <default>yes</default>
+            <group>main</group>
+            <onleft>refresh</onleft>
+            <onright>refresh</onright>
+        </control>
+    </controls>
+</window>

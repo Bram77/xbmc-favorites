@@ -1,0 +1,10 @@
+<window>
+    <id>41</id>
+    <defaultgroup>default</defaultgroup>
+
+#include vars.xml
+#include osdvars.xml
+    <controls>
+#include osdctls.xml
+   </controls>
+</window>
