@@ -7,7 +7,7 @@ __author__ = 'sfaxman'
 __url__ = 'http://code.google.com/p/xbmc-addons/'
 __svn_url__ = 'http://xbmc-addons.googlecode.com/svn/trunk/plugins/video/VideoDevil/'
 __credits__ = 'sfaxman'
-__version__ = '1.3'
+__version__ = '1.4'
 
 rootDir = os.getcwd()
 if rootDir[-1] == ';':rootDir = rootDir[0:-1]
