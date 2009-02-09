@@ -41,3 +41,9 @@ director=Myspass
 icon=video.monkey.image|myspass.png
 url=myspass.de.cfg
 ########################################################
+title=Kino
+type=rss
+director=Kino.de
+icon=video.monkey.image|kino.png
+url=kino.de.cfg
+########################################################
