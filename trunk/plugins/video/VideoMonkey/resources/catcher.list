@@ -48,7 +48,7 @@ header=Referer|http://www.atrapavideo.com/en/
 quality=standard
 ########################################################
 title=degrab.de
-target=Klick auf den.+?<a href="([^"]+)"
+target=Download Link.+?<a href="([^"]+)"
 url=http://www.degrab.de/?url=%s
 action=unquote
 quality=standard
@@ -151,6 +151,13 @@ target=<param name="url" value="([^"]+)"
 ext_target=href *= *"rtsp([^"]+)"
 ext_build=http%s
 extension=wmv
+quality=high
+########################################################
+title=kino.de
+target=flashvars.initItemXML *= *"([^"]+)
+url=%s
+ext_target=<url>([^<]+)</url> 
+extension=flv
 quality=high
 ########################################################
 title=zdf.de
