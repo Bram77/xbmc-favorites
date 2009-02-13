@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="30000">MediaPortal TV Server Hostname</string>
+    <string id="30001">MediaPortal TV Server Port</string>
+    <string id="30002">MediaPortal TV Server Sharename</string>
+    <string id="30003">Use Extended Sorting for Recorded Shows</string>
+</strings>

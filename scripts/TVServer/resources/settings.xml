@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <setting id="mptvserver" type="text" label="30000" default="mptvserver"/>
+   <setting id="mptvport" type="integer" label="30001" default="9596"/>
+   <setting id="mpsharename" type="text" label="30002" default="mediaportal"/>
+   <setting id="extsort" type="bool" label="30003" default="true"/>
+</settings>
