@@ -24,6 +24,7 @@
 """
 
 import urllib, urllib2
+#import socket
 
 from xml.sax.saxutils import unescape
 from xml.sax.saxutils import escape
@@ -40,13 +41,15 @@ class DownloadAbort(Exception):
 	def __str__(self):
 		return repr(self.value)
 
-def retrieve(url, data=None, headers={}, rhook=None, rudata=None):
+def retrieve(url, data=None, headers={}, rhook=None, rudata=None, mytimeout=40):
 	"""Downloads an url."""
+	
+	print "Retrieving %s begin." % url
 
 	if rhook is not None:
 		rhook(0, -1, rudata)
 
-	try:
+	try:		
 		if data is not None:
 			data = urllib.urlencode(data)
 		req = urllib2.Request(unescape(url), data, headers)
@@ -62,7 +65,7 @@ def retrieve(url, data=None, headers={}, rhook=None, rudata=None):
 	else:
 		size = -1
 
-	bs = max(int(size / 100.0), 1024)
+	bs = max(int(size / 100.0), 256)
 
 	data = ''
 	read = 0
@@ -80,8 +83,11 @@ def retrieve(url, data=None, headers={}, rhook=None, rudata=None):
 
 	fp.close()
 
+	print "Retrieving %s end." % url 
+	
 	if size > 0 and read < size:
 		msg = 'Download incomplete. Got only %d out of %d.' % (read, size)
 		raise DownloadError(msg)
+
 
 	return data

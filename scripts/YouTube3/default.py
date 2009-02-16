@@ -11,7 +11,7 @@ import youtube
 import random
 
 import string
-
+import re
 
 class YouTubeGUI(xbmcgui.WindowXML):
     
@@ -53,14 +53,19 @@ class YouTubeGUI(xbmcgui.WindowXML):
 				self.base_path = os.getcwd().replace(';','')
 
 				self.data = []
+
 				
 				self.current_position = 0
 				
 				self.yt = youtube.YouTube()
 				self.yt.set_filter_hook(self.confirm_content)
 
+				self.settings = self.get_settings()				
+				self.update_youtube_quality()
+				
 				self.state = YouTubeGUI.STATE_MAIN
 				self.list_state = YouTubeGUI.CONTENT_STATE_NONE	
+
 
 				# Get the last search term
 				history = self.get_search_history()
@@ -119,7 +124,9 @@ class YouTubeGUI(xbmcgui.WindowXML):
  			elif controlID == 130:
  				self.get_next()
  			elif controlID == 131:
- 				self.get_prev() 				
+ 				self.get_prev() 		
+ 			elif controlID == 15:
+ 				self.settings_window() 				
  			elif self.state is YouTubeGUI.STATE_MAIN:
  				self.on_control_main(ctrl)
  			elif self.state is YouTubeGUI.STATE_SEARCH:
@@ -158,6 +165,72 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		                 'This clip may contain inappropriate content.',
 		                 'Do you want to watch it anyway?')
 
+
+	def settings_window(self):
+	
+		itms = ["High Quality", "Thumbnails", "Default User Favorites", "Default User Videos"]		
+		result = 0		
+		
+		while(result != -1 and result != 4):
+			tmpitems = []
+			counter = 0
+			
+			for itm in itms:
+				tmp = itm + ": "
+				if self.settings[counter] == 1 and counter < 2:
+					tmp += "Yes"
+				elif counter >= 2:
+					tmp += `self.settings[counter]`
+				else:
+					tmp += "No"
+				tmpitems.append(tmp)
+				counter += 1
+				
+				
+			tmpitems.append("Done")
+			
+			result = xbmcgui.Dialog().select("Toggle Settings:", tmpitems)	
+			
+			if (result != -1 and result != 4):
+				if (result == 2 or result == 3):
+					default = self.get_input('Default:', str(self.settings[result]))
+					self.settings[result] = default	
+				elif self.settings[result] == 1:
+					self.settings[result] = 0
+				else:
+					self.settings[result] = 1
+									
+				self.save_settings()
+				self.update_youtube_quality()
+				
+			
+			
+	def update_youtube_quality(self):
+	
+		if (self.settings[0] == 1):
+			self.yt.stream_url = self.yt.base_url + '/get_video.php?video_id=%s&t=%s&fmt=18'
+		else:
+			self.yt.stream_url = self.yt.base_url + '/get_video.php?video_id=%s&t=%s'
+			
+	
+	def get_settings(self):
+		"""Return a list of old search terms."""
+
+		settings = []
+		path = os.path.join(self.base_path, 'data', 'settings.txt')
+
+		try:
+			f = open(path, 'rb')
+			settings = pickle.load(f)
+			f.close()
+		except:
+			# [high qual, thumbs, default user]
+			settings = [1,1,"user", "user"]
+			# File not found, will be created upon save
+			pass		
+		
+		return settings
+
 	def get_search_history(self):
 		"""Return a list of old search terms."""
 
@@ -168,12 +241,28 @@ class YouTubeGUI(xbmcgui.WindowXML):
 			f = open(path, 'rb')
 			history_list = pickle.load(f)
 			f.close()
-		except IOError, e:
+		except:
 			# File not found, will be created upon save
 			pass
 
 		return history_list
 
+	def save_settings(self):
+				
+		try:
+			dir = os.path.join(self.base_path, 'data')
+			# Create the 'data' directory if it doesn't exist.
+			if not os.path.exists(dir):
+				os.mkdir(dir)
+			path = os.path.join(dir, 'settings.txt')
+			f = open(path, 'wb')
+			pickle.dump(self.settings, f, protocol=pickle.HIGHEST_PROTOCOL)
+			f.close()
+		except IOError, e:
+			print 'There was an error while saving the settings pickle (%s)' % e
+		except:
+			print "An unknown error occured during save settings\n"
+			
 	def add_search_history(self, term):
 		"""Append a term, and trim the search history to max 50 entries."""
 
@@ -183,8 +272,8 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		history_list = filter(lambda x: x != term, history_list)
 		history_list.insert(0, term)
 
-		if len(history_list) > 50:
-			history_list = history_list[:50]
+		if len(history_list) > 500:
+			history_list = history_list[:500]
 
 		try:
 			dir = os.path.join(self.base_path, 'data')
@@ -197,10 +286,13 @@ class YouTubeGUI(xbmcgui.WindowXML):
 			f.close()
 		except IOError, e:
 			print 'There was an error while saving the pickle (%s)' % e
+		except:
+			print "An unknown error occured\n"
 
 
+	
 	def show_about(self):
-		"""Show an 'About' dialog."""
+		"""Show an 'About' dialog - LEGACY """
 
 		dlg = xbmcgui.Dialog()
 		dlg.ok('About', 'By Boris Sitsker 2008 & Daniel Svensson 2007', 'Paypal: boris@sitsker.com, dsvensson@gmail.com','Bugs: XBMC Forum - Python Script Development')
@@ -221,23 +313,29 @@ class YouTubeGUI(xbmcgui.WindowXML):
 			self.func = func
 			self.arg = arg
 		
+		xbmcgui.lock()
+		
 		dlg = xbmcgui.DialogProgress()
 		dlg.create('YouTube', 'Downloading...')
-
+			
+		
 		self.yt.set_report_hook(self.progress_handler, dlg)
 
 		try:
 		
 			data = func(arg)
 			
-		except Exception, e:
+		except:
 			dlg.close()
 			err_dlg = xbmcgui.Dialog()
 			err_dlg.ok('YouTube', 'There was an error.')			
 			return None
+		
 
 		dlg.close()
 
+		xbmcgui.unlock()	
+		
 		return data
 		
 	#
@@ -283,6 +381,8 @@ class YouTubeGUI(xbmcgui.WindowXML):
 			self.load_list()
 			
 			
+
+			
 		
 	
 	def get_input(self, title, default="", hidden=False):
@@ -299,11 +399,11 @@ class YouTubeGUI(xbmcgui.WindowXML):
 	
 		return ret
 
-	def get_user_videos(self, method, title, user=None):
+	def get_user_videos(self, method, title, user=None, default=""):
 		"""Get rss data and update the list."""
 
 		if user is None:
-			user = self.get_input("Enter User: ", '')
+			user = self.get_input("Enter User: ", default)
 			
 		if user is not None:
 			
@@ -374,8 +474,9 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		# Only update the list if the user entered something.
 		if term != None:
 		
-			#self.initMainView()
-			
+			p = re.compile('[^a-zA-Z0-9 ]')
+			term = p.sub('', term)
+		
 			self.yt.reset_page()
 			
 			self.last_search_term = term
@@ -432,6 +533,8 @@ class YouTubeGUI(xbmcgui.WindowXML):
 	# retrieves new data and updates the list.
 	#
 	def update_list(self, data, content_list):
+	
+		
 		"""Updates the list widget with new data."""
 
 		# Either an error dialog has been shown, or the user
@@ -440,57 +543,54 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		if data == None:
 			return False
 
-		dlg = xbmcgui.DialogProgress()
-		dlg.create('YouTube', 'Downloading thumbs...')
-		dlg.update(0)
-		
 		self.data = data		
 		self.listItems = []
-		
-		xbmcgui.lock()		
-				
-		self.listClear(content_list)		
-		
-		dir = os.path.join(self.base_path, 'data')
-		files = os.listdir(dir)
 
-		print "Deleting thumbs..."
-		
-		#delete old thumbs
-		for file in files:
-			if file == '.' or file == '..': continue
-			try:
-				path = dir + os.sep + file
-				f = file.split(".")
-				if (f[1]=="jpg"):
-					os.remove(path)
-			except:
-				pass				
-			
-		
-		
-		print "Done."
-		
+		xbmcgui.lock()		
+
+
+		if (self.settings[1] == 1):
+			dlg = xbmcgui.DialogProgress()
+			dlg.create('YouTube', 'Downloading thumbs...')
+			dlg.update(0)
+
+			dir = os.path.join(self.base_path, 'data')
+			files = os.listdir(dir)
+
+			#delete old thumbs
+			for file in files:
+				if file == '.' or file == '..': continue
+				try:
+					path = dir + os.sep + file
+					f = file.split(".")
+					if (f[1]=="jpg"):
+						os.remove(path)
+				except:
+					pass			
+
+
+
+		self.listClear(content_list)		
+
 		counter = 0
 		totalsize = len(self.data)
-		
+
 		for desc, id in self.data:
-		
-			counter += 0
-			
-			dlg.update(int(counter/totalsize))
-			
+
+			counter += 0						
 			author = ""
 			out2 = ""
 			out = str(desc)
 			path = ""
-			
+
 			#set image													
-			if (self.yt.thumbnail is not None and len(self.yt.thumbnail) > counter):
+			if (self.settings[1] == 1 and self.yt.thumbnail is not None and len(self.yt.thumbnail) > counter):
+				
+				dlg.update(int(counter/totalsize))
+                
 				thumbdet = self.yt.thumbnail[counter]
 				try:
 					thumb = self.yt.retrieve(thumbdet)
-					
 					pass
 				except DownloadAbort, e:
 					# Just fall through as a thumbnail is not required.
@@ -501,16 +601,15 @@ class YouTubeGUI(xbmcgui.WindowXML):
 					pass
 				else:
 					# Save the thumbnail to a local file so it can be used.
-					
-					rp = str(random.randint(100000000, 999999999))
+					rp = str(random.randint(100000, 999999))
 					path = os.path.join(self.base_path, 'data', 'thumb' + str(counter) + rp + '.jpg')
-					
+
 					fp = open(path, 'wb')				
 					fp.write(thumb)
 					fp.close()				
-											
+
 					pass						
-			
+
 			if (self.yt.author is not None and len(self.yt.author) > counter):
 				author = self.yt.author[counter]
 				out2 = str(author[:15])
@@ -528,19 +627,23 @@ class YouTubeGUI(xbmcgui.WindowXML):
 				duration = self.yt.duration[counter]					
 				out2 += "\n" + str(duration) + ""				
 
-			
+
 			item = xbmcgui.ListItem (label=out, label2=out2, thumbnailImage=path)			
-			
+
 			self.listItems.append(item)
 			content_list.addItem(item)
-			
-						
+
+
 			counter += 1
-		
+
 		xbmcgui.unlock()
 
-		dlg.close()
+		# if thumbs enabled
+		if (self.settings[1] == 1):
+			dlg.close()
+
 		return True
+
 
 	#
 	# logs in?
@@ -551,7 +654,7 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		ret = False
 
 		if username is None:
-			username = self.get_input('Username', 'boritchka')
+			username = self.get_input('Username', self.settings[2])
 
 		if password is None:
 			password = self.get_input('Password', hidden=True)
@@ -564,6 +667,11 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		except DownloadError, e:
 			err_dlg = xbmcgui.Dialog()
 			err_dlg.ok('YouTube', 'There was an error.', e.value)
+
+		except:
+			err_dlg = xbmcgui.Dialog()
+			err_dlg.ok('YouTube', 'An unknown error occured.')
+						
 
 		return ret
 
@@ -598,6 +706,9 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		except DownloadError, e:
 			err_dlg = xbmcgui.Dialog()
 			err_dlg.ok('YouTube', 'There was an error.', e.value)
+		except:
+			err_dlg = xbmcgui.Dialog()
+			err_dlg.ok('YouTube', 'An unknown error occured.')			
 
 		dlg.close()
 
@@ -648,11 +759,11 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		"""Get the url for the id and start playback."""
 
 		try:
-			self.current_position = self.getCurrentListPosition()
+			self.current_position = self.getCurrentListPosition()			
 			
 			file = self.download_data(id, self.yt.get_video_url)
 			self.player.play(str(file))
-			#self.close()
+			print "Playing..." + "\n"
 			
 		except youtube.PrivilegeError, e:
 			dlg = xbmcgui.Dialog()
@@ -677,6 +788,7 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		except youtube.VideoStreamError, e:
 			dlg = xbmcgui.Dialog()
 			dlg.ok('YouTube', 'Unable to play the video clip.')
+			
 			
 			
 	#
@@ -718,6 +830,8 @@ class YouTubeGUI(xbmcgui.WindowXML):
 			print 'Index out of bounds'
 			self.close()
 			return
+		except:
+			print 'An unknown error occured in on_control_list. default.py'
 
 		if self.list_state is YouTubeGUI.CONTENT_STATE_VIDEO:
 			self.play_clip(id)
@@ -747,9 +861,9 @@ class YouTubeGUI(xbmcgui.WindowXML):
 
 	def on_control_users(self, ctrl):
 		if ctrl is self.getControl(90):
-			self.get_user_videos(self.yt.get_user_favorites, 'Favorites of')
+			self.get_user_videos(self.yt.get_user_favorites, 'Favorites of', None, str(self.settings[2]))
 		elif ctrl is self.getControl(91):
-			self.get_user_videos(self.yt.get_user_videos, 'Videos by')
+			self.get_user_videos(self.yt.get_user_videos, 'Videos by', None, str(self.settings[3]))
 		elif ctrl is self.getControl(92):
 			self.not_implemented()
 
@@ -845,6 +959,7 @@ class YouTubeGUI(xbmcgui.WindowXML):
 		self.getControl(11).setVisible(visible)
 		self.getControl(14).setVisible(visible)
 		self.getControl(13).setVisible(visible)
+		self.getControl(15).setVisible(visible)
 
 		if visible:
 			dominant = self.getControl(10)

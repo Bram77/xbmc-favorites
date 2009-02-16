@@ -7,53 +7,47 @@
 
 	<controls>
 		<!-- START: Images -->
-		<control type="image" id="1">
+		<control type="image">
 			<description>Background Image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>720</width>
-			<height>576</height>
-			<texture>background.png</texture>
+			<texture>youtube-background.png</texture>
 		</control>
 
-		<control type="image" id="1">
+		<control type="image">
 			<description>YouTube Logo</description>
-			
-			<posx>30</posx>
+			<posx>20</posx>
 			<posy>20</posy>
-			<align>center</align>
-			<aligny>center</aligny>
-			<texture>youtube.png</texture>
-			<align>center</align>
+			<texture>youtube.png</texture>	
 		</control>
 		<!-- END: Images -->
 		
 		<control type="group" id="204">
-			<posx>20</posx>
-			<posy>75</posy>
-			<width>150</width>
-			<height>30</height>		
-			<texturefocus>button-focus.png</texturefocus>
-			<texturenofocus>button-nofocus.png</texturenofocus>
-			<textcolor>ffffffff</textcolor>
-			<disabledcolor>60ffffff</disabledcolor>
-			<textoffsetx>17</textoffsetx>
-			<aligny>center</aligny>						
+				
 			<control type="button" id="2">
 				<description>views</description>				
-				<posy>0</posy>
-				<posx>0l</posx>				
+				<posx>21</posx>
+				<posy>75</posy>
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>					
 				<onup>203</onup>
 				<ondown>200</ondown>	
 				<onleft>202</onleft>
-				<onright>202</onright>				
+				<onright>202</onright>
+				<font>font10</font>
 			</control>
 		</control>
 
 		<!-- START: Labels -->
 		<control type="label" id="5">
 			<description>Feed Label</description>
-			<width>427</width>
+			<width>427</width>			
 			<posx>244</posx>
 			<posy>70</posy>
 			<align>center</align>
@@ -83,10 +77,10 @@
 			
 			<control type="list" id="50">
 				<description>Video List</description>
-				<posx>185</posx>
-				<posy>95</posy>
-				<width>525</width>
-				<height>420</height>			
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>515</width>
+				<height>410</height>			
 				<visible>true</visible>
 				<onup>202</onup>
 				<ondown>202</ondown>
@@ -122,11 +116,11 @@
 				</itemlayout>
 				<focusedlayout height="125" width="525">				
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>125</height>
 						<posx>0</posx>
 						<posy>0</posy>					
-						<texture>list-focus.png</texture>
+						<texture>yt-list-focus.png</texture>
 					</control>							
 					<control type="image">
 						<posx>5</posx>
@@ -166,10 +160,10 @@
 
 			<control type="list" id="51">
 				<description>Video List</description>
-				<posx>185</posx>
-				<posy>95</posy>
-				<width>525</width>
-				<height>420</height>			
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>515</width>
+				<height>410</height>			
 				<visible>true</visible>
 				<onup>202</onup>
 				<ondown>202</ondown>
@@ -181,7 +175,7 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="125" width="525">
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>125</height>
 						<posx>0</posx>
 						<posy>0</posy>											
@@ -221,11 +215,11 @@
 				</itemlayout>
 				<focusedlayout height="125" width="525">				
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>125</height>
 						<posx>0</posx>
 						<posy>0</posy>					
-						<texture>list-focus.png</texture>
+						<texture>yt-list-focus.png</texture>
 					</control>							
 					<control type="image">
 						<posx>5</posx>
@@ -264,10 +258,10 @@
 
 			<!--<control type="list" id="52">
 				<description>Video List</description>
-				<posx>185</posx>
-				<posy>95</posy>
-				<width>525</width>
-				<height>420</height>			
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>515</width>
+				<height>410</height>			
 				<visible>true</visible>
 				<onup>202</onup>
 				<ondown>202</ondown>
@@ -279,7 +273,7 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="440" width="525">
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>420</height>
 						<posx>0</posx>
 						<posy>0</posy>							
@@ -320,7 +314,7 @@
 				</itemlayout>
 				<focusedlayout height="440" width="525">								
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>420</height>
 						<posx>0</posx>
 						<posy>0</posy>							
@@ -366,10 +360,10 @@
 			<!-- SEARCH list, text only -->			
 			<control type="list" id="53">
 				<description>Search List</description>
-				<posx>185</posx>
-				<posy>95</posy>
-				<width>525</width>
-				<height>420</height>						
+				<posx>200</posx>
+				<posy>110</posy>
+				<width>515</width>
+				<height>410</height>						
 				<onup>202</onup>
 				<ondown>202</ondown>
 				<onleft>204</onleft>
@@ -390,7 +384,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
-						<width>525</width>
+						<width>515</width>
 						<height>25</height>
 						<font>font13</font>
 						<aligny>center</aligny>					
@@ -405,11 +399,11 @@
 				</itemlayout>
 				<focusedlayout height="25" width="525">				
 					<control type="image">
-						<width>525</width>
+						<width>515</width>
 						<height>25</height>
 						<posx>0</posx>
 						<posy>0</posy>					
-						<texture>list-focus.png</texture>
+						<texture>yt-list-focus.png</texture>
 					</control>							
 					<control type="image">
 						<posx>5</posx>
@@ -422,7 +416,7 @@
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
-						<width>525</width>
+						<width>515</width>
 						<height>25</height>
 						<font>font13</font>
 						<aligny>center</aligny>					
@@ -442,30 +436,31 @@
 
 
 		<control type="group" id="200">
-			<posx>20</posx>
-			<posy>105</posy>
-			<width>150</width>
-			<height>20</height>		
-			<texturefocus>button-focus.png</texturefocus>
-			<texturenofocus>button-nofocus.png</texturenofocus>
-			<textcolor>ffffffff</textcolor>
-			<disabledcolor>60ffffff</disabledcolor>
-			<textoffsetx>17</textoffsetx>
-			<aligny>center</aligny>						
-			<font>fon10</font>
+
 			<!-- START -->
 			
 			<control type="button" id="10">
 				<description>Feeds Button</description>
 				<label>Feeds</label>					
-				<posy>0</posy>
-				<posx>0l</posx>
+				<posy>105</posy>
+				<posx>21</posx>
 				<onfocus></onfocus>
 				<onup>204</onup>
 				<ondown>11</ondown>	
-							
+								
 				<onleft>202</onleft>
 				<onright>202</onright>	
+								
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
+				
 			</control>
 
 			<control type="button" id="11">
@@ -473,13 +468,23 @@
 				<label>Users</label>
 
 
-				<posx>0l</posx>
-				<posy>30</posy>
+				<posx>21</posx>
+				<posy>135</posy>
 				
 				<onup>10</onup>
 				<ondown>14</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
+
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 
 			</control>
 
@@ -487,28 +492,70 @@
 				<description>Search Button</description>
 				<label>Search</label>
 				
-				<posy>60</posy>
-				<posx>0l</posx>
+				<posy>165</posy>
+				<posx>21</posx>
 				
 				<onup>11</onup>
-				<ondown>13</ondown>
+				<ondown>15</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
-				
+
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 
-			<control type="button" id="13">
-				<description>About Button</description>
-				<label>About</label>
+			<control type="button" id="15">
+				<description>Settings Button</description>
+				<label>Settings</label>
 				
-				<posy>90</posy>
-				<posx>0l</posx>
-				<visible>false</visible>
+				<posy>195</posy>
+				<posx>21</posx>				
 				<onup>14</onup>
 				<ondown>130</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
+								
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 				
+			</control>
+			
+			<!-- LEGACY BUTTON -->
+			<control type="button" id="13">
+				<description>About Button</description>
+				<label>About</label>
+				
+				<posy>225</posy>
+				<posx>21</posx>
+				<visible>false</visible>
+				<onup>15</onup>
+				<ondown>130</ondown>
+				<onleft>202</onleft>
+				<onright>202</onright>	
+				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>						
 
 
@@ -516,117 +563,199 @@
 			<control type="button" id="20">
 				<description>Recently Added Button</description>
 				<label>Recently Added</label>
-				<posx>0l</posx>
-				<posy>0</posy>
+				<posx>21</posx>
+				<posy>105</posy>
 				
 				<onup>204</onup>
 				<ondown>21</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 
 			<control type="button" id="21">
 				<description>Recently Featured Button</description>
 				<label>Recently Featured</label>
-				<posx>0l</posx>
-				<posy>30</posy>
+				<posx>21</posx>
+				<posy>135</posy>
 								
 				<onup>20</onup>
 				<ondown>22</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
-				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="22">
 				<description>Top Favorites Button</description>
 				<label>Top Favorites</label>
-				<posx>0l</posx>
-				<posy>60</posy>
+				<posx>21</posx>
+				<posy>165</posy>
 				
 				<onup>21</onup>
 				<ondown>23</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="23">
 				<description>Top Rated Button</description>
 				<label>Top Rated</label>
-				<posx>0l</posx>
-				<posy>90</posy>
+				<posx>21</posx>
+				<posy>195</posy>
 				
 				<onup>22</onup>
 				<ondown>24</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
-
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="24">
 				<description>Most Viewed Button</description>
 				<label>Most Viewed</label>
-				<posx>0l</posx>
-				<posy>120</posy>
+				<posx>21</posx>
+				<posy>225</posy>
 				
 				<onup>23</onup>
 				<ondown>25</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 
 			<control type="button" id="25">
 				<description>Most Discussed Button</description>
 				<label>Most Discussed</label>
-				<posx>0l</posx>
-				<posy>150</posy>
+				<posx>21</posx>
+				<posy>255</posy>
 				
 				<onup>24</onup>
 				<ondown>26</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 			
 			<control type="button" id="26">
 				<description>Most Linked Button</description>
 				<label>Most Linked</label>
-				<posx>0l</posx>
-				<posy>180</posy>
+				<posx>21</posx>
+				<posy>285</posy>
 				
 				<onup>25</onup>
 				<ondown>27</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>					
+				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 			
 			<control type="button" id="27">
 				<description>Most Popular Button</description>
 				<label>Most Popular</label>
-				<posx>0l</posx>
-				<posy>210</posy>
+				<posx>21</posx>
+				<posy>315</posy>
 				
 				<onup>26</onup>
 				<ondown>28</ondown>
 				<onleft>202</onleft>
-				<onright>202</onright>					
+				<onright>202</onright>	
+				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>	
 
 			<control type="button" id="28">
 				<description>Categories Button</description>
 				<label>Categories</label>
-				<posx>0l</posx>
-				<posy>240</posy>
+				<posx>21</posx>
+				<posy>345</posy>
 				
 				<onup>27</onup>
 				<ondown>130</ondown>
 				<onleft>202</onleft>
-				<onright>202</onright>					
+				<onright>202</onright>	
+				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>				
 			<!-- END: Feeds menu buttons -->
 
@@ -636,41 +765,68 @@
 			
 				<description>User Favorites Button</description>
 				<label>User Favorites</label>
-				<posx>0l</posx>
-				<posy>0</posy>
+				<posx>21</posx>
+				<posy>105</posy>
 
 				<onup>204</onup>
 				<ondown>91</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="91">
 			
 				<description>User Videos Button</description>
 				<label>User Videos</label>
-				<posx>0l</posx>
-				<posy>30</posy>
+				<posx>21</posx>
+				<posy>135</posy>
 
 				<onup>90</onup>
 				<ondown>203</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="92">
 				<description>User Friends Button</description>
 				<label>User Friends</label>
-				<posx>0l</posx>
-				<posy>60</posy>
+				<posx>21</posx>
+				<posy>165</posy>
 				<visible>false</visible>
 				<onup>91</onup>
 				<ondown>203</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 						
 
@@ -679,27 +835,45 @@
 			<control type="button" id="40">
 				<description>Search Entry Button</description>
 				<label>Search</label>
-				<posx>0l</posx>
-				<posy>0</posy>
+				<posx>21</posx>
+				<posy>105</posy>
 				
 				<onup>204</onup>
 				<ondown>41</ondown>			
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="41">
 				<description>Search History Button</description>
 				<label>History</label>
-				<posx>0l</posx>
-				<posy>30</posy>
+				<posx>21</posx>
+				<posy>135</posy>
 				
 				<onup>40</onup>
 				<ondown>203</ondown>			
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 			<!-- END: Search menu buttons -->			
 			
@@ -709,54 +883,90 @@
 			<control type="button" id="30">
 				<description>Today Button</description>
 				<label>Today</label>
-				<posx>0l</posx>
-				<posy>270</posy>
+				<posx>21</posx>
+				<posy>375</posy>
 				
 				<onup>33</onup>
 				<ondown>31</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 			</control>
 
 			<control type="button" id="31">
 				<description>This Week Button</description>
 				<label>This Week</label>
-				<posx>0l</posx>
-				<posy>300</posy>
+				<posx>21</posx>
+				<posy>405</posy>
 				
 				<onup>30</onup>
 				<ondown>32</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 				
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>				
 
 			</control>
 
 			<control type="button" id="32">
 				<description>This Month Button</description>
 				<label>This Month</label>
-				<posx>0l</posx>
-				<posy>330</posy>
+				<posx>21</posx>
+				<posy>435</posy>
 >				
 				<onup>31</onup>
 				<ondown>33</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 
 			<control type="button" id="33">
 				<description>All Time Button</description>
 				<label>All Time</label>
-				<posx>0l</posx>
-				<posy>360</posy>
+				<posx>21</posx>
+				<posy>465</posy>
 				
 				<onup>32</onup>
 				<ondown>203</ondown>
 				<onleft>202</onleft>
 				<onright>202</onright>	
 
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>						
+				<font>font10</font>
 			</control>
 			<!-- END: Time frame buttons -->
 			
@@ -766,24 +976,25 @@
 		
 		<control type="group" id="203">
 		
-			<posx>20</posx>
-			<posy>495</posy>
-			<width>150</width>
-			<height>30</height>		
-			<texturefocus>button-focus.png</texturefocus>
-			<texturenofocus>button-nofocus.png</texturenofocus>
-			<textcolor>ffffffff</textcolor>
-			<disabledcolor>60ffffff</disabledcolor>
-			<textoffsetx>17</textoffsetx>
-			<aligny>center</aligny>		
+		
 			
 			<!-- NEXT, PREV -->
 			<control type="button" id="130">
 				<description>Next Button</description>
 				<label>Next</label>
-				<posx>0l</posx>
-				<posy>0</posy>
 
+				<posx>21</posx>
+				<posy>495</posy>
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>
+				<font>font10</font>
+				
 				<onright>202</onright>
 				<onleft>202</onleft>
 				<onup>200</onup>
@@ -792,8 +1003,18 @@
 			<control type="button" id="131">
 				<description>Prev Button</description>
 				<label>Previous</label>
-				<posx>0l</posx>
-				<posy>30</posy>
+				
+				<posx>21</posx>
+				<posy>525</posy>
+				<width>165</width>
+				<height>20</height>		
+				<texturefocus>yt-button-focus.png</texturefocus>
+				<texturenofocus>yt-button-nofocus.png</texturenofocus>
+				<textcolor>ffffffff</textcolor>
+				<disabledcolor>60ffffff</disabledcolor>
+				<textoffsetx>17</textoffsetx>
+				<aligny>center</aligny>
+				<font>font10</font>
 
 				<onright>202</onright>
 				<onleft>202</onleft>
