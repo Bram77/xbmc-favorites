@@ -93,7 +93,7 @@
 
 <include>3D_Cover_View</include>
 
- 
+
   <control type="image">
     <description>list item icon</description>
     <posx>45</posx>

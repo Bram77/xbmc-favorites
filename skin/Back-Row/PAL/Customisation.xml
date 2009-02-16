@@ -292,7 +292,7 @@
 <id>22</id>
 <posx>535.2</posx>
 <posy>88</posy>
-<label>Wallpaper</label>
+<label>31054</label>
 <font>font64</font>
 <texturefocus>button-focus.png</texturefocus>
 <texturenofocus>button-nofocus.png</texturenofocus>
@@ -703,7 +703,7 @@
 <height>30</height>
 <texturefocus>input-focus.png</texturefocus>
 <texturenofocus>-</texturenofocus>
-<label>Scroll Bar Toggle</label>
+<label>31104</label>
 <onclick>Skin.ToggleSetting(sbar)</onclick>
 <selected>Skin.HasSetting(sbar)</selected>
 <onleft>4</onleft>
@@ -1113,7 +1113,7 @@
 <posy>115</posy>
 <width>560</width>
 <align>left</align>
-<label>Sub Menu Control</label>
+<label>31055</label>
 <onclick>Skin.ToggleSetting(submenubuttons)</onclick>
 <selected>Skin.HasSetting(submenubuttons)</selected>
 <onleft>14</onleft>
@@ -1699,8 +1699,8 @@
 
 <control type="togglebutton" id="98">
 <include>customsettingsbutton</include>
-<label>Set Menu background image</label>
-<altlabel>Reset Menu background image</altlabel>
+<label>31056</label>
+<altlabel>31057</altlabel>
 <onclick>Skin.SetImage(CustomMenu)</onclick>
 <altclick>Skin.Reset(CustomMenu)</altclick>
 <texturefocus>input-focus.png</texturefocus>
@@ -1714,16 +1714,16 @@
 <onclick>Skin.Reset(CustomMenu)</onclick>
 <altclick>Skin.Reset(CustomMenuFolder)</altclick>
 <altclick>Skin.Reset(CustomMenuFoldOn)</altclick>
-<label>Set Menu background folder</label>
-<altlabel>Clear Menu background folder</altlabel>
+<label>31058</label>
+<altlabel>31059</altlabel>
 <usealttexture>Skin.String(CustomMenuFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="100">
 <include>customsettingsbutton</include>
-<label>Set Videos background image</label>
-<altlabel>Reset Videos background image</altlabel>
+<label>31060</label>
+<altlabel>31061</altlabel>
 <onclick>Skin.SetImage(CustomVideos)</onclick>
 <altclick>Skin.Reset(CustomVideos)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1736,16 +1736,16 @@
 <onclick>Skin.Reset(CustomVideos)</onclick>
 <altclick>Skin.Reset(CustomVideosFolder)</altclick>
 <altclick>Skin.Reset(CustomVideosFoldOn)</altclick>
-<label>Set Videos background folder</label>
-<altlabel>Clear Videos background folder</altlabel>
+<label>31062</label>
+<altlabel>31063</altlabel>
 <usealttexture>Skin.String(CustomVideosFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="104">
 <include>customsettingsbutton</include>
-<label>Set Pictures background image</label>
-<altlabel>Reset Pictures background image</altlabel>
+<label>31064</label>
+<altlabel>31065</altlabel>
 <onclick>Skin.SetImage(CustomPictures)</onclick>
 <altclick>Skin.Reset(CustomPictures)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1758,16 +1758,16 @@
 <onclick>Skin.Reset(CustomPictures)</onclick>
 <altclick>Skin.Reset(CustomPicturesFolder)</altclick>
 <altclick>Skin.Reset(CustomPicturesFoldOn)</altclick>
-<label>Set Pictures background folder</label>
-<altlabel>Clear Pictures background folder</altlabel>
+<label>31066</label>
+<altlabel>31067</altlabel>
 <usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="106">
 <include>customsettingsbutton</include>
-<label>Set Music background image</label>
-<altlabel>Reset Music background image</altlabel>
+<label>31068</label>
+<altlabel>31069</altlabel>
 <onclick>Skin.SetImage(CustomMusic)</onclick>
 <altclick>Skin.Reset(CustomMusic)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1780,16 +1780,16 @@
 <onclick>Skin.Reset(CustomMusic)</onclick>
 <altclick>Skin.Reset(CustomMusicFolder)</altclick>
 <altclick>Skin.Reset(CustomMusicFoldOn)</altclick>
-<label>Set Music background folder</label>
-<altlabel>Clear Music background folder</altlabel>
+<label>31070</label>
+<altlabel>31071</altlabel>
 <usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="108">
 <include>customsettingsbutton</include>
-<label>Set Apps background image</label>
-<altlabel>Reset Apps background image</altlabel>
+<label>31072</label>
+<altlabel>31073</altlabel>
 <onclick>Skin.SetImage(CustomApps)</onclick>
 <altclick>Skin.Reset(CustomApps)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1802,16 +1802,16 @@
 <onclick>Skin.Reset(CustomApps)</onclick>
 <altclick>Skin.Reset(CustomAppsFolder)</altclick>
 <altclick>Skin.Reset(CustomAppsFoldOn)</altclick>
-<label>Set Apps background folder</label>
-<altlabel>Clear Apps background folder</altlabel>
+<label>31074</label>
+<altlabel>31075</altlabel>
 <usealttexture>Skin.String(CustomAppsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="110">
 <include>customsettingsbutton</include>
-<label>Set Scripts background image</label>
-<altlabel>Reset Scripts background image</altlabel>
+<label>31076</label>
+<altlabel>31077</altlabel>
 <onclick>Skin.SetImage(CustomScripts)</onclick>
 <altclick>Skin.Reset(CustomScripts)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1825,16 +1825,16 @@
 <onclick>Skin.Reset(CustomScripts)</onclick>
 <altclick>Skin.Reset(CustomScriptsFolder)</altclick>
 <altclick>Skin.Reset(CustomScriptsFoldOn)</altclick>
-<label>Set Scripts background folder</label>
-<altlabel>Clear Scripts background folder</altlabel>
+<label>31078</label>
+<altlabel>31079</altlabel>
 <usealttexture>Skin.String(CustomScriptsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="112">
 <include>customsettingsbutton</include>
-<label>Set Files background image</label>
-<altlabel>Reset Files background image</altlabel>
+<label>31080</label>
+<altlabel>31081</altlabel>
 <onclick>Skin.SetImage(CustomFiles)</onclick>
 <altclick>Skin.Reset(CustomFiles)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1848,16 +1848,16 @@
 <onclick>Skin.Reset(CustomFiles)</onclick>
 <altclick>Skin.Reset(CustomFilesFolder)</altclick>
 <altclick>Skin.Reset(CustomFilesFoldOn)</altclick>
-<label>Set Files background folder</label>
-<altlabel>Clear Files background folder</altlabel>
+<label>31082</label>
+<altlabel>31083</altlabel>
 <usealttexture>Skin.String(CustomFilesFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="114">
 <include>customsettingsbutton</include>
-<label>Set Weather background image</label>
-<altlabel>Reset Weather background image</altlabel>
+<label>31084</label>
+<altlabel>31085</altlabel>
 <onclick>Skin.SetImage(CustomWeather)</onclick>
 <altclick>Skin.Reset(CustomWeather)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1871,8 +1871,8 @@
 <onclick>Skin.Reset(CustomWeather)</onclick>
 <altclick>Skin.Reset(CustomWeatherFolder)</altclick>
 <altclick>Skin.Reset(CustomWeatherFoldOn)</altclick>
-<label>Set Weather background folder</label>
-<altlabel>Clear Weather background folder</altlabel>
+<label>31086</label>
+<altlabel>31087</altlabel>
 <usealttexture>Skin.String(CustomWeatherFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -1880,8 +1880,8 @@
 
 <control type="togglebutton" id="116">
 <include>customsettingsbutton</include>
-<label>Set Settings background image</label>
-<altlabel>Reset Settings background image</altlabel>
+<label>31088</label>
+<altlabel>31089</altlabel>
 <onclick>Skin.SetImage(CustomSettings)</onclick>
 <altclick>Skin.Reset(CustomSettings)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1895,8 +1895,8 @@
 <onclick>Skin.Reset(CustomSettings)</onclick>
 <altclick>Skin.Reset(CustomSettingsFolder)</altclick>
 <altclick>Skin.Reset(CustomSettingsFoldOn)</altclick>
-<label>Set Settings background folder</label>
-<altlabel>Clear Settings background folder</altlabel>
+<label>31090</label>
+<altlabel>31091</altlabel>
 <usealttexture>Skin.String(CustomSettingsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -1904,8 +1904,8 @@
 
 <control type="togglebutton" id="118">
 <include>customsettingsbutton</include>
-<label>Set Single Default background image</label>
-<altlabel>Reset Single Default background image</altlabel>
+<label>31092</label>
+<altlabel>31093</altlabel>
 <onclick>Skin.SetImage(Customdef)</onclick>
 <altclick>Skin.Reset(Customdef)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1918,8 +1918,8 @@
 <onclick>Skin.Reset(Customdef)</onclick>
 <altclick>Skin.Reset(CustomdefFolder)</altclick>
 <altclick>Skin.Reset(CustomdefFoldOn)</altclick>
-<label>Set Single Default background folder</label>
-<altlabel>Clear Single Default background folder</altlabel>
+<label>31094</label>
+<altlabel>31095</altlabel>
 <usealttexture>Skin.String(CustomdefFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -1954,8 +1954,8 @@
 
 <control type="togglebutton" id="98">
 <include>customsettingsbutton</include>
-<label>Set Menu background image</label>
-<altlabel>Reset Menu background image</altlabel>
+<label>31056</label>
+<altlabel>31057</altlabel>
 <onclick>Skin.SetImage(CustomMenu)</onclick>
 <altclick>Skin.Reset(CustomMenu)</altclick>
 <texturefocus>input-focus.png</texturefocus>
@@ -1969,16 +1969,16 @@
 <onclick>Skin.Reset(CustomMenu)</onclick>
 <altclick>Skin.Reset(CustomMenuFolder)</altclick>
 <altclick>Skin.Reset(CustomMenuFoldOn)</altclick>
-<label>Set Menu background folder</label>
-<altlabel>Clear Menu background folder</altlabel>
+<label>31058</label>
+<altlabel>31059</altlabel>
 <usealttexture>Skin.String(CustomMenuFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="100">
 <include>customsettingsbutton</include>
-<label>Set Movies background image</label>
-<altlabel>Reset Movies background image</altlabel>
+<label>31096</label>
+<altlabel>31097</altlabel>
 <onclick>Skin.SetImage(CustomMovies)</onclick>
 <altclick>Skin.Reset(CustomMovies)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -1991,16 +1991,16 @@
 <onclick>Skin.Reset(CustomMovies)</onclick>
 <altclick>Skin.Reset(CustomMoviesFolder)</altclick>
 <altclick>Skin.Reset(CustomMoviesFoldOn)</altclick>
-<label>Set Movies background folder</label>
-<altlabel>Clear Movies background folder</altlabel>
+<label>31098</label>
+<altlabel>31099</altlabel>
 <usealttexture>Skin.String(CustomMoviesFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="102">
 <include>customsettingsbutton</include>
-<label>Set TV Shows background image</label>
-<altlabel>Reset TV Shows background image</altlabel>
+<label>31100</label>
+<altlabel>31101</altlabel>
 <onclick>Skin.SetImage(CustomTV)</onclick>
 <altclick>Skin.Reset(CustomTV)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2013,8 +2013,8 @@
 <onclick>Skin.Reset(CustomTV)</onclick>
 <altclick>Skin.Reset(CustomTVFolder)</altclick>
 <altclick>Skin.Reset(CustomTVFoldOn)</altclick>
-<label>Set TV Shows background folder</label>
-<altlabel>Clear TV Shows background folder</altlabel>
+<label>31102</label>
+<altlabel>31103</altlabel>
 <usealttexture>Skin.String(CustomTVFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -2022,8 +2022,8 @@
 
 <control type="togglebutton" id="104">
 <include>customsettingsbutton</include>
-<label>Set Pictures background image</label>
-<altlabel>Reset Pictures background image</altlabel>
+<label>31064</label>
+<altlabel>31065</altlabel>
 <onclick>Skin.SetImage(CustomPictures)</onclick>
 <altclick>Skin.Reset(CustomPictures)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2036,16 +2036,16 @@
 <onclick>Skin.Reset(CustomPictures)</onclick>
 <altclick>Skin.Reset(CustomPicturesFolder)</altclick>
 <altclick>Skin.Reset(CustomPicturesFoldOn)</altclick>
-<label>Set Pictures background folder</label>
-<altlabel>Clear Pictures background folder</altlabel>
+<label>31066</label>
+<altlabel>31067</altlabel>
 <usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="106">
 <include>customsettingsbutton</include>
-<label>Set Music background image</label>
-<altlabel>Reset Music background image</altlabel>
+<label>31068</label>
+<altlabel>31069</altlabel>
 <onclick>Skin.SetImage(CustomMusic)</onclick>
 <altclick>Skin.Reset(CustomMusic)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2058,16 +2058,16 @@
 <onclick>Skin.Reset(CustomMusic)</onclick>
 <altclick>Skin.Reset(CustomMusicFolder)</altclick>
 <altclick>Skin.Reset(CustomMusicFoldOn)</altclick>
-<label>Set Music background folder</label>
-<altlabel>Clear Music background folder</altlabel>
+<label>31070</label>
+<altlabel>31071</altlabel>
 <usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="108">
 <include>customsettingsbutton</include>
-<label>Set Apps background image</label>
-<altlabel>Reset Apps background image</altlabel>
+<label>31072</label>
+<altlabel>31073</altlabel>
 <onclick>Skin.SetImage(CustomApps)</onclick>
 <altclick>Skin.Reset(CustomApps)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2080,16 +2080,16 @@
 <onclick>Skin.Reset(CustomApps)</onclick>
 <altclick>Skin.Reset(CustomAppsFolder)</altclick>
 <altclick>Skin.Reset(CustomAppsFoldOn)</altclick>
-<label>Set Apps background folder</label>
-<altlabel>Clear Apps background folder</altlabel>
+<label>31074</label>
+<altlabel>31075</altlabel>
 <usealttexture>Skin.String(CustomAppsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="110">
 <include>customsettingsbutton</include>
-<label>Set Scripts background image</label>
-<altlabel>Reset Scripts background image</altlabel>
+<label>31076</label>
+<altlabel>31077</altlabel>
 <onclick>Skin.SetImage(CustomScripts)</onclick>
 <altclick>Skin.Reset(CustomScripts)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2103,16 +2103,16 @@
 <onclick>Skin.Reset(CustomScripts)</onclick>
 <altclick>Skin.Reset(CustomScriptsFolder)</altclick>
 <altclick>Skin.Reset(CustomScriptsFoldOn)</altclick>
-<label>Set Scripts background folder</label>
-<altlabel>Clear Scripts background folder</altlabel>
+<label>31078</label>
+<altlabel>31079</altlabel>
 <usealttexture>Skin.String(CustomScriptsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="112">
 <include>customsettingsbutton</include>
-<label>Set Files background image</label>
-<altlabel>Reset Files background image</altlabel>
+<label>31080</label>
+<altlabel>31081</altlabel>
 <onclick>Skin.SetImage(CustomFiles)</onclick>
 <altclick>Skin.Reset(CustomFiles)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2126,16 +2126,16 @@
 <onclick>Skin.Reset(CustomFiles)</onclick>
 <altclick>Skin.Reset(CustomFilesFolder)</altclick>
 <altclick>Skin.Reset(CustomFilesFoldOn)</altclick>
-<label>Set Files background folder</label>
-<altlabel>Clear Files background folder</altlabel>
+<label>31082</label>
+<altlabel>31083</altlabel>
 <usealttexture>Skin.String(CustomFilesFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
 
 <control type="togglebutton" id="114">
 <include>customsettingsbutton</include>
-<label>Set Weather background image</label>
-<altlabel>Reset Weather background image</altlabel>
+<label>31084</label>
+<altlabel>31085</altlabel>
 <onclick>Skin.SetImage(CustomWeather)</onclick>
 <altclick>Skin.Reset(CustomWeather)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2149,8 +2149,8 @@
 <onclick>Skin.Reset(CustomWeather)</onclick>
 <altclick>Skin.Reset(CustomWeatherFolder)</altclick>
 <altclick>Skin.Reset(CustomWeatherFoldOn)</altclick>
-<label>Set Weather background folder</label>
-<altlabel>Clear Weather background folder</altlabel>
+<label>31086</label>
+<altlabel>31087</altlabel>
 <usealttexture>Skin.String(CustomWeatherFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -2158,8 +2158,8 @@
 
 <control type="togglebutton" id="116">
 <include>customsettingsbutton</include>
-<label>Set Settings background image</label>
-<altlabel>Reset Settings background image</altlabel>
+<label>31088</label>
+<altlabel>31089</altlabel>
 <onclick>Skin.SetImage(CustomSettings)</onclick>
 <altclick>Skin.Reset(CustomSettings)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2173,8 +2173,8 @@
 <onclick>Skin.Reset(CustomSettings)</onclick>
 <altclick>Skin.Reset(CustomSettingsFolder)</altclick>
 <altclick>Skin.Reset(CustomSettingsFoldOn)</altclick>
-<label>Set Settings background folder</label>
-<altlabel>Clear Settings background folder</altlabel>
+<label>31090</label>
+<altlabel>31091</altlabel>
 <usealttexture>Skin.String(CustomSettingsFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>
@@ -2182,8 +2182,8 @@
 
 <control type="togglebutton" id="118">
 <include>customsettingsbutton</include>
-<label>Set Single Default background image</label>
-<altlabel>Reset Single Default background image</altlabel>
+<label>31092</label>
+<altlabel>31093</altlabel>
 <onclick>Skin.SetImage(Customdef)</onclick>
 <altclick>Skin.Reset(Customdef)</altclick>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
@@ -2196,8 +2196,8 @@
 <onclick>Skin.Reset(Customdef)</onclick>
 <altclick>Skin.Reset(CustomdefFolder)</altclick>
 <altclick>Skin.Reset(CustomdefFoldOn)</altclick>
-<label>Set Single Default background folder</label>
-<altlabel>Clear Single Default background folder</altlabel>
+<label>31094</label>
+<altlabel>31095</altlabel>
 <usealttexture>Skin.String(CustomdefFolder)</usealttexture>
 <visible allowhiddenfocus="true">Control.HasFocus(22) | ControlGroup(32).HasFocus()</visible>
 </control>

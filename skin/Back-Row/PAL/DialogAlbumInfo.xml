@@ -1,7 +1,7 @@
 <window id="2001">
 <defaultcontrol>5</defaultcontrol>
 <animation effect="fade" time="800">WindowClose</animation> 
-<allowoverlay>no</allowoverlay>
+<allowoverlay>yes</allowoverlay>
 
 <controls>
 <controlgroup>
@@ -9,15 +9,17 @@
 <animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
 <visible>Container.Content(Albums)</visible>	
 
+
+
 <control type="image">
-<description>background</description>
-<posx>-25</posx>
-<posy>0</posy>
-<width>745</width>
-<height>576</height>
-<texture>blackgloss.png</texture>
-<aspectratio>stretch</aspectratio>
-</control>
+		<description>backgorund</description>
+		<posx>-25</posx>
+		<posy>0</posy>
+		<width>726</width>
+		<height>578</height>
+		<texture>blackgloss.png</texture>
+		<aspectratio>stretch</aspectratio>
+		</control>
 
 <posx>25</posx>
 <control type="image">
@@ -327,14 +329,14 @@
 <visible>Container.Content(Artists)</visible>	
 
 <control type="image">
-<description>background</description>
-<posx>-25</posx>
-<posy>0</posy>
-<width>745</width>
-<height>576</height>
-<texture>blackgloss.png</texture>
-<aspectratio>stretch</aspectratio>
-</control>
+		<description>backgorund</description>
+		<posx>-25</posx>
+		<posy>0</posy>
+		<width>726</width>
+		<height>578</height>
+		<texture>blackgloss.png</texture>
+		<aspectratio>stretch</aspectratio>
+		</control>
 
 <posx>25</posx>
 <control type="image">

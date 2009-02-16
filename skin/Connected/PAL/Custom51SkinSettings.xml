@@ -303,14 +303,6 @@
       <onright>60</onright>
       <pagecontrol>60</pagecontrol>
       <visible>ControlGroup(9000).HasFocus(203)</visible>
-      <control type="radiobutton" id="23">
-        <description>TV Show Posters</description>
-        <width>490</width>
-        <label>$LOCALIZE[31502] $LOCALIZE[20343] $LOCALIZE[31512]</label>
-        <font>18BdFont</font>
-        <selected>Skin.HasSetting(TVShowsPosters)</selected>
-        <onclick>Skin.ToggleSetting(TVShowsPosters)</onclick>
-      </control>
       <control type="radiobutton" id="24">
         <description>Background Video Enable</description>
         <width>490</width>

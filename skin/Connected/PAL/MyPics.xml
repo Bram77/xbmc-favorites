@@ -12,7 +12,7 @@
     <include>Icons</include>
     <include>Wide</include>
     <include>Tilted</include>
-    <include>Photos</include>
+    <include>Fanart</include>
 
     <control type="image">
       <description>Photos Window Image</description>

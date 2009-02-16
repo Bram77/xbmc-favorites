@@ -185,7 +185,7 @@
 
 <include name="BigIcons">
 <control type="panel" id="51">
-<visible>Container.Content(Movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
+<visible>Container.Content(episodes) | Container.Content(MusicVideos)</visible>
 <posx>15</posx>
 <posy>60</posy>
 <width>700</width>
@@ -279,7 +279,349 @@
 
 </control>
 
+<control type="panel" id="51">
+<visible>Container.Content(Movies)</visible>
+<visible>system.platform.xbox</visible>
+<posx>15</posx>
+<posy>60</posy>
+<width>700</width>
+<height>520</height>
+<onleft>2</onleft>
+<onright>90</onright>
+<onup>51</onup>
+<ondown>51</ondown>
+<scrolltime>200</scrolltime>
+<viewtype label="538">Big Icons</viewtype>
+<pagecontrol>90</pagecontrol>
+<itemlayout height="250" width="170">
+
+<control type="image">
+<posx>6</posx>
+<posy>32</posy>
+<width>158</width>
+<height>196</height>
+<align>center</align>
+<aspectratio>keep</aspectratio>
+<info>ListItem.Icon</info>
+</control>
+
+<control type="label">
+<posx>86</posx>
+<posy>230</posy>
+<width>158</width>
+<height>16</height>
+<font>font15</font>
+<textcolor>white</textcolor>
+<selectedcolor>white</selectedcolor>
+<align>center</align>
+<scroll>false</scroll>
+<info>ListItem.label</info>
+</control>
+
+<control type="image">
+<posx>145</posx>
+<posy>200</posy>
+<width>25</width>
+<height>25</height>
+<info>ListItem.Overlay</info>
+<visible>Control.IsVisible(51) + Skin.HasSetting(menu-overlay)</visible>
+</control>
+
+</itemlayout>
+
+<focusedlayout height="250" width="170">
+
+<control type="image">
+<width>170</width>
+<height>260</height>
+<posx>0</posx>
+<posy></posy>
+<texture>folder-focus1.png</texture>
+</control>
+
+<control type="image">
+<posx>6</posx>
+<posy>32</posy>
+<width>158</width>
+<height>196</height>
+<align>center</align>
+<aspectratio>keep</aspectratio>
+<info>ListItem.Icon</info>
+</control>
+
+<control type="label">
+<posx>86</posx>
+<posy>230</posy>
+<width>158</width>
+<height>16</height>
+<font>font15</font>
+<textcolor>white</textcolor>
+<selectedcolor>white</selectedcolor>
+<align>center</align>
+<scroll>true</scroll>
+<info>ListItem.label</info>
+</control>
+
+<control type="image">
+<posx>145</posx>
+<posy>200</posy>
+<width>25</width>
+<height>25</height>
+<info>ListItem.Overlay</info>
+<visible>Control.IsVisible(51) + Skin.HasSetting(menu-overlay)</visible>
+</control>
+
+</focusedlayout>
+
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>730</width>
+<height>586</height>
+<texture>white.png</texture>
+<visible>Control.IsVisible(59) + Container.Content(Movies)</visible>
+<visible>!system.platform.xbox</visible>
+</control>
+
+<control type="panel" id="59">
+<visible>Container.Content(Movies)</visible>
+<visible>!system.platform.xbox</visible>
+
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<onleft>2</onleft>
+<onright>2</onright>
+<onup>59</onup>
+<ondown>59</ondown>
+<include></include>
+<viewtype label="Icons">Icons</viewtype>
+<scrolltime>200</scrolltime>
+<pagecontrol>90</pagecontrol>
+
+<itemlayout height="144" width="80">
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<info>ListItem.Icon</info>
+<visible>!IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>88FFFFFF</colordiffuse>
+</control>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<texture>defaultdvdposter.png</texture>
+<visible>IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>88FFFFFF</colordiffuse>
+</control>
+
+<control type="image">
+<posx>60</posx>
+<posy>120</posy>
+<width>25</width>
+<height>25</height>
+<info>ListItem.Overlay</info>
+<visible>Control.IsVisible(59) + Skin.HasSetting(menu-overlay)</visible>
+<colordiffuse>88FFFFFF</colordiffuse>
+</control>
+
+</itemlayout>
+
+
+<focusedlayout height="144" width="80">
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<texture>List background1.png</texture>
+<!-- Center Icons -->
+<animation effect="zoom" time="0" end="-20,-47,128,237" reversible="false" condition="![Container(59).Row(0) + Container(59).Column(0) | Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7) | Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7) | Container(59).Row(0) + Container(59).Column(8) | Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8) | Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Top Left Icon -->
+<animation effect="zoom" time="0" end="-3,-7,128,239" reversible="false" condition="Container(59).Row(0) + Container(59).Column(0)">Conditional</animation>
+
+<!-- Top Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-20,-7,128,239" reversible="false" condition="Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7)">Conditional</animation>
+
+<!-- Top Right Corner -->
+<animation effect="zoom" time="0" end="-45,-7,128,239" reversible="false" condition="Container(59).Row(0) + Container(59).Column(8)">Conditional</animation>
+
+<!-- Left Column Excluding Corners -->
+<animation effect="zoom" time="0" end="-3,-47,128,237" reversible="false" condition="[Container(59).Row(1) | Container(59).Row(2)] + Container(59).Column(0)">Conditional</animation>
+
+<!-- Bottom Left Corner -->
+<animation effect="zoom" time="0" end="-3,-90,128,237" reversible="false" condition="Container(59).Row(3) + Container(59).Column(0)">Conditional</animation>
+
+<!-- Bottom Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-20,-90,128,239" reversible="false" condition="Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7)">Conditional</animation>
+
+<!-- Bottom Right Corner -->
+<animation effect="zoom" time="0" end="-45,-90,128,239" reversible="false" condition="Container(59).Row(3) + Container(59).Column(8)">Conditional</animation>
+
+<!-- Right Column Excluding Corners -->
+<animation effect="zoom" time="0" end="-45,-47,128,239" reversible="false" condition="Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8)">Conditional</animation>
+<visible>!Control.IsVisible(899)</visible>
+</control>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<info>ListItem.Icon</info>
+<visible>!IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<!-- Center Icons -->
+<animation effect="zoom" time="0" end="-9,-32,106,208" condition="![Container(59).Row(0) + Container(59).Column(0) | Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7) | Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7) | Container(59).Row(0) + Container(59).Column(8) | Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8) | Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Top Left Icon -->
+<animation effect="zoom" time="0" end="8,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Top Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-9,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7)]">Conditional</animation>
+
+<!-- Top Right Corner -->
+<animation effect="zoom" time="0" end="-34,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Left Column Excluding Corners -->
+<animation effect="zoom" time="0" end="8,-32,106,208" condition="[Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Bottom Left Corner -->
+<animation effect="zoom" time="0" end="8,-75,106,208" condition="[Container(59).Row(3) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Bottom Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-9,-75,106,210" condition="[Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7)]">Conditional</animation>
+
+<!-- Bottom Right Corner -->
+<animation effect="zoom" time="0" end="-34,-75,106,210" condition="[Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Right Column Excluding Corners -->
+<animation effect="zoom" time="0" end="-34,-32,106,210" condition="[Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8)]">Conditional</animation>
+<visible>!Control.IsVisible(899)</visible>
+</control>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<texture>defaultdvdposter.png</texture>
+<visible>IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<!-- Center Icons -->
+<animation effect="zoom" time="0" end="-9,-32,106,208" condition="![Container(59).Row(0) + Container(59).Column(0) | Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7) | Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7) | Container(59).Row(0) + Container(59).Column(8) | Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8) | Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Top Left Icon -->
+<animation effect="zoom" time="0" end="8,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Top Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-9,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7)]">Conditional</animation>
+
+<!-- Top Right Corner -->
+<animation effect="zoom" time="0" end="-34,10,106,208" condition="[Container(59).Row(0) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Left Column Excluding Corners -->
+<animation effect="zoom" time="0" end="8,-32,106,208" condition="[Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Bottom Left Corner -->
+<animation effect="zoom" time="0" end="8,-75,106,208" condition="[Container(59).Row(3) + Container(59).Column(0)]">Conditional</animation>
+
+<!-- Bottom Row Excluding Corners -->
+<animation effect="zoom" time="0" end="-9,-75,106,210" condition="[Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7)]">Conditional</animation>
+
+<!-- Bottom Right Corner -->
+<animation effect="zoom" time="0" end="-34,-75,106,210" condition="[Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Right Column Excluding Corners -->
+<animation effect="zoom" time="0" end="-34,-32,106,210" condition="[Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8)]">Conditional</animation>
+<visible>!Control.IsVisible(899)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<info>ListItem.Icon</info>
+<visible>!IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>88FFFFFF</colordiffuse>
+<visible>Control.IsVisible(899)</visible>
+</control>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>80</width>
+<height>144</height>
+<texture>defaultdvdposter.png</texture>
+<visible>IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+<colordiffuse>88FFFFFF</colordiffuse>
+<visible>Control.IsVisible(899)</visible>
+</control>
+
+<control type="image">
+<posx>60</posx>
+<posy>120</posy>
+<width>25</width>
+<height>25</height>
+<info>ListItem.Overlay</info>
+<visible>Control.IsVisible(59) + Skin.HasSetting(menu-overlay)</visible>
+<colordiffuse>77FFFFFF</colordiffuse>
+
+<!-- Center Icons -->
+<animation effect="zoom" time="0" end="70,145,42,42" condition="![Container(59).Row(0) + Container(59).Column(0) | Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7) | Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(0) | Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7) | Container(59).Row(0) + Container(59).Column(8) | Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8) | Container(59).Row(3) + Container(59).Column(8)]">Conditional</animation>
+
+<!-- Top Left Icon -->
+<animation effect="zoom" time="0" end="87,185,42,42" condition="Container(59).Row(0) + Container(59).Column(0)">Conditional</animation>
+
+<!-- Top Row Excluding Corners -->
+<animation effect="zoom" time="0" end="70,185,42,42" condition="Container(59).Row(0) + Container(59).Column(1) | Container(59).Row(0) + Container(59).Column(2) | Container(59).Row(0) + Container(59).Column(3) | Container(59).Row(0) + Container(59).Column(4) | Container(59).Row(0) + Container(59).Column(5) | Container(59).Row(0) + Container(59).Column(6) | Container(59).Row(0) + Container(59).Column(7)">Conditional</animation>
+
+<!-- Top Right Corner -->
+<animation effect="zoom" time="0" end="45,185,42,42" condition="Container(59).Row(0) + Container(59).Column(8)">Conditional</animation>
+
+<!-- Left Column Excluding Corners -->
+<animation effect="zoom" time="0" end="87,145,42,42" condition="Container(59).Row(1) + Container(59).Column(0) | Container(59).Row(2) + Container(59).Column(0)">Conditional</animation>
+
+<!-- Bottom Left Corner -->
+<animation effect="zoom" time="0" end="87,105,42,42" condition="Container(59).Row(3) + Container(59).Column(0)">Conditional</animation>
+
+<!-- Bottom Row Excluding Corners -->
+<animation effect="zoom" time="0" end="70,105,42,42" condition="Container(59).Row(3) + Container(59).Column(1) | Container(59).Row(3) + Container(59).Column(2) | Container(59).Row(3) + Container(59).Column(3) | Container(59).Row(3) + Container(59).Column(4) | Container(59).Row(3) + Container(59).Column(5) | Container(59).Row(3) + Container(59).Column(6) | Container(59).Row(3) + Container(59).Column(7)">Conditional</animation>
+
+<!-- Bottom Right Corner -->
+<animation effect="zoom" time="0" end="45,105,42,42" condition="Container(59).Row(3) + Container(59).Column(8)">Conditional</animation>
+
+<!-- Right Column Excluding Corners -->
+<animation effect="zoom" time="0" end="45,145,42,42" condition="Container(59).Row(1) + Container(59).Column(8) | Container(59).Row(2) + Container(59).Column(8)">Conditional</animation>
+<visible>!Control.IsVisible(899)</visible>
+</control>
+
+</focusedlayout>
+</control>
+
+
 <control type="scrollbar" id="90">
+<visible>!Container.Content(Movies)</visible>
 <posx>700</posx>
 <posy>75</posy>
 <width>15</width>
@@ -299,6 +641,110 @@
 <visible>Control.IsVisible(51)</visible>
 <visible>!Control.HasFocus(57)</visible>
 </control>
+
+
+<control type="group" id="899">
+<posx>175</posx>
+<posy>165</posy>
+<width>420</width>
+<animation type="Visible" reversible="false">
+<effect type="fade" delay="2000" start="0" end="100" time="750" />
+</animation>
+<animation type="WindowClose" reversible="false">
+<effect type="fade" start="100" end="0" time="250" />
+</animation>
+<animation effect="fade" start="0" end="100" time="750" delay="2100">WindowOpen</animation>
+<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+<visible>[Control.HasFocus(59) + Container.Content(movies)] + [!Container(59).OnNext + !Container(59).OnPrevious]</visible>
+
+<control type="image">
+<posx>-175</posx>
+<posy>-165</posy>
+<width>720</width>
+<height>576</height>
+<texture>black.png</texture>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>370</width>
+<height>245</height>
+<texture>List background.png</texture>
+</control>
+
+
+<control type="image">
+<posx>10</posx>
+<posy>18</posy>
+<width>106</width>
+<height>208</height>
+<info>ListItem.Icon</info>
+<visible>!IsEmpty(ListItem.Thumb)</visible>
+<aspectratio>stretch</aspectratio>
+</control>
+
+
+
+<control type="label">
+<posx>130</posx>
+<posy>6</posy>
+<width>230</width>
+<textcolor>99ffffff</textcolor>
+<font>font16</font>
+<label>$INFO[ListItem.Genre]</label>
+<align>left</align>
+<scroll>true</scroll>
+</control>
+
+<control type="label">
+<posx>130</posx>
+<posy>26</posy>
+<width>230</width>
+<font>font16</font>
+<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+<align>left</align>
+<scroll>true</scroll>
+</control>
+
+
+<control type="fadelabel">
+<posx>130</posx>
+<posy>46</posy>
+<width>230</width>
+<textcolor>99ffffff</textcolor>
+<scroll>false</scroll>
+<scrollout>false</scrollout>
+<pauseatend>4000</pauseatend>
+<font>font16</font>
+<label>$LOCALIZE[20417]: $INFO[ListItem.Writer]</label>
+<label>$LOCALIZE[20339]: $INFO[ListItem.Director]</label>
+<label>$LOCALIZE[20074]: $INFO[ListItem.mpaa]</label>
+<label>$LOCALIZE[13408]: $INFO[ListItem.ratingandvotes]</label>
+<align>left</align>
+<scroll>true</scroll>
+</control>
+
+
+
+<control type="textbox">
+<posx>130</posx>
+<posy>76</posy>
+<width>230</width>
+<height>150</height>
+<font>font13</font>
+<label>$INFO[ListItem.Plot]</label>
+<align>left</align>
+<autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+<scroll>true</scroll>
+</control>
+
+
+		
+		
+		</control>
+	
+
 
 </include>
 
@@ -2286,6 +2732,7 @@
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2299,6 +2746,7 @@
 <texture>Black.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2312,6 +2760,7 @@
 <texture>Black.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2398,6 +2847,7 @@
 <textcolor>white</textcolor>
 <info>ListItem.Label</info>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <align>center</align>
 
 <animation effect="fade" time="800">WindowClose</animation>
@@ -2418,6 +2868,7 @@
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>!Skin.HasSetting(Background)</visible>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2431,6 +2882,7 @@
 <texture>Black.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2444,6 +2896,7 @@
 <texture>Black.png</texture>
 <animation effect="fade" time="800">WindowOpen</animation>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <animation effect="fade" time="800">WindowClose</animation>
 </control>
 
@@ -2533,6 +2986,7 @@
 <textcolor>white</textcolor>
 <info>ListItem.Label</info>
 <visible>Control.IsVisible(59)</visible>
+<visible>!Container.Content(movies)</visible>
 <align>center</align>
 
 <animation effect="fade" time="800">WindowClose</animation>
@@ -4334,7 +4788,7 @@
 <viewtype>list</viewtype>
 <orientation>horizontal</orientation>
 <focusposition>2</focusposition>
-<scrolltime>0</scrolltime>
+<scrolltime>150</scrolltime>
 
 <itemlayout width="144" height="600">
 
@@ -5005,7 +5459,7 @@
 <visible>Control.IsVisible(54) + Container.OnNext</visible>
 <animation effect="slide" tween="cubic" end="-50,0" time="200" reversible="false">Hidden</animation>
 
-		
+
 <control type="image">
 <posx>0</posx>
 <posy>0</posy>
@@ -5219,7 +5673,7 @@
 <visible>Control.IsVisible(54) + Container.OnNext</visible>
 <animation effect="slide" tween="cubic" end="-60,0" time="200" reversible="false">Hidden</animation>
 
-	
+
 <control type="image">
 <posx>260</posx>
 <posy>0</posy>
@@ -5505,7 +5959,7 @@
 <visible>Control.IsVisible(54) + Container.OnPrevious</visible>
 <animation effect="slide" tween="cubic" end="60,0" time="200" reversible="false">Hidden</animation>
 
-	
+
 <control type="image">
 <posx>260</posx>
 <posy>0</posy>
@@ -8121,9 +8575,9 @@
 
 <control type="image">
 <posx>-5</posx>
-<posy>15</posy>
+<posy>20</posy>
 <width>120</width>
-<height>90</height>
+<height>80</height>
 <texture>defaultdvdposter.png</texture>
 <info>ListItem.Thumb</info>
 </control>
@@ -8213,12 +8667,31 @@
 <visible>Control.HasFocus(51)</visible>
 </control>
 
+<control type="image">
+<posx>0</posx>
+<posy>1</posy>
+<width>335</width>
+<height>117</height>
+<texture>4.png</texture>
+<visible>Control.HasFocus(51)</visible>
+</control>
+
+<control type="image">
+<posx>335</posx>
+<posy>1</posy>
+<width>335</width>
+<height>117</height>
+<texture>4.png</texture>
+<visible>Control.HasFocus(51)</visible>
+</control>
+
+
 
 <control type="image">
 <posx>-5</posx>
-<posy>15</posy>
+<posy>20</posy>
 <width>120</width>
-<height>90</height>
+<height>80</height>
 <texture>defaultdvdposter.png</texture>
 <info>ListItem.Thumb</info>
 </control>
@@ -10298,7 +10771,7 @@
 <align>left</align>
 <scroll>true</scroll>
 </control>
-		
+
 <control type="textbox">
 <posx>10</posx>
 <posy>76</posy>
@@ -10401,7 +10874,7 @@
 <align>left</align>
 <scroll>true</scroll>
 </control>
-		
+
 <control type="textbox">
 <posx>40</posx>
 <posy>81</posy>
@@ -10482,7 +10955,7 @@
 </control>
 
 
-		
+
 <control type="textbox">
 <posx>40</posx>
 <posy>81</posy>
@@ -10593,7 +11066,7 @@
 <align>left</align>
 <scroll>true</scroll>
 </control>
-		
+
 <control type="textbox">
 <posx>10</posx>
 <posy>76</posy>
@@ -10929,7 +11402,7 @@
 </control>
 
 </include>
-		
+
 
 <include name="DVD Case Wrap 1">
 
@@ -11270,307 +11743,307 @@
 <visible>control.IsVisible(57)</visible>
 <visible>container.content(movies)</visible>
 <animation effect="fade" start="0" end="100" time="100">Visible</animation>
-			
+	
 <control type="label">
-				<description>Genre txt</description>
-				<posx>80</posx>
-				<posy>440</posy>
-				<width>80</width>
-				<label>$LOCALIZE[515]:</label>
-				<font>font12</font>
-				<align>right</align>
-				</control>
+		<description>Genre txt</description>
+		<posx>80</posx>
+		<posy>440</posy>
+		<width>80</width>
+		<label>$LOCALIZE[515]:</label>
+		<font>font12</font>
+		<align>right</align>
+		</control>
 
 <control type="label">
-				<description>Genre Rating value</description>
-				<posx>90</posx>
-				<posy>440</posy>
-				<width>600</width>
-				<label>$INFO[listitem.Genre]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<align>left</align>
-			</control>
+		<description>Genre Rating value</description>
+		<posx>90</posx>
+		<posy>440</posy>
+		<width>600</width>
+		<label>$INFO[listitem.Genre]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+		<align>left</align>
+	</control>
 
 <control type="label">
-				<description>Year txt</description>
-				<posx>80</posx>
-				<posy>460</posy>
-				<width>80</width>
-				<label>$LOCALIZE[562]:</label>
-				<font>font12</font>
-				<align>right</align>
-				</control>
+		<description>Year txt</description>
+		<posx>80</posx>
+		<posy>460</posy>
+		<width>80</width>
+		<label>$LOCALIZE[562]:</label>
+		<font>font12</font>
+		<align>right</align>
+		</control>
 
 <control type="label">
-				<description>Year value</description>
-				<posx>90</posx>
-				<posy>460</posy>
-				<width>600</width>
-				<label>$INFO[listitem.Year]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<align>left</align>
-			</control>
+		<description>Year value</description>
+		<posx>90</posx>
+		<posy>460</posy>
+		<width>600</width>
+		<label>$INFO[listitem.Year]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+		<align>left</align>
+	</control>
 
 <control type="label">
-				<description>Runtime txt</description>
-				<posx>80</posx>
-				<posy>480</posy>
-				<width>80</width>
-				<label>$LOCALIZE[2050]:</label>
-				<font>font12</font>
-				<align>right</align>
-				</control>
+		<description>Runtime txt</description>
+		<posx>80</posx>
+		<posy>480</posy>
+		<width>80</width>
+		<label>$LOCALIZE[2050]:</label>
+		<font>font12</font>
+		<align>right</align>
+		</control>
 
 <control type="label">
-				<description>Runtime value</description>
-				<posx>90</posx>
-				<posy>480</posy>
-				<width>600</width>
-				<label>$INFO[listitem.Duration]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<align>left</align>
-			</control>
+		<description>Runtime value</description>
+		<posx>90</posx>
+		<posy>480</posy>
+		<width>600</width>
+		<label>$INFO[listitem.Duration]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+		<align>left</align>
+	</control>
 
 <control type="label">
-				<description>MPAA Rating txt</description>
-				<posx>80</posx>
-				<posy>500</posy>
-				<width>80</width>
-				<label>$LOCALIZE[20074]:</label>
-				<font>font12</font>
-				<align>right</align>
-				</control>	
-				
+		<description>MPAA Rating txt</description>
+		<posx>80</posx>
+		<posy>500</posy>
+		<width>80</width>
+		<label>$LOCALIZE[20074]:</label>
+		<font>font12</font>
+		<align>right</align>
+		</control>	
+		
 <control type="label">
-				<description>MPAA Rating value</description>
-				<posx>90</posx>
-				<posy>500</posy>
-				<width>600</width>
-				<label>$INFO[listitem.MPAA]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<align>left</align>
-			</control>
+		<description>MPAA Rating value</description>
+		<posx>90</posx>
+		<posy>500</posy>
+		<width>600</width>
+		<label>$INFO[listitem.MPAA]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+		<align>left</align>
+	</control>
 
 <control type="label">
-				<description>Tagline txt</description>
-				<posx>80</posx>
-				<posy>530</posy>
-				<width>80</width>
-				<label>$LOCALIZE[202]:</label>
-				<font>font12</font>
-				<align>right</align>
-				</control>
+		<description>Tagline txt</description>
+		<posx>80</posx>
+		<posy>530</posy>
+		<width>80</width>
+		<label>$LOCALIZE[202]:</label>
+		<font>font12</font>
+		<align>right</align>
+		</control>
 
 <control type="label">
-				<description>Tagline value</description>
-				<posx>90</posx>
-				<posy>530</posy>
-				<width>600</width>
-				<label>$INFO[listitem.Tagline]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-				<align>left</align>
-			</control>
+		<description>Tagline value</description>
+		<posx>90</posx>
+		<posy>530</posy>
+		<width>600</width>
+		<label>$INFO[listitem.Tagline]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+		<align>left</align>
+	</control>
 
 </control>
 </include>
 
 <control type="label" id="1">
-				<description>Studio txt</description>
-				<posx>370</posx>
-				<posy>140</posy>
-				<width>165</width>
-				<label>$LOCALIZE[572]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Director txt</description>
-				<posx>370</posx>
-				<posy>166</posy>
-				<width>165</width>
-				<label>$LOCALIZE[20339]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Writing Credits txt</description>
-				<posx>370</posx>
-				<posy>192</posy>
-				<width>165</width>
-				<label>$LOCALIZE[20417]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Genre txt</description>
-				<posx>370</posx>
-				<posy>218</posy>
-				<width>165</width>
-				<label>$LOCALIZE[515]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Year</description>
-				<posx>370</posx>
-				<posy>244</posy>
-				<width>165</width>
-				<label>$LOCALIZE[562]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>TagLine txt</description>
-				<posx>370</posx>
-				<posy>270</posy>
-				<width>165</width>
-				<label>$LOCALIZE[202]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>PlotOutline txt</description>
-				<posx>370</posx>
-				<posy>296</posy>
-				<width>165</width>
-				<label>$LOCALIZE[203]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Rating txt</description>
-				<posx>370</posx>
-				<posy>322</posy>
-				<width>165</width>
-				<label>$LOCALIZE[563]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>Runtime txt</description>
-				<posx>370</posx>
-				<posy>348</posy>
-				<width>165</width>
-				<label>$LOCALIZE[2050]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="1">
-				<description>MPPA Rating txt</description>
-				<posx>370</posx>
-				<posy>374</posy>
-				<width>165</width>
-				<label>$LOCALIZE[20074]:</label>
-				<font>font12</font>
-				</control>
-			
-			<control type="label" id="36">
-				<description>Studio value</description>
-				<posx>520</posx>
-				<posy>140</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-			</control>
-			
-			<control type="label" id="21">
-				<description>Director value</description>
-				<posx>520</posx>
-				<posy>166</posy>
-				<width>555</width>
-				<label>$INFO[listitem.director]</label>
-				<scroll>true</scroll>
-				<font>font12</font>
-			</control>
-			
-			<control type="label" id="22">
-				<description>Writing Credits value</description>
-				<posx>520</posx>
-				<posy>192</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label" id="23">
-				<description>Genre value</description>
-				<posx>520</posx>
-				<posy>218</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label" id="24">
-				<description>Year value</description>
-				<posx>520</posx>
-				<posy>244</posy>
-				<width>555</width>
-				<label>$INFO[listitem.year]</label>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label" id="25">
-				<description>TagLine value</description>
-				<posx>520</posx>
-				<posy>270</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-			</control>
-			
-						
-			<control type="label" id="26">
-				<description>PlotOutline value</description>
-				<posx>520</posx>
-				<posy>296</posy>
-				<width>555</width>
-				<info>ListItem.Plot</info>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label" id="30">
-				<description>Rating and votes value</description>
-				<posx>520</posx>
-				<posy>322</posy>
-				<width>555</width>
-				<info>ListItem.StarRating</info>
-				<scroll>true</scroll>
-			</control>
-			
-			<control type="label" id="31">
-				<description>Runtime value</description>
-				<posx>520</posx>
-				<posy>348</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-			</control>
+		<description>Studio txt</description>
+		<posx>370</posx>
+		<posy>140</posy>
+		<width>165</width>
+		<label>$LOCALIZE[572]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Director txt</description>
+		<posx>370</posx>
+		<posy>166</posy>
+		<width>165</width>
+		<label>$LOCALIZE[20339]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Writing Credits txt</description>
+		<posx>370</posx>
+		<posy>192</posy>
+		<width>165</width>
+		<label>$LOCALIZE[20417]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Genre txt</description>
+		<posx>370</posx>
+		<posy>218</posy>
+		<width>165</width>
+		<label>$LOCALIZE[515]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Year</description>
+		<posx>370</posx>
+		<posy>244</posy>
+		<width>165</width>
+		<label>$LOCALIZE[562]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>TagLine txt</description>
+		<posx>370</posx>
+		<posy>270</posy>
+		<width>165</width>
+		<label>$LOCALIZE[202]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>PlotOutline txt</description>
+		<posx>370</posx>
+		<posy>296</posy>
+		<width>165</width>
+		<label>$LOCALIZE[203]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Rating txt</description>
+		<posx>370</posx>
+		<posy>322</posy>
+		<width>165</width>
+		<label>$LOCALIZE[563]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>Runtime txt</description>
+		<posx>370</posx>
+		<posy>348</posy>
+		<width>165</width>
+		<label>$LOCALIZE[2050]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="1">
+		<description>MPPA Rating txt</description>
+		<posx>370</posx>
+		<posy>374</posy>
+		<width>165</width>
+		<label>$LOCALIZE[20074]:</label>
+		<font>font12</font>
+		</control>
+	
+	<control type="label" id="36">
+		<description>Studio value</description>
+		<posx>520</posx>
+		<posy>140</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+	</control>
+	
+	<control type="label" id="21">
+		<description>Director value</description>
+		<posx>520</posx>
+		<posy>166</posy>
+		<width>555</width>
+		<label>$INFO[listitem.director]</label>
+		<scroll>true</scroll>
+		<font>font12</font>
+	</control>
+	
+	<control type="label" id="22">
+		<description>Writing Credits value</description>
+		<posx>520</posx>
+		<posy>192</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+	</control>
+	
+	<control type="label" id="23">
+		<description>Genre value</description>
+		<posx>520</posx>
+		<posy>218</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+	</control>
+	
+	<control type="label" id="24">
+		<description>Year value</description>
+		<posx>520</posx>
+		<posy>244</posy>
+		<width>555</width>
+		<label>$INFO[listitem.year]</label>
+		<scroll>true</scroll>
+	</control>
+	
+	<control type="label" id="25">
+		<description>TagLine value</description>
+		<posx>520</posx>
+		<posy>270</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+	</control>
+	
+				
+	<control type="label" id="26">
+		<description>PlotOutline value</description>
+		<posx>520</posx>
+		<posy>296</posy>
+		<width>555</width>
+		<info>ListItem.Plot</info>
+		<scroll>true</scroll>
+	</control>
+	
+	<control type="label" id="30">
+		<description>Rating and votes value</description>
+		<posx>520</posx>
+		<posy>322</posy>
+		<width>555</width>
+		<info>ListItem.StarRating</info>
+		<scroll>true</scroll>
+	</control>
+	
+	<control type="label" id="31">
+		<description>Runtime value</description>
+		<posx>520</posx>
+		<posy>348</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+	</control>
 
-			<control type="label" id="32">
-				<description>MPPA Rating value</description>
-				<posx>520</posx>
-				<posy>374</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>false</scroll>
-			</control>
+	<control type="label" id="32">
+		<description>MPPA Rating value</description>
+		<posx>520</posx>
+		<posy>374</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>false</scroll>
+	</control>
 
-			<control type="label" id="32">
-				<description>MPPA Rating value</description>
-				<posx>520</posx>
-				<posy>374</posy>
-				<width>555</width>
-				<label>-</label>
-				<scroll>true</scroll>
-			</control>
-		
+	<control type="label" id="32">
+		<description>MPPA Rating value</description>
+		<posx>520</posx>
+		<posy>374</posy>
+		<width>555</width>
+		<label>-</label>
+		<scroll>true</scroll>
+	</control>
+
 
 
 
@@ -12968,7 +13441,7 @@
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
-			
+	
 <control type="label">
 <description>Rating</description>
 <posx>535</posx>
@@ -12983,7 +13456,7 @@
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
-	
+
 <control type="label">
 <description>Director value</description>
 <posx>715</posx>
@@ -12999,7 +13472,7 @@
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
-			
+	
 <control type="label">
 <description>Year value</description>
 <posx>715</posx>
@@ -13026,7 +13499,7 @@
 <animation effect="fade" time="200">WindowOpen</animation>
 <animation effect="fade" time="200">WindowClose</animation> 
 </control>
-			
+	
 <control type="image">
 <posx>560</posx>
 <posy>102</posy>
@@ -13066,8 +13539,8 @@
 <animation effect="fade" time="200">WindowClose</animation> 
 <visible>container.content(seasons)</visible>
 </control>			
-				
-			
+		
+	
 
 <control type="label">
 <posx>535</posx>
@@ -14012,7 +14485,7 @@
 <posy>10</posy>
 <width>300</width>
 <height>20</height>
-<font>special13</font>
+<font>special15</font>
 <textcolor>white</textcolor>
 <scroll>true</scroll>
 <scrolltime>300</scrolltime>

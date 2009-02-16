@@ -12,12 +12,8 @@
     <include>Icons</include>
     <include>Wide</include>
     <include>Tilted</include>
-    <include>Movies</include>
-    <include>TVShows</include>
-    <include>TVShowsPosters</include>
+    <include>Fanart</include>
     <include>Seasons</include>
-    <include>Episodes</include>
-    <include>MusicVideos</include>
 
     <control type="image">
       <description>Videos Library Window Image</description>
@@ -481,7 +477,7 @@
             <texturenofocus>-</texturenofocus>
             <textoffsetx>45</textoffsetx>
             <pulseonselect>false</pulseonselect>
-            <onclick>Container.SetViewMode(55)</onclick>
+            <onclick>Container.SetViewMode(57)</onclick>
             <onleft>51</onleft>
             <onright>51</onright>
             <onup>2006</onup>
@@ -544,7 +540,7 @@
             <height>30</height>
             <aspectratio align="left">keep</aspectratio>
             <texture>ButtonDot.png</texture>
-            <visible>ControlGroup(9001).HasFocus + Control.IsVisible(55)</visible>
+            <visible>ControlGroup(9001).HasFocus + [Control.IsVisible(55) | Control.IsVisible(57)]</visible>
           </control>
         </control>
       </control>
