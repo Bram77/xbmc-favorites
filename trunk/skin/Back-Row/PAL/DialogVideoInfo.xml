@@ -5,17 +5,78 @@
 	<zorder>true</zorder>
 	<include>dialog-effect</include> 
 	<controls>
+
+<control type="group">
+<visible>!system.platform.xbox</visible>
+<visible>!Container.OnNext + !Container.OnPrevious</visible>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<animation effect="fade" time="400">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[Fanart.image]</texture>
+<visible>container.content(episodes)</visible>
+<animation effect="fade" time="400">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
+</control>
+
+
+
 <controlgroup>
 <animation effect="slide" time="600" start="650,0" end="0,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowOpen</animation>
 <animation effect="slide" time="600" start="0,0" end="730,0" acceleration="-1" condition="!Skin.HasSetting(animated)">WindowClose</animation>
 
+<control type="image" description="Fanart Image">
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>background2.png</texture>
+<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+<visible>!container.content(episodes)</visible>
+<visible>!system.platform.xbox</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+
 <control type="image">
-		<description>backgorund</description>
-		<posx>0</posx>
+		<description>background</description>
+		<posx>-2</posx>
 		<posy>0</posy>
-		<width>720</width>
-		<height>576</height>
+		<width>726</width>
+		<height>578</height>
 		<texture>blackgloss.png</texture>
+		<visible>!system.platform.xbox</visible>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>e1ffffff</colordiffuse>
+		</control>
+
+		<control type="image">
+		<description>background</description>
+		<posx>-2</posx>
+		<posy>0</posy>
+		<width>726</width>
+		<height>578</height>
+		<texture>blackgloss.png</texture>
+		<visible>system.platform.xbox</visible>
 		<aspectratio>stretch</aspectratio>
 		</control>
 
@@ -914,6 +975,7 @@
 				<onup>11</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 			<control type="button" id="8">
 				<description>Play</description>
@@ -927,6 +989,7 @@
 				<onup>5</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 			<control type="button" id="9">
 				<description>Resume</description>
@@ -940,6 +1003,7 @@
 				<onup>8</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 			<control type="button" id="6">
 				<description>Refresh</description>
@@ -953,6 +1017,7 @@
 				<onup>9</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 			<control type="button" id="10">
 				<description>Get Thumb</description>
@@ -966,6 +1031,7 @@
 				<onup>6</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 
 			<control type="button" id="12">
@@ -980,6 +1046,7 @@
 				<onup>10</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 				</control>
 
                <control type="button" id ="11">
@@ -995,6 +1062,7 @@
 				<onup>12</onup>
 				<ondown>5</ondown>
 				<visible>!IsEmpty(ListItem.Trailer)</visible>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 
 			  
@@ -1022,6 +1090,7 @@
 				<onup>50</onup>
 				<ondown>6</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 			
 			<control type="button" id="6">
@@ -1036,6 +1105,7 @@
 				<onup>50</onup>
 				<ondown>10</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 
 			<control type="button" id="10">
@@ -1050,6 +1120,7 @@
 				<onup>50</onup>
 				<ondown>12</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 			</control>
 
 <control type="button" id="12">
@@ -1064,6 +1135,7 @@
 				<onup>50</onup>
 				<ondown>5</ondown>
 				<align>center</align>
+				<colordiffuse>ddffffff</colordiffuse>
 				</control>
 
           

@@ -1,7 +1,7 @@
 <colors>
 
 	<color name="DefaultTextColor">FF4D4D4D</color>
-	<color name="DisabledTextColor">FF242424</color>
+	<color name="DisabledTextColor">FF343434</color>
 	<color name="FocusedTextColor">FFBABABA</color>
 	<color name="ShadowTextColor">FF000000</color>
 	<color name="SelectedTextColor">FFFDFF46</color>

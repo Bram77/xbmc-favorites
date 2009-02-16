@@ -76,6 +76,29 @@
 	    <visible>!Skin.HasSetting(Background)</visible>
         </control>
 
+<control>
+<description>Mask Overlay</description>
+<type>image</type>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>Dark Mask.png</texture>
+<visible>!Skin.HasSetting(Mask Overlay)</visible>
+</control>
+
+<control>
+<description>Mask Overlay</description>
+<type>image</type>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>Dark Mask.png</texture>
+<visible>!Skin.HasSetting(Mask Overlay)</visible>
+</control>
+
+
 
 <control>
 		<description>Panel Image</description>
@@ -195,43 +218,19 @@
 
 
 <!-- Date and Time Labels -->
-	<control>
-		<description>Date</description>
-		<type>label</type>
-		<posx>620</posx>
-		<posy>35</posy>
-		<label>552</label>
-		<info>System.Date</info>
-		<align>right</align>
-		<aligny>center</aligny>
-		<font>special13</font>
-		 <textcolor>white</textcolor>
-	    </control>
-
-	<control>
-		<description>Date and Time Suffix</description>
-		<type>label</type>
-		<posx>632</posx>
-		<posy>33</posy>
-		<label>|</label>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>special13</font>
-		 <textcolor>white</textcolor>
-	      </control>
-
-	<control>
-		<description>Time</description>
- 		<type>label</type>
-		<posx>650</posx>
-		<posy>35</posy>
-		<label>555</label>
-		<info>System.Time</info>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>special13</font> 
-		<textcolor>white</textcolor>
-	   	</control>
+<control type="label">
+<description>Time label</description>
+<posx>700</posx>
+<posy>20</posy>
+<width>300</width>
+<label>$INFO[System.Time] | $INFO[System.Date]</label>
+<aligy>center</aligy>
+<align>right</align>
+<font>fontkb</font>
+<textcolor>white</textcolor>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
 
 
 	</controls>

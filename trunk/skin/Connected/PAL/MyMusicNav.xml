@@ -12,9 +12,7 @@
     <include>Icons</include>
     <include>Wide</include>
     <include>Tilted</include>
-    <include>Artists</include>
-    <include>Albums</include>
-    <include>Songs</include>
+    <include>Fanart</include>
 
     <control type="image">
       <description>Music Library Window Image</description>

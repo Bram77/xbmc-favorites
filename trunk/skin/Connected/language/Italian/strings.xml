@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings> 
+
+  <string id="31000">Foto</string> 
+  <string id="31001">Servizi</string> 
+  <string id="31002">Plugin</string> 
+  <string id="31003">VideoClip</string> 
+  <string id="31004">Emulatori</string> 
+  <string id="31005">Stagioni</string> 
+
+  <string id="31010">Benvenuto</string> 
+  <string id="31011">Grazie per aver scelto [color=FocusedTextColor]XBMC Connected[/color].[CR]Si consiglia l'utilizzo dell'ultima versione di XBMC.</string> 
+  <string id="31012">Ricordate di controllare le Opzioni Skin nelle Impostazioni.[CR]Le impostazioni sono visibili premendo destra nella home page.</string> 
+  <string id="31013">XBMC Connected</string> 
+
+  <string id="31020">Opzioni</string> 
+  <string id="31021">Largo</string> 
+  <string id="31022">Fanart</string> 
+  <string id="31023">Tilt</string> 
+  <string id="31024">Profilo Caricato</string> 
+  <string id="31025">Impostazioni Profilo</string> 
+  <string id="31026">H:</string> 
+  <string id="31027">L:</string> 
+  <string id="31028">Condizioni Attuali</string> 
+  <string id="31029">Outlook:</string> 
+
+  <string id="31030">In Pausa</string> 
+  <string id="31031">In Riavvolgimento</string> 
+  <string id="31032">In Fast Forward</string> 
+  <string id="31033">In Riproduzione</string> 
+  <string id="31040">Vai Indietro</string> 
+  <string id="31041">Riavvolgi</string> 
+  <string id="31042">Stop</string> 
+  <string id="31043">Pausa</string> 
+  <string id="31044">Avanti</string> 
+  <string id="31045">Vai Avanti</string> 
+  <string id="31046">Play</string> 
+  <string id="31047">Muto</string> 
+
+  <string id="31501">Sfondi</string> 
+  <string id="31502">Abilita</string> 
+  <string id="31503">Animazioni Home</string> 
+  <string id="31504">Ricarica Skin</string> 
+  <string id="31505">Resetla Impostazioni Skin</string> 
+  <string id="31506">Percorso Fanart:</string> 
+  <string id="31507">Icone Selezione</string> 
+  <string id="31508">Immagini Selezione</string> 
+  <string id="31509">Icone Sfondo</string> 
+  <string id="31510">Visualizza</string> 
+  <string id="31511">Ordina Etichette</string> 
+  <string id="31512">Poster</string> 
+  <string id="31513">Testo Info In</string> 
+  <string id="31514">Condizioni</string> 
+  <string id="31515">Immagine a Pieno Sfondo In</string> 
+  <string id="31516">Video a Pieno Sfondo</string> 
+  <string id="31517">Visualizzazione a Pieno Sfondo</string> 
+  <string id="31518">Tempo nelle Info In Esecuzione</string> 
+  <string id="31519">Nelle Visualizzazioni Supportate</string> 
+  <string id="31520">Barre di Scorrimento nei Dialoghi</string> 
+  <string id="31521">Barre di Scorrimento nelle Finestre</string> 
+  <string id="31522">Script Meteo</string> 
+  <string id="31523">Imposta Percorso Script:</string> 
+  <string id="31524">Sfondo Personalizzato</string> 
+  <string id="31525">Reimposta Sfondo</string> 
+  <string id="31526">Extra</string> 
+  <string id="31527">Imposta Nome Script:</string> 
+  <string id="31528">Imposta Cartella Immagini Video:</string> 
+  <string id="31529">Imposta Cartella Immagini Musica:</string> 
+  <string id="31530">Imposta Cartella Immagini Foto:</string> 
+  <string id="31531">Dialoghi di Scansione Brevi</string> 
+
+  <string id="31540">Configura Impostazioni Video, Comprende:[CR][CR]- Unione File[CR]- Opzioni Archivio[CR]- Calibrazione Schermo[CR]- Opzioni Player[CR]- Formato Sottotitoli</string> 
+  <string id="31541">Configura Impostazioni Musica, Comprende:[CR][CR]- Visualizzazioni[CR]- Opzioni Archivio[CR]- Opzioni Player[CR]- Last.FM[CR]- Rip CD[CR]- Karaoke</string> 
+  <string id="31542">Configura Impostazioni Foto, Comprende:[CR][CR]- Opzioni File[CR]- SlideShow</string> 
+  <string id="31543">Configura Impostazioni Servizi, Comprende:[CR][CR]- Modalità Video[CR]- Opzioni Trainer</string> 
+  <string id="31544">Configura Impostazioni Meteo, Comprende:[CR][CR]- Città[CR]- Regioni[CR]- CAP</string> 
+  <string id="31545">Configura Impostazioni Rete, Comprende:[CR][CR]- Indirizzo IP &amp; Proxy HTTP[CR]- Impostazioni FTP &amp; Server Web[CR]- Autorilevamento[CR]- Client SMB [CR]- Impostazioni uPnP</string> 
+  <string id="31546">Configura Impostazioni Sistema, Comprende:[CR][CR]- Log di Debug[CR]- Colori LED[CR]- Impostazioni LCD[CR]- Autorun[CR]- Gestione Harddisk[CR]- Memoria Cache[CR]- Hardware Video &amp; Audio[CR]- Master Lock</string> 
+  <string id="31547">Configura Impostazioni Aspetto, Comprende:[CR][CR]- Selezione Skin[CR]- Opzioni RSS[CR]- Selezione Regione[CR]- Data &amp; Ora[CR]- Risoluzione Schermo[CR]- Opzioni Screensaver</string> 
+  <string id="31548">Configura Profili, Comprende:[CR][CR]- Creazione Profili[CR]- Eliminazione Profili[CR]- Impostazioni Utente[CR]- Blocco Profilo</string> 
+  <string id="31549">View System Information, Comprende:[CR][CR]- Dispositivi di Memorizzazione[CR]- Hardware[CR]- Rete[CR]- Video[CR]- Riconoscimenti XBMC</string> 
+  <string id="31550">Configura Impostazioni Skin, Comprende:[CR][CR]- Opzioni Home[CR]- Impostazioni Visualizzazione Media[CR]- Opzioni Sfondo[CR]- Nascondi/Visualizza Barre di ScorrimentoCR]- Resetta Impostazioni Skin</string> 
+
+</strings> 

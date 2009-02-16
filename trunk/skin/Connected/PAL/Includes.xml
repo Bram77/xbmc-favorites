@@ -101,7 +101,7 @@
         <aspectratio>scale</aspectratio>
         <colordiffuse>DisabledTextColor</colordiffuse>
         <info>ListItem.Property(fanart_image)</info>
-        <visible>System.IdleTime(1) + IsEmpty(FanArt.Image) + !Skin.HasSetting(Fanart) + Control.IsVisible(55)</visible>
+        <visible>System.IdleTime(1) + IsEmpty(FanArt.Image) + !Skin.HasSetting(Fanart) + [Control.IsVisible(55) | Control.IsVisible(57)]</visible>
       </control>
       <control type="largeimage">
         <posx>0</posx>
@@ -111,7 +111,7 @@
         <aspectratio>scale</aspectratio>
         <colordiffuse>DisabledTextColor</colordiffuse>
         <info>Fanart.Image</info>
-        <visible>!Skin.HasSetting(Fanart) + Control.IsVisible(55)</visible>
+        <visible>!Skin.HasSetting(Fanart) + [Control.IsVisible(55) | Control.IsVisible(57)]</visible>
       </control>
       <control type="image">
         <posx>0</posx>
