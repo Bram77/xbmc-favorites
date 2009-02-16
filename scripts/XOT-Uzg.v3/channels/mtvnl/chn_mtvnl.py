@@ -62,7 +62,7 @@ class Channel(chn_class.Channel):
         self.requiresLogon = False
         
         self.episodeItemRegex = '<a href="(http://www.mtv.nl/artikel.php\?article=\d+)"[^<]+><strong>([^<]+)<' # used for the ParseMainList
-        self.videoItemRegex = '<td><a href="javascript:launchOverdrive\([^)]+\'(id=\d+)\'\);">([^<\n\r]+)([\n\r\t ]+)*([^<]+)</a>(<a [^<]+>([^<]+)</a>){0,1}'   # used for the CreateVideoItem 
+        self.videoItemRegex = '<td>(\W{0,1}<a href="javascript:launchOverdrive\([^)]+\'(id=\d+)\'\);">([^<]*)</a>)(\W{0,1}<a [^>]+>([^<]*)</a>){0,1}(\W{0,1}<a [^>]+>([^<]*)</a>){0,1}\W{0,1}</td>[\n\r]'   # used for the CreateVideoItem 
 #        self.folderItemRegex = '<a href="\.([^"]*/)(cat/)(\d+)"( style="color:\s*white;"\s*)*>([^>]+)</a><br'  # used for the CreateFolderItem
         self.mediaUrlRegex = '<param name="src" value="([^"]+)" />'    # used for the UpdateVideoItem
         return True
@@ -98,8 +98,18 @@ class Channel(chn_class.Channel):
         """
         logFile.debug('starting CreateVideoItem for %s', self.channelName)
         
-        #logFile.debug(resultSet)
-        item = common.clistItem("%s%s%s" % (resultSet[1], resultSet[3], resultSet[5]), "%s/content.jhtml?%s" % (self.baseUrl, resultSet[0]))
+        logFile.debug(resultSet)
+        """
+        (
+        0 '<a href="javascript:launchOverdrive(\'name=ontv\',\'id=106960\');">Fur TV - Episode 101 </a>'
+        1 'id=106960'
+        2 'Fur TV - Episode 101 '
+        3, ''
+        4, 'test'
+        5, ''
+        6, 'test')
+        """
+        item = common.clistItem("%s%s%s" % (resultSet[2], resultSet[4], resultSet[6]), "%s/content.jhtml?%s" % (self.baseUrl, resultSet[1]))
         
         item.icon = self.icon
         item.type = 'video'
