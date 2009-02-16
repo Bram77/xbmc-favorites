@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <string id="0">OpenSubtitles</string>
+    <string id="1">Xbox Media Center</string>
+    <string id="2">Leo</string>
+
+    <!-- User Messages -->
+    <string id="100">Exception for</string>
+
+    <!-- Settings labels -->
+    <string id="201">Server</string>
+    <string id="202">Username</string>
+    <string id="203">Password</string>
+    <string id="204">Extract subtitles to video file folder</string>
+    <string id="205">Subtitles folder</string>
+
+    <!-- Settings error messages -->
+    <string id="230">There was an error saving settings!</string>
+
+    <!-- Settings restart required message -->
+    <string id="240">Changes won't take effect until you restart.</string>
+    <string id="241">Restart %s now?</string>
+
+    <!-- Settings buttons -->
+    <string id="250">Apply</string>
+    <string id="251">Cancel</string>
+    <string id="252">Update</string>
+    <string id="253">Credits</string>
+    <string id="255">Restart</string>
+    <string id="256">Later</string>
+    
+    <!-- Labels -->
+    <string id="630">Subtitle file downloaded and extracted</string>
+    <string id="631">Extracting %s to %s</string>
+    <string id="632">Downloading %s</string>
+    <string id="633">Downloading File</string>
+    <string id="634">Error! %s</string>
+    <string id="635">Connected</string>
+    <string id="636">Connecting anonymously...</string>
+    <string id="637">Connecting as %s...</string>
+    <string id="638">What do you want to run this for?</string>
+    <string id="639">No music is playing fool!</string>
+    <string id="640">Select a video file</string>
+    <string id="641">%s Settings</string>
+    <string id="642">Searching subtitles for %s</string>
+
+    <!-- OSDB Messages -->
+    <string id="730">OSDB server name missing</string>
+    <string id="731">XMLRPC %s: %s</string>
+    <string id="732">LogIn</string>
+    <string id="733">LogOut</string>
+    <string id="734">GetSubLanguages</string>
+    <string id="735">CheckMovieHash</string>
+    <string id="736">SearchSubtitles</string>
+    <string id="737">Not connected to osdb server</string>
+    <string id="738">Hashing %s not found</string>
+    <string id="739">Hashing %s %s</string>
+    <string id="740">File found on share, remote files not supported</string>
+    <string id="741">No subtitles found</string>
+    <string id="742">%s subtitles found</string>
+    <string id="743"></string>
+    <string id="744"></string>
+
+    <!-- Credits -->
+    <string id="900">Version</string>
+    <string id="901">Team Credits:</string>
+    <string id="902">Additional Credits:</string>
+    <string id="903">Skin Credits:</string>
+
+    <!-- Credits headings-->
+    <string id="910">Head Developer &amp; Coder</string>
+    <string id="911">Original Author</string>
+    <string id="912">Original Skinning Mod</string>
+    <string id="913">Unicode Support</string>
+    <string id="914">Language File</string>
+
+    <!-- Update messages -->
+    <string id="1000">Your version is up to date.</string>
+    <string id="1001">Fetching current tagged versions...</string>
+    <string id="1002">is newer</string>
+    <string id="1003">Would you like to update?</string>
+    <string id="1004">Fetching file list...</string>
+    <string id="1005">Please wait...</string>
+    <string id="1006">Version</string>
+    <string id="1007">Fetching:</string>
+    <string id="1008">Path:</string>
+    <string id="1009">File:</string>
+    <string id="1010">Your new version was saved to:</string>
+
+    <!-- Update error messages -->
+    <string id="1030">No tagged versions were found!</string>
+    <string id="1031">There was an error updating script!</string>
+</strings>
