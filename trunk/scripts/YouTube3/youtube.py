@@ -67,7 +67,8 @@ class YouTube:
 
 
 		# pattern to match youtube video session id.
-		self.session_pattern = re.compile('&t=([0-9a-zA-Z-_]{32})')
+		self.session_pattern = re.compile('&t=([0-9a-zA-Z-_%]{32,})&')
+		
 		# pattern to match login status
 		self.login_pattern = re.compile('Log In')
 
@@ -81,9 +82,10 @@ class YouTube:
 		self.base_url = 'http://www.youtube.com'
 		self.base_url2 = 'http://gdata.youtube.com'
 		
-		self.stream_url = self.base_url + '/get_video?video_id=%s&t=%s'
-		self.video_url = self.base_url + '/?v=%s'		
-
+		#self.stream_url = self.base_url + '/watch?v=%s'				
+		self.stream_url = self.base_url + '/get_video.php?video_id=%s&t=%s'
+		self.video_url = self.base_url + '/watch?v=%s'		
+		self.swf_url = '%s'
 		self.initUrls()
 		# should exotic characters be stripped?
 		self.strip_chars = True
@@ -149,8 +151,6 @@ class YouTube:
 		
 		
 	def get_rss2(self, url):	
-	
-		print "URL: " + str(url)
 	
 		data = self.retrieve(url)		
 		
@@ -366,16 +366,17 @@ class YouTube:
 		if not confirmed:
 			# Regular video page.
 			url = self.video_url % id
+						
 			data = self.retrieve(url)
+			
 		else:
 			# Filtered video page.
-			url = self.confirm_url % id
 
-			next_url = self.video_url % id
+			url = self.video_url % id
 			post = {'next_url': next_url,
 			        'action_confirm':'Confirm'}
 
-			data = self.retrieve(url, post)
+			data = self.retrieve(url)
 
 		if data is not None:
 			match = self.session_pattern.search(data)
@@ -394,10 +395,12 @@ class YouTube:
 					if self.filter_hook(self.filter_udata):
 						ret = self.get_video_url(id, confirmed=True)
 
+		#print "Return: " + `ret`
 		if ret is None:
 			# Failed to find the video stream url, better complain.
 			raise VideoStreamError(id)
 
+		
 		return ret
 
 	def set_report_hook(self, func, udata=None):
@@ -406,12 +409,12 @@ class YouTube:
 		self.report_hook = func
 		self.report_udata = udata
 
-	def retrieve(self, url, data=None, headers={}):
+	def retrieve(self, url, data=None, headers={}, timeout=40):
 		"""Downloads an url."""
 
 		return xbmcutils.net.retrieve (url, data, headers,
 		                               self.report_hook,
-		                               self.report_udata)
+		                               self.report_udata, timeout)
 
 		return data
 
