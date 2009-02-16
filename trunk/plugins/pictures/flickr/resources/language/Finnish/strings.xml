@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings> <!--  8.2.2009 Finnish   -->
+    <!-- Plugin strings -->
+    <string id="30900">Flickr Plug-in</string>
+    <string id="30901">Käyttäjän id tunnnus on sopimaton!</string>
+    <string id="30902">Tarkista asetukset.</string>
+    <string id="30903">Kuvien hakusanat</string>
+    <string id="30904">Ryhmien hakusanat</string>
+    <string id="30905">*Ryhmät</string>
+    <string id="30906">Kuvat</string>
+
+    <!-- Category strings -->
+    <string id="30950">Omat kuvakokoelmat</string>
+    <string id="30951">Uusimmat</string>
+    <string id="30952">Omat kuvat</string>
+    <string id="30953">Kiinnostavuus</string>
+    <string id="30954">Omat suosikit</string>
+    <string id="30955">Omat yhteystiedot</string>
+    <string id="30956">Omat ryhmät</string>
+    <string id="30957">Etsitään ryhmiä...</string>
+    <string id="30958">Etsitään kuvia...</string>
+    <string id="30959">Etsi ryhmiä</string>
+    <string id="30960">Etsi kuvia</string>
+
+    <!-- Plugin settings strings -->
+    <string id="30000">Flickr näyttönimi tai sähköpostiosoite</string>
+    <string id="30010">Varmennus tunnus</string>
+    <string id="30020">Yksityisyys suodatus (kuvakokoelmat)</string>
+    <string id="30021">Yleiset kuvat</string>
+    <string id="30022">Ystäville näkyvät kuvat</string>
+    <string id="30023">Perheelle näkyvät kuvat</string>
+    <string id="30024">Ystäville &amp; perheelle näkyvät kuvat</string>
+    <string id="30025">Yksityiset kuvat</string>
+    <string id="30030">Suojattu hakumenetelmä (ryhmä &amp; kuvat)</string>
+    <string id="30031">Suojaus</string>
+    <string id="30032">Valvonta</string>
+    <string id="30033">Rajoitukset</string>
+    <string id="30040">Kuvien määrä sivua kohti</string>
+    <string id="30050">Sisällytä lisää valintoja (tämä voi hidastaa toimintaa)</string>
+    <string id="30150">Talletettavien hakujen määrä</string>
+    <string id="30160">Haluttu päivämäärä (valinnainen)</string>
+
+    <!-- Advanced search strings -->
+    <string id="30060">Kuvien haun lisäasetukset</string>
+    <string id="30070">- Haettava käyttäjänimi tai käyttäjän sähköposti(valinnainen)</string>
+    <string id="30080">- Tunnisteet (valinnainen)</string>
+    <string id="30090">&#32;&#32;- Tunnistemuoto</string>
+    <string id="30091">Jokin</string>
+    <string id="30092">Kaikki</string>
+    <string id="30100">- Kuvan hakusanat (valinnainen)</string>
+    <string id="30110">- Sisällön tyyppi (valinnainen)</string>
+    <string id="30111">vain valokuvat</string>
+    <string id="30112">vain ruutukaappaukset</string>
+    <string id="30113">vain 'muut'</string>
+    <string id="30114">kuvat ja ruutukaappaukset</string>
+    <string id="30115">ruutukaappaukset ja 'muut'</string>
+    <string id="30116">kuvat ja 'muut'</string>
+    <string id="30117">kuvat, ruutukaappaukset ja 'muut' (kaikki)</string>
+    <string id="30120">- Koneen tunnisteet (valinnainen)</string>
+    <string id="30130">&#32;&#32;- Konnen tunniste muoto</string>
+    <string id="30131">Jokin</string>
+    <string id="30132">Kaikki</string>
+    <string id="30140">Ryhmän Id (valinnainen)</string>
+</strings>

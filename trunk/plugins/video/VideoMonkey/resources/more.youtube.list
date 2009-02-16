@@ -1,0 +1,23 @@
+﻿########################################################
+# Youtube country specific sites
+########################################################
+title=YouTube (EN)
+type=rss
+icon=video.monkey.image|en.png
+url=youtube.en.cfg
+########################################################
+title=YouTube (DE)
+type=rss
+icon=video.monkey.image|de.png
+url=youtube.de.cfg
+########################################################
+title=YouTube (FR)
+type=rss
+icon=video.monkey.image|fr.png
+url=youtube.fr.cfg
+########################################################
+title=YouTube (NL)
+type=rss
+icon=video.monkey.image|nl.png
+url=youtube.nl.cfg
+########################################################

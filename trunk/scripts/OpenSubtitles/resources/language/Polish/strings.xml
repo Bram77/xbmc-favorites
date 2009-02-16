@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Language file translated with Team XBMC Translator-->
+<!--Translator: smuto-->
+<!--Email: smuto.promyk@gmail.com-->
+<!--Date of translation: 02/27/2008-->
+<!--$Revision$-->
+<strings>
+  <string id="0">OpenSubtitles</string>
+  <string id="1">Xbox Media Center</string>
+  <string id="2">Leo</string>
+  <string id="100">Exception for</string>
+  <string id="201">Serwer</string>
+  <string id="202">Użytkownik</string>
+  <string id="203">Hasło</string>
+  <string id="204">Wypakuj napisy do katalogu z plikiem wideo</string>
+  <string id="205">Katalog z napisami</string>
+  <string id="230">Błąd podczas zapisywania ustawień!</string>
+  <string id="240">Wprowadzone zmiany wymagają ponownego uruchomienia.</string>
+  <string id="241">Chcesz teraz ponownie uruchomić %s ?</string>
+  <string id="250">Zastosuj</string>
+  <string id="251">Anuluj</string>
+  <string id="252">Aktualizuj</string>
+  <string id="253">Credits</string>
+  <string id="255">Restart</string>
+  <string id="256">Później</string>
+  <string id="630">Napisy pobrane i wypakowane</string>
+  <string id="631">Wypakowuję %s do %s</string>
+  <string id="632">Pobieram %s</string>
+  <string id="633">Pobieranie pliku z napisami</string>
+  <string id="634">Błąd! %s</string>
+  <string id="635">Podłączony</string>
+  <string id="636">Logowanie jako anonymous</string>
+  <string id="637">Logowanie jako %s...</string>
+  <string id="638">What do you want to run this for?</string>
+  <string id="639">No music is playing fool!</string>
+  <string id="640">Wybierz plik wideo</string>
+  <string id="641">%s Ustawienia</string>
+  <string id="642">Szukam napisów dla %s</string>
+  <string id="730">OSDB server name missing</string>
+  <string id="731">XMLRPC %s: %s</string>
+  <string id="732">LogIn</string>
+  <string id="733">LogOut</string>
+  <string id="734">GetSubLanguages</string>
+  <string id="735">CheckMovieHash</string>
+  <string id="736">SearchSubtitles</string>
+  <string id="737">Nie ma połączenia z serwerm osdb</string>
+  <string id="738">Hashing %s not found</string>
+  <string id="739">Hashing %s %s</string>
+  <string id="740">File found on share, remote files not supported</string>
+  <string id="741">Nie zaleziono napisow</string>
+  <string id="742">Znaleziono %s plikow z napisami</string>
+  <string id="743">
+  </string>
+  <string id="744">
+  </string>
+  <string id="900">Wersja</string>
+  <string id="901">Team Credits:</string>
+  <string id="902">Additional Credits:</string>
+  <string id="903">Skin Credits:</string>
+  <string id="910">Head Developer &amp; Coder</string>
+  <string id="911">Original Author</string>
+  <string id="912">Original Skinning Mod</string>
+  <string id="913">Unicode Support</string>
+  <string id="914">Language File</string>
+  <string id="1000">Your version is up to date.</string>
+  <string id="1001">Fetching current tagged versions...</string>
+  <string id="1002">is newer</string>
+  <string id="1003">Would you like to update?</string>
+  <string id="1004">Przetwarzanie zapytania...</string>
+  <string id="1005">Proszę czekać...</string>
+  <string id="1006">Wersja</string>
+  <string id="1007">Pobieram::</string>
+  <string id="1008">Ścieżka:</string>
+  <string id="1009">Plik:</string>
+  <string id="1010">Your new version was saved to:</string>
+  <string id="1030">No tagged versions were found!</string>
+  <string id="1031">There was an error updating script!</string>
+</strings>
