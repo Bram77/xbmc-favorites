@@ -791,12 +791,30 @@
 				<onleft>4</onleft>
 				<onright>4</onright>
 				<onup>5</onup>
+				<ondown>9</ondown>
+				<visible>!Container.Content(TVShows)</visible>
+			</control>
+			<control type="button" id ="9">
+				<description>Resume</description>
+				<posx>55</posx>
+				<posy>60</posy>
+				<width>135</width>
+				<height>29</height>
+				<label>13404</label>
+				<font>font10</font>
+				<align>center</align>
+				<texturenofocus border="5">keyboard-btn-space.png</texturenofocus>
+				<texturefocus border="5">keyboard-btn-space-focus2.png</texturefocus>
+				<onleft>4</onleft>
+				<onright>4</onright>
+				<onup>8</onup>
 				<ondown>6</ondown>
+				<visible>!Container.Content(TVShows)</visible>
 			</control>
 			<control type="button" id ="6">
 				<description>Refresh</description>
 				<posx>55</posx>
-				<posy>60</posy>
+				<posy>90</posy>
 				<width>135</width>
 				<height>29</height>
 				<label>184</label>
@@ -806,13 +824,14 @@
 				<texturefocus border="5">keyboard-btn-space-focus2.png</texturefocus>
 				<onleft>4</onleft>
 				<onright>4</onright>
-				<onup>8</onup>
+				<onup>9</onup>
 				<ondown>10</ondown>
+				<animation effect="slide" start="0,0" end="0,-60" time="0" condition="Container.Content(TVShows)">conditional</animation>
 			</control>
 			<control type="button" id ="10">
 				<description>Get Thumb</description>
 				<posx>55</posx>
-				<posy>90</posy>
+				<posy>120</posy>
 				<width>135</width>
 				<height>29</height>
 				<label>13405</label>
@@ -824,11 +843,12 @@
 				<onright>4</onright>
 				<onup>6</onup>
 				<ondown>12</ondown>
+				<animation effect="slide" start="0,0" end="0,-60" time="0" condition="Container.Content(TVShows)">conditional</animation>
 			</control>
 			<control type="button" id ="12">
 				<description>Get Fanart</description>
 				<posx>55</posx>
-				<posy>120</posy>
+				<posy>90</posy>
 				<width>135</width>
 				<height>29</height>
 				<label>20413</label>
@@ -840,6 +860,7 @@
 				<onright>4</onright>
 				<onup>10</onup>
 				<ondown>11</ondown>
+				<visible>Container.Content(TVShows)</visible>
 			</control>
 			<control type="button" id ="11">
 				<description>Trailer</description>

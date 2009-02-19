@@ -707,7 +707,7 @@
 	</include>
 	<include name="AllViewCommonThumbSmall">
 		<control type="panel" id="52">
-			<visible>!Container.Content(TVshows)</visible>
+			<visible>![Container.Content(TVShows) + !Window.IsVisible(VideoFiles)]</visible>
 			<posx>190</posx>
 			<posy>100</posy>
 			<width>485</width>
@@ -794,7 +794,7 @@
 	</include>
 	<include name="AllViewCommonThumbLarge">
 		<control type="panel" id="53">
-			<visible>!Container.Content(TVshows)</visible>
+			<visible>![Container.Content(TVShows) + !Window.IsVisible(VideoFiles)]</visible>
 			<posx>190</posx>
 			<posy>100</posy>
 			<width>485</width>
@@ -1013,6 +1013,115 @@
 			<include>contentpanelslide</include>
 		</control>
 	</include>
+	<include name="VideoDVDThumbLarge">
+		<control type="panel" id="54">
+			<visible>![Container.Content(TVShows) + !Window.IsVisible(VideoFiles)] + !Container.Content(Episodes) + !Container.Content(MusicVideos)</visible>
+			<posx>190</posx>
+			<posy>100</posy>
+			<width>485</width>
+			<height>425</height>
+			<onleft>9000</onleft>
+			<onright>60</onright>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="542">bigicon</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<include>contentpanelslide</include>
+			<itemlayout height="185" width="120">
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>165</height>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>150</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="185" width="120">
+				<control type="image">
+					<width>110</width>
+					<height>175</height>
+					<posx>5</posx>
+					<posy>5</posy>
+					<texture>folder-focus.png</texture>
+                                        <animation effect="zoom" reversible="false" center="auto" start="100" end="110" time="100">focus</animation>
+                                        <animation type="unfocus">
+                                                <effect reversible="false" type="fade" start="100" end="0" time="200" />
+                                                <effect reversible="false" type="zoom" center="auto" start="110" end="100" time="100" />
+                                        </animation>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>100</width>
+					<height>165</height>
+					<info>ListItem.Icon</info>
+                                        <animation reversible="false" effect="zoom" center="auto" start="100" end="110" time="100">focus</animation>
+                                        <animation reversible="false" effect="zoom" center="auto" start="110" end="100" time="100">unfocus</animation>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>150</posy>
+					<width>30</width>
+					<height>30</height>
+					<info>ListItem.Overlay</info>
+					<animation reversible="false" effect="slide" start="0,0" end="5,5" time="100">focus</animation>
+					<animation reversible="false" effect="slide" end="0,0" start="5,5" time="100">unfocus</animation>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<description>background overlay image lower</description>
+			<posx>210</posx>
+			<posy>445</posy>
+			<width>444</width>
+			<height>106</height>
+			<texture>dvdview_bottom.png</texture>
+			<visible>Control.IsVisible(54)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="image">
+			<posx>275</posx>
+			<posy>474</posy>
+			<width>35</width>
+			<height>45</height>
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.icon</info>
+			<visible>Control.IsVisible(54)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>320</posx>
+			<posy>475</posy>
+			<width>260</width>
+			<height>16</height>
+			<font>special13</font>
+			<scroll>true</scroll>
+			<info>ListItem.Label</info>
+			<aligny>center</aligny>
+			<visible>Control.IsVisible(54)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>320</posx>
+			<posy>498</posy>
+			<width>260</width>
+			<height>16</height>
+			<font>font13</font>
+			<scroll>true</scroll>
+			<info>ListItem.Label2</info>
+			<aligny>center</aligny>
+			<visible>Control.IsVisible(54)</visible>
+			<include>contentpanelslide</include>
+		</control>
+	</include>
 	<include name="VideoDVDWrapView">
 		<control type="fixedlist" id="56">
 			<visible>!Container.Content(TVshows) + !Container.Content(Episodes) + !Container.Content(MusicVideos) | [Container.Content(TVShows) + Skin.HasSetting(UseTVPosters)]</visible>
@@ -1184,6 +1293,140 @@
 			<scroll>true</scroll>
 			<label>$INFO[ListItem.PlotOutline ,$LOCALIZE[203]: ]</label>
 			<visible>Control.IsVisible(56) + Window.IsVisible(25)</visible>
+			<include>contentpanelslide</include>
+		</control>
+	</include>
+	<include name="MusicCoverWrapView">
+		<control type="fixedlist" id="56">
+			<visible>Window.IsVisible(MusicFiles) | Container.Content(Albums)</visible>
+			<posx>190</posx>
+			<posy>100</posy>
+			<width>520</width>
+			<height>425</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>200</scrolltime>
+			<viewtype label="558">wraplist</viewtype>
+			<pagecontrol>-</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<include>contentpanelslide</include>
+			<itemlayout height="300" width="130">
+				<control type="image">
+					<posx>2</posx>
+					<posy>50</posy>
+					<width>120</width>
+					<height>200</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>250</posy>
+					<width>120</width>
+					<height>200</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+					<aspectratio aligny="top">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>225</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="300" width="150">
+				<control type="image">
+					<posx>2</posx>
+					<posy>50</posy>
+					<width>120</width>
+					<height>200</height>
+					<info>ListItem.Icon</info>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<animation effect="zoom" start="2,50,120,200" end="-20,-20,190,300" time="200">focus</animation>
+					<animation effect="zoom" end="2,50,120,200" start="-20,-20,190,300" time="150">unfocus</animation>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>250</posy>
+					<width>120</width>
+					<height>200</height>
+					<info>ListItem.Icon</info>
+					<texture flipy="true" diffuse="diffuse_mirror.png" /> 
+					<aspectratio aligny="top">keep</aspectratio>
+					<animation effect="zoom" start="2,250,120,200" end="-20,280,190,300" time="200">focus</animation>
+					<animation effect="zoom" end="2,250,120,200" start="-20,280,190,300" time="150">unfocus</animation>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>225</posy>
+					<width>32</width>
+					<height>32</height>
+					<info>ListItem.Overlay</info>
+					<animation effect="slide" start="0,0" end="45,30" time="200">focus</animation>
+					<animation effect="slide" end="0,0" start="45,30" time="150">unfocus</animation>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>260</posx>
+			<posy>415</posy>
+			<width>410</width>
+			<height>16</height>
+			<font>special13</font>
+			<scroll>true</scroll>
+			<info>ListItem.Label</info>
+			<visible>Control.IsVisible(56)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>260</posx>
+			<posy>445</posy>
+			<width>410</width>
+			<height>16</height>
+			<font>font13</font>
+			<textcolor>lightgrey</textcolor>
+			<scroll>true</scroll>
+			<label>$INFO[ListItem.Album ,$LOCALIZE[558]: ]</label>
+			<visible>Control.IsVisible(56)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>260</posx>
+			<posy>470</posy>
+			<width>410</width>
+			<height>16</height>
+			<font>font13</font>
+			<textcolor>lightgrey</textcolor>
+			<scroll>true</scroll>
+			<label>$INFO[ListItem.Genre ,$LOCALIZE[515]: ]</label>
+			<visible>Control.IsVisible(56)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="label">
+			<posx>260</posx>
+			<posy>495</posy>
+			<width>410</width>
+			<height>16</height>
+			<font>font13</font>
+			<textcolor>lightgrey</textcolor>
+			<scroll>true</scroll>
+			<info>ListItem.Label2</info>
+			<visible>!Container.Sort(SongRating) + Control.IsVisible(56)</visible>
+			<include>contentpanelslide</include>
+		</control>
+		<control type="image" id="1">
+			<description>Song Rating Image</description>
+			<height>21</height>
+			<width>121</width>
+			<posx>238</posx>
+			<posy>495</posy>
+			<info>ListItem.StarRating</info>
+			<visible>Container.Sort(SongRating) + Control.IsVisible(56)</visible>
 			<include>contentpanelslide</include>
 		</control>
 	</include>
@@ -1512,7 +1755,7 @@
 	</include>
 	<include name="AllViewCommonPageControls">
 		<control type="button">
-			<posx>700</posx>
+			<posx>680</posx>
 			<posy>100</posy>
 			<include>scrollbar_width</include>
 			<height>20</height>
@@ -1521,10 +1764,10 @@
 			<texturenofocus border="4">scrollbar_arrow_up.png</texturenofocus>
 			<include>contentpanelslide</include>
 			<visible>Control.IsVisible(60)</visible>
-			<animation effect="slide" start="0,0" end="-225,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
 		</control>
 		<control type="button">
-			<posx>700</posx>
+			<posx>680</posx>
 			<posy>500</posy>
 			<include>scrollbar_width</include>
 			<height>20</height>
@@ -1533,10 +1776,10 @@
 			<texturenofocus border="4">scrollbar_arrow_down.png</texturenofocus>
 			<include>contentpanelslide</include>
 			<visible>Control.IsVisible(60)</visible>
-			<animation effect="slide" start="0,0" end="-225,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
 		</control>
 		<control type="scrollbar" id="60">
-			<posx>700</posx>
+			<posx>680</posx>
 			<posy>120</posy>
 			<include>scrollbar_width</include>
 			<height>380</height>
@@ -1557,10 +1800,10 @@
 			<visible>![Window.IsActive(mymusiclibrary) + Control.IsVisible(51)]</visible>
 			<visible>![Window.IsActive(mymusiclibrary) + Control.IsVisible(58)]</visible>
 			<visible>![Window.IsActive(mymusicplaylist) + Control.IsVisible(57)]</visible>
-			<animation effect="slide" start="0,0" end="-225,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-205,0" time="0" condition="Window.IsActive(myvideolibrary) + Control.IsVisible(58)">conditional</animation>
 		</control>
 	</include>
 	<include name="scrollbar_width">
-		<width>16</width>
+		<width>20</width>
 	</include>
 </includes>
