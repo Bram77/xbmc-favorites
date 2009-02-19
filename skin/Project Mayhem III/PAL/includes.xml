@@ -160,29 +160,4 @@
 	         <align>justify</align>
 	         <autoscroll time="1000" delay="3000">Skin.HasSetting(AutoScroll)</autoscroll>
 	</include>
-	<include name="VisibleFadeEffect">
-		<animation effect="fade" time="200">Visible</animation>
-		<animation effect="fade" time="200">Hidden</animation>
-	</include>
-	<include name="Window_OpenClose_Animation">
-		<animation effect="fade" time="200">WindowOpen</animation>
-		<animation effect="fade" time="200">WindowClose</animation>
-	</include>
-	<include name="ContentPanel2">
-		<control type="image">
-			<posx>170</posx>
-			<posy>88</posy>
-			<width>64</width>
-			<height>455</height>
-			<texture border="50,0,0,45">Panel.png</texture>
-		</control>
-		<control type="image">
-			<description>contentpanel slice</description>
-			<posx>198</posx>
-			<posy>88</posy>
-			<width>550</width>
-			<height>455</height>
-			<texture>Panelsl.png</texture>
-		</control>
-	</include>
 </includes>
